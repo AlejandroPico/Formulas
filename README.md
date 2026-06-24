@@ -4,19 +4,20 @@ Proyecto web estático para GitHub Pages orientado a divulgación científica vi
 
 ## Estado actual
 
-Versión **v1.1**: limpieza visual inicial.
+Versión **v1.2**: tarjetas mínimas y controles flotantes.
 
 Cambios principales:
 
-- Eliminada la cabecera superior.
-- Eliminado el menú hamburguesa.
-- Eliminado el panel lateral de búsqueda, filtros y contadores.
-- Eliminado el botón de reiniciar vista.
-- Añadida pantalla de entrada temporal tipo splash screen.
-- Vista principal centrada en tarjetas de ecuaciones.
-- Conservado el selector de ordenación.
-- Ocultado el nivel educativo en las tarjetas y en la lectura rápida.
-- Añadido sistema de tema `Auto`, `Día`, `Tarde` y `Noche`.
+- Tarjetas enteras clicables.
+- Eliminado el botón interno `Abrir ficha`.
+- Año y nivel educativo ocultos en la vista principal.
+- Año y nivel educativo conservados dentro de la ficha ampliada.
+- Tarjetas principales simplificadas: área, nombre y fórmula.
+- Fórmulas largas con tarjetas de mayor anchura.
+- Filtro convertido en botón flotante con icono de embudo.
+- Selector de ordenación movido al panel flotante de filtro.
+- Controles flotantes fijos durante el scroll.
+- Paleta visual reajustada hacia estética de herramienta científica.
 
 ## Estructura
 
@@ -35,11 +36,14 @@ Cambios principales:
 │   └── utils.js
 ├── styles/
 │   ├── base.css
+│   ├── card-refresh.css
 │   ├── components.css
 │   ├── layout.css
+│   ├── no-header-label.css
 │   ├── responsive.css
 │   ├── responsive-refresh.css
 │   ├── tokens.css
+│   ├── tool-controls.css
 │   └── visual-refresh.css
 └── .nojekyll
 ```
