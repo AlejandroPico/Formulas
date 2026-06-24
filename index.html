@@ -14,6 +14,8 @@
   <link rel="stylesheet" href="styles/visual-refresh.css" />
   <link rel="stylesheet" href="styles/responsive-refresh.css" />
   <link rel="stylesheet" href="styles/no-header-label.css" />
+  <link rel="stylesheet" href="styles/tool-controls.css" />
+  <link rel="stylesheet" href="styles/card-refresh.css" />
   <script>
     window.MathJax = {
       tex: { inlineMath: [['\\(', '\\)'], ['$', '$']] },
@@ -36,19 +38,34 @@
     <canvas id="heroCanvas" width="720" height="420" aria-hidden="true"></canvas>
   </section>
 
-  <button id="themeToggle" class="theme-toggle" type="button" aria-label="Cambiar tema visual">◐ Auto</button>
+  <div class="floating-controls" aria-label="Controles flotantes">
+    <button id="filterToggle" class="floating-button" type="button" aria-label="Abrir filtros" aria-expanded="false">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 5.5h17l-6.7 7.7v4.9l-3.6 1.8v-6.7L3.5 5.5Z" /></svg>
+    </button>
+    <button id="themeToggle" class="theme-toggle" type="button" aria-label="Cambiar tema visual">◐ Auto</button>
+  </div>
 
-  <main class="app-shell">
-    <section class="section-toolbar compact-toolbar" aria-label="Controles de catálogo">
-      <span class="catalog-mark">Atlas de Ecuaciones Famosas</span>
+  <aside id="filterPanel" class="filter-popover" aria-label="Filtros del atlas" hidden>
+    <label>
+      <span>Orden</span>
       <select id="sortSelect" aria-label="Ordenar ecuaciones">
         <option value="chronology">Orden histórico</option>
         <option value="name">Nombre</option>
         <option value="field">Área científica</option>
         <option value="level">Nivel educativo</option>
       </select>
-    </section>
+    </label>
+    <label>
+      <span>Área</span>
+      <select id="fieldSelect" aria-label="Filtrar por área científica"></select>
+    </label>
+    <label>
+      <span>Nivel</span>
+      <select id="levelSelect" aria-label="Filtrar por nivel educativo"></select>
+    </label>
+  </aside>
 
+  <main class="app-shell">
     <section class="equation-grid" id="equationGrid" aria-live="polite"></section>
   </main>
 
@@ -58,17 +75,10 @@
   </dialog>
 
   <template id="equationCardTemplate">
-    <article class="equation-card">
-      <div class="card-topline">
-        <span class="field-tag"></span>
-        <span class="year-tag"></span>
-      </div>
+    <article class="equation-card" tabindex="0">
+      <span class="field-tag"></span>
       <h3></h3>
       <div class="formula-box"></div>
-      <p class="card-summary"></p>
-      <div class="card-footer">
-        <button class="open-card">Abrir ficha</button>
-      </div>
     </article>
   </template>
 
