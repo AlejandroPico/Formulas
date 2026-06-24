@@ -1,0 +1,37 @@
+.equation-grid {
+  grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+  gap: 18px;
+}
+
+.equation-card {
+  min-height: 338px;
+  background:
+    linear-gradient(160deg, color-mix(in srgb, var(--card-strong) 94%, transparent), color-mix(in srgb, var(--card) 78%, transparent)),
+    radial-gradient(circle at 16% 0%, color-mix(in srgb, var(--tag-color, var(--accent)) 22%, transparent), transparent 58%);
+  transition: transform .2s ease, border-color .2s ease, background .7s ease, box-shadow .2s ease;
+}
+
+.equation-card:hover {
+  transform: translateY(-5px);
+  border-color: color-mix(in srgb, var(--tag-color, var(--accent)) 58%, var(--line));
+  box-shadow: 0 22px 58px rgba(0,0,0,0.24);
+}
+
+.formula-box {
+  min-height: 104px;
+  background: color-mix(in srgb, var(--bg) 48%, transparent);
+}
+
+.open-card {
+  margin-left: auto;
+  border: 1px solid color-mix(in srgb, var(--tag-color, var(--accent)) 54%, var(--line));
+  border-radius: 999px;
+  padding: 9px 13px;
+  background: color-mix(in srgb, var(--tag-color, var(--accent)) 16%, transparent);
+  color: var(--text);
+  font-weight: 850;
+}
+
+.simulation-panel canvas {
+  background: color-mix(in srgb, var(--bg) 54%, transparent);
+}
