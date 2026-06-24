@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Atlas de Ecuaciones Famosas · Oblitus</title>
+  <meta name="description" content="Biblioteca interactiva de ecuaciones famosas: Newton, Maxwell, Schrödinger, Einstein, Navier-Stokes, Boltzmann, Fourier, Euler, Dirac y Planck." />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+  <link rel="stylesheet" href="styles.css" />
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['\\(', '\\)'], ['$', '$']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+</head>
+<body>
+  <div class="orbital-bg" aria-hidden="true">
+    <span></span><span></span><span></span>
+  </div>
+
+  <header class="topbar">
+    <button class="icon-button" id="menuToggle" aria-label="Abrir menú de navegación">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="brand-block">
+      <p class="eyebrow">Oblitus · Ciencia visual</p>
+      <h1>Atlas de Ecuaciones Famosas</h1>
+    </div>
+    <nav class="top-actions" aria-label="Acciones principales">
+      <button id="themeToggle" class="chip-button">Modo noche</button>
+      <button id="resetView" class="chip-button ghost">Reiniciar vista</button>
+    </nav>
+  </header>
+
+  <aside class="side-panel" id="sidePanel" aria-label="Panel de filtros">
+    <div class="panel-section">
+      <h2>Explorar</h2>
+      <label class="search-box">
+        <span>Buscar ecuación</span>
+        <input id="searchInput" type="search" placeholder="Newton, relatividad, onda..." autocomplete="off" />
+      </label>
+    </div>
+
+    <div class="panel-section">
+      <h3>Área científica</h3>
+      <div class="pill-grid" id="fieldFilters"></div>
+    </div>
+
+    <div class="panel-section">
+      <h3>Nivel</h3>
+      <div class="pill-grid" id="levelFilters"></div>
+    </div>
+
+    <div class="panel-section compact-stats">
+      <div><strong id="visibleCount">0</strong><span>visibles</span></div>
+      <div><strong id="totalCount">0</strong><span>totales</span></div>
+    </div>
+  </aside>
+
+  <main class="app-shell">
+    <section class="hero-card">
+      <div class="hero-copy">
+        <p class="eyebrow">Primera versión · Biblioteca expandible</p>
+        <h2>Una constelación interactiva de fórmulas que cambiaron la ciencia.</h2>
+        <p>
+          Cada tarjeta combina fórmula, lectura conceptual, variables, historia, usos, nivel educativo y una simulación visual sencilla. La intención es que el atlas pueda crecer como una pieza central de Oblitus.
+        </p>
+        <div class="hero-metrics">
+          <article><strong>10</strong><span>ecuaciones iniciales</span></article>
+          <article><strong>4</strong><span>áreas científicas</span></article>
+          <article><strong>∞</strong><span>ampliable por datos</span></article>
+        </div>
+      </div>
+      <div class="hero-visual" aria-label="Visualización decorativa de ecuaciones">
+        <canvas id="heroCanvas" width="520" height="360"></canvas>
+      </div>
+    </section>
+
+    <section class="section-toolbar">
+      <div>
+        <p class="eyebrow">Catálogo</p>
+        <h2>Ecuaciones disponibles</h2>
+      </div>
+      <select id="sortSelect" aria-label="Ordenar ecuaciones">
+        <option value="chronology">Orden histórico</option>
+        <option value="name">Nombre</option>
+        <option value="field">Área científica</option>
+        <option value="level">Nivel educativo</option>
+      </select>
+    </section>
+
+    <section class="equation-grid" id="equationGrid" aria-live="polite"></section>
+
+    <section class="timeline-card">
+      <div class="section-toolbar inside">
+        <div>
+          <p class="eyebrow">Mapa histórico</p>
+          <h2>Línea temporal del atlas</h2>
+        </div>
+      </div>
+      <div class="timeline" id="timeline"></div>
+    </section>
+  </main>
+
+  <dialog class="equation-modal" id="equationModal">
+    <button class="modal-close" id="modalClose" aria-label="Cerrar ficha">×</button>
+    <div class="modal-content" id="modalContent"></div>
+  </dialog>
+
+  <template id="equationCardTemplate">
+    <article class="equation-card">
+      <div class="card-topline">
+        <span class="field-tag"></span>
+        <span class="year-tag"></span>
+      </div>
+      <h3></h3>
+      <div class="formula-box"></div>
+      <p class="card-summary"></p>
+      <div class="card-footer">
+        <span class="level-badge"></span>
+        <button class="open-card">Abrir ficha</button>
+      </div>
+    </article>
+  </template>
+
+  <script src="data/equations.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
