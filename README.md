@@ -4,20 +4,22 @@ Proyecto web estático para GitHub Pages orientado a divulgación científica vi
 
 ## Estado actual
 
-Versión **v1.2**: tarjetas mínimas y controles flotantes.
+Versión **v1.3**: tarjetas ultra minimalistas y fondo temático.
 
 Cambios principales:
 
 - Tarjetas enteras clicables.
 - Eliminado el botón interno `Abrir ficha`.
-- Año y nivel educativo ocultos en la vista principal.
-- Año y nivel educativo conservados dentro de la ficha ampliada.
-- Tarjetas principales simplificadas: área, nombre y fórmula.
-- Fórmulas largas con tarjetas de mayor anchura.
+- Año, nivel educativo y área ocultos en la vista principal.
+- Año, nivel educativo y área conservados dentro de la ficha ampliada.
+- Tarjetas principales reducidas a nombre y fórmula.
+- Fórmula sin cajetín interno.
+- Eliminados borde de acento, punto decorativo y marcas de color visibles.
+- Anchuras por niveles: `size-1`, `size-2`, `size-3` y `size-4`.
 - Filtro convertido en botón flotante con icono de embudo.
 - Selector de ordenación movido al panel flotante de filtro.
 - Controles flotantes fijos durante el scroll.
-- Paleta visual reajustada hacia estética de herramienta científica.
+- Fondo sustituido por textura sutil de cuadrícula y notación matemática.
 
 ## Estructura
 
