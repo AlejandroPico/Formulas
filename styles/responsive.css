@@ -1,0 +1,23 @@
+@media (max-width: 1120px) {
+  .side-panel {
+    transform: translateX(calc(-100% - 32px));
+    transition: transform .22s ease;
+  }
+  body.panel-open .side-panel { transform: translateX(0); }
+  .app-shell { margin-left: 0; padding: 24px; }
+  .hero-card, .modal-hero { grid-template-columns: 1fr; }
+  .hero-visual { min-height: 280px; }
+}
+
+@media (max-width: 760px) {
+  .topbar { align-items: flex-start; padding: 12px 16px; }
+  .brand-block .eyebrow { display: none; }
+  .top-actions { display: none; }
+  .app-shell { padding: 16px; }
+  .hero-copy { padding: 26px; }
+  .hero-metrics, .info-grid { grid-template-columns: 1fr; }
+  .section-toolbar { align-items: stretch; flex-direction: column; }
+  .modal-content { padding: 24px 18px; }
+  .timeline-item { grid-template-columns: 56px 1fr; }
+  .side-panel { left: 12px; width: min(320px, calc(100vw - 24px)); }
+}
