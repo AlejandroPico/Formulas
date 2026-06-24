@@ -10,18 +10,40 @@
 }
 
 .equation-card {
-  min-height: 188px;
-  gap: 12px;
-  padding: 15px;
+  min-height: 172px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  padding: 18px;
   cursor: pointer;
   isolation: isolate;
-  background:
-    linear-gradient(180deg, color-mix(in srgb, var(--card-strong) 74%, transparent), color-mix(in srgb, var(--card) 72%, transparent)),
-    radial-gradient(circle at 12% 0%, color-mix(in srgb, var(--tag-color, var(--accent)) 20%, transparent), transparent 54%);
+  border: 1px solid var(--line) !important;
+  background: color-mix(in srgb, var(--panel-solid) 72%, transparent) !important;
+  box-shadow: 0 14px 34px rgba(0,0,0,.12);
+  text-align: center;
 }
 
-.equation-card.is-wide {
+.equation-card::before,
+.equation-card::after {
+  display: none !important;
+}
+
+.equation-card.size-1 {
+  grid-column: span 1;
+}
+
+.equation-card.size-2 {
   grid-column: span 2;
+}
+
+.equation-card.size-3 {
+  grid-column: span 3;
+}
+
+.equation-card.size-4 {
+  grid-column: 1 / -1;
 }
 
 .equation-card:focus-visible {
@@ -29,58 +51,66 @@
   outline-offset: 4px;
 }
 
-.equation-card .field-tag {
-  width: fit-content;
-  min-height: 24px;
-  padding: 5px 9px;
-  font-size: .68rem;
-  opacity: .9;
+.equation-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--line) !important;
+  background: color-mix(in srgb, var(--panel-solid) 88%, transparent) !important;
 }
 
 .equation-card h3 {
   margin: 0;
-  font-size: clamp(1.05rem, 1.2vw, 1.28rem);
-  line-height: 1.08;
+  font-size: clamp(1.08rem, 1.15vw, 1.32rem);
+  line-height: 1.1;
+  letter-spacing: -.035em;
+  text-align: center;
 }
 
 .equation-card .formula-box {
-  flex: 1;
-  min-height: 88px;
-  border-radius: 14px;
-  padding: 10px;
-  overflow: hidden;
-}
-
-.equation-card.is-wide .formula-box {
-  min-height: 112px;
+  flex: 0;
+  min-height: 0;
+  width: 100%;
+  padding: 0;
+  border: 0 !important;
+  border-radius: 0;
+  background: transparent !important;
+  overflow: visible;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .equation-card .formula-box mjx-container {
   max-width: 100%;
+  overflow: visible;
 }
 
-.equation-card::after {
-  content: "";
-  position: absolute;
-  inset: auto 12px 10px auto;
-  width: 7px;
-  height: 7px;
-  border-radius: 999px;
-  background: var(--tag-color, var(--accent));
-  box-shadow: 0 0 18px color-mix(in srgb, var(--tag-color, var(--accent)) 70%, transparent);
-  opacity: .8;
+.equation-card.size-3 .formula-box,
+.equation-card.size-4 .formula-box {
+  padding-inline: 8px;
 }
 
 .open-card,
 .year-tag,
 .level-badge,
 .card-summary,
-.card-footer {
+.card-footer,
+.field-tag {
   display: none !important;
 }
 
-@media (max-width: 900px) {
-  .equation-card.is-wide {
+@media (max-width: 1100px) {
+  .equation-card.size-3,
+  .equation-card.size-4 {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 760px) {
+  .equation-card.size-1,
+  .equation-card.size-2,
+  .equation-card.size-3,
+  .equation-card.size-4 {
     grid-column: span 1;
   }
 }
