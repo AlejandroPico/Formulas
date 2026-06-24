@@ -16,16 +16,26 @@ export function renderEquationGrid(equations, onOpen) {
     grid.innerHTML = `<div class="empty-state">No hay ecuaciones que coincidan con los filtros actuales.</div>`;
     return;
   }
+
   equations.forEach(eq => {
     const node = template.content.firstElementChild.cloneNode(true);
+    const isWide = eq.formula.length > 48;
+    node.classList.toggle("is-wide", isWide);
     node.style.setProperty("--tag-color", eq.color);
+    node.setAttribute("role", "button");
+    node.setAttribute("aria-label", `Abrir ficha de ${eq.name}`);
+
     $(".field-tag", node).textContent = eq.field;
-    $(".year-tag", node).textContent = eq.year;
     $("h3", node).textContent = eq.name;
     $(".formula-box", node).innerHTML = `\\(${eq.formula}\\)`;
-    $(".card-summary", node).textContent = eq.summary;
-    $(".open-card", node).addEventListener("click", () => onOpen(eq));
-    node.addEventListener("dblclick", () => onOpen(eq));
+
+    node.addEventListener("click", () => onOpen(eq));
+    node.addEventListener("keydown", event => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        onOpen(eq);
+      }
+    });
     grid.appendChild(node);
   });
   requestMathTypeset();
@@ -48,7 +58,7 @@ export function openEquationModal(eq) {
   content.innerHTML = `
     <section class="modal-hero" style="--tag-color:${eq.color}">
       <div class="modal-title">
-        <p class="eyebrow">${eq.author} · ${eq.year}</p>
+        <p class="eyebrow">${eq.author} · ${eq.year} · ${eq.level}</p>
         <h2>${eq.name}</h2>
         <p>${eq.meaning}</p>
         <div class="formula-box modal-formula">\\(${eq.formula}\\)</div>
@@ -56,7 +66,7 @@ export function openEquationModal(eq) {
       <div class="info-box">
         <h3>Lectura rápida</h3>
         <p>${eq.summary}</p>
-        <p><strong>Área:</strong> ${eq.field}</p>
+        <p><strong>Área:</strong> ${eq.field}<br><strong>Nivel:</strong> ${eq.level}<br><strong>Año:</strong> ${eq.year}</p>
       </div>
     </section>
     <section class="info-grid">
