@@ -21,7 +21,7 @@ export function renderEquationGrid(equations, onOpen) {
     const node = template.content.firstElementChild.cloneNode(true);
     const widthLevel = getWidthLevel(eq.formula);
     node.classList.add(`size-${widthLevel}`);
-    node.style.setProperty("--tag-color", eq.color);
+    node.style.setProperty("--card-width", `${getCardWidth(eq.formula)}px`);
     node.setAttribute("role", "button");
     node.setAttribute("aria-label", `Abrir ficha de ${eq.name}`);
 
@@ -41,11 +41,27 @@ export function renderEquationGrid(equations, onOpen) {
 }
 
 function getWidthLevel(formula) {
-  const length = formula.length;
-  if (length > 130) return 4;
-  if (length > 78) return 3;
+  const length = normalizeFormulaLength(formula);
+  if (length > 82) return 3;
   if (length > 42) return 2;
   return 1;
+}
+
+function getCardWidth(formula) {
+  const length = normalizeFormulaLength(formula);
+  const rawWidth = 210 + length * 4.2;
+  return Math.round(Math.min(540, Math.max(260, rawWidth)));
+}
+
+function normalizeFormulaLength(formula) {
+  return formula
+    .replace(/\\frac/g, "ffff")
+    .replace(/\\partial/g, "ddd")
+    .replace(/\\mathbf/g, "bb")
+    .replace(/\\nabla/g, "nn")
+    .replace(/\\[a-zA-Z]+/g, "x")
+    .replace(/[{}]/g, "")
+    .length;
 }
 
 export function renderTimeline(equations) {
