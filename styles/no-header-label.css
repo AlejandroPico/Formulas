@@ -1,0 +1,7 @@
+.catalog-mark {
+  display: none;
+}
+
+.compact-toolbar {
+  justify-content: flex-end;
+}
