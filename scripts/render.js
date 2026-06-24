@@ -24,7 +24,6 @@ export function renderEquationGrid(equations, onOpen) {
     $("h3", node).textContent = eq.name;
     $(".formula-box", node).innerHTML = `\\(${eq.formula}\\)`;
     $(".card-summary", node).textContent = eq.summary;
-    $(".level-badge", node).textContent = eq.level;
     $(".open-card", node).addEventListener("click", () => onOpen(eq));
     node.addEventListener("dblclick", () => onOpen(eq));
     grid.appendChild(node);
@@ -34,6 +33,7 @@ export function renderEquationGrid(equations, onOpen) {
 
 export function renderTimeline(equations) {
   const host = $("#timeline");
+  if (!host) return;
   host.innerHTML = equations
     .slice()
     .sort((a, b) => a.year - b.year)
@@ -56,7 +56,7 @@ export function openEquationModal(eq) {
       <div class="info-box">
         <h3>Lectura rápida</h3>
         <p>${eq.summary}</p>
-        <p><strong>Área:</strong> ${eq.field}<br><strong>Nivel:</strong> ${eq.level}</p>
+        <p><strong>Área:</strong> ${eq.field}</p>
       </div>
     </section>
     <section class="info-grid">
