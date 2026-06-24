@@ -19,13 +19,12 @@ export function renderEquationGrid(equations, onOpen) {
 
   equations.forEach(eq => {
     const node = template.content.firstElementChild.cloneNode(true);
-    const isWide = eq.formula.length > 48;
-    node.classList.toggle("is-wide", isWide);
+    const widthLevel = getWidthLevel(eq.formula);
+    node.classList.add(`size-${widthLevel}`);
     node.style.setProperty("--tag-color", eq.color);
     node.setAttribute("role", "button");
     node.setAttribute("aria-label", `Abrir ficha de ${eq.name}`);
 
-    $(".field-tag", node).textContent = eq.field;
     $("h3", node).textContent = eq.name;
     $(".formula-box", node).innerHTML = `\\(${eq.formula}\\)`;
 
@@ -39,6 +38,14 @@ export function renderEquationGrid(equations, onOpen) {
     grid.appendChild(node);
   });
   requestMathTypeset();
+}
+
+function getWidthLevel(formula) {
+  const length = formula.length;
+  if (length > 130) return 4;
+  if (length > 78) return 3;
+  if (length > 42) return 2;
+  return 1;
 }
 
 export function renderTimeline(equations) {
