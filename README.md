@@ -4,7 +4,7 @@ Proyecto web estático para GitHub Pages orientado a divulgación científica vi
 
 ## Estado actual
 
-Versión **v1.3**: tarjetas ultra minimalistas y fondo temático.
+Versión **v1.4**: corrección de anchuras y catálogo ampliado.
 
 Cambios principales:
 
@@ -15,11 +15,12 @@ Cambios principales:
 - Tarjetas principales reducidas a nombre y fórmula.
 - Fórmula sin cajetín interno.
 - Eliminados borde de acento, punto decorativo y marcas de color visibles.
-- Anchuras por niveles: `size-1`, `size-2`, `size-3` y `size-4`.
+- Anchura de tarjeta calculada por fórmula, con máximo contenido para evitar tarjetas gigantes.
 - Filtro convertido en botón flotante con icono de embudo.
 - Selector de ordenación movido al panel flotante de filtro.
 - Controles flotantes fijos durante el scroll.
-- Fondo sustituido por textura sutil de cuadrícula y notación matemática.
+- Fondo corregido a gradientes suaves sin cuadrícula.
+- Catálogo ampliado a 30 ecuaciones.
 
 ## Estructura
 
@@ -27,7 +28,8 @@ Cambios principales:
 .
 ├── index.html
 ├── data/
-│   └── equations.js
+│   ├── equations.js
+│   └── extra-equations.js
 ├── scripts/
 │   ├── filtering.js
 │   ├── main.js
@@ -52,11 +54,11 @@ Cambios principales:
 
 ## Ecuaciones incluidas
 
-Newton, Euler, Fourier, Maxwell, Boltzmann, Planck, Einstein, Schrödinger, Dirac y Navier-Stokes.
+El catálogo contiene 30 entradas, mezclando matemáticas, física clásica, relatividad, cuántica, termodinámica, fluidos, estadística, biología matemática, bioquímica y finanzas cuantitativas.
 
 ## Cómo añadir una ecuación
 
-Añade un objeto nuevo en `data/equations.js`. Las propiedades principales son:
+Añade un objeto nuevo en `data/equations.js` o `data/extra-equations.js`. Las propiedades principales son:
 
 - `id`
 - `name`
