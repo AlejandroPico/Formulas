@@ -1,0 +1,104 @@
+.floating-controls {
+  position: fixed;
+  z-index: 44;
+  top: 18px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.floating-button,
+.theme-toggle {
+  position: static;
+  min-height: 44px;
+  border: 1px solid color-mix(in srgb, var(--line) 80%, transparent);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--panel-solid) 80%, transparent);
+  color: var(--text);
+  box-shadow: 0 12px 32px rgba(0,0,0,.16);
+  backdrop-filter: blur(18px);
+  transition: background 500ms ease, border-color 500ms ease, color 500ms ease, transform 180ms ease;
+}
+
+.floating-button {
+  width: 46px;
+  display: grid;
+  place-items: center;
+  padding: 0;
+}
+
+.floating-button:hover,
+.theme-toggle:hover {
+  transform: translateY(-1px);
+  border-color: color-mix(in srgb, var(--accent) 42%, var(--line));
+}
+
+.floating-button svg {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.85;
+  stroke-linejoin: round;
+}
+
+.filter-popover {
+  position: fixed;
+  z-index: 43;
+  top: 74px;
+  right: 20px;
+  width: min(310px, calc(100vw - 30px));
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: color-mix(in srgb, var(--panel-solid) 88%, transparent);
+  box-shadow: 0 22px 62px rgba(0,0,0,.22);
+  backdrop-filter: blur(20px);
+}
+
+.filter-popover[hidden] {
+  display: none;
+}
+
+.filter-popover label {
+  display: grid;
+  gap: 7px;
+  margin-bottom: 12px;
+  color: var(--muted);
+  font-size: .78rem;
+  font-weight: 850;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.filter-popover label:last-child {
+  margin-bottom: 0;
+}
+
+.filter-popover select {
+  min-width: 0;
+  width: 100%;
+  border-radius: 14px;
+  padding: 10px 12px;
+  letter-spacing: 0;
+  text-transform: none;
+  font-weight: 650;
+}
+
+.theme-toggle {
+  min-width: 112px;
+  padding: 0 14px;
+  font-weight: 850;
+}
+
+@media (max-width: 760px) {
+  .floating-controls {
+    top: 12px;
+    right: 12px;
+  }
+  .filter-popover {
+    top: 66px;
+    right: 12px;
+  }
+}
