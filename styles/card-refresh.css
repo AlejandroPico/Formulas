@@ -3,47 +3,36 @@
 }
 
 .equation-grid {
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-auto-flow: dense;
-  gap: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: stretch;
+  gap: 14px;
 }
 
 .equation-card {
-  min-height: 172px;
+  width: min(var(--card-width, 280px), calc(100vw - 34px));
+  min-height: 170px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 14px;
-  padding: 18px;
+  gap: 28px;
+  padding: 22px 24px;
   cursor: pointer;
   isolation: isolate;
   border: 1px solid var(--line) !important;
-  background: color-mix(in srgb, var(--panel-solid) 72%, transparent) !important;
-  box-shadow: 0 14px 34px rgba(0,0,0,.12);
+  border-radius: 20px;
+  background:
+    linear-gradient(180deg, color-mix(in srgb, var(--panel-solid) 76%, transparent), color-mix(in srgb, var(--panel-solid) 58%, transparent)) !important;
+  box-shadow: 0 14px 34px rgba(0,0,0,.11);
   text-align: center;
+  backdrop-filter: blur(14px);
 }
 
 .equation-card::before,
 .equation-card::after {
   display: none !important;
-}
-
-.equation-card.size-1 {
-  grid-column: span 1;
-}
-
-.equation-card.size-2 {
-  grid-column: span 2;
-}
-
-.equation-card.size-3 {
-  grid-column: span 3;
-}
-
-.equation-card.size-4 {
-  grid-column: 1 / -1;
 }
 
 .equation-card:focus-visible {
@@ -53,14 +42,14 @@
 
 .equation-card:hover {
   transform: translateY(-2px);
-  border-color: var(--line) !important;
-  background: color-mix(in srgb, var(--panel-solid) 88%, transparent) !important;
+  border-color: color-mix(in srgb, var(--text) 18%, var(--line)) !important;
+  background: color-mix(in srgb, var(--panel-solid) 86%, transparent) !important;
 }
 
 .equation-card h3 {
   margin: 0;
-  font-size: clamp(1.08rem, 1.15vw, 1.32rem);
-  line-height: 1.1;
+  font-size: clamp(1.08rem, 1.12vw, 1.28rem);
+  line-height: 1.12;
   letter-spacing: -.035em;
   text-align: center;
 }
@@ -78,16 +67,12 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+  font-size: 1.05rem;
 }
 
 .equation-card .formula-box mjx-container {
   max-width: 100%;
   overflow: visible;
-}
-
-.equation-card.size-3 .formula-box,
-.equation-card.size-4 .formula-box {
-  padding-inline: 8px;
 }
 
 .open-card,
@@ -99,18 +84,12 @@
   display: none !important;
 }
 
-@media (max-width: 1100px) {
-  .equation-card.size-3,
-  .equation-card.size-4 {
-    grid-column: span 2;
-  }
-}
-
 @media (max-width: 760px) {
-  .equation-card.size-1,
-  .equation-card.size-2,
-  .equation-card.size-3,
-  .equation-card.size-4 {
-    grid-column: span 1;
+  .equation-grid {
+    justify-content: stretch;
+  }
+  .equation-card {
+    width: 100%;
+    min-height: 150px;
   }
 }
