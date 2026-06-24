@@ -1,0 +1,86 @@
+.app-shell {
+  padding-top: 86px;
+}
+
+.equation-grid {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-auto-flow: dense;
+  gap: 12px;
+  align-items: stretch;
+}
+
+.equation-card {
+  min-height: 188px;
+  gap: 12px;
+  padding: 15px;
+  cursor: pointer;
+  isolation: isolate;
+  background:
+    linear-gradient(180deg, color-mix(in srgb, var(--card-strong) 74%, transparent), color-mix(in srgb, var(--card) 72%, transparent)),
+    radial-gradient(circle at 12% 0%, color-mix(in srgb, var(--tag-color, var(--accent)) 20%, transparent), transparent 54%);
+}
+
+.equation-card.is-wide {
+  grid-column: span 2;
+}
+
+.equation-card:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
+.equation-card .field-tag {
+  width: fit-content;
+  min-height: 24px;
+  padding: 5px 9px;
+  font-size: .68rem;
+  opacity: .9;
+}
+
+.equation-card h3 {
+  margin: 0;
+  font-size: clamp(1.05rem, 1.2vw, 1.28rem);
+  line-height: 1.08;
+}
+
+.equation-card .formula-box {
+  flex: 1;
+  min-height: 88px;
+  border-radius: 14px;
+  padding: 10px;
+  overflow: hidden;
+}
+
+.equation-card.is-wide .formula-box {
+  min-height: 112px;
+}
+
+.equation-card .formula-box mjx-container {
+  max-width: 100%;
+}
+
+.equation-card::after {
+  content: "";
+  position: absolute;
+  inset: auto 12px 10px auto;
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: var(--tag-color, var(--accent));
+  box-shadow: 0 0 18px color-mix(in srgb, var(--tag-color, var(--accent)) 70%, transparent);
+  opacity: .8;
+}
+
+.open-card,
+.year-tag,
+.level-badge,
+.card-summary,
+.card-footer {
+  display: none !important;
+}
+
+@media (max-width: 900px) {
+  .equation-card.is-wide {
+    grid-column: span 1;
+  }
+}
