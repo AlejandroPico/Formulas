@@ -6,7 +6,11 @@
   <title>Atlas de Ecuaciones Famosas · Oblitus</title>
   <meta name="description" content="Biblioteca interactiva de ecuaciones famosas: Newton, Maxwell, Schrödinger, Einstein, Navier-Stokes, Boltzmann, Fourier, Euler, Dirac y Planck." />
   <link rel="preconnect" href="https://cdn.jsdelivr.net" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles/tokens.css" />
+  <link rel="stylesheet" href="styles/base.css" />
+  <link rel="stylesheet" href="styles/layout.css" />
+  <link rel="stylesheet" href="styles/components.css" />
+  <link rel="stylesheet" href="styles/responsive.css" />
   <script>
     window.MathJax = {
       tex: { inlineMath: [['\\(', '\\)'], ['$', '$']] },
@@ -29,7 +33,7 @@
       <h1>Atlas de Ecuaciones Famosas</h1>
     </div>
     <nav class="top-actions" aria-label="Acciones principales">
-      <button id="themeToggle" class="chip-button">Modo noche</button>
+      <button id="themeToggle" class="chip-button">Modo día</button>
       <button id="resetView" class="chip-button ghost">Reiniciar vista</button>
     </nav>
   </header>
@@ -69,7 +73,7 @@
         </p>
         <div class="hero-metrics">
           <article><strong>10</strong><span>ecuaciones iniciales</span></article>
-          <article><strong>4</strong><span>áreas científicas</span></article>
+          <article><strong>8</strong><span>áreas científicas</span></article>
           <article><strong>∞</strong><span>ampliable por datos</span></article>
         </div>
       </div>
@@ -125,7 +129,6 @@
     </article>
   </template>
 
-  <script src="data/equations.js"></script>
-  <script src="app.js"></script>
+  <script type="module" src="scripts/main.js"></script>
 </body>
 </html>
