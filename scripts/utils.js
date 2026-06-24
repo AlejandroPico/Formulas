@@ -1,6 +1,8 @@
 export const $ = (selector, root = document) => root.querySelector(selector);
 export const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
 
+let mathRenderQueued = false;
+
 export function normalizeText(value) {
   return String(value ?? "")
     .toLowerCase()
@@ -13,7 +15,13 @@ export function unique(values) {
 }
 
 export function requestMathTypeset() {
+  const run = () => window.MathJax?.typesetPromise?.().catch(() => {});
   if (window.MathJax?.typesetPromise) {
-    window.MathJax.typesetPromise().catch(() => {});
+    run();
+    return;
+  }
+  if (!mathRenderQueued) {
+    mathRenderQueued = true;
+    window.addEventListener("load", () => setTimeout(run, 80), { once: true });
   }
 }
