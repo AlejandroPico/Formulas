@@ -4,12 +4,14 @@ Proyecto web estático para GitHub Pages orientado a divulgación científica vi
 
 ## Estado actual
 
-Versión **v2.0**: pestañas limpias y símbolos interactivos.
+Versión **v2.1**: tooltips corregidos y simulaciones con más contraste.
 
 Cambios principales:
 
 - Eliminada la pantalla inicial animada de presentación.
 - Eliminado el canvas de entrada y su temporizador de espera.
+- Desactivado el menú contextual interno de MathJax para evitar menús ocultos o anclados tras cerrar una ficha.
+- Añadido `interaction-fixes.css` para ajustes finales de tooltips, menús y simulaciones.
 - Tarjetas enteras clicables.
 - Eliminado el botón interno `Abrir ficha`.
 - Año, nivel educativo y área ocultos en la vista principal.
@@ -28,11 +30,14 @@ Cambios principales:
 - Corregido el Teorema de Gauss para evitar comandos LaTeX no soportados visualmente.
 - Rediseñada la ficha ampliada con pestañas internas: Fórmula, Contexto, Usos, Ficha y Simulación.
 - Eliminada la pestaña visible de Variables: las variables pasan a integrarse en la fórmula mediante tooltips.
+- Corregida la capa de tooltips: ahora se monta dentro del diálogo para que aparezca por encima de la ficha.
+- Eliminado el cursor de ayuda con interrogante en los símbolos de fórmula.
 - Añadido glosario interactivo sobre símbolos MathJax con definiciones por ecuación y glosario global.
 - Las pestañas activas ya no se muestran como burbujas; se distinguen por peso tipográfico y color.
 - La pestaña Fórmula escala automáticamente la fórmula para intentar mostrarla completa sin scroll.
 - Variables, usos y contexto simplificados sin cajetines anidados.
 - La simulación se carga solo al abrir su pestaña y reparte el espacio entre canvas y controles.
+- Las simulaciones usan el tamaño real del canvas y colores derivados del tema para mejorar contraste.
 - Fórmulas base ampliadas: Newton, Euler, Fourier, Boltzmann, Planck, Einstein, Schrödinger, Dirac y Navier-Stokes.
 - Entradas reemplazadas con versiones completas: Pitágoras, cuadrática, Bayes, normal, Bernoulli, gases ideales, Heisenberg, Lorentz, relatividad general y Friedmann.
 - Filtro convertido en botón flotante con icono de embudo.
@@ -66,6 +71,7 @@ Cambios principales:
 │   ├── base.css
 │   ├── card-refresh.css
 │   ├── components.css
+│   ├── interaction-fixes.css
 │   ├── layout.css
 │   ├── no-header-label.css
 │   ├── responsive.css
