@@ -4,14 +4,16 @@ Proyecto web estático para GitHub Pages orientado a divulgación científica vi
 
 ## Estado actual
 
-Versión **v1.8**: anchuras medidas y ficha con pestañas.
+Versión **v1.9**: sin pantalla inicial y ficha simplificada.
 
 Cambios principales:
 
+- Eliminada la pantalla inicial animada de presentación.
+- Eliminado el canvas de entrada y su temporizador de espera.
 - Tarjetas enteras clicables.
 - Eliminado el botón interno `Abrir ficha`.
 - Año, nivel educativo y área ocultos en la vista principal.
-- Año, nivel educativo y área conservados dentro de la ficha ampliada.
+- Metadatos movidos a una pestaña interna `Ficha`.
 - Tarjetas principales reducidas a nombre y fórmula.
 - Fórmula sin cajetín interno.
 - Eliminados borde de acento, punto decorativo y marcas de color visibles.
@@ -24,8 +26,10 @@ Cambios principales:
 - Añadido `complete-equations.js` para reemplazar entradas simplificadas por versiones más completas sin duplicarlas.
 - Añadido `final-corrections.js` para correcciones finales de LaTeX sin reescribir catálogos completos.
 - Corregido el Teorema de Gauss para evitar comandos LaTeX no soportados visualmente.
-- Rediseñada la ficha ampliada con pestañas internas: Fórmula, Variables, Contexto, Usos y Simulación.
-- La simulación se carga solo al abrir su pestaña.
+- Rediseñada la ficha ampliada con pestañas internas: Fórmula, Variables, Contexto, Usos, Ficha y Simulación.
+- La pestaña Fórmula escala automáticamente la fórmula para intentar mostrarla completa sin scroll.
+- Variables, usos y contexto simplificados sin cajetines anidados.
+- La simulación se carga solo al abrir su pestaña y reparte el espacio entre canvas y controles.
 - Fórmulas base ampliadas: Newton, Euler, Fourier, Boltzmann, Planck, Einstein, Schrödinger, Dirac y Navier-Stokes.
 - Entradas reemplazadas con versiones completas: Pitágoras, cuadrática, Bayes, normal, Bernoulli, gases ideales, Heisenberg, Lorentz, relatividad general y Friedmann.
 - Filtro convertido en botón flotante con icono de embudo.
