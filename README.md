@@ -4,7 +4,7 @@ Proyecto web estático para GitHub Pages orientado a divulgación científica vi
 
 ## Estado actual
 
-Versión **v1.6**: mosaico dinámico, filtro simplificado y favicon.
+Versión **v1.7**: catálogo ampliado y fórmulas completas.
 
 Cambios principales:
 
@@ -19,14 +19,17 @@ Cambios principales:
 - Mosaico dinámico con cuadrícula densa: las tarjetas altas ocupan más filas y las demás rellenan huecos.
 - Título siempre situado arriba en tarjetas de varias líneas.
 - Soporte para fórmulas de varias líneas mediante arrays de LaTeX.
-- Ecuaciones compuestas, como Maxwell, Cauchy-Riemann, Hamilton, Lotka-Volterra y relatividad general, se muestran apiladas verticalmente.
 - Corregido el escapado LaTeX de las ecuaciones adicionales con `String.raw`.
+- Añadido `advanced-equations.js` con 30 fórmulas nuevas de matemáticas, física, electricidad, cuántica, información e IA.
+- Añadido `complete-equations.js` para reemplazar entradas simplificadas por versiones más completas sin duplicarlas.
+- Fórmulas base ampliadas: Newton, Euler, Fourier, Boltzmann, Planck, Einstein, Schrödinger, Dirac y Navier-Stokes.
+- Entradas reemplazadas con versiones completas: Pitágoras, cuadrática, Bayes, normal, Bernoulli, gases ideales, Heisenberg, Lorentz, relatividad general y Friedmann.
 - Filtro convertido en botón flotante con icono de embudo.
 - Popover de filtro simplificado visualmente.
 - Controles flotantes fijos durante el scroll.
 - Fondo corregido a gradientes suaves sin cuadrícula.
 - Añadido `favicon.svg` con símbolo matemático.
-- Catálogo ampliado a 30 ecuaciones.
+- Catálogo ampliado a 60 ecuaciones finales, aplicando reemplazos por `id`.
 
 ## Estructura
 
@@ -35,6 +38,8 @@ Cambios principales:
 ├── favicon.svg
 ├── index.html
 ├── data/
+│   ├── advanced-equations.js
+│   ├── complete-equations.js
 │   ├── equations.js
 │   └── extra-equations.js
 ├── scripts/
@@ -61,11 +66,15 @@ Cambios principales:
 
 ## Ecuaciones incluidas
 
-El catálogo contiene 30 entradas, mezclando matemáticas, física clásica, relatividad, cuántica, termodinámica, fluidos, estadística, biología matemática, bioquímica y finanzas cuantitativas.
+El catálogo final contiene 60 entradas, mezclando matemáticas, trigonometría, electricidad, circuitos, física clásica, relatividad, cuántica, termodinámica, fluidos, estadística, biología matemática, bioquímica, información, telecomunicaciones, finanzas cuantitativas e inteligencia artificial.
 
-## Cómo añadir una ecuación
+## Cómo añadir o completar una ecuación
 
-Añade un objeto nuevo en `data/equations.js` o `data/extra-equations.js`. Las propiedades principales son:
+Añade un objeto nuevo en `data/equations.js`, `data/extra-equations.js` o `data/advanced-equations.js`.
+
+Para sustituir una entrada existente por una versión más completa sin duplicarla, añade un objeto con el mismo `id` en `data/complete-equations.js`.
+
+Las propiedades principales son:
 
 - `id`
 - `name`
