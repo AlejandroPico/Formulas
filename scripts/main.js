@@ -2,6 +2,7 @@ import { equations as baseEquations } from "../data/equations.js";
 import { extraEquations } from "../data/extra-equations.js";
 import { advancedEquations } from "../data/advanced-equations.js";
 import { completedEquations } from "../data/complete-equations.js";
+import { finalCorrections } from "../data/final-corrections.js";
 import { state, setState } from "./state.js";
 import { $, unique } from "./utils.js";
 import { filterEquations } from "./filtering.js";
@@ -9,7 +10,7 @@ import { drawHeroCanvas } from "./simulations.js";
 import { renderEquationGrid, openEquationModal, closeEquationModal } from "./render.js";
 import { initTheme } from "./theme.js";
 
-const equations = mergeEquationSets(baseEquations, extraEquations, advancedEquations, completedEquations);
+const equations = mergeEquationSets(baseEquations, extraEquations, advancedEquations, completedEquations, finalCorrections);
 const fields = ["Todas", ...unique(equations.map(eq => eq.field)).sort((a, b) => a.localeCompare(b, "es"))];
 const levels = ["Todos", ...unique(equations.map(eq => eq.level))];
 
