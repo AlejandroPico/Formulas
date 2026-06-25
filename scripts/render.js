@@ -367,6 +367,7 @@ function annotateFormulaSymbols(root, eq) {
     node.classList.add("formula-token");
     node.dataset.symbol = symbol;
     node.dataset.description = description;
+    node.setAttribute("aria-label", `${symbol}: ${description}`);
     addSymbolHitbox(node);
     wireSymbolTooltip(node, symbol, description);
   });
@@ -403,7 +404,7 @@ function extractVariableKeys(rawKeys) {
 }
 
 function extractMathSymbol(node) {
-  const codes = [...node.querySelectorAll(":scope > use[data-c], :scope > g > use[data-c]")]
+  const codes = [...node.querySelectorAll(":scope use[data-c]")]
     .map(use => use.getAttribute("data-c"))
     .filter(Boolean);
   if (!codes.length) return "";
@@ -440,10 +441,10 @@ function addSymbolHitbox(node) {
     if (!box.width || !box.height) return;
     const rect = document.createElementNS("http://www.w3.org/2000/svg", "rect");
     rect.setAttribute("class", "formula-token-hitbox");
-    rect.setAttribute("x", String(box.x - 4));
-    rect.setAttribute("y", String(box.y - 4));
-    rect.setAttribute("width", String(box.width + 8));
-    rect.setAttribute("height", String(box.height + 8));
+    rect.setAttribute("x", String(box.x - 5));
+    rect.setAttribute("y", String(box.y - 5));
+    rect.setAttribute("width", String(box.width + 10));
+    rect.setAttribute("height", String(box.height + 10));
     node.insertBefore(rect, node.firstChild);
   } catch {
     // Algunos grupos SVG no exponen caja medible; simplemente se omiten.
@@ -451,24 +452,25 @@ function addSymbolHitbox(node) {
 }
 
 function wireSymbolTooltip(node, symbol, description) {
-  node.onmousemove = event => showSymbolTooltip(event, symbol, description);
-  node.onmouseenter = event => showSymbolTooltip(event, symbol, description);
-  node.onmouseleave = hideSymbolTooltip;
-  node.onclick = event => showSymbolTooltip(event, symbol, description);
+  const host = node.ownerSVGElement?.closest(".equation-modal") || document.body;
+  node.onmousemove = event => showSymbolTooltip(event, symbol, description, host);
+  node.onmouseenter = event => showSymbolTooltip(event, symbol, description, host);
+  node.onmouseleave = () => hideSymbolTooltip(host);
+  node.onclick = event => showSymbolTooltip(event, symbol, description, host);
 }
 
-function getTooltipElement() {
-  let tooltip = document.querySelector(".symbol-tooltip");
+function getTooltipElement(host) {
+  let tooltip = host.querySelector?.(".symbol-tooltip");
   if (!tooltip) {
     tooltip = document.createElement("div");
     tooltip.className = "symbol-tooltip";
-    document.body.appendChild(tooltip);
+    host.appendChild(tooltip);
   }
   return tooltip;
 }
 
-function showSymbolTooltip(event, symbol, description) {
-  const tooltip = getTooltipElement();
+function showSymbolTooltip(event, symbol, description, host) {
+  const tooltip = getTooltipElement(host);
   tooltip.innerHTML = `<strong>${escapeHtml(symbol)}</strong><span>${escapeHtml(description)}</span>`;
   tooltip.classList.add("visible");
   const offset = 16;
@@ -478,8 +480,8 @@ function showSymbolTooltip(event, symbol, description) {
   tooltip.style.top = `${Math.max(12, Math.min(maxTop, event.clientY + offset))}px`;
 }
 
-function hideSymbolTooltip() {
-  document.querySelector(".symbol-tooltip")?.classList.remove("visible");
+function hideSymbolTooltip(host = document) {
+  host.querySelectorAll?.(".symbol-tooltip").forEach(tooltip => tooltip.classList.remove("visible"));
 }
 
 function escapeHtml(value) {
@@ -489,6 +491,6 @@ function escapeHtml(value) {
 export function closeEquationModal() {
   if (disposeSimulation) disposeSimulation();
   disposeSimulation = null;
-  hideSymbolTooltip();
+  hideSymbolTooltip(document);
   $("#equationModal").close();
 }
