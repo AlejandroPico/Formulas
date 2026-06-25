@@ -4,7 +4,7 @@ Proyecto web estático para GitHub Pages orientado a divulgación científica vi
 
 ## Estado actual
 
-Versión **v1.9**: sin pantalla inicial y ficha simplificada.
+Versión **v2.0**: pestañas limpias y símbolos interactivos.
 
 Cambios principales:
 
@@ -26,7 +26,10 @@ Cambios principales:
 - Añadido `complete-equations.js` para reemplazar entradas simplificadas por versiones más completas sin duplicarlas.
 - Añadido `final-corrections.js` para correcciones finales de LaTeX sin reescribir catálogos completos.
 - Corregido el Teorema de Gauss para evitar comandos LaTeX no soportados visualmente.
-- Rediseñada la ficha ampliada con pestañas internas: Fórmula, Variables, Contexto, Usos, Ficha y Simulación.
+- Rediseñada la ficha ampliada con pestañas internas: Fórmula, Contexto, Usos, Ficha y Simulación.
+- Eliminada la pestaña visible de Variables: las variables pasan a integrarse en la fórmula mediante tooltips.
+- Añadido glosario interactivo sobre símbolos MathJax con definiciones por ecuación y glosario global.
+- Las pestañas activas ya no se muestran como burbujas; se distinguen por peso tipográfico y color.
 - La pestaña Fórmula escala automáticamente la fórmula para intentar mostrarla completa sin scroll.
 - Variables, usos y contexto simplificados sin cajetines anidados.
 - La simulación se carga solo al abrir su pestaña y reparte el espacio entre canvas y controles.
