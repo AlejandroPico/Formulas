@@ -18,15 +18,18 @@ export function renderEquationGrid(equations, onOpen) {
   }
 
   equations.forEach(eq => {
+    const formulas = normalizeFormulaList(eq.formula);
     const node = template.content.firstElementChild.cloneNode(true);
-    const widthLevel = getWidthLevel(eq.formula);
+    const widthLevel = getWidthLevel(formulas);
     node.classList.add(`size-${widthLevel}`);
-    node.style.setProperty("--card-width", `${getCardWidth(eq.formula)}px`);
+    node.classList.toggle("is-multiline", formulas.length > 1);
+    node.style.setProperty("--card-width", `${getCardWidth(formulas)}px`);
+    node.style.setProperty("--formula-lines", formulas.length);
     node.setAttribute("role", "button");
     node.setAttribute("aria-label", `Abrir ficha de ${eq.name}`);
 
     $("h3", node).textContent = eq.name;
-    $(".formula-box", node).innerHTML = `\\(${eq.formula}\\)`;
+    $(".formula-box", node).innerHTML = renderFormula(formulas);
 
     node.addEventListener("click", () => onOpen(eq));
     node.addEventListener("keydown", event => {
@@ -40,17 +43,30 @@ export function renderEquationGrid(equations, onOpen) {
   requestMathTypeset();
 }
 
-function getWidthLevel(formula) {
-  const length = normalizeFormulaLength(formula);
+function renderFormula(formulas) {
+  if (formulas.length === 1) return `\\(${formulas[0]}\\)`;
+  return `<div class="formula-stack">${formulas.map(line => `<div>\\(${line}\\)</div>`).join("")}</div>`;
+}
+
+function normalizeFormulaList(formula) {
+  return Array.isArray(formula) ? formula : [formula];
+}
+
+function getWidthLevel(formulas) {
+  const length = getMaxFormulaLength(formulas);
   if (length > 82) return 3;
   if (length > 42) return 2;
   return 1;
 }
 
-function getCardWidth(formula) {
-  const length = normalizeFormulaLength(formula);
+function getCardWidth(formulas) {
+  const length = getMaxFormulaLength(formulas);
   const rawWidth = 210 + length * 4.2;
   return Math.round(Math.min(540, Math.max(260, rawWidth)));
+}
+
+function getMaxFormulaLength(formulas) {
+  return Math.max(...formulas.map(normalizeFormulaLength));
 }
 
 function normalizeFormulaLength(formula) {
@@ -77,6 +93,7 @@ export function renderTimeline(equations) {
 export function openEquationModal(eq) {
   const modal = $("#equationModal");
   const content = $("#modalContent");
+  const formulas = normalizeFormulaList(eq.formula);
   if (disposeSimulation) disposeSimulation();
   content.innerHTML = `
     <section class="modal-hero" style="--tag-color:${eq.color}">
@@ -84,7 +101,7 @@ export function openEquationModal(eq) {
         <p class="eyebrow">${eq.author} · ${eq.year} · ${eq.level}</p>
         <h2>${eq.name}</h2>
         <p>${eq.meaning}</p>
-        <div class="formula-box modal-formula">\\(${eq.formula}\\)</div>
+        <div class="formula-box modal-formula">${renderFormula(formulas)}</div>
       </div>
       <div class="info-box">
         <h3>Lectura rápida</h3>
