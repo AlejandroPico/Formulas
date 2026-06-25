@@ -162,15 +162,8 @@ export function openEquationModal(eq) {
 
   content.innerHTML = `
     <section class="detail-shell" style="--tag-color:${eq.color}">
-      <header class="detail-header">
-        <div>
-          <p class="eyebrow">${eq.author} · ${eq.year}</p>
-          <h2>${eq.name}</h2>
-        </div>
-        <div class="detail-meta" aria-label="Metadatos">
-          <span>${eq.field}</span>
-          <span>${eq.level}</span>
-        </div>
+      <header class="detail-header compact">
+        <h2>${eq.name}</h2>
       </header>
 
       <nav class="detail-tabs" role="tablist" aria-label="Secciones de la ficha">
@@ -178,53 +171,51 @@ export function openEquationModal(eq) {
         <button type="button" role="tab" aria-selected="false" data-tab="variables">Variables</button>
         <button type="button" role="tab" aria-selected="false" data-tab="context">Contexto</button>
         <button type="button" role="tab" aria-selected="false" data-tab="uses">Usos</button>
+        <button type="button" role="tab" aria-selected="false" data-tab="metadata">Ficha</button>
         <button type="button" role="tab" aria-selected="false" data-tab="simulation">Simulación</button>
       </nav>
 
       <div class="detail-panels">
-        <section class="detail-panel active" data-panel="formula" role="tabpanel">
-          <article class="detail-formula-card">
-            <div class="formula-box modal-formula">${renderFormula(formulas)}</div>
-          </article>
-          <article class="detail-copy-card">
-            <h3>Lectura rápida</h3>
-            <p>${eq.summary}</p>
-            <h3>Qué significa</h3>
-            <p>${eq.meaning}</p>
-          </article>
+        <section class="detail-panel formula-view active" data-panel="formula" role="tabpanel">
+          <div class="formula-box modal-formula">${renderFormula(formulas)}</div>
+          <p class="formula-caption">${eq.summary}</p>
         </section>
 
-        <section class="detail-panel" data-panel="variables" role="tabpanel" hidden>
-          <article class="detail-copy-card full">
-            <h3>Variables y símbolos</h3>
-            <ul class="variable-list clean-list">${eq.variables.map(v => `<li>${v}</li>`).join("")}</ul>
-          </article>
+        <section class="detail-panel text-view" data-panel="variables" role="tabpanel" hidden>
+          <ul class="plain-list variable-list">${eq.variables.map(v => `<li>${v}</li>`).join("")}</ul>
         </section>
 
-        <section class="detail-panel" data-panel="context" role="tabpanel" hidden>
-          <article class="detail-copy-card">
+        <section class="detail-panel text-view" data-panel="context" role="tabpanel" hidden>
+          <div class="text-section">
             <h3>Historia</h3>
             <p>${eq.history}</p>
-          </article>
-          <article class="detail-copy-card">
+          </div>
+          <div class="text-section">
             <h3>Derivación simplificada</h3>
             <p>${eq.derivation}</p>
-          </article>
+          </div>
+          <div class="text-section">
+            <h3>Qué significa</h3>
+            <p>${eq.meaning}</p>
+          </div>
         </section>
 
-        <section class="detail-panel" data-panel="uses" role="tabpanel" hidden>
-          <article class="detail-copy-card full">
-            <h3>Casos de uso</h3>
-            <ul class="variable-list clean-list use-list">${eq.uses.map(v => `<li>${v}</li>`).join("")}</ul>
-          </article>
+        <section class="detail-panel text-view" data-panel="uses" role="tabpanel" hidden>
+          <ul class="plain-list use-list">${eq.uses.map(v => `<li>${v}</li>`).join("")}</ul>
         </section>
 
-        <section class="detail-panel" data-panel="simulation" role="tabpanel" hidden>
-          <article class="simulation-panel detail-simulation">
-            <h3>Simulación conceptual</h3>
-            <canvas id="simulationCanvas"></canvas>
-            <div class="sim-controls" id="simulationControls"></div>
-          </article>
+        <section class="detail-panel text-view" data-panel="metadata" role="tabpanel" hidden>
+          <dl class="metadata-list">
+            <div><dt>Autor / descubridor</dt><dd>${eq.author}</dd></div>
+            <div><dt>Año</dt><dd>${eq.year}</dd></div>
+            <div><dt>Área</dt><dd>${eq.field}</dd></div>
+            <div><dt>Nivel</dt><dd>${eq.level}</dd></div>
+          </dl>
+        </section>
+
+        <section class="detail-panel simulation-view" data-panel="simulation" role="tabpanel" hidden>
+          <canvas id="simulationCanvas"></canvas>
+          <div class="sim-controls" id="simulationControls"></div>
         </section>
       </div>
     </section>
@@ -233,6 +224,7 @@ export function openEquationModal(eq) {
   modal.showModal();
   bindDetailTabs(content, eq);
   requestMathTypeset();
+  scheduleModalFormulaFit(content);
 }
 
 function bindDetailTabs(content, eq) {
@@ -254,9 +246,46 @@ function bindDetailTabs(content, eq) {
       disposeSimulation = mountSimulation(eq.simulation, $("#simulationCanvas"), $("#simulationControls"));
     }
     requestMathTypeset();
+    scheduleModalFormulaFit(content);
   }
 
   buttons.forEach(button => button.addEventListener("click", () => activate(button.dataset.tab)));
+}
+
+function scheduleModalFormulaFit(root) {
+  window.setTimeout(() => fitModalFormula(root), 80);
+  window.setTimeout(() => fitModalFormula(root), 240);
+  window.setTimeout(() => fitModalFormula(root), 560);
+}
+
+function fitModalFormula(root) {
+  const formulaBox = $(".modal-formula", root);
+  if (!formulaBox || formulaBox.closest("[hidden]")) return;
+
+  formulaBox.style.setProperty("--modal-formula-font", "clamp(1rem, 4.2vw, 3.2rem)");
+
+  requestAnimationFrame(() => {
+    const availableWidth = Math.max(1, formulaBox.clientWidth - 12);
+    const availableHeight = Math.max(1, formulaBox.clientHeight - 12);
+    const contentWidth = getFormulaContentWidth(formulaBox);
+    const contentHeight = getFormulaContentHeight(formulaBox);
+    const ratio = Math.min(1, availableWidth / contentWidth, availableHeight / contentHeight);
+    const baseSize = parseFloat(getComputedStyle(formulaBox).fontSize) || 32;
+    const fittedSize = Math.max(13, Math.floor(baseSize * ratio * 0.96));
+    formulaBox.style.setProperty("--modal-formula-font", `${fittedSize}px`);
+  });
+}
+
+function getFormulaContentWidth(formulaBox) {
+  const mathNodes = [...formulaBox.querySelectorAll("mjx-container")];
+  const widths = mathNodes.map(node => node.getBoundingClientRect().width || node.scrollWidth || 0);
+  return Math.max(formulaBox.scrollWidth || 0, ...widths, 1);
+}
+
+function getFormulaContentHeight(formulaBox) {
+  const mathNodes = [...formulaBox.querySelectorAll("mjx-container")];
+  const heights = mathNodes.map(node => node.getBoundingClientRect().height || node.scrollHeight || 0);
+  return Math.max(formulaBox.scrollHeight || 0, heights.reduce((sum, value) => sum + value, 0), 1);
 }
 
 export function closeEquationModal() {
