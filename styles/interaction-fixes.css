@@ -12,7 +12,7 @@
 }
 
 .equation-modal .symbol-tooltip {
-  position: fixed;
+  position: absolute;
 }
 
 .CtxtMenu_MenuFrame,
@@ -20,6 +20,36 @@
 .CtxtMenu_Info,
 .CtxtMenu_ContextMenu {
   z-index: 2147483647 !important;
+}
+
+.history-view.active {
+  height: 100%;
+  overflow: auto;
+  padding: 4px 2px 18px;
+}
+
+.history-essay {
+  max-width: 980px;
+  display: grid;
+  gap: 18px;
+}
+
+.history-essay h3 {
+  margin: 0 0 2px;
+  font-size: clamp(1.2rem, 2vw, 1.75rem);
+  letter-spacing: -.035em;
+}
+
+.history-essay p {
+  margin: 0;
+  color: var(--text);
+  line-height: 1.72;
+  font-size: 1rem;
+}
+
+.history-essay .history-note {
+  color: var(--muted);
+  font-size: .92rem;
 }
 
 .simulation-view canvas {
