@@ -13,14 +13,21 @@ const historyById = new Map(historyEssays.map(item => [item.id, item]));
 const modal = document.querySelector("#equationModal");
 const modalContent = document.querySelector("#modalContent");
 
-const observer = new MutationObserver(() => enhanceModal());
+const observer = new MutationObserver(() => scheduleEnhanceModal());
 if (modalContent) observer.observe(modalContent, { childList: true, subtree: true });
 
 document.addEventListener("click", event => {
+  const card = event.target.closest?.(".equation-card");
+  if (card) scheduleEnhanceModal();
+
   const button = event.target.closest?.(".equation-modal .detail-tabs button");
-  if (!button || !modal?.open) return;
+  if (!button) return;
   window.setTimeout(() => syncTabs(button.dataset.tab), 0);
 });
+
+window.setInterval(() => {
+  if (modalContent?.querySelector(".detail-tabs")) enhanceModal();
+}, 500);
 
 document.addEventListener("mousemove", event => {
   const token = event.target.closest?.(".formula-token");
@@ -34,12 +41,19 @@ document.addEventListener("mouseenter", event => {
   window.setTimeout(() => repositionSymbolTooltip(event), 0);
 }, true);
 
+function scheduleEnhanceModal() {
+  window.setTimeout(enhanceModal, 0);
+  window.setTimeout(enhanceModal, 80);
+  window.setTimeout(enhanceModal, 220);
+  window.setTimeout(enhanceModal, 500);
+}
+
 function mergeEquationSets(...sets) {
   return [...sets.flat().reduce((map, eq) => map.set(eq.id, eq), new Map()).values()];
 }
 
 function enhanceModal() {
-  if (!modal?.open || !modalContent?.querySelector(".detail-tabs")) return;
+  if (!modalContent?.querySelector(".detail-tabs") || !modalContent?.querySelector(".detail-panels")) return;
   addHistoryTab();
   removeHistoryFromContext();
 }
@@ -50,9 +64,11 @@ function getCurrentEquation() {
 }
 
 function getCurrentEssay() {
+  const title = modalContent.querySelector(".detail-header h2")?.textContent ?? "";
   const eq = getCurrentEquation();
-  if (!eq) return null;
-  return historyById.get(eq.id) || historyByTitle.get(normalizeTitle(eq.name)) || buildGeneratedHistoryEssay(eq);
+  if (eq) return historyById.get(eq.id) || historyByTitle.get(normalizeTitle(eq.name)) || buildGeneratedHistoryEssay(eq);
+  if (!title.trim()) return null;
+  return buildFallbackHistoryEssay(title);
 }
 
 function addHistoryTab() {
@@ -145,6 +161,18 @@ function buildGeneratedHistoryEssay(eq) {
       `La derivación o justificación que suele acompañarla puede resumirse así: ${derivation} Históricamente, este tipo de derivación es importante porque muestra que la fórmula no es una regla arbitraria. Incluso cuando se presenta de forma escolar o resumida, está apoyada en un razonamiento: conservación, simetría, proporcionalidad, límite, equilibrio, probabilidad, geometría o estructura algebraica. Esa capa de razonamiento es la que permite reconocer cuándo se puede usar y cuándo deja de ser válida.",
       `Sus aplicaciones actuales incluyen ${uses}. Esta variedad de usos es una de las señales de su relevancia histórica. Muchas ecuaciones nacen para resolver un problema estrecho, pero terminan funcionando como herramientas generales. Cuando una fórmula viaja de un campo a otro, también cambia su significado práctico: puede pasar de ser una descripción idealizada a ser un algoritmo de cálculo, un criterio de diseño, una aproximación de laboratorio o una pieza de una teoría mayor.",
       `En futuras ampliaciones, esta entrada puede enriquecerse con una monografía histórica más específica: autores secundarios, controversias, manuscritos, experimentos, recepción académica, cambios de notación y conexiones con resultados anteriores y posteriores. De momento, esta versión ampliada garantiza que la ficha no quede reducida a una frase mínima y que todas las fórmulas del atlas dispongan de una pestaña histórica legible, contextual y claramente separada del resto de apartados.`
+    ]
+  };
+}
+
+function buildFallbackHistoryEssay(title) {
+  return {
+    id: `${normalizeTitle(title).replace(/\s+/g, "-")}-fallback-history`,
+    title,
+    note: "Historia ampliada provisional. No se ha podido vincular esta ficha con el catálogo interno, pero se mantiene la pestaña Historia como sección obligatoria.",
+    paragraphs: [
+      `${title} forma parte del atlas de ecuaciones y debe leerse dentro de una tradición científica más amplia. Toda fórmula relevante aparece como respuesta a una necesidad: medir, explicar, predecir, clasificar o relacionar magnitudes que antes se entendían de forma separada.`,
+      `Esta entrada histórica provisional garantiza que la ficha mantenga la estructura completa mientras se sustituye por una versión monográfica específica. La versión final deberá incluir contexto de descubrimiento, autores, problemas originales, recepción, cambios de notación y aplicaciones posteriores.`
     ]
   };
 }
