@@ -30,6 +30,10 @@
   backdrop-filter: blur(14px);
 }
 
+.equation-card.is-multiline {
+  min-height: calc(150px + var(--formula-lines, 2) * 38px);
+}
+
 .equation-card::before,
 .equation-card::after {
   display: none !important;
@@ -68,6 +72,17 @@
   align-items: center;
   text-align: center;
   font-size: 1.05rem;
+}
+
+.formula-stack {
+  display: grid;
+  gap: 10px;
+  justify-items: center;
+  width: 100%;
+}
+
+.formula-stack > div {
+  max-width: 100%;
 }
 
 .equation-card .formula-box mjx-container {
