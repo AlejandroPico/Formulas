@@ -4,16 +4,20 @@ Proyecto web estático para GitHub Pages orientado a divulgación científica vi
 
 ## Estado actual
 
-Versión **v2.2**: pestaña Historia y primera ampliación histórica.
+Versión **v2.3**: Historia disponible en todas las fichas y pestañas sincronizadas.
 
 Cambios principales:
 
+- Corregida la sincronización de pestañas cuando existe la pestaña `Historia`.
+- La pestaña `Historia` ya no rompe `Fórmula`, `Contexto`, `Usos`, `Ficha` ni `Simulación`.
+- Todas las fórmulas disponen de pestaña `Historia`.
+- Si existe un ensayo histórico manual en `history-essays.js`, se muestra ese texto.
+- Si todavía no existe ensayo manual, se genera una historia ampliada desde los metadatos de la fórmula para evitar fichas con una sola frase.
 - Corregida la posición de los tooltips de símbolos usando coordenadas relativas al diálogo.
 - Añadido `modal-enhancements.js` para mejoras progresivas del modal sin sobrecargar el render principal.
 - Añadido `history-essays.js` con la primera tanda de historias ampliadas.
-- Añadida pestaña interna `Historia` cuando existe un ensayo ampliado para la fórmula.
 - La sección breve de historia se elimina automáticamente de `Contexto` cuando la fórmula tiene una pestaña `Historia` ampliada.
-- Primera tanda de historias ampliadas: Pitágoras, gravitación de Newton, Maxwell, Schrödinger, Bayes y fórmula cuadrática.
+- Primera tanda de historias manuales ampliadas: Pitágoras, gravitación de Newton, Maxwell, Schrödinger, Bayes y fórmula cuadrática.
 - Eliminada la pantalla inicial animada de presentación.
 - Eliminado el canvas de entrada y su temporizador de espera.
 - Desactivado el menú contextual interno de MathJax para evitar menús ocultos o anclados tras cerrar una ficha.
@@ -102,7 +106,7 @@ Para sustituir una entrada existente por una versión más completa sin duplicar
 
 Para aplicar una corrección final puntual, añade un objeto con el mismo `id` en `data/final-corrections.js`.
 
-Para ampliar la historia de una fórmula, añade un objeto en `data/history-essays.js` con `id`, `title`, `note` y `paragraphs`.
+Para ampliar la historia de una fórmula, añade un objeto en `data/history-essays.js` con `id`, `title`, `note` y `paragraphs`. Si no existe, el sistema genera una ampliación histórica estructurada a partir de los datos de la ficha.
 
 Las propiedades principales son:
 
