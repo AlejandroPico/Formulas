@@ -58,7 +58,12 @@ export const equations = [
     field: "Electromagnetismo",
     level: "Universidad",
     color: "#ffd37a",
-    formula: "\\nabla\\cdot\\mathbf{E}=\\frac{\\rho}{\\varepsilon_0},\\quad \\nabla\\cdot\\mathbf{B}=0,\\quad \\nabla\\times\\mathbf{E}=-\\frac{\\partial\\mathbf{B}}{\\partial t},\\quad \\nabla\\times\\mathbf{B}=\\mu_0\\mathbf{J}+\\mu_0\\varepsilon_0\\frac{\\partial\\mathbf{E}}{\\partial t}",
+    formula: [
+      String.raw`\nabla\cdot\mathbf{E}=\frac{\rho}{\varepsilon_0}`,
+      String.raw`\nabla\cdot\mathbf{B}=0`,
+      String.raw`\nabla\times\mathbf{E}=-\frac{\partial\mathbf{B}}{\partial t}`,
+      String.raw`\nabla\times\mathbf{B}=\mu_0\mathbf{J}+\mu_0\varepsilon_0\frac{\partial\mathbf{E}}{\partial t}`
+    ],
     summary: "Unifican electricidad, magnetismo y luz en un único marco de campos.",
     meaning: "Explican cómo las cargas generan campos eléctricos, por qué no hay monopolos magnéticos clásicos, cómo un campo magnético variable induce electricidad y cómo la luz surge como onda electromagnética.",
     variables: ["E: campo eléctrico", "B: campo magnético", "ρ: densidad de carga", "J: densidad de corriente", "ε₀ y μ₀: constantes del vacío"],
