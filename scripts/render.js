@@ -4,6 +4,67 @@ import { mountSimulation } from "./simulations.js";
 let disposeSimulation = null;
 let resizeHandler = null;
 
+const GLOBAL_SYMBOLS = new Map(Object.entries({
+  "=": "igualdad: ambos lados representan el mismo valor o la misma relación matemática.",
+  "+": "suma: agrega términos o contribuciones.",
+  "-": "resta o signo negativo: diferencia entre términos o cambio de sentido.",
+  "−": "resta o signo negativo: diferencia entre términos o cambio de sentido.",
+  "±": "más/menos: indica dos posibilidades, una con suma y otra con resta.",
+  "×": "producto vectorial o multiplicación, según el contexto de la ecuación.",
+  "·": "producto escalar, producto entre factores o derivada temporal en notación compacta.",
+  "/": "división o razón entre magnitudes.",
+  "∂": "derivada parcial: variación respecto a una variable manteniendo otras constantes.",
+  "∇": "operador nabla: representa gradiente, divergencia, rotacional o laplaciano según cómo se use.",
+  "∑": "sumatorio: suma de una familia de términos.",
+  "∫": "integral: acumulación continua de una magnitud.",
+  "∏": "productorio: multiplicación de una familia de factores.",
+  "∞": "infinito: límite no acotado o extensión indefinida.",
+  "π": "pi: constante geométrica de la circunferencia.",
+  "e": "número de Euler: base de los logaritmos naturales y de la exponencial.",
+  "i": "unidad imaginaria: cumple i² = -1.",
+  "ℏ": "constante de Planck reducida: h dividido por 2π.",
+  "h": "constante de Planck o altura, según el contexto.",
+  "c": "velocidad de la luz, hipotenusa o constante de propagación, según el contexto.",
+  "G": "constante gravitatoria, tensor de Einstein o energía libre, según el contexto.",
+  "R": "constante, radio, curvatura escalar o constante de los gases, según el contexto.",
+  "T": "temperatura, periodo o tensor, según el contexto.",
+  "S": "acción, entropía, superficie o variable de estado, según el contexto.",
+  "H": "Hamiltoniano, entropía de Shannon, carga hidráulica o parámetro de Hubble, según el contexto.",
+  "E": "energía o campo eléctrico, según el contexto.",
+  "B": "campo magnético, radiancia o ancho de banda, según el contexto.",
+  "F": "fuerza, campo vectorial o función, según el contexto.",
+  "p": "presión, probabilidad o momento lineal, según el contexto.",
+  "q": "carga eléctrica, coordenada generalizada o variable, según el contexto.",
+  "m": "masa o índice, según el contexto.",
+  "r": "distancia radial, radio o tasa, según el contexto.",
+  "t": "tiempo.",
+  "x": "coordenada, variable independiente o dato de entrada, según el contexto.",
+  "y": "coordenada, variable dependiente, etiqueta o salida, según el contexto.",
+  "z": "variable compleja, coordenada o puntuación, según el contexto.",
+  "v": "velocidad o variable, según el contexto.",
+  "a": "lado, aceleración, parámetro o factor de escala, según el contexto.",
+  "b": "lado, coeficiente o parámetro, según el contexto.",
+  "d": "diferencial, distancia o dimensión, según el contexto.",
+  "f": "función, frecuencia o fuerza externa, según el contexto.",
+  "k": "constante, curvatura o índice discreto, según el contexto.",
+  "n": "número de elementos, índice o cantidad de sustancia, según el contexto.",
+  "u": "campo escalar, temperatura o velocidad de fluido, según el contexto.",
+  "λ": "lambda: longitud de onda, constante o multiplicador, según el contexto.",
+  "Λ": "lambda mayúscula: constante cosmológica u operador, según el contexto.",
+  "μ": "mu: viscosidad, media, potencial químico o constante, según el contexto.",
+  "ρ": "rho: densidad, densidad de carga o matriz densidad, según el contexto.",
+  "σ": "sigma: desviación típica, conductividad, volatilidad o función de activación, según el contexto.",
+  "γ": "gamma: factor relativista, parámetro o índice adiabático, según el contexto.",
+  "θ": "theta: ángulo, parámetro o vector de parámetros, según el contexto.",
+  "τ": "tau: tiempo propio o variable temporal auxiliar.",
+  "ψ": "psi: función de onda o campo cuántico.",
+  "Ψ": "psi mayúscula: función de onda del sistema.",
+  "Ω": "omega mayúscula: número de microestados o dominio.",
+  "ω": "omega: frecuencia angular.",
+  "ε": "épsilon: permitividad, energía pequeña o término de error, según el contexto.",
+  "ϵ": "épsilon: permitividad, energía pequeña o término de error, según el contexto."
+}));
+
 export function renderFilters(container, values, activeValue, onChange) {
   container.innerHTML = values.map(value => `<button class="filter-pill ${value === activeValue ? "active" : ""}" data-value="${value}">${value}</button>`).join("");
   container.querySelectorAll("button").forEach(button => button.addEventListener("click", () => onChange(button.dataset.value)));
@@ -168,7 +229,6 @@ export function openEquationModal(eq) {
 
       <nav class="detail-tabs" role="tablist" aria-label="Secciones de la ficha">
         <button class="active" type="button" role="tab" aria-selected="true" data-tab="formula">Fórmula</button>
-        <button type="button" role="tab" aria-selected="false" data-tab="variables">Variables</button>
         <button type="button" role="tab" aria-selected="false" data-tab="context">Contexto</button>
         <button type="button" role="tab" aria-selected="false" data-tab="uses">Usos</button>
         <button type="button" role="tab" aria-selected="false" data-tab="metadata">Ficha</button>
@@ -177,12 +237,8 @@ export function openEquationModal(eq) {
 
       <div class="detail-panels">
         <section class="detail-panel formula-view active" data-panel="formula" role="tabpanel">
-          <div class="formula-box modal-formula">${renderFormula(formulas)}</div>
+          <div class="formula-box modal-formula" aria-label="Fórmula interactiva">${renderFormula(formulas)}</div>
           <p class="formula-caption">${eq.summary}</p>
-        </section>
-
-        <section class="detail-panel text-view" data-panel="variables" role="tabpanel" hidden>
-          <ul class="plain-list variable-list">${eq.variables.map(v => `<li>${v}</li>`).join("")}</ul>
         </section>
 
         <section class="detail-panel text-view" data-panel="context" role="tabpanel" hidden>
@@ -225,6 +281,7 @@ export function openEquationModal(eq) {
   bindDetailTabs(content, eq);
   requestMathTypeset();
   scheduleModalFormulaFit(content);
+  scheduleSymbolTooltips(content, eq);
 }
 
 function bindDetailTabs(content, eq) {
@@ -247,6 +304,7 @@ function bindDetailTabs(content, eq) {
     }
     requestMathTypeset();
     scheduleModalFormulaFit(content);
+    scheduleSymbolTooltips(content, eq);
   }
 
   buttons.forEach(button => button.addEventListener("click", () => activate(button.dataset.tab)));
@@ -288,8 +346,149 @@ function getFormulaContentHeight(formulaBox) {
   return Math.max(formulaBox.scrollHeight || 0, heights.reduce((sum, value) => sum + value, 0), 1);
 }
 
+function scheduleSymbolTooltips(root, eq) {
+  window.setTimeout(() => annotateFormulaSymbols(root, eq), 120);
+  window.setTimeout(() => annotateFormulaSymbols(root, eq), 320);
+  window.setTimeout(() => annotateFormulaSymbols(root, eq), 680);
+}
+
+function annotateFormulaSymbols(root, eq) {
+  const formulaBox = $(".modal-formula", root);
+  if (!formulaBox || formulaBox.closest("[hidden]")) return;
+  const glossary = buildEquationGlossary(eq);
+  const tokenNodes = [...formulaBox.querySelectorAll("svg g[data-mml-node='mi'], svg g[data-mml-node='mo'], svg g[data-mml-node='mn']")];
+
+  tokenNodes.forEach(node => {
+    node.querySelectorAll(":scope > .formula-token-hitbox").forEach(hitbox => hitbox.remove());
+    const symbol = extractMathSymbol(node);
+    const description = lookupSymbolDescription(symbol, glossary);
+    if (!description) return;
+
+    node.classList.add("formula-token");
+    node.dataset.symbol = symbol;
+    node.dataset.description = description;
+    addSymbolHitbox(node);
+    wireSymbolTooltip(node, symbol, description);
+  });
+}
+
+function buildEquationGlossary(eq) {
+  const glossary = new Map(GLOBAL_SYMBOLS);
+  eq.variables?.forEach(entry => {
+    const [rawKeys, rawDescription] = String(entry).split(":");
+    if (!rawKeys || !rawDescription) return;
+    const description = rawDescription.trim();
+    extractVariableKeys(rawKeys).forEach(key => {
+      const normalized = normalizeSymbolKey(key);
+      if (normalized) glossary.set(normalized, description);
+    });
+  });
+  return glossary;
+}
+
+function extractVariableKeys(rawKeys) {
+  return rawKeys
+    .replace(/\by\b/gi, ",")
+    .replace(/\be\b/gi, ",")
+    .replace(/\//g, ",")
+    .split(/[,,;]+/)
+    .map(part => part.trim())
+    .filter(Boolean)
+    .flatMap(part => {
+      const direct = normalizeSymbolKey(part);
+      const singleSymbols = [...part].map(normalizeSymbolKey).filter(Boolean);
+      return [direct, ...singleSymbols];
+    })
+    .filter(Boolean);
+}
+
+function extractMathSymbol(node) {
+  const codes = [...node.querySelectorAll(":scope > use[data-c], :scope > g > use[data-c]")]
+    .map(use => use.getAttribute("data-c"))
+    .filter(Boolean);
+  if (!codes.length) return "";
+  return codes.map(code => codePointToSymbol(code)).join("").normalize("NFKC");
+}
+
+function codePointToSymbol(hex) {
+  const value = Number.parseInt(hex, 16);
+  if (!Number.isFinite(value)) return "";
+  return String.fromCodePoint(value).normalize("NFKC");
+}
+
+function lookupSymbolDescription(symbol, glossary) {
+  const key = normalizeSymbolKey(symbol);
+  if (!key) return "";
+  return glossary.get(key) || GLOBAL_SYMBOLS.get(key) || "";
+}
+
+function normalizeSymbolKey(value) {
+  return String(value ?? "")
+    .normalize("NFKC")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/[₀₁₂₃₄₅₆₇₈₉⁰¹²³⁴⁵⁶⁷⁸⁹0-9]/g, "")
+    .replace(/[{}()[\]^_\\]/g, "")
+    .replace(/\s+/g, "")
+    .trim();
+}
+
+function addSymbolHitbox(node) {
+  const svg = node.ownerSVGElement;
+  if (!svg) return;
+  try {
+    const box = node.getBBox();
+    if (!box.width || !box.height) return;
+    const rect = document.createElementNS("http://www.w3.org/2000/svg", "rect");
+    rect.setAttribute("class", "formula-token-hitbox");
+    rect.setAttribute("x", String(box.x - 4));
+    rect.setAttribute("y", String(box.y - 4));
+    rect.setAttribute("width", String(box.width + 8));
+    rect.setAttribute("height", String(box.height + 8));
+    node.insertBefore(rect, node.firstChild);
+  } catch {
+    // Algunos grupos SVG no exponen caja medible; simplemente se omiten.
+  }
+}
+
+function wireSymbolTooltip(node, symbol, description) {
+  node.onmousemove = event => showSymbolTooltip(event, symbol, description);
+  node.onmouseenter = event => showSymbolTooltip(event, symbol, description);
+  node.onmouseleave = hideSymbolTooltip;
+  node.onclick = event => showSymbolTooltip(event, symbol, description);
+}
+
+function getTooltipElement() {
+  let tooltip = document.querySelector(".symbol-tooltip");
+  if (!tooltip) {
+    tooltip = document.createElement("div");
+    tooltip.className = "symbol-tooltip";
+    document.body.appendChild(tooltip);
+  }
+  return tooltip;
+}
+
+function showSymbolTooltip(event, symbol, description) {
+  const tooltip = getTooltipElement();
+  tooltip.innerHTML = `<strong>${escapeHtml(symbol)}</strong><span>${escapeHtml(description)}</span>`;
+  tooltip.classList.add("visible");
+  const offset = 16;
+  const maxLeft = window.innerWidth - tooltip.offsetWidth - 12;
+  const maxTop = window.innerHeight - tooltip.offsetHeight - 12;
+  tooltip.style.left = `${Math.max(12, Math.min(maxLeft, event.clientX + offset))}px`;
+  tooltip.style.top = `${Math.max(12, Math.min(maxTop, event.clientY + offset))}px`;
+}
+
+function hideSymbolTooltip() {
+  document.querySelector(".symbol-tooltip")?.classList.remove("visible");
+}
+
+function escapeHtml(value) {
+  return String(value).replace(/[&<>'"]/g, char => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", "'": "&#39;", '"': "&quot;" }[char]));
+}
+
 export function closeEquationModal() {
   if (disposeSimulation) disposeSimulation();
   disposeSimulation = null;
+  hideSymbolTooltip();
   $("#equationModal").close();
 }
