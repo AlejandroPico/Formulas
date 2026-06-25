@@ -1,5 +1,6 @@
 import { equations as baseEquations } from "../data/equations.js";
 import { extraEquations } from "../data/extra-equations.js";
+import { advancedEquations } from "../data/advanced-equations.js";
 import { state, setState } from "./state.js";
 import { $, unique } from "./utils.js";
 import { filterEquations } from "./filtering.js";
@@ -7,7 +8,7 @@ import { drawHeroCanvas } from "./simulations.js";
 import { renderEquationGrid, openEquationModal, closeEquationModal } from "./render.js";
 import { initTheme } from "./theme.js";
 
-const equations = [...baseEquations, ...extraEquations];
+const equations = [...baseEquations, ...extraEquations, ...advancedEquations];
 const fields = ["Todas", ...unique(equations.map(eq => eq.field)).sort((a, b) => a.localeCompare(b, "es"))];
 const levels = ["Todos", ...unique(equations.map(eq => eq.level))];
 
