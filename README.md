@@ -4,10 +4,16 @@ Proyecto web estático para GitHub Pages orientado a divulgación científica vi
 
 ## Estado actual
 
-Versión **v2.1**: tooltips corregidos y simulaciones con más contraste.
+Versión **v2.2**: pestaña Historia y primera ampliación histórica.
 
 Cambios principales:
 
+- Corregida la posición de los tooltips de símbolos usando coordenadas relativas al diálogo.
+- Añadido `modal-enhancements.js` para mejoras progresivas del modal sin sobrecargar el render principal.
+- Añadido `history-essays.js` con la primera tanda de historias ampliadas.
+- Añadida pestaña interna `Historia` cuando existe un ensayo ampliado para la fórmula.
+- La sección breve de historia se elimina automáticamente de `Contexto` cuando la fórmula tiene una pestaña `Historia` ampliada.
+- Primera tanda de historias ampliadas: Pitágoras, gravitación de Newton, Maxwell, Schrödinger, Bayes y fórmula cuadrática.
 - Eliminada la pantalla inicial animada de presentación.
 - Eliminado el canvas de entrada y su temporizador de espera.
 - Desactivado el menú contextual interno de MathJax para evitar menús ocultos o anclados tras cerrar una ficha.
@@ -28,7 +34,7 @@ Cambios principales:
 - Añadido `complete-equations.js` para reemplazar entradas simplificadas por versiones más completas sin duplicarlas.
 - Añadido `final-corrections.js` para correcciones finales de LaTeX sin reescribir catálogos completos.
 - Corregido el Teorema de Gauss para evitar comandos LaTeX no soportados visualmente.
-- Rediseñada la ficha ampliada con pestañas internas: Fórmula, Contexto, Usos, Ficha y Simulación.
+- Rediseñada la ficha ampliada con pestañas internas: Fórmula, Historia, Contexto, Usos, Ficha y Simulación.
 - Eliminada la pestaña visible de Variables: las variables pasan a integrarse en la fórmula mediante tooltips.
 - Corregida la capa de tooltips: ahora se monta dentro del diálogo para que aparezca por encima de la ficha.
 - Eliminado el cursor de ayuda con interrogante en los símbolos de fórmula.
@@ -58,10 +64,12 @@ Cambios principales:
 │   ├── complete-equations.js
 │   ├── equations.js
 │   ├── extra-equations.js
-│   └── final-corrections.js
+│   ├── final-corrections.js
+│   └── history-essays.js
 ├── scripts/
 │   ├── filtering.js
 │   ├── main.js
+│   ├── modal-enhancements.js
 │   ├── render.js
 │   ├── simulations.js
 │   ├── state.js
@@ -93,6 +101,8 @@ Añade un objeto nuevo en `data/equations.js`, `data/extra-equations.js` o `data
 Para sustituir una entrada existente por una versión más completa sin duplicarla, añade un objeto con el mismo `id` en `data/complete-equations.js`.
 
 Para aplicar una corrección final puntual, añade un objeto con el mismo `id` en `data/final-corrections.js`.
+
+Para ampliar la historia de una fórmula, añade un objeto en `data/history-essays.js` con `id`, `title`, `note` y `paragraphs`.
 
 Las propiedades principales son:
 
