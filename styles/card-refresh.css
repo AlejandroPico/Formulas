@@ -180,7 +180,7 @@
 .detail-tabs {
   display: flex;
   flex-wrap: wrap;
-  gap: 7px;
+  gap: 18px;
   padding: 0;
   border: 0;
   border-radius: 0;
@@ -190,20 +190,29 @@
 }
 
 .detail-tabs button {
-  min-height: 32px;
-  border: 1px solid transparent;
-  border-radius: 999px;
-  padding: 0 11px;
+  min-height: 28px;
+  border: 0;
+  border-radius: 0;
+  padding: 0;
   background: transparent;
   color: var(--muted);
-  font-size: .8rem;
-  font-weight: 800;
+  opacity: .55;
+  font-size: .82rem;
+  font-weight: 650;
+  letter-spacing: .01em;
+}
+
+.detail-tabs button:hover {
+  opacity: .82;
+  color: var(--text);
 }
 
 .detail-tabs button.active {
-  border-color: var(--line);
-  background: color-mix(in srgb, var(--panel-solid) 64%, transparent);
+  border: 0;
+  background: transparent;
   color: var(--text);
+  opacity: 1;
+  font-weight: 950;
 }
 
 .detail-panels {
@@ -252,6 +261,55 @@
 .modal-formula mjx-container {
   max-width: none;
   overflow: visible;
+}
+
+.formula-token {
+  cursor: help;
+}
+
+.formula-token-hitbox {
+  fill: transparent;
+  pointer-events: all;
+}
+
+.formula-token:hover > use,
+.formula-token:hover > g > use {
+  filter: drop-shadow(0 0 4px color-mix(in srgb, var(--accent) 45%, transparent));
+}
+
+.symbol-tooltip {
+  position: fixed;
+  z-index: 9999;
+  max-width: min(310px, calc(100vw - 24px));
+  display: grid;
+  gap: 4px;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: color-mix(in srgb, var(--panel-solid) 94%, transparent);
+  color: var(--text);
+  box-shadow: 0 16px 44px rgba(0,0,0,.22);
+  backdrop-filter: blur(18px);
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity .12s ease, transform .12s ease;
+}
+
+.symbol-tooltip.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.symbol-tooltip strong {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.symbol-tooltip span {
+  color: var(--muted);
+  font-size: .86rem;
+  line-height: 1.35;
 }
 
 .formula-caption {
@@ -397,6 +455,7 @@
   }
   .detail-tabs {
     width: 100%;
+    gap: 13px;
   }
   .formula-caption {
     font-size: .86rem;
