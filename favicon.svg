@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Favicon de fórmulas">
+  <defs>
+    <linearGradient id="bg" x1="8" y1="8" x2="56" y2="56" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#f7f5f0"/>
+      <stop offset="1" stop-color="#ebe7df"/>
+    </linearGradient>
+    <linearGradient id="ink" x1="18" y1="18" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#5d5af6"/>
+      <stop offset="1" stop-color="#7b61ff"/>
+    </linearGradient>
+  </defs>
+  <rect x="5" y="5" width="54" height="54" rx="16" fill="url(#bg)"/>
+  <rect x="5.75" y="5.75" width="52.5" height="52.5" rx="15.25" fill="none" stroke="rgba(24,24,24,.16)" stroke-width="1.5"/>
+  <path d="M18 43 28.2 31.6 19 20.8h8.1l5.1 6.4 5.6-6.4h7.8L35.7 31.7 46 43h-8.2l-5.8-7-6.1 7H18Z" fill="url(#ink)"/>
+  <path d="M43 16h8v3h-3.8v3.1h3.2V25H43v-2.4l3.6-3.8H43V16Z" fill="#181818" opacity=".74"/>
+</svg>
