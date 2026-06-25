@@ -4,7 +4,7 @@ Proyecto web estático para GitHub Pages orientado a divulgación científica vi
 
 ## Estado actual
 
-Versión **v1.4**: corrección de anchuras y catálogo ampliado.
+Versión **v1.5**: corrección de fórmulas y mosaico multilinea.
 
 Cambios principales:
 
@@ -16,6 +16,9 @@ Cambios principales:
 - Fórmula sin cajetín interno.
 - Eliminados borde de acento, punto decorativo y marcas de color visibles.
 - Anchura de tarjeta calculada por fórmula, con máximo contenido para evitar tarjetas gigantes.
+- Soporte para fórmulas de varias líneas mediante arrays de LaTeX.
+- Ecuaciones compuestas, como Maxwell, Cauchy-Riemann, Hamilton, Lotka-Volterra y relatividad general, se muestran apiladas verticalmente.
+- Corregido el escapado LaTeX de las ecuaciones adicionales con `String.raw`.
 - Filtro convertido en botón flotante con icono de embudo.
 - Selector de ordenación movido al panel flotante de filtro.
 - Controles flotantes fijos durante el scroll.
@@ -75,5 +78,7 @@ Añade un objeto nuevo en `data/equations.js` o `data/extra-equations.js`. Las p
 - `uses`
 - `derivation`
 - `simulation`
+
+`formula` puede ser una cadena LaTeX simple o un array de cadenas LaTeX cuando la ecuación se deba mostrar en varias líneas.
 
 Las simulaciones disponibles inicialmente son: `gravity`, `complex`, `wave`, `field`, `particles`, `spectrum`, `energy`, `quantum`, `spinor` y `flow`.
