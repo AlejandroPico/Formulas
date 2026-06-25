@@ -23,8 +23,8 @@ export function renderEquationGrid(equations, onOpen) {
     const widthLevel = getWidthLevel(formulas);
     node.classList.add(`size-${widthLevel}`);
     node.classList.toggle("is-multiline", formulas.length > 1);
-    node.style.setProperty("--card-width", `${getCardWidth(formulas)}px`);
     node.style.setProperty("--formula-lines", formulas.length);
+    node.style.setProperty("--col-span", getColumnSpan(widthLevel));
     node.setAttribute("role", "button");
     node.setAttribute("aria-label", `Abrir ficha de ${eq.name}`);
 
@@ -41,6 +41,7 @@ export function renderEquationGrid(equations, onOpen) {
     grid.appendChild(node);
   });
   requestMathTypeset();
+  scheduleMasonryLayout(grid);
 }
 
 function renderFormula(formulas) {
@@ -59,10 +60,8 @@ function getWidthLevel(formulas) {
   return 1;
 }
 
-function getCardWidth(formulas) {
-  const length = getMaxFormulaLength(formulas);
-  const rawWidth = 210 + length * 4.2;
-  return Math.round(Math.min(540, Math.max(260, rawWidth)));
+function getColumnSpan(widthLevel) {
+  return { 1: 2, 2: 3, 3: 4 }[widthLevel] ?? 2;
 }
 
 function getMaxFormulaLength(formulas) {
@@ -78,6 +77,24 @@ function normalizeFormulaLength(formula) {
     .replace(/\\[a-zA-Z]+/g, "x")
     .replace(/[{}]/g, "")
     .length;
+}
+
+function scheduleMasonryLayout(grid) {
+  const run = () => applyMasonrySpans(grid);
+  window.setTimeout(run, 80);
+  window.setTimeout(run, 260);
+  window.addEventListener("resize", run, { once: true });
+}
+
+function applyMasonrySpans(grid) {
+  const rowHeight = parseFloat(getComputedStyle(grid).gridAutoRows) || 10;
+  const gap = parseFloat(getComputedStyle(grid).rowGap) || 0;
+  grid.querySelectorAll(".equation-card").forEach(card => {
+    card.style.gridRowEnd = "auto";
+    const height = card.scrollHeight;
+    const span = Math.ceil((height + gap) / (rowHeight + gap));
+    card.style.gridRowEnd = `span ${span}`;
+  });
 }
 
 export function renderTimeline(equations) {
