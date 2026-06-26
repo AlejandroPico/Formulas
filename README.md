@@ -4,21 +4,23 @@ Proyecto web estático para GitHub Pages orientado a divulgación científica vi
 
 ## Estado actual
 
-Versión **v2.7**: búsqueda flotante avanzada.
+Versión **v2.8**: tooltips de fórmula rediseñados con capa HTML independiente.
 
 Cambios principales:
 
+- Rediseñado por completo el sistema de mensajes flotantes de símbolos de fórmula.
+- Añadido `formula-tooltips.js`, que calcula las posiciones reales de los símbolos MathJax y crea una capa HTML interactiva encima de la fórmula.
+- Añadido `formula-tooltip-boot.js`, que observa la ficha abierta y monta automáticamente la capa de tooltips cuando la fórmula está visible.
+- El tooltip ya no depende de eventos directos sobre nodos SVG internos de MathJax.
+- El mensaje flotante usa ahora la clase independiente `formula-symbol-popover`, separada del antiguo `.symbol-tooltip`.
+- Se crean zonas HTML para símbolos (`mi`, `mo`, `mn`) y también para estructuras matemáticas como raíces, potencias, fracciones, subíndices y límites.
 - Añadido botón flotante de búsqueda con icono de lupa.
 - Al pulsar la lupa se despliega un campo de búsqueda hacia la izquierda del botón.
-- Añadido botón interno para limpiar la búsqueda.
 - La búsqueda se conecta a `state.query` y actualiza el mosaico en tiempo real.
 - Sustituido el buscador simple por búsqueda ponderada con ranking.
 - La búsqueda indexa nombre, id, autor, área, nivel, resumen, significado, historia, derivación, variables, usos, ejemplos de uso y fórmulas.
 - La búsqueda normaliza tildes, potencias, texto LaTeX básico y fórmulas compactas como `emc2`.
 - Añadidos alias útiles: `pitagoras/pythagoras`, `schrodinger/schroedinger`, `ia/ai`, `energia/e=mc2`, `distancia/vector/norma`, y símbolos griegos habituales.
-- El orden de resultados prioriza coincidencias en nombre y fórmula por encima de coincidencias secundarias en texto largo.
-- Corregido el tooltip de símbolos desde `render.js`, que es donde se crean realmente los símbolos interactivos de MathJax.
-- El tooltip se crea ahora siempre como elemento global directo en `body`, no dentro del diálogo.
 - La pestaña `Ficha` muestra un resumen técnico, autoría, fecha, área, nivel, simulación asociada y cobertura interna.
 - Separadas las secciones conceptuales en pestañas propias: `Historia`, `Derivación` y `Significado`.
 - La simulación de Pitágoras se ha simplificado visualmente: canvas y controles en una única zona funcional, sin cajas anidadas ni paneles internos redundantes.
@@ -42,6 +44,8 @@ Cambios principales:
 │   └── polished-equations.js
 ├── scripts/
 │   ├── filtering.js
+│   ├── formula-tooltip-boot.js
+│   ├── formula-tooltips.js
 │   ├── main.js
 │   ├── modal-enhancements.js
 │   ├── render.js
