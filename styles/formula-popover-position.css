@@ -1,0 +1,4 @@
+.equation-modal > .formula-symbol-popover {
+  position: absolute !important;
+  z-index: 2147483647 !important;
+}
