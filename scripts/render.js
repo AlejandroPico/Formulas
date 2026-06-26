@@ -109,8 +109,8 @@ export function renderEquationGrid(equations, onOpen) {
 }
 
 function renderFormula(formulas) {
-  if (formulas.length === 1) return `\(${formulas[0]}\)`;
-  return `<div class="formula-stack">${formulas.map(line => `<div>\(${line}\)</div>`).join("")}</div>`;
+  if (formulas.length === 1) return `\\(${formulas[0]}\\)`;
+  return `<div class="formula-stack">${formulas.map(line => `<div>\\(${line}\\)</div>`).join("")}</div>`;
 }
 
 function normalizeFormulaList(formula) {
@@ -125,7 +125,7 @@ function getWidthLevel(formulas) {
 }
 
 function getColumnSpan(widthLevel) {
-  return { 1: 2, 2: 3, 3: 4 }[widthLevel] ?? 2;
+  return { 1: 2, 2: 3, 4: 4, 3: 4 }[widthLevel] ?? 2;
 }
 
 function getMaxFormulaLength(formulas) {
