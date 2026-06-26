@@ -147,7 +147,7 @@ function drawPythagoreanScene(ctx, w, h, values, colors, palette) {
   ctx.lineTo(sA.x, sA.y);
   ctx.lineTo(sB.x, sB.y);
   ctx.closePath();
-  ctx.fillStyle = colorMix(palette.bg, palette.text, 0.10);
+  ctx.fillStyle = "rgba(255,255,255,0.10)";
   ctx.fill();
 
   drawSegment(ctx, sO, sA, colors.a, 4.5);
@@ -234,7 +234,7 @@ function drawChip(ctx, text, point, color, palette, dx = 0, dy = 0) {
   const width = ctx.measureText(text).width;
   const x = point.x + dx;
   const y = point.y + dy;
-  ctx.fillStyle = colorMix(palette.bg, palette.text, 0.12);
+  ctx.fillStyle = "rgba(0,0,0,0.38)";
   roundRect(ctx, x - width / 2 - 8, y - 17, width + 16, 24, 8);
   ctx.fill();
   ctx.strokeStyle = colorAlpha(color, 0.7);
@@ -244,7 +244,7 @@ function drawChip(ctx, text, point, color, palette, dx = 0, dy = 0) {
   ctx.restore();
 }
 
-function drawAreaLabel(ctx, text, point, color, palette) {
+function drawAreaLabel(ctx, text, point, color) {
   ctx.save();
   ctx.font = "800 12px system-ui";
   ctx.fillStyle = color;
@@ -283,10 +283,6 @@ function colorAlpha(color, alpha) {
     return `rgba(${r}, ${g}, ${b}, ${alpha})`;
   }
   return color;
-}
-
-function colorMix(base, overlay, amount) {
-  return `color-mix(in srgb, ${base} ${Math.round((1 - amount) * 100)}%, ${overlay} ${Math.round(amount * 100)}%)`;
 }
 
 function controlTemplate(control) {
@@ -386,10 +382,10 @@ function drawWave(ctx, w, h, freq, amp, t, palette) {
   for (let x = 0; x < w; x++) { const y = h / 2 + Math.sin(x / 38 * freq + t * 2) * Math.min(h * 0.2, 18 * amp); x ? ctx.lineTo(x, y) : ctx.moveTo(x, y); }
   ctx.stroke(); label(ctx, `Frecuencia ${freq}`, 18, 30, palette);
 }
-function drawField(ctx, w, h, p) {
-  clear(ctx, w, h, p); ctx.strokeStyle = p.accent2; ctx.lineWidth = 1.8;
-  for (let x = 35; x < w; x += Math.max(18, 260 / p.density)) for (let y = 45; y < h; y += Math.max(18, 220 / p.density)) arrow(ctx, x, y, 22, Math.sin(x * 0.02) + Math.cos(y * 0.025));
-  label(ctx, "Campo electromagnético esquemático", 18, 30, p);
+function drawField(ctx, w, h, params, t, palette) {
+  clear(ctx, w, h, palette); ctx.strokeStyle = palette.accent2; ctx.lineWidth = 1.8;
+  for (let x = 35; x < w; x += Math.max(18, 260 / params.density)) for (let y = 45; y < h; y += Math.max(18, 220 / params.density)) arrow(ctx, x, y, 22, Math.sin(x * 0.02) + Math.cos(y * 0.025));
+  label(ctx, "Campo electromagnético esquemático", 18, 30, palette);
 }
 function drawParticles(ctx, w, h, p, t, palette) {
   clear(ctx, w, h, palette); for (let i = 0; i < 140; i++) { const x = (i * 47 + t * 28 * p.spread) % w; const y = h/2 + Math.sin(i + t + p.spread) * Math.min(h * 0.33, 12 + p.spread * 8); dot(ctx, x, y, 2.8, palette.accent2); } label(ctx, "Más dispersión → más microestados", 18, 30, palette);
