@@ -3,15 +3,29 @@ import { extraEquations } from "../data/extra-equations.js";
 import { advancedEquations } from "../data/advanced-equations.js";
 import { completedEquations } from "../data/complete-equations.js";
 import { finalCorrections } from "../data/final-corrections.js";
+import { polishedEquations } from "../data/polished-equations.js";
 import { historyEssays } from "../data/history-essays.js";
 
-const equations = mergeEquationSets(baseEquations, extraEquations, advancedEquations, completedEquations, finalCorrections);
+const equations = mergeEquationSets(baseEquations, extraEquations, advancedEquations, completedEquations, finalCorrections, polishedEquations);
 const equationByTitle = new Map(equations.map(item => [normalizeTitle(item.name), item]));
 const historyByTitle = new Map(historyEssays.map(item => [normalizeTitle(item.title), item]));
 const historyById = new Map(historyEssays.map(item => [item.id, item]));
 
 const modal = document.querySelector("#equationModal");
 const modalContent = document.querySelector("#modalContent");
+
+const STRUCTURE_TOOLTIPS = {
+  msqrt: ["√", "raíz cuadrada: número o expresión que, elevada al cuadrado, produce el radicando."],
+  mroot: ["ⁿ√", "raíz de índice n: generaliza la raíz cuadrada a cualquier índice."],
+  msup: ["exponente", "potencia: indica multiplicación repetida o una operación de escala algebraica."],
+  msub: ["subíndice", "subíndice: distingue componentes, índices, puntos o familias de variables."],
+  msubsup: ["subíndice/exponente", "notación combinada: usa índice inferior y exponente o índice superior a la vez."],
+  mfrac: ["fracción", "cociente: expresa división, razón, proporción o normalización entre dos cantidades."],
+  mover: ["vector/sobrescrito", "marca superior: puede indicar vector, media, operador o notación modificada según el contexto."],
+  munder: ["marca inferior", "marca inferior: suele indicar límite, índice o condición bajo un operador."],
+  munderover: ["límites", "límites superior e inferior: aparecen en sumatorios, integrales, productos y operadores."],
+  TeXAtom: ["bloque matemático", "bloque de notación compuesto por MathJax para representar una estructura LaTeX agrupada."]
+};
 
 const observer = new MutationObserver(() => scheduleEnhanceModal());
 if (modalContent) observer.observe(modalContent, { childList: true, subtree: true });
@@ -30,15 +44,21 @@ window.setInterval(() => {
 }, 500);
 
 document.addEventListener("mousemove", event => {
-  const token = event.target.closest?.(".formula-token");
+  const token = event.target.closest?.(".formula-token, .formula-structure-token");
   if (!token) return;
   repositionSymbolTooltip(event);
 });
 
 document.addEventListener("mouseenter", event => {
-  const token = event.target.closest?.(".formula-token");
+  const token = event.target.closest?.(".formula-token, .formula-structure-token");
   if (!token) return;
   window.setTimeout(() => repositionSymbolTooltip(event), 0);
+}, true);
+
+document.addEventListener("mouseleave", event => {
+  const token = event.target.closest?.(".formula-structure-token");
+  if (!token) return;
+  hideGlobalTooltip();
 }, true);
 
 function scheduleEnhanceModal() {
@@ -46,6 +66,7 @@ function scheduleEnhanceModal() {
   window.setTimeout(enhanceModal, 80);
   window.setTimeout(enhanceModal, 220);
   window.setTimeout(enhanceModal, 500);
+  window.setTimeout(enhanceModal, 900);
 }
 
 function mergeEquationSets(...sets) {
@@ -56,6 +77,7 @@ function enhanceModal() {
   if (!modalContent?.querySelector(".detail-tabs") || !modalContent?.querySelector(".detail-panels")) return;
   addHistoryTab();
   removeHistoryFromContext();
+  enhanceFormulaStructureTooltips();
 }
 
 function getCurrentEquation() {
@@ -131,6 +153,41 @@ function removeHistoryFromContext() {
   context.dataset.historyCleaned = "true";
 }
 
+function enhanceFormulaStructureTooltips() {
+  const formula = modalContent.querySelector(".modal-formula");
+  if (!formula || formula.closest("[hidden]")) return;
+  const selector = Object.keys(STRUCTURE_TOOLTIPS).map(name => `svg g[data-mml-node='${name}']`).join(",");
+  formula.querySelectorAll(selector).forEach(node => {
+    if (node.dataset.structureTooltip === "true") return;
+    const [symbol, description] = STRUCTURE_TOOLTIPS[node.dataset.mmlNode] || [];
+    if (!symbol || !description) return;
+    node.dataset.structureTooltip = "true";
+    node.classList.add("formula-structure-token");
+    node.setAttribute("aria-label", `${symbol}: ${description}`);
+    addSvgHitbox(node);
+    node.addEventListener("mousemove", event => showGlobalTooltip(event, symbol, description));
+    node.addEventListener("mouseenter", event => showGlobalTooltip(event, symbol, description));
+    node.addEventListener("click", event => showGlobalTooltip(event, symbol, description));
+    node.addEventListener("mouseleave", hideGlobalTooltip);
+  });
+}
+
+function addSvgHitbox(node) {
+  try {
+    const box = node.getBBox();
+    if (!box.width || !box.height) return;
+    const rect = document.createElementNS("http://www.w3.org/2000/svg", "rect");
+    rect.setAttribute("class", "formula-token-hitbox formula-structure-hitbox");
+    rect.setAttribute("x", String(box.x - 4));
+    rect.setAttribute("y", String(box.y - 4));
+    rect.setAttribute("width", String(box.width + 8));
+    rect.setAttribute("height", String(box.height + 8));
+    node.insertBefore(rect, node.firstChild);
+  } catch {
+    // MathJax no siempre expone una caja SVG útil para todos los grupos.
+  }
+}
+
 function renderHistoryEssay(essay) {
   return `
     <article class="history-essay">
@@ -177,20 +234,38 @@ function buildFallbackHistoryEssay(title) {
   };
 }
 
+function showGlobalTooltip(event, symbol, description) {
+  const tooltip = getGlobalTooltip();
+  tooltip.innerHTML = `<strong>${escapeHtml(symbol)}</strong><span>${escapeHtml(description)}</span>`;
+  tooltip.classList.add("visible");
+  positionTooltip(tooltip, event);
+}
+
 function repositionSymbolTooltip(event) {
-  const dialog = event.target.closest?.(".equation-modal") || modal;
-  const tooltip = dialog?.querySelector(".symbol-tooltip");
-  if (!dialog || !tooltip || !tooltip.classList.contains("visible")) return;
+  document.querySelectorAll(".symbol-tooltip.visible").forEach(tooltip => positionTooltip(tooltip, event));
+}
 
-  const dialogRect = dialog.getBoundingClientRect();
-  const offset = 10;
-  const desiredLeft = event.clientX - dialogRect.left + offset;
-  const desiredTop = event.clientY - dialogRect.top + offset;
-  const maxLeft = dialog.clientWidth - tooltip.offsetWidth - 10;
-  const maxTop = dialog.clientHeight - tooltip.offsetHeight - 10;
+function positionTooltip(tooltip, event) {
+  tooltip.style.position = "fixed";
+  const offset = 12;
+  const maxLeft = window.innerWidth - tooltip.offsetWidth - 12;
+  const maxTop = window.innerHeight - tooltip.offsetHeight - 12;
+  tooltip.style.left = `${clamp(event.clientX + offset, 12, Math.max(12, maxLeft))}px`;
+  tooltip.style.top = `${clamp(event.clientY + offset, 12, Math.max(12, maxTop))}px`;
+}
 
-  tooltip.style.left = `${clamp(desiredLeft, 10, Math.max(10, maxLeft))}px`;
-  tooltip.style.top = `${clamp(desiredTop, 10, Math.max(10, maxTop))}px`;
+function getGlobalTooltip() {
+  let tooltip = document.body.querySelector(":scope > .symbol-tooltip");
+  if (!tooltip) {
+    tooltip = document.createElement("div");
+    tooltip.className = "symbol-tooltip";
+    document.body.appendChild(tooltip);
+  }
+  return tooltip;
+}
+
+function hideGlobalTooltip() {
+  document.querySelectorAll(".symbol-tooltip").forEach(tooltip => tooltip.classList.remove("visible"));
 }
 
 function clamp(value, min, max) {
