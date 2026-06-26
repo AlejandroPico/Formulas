@@ -81,15 +81,15 @@ function bindEvents() {
   });
 
   $("#sortSelect").addEventListener("change", event => {
-    setState({ sort: event.target.value });
+    setState({ sort: event.target.value, cardLabelMode: getSortLabelMode(event.target.value) });
     renderAll();
   });
   $("#fieldSelect").addEventListener("change", event => {
-    setState({ field: event.target.value });
+    setState({ field: event.target.value, cardLabelMode: event.target.value === "Todas" ? "none" : "field" });
     renderAll();
   });
   $("#levelSelect").addEventListener("change", event => {
-    setState({ level: event.target.value });
+    setState({ level: event.target.value, cardLabelMode: event.target.value === "Todos" ? "none" : "level" });
     renderAll();
   });
 
@@ -99,9 +99,16 @@ function bindEvents() {
   });
 }
 
+function getSortLabelMode(sort) {
+  if (sort === "field") return "field";
+  if (sort === "level") return "level";
+  if (sort === "chronology") return "year";
+  return "none";
+}
+
 function renderAll() {
   const visible = filterEquations(equations, state);
-  renderEquationGrid(visible, openEquationModal);
+  renderEquationGrid(visible, openEquationModal, state);
 }
 
 boot();
