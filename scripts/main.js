@@ -81,15 +81,18 @@ function bindEvents() {
   });
 
   $("#sortSelect").addEventListener("change", event => {
-    setState({ sort: event.target.value, cardLabelMode: getSortLabelMode(event.target.value) });
+    const sort = event.target.value;
+    setState({ sort, cardLabelMode: getSortLabelMode(sort) });
     renderAll();
   });
   $("#fieldSelect").addEventListener("change", event => {
-    setState({ field: event.target.value, cardLabelMode: event.target.value === "Todas" ? "none" : "field" });
+    const field = event.target.value;
+    setState({ field, cardLabelMode: field === "Todas" ? getSortLabelMode(state.sort) : "field" });
     renderAll();
   });
   $("#levelSelect").addEventListener("change", event => {
-    setState({ level: event.target.value, cardLabelMode: event.target.value === "Todos" ? "none" : "level" });
+    const level = event.target.value;
+    setState({ level, cardLabelMode: level === "Todos" ? getSortLabelMode(state.sort) : "level" });
     renderAll();
   });
 
