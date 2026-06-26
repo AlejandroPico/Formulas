@@ -4,27 +4,27 @@ Proyecto web estático para GitHub Pages orientado a divulgación científica vi
 
 ## Estado actual
 
-Versión **v2.4**: Pitágoras como ficha patrón pulida.
+Versión **v2.5**: pestañas conceptuales separadas y simulación sin cajetines anidados.
 
 Cambios principales:
 
+- Eliminada la pestaña `Contexto` como contenedor mixto.
+- Separadas las secciones conceptuales en pestañas propias: `Historia`, `Derivación` y `Significado`.
+- La simulación de Pitágoras se ha simplificado visualmente: canvas y controles en una única zona funcional, sin cajas anidadas ni paneles internos redundantes.
+- Los controles de la simulación de Pitágoras quedan en una franja compacta y visible dentro de la pestaña.
+- El tooltip de fórmulas se fuerza como tooltip global en `body`, con distancia mínima respecto al puntero.
+- Los tooltips internos creados dentro del diálogo se ocultan para evitar desfases de coordenadas.
+- Los usos de Pitágoras se han ampliado con explicación concreta por campo: geometría, topografía, gráficos, distancias, álgebra lineal, física vectorial e informática.
 - Añadido `polished-equations.js` para overrides finales de fórmulas especialmente cuidadas.
 - Pitágoras pasa a usar una ficha pulida con fórmula, variables, significado, derivación y simulación propia.
 - Añadido simulador específico `pythagorean`, inspirado en el HTML de demostración aportado por el usuario.
 - El simulador de Pitágoras incluye cuadrados sobre los catetos y la hipotenusa, sliders para `a` y `b`, cálculo vivo de `c`, áreas y sustitución numérica.
 - Añadido `pythagorean-simulation.css` con adaptación visual al sistema de estilos del atlas.
-- Corregido el posicionamiento de tooltips con `position: fixed` global para evitar desplazamientos respecto al ratón.
 - Añadidos tooltips estructurales para raíces, potencias, fracciones, subíndices, superíndices y marcas vectoriales generadas por MathJax.
 - Corregida la sincronización de pestañas cuando existe la pestaña `Historia`.
-- La pestaña `Historia` ya no rompe `Fórmula`, `Contexto`, `Usos`, `Ficha` ni `Simulación`.
 - Todas las fórmulas disponen de pestaña `Historia`.
 - Si existe un ensayo histórico manual en `history-essays.js`, se muestra ese texto.
 - Si todavía no existe ensayo manual, se genera una historia ampliada desde los metadatos de la fórmula para evitar fichas con una sola frase.
-- Corregida la posición de los tooltips de símbolos usando coordenadas relativas al diálogo.
-- Añadido `modal-enhancements.js` para mejoras progresivas del modal sin sobrecargar el render principal.
-- Añadido `history-essays.js` con la primera tanda de historias ampliadas.
-- La sección breve de historia se elimina automáticamente de `Contexto` cuando la fórmula tiene una pestaña `Historia` ampliada.
-- Primera tanda de historias manuales ampliadas: Pitágoras, gravitación de Newton, Maxwell, Schrödinger, Bayes y fórmula cuadrática.
 - Eliminada la pantalla inicial animada de presentación.
 - Eliminado el canvas de entrada y su temporizador de espera.
 - Desactivado el menú contextual interno de MathJax para evitar menús ocultos o anclados tras cerrar una ficha.
@@ -45,14 +45,12 @@ Cambios principales:
 - Añadido `complete-equations.js` para reemplazar entradas simplificadas por versiones más completas sin duplicarlas.
 - Añadido `final-corrections.js` para correcciones finales de LaTeX sin reescribir catálogos completos.
 - Corregido el Teorema de Gauss para evitar comandos LaTeX no soportados visualmente.
-- Rediseñada la ficha ampliada con pestañas internas: Fórmula, Historia, Contexto, Usos, Ficha y Simulación.
+- Rediseñada la ficha ampliada con pestañas internas: Fórmula, Historia, Derivación, Significado, Usos, Ficha y Simulación.
 - Eliminada la pestaña visible de Variables: las variables pasan a integrarse en la fórmula mediante tooltips.
-- Corregida la capa de tooltips: ahora se monta dentro del diálogo para que aparezca por encima de la ficha.
 - Eliminado el cursor de ayuda con interrogante en los símbolos de fórmula.
 - Añadido glosario interactivo sobre símbolos MathJax con definiciones por ecuación y glosario global.
 - Las pestañas activas ya no se muestran como burbujas; se distinguen por peso tipográfico y color.
 - La pestaña Fórmula escala automáticamente la fórmula para intentar mostrarla completa sin scroll.
-- Variables, usos y contexto simplificados sin cajetines anidados.
 - La simulación se carga solo al abrir su pestaña y reparte el espacio entre canvas y controles.
 - Las simulaciones usan el tamaño real del canvas y colores derivados del tema para mejorar contraste.
 - Fórmulas base ampliadas: Newton, Euler, Fourier, Boltzmann, Planck, Einstein, Schrödinger, Dirac y Navier-Stokes.
@@ -134,6 +132,7 @@ Las propiedades principales son:
 - `variables`
 - `history`
 - `uses`
+- `useDetails`
 - `derivation`
 - `simulation`
 
