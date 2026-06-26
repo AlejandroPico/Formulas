@@ -34,6 +34,15 @@
   </div>
 
   <div class="floating-controls" aria-label="Controles flotantes">
+    <div class="search-control" id="searchControl">
+      <div class="search-field" id="searchField" hidden>
+        <input id="searchInput" type="search" autocomplete="off" spellcheck="false" placeholder="Buscar por fórmula, autor, uso, símbolo…" aria-label="Buscar ecuaciones" />
+        <button id="searchClear" class="search-clear" type="button" aria-label="Limpiar búsqueda">×</button>
+      </div>
+      <button id="searchToggle" class="floating-button" type="button" aria-label="Abrir búsqueda" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.4" /><path d="m16 16 4.2 4.2" /></svg>
+      </button>
+    </div>
     <button id="filterToggle" class="floating-button" type="button" aria-label="Abrir filtros" aria-expanded="false">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 5.5h17l-6.7 7.7v4.9l-3.6 1.8v-6.7L3.5 5.5Z" /></svg>
     </button>
