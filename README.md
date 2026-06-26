@@ -4,27 +4,27 @@ Proyecto web estático para GitHub Pages orientado a divulgación científica vi
 
 ## Estado actual
 
-Versión **v2.8**: tooltips de fórmula rediseñados con capa HTML independiente.
+Versión **v2.9**: fichas pulidas para las fórmulas con simulador específico.
 
 Cambios principales:
 
+- Ampliadas las fichas de `Fórmula cuadrática`, `Ley de los senos`, `Ley de los cosenos`, `Ley de gravitación universal`, `Identidad de Euler` y `Ecuación de Bernoulli`.
+- Cada una de esas fichas recibe ahora `summary`, `meaning`, `variables`, `history`, `uses`, `useDetails` y `derivation` desarrollados con estilo equivalente al trabajo realizado en Pitágoras.
+- La pestaña `Significado` explica la interpretación conceptual de cada fórmula, no solo su uso mecánico.
+- La pestaña `Derivación` incluye deducciones paso a paso adaptadas al nivel de cada fórmula.
+- La pestaña `Usos` incorpora aplicaciones ampliadas por campo, con ejemplos concretos y lectura técnica.
+- La ficha técnica queda reforzada porque los metadatos, variables, nivel, área, simulación y cobertura interna se alimentan de entradas más completas en `polished-equations.js`.
+- Se mantienen los simuladores específicos ya integrados para Bernoulli, Newton, Euler, cuadrática, senos, cosenos y Pitágoras.
 - Rediseñado por completo el sistema de mensajes flotantes de símbolos de fórmula.
 - Añadido `formula-tooltips.js`, que calcula las posiciones reales de los símbolos MathJax y crea una capa HTML interactiva encima de la fórmula.
 - Añadido `formula-tooltip-boot.js`, que observa la ficha abierta y monta automáticamente la capa de tooltips cuando la fórmula está visible.
 - El tooltip ya no depende de eventos directos sobre nodos SVG internos de MathJax.
 - El mensaje flotante usa ahora la clase independiente `formula-symbol-popover`, separada del antiguo `.symbol-tooltip`.
-- Se crean zonas HTML para símbolos (`mi`, `mo`, `mn`) y también para estructuras matemáticas como raíces, potencias, fracciones, subíndices y límites.
 - Añadido botón flotante de búsqueda con icono de lupa.
 - Al pulsar la lupa se despliega un campo de búsqueda hacia la izquierda del botón.
-- La búsqueda se conecta a `state.query` y actualiza el mosaico en tiempo real.
 - Sustituido el buscador simple por búsqueda ponderada con ranking.
 - La búsqueda indexa nombre, id, autor, área, nivel, resumen, significado, historia, derivación, variables, usos, ejemplos de uso y fórmulas.
-- La búsqueda normaliza tildes, potencias, texto LaTeX básico y fórmulas compactas como `emc2`.
-- Añadidos alias útiles: `pitagoras/pythagoras`, `schrodinger/schroedinger`, `ia/ai`, `energia/e=mc2`, `distancia/vector/norma`, y símbolos griegos habituales.
-- La pestaña `Ficha` muestra un resumen técnico, autoría, fecha, área, nivel, simulación asociada y cobertura interna.
 - Separadas las secciones conceptuales en pestañas propias: `Historia`, `Derivación` y `Significado`.
-- La simulación de Pitágoras se ha simplificado visualmente: canvas y controles en una única zona funcional, sin cajas anidadas ni paneles internos redundantes.
-- Los usos de Pitágoras se han ampliado con explicación concreta por campo: geometría, topografía, gráficos, distancias, álgebra lineal, física vectorial e informática.
 - Pitágoras usa una ficha pulida con fórmula, variables, significado, derivación, usos explicados y simulación propia.
 - Todas las fórmulas disponen de pestaña `Historia`.
 
@@ -44,10 +44,20 @@ Cambios principales:
 │   └── polished-equations.js
 ├── scripts/
 │   ├── filtering.js
+│   ├── formula-plugins.js
 │   ├── formula-tooltip-boot.js
 │   ├── formula-tooltips.js
 │   ├── main.js
 │   ├── modal-enhancements.js
+│   ├── plugins/
+│   │   ├── bernoulli-plugin.js
+│   │   ├── cosines-plugin.js
+│   │   ├── euler-plugin.js
+│   │   ├── gravity-plugin.js
+│   │   ├── plugin-utils.js
+│   │   ├── pythagorean-plugin.js
+│   │   ├── quadratic-plugin.js
+│   │   └── sines-plugin.js
 │   ├── render.js
 │   ├── simulations.js
 │   ├── state.js
@@ -57,6 +67,8 @@ Cambios principales:
 │   ├── base.css
 │   ├── card-refresh.css
 │   ├── components.css
+│   ├── formula-plugins.css
+│   ├── formula-popover-position.css
 │   ├── interaction-fixes.css
 │   ├── layout.css
 │   ├── no-header-label.css
@@ -106,4 +118,4 @@ Propiedades principales:
 
 `formula` puede ser una cadena LaTeX simple o un array de cadenas LaTeX cuando la ecuación se deba mostrar en varias líneas.
 
-Simulaciones disponibles: `gravity`, `complex`, `wave`, `field`, `particles`, `spectrum`, `energy`, `quantum`, `spinor`, `flow` y `pythagorean`.
+Simulaciones disponibles: `gravity`, `complex`, `wave`, `field`, `particles`, `spectrum`, `energy`, `quantum`, `spinor`, `flow`, `pythagorean` y plugins específicos montados por `formula-plugins.js`.
