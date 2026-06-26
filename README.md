@@ -4,30 +4,27 @@ Proyecto web estático para GitHub Pages orientado a divulgación científica vi
 
 ## Estado actual
 
-Versión **v2.6**: tooltip de fórmulas corregido en origen y pestaña Ficha rediseñada.
+Versión **v2.7**: búsqueda flotante avanzada.
 
 Cambios principales:
 
+- Añadido botón flotante de búsqueda con icono de lupa.
+- Al pulsar la lupa se despliega un campo de búsqueda hacia la izquierda del botón.
+- Añadido botón interno para limpiar la búsqueda.
+- La búsqueda se conecta a `state.query` y actualiza el mosaico en tiempo real.
+- Sustituido el buscador simple por búsqueda ponderada con ranking.
+- La búsqueda indexa nombre, id, autor, área, nivel, resumen, significado, historia, derivación, variables, usos, ejemplos de uso y fórmulas.
+- La búsqueda normaliza tildes, potencias, texto LaTeX básico y fórmulas compactas como `emc2`.
+- Añadidos alias útiles: `pitagoras/pythagoras`, `schrodinger/schroedinger`, `ia/ai`, `energia/e=mc2`, `distancia/vector/norma`, y símbolos griegos habituales.
+- El orden de resultados prioriza coincidencias en nombre y fórmula por encima de coincidencias secundarias en texto largo.
 - Corregido el tooltip de símbolos desde `render.js`, que es donde se crean realmente los símbolos interactivos de MathJax.
 - El tooltip se crea ahora siempre como elemento global directo en `body`, no dentro del diálogo.
-- Cada símbolo anotado recibe listeners propios, y la hitbox SVG transparente también recibe listeners propios.
-- Reducida la distancia del tooltip al puntero a una separación mínima de lectura.
-- Corregido el escapado de delimitadores MathJax `\\(...\\)` en el render de fórmulas.
-- La pestaña `Ficha` deja de ser una lista técnica con líneas y pasa a una presentación textual limpia.
-- `Ficha` ahora muestra un resumen técnico, autoría, fecha, área, nivel, simulación asociada y cobertura interna.
+- La pestaña `Ficha` muestra un resumen técnico, autoría, fecha, área, nivel, simulación asociada y cobertura interna.
 - Separadas las secciones conceptuales en pestañas propias: `Historia`, `Derivación` y `Significado`.
-- Eliminada la pestaña `Contexto` como contenedor mixto.
 - La simulación de Pitágoras se ha simplificado visualmente: canvas y controles en una única zona funcional, sin cajas anidadas ni paneles internos redundantes.
-- Los controles de la simulación de Pitágoras quedan en una franja compacta y visible dentro de la pestaña.
 - Los usos de Pitágoras se han ampliado con explicación concreta por campo: geometría, topografía, gráficos, distancias, álgebra lineal, física vectorial e informática.
-- Añadido `polished-equations.js` para overrides finales de fórmulas especialmente cuidadas.
 - Pitágoras usa una ficha pulida con fórmula, variables, significado, derivación, usos explicados y simulación propia.
-- Añadido simulador específico `pythagorean`, inspirado en el HTML de demostración aportado por el usuario.
-- Añadido `pythagorean-simulation.css` con adaptación visual al sistema de estilos del atlas.
-- Añadidos tooltips estructurales para raíces, potencias, fracciones, subíndices, superíndices y marcas vectoriales generadas por MathJax.
 - Todas las fórmulas disponen de pestaña `Historia`.
-- Si existe un ensayo histórico manual en `history-essays.js`, se muestra ese texto.
-- Si todavía no existe ensayo manual, se genera una historia ampliada desde los metadatos de la fórmula.
 
 ## Estructura
 
