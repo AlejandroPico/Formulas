@@ -147,7 +147,7 @@ function drawPythagoreanScene(ctx, w, h, values, colors, palette) {
   ctx.lineTo(sA.x, sA.y);
   ctx.lineTo(sB.x, sB.y);
   ctx.closePath();
-  ctx.fillStyle = "rgba(255,255,255,0.10)";
+  ctx.fillStyle = colorAlpha(palette.text, 0.05);
   ctx.fill();
 
   drawSegment(ctx, sO, sA, colors.a, 4.5);
@@ -234,10 +234,10 @@ function drawChip(ctx, text, point, color, palette, dx = 0, dy = 0) {
   const width = ctx.measureText(text).width;
   const x = point.x + dx;
   const y = point.y + dy;
-  ctx.fillStyle = "rgba(0,0,0,0.38)";
+  ctx.fillStyle = palette.chipBg;
   roundRect(ctx, x - width / 2 - 8, y - 17, width + 16, 24, 8);
   ctx.fill();
-  ctx.strokeStyle = colorAlpha(color, 0.7);
+  ctx.strokeStyle = colorAlpha(color, 0.72);
   ctx.stroke();
   ctx.fillStyle = palette.text;
   ctx.fillText(text, x - width / 2, y);
@@ -246,7 +246,7 @@ function drawChip(ctx, text, point, color, palette, dx = 0, dy = 0) {
 
 function drawAreaLabel(ctx, text, point, color) {
   ctx.save();
-  ctx.font = "800 12px system-ui";
+  ctx.font = "850 12px system-ui";
   ctx.fillStyle = color;
   ctx.textAlign = "center";
   ctx.textBaseline = "middle";
@@ -273,16 +273,19 @@ function polygonCenter(points) {
 }
 
 function colorAlpha(color, alpha) {
-  if (color.startsWith("#")) {
-    const hex = color.replace("#", "");
+  const value = String(color || "").trim();
+  if (value.startsWith("#")) {
+    const hex = value.replace("#", "");
     const full = hex.length === 3 ? hex.split("").map(ch => ch + ch).join("") : hex;
-    const value = Number.parseInt(full, 16);
-    const r = (value >> 16) & 255;
-    const g = (value >> 8) & 255;
-    const b = value & 255;
+    const parsed = Number.parseInt(full, 16);
+    const r = (parsed >> 16) & 255;
+    const g = (parsed >> 8) & 255;
+    const b = parsed & 255;
     return `rgba(${r}, ${g}, ${b}, ${alpha})`;
   }
-  return color;
+  const rgb = value.match(/^rgba?\((\d+),\s*(\d+),\s*(\d+)/i);
+  if (rgb) return `rgba(${rgb[1]}, ${rgb[2]}, ${rgb[3]}, ${alpha})`;
+  return value;
 }
 
 function controlTemplate(control) {
@@ -318,14 +321,19 @@ function getSimulationConfig(type) {
 function getSimulationPalette(canvas) {
   const styles = getComputedStyle(canvas);
   const root = getComputedStyle(document.body);
+  const panelSolid = root.getPropertyValue("--panel-solid").trim();
+  const bgSoft = root.getPropertyValue("--bg-soft").trim();
+  const canvasBg = styles.backgroundColor && styles.backgroundColor !== "rgba(0, 0, 0, 0)" ? styles.backgroundColor : "";
+  const bg = panelSolid || bgSoft || canvasBg || "#ffffff";
   return {
-    bg: styles.backgroundColor && styles.backgroundColor !== "rgba(0, 0, 0, 0)" ? styles.backgroundColor : "rgba(12,16,24,0.94)",
-    text: root.getPropertyValue("--text").trim() || "#f1f2f4",
-    muted: root.getPropertyValue("--muted").trim() || "#aaafbd",
+    bg,
+    chipBg: colorAlpha(panelSolid || bg, 0.92),
+    text: root.getPropertyValue("--text").trim() || "#181818",
+    muted: root.getPropertyValue("--muted").trim() || "#6d6b67",
     accent: root.getPropertyValue("--accent").trim() || "#5d5af6",
     accent2: root.getPropertyValue("--accent-2").trim() || "#7b61ff",
-    line: root.getPropertyValue("--line").trim() || "rgba(255,255,255,.22)",
-    glow: "rgba(255,255,255,0.86)"
+    line: root.getPropertyValue("--line").trim() || "rgba(0,0,0,.14)",
+    glow: colorAlpha(root.getPropertyValue("--text").trim() || "#181818", 0.84)
   };
 }
 
@@ -334,7 +342,7 @@ function clear(ctx, w, h, palette) {
   ctx.fillStyle = palette.bg;
   ctx.fillRect(0, 0, w, h);
   ctx.save();
-  ctx.globalAlpha = 0.14;
+  ctx.globalAlpha = 0.11;
   ctx.strokeStyle = palette.text;
   ctx.lineWidth = 1;
   for (let x = 40; x < w; x += 80) {
@@ -413,8 +421,10 @@ function label(ctx, text, x, y, palette) {
   ctx.save();
   ctx.font = "850 15px system-ui";
   const width = ctx.measureText(text).width;
-  ctx.fillStyle = "rgba(0,0,0,0.46)";
+  ctx.fillStyle = palette.chipBg;
   ctx.fillRect(x - 7, y - 19, width + 14, 26);
+  ctx.strokeStyle = palette.line;
+  ctx.strokeRect(x - 7, y - 19, width + 14, 26);
   ctx.fillStyle = palette.text;
   ctx.fillText(text, x, y);
   ctx.restore();
