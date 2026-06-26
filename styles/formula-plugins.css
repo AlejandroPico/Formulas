@@ -1,0 +1,124 @@
+.detail-panel.simulation-view.active.has-formula-plugin {
+  display: grid;
+  grid-template-rows: minmax(0, 1fr);
+  height: 100%;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.plugin-hidden-original {
+  display: none !important;
+}
+
+.formula-plugin-host {
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) auto auto;
+  gap: 10px;
+  height: 100%;
+  min-height: 0;
+}
+
+.formula-plugin-canvas {
+  width: 100%;
+  height: 100%;
+  min-height: 260px;
+  border: 0;
+  border-radius: 0;
+  background: var(--panel-solid);
+  touch-action: none;
+}
+
+.formula-plugin-controls {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  align-items: center;
+  min-height: 0;
+}
+
+.formula-plugin-control {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 4px 10px;
+  align-items: center;
+  min-width: 0;
+  color: var(--text);
+}
+
+.formula-plugin-control span,
+.formula-plugin-hint {
+  overflow: hidden;
+  color: var(--muted);
+  font-size: .78rem;
+  font-weight: 760;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.formula-plugin-control strong {
+  font-size: .82rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.formula-plugin-control input {
+  grid-column: 1 / -1;
+  width: 100%;
+  margin: 0;
+}
+
+.formula-plugin-button {
+  min-height: 34px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--panel-solid) 82%, transparent);
+  color: var(--text);
+  font-weight: 850;
+  cursor: pointer;
+}
+
+.formula-plugin-button:hover {
+  background: color-mix(in srgb, var(--accent) 14%, var(--panel-solid));
+}
+
+.formula-plugin-readout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 14px;
+  align-items: center;
+  justify-content: center;
+  min-height: 0;
+  color: var(--text);
+  font-variant-numeric: tabular-nums;
+  text-align: center;
+}
+
+.formula-plugin-readout strong {
+  color: var(--muted);
+  font-size: .76rem;
+}
+
+.formula-plugin-readout span {
+  font-family: ui-monospace, Menlo, Consolas, monospace;
+  font-size: .84rem;
+}
+
+.formula-plugin-readout em {
+  flex-basis: 100%;
+  color: var(--muted);
+  font-size: .76rem;
+  font-style: normal;
+}
+
+.formula-plugin-readout b {
+  color: var(--accent);
+}
+
+@media (max-width: 860px) {
+  .formula-plugin-controls {
+    grid-template-columns: 1fr;
+  }
+
+  .formula-plugin-canvas {
+    min-height: 230px;
+  }
+}
