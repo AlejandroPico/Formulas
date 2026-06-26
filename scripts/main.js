@@ -28,6 +28,7 @@ function boot() {
 function initFilterControls() {
   fillSelect($("#fieldSelect"), fields, state.field);
   fillSelect($("#levelSelect"), levels, state.level);
+  $("#sortSelect").value = "default";
 }
 
 function fillSelect(select, values, active) {
@@ -81,18 +82,22 @@ function bindEvents() {
   });
 
   $("#sortSelect").addEventListener("change", event => {
-    const sort = event.target.value;
-    setState({ sort, cardLabelMode: getSortLabelMode(sort) });
+    const selectedSort = event.target.value;
+    if (selectedSort === "default") {
+      setState({ sort: "chronology", cardLabelMode: "none" });
+    } else {
+      setState({ sort: selectedSort, cardLabelMode: getSortLabelMode(selectedSort) });
+    }
     renderAll();
   });
   $("#fieldSelect").addEventListener("change", event => {
     const field = event.target.value;
-    setState({ field, cardLabelMode: field === "Todas" ? getSortLabelMode(state.sort) : "field" });
+    setState({ field, cardLabelMode: field === "Todas" ? state.cardLabelMode : "field" });
     renderAll();
   });
   $("#levelSelect").addEventListener("change", event => {
     const level = event.target.value;
-    setState({ level, cardLabelMode: level === "Todos" ? getSortLabelMode(state.sort) : "level" });
+    setState({ level, cardLabelMode: level === "Todos" ? state.cardLabelMode : "level" });
     renderAll();
   });
 
