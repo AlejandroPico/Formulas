@@ -151,8 +151,9 @@ function stableHsl(value) {
 }
 
 function renderFormula(formulas) {
-  if (formulas.length === 1) return `\(${formulas[0]}\)`;
-  return `<div class="formula-stack">${formulas.map(line => `<div>\(${line}\)</div>`).join("")}</div>`;
+  const inlineMath = formula => String.raw`\(${formula}\)`;
+  if (formulas.length === 1) return inlineMath(formulas[0]);
+  return `<div class="formula-stack">${formulas.map(line => `<div>${inlineMath(line)}</div>`).join("")}</div>`;
 }
 
 function normalizeFormulaList(formula) {
