@@ -71,6 +71,8 @@ const FALLBACK_SYMBOLS = new Map(Object.entries({
   "ϵ": "épsilon: permitividad, energía pequeña o término de error, según el contexto."
 }));
 
+let hideTimer = null;
+
 export function mountFormulaTooltips(formulaBox, equation) {
   if (!formulaBox || formulaBox.closest("[hidden]")) return;
   const mathSvg = formulaBox.querySelector("mjx-container svg");
@@ -139,9 +141,9 @@ function createZone(zone) {
 
   button.addEventListener("pointerenter", event => showPopover(event, zone.symbol, zone.description));
   button.addEventListener("pointermove", event => showPopover(event, zone.symbol, zone.description));
-  button.addEventListener("pointerleave", hidePopover);
+  button.addEventListener("pointerleave", () => hidePopover());
   button.addEventListener("focus", () => showPopoverAtElement(button, zone.symbol, zone.description));
-  button.addEventListener("blur", hidePopover);
+  button.addEventListener("blur", () => hidePopover());
   button.addEventListener("click", event => showPopover(event, zone.symbol, zone.description));
   return button;
 }
@@ -236,6 +238,7 @@ function showPopover(event, symbol, description) {
   popover.innerHTML = `<strong>${escapeHtml(symbol)}</strong><span>${escapeHtml(description)}</span>`;
   popover.classList.add("visible");
   positionPopover(popover, event.clientX, event.clientY);
+  scheduleAutoHide();
 }
 
 function showPopoverAtElement(element, symbol, description) {
@@ -244,6 +247,7 @@ function showPopoverAtElement(element, symbol, description) {
   popover.innerHTML = `<strong>${escapeHtml(symbol)}</strong><span>${escapeHtml(description)}</span>`;
   popover.classList.add("visible");
   positionPopover(popover, rect.right, rect.top + rect.height / 2);
+  scheduleAutoHide();
 }
 
 function positionPopover(popover, clientX, clientY) {
@@ -255,17 +259,32 @@ function positionPopover(popover, clientX, clientY) {
 }
 
 function getPopover() {
-  let popover = document.body.querySelector(":scope > .formula-symbol-popover");
+  const host = getPopoverHost();
+  document.querySelectorAll(".formula-symbol-popover").forEach(popover => {
+    if (popover.parentElement !== host) popover.remove();
+  });
+
+  let popover = host.querySelector(":scope > .formula-symbol-popover");
   if (!popover) {
     popover = document.createElement("div");
     popover.className = "formula-symbol-popover";
-    document.body.appendChild(popover);
+    host.appendChild(popover);
   }
   return popover;
 }
 
+function getPopoverHost() {
+  return document.querySelector("#equationModal[open]") || document.body;
+}
+
+function scheduleAutoHide() {
+  window.clearTimeout(hideTimer);
+  hideTimer = window.setTimeout(hidePopover, 3600);
+}
+
 function hidePopover() {
-  document.body.querySelectorAll(":scope > .formula-symbol-popover").forEach(popover => popover.classList.remove("visible"));
+  window.clearTimeout(hideTimer);
+  document.querySelectorAll(".formula-symbol-popover").forEach(popover => popover.classList.remove("visible"));
 }
 
 function clamp(value, min, max) {
