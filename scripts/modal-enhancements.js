@@ -11,55 +11,53 @@ const equationByTitle = new Map(equations.map(item => [normalizeTitle(item.name)
 const historyByTitle = new Map(historyEssays.map(item => [normalizeTitle(item.title), item]));
 const historyById = new Map(historyEssays.map(item => [item.id, item]));
 
-const modal = document.querySelector("#equationModal");
 const modalContent = document.querySelector("#modalContent");
 
 const STRUCTURE_TOOLTIPS = {
-  msqrt: ["√", "raíz cuadrada: número o expresión que, elevada al cuadrado, produce el radicando."],
-  mroot: ["ⁿ√", "raíz de índice n: generaliza la raíz cuadrada a cualquier índice."],
-  msup: ["exponente", "potencia: indica multiplicación repetida o una operación de escala algebraica."],
-  msub: ["subíndice", "subíndice: distingue componentes, índices, puntos o familias de variables."],
-  msubsup: ["subíndice/exponente", "notación combinada: usa índice inferior y exponente o índice superior a la vez."],
-  mfrac: ["fracción", "cociente: expresa división, razón, proporción o normalización entre dos cantidades."],
-  mover: ["vector/sobrescrito", "marca superior: puede indicar vector, media, operador o notación modificada según el contexto."],
-  munder: ["marca inferior", "marca inferior: suele indicar límite, índice o condición bajo un operador."],
-  munderover: ["límites", "límites superior e inferior: aparecen en sumatorios, integrales, productos y operadores."],
-  TeXAtom: ["bloque matemático", "bloque de notación compuesto por MathJax para representar una estructura LaTeX agrupada."]
+  msqrt: ["√", "Raíz cuadrada: operación inversa de elevar al cuadrado."],
+  mroot: ["ⁿ√", "Raíz de índice n: generaliza la raíz cuadrada a cualquier índice."],
+  msup: ["exponente", "Potencia: indica una operación de escala o multiplicación repetida."],
+  msub: ["subíndice", "Subíndice: distingue componentes, índices, puntos o familias de variables."],
+  msubsup: ["subíndice/exponente", "Notación combinada con índice inferior y marca superior."],
+  mfrac: ["fracción", "Cociente: expresa división, razón, proporción o normalización."],
+  mover: ["vector/sobrescrito", "Marca superior: puede indicar vector, media, operador o modificación de una variable."],
+  munder: ["marca inferior", "Marca inferior: suele indicar condición, límite o índice bajo un operador."],
+  munderover: ["límites", "Límites superior e inferior: aparecen en sumatorios, integrales, productos y operadores."],
+  TeXAtom: ["bloque matemático", "Agrupación interna usada por MathJax para representar una estructura LaTeX."]
 };
 
 const observer = new MutationObserver(() => scheduleEnhanceModal());
 if (modalContent) observer.observe(modalContent, { childList: true, subtree: true });
 
 document.addEventListener("click", event => {
-  const card = event.target.closest?.(".equation-card");
-  if (card) scheduleEnhanceModal();
-
+  if (event.target.closest?.(".equation-card")) scheduleEnhanceModal();
   const button = event.target.closest?.(".equation-modal .detail-tabs button");
-  if (!button) return;
-  window.setTimeout(() => syncTabs(button.dataset.tab), 0);
+  if (button) window.setTimeout(() => syncTabs(button.dataset.tab), 0);
 });
-
-window.setInterval(() => {
-  if (modalContent?.querySelector(".detail-tabs")) enhanceModal();
-}, 500);
 
 document.addEventListener("mousemove", event => {
   const token = event.target.closest?.(".formula-token, .formula-structure-token");
   if (!token) return;
-  repositionSymbolTooltip(event);
+  const symbol = token.dataset.symbol || token.dataset.tooltipSymbol;
+  const description = token.dataset.description || token.dataset.tooltipDescription;
+  if (symbol && description) showGlobalTooltip(event, symbol, description);
 });
 
 document.addEventListener("mouseenter", event => {
   const token = event.target.closest?.(".formula-token, .formula-structure-token");
   if (!token) return;
-  window.setTimeout(() => repositionSymbolTooltip(event), 0);
+  const symbol = token.dataset.symbol || token.dataset.tooltipSymbol;
+  const description = token.dataset.description || token.dataset.tooltipDescription;
+  if (symbol && description) showGlobalTooltip(event, symbol, description);
 }, true);
 
 document.addEventListener("mouseleave", event => {
-  const token = event.target.closest?.(".formula-structure-token");
-  if (!token) return;
-  hideGlobalTooltip();
+  if (event.target.closest?.(".formula-token, .formula-structure-token")) hideGlobalTooltip();
 }, true);
+
+window.setInterval(() => {
+  if (modalContent?.querySelector(".detail-tabs")) enhanceModal();
+}, 600);
 
 function scheduleEnhanceModal() {
   window.setTimeout(enhanceModal, 0);
@@ -69,63 +67,98 @@ function scheduleEnhanceModal() {
   window.setTimeout(enhanceModal, 900);
 }
 
-function mergeEquationSets(...sets) {
-  return [...sets.flat().reduce((map, eq) => map.set(eq.id, eq), new Map()).values()];
-}
-
 function enhanceModal() {
   if (!modalContent?.querySelector(".detail-tabs") || !modalContent?.querySelector(".detail-panels")) return;
-  addHistoryTab();
-  removeHistoryFromContext();
+  splitContextTabs();
+  enhanceUsesPanel();
   enhanceFormulaStructureTooltips();
 }
 
-function getCurrentEquation() {
-  const title = modalContent.querySelector(".detail-header h2")?.textContent ?? "";
-  return equationByTitle.get(normalizeTitle(title));
-}
-
-function getCurrentEssay() {
-  const title = modalContent.querySelector(".detail-header h2")?.textContent ?? "";
-  const eq = getCurrentEquation();
-  if (eq) return historyById.get(eq.id) || historyByTitle.get(normalizeTitle(eq.name)) || buildGeneratedHistoryEssay(eq);
-  if (!title.trim()) return null;
-  return buildFallbackHistoryEssay(title);
-}
-
-function addHistoryTab() {
+function splitContextTabs() {
   const tabs = modalContent.querySelector(".detail-tabs");
   const panels = modalContent.querySelector(".detail-panels");
-  if (!tabs || !panels) return;
+  const eq = getCurrentEquation();
+  if (!tabs || !panels || !eq || tabs.dataset.contextSplit === "true") return;
 
-  const essay = getCurrentEssay();
-  if (!essay) return;
+  const contextButton = tabs.querySelector('[data-tab="context"]');
+  const contextPanel = panels.querySelector('[data-panel="context"]');
+  const usesButton = tabs.querySelector('[data-tab="uses"]');
 
-  let button = tabs.querySelector('[data-tab="history"]');
-  if (!button) {
-    button = document.createElement("button");
-    button.type = "button";
-    button.setAttribute("role", "tab");
-    button.setAttribute("aria-selected", "false");
-    button.dataset.tab = "history";
-    button.textContent = "Historia";
-    const contextButton = tabs.querySelector('[data-tab="context"]');
-    tabs.insertBefore(button, contextButton || tabs.children[1] || null);
-  }
+  const essay = getCurrentEssay(eq);
+  const tabDefinitions = [
+    ["history", "Historia", renderEssayPanel(essay)],
+    ["derivation", "Derivación", renderSingleTextPanel("Derivación simplificada", eq.derivation)],
+    ["meaning", "Significado", renderSingleTextPanel("Qué significa", eq.meaning)]
+  ];
 
-  let panel = panels.querySelector('[data-panel="history"]');
-  if (!panel) {
-    panel = document.createElement("section");
-    panel.className = "detail-panel history-view";
-    panel.dataset.panel = "history";
-    panel.setAttribute("role", "tabpanel");
-    panel.hidden = true;
-    panels.insertBefore(panel, panels.querySelector('[data-panel="context"]') || null);
+  tabDefinitions.forEach(([key, label, html]) => {
+    if (!tabs.querySelector(`[data-tab="${key}"]`)) {
+      const button = document.createElement("button");
+      button.type = "button";
+      button.setAttribute("role", "tab");
+      button.setAttribute("aria-selected", "false");
+      button.dataset.tab = key;
+      button.textContent = label;
+      tabs.insertBefore(button, usesButton || contextButton || null);
+    }
+
+    if (!panels.querySelector(`[data-panel="${key}"]`)) {
+      const panel = document.createElement("section");
+      panel.className = "detail-panel text-view expanded-text-view";
+      panel.dataset.panel = key;
+      panel.setAttribute("role", "tabpanel");
+      panel.hidden = true;
+      panel.innerHTML = html;
+      panels.insertBefore(panel, panels.querySelector('[data-panel="uses"]') || null);
+    }
+  });
+
+  contextButton?.remove();
+  contextPanel?.remove();
+  tabs.dataset.contextSplit = "true";
+}
+
+function enhanceUsesPanel() {
+  const eq = getCurrentEquation();
+  const panel = modalContent.querySelector('[data-panel="uses"]');
+  if (!eq || !panel || panel.dataset.enhancedUses === "true") return;
+
+  if (Array.isArray(eq.useDetails) && eq.useDetails.length) {
+    panel.innerHTML = `
+      <div class="use-examples">
+        ${eq.useDetails.map(item => `
+          <article class="use-example">
+            <h3>${escapeHtml(item.title)}</h3>
+            <p>${escapeHtml(item.text)}</p>
+          </article>
+        `).join("")}
+      </div>
+    `;
+  } else if (Array.isArray(eq.uses)) {
+    panel.innerHTML = `<ul class="plain-list use-list">${eq.uses.map(use => `<li>${escapeHtml(use)}</li>`).join("")}</ul>`;
   }
-  if (panel.dataset.essayId !== essay.id) {
-    panel.innerHTML = renderHistoryEssay(essay);
-    panel.dataset.essayId = essay.id;
-  }
+  panel.dataset.enhancedUses = "true";
+}
+
+function enhanceFormulaStructureTooltips() {
+  const formula = modalContent.querySelector(".modal-formula");
+  if (!formula || formula.closest("[hidden]")) return;
+  const selector = Object.keys(STRUCTURE_TOOLTIPS).map(name => `svg g[data-mml-node='${name}']`).join(",");
+  formula.querySelectorAll(selector).forEach(node => {
+    if (node.dataset.structureTooltip === "true") return;
+    const [symbol, description] = STRUCTURE_TOOLTIPS[node.dataset.mmlNode] || [];
+    if (!symbol || !description) return;
+    node.dataset.structureTooltip = "true";
+    node.dataset.tooltipSymbol = symbol;
+    node.dataset.tooltipDescription = description;
+    node.classList.add("formula-structure-token");
+    node.setAttribute("aria-label", `${symbol}: ${description}`);
+    addSvgHitbox(node);
+    node.addEventListener("mousemove", event => showGlobalTooltip(event, symbol, description));
+    node.addEventListener("mouseenter", event => showGlobalTooltip(event, symbol, description));
+    node.addEventListener("click", event => showGlobalTooltip(event, symbol, description));
+    node.addEventListener("mouseleave", hideGlobalTooltip);
+  });
 }
 
 function syncTabs(tab) {
@@ -144,32 +177,54 @@ function syncTabs(tab) {
   });
 }
 
-function removeHistoryFromContext() {
-  const context = modalContent.querySelector('[data-panel="context"]');
-  if (!context || context.dataset.historyCleaned === "true") return;
-  const sections = [...context.querySelectorAll(".text-section")];
-  const historySection = sections.find(section => section.querySelector("h3")?.textContent?.trim().toLowerCase() === "historia");
-  if (historySection) historySection.remove();
-  context.dataset.historyCleaned = "true";
+function getCurrentEquation() {
+  const title = modalContent.querySelector(".detail-header h2")?.textContent ?? "";
+  return equationByTitle.get(normalizeTitle(title));
 }
 
-function enhanceFormulaStructureTooltips() {
-  const formula = modalContent.querySelector(".modal-formula");
-  if (!formula || formula.closest("[hidden]")) return;
-  const selector = Object.keys(STRUCTURE_TOOLTIPS).map(name => `svg g[data-mml-node='${name}']`).join(",");
-  formula.querySelectorAll(selector).forEach(node => {
-    if (node.dataset.structureTooltip === "true") return;
-    const [symbol, description] = STRUCTURE_TOOLTIPS[node.dataset.mmlNode] || [];
-    if (!symbol || !description) return;
-    node.dataset.structureTooltip = "true";
-    node.classList.add("formula-structure-token");
-    node.setAttribute("aria-label", `${symbol}: ${description}`);
-    addSvgHitbox(node);
-    node.addEventListener("mousemove", event => showGlobalTooltip(event, symbol, description));
-    node.addEventListener("mouseenter", event => showGlobalTooltip(event, symbol, description));
-    node.addEventListener("click", event => showGlobalTooltip(event, symbol, description));
-    node.addEventListener("mouseleave", hideGlobalTooltip);
-  });
+function getCurrentEssay(eq) {
+  return historyById.get(eq.id) || historyByTitle.get(normalizeTitle(eq.name)) || buildGeneratedHistoryEssay(eq);
+}
+
+function renderEssayPanel(essay) {
+  return `
+    <article class="history-essay expanded-text">
+      <h3>${escapeHtml(essay.title)}</h3>
+      ${essay.note ? `<p class="history-note">${escapeHtml(essay.note)}</p>` : ""}
+      ${essay.paragraphs.map(paragraph => `<p>${escapeHtml(paragraph)}</p>`).join("")}
+    </article>
+  `;
+}
+
+function renderSingleTextPanel(title, text) {
+  return `
+    <article class="expanded-text">
+      <h3>${escapeHtml(title)}</h3>
+      <p>${escapeHtml(text || "Contenido pendiente de ampliación.")}</p>
+    </article>
+  `;
+}
+
+function buildGeneratedHistoryEssay(eq) {
+  const field = eq.field || "su disciplina";
+  const author = eq.author || "la tradición científica";
+  const year = formatYear(eq.year);
+  const uses = Array.isArray(eq.uses) && eq.uses.length ? eq.uses.join(", ") : "distintos problemas científicos y técnicos";
+  const originalHistory = eq.history || "Su desarrollo forma parte de la consolidación histórica de su campo.";
+  const meaning = eq.meaning || eq.summary || "La ecuación resume una relación fundamental entre magnitudes.";
+  const derivation = eq.derivation || "Su forma se entiende como una síntesis de observaciones, definiciones y principios previos.";
+  return {
+    id: `${eq.id}-generated-history`,
+    title: eq.name,
+    note: "Historia ampliada generada a partir de la ficha actual. Sustituible por una versión monográfica específica en próximas tandas.",
+    paragraphs: [
+      `${eq.name} ocupa un lugar propio dentro de ${field}. Su formulación está asociada a ${author}${year ? ` alrededor de ${year}` : ""}, pero su importancia no se limita al momento en que fue escrita. Como ocurre con muchas ecuaciones famosas, detrás de su forma compacta hay una acumulación de problemas previos, necesidades de cálculo, lenguaje matemático disponible y discusiones sobre cómo interpretar los fenómenos.`,
+      `${originalHistory} Esta frase breve resume solo el punto de partida. Antes de fijarse una notación estable, una fórmula suele aparecer en problemas concretos, aproximaciones parciales o lenguajes que hoy nos resultan menos directos.`,
+      `${meaning} Esa interpretación explica por qué la ecuación sobrevivió a su contexto inicial: no solo calcula una cantidad, sino que ofrece un marco conceptual reutilizable.`,
+      `La derivación o justificación puede resumirse así: ${derivation} Esa capa de razonamiento permite reconocer cuándo se puede usar y cuándo deja de ser válida.`,
+      `Sus aplicaciones actuales incluyen ${uses}. Cuando una fórmula viaja de un campo a otro, cambia su significado práctico y se convierte en herramienta general.`
+    ]
+  };
 }
 
 function addSvgHitbox(node) {
@@ -188,70 +243,21 @@ function addSvgHitbox(node) {
   }
 }
 
-function renderHistoryEssay(essay) {
-  return `
-    <article class="history-essay">
-      <h3>${escapeHtml(essay.title)}</h3>
-      ${essay.note ? `<p class="history-note">${escapeHtml(essay.note)}</p>` : ""}
-      ${essay.paragraphs.map(paragraph => `<p>${escapeHtml(paragraph)}</p>`).join("")}
-    </article>
-  `;
-}
-
-function buildGeneratedHistoryEssay(eq) {
-  const field = eq.field || "su disciplina";
-  const author = eq.author || "la tradición científica";
-  const year = formatYear(eq.year);
-  const uses = Array.isArray(eq.uses) && eq.uses.length ? eq.uses.join(", ") : "distintos problemas científicos y técnicos";
-  const originalHistory = eq.history || "Su desarrollo forma parte de la consolidación histórica de su campo.";
-  const meaning = eq.meaning || eq.summary || "La ecuación resume una relación fundamental entre magnitudes.";
-  const derivation = eq.derivation || "Su forma se entiende como una síntesis de observaciones, definiciones y principios previos.";
-
-  return {
-    id: `${eq.id}-generated-history`,
-    title: eq.name,
-    note: "Historia ampliada generada a partir de la ficha actual. Sustituible por una versión monográfica específica en próximas tandas.",
-    paragraphs: [
-      `${eq.name} ocupa un lugar propio dentro de ${field}. Su formulación está asociada a ${author}${year ? ` alrededor de ${year}` : ""}, pero su importancia no se limita al momento en que fue escrita. Como ocurre con muchas ecuaciones famosas, detrás de su forma compacta hay una acumulación de problemas previos, necesidades de cálculo, lenguaje matemático disponible y discusiones sobre cómo interpretar los fenómenos. La ecuación condensa en pocos símbolos una forma de mirar el mundo: selecciona magnitudes relevantes, establece una relación entre ellas y convierte un fenómeno disperso en una estructura que puede analizarse, enseñarse y reutilizarse.",
-      `${originalHistory} Esta frase breve resume solo el punto de partida. La historia real de una fórmula de este tipo suele ser más larga: antes de fijarse una notación estable, la idea aparece en problemas concretos, en aproximaciones parciales o en lenguajes que hoy nos resultan menos directos. Después, cuando la comunidad científica reconoce su utilidad, la fórmula se reescribe, se generaliza, se conecta con otros resultados y se incorpora a manuales, laboratorios, ingeniería o investigación teórica. Por eso conviene leerla no como una línea aislada, sino como una pieza dentro de una tradición que va madurando.",
-      `${meaning} Esa interpretación explica por qué la ecuación sobrevivió a su contexto inicial. Una fórmula se vuelve célebre cuando resuelve algo concreto, pero se vuelve fundamental cuando también permite formular nuevas preguntas. En este caso, el valor histórico no está solo en calcular una cantidad, sino en ofrecer un marco conceptual: da nombre a las magnitudes, fija dependencias y separa lo esencial de lo accesorio. Con el tiempo, ese marco puede trasladarse a otros dominios, simplificarse para la enseñanza o sofisticarse para investigación avanzada.",
-      `La derivación o justificación que suele acompañarla puede resumirse así: ${derivation} Históricamente, este tipo de derivación es importante porque muestra que la fórmula no es una regla arbitraria. Incluso cuando se presenta de forma escolar o resumida, está apoyada en un razonamiento: conservación, simetría, proporcionalidad, límite, equilibrio, probabilidad, geometría o estructura algebraica. Esa capa de razonamiento es la que permite reconocer cuándo se puede usar y cuándo deja de ser válida.",
-      `Sus aplicaciones actuales incluyen ${uses}. Esta variedad de usos es una de las señales de su relevancia histórica. Muchas ecuaciones nacen para resolver un problema estrecho, pero terminan funcionando como herramientas generales. Cuando una fórmula viaja de un campo a otro, también cambia su significado práctico: puede pasar de ser una descripción idealizada a ser un algoritmo de cálculo, un criterio de diseño, una aproximación de laboratorio o una pieza de una teoría mayor.",
-      `En futuras ampliaciones, esta entrada puede enriquecerse con una monografía histórica más específica: autores secundarios, controversias, manuscritos, experimentos, recepción académica, cambios de notación y conexiones con resultados anteriores y posteriores. De momento, esta versión ampliada garantiza que la ficha no quede reducida a una frase mínima y que todas las fórmulas del atlas dispongan de una pestaña histórica legible, contextual y claramente separada del resto de apartados.`
-    ]
-  };
-}
-
-function buildFallbackHistoryEssay(title) {
-  return {
-    id: `${normalizeTitle(title).replace(/\s+/g, "-")}-fallback-history`,
-    title,
-    note: "Historia ampliada provisional. No se ha podido vincular esta ficha con el catálogo interno, pero se mantiene la pestaña Historia como sección obligatoria.",
-    paragraphs: [
-      `${title} forma parte del atlas de ecuaciones y debe leerse dentro de una tradición científica más amplia. Toda fórmula relevante aparece como respuesta a una necesidad: medir, explicar, predecir, clasificar o relacionar magnitudes que antes se entendían de forma separada.`,
-      `Esta entrada histórica provisional garantiza que la ficha mantenga la estructura completa mientras se sustituye por una versión monográfica específica. La versión final deberá incluir contexto de descubrimiento, autores, problemas originales, recepción, cambios de notación y aplicaciones posteriores.`
-    ]
-  };
-}
-
 function showGlobalTooltip(event, symbol, description) {
+  document.querySelectorAll(".equation-modal .symbol-tooltip").forEach(tooltip => tooltip.classList.remove("visible"));
   const tooltip = getGlobalTooltip();
   tooltip.innerHTML = `<strong>${escapeHtml(symbol)}</strong><span>${escapeHtml(description)}</span>`;
   tooltip.classList.add("visible");
   positionTooltip(tooltip, event);
 }
 
-function repositionSymbolTooltip(event) {
-  document.querySelectorAll(".symbol-tooltip.visible").forEach(tooltip => positionTooltip(tooltip, event));
-}
-
 function positionTooltip(tooltip, event) {
   tooltip.style.position = "fixed";
-  const offset = 12;
-  const maxLeft = window.innerWidth - tooltip.offsetWidth - 12;
-  const maxTop = window.innerHeight - tooltip.offsetHeight - 12;
-  tooltip.style.left = `${clamp(event.clientX + offset, 12, Math.max(12, maxLeft))}px`;
-  tooltip.style.top = `${clamp(event.clientY + offset, 12, Math.max(12, maxTop))}px`;
+  const offset = 6;
+  const maxLeft = window.innerWidth - tooltip.offsetWidth - 6;
+  const maxTop = window.innerHeight - tooltip.offsetHeight - 6;
+  tooltip.style.left = `${clamp(event.clientX + offset, 6, Math.max(6, maxLeft))}px`;
+  tooltip.style.top = `${clamp(event.clientY + offset, 6, Math.max(6, maxTop))}px`;
 }
 
 function getGlobalTooltip() {
@@ -268,8 +274,8 @@ function hideGlobalTooltip() {
   document.querySelectorAll(".symbol-tooltip").forEach(tooltip => tooltip.classList.remove("visible"));
 }
 
-function clamp(value, min, max) {
-  return Math.max(min, Math.min(max, value));
+function mergeEquationSets(...sets) {
+  return [...sets.flat().reduce((map, eq) => map.set(eq.id, eq), new Map()).values()];
 }
 
 function normalizeTitle(value) {
@@ -284,6 +290,10 @@ function formatYear(year) {
   if (typeof year !== "number" || Number.isNaN(year)) return "";
   if (year < 0) return `${Math.abs(year)} a. C.`;
   return String(year);
+}
+
+function clamp(value, min, max) {
+  return Math.max(min, Math.min(max, value));
 }
 
 function escapeHtml(value) {
