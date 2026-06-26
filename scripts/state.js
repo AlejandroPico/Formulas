@@ -3,6 +3,7 @@ export const state = {
   field: "Todas",
   level: "Todos",
   sort: "chronology",
+  cardLabelMode: "none",
   selectedEquationId: null
 };
 
