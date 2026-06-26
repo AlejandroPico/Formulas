@@ -70,7 +70,7 @@ export function renderFilters(container, values, activeValue, onChange) {
   container.querySelectorAll("button").forEach(button => button.addEventListener("click", () => onChange(button.dataset.value)));
 }
 
-export function renderEquationGrid(equations, onOpen) {
+export function renderEquationGrid(equations, onOpen, viewState = {}) {
   const grid = $("#equationGrid");
   const template = $("#equationCardTemplate");
   grid.innerHTML = "";
@@ -89,10 +89,11 @@ export function renderEquationGrid(equations, onOpen) {
     node.dataset.minColSpan = String(minColSpan);
     node.style.setProperty("--formula-lines", formulas.length);
     node.style.setProperty("--col-span", minColSpan);
+    node.style.setProperty("--context-color", getContextColor(eq, viewState.cardLabelMode));
     node.setAttribute("role", "button");
     node.setAttribute("aria-label", `Abrir ficha de ${eq.name}`);
 
-    $("h3", node).textContent = eq.name;
+    renderCardTitle($("h3", node), eq, viewState.cardLabelMode);
     $(".formula-box", node).innerHTML = renderFormula(formulas);
 
     node.addEventListener("click", () => onOpen(eq));
@@ -108,9 +109,50 @@ export function renderEquationGrid(equations, onOpen) {
   scheduleMasonryLayout(grid);
 }
 
+function renderCardTitle(title, eq, mode) {
+  title.innerHTML = "";
+  const name = document.createElement("span");
+  name.className = "card-title-name";
+  name.textContent = eq.name;
+  title.appendChild(name);
+
+  const label = getCardContextLabel(eq, mode);
+  if (!label) return;
+  const tag = document.createElement("span");
+  tag.className = `card-context-label is-${mode}`;
+  tag.textContent = label;
+  title.appendChild(tag);
+}
+
+function getCardContextLabel(eq, mode) {
+  if (mode === "field") return eq.field;
+  if (mode === "level") return eq.level;
+  if (mode === "year") return formatYear(eq.year);
+  return "";
+}
+
+function formatYear(year) {
+  const value = Number(year);
+  if (!Number.isFinite(value)) return "";
+  return value < 0 ? `${Math.abs(value)} a. C.` : String(value);
+}
+
+function getContextColor(eq, mode) {
+  if (mode === "year") return "var(--muted)";
+  const source = mode === "level" ? eq.level : eq.field;
+  return stableHsl(source || eq.name);
+}
+
+function stableHsl(value) {
+  let hash = 0;
+  const text = String(value || "");
+  for (let i = 0; i < text.length; i += 1) hash = (hash * 31 + text.charCodeAt(i)) >>> 0;
+  return `hsl(${hash % 360} 78% 48%)`;
+}
+
 function renderFormula(formulas) {
-  if (formulas.length === 1) return `\\(${formulas[0]}\\)`;
-  return `<div class="formula-stack">${formulas.map(line => `<div>\\(${line}\\)</div>`).join("")}</div>`;
+  if (formulas.length === 1) return `\(${formulas[0]}\)`;
+  return `<div class="formula-stack">${formulas.map(line => `<div>\(${line}\)</div>`).join("")}</div>`;
 }
 
 function normalizeFormulaList(formula) {
@@ -159,358 +201,217 @@ function applyMasonrySpans(grid) {
   const computed = getComputedStyle(grid);
   const rowHeight = parseFloat(computed.gridAutoRows) || 10;
   const rowGap = parseFloat(computed.rowGap) || 0;
-  const columnGap = parseFloat(computed.columnGap) || 0;
-  const columnTracks = computed.gridTemplateColumns.split(" ").filter(Boolean);
-  const columnCount = Math.max(1, columnTracks.length);
-  const columnWidth = parseFloat(columnTracks[0]) || 118;
-
-  const cards = [...grid.querySelectorAll(".equation-card")];
-
-  cards.forEach(card => {
-    const minSpan = Math.min(columnCount, Number(card.dataset.minColSpan || 2));
-    card.style.gridColumn = `span ${Math.max(1, minSpan)}`;
-    card.style.gridRowEnd = "auto";
-  });
-
-  cards.forEach(card => {
-    if (columnCount <= 1) {
-      card.style.gridColumn = "span 1";
-      return;
-    }
+  grid.querySelectorAll(".equation-card").forEach(card => {
     const minSpan = Number(card.dataset.minColSpan || 2);
-    const desiredWidth = Math.max(getRenderedFormulaWidth(card), getRenderedTitleWidth(card)) + 58;
-    const measuredSpan = Math.ceil((desiredWidth + columnGap) / (columnWidth + columnGap));
-    const finalSpan = Math.max(2, Math.min(columnCount, Math.max(minSpan, measuredSpan)));
-    card.style.gridColumn = `span ${finalSpan}`;
-  });
-
-  cards.forEach(card => {
-    const height = card.scrollHeight;
-    const span = Math.ceil((height + rowGap) / (rowHeight + rowGap));
+    const height = card.getBoundingClientRect().height;
+    const span = Math.max(minSpan, Math.ceil((height + rowGap) / (rowHeight + rowGap)));
     card.style.gridRowEnd = `span ${span}`;
   });
-}
-
-function getRenderedFormulaWidth(card) {
-  const formulaBox = $(".formula-box", card);
-  const mathNodes = [...formulaBox.querySelectorAll("mjx-container")];
-  const mathWidths = mathNodes.map(node => Math.ceil(node.getBoundingClientRect().width || node.scrollWidth || 0));
-  const stackLineWidths = [...formulaBox.querySelectorAll(".formula-stack > div")].map(node => node.scrollWidth || 0);
-  return Math.max(formulaBox.scrollWidth || 0, ...mathWidths, ...stackLineWidths, 0);
-}
-
-function getRenderedTitleWidth(card) {
-  const title = $("h3", card);
-  return title?.scrollWidth || 0;
-}
-
-export function renderTimeline(equations) {
-  const host = $("#timeline");
-  if (!host) return;
-  host.innerHTML = equations
-    .slice()
-    .sort((a, b) => a.year - b.year)
-    .map(eq => `<article class="timeline-item" style="--item-color:${escapeHtml(eq.color)}"><div class="timeline-year">${escapeHtml(eq.year)}</div><div class="timeline-body"><strong>${escapeHtml(eq.name)}</strong><span>${escapeHtml(eq.author)} · ${escapeHtml(eq.field)}</span></div></article>`)
-    .join("");
 }
 
 export function openEquationModal(eq) {
   const modal = $("#equationModal");
   const content = $("#modalContent");
   const formulas = normalizeFormulaList(eq.formula);
-  if (disposeSimulation) disposeSimulation();
-  disposeSimulation = null;
-
   content.innerHTML = `
-    <section class="detail-shell" style="--tag-color:${escapeHtml(eq.color)}">
+    <section class="detail-shell" style="--equation-color: ${eq.color}">
       <header class="detail-header compact">
         <h2>${escapeHtml(eq.name)}</h2>
       </header>
-
-      <nav class="detail-tabs" role="tablist" aria-label="Secciones de la ficha">
-        <button class="active" type="button" role="tab" aria-selected="true" data-tab="formula">Fórmula</button>
-        <button type="button" role="tab" aria-selected="false" data-tab="context">Contexto</button>
-        <button type="button" role="tab" aria-selected="false" data-tab="uses">Usos</button>
-        <button type="button" role="tab" aria-selected="false" data-tab="metadata">Ficha</button>
-        <button type="button" role="tab" aria-selected="false" data-tab="simulation">Simulación</button>
+      <nav class="detail-tabs" aria-label="Secciones de la ficha">
+        ${tabButton("formula", "Fórmula", true)}
+        ${tabButton("meaning", "Significado")}
+        ${tabButton("history", "Historia")}
+        ${tabButton("derivation", "Derivación")}
+        ${tabButton("uses", "Usos")}
+        ${tabButton("simulation", "Simulación")}
+        ${tabButton("metadata", "Ficha")}
       </nav>
-
       <div class="detail-panels">
-        <section class="detail-panel formula-view active" data-panel="formula" role="tabpanel">
+        <section class="detail-panel formula-view active" data-panel="formula">
           <div class="formula-box modal-formula" aria-label="Fórmula interactiva">${renderFormula(formulas)}</div>
-          <p class="formula-caption">${escapeHtml(eq.summary)}</p>
         </section>
-
-        <section class="detail-panel text-view" data-panel="context" role="tabpanel" hidden>
-          <div class="text-section">
-            <h3>Historia</h3>
-            <p>${escapeHtml(eq.history)}</p>
-          </div>
-          <div class="text-section">
-            <h3>Derivación simplificada</h3>
-            <p>${escapeHtml(eq.derivation)}</p>
-          </div>
-          <div class="text-section">
-            <h3>Qué significa</h3>
-            <p>${escapeHtml(eq.meaning)}</p>
-          </div>
+        <section class="detail-panel text-view" data-panel="meaning">
+          <p>${escapeHtml(eq.meaning)}</p>
         </section>
-
-        <section class="detail-panel text-view" data-panel="uses" role="tabpanel" hidden>
-          <ul class="plain-list use-list">${(eq.uses || []).map(v => `<li>${escapeHtml(v)}</li>`).join("")}</ul>
+        <section class="detail-panel text-view" data-panel="history">
+          <p>${escapeHtml(eq.history)}</p>
         </section>
-
-        <section class="detail-panel text-view metadata-view" data-panel="metadata" role="tabpanel" hidden>
-          ${renderMetadataPanel(eq)}
+        <section class="detail-panel text-view" data-panel="derivation">
+          <p>${escapeHtml(eq.derivation)}</p>
         </section>
-
-        <section class="detail-panel simulation-view" data-panel="simulation" role="tabpanel" hidden>
-          <canvas id="simulationCanvas"></canvas>
+        <section class="detail-panel uses-view" data-panel="uses">
+          ${eq.uses.map(use => `<span>${escapeHtml(use)}</span>`).join("")}
+        </section>
+        <section class="detail-panel simulation-view" data-panel="simulation">
+          <canvas id="simulationCanvas" width="760" height="320" aria-label="Simulación de ${escapeHtml(eq.name)}"></canvas>
           <div class="sim-controls" id="simulationControls"></div>
         </section>
+        <section class="detail-panel metadata-view" data-panel="metadata">
+          ${metadataRow("Autoría", eq.author)}
+          ${metadataRow("Año", eq.year < 0 ? `${Math.abs(eq.year)} a. C.` : eq.year)}
+          ${metadataRow("Área", eq.field)}
+          ${metadataRow("Nivel", eq.level)}
+          ${metadataRow("Variables", eq.variables.join(" · "))}
+        </section>
       </div>
-    </section>
-  `;
+    </section>`;
 
+  bindTabs(content, eq);
   modal.showModal();
-  bindDetailTabs(content, eq);
   requestMathTypeset();
   scheduleModalFormulaFit(content);
   scheduleSymbolTooltips(content, eq);
 }
 
-function renderMetadataPanel(eq) {
-  const variableCount = Array.isArray(eq.variables) ? eq.variables.length : 0;
-  const useCount = Array.isArray(eq.uses) ? eq.uses.length : 0;
-  const formulaCount = normalizeFormulaList(eq.formula).length;
-  return `
-    <article class="metadata-article expanded-text">
-      <h3>Ficha técnica</h3>
-      <p>${escapeHtml(eq.name)} pertenece al área de ${escapeHtml(eq.field)} y está clasificada para nivel ${escapeHtml(eq.level)}. La ficha reúne ${formulaCount} forma${formulaCount === 1 ? "" : "s"} matemática${formulaCount === 1 ? "" : "s"}, ${variableCount} entrada${variableCount === 1 ? "" : "s"} de glosario y ${useCount} campo${useCount === 1 ? "" : "s"} de aplicación.</p>
-      <div class="metadata-clean-grid" aria-label="Datos técnicos de la ficha">
-        <div><span>Autoría o tradición</span><strong>${escapeHtml(eq.author)}</strong></div>
-        <div><span>Fecha histórica</span><strong>${formatDisplayYear(eq.year)}</strong></div>
-        <div><span>Área</span><strong>${escapeHtml(eq.field)}</strong></div>
-        <div><span>Nivel</span><strong>${escapeHtml(eq.level)}</strong></div>
-        <div><span>Simulación asociada</span><strong>${escapeHtml(eq.simulation || "sin simulación")}</strong></div>
-        <div><span>Cobertura interna</span><strong>${formulaCount} fórmulas · ${variableCount} símbolos · ${useCount} usos</strong></div>
-      </div>
-    </article>
-  `;
+function tabButton(panel, label, active = false) {
+  return `<button class="${active ? "active" : ""}" data-target="${panel}" type="button">${label}</button>`;
 }
 
-function bindDetailTabs(content, eq) {
+function metadataRow(label, value) {
+  return `<div><span>${label}</span><strong>${escapeHtml(String(value))}</strong></div>`;
+}
+
+function bindTabs(content, eq) {
   const buttons = [...content.querySelectorAll(".detail-tabs button")];
   const panels = [...content.querySelectorAll(".detail-panel")];
-
-  function activate(tab) {
-    buttons.forEach(button => {
-      const active = button.dataset.tab === tab;
-      button.classList.toggle("active", active);
-      button.setAttribute("aria-selected", String(active));
-    });
-    panels.forEach(panel => {
-      const active = panel.dataset.panel === tab;
-      panel.classList.toggle("active", active);
-      panel.hidden = !active;
-    });
-    if (tab === "simulation" && !disposeSimulation) {
-      disposeSimulation = mountSimulation(eq.simulation, $("#simulationCanvas"), $("#simulationControls"));
-    }
-    requestMathTypeset();
-    scheduleModalFormulaFit(content);
-    scheduleSymbolTooltips(content, eq);
-  }
-
-  buttons.forEach(button => button.addEventListener("click", () => activate(button.dataset.tab)));
-}
-
-function scheduleModalFormulaFit(root) {
-  window.setTimeout(() => fitModalFormula(root), 80);
-  window.setTimeout(() => fitModalFormula(root), 240);
-  window.setTimeout(() => fitModalFormula(root), 560);
-}
-
-function fitModalFormula(root) {
-  const formulaBox = $(".modal-formula", root);
-  if (!formulaBox || formulaBox.closest("[hidden]")) return;
-
-  formulaBox.style.setProperty("--modal-formula-font", "clamp(1rem, 4.2vw, 3.2rem)");
-
-  requestAnimationFrame(() => {
-    const availableWidth = Math.max(1, formulaBox.clientWidth - 12);
-    const availableHeight = Math.max(1, formulaBox.clientHeight - 12);
-    const contentWidth = getFormulaContentWidth(formulaBox);
-    const contentHeight = getFormulaContentHeight(formulaBox);
-    const ratio = Math.min(1, availableWidth / contentWidth, availableHeight / contentHeight);
-    const baseSize = parseFloat(getComputedStyle(formulaBox).fontSize) || 32;
-    const fittedSize = Math.max(13, Math.floor(baseSize * ratio * 0.96));
-    formulaBox.style.setProperty("--modal-formula-font", `${fittedSize}px`);
-  });
-}
-
-function getFormulaContentWidth(formulaBox) {
-  const mathNodes = [...formulaBox.querySelectorAll("mjx-container")];
-  const widths = mathNodes.map(node => node.getBoundingClientRect().width || node.scrollWidth || 0);
-  return Math.max(formulaBox.scrollWidth || 0, ...widths, 1);
-}
-
-function getFormulaContentHeight(formulaBox) {
-  const mathNodes = [...formulaBox.querySelectorAll("mjx-container")];
-  const heights = mathNodes.map(node => node.getBoundingClientRect().height || node.scrollHeight || 0);
-  return Math.max(formulaBox.scrollHeight || 0, heights.reduce((sum, value) => sum + value, 0), 1);
-}
-
-function scheduleSymbolTooltips(root, eq) {
-  window.setTimeout(() => annotateFormulaSymbols(root, eq), 120);
-  window.setTimeout(() => annotateFormulaSymbols(root, eq), 320);
-  window.setTimeout(() => annotateFormulaSymbols(root, eq), 680);
-  window.setTimeout(() => annotateFormulaSymbols(root, eq), 980);
-}
-
-function annotateFormulaSymbols(root, eq) {
-  const formulaBox = $(".modal-formula", root);
-  if (!formulaBox || formulaBox.closest("[hidden]")) return;
-  const glossary = buildEquationGlossary(eq);
-  const tokenNodes = [...formulaBox.querySelectorAll("svg g[data-mml-node='mi'], svg g[data-mml-node='mo'], svg g[data-mml-node='mn']")];
-
-  tokenNodes.forEach(node => {
-    node.querySelectorAll(":scope > .formula-token-hitbox").forEach(hitbox => hitbox.remove());
-    const symbol = extractMathSymbol(node);
-    const description = lookupSymbolDescription(symbol, glossary);
-    if (!description) return;
-
-    node.classList.add("formula-token");
-    node.dataset.symbol = symbol;
-    node.dataset.description = description;
-    node.setAttribute("aria-label", `${symbol}: ${description}`);
-    const hitbox = addSymbolHitbox(node);
-    wireSymbolTooltip(node, symbol, description);
-    if (hitbox) wireSymbolTooltip(hitbox, symbol, description);
-  });
-}
-
-function buildEquationGlossary(eq) {
-  const glossary = new Map(GLOBAL_SYMBOLS);
-  eq.variables?.forEach(entry => {
-    const [rawKeys, rawDescription] = String(entry).split(":");
-    if (!rawKeys || !rawDescription) return;
-    const description = rawDescription.trim();
-    extractVariableKeys(rawKeys).forEach(key => {
-      const normalized = normalizeSymbolKey(key);
-      if (normalized) glossary.set(normalized, description);
+  buttons.forEach(button => {
+    button.addEventListener("click", () => {
+      buttons.forEach(item => item.classList.toggle("active", item === button));
+      panels.forEach(panel => panel.classList.toggle("active", panel.dataset.panel === button.dataset.target));
+      if (button.dataset.target === "simulation") {
+        if (disposeSimulation) disposeSimulation();
+        const canvas = $("#simulationCanvas");
+        const controls = $("#simulationControls");
+        disposeSimulation = mountSimulation(eq.simulation, canvas, controls);
+      }
+      if (button.dataset.target === "formula") {
+        requestMathTypeset();
+        scheduleModalFormulaFit(content);
+        scheduleSymbolTooltips(content, eq);
+      }
     });
   });
-  return glossary;
-}
-
-function extractVariableKeys(rawKeys) {
-  return rawKeys
-    .replace(/\s+(?:y|e)\s+/gi, ",")
-    .replace(/\//g, ",")
-    .split(/[,;]+/)
-    .map(part => part.trim())
-    .filter(Boolean)
-    .flatMap(part => {
-      const direct = normalizeSymbolKey(part);
-      const singleSymbols = [...part].map(normalizeSymbolKey).filter(Boolean);
-      return [direct, ...singleSymbols];
-    })
-    .filter(Boolean);
-}
-
-function extractMathSymbol(node) {
-  const codes = [...node.querySelectorAll(":scope use[data-c]")]
-    .map(use => use.getAttribute("data-c"))
-    .filter(Boolean);
-  if (!codes.length) return "";
-  return codes.map(code => codePointToSymbol(code)).join("").normalize("NFKC");
-}
-
-function codePointToSymbol(hex) {
-  const value = Number.parseInt(hex, 16);
-  if (!Number.isFinite(value)) return "";
-  return String.fromCodePoint(value).normalize("NFKC");
-}
-
-function lookupSymbolDescription(symbol, glossary) {
-  const key = normalizeSymbolKey(symbol);
-  if (!key) return "";
-  return glossary.get(key) || GLOBAL_SYMBOLS.get(key) || "";
-}
-
-function normalizeSymbolKey(value) {
-  return String(value ?? "")
-    .normalize("NFKC")
-    .replace(/[\u0300-\u036f]/g, "")
-    .replace(/[₀₁₂₃₄₅₆₇₈₉⁰¹²³⁴⁵⁶⁷⁸⁹0-9]/g, "")
-    .replace(/[{}()[\]^_\\]/g, "")
-    .replace(/\s+/g, "")
-    .trim();
-}
-
-function addSymbolHitbox(node) {
-  try {
-    const box = node.getBBox();
-    if (!box.width || !box.height) return null;
-    const rect = document.createElementNS("http://www.w3.org/2000/svg", "rect");
-    rect.setAttribute("class", "formula-token-hitbox");
-    rect.setAttribute("x", String(box.x - 5));
-    rect.setAttribute("y", String(box.y - 5));
-    rect.setAttribute("width", String(box.width + 10));
-    rect.setAttribute("height", String(box.height + 10));
-    node.insertBefore(rect, node.firstChild);
-    return rect;
-  } catch {
-    return null;
-  }
-}
-
-function wireSymbolTooltip(target, symbol, description) {
-  target.onmousemove = event => showSymbolTooltip(event, symbol, description);
-  target.onmouseenter = event => showSymbolTooltip(event, symbol, description);
-  target.onmouseleave = hideSymbolTooltip;
-  target.onclick = event => showSymbolTooltip(event, symbol, description);
-}
-
-function getTooltipElement() {
-  let tooltip = document.body.querySelector(":scope > .symbol-tooltip");
-  if (!tooltip) {
-    tooltip = document.createElement("div");
-    tooltip.className = "symbol-tooltip";
-    document.body.appendChild(tooltip);
-  }
-  return tooltip;
-}
-
-function showSymbolTooltip(event, symbol, description) {
-  const tooltip = getTooltipElement();
-  tooltip.innerHTML = `<strong>${escapeHtml(symbol)}</strong><span>${escapeHtml(description)}</span>`;
-  tooltip.classList.add("visible");
-  tooltip.style.position = "fixed";
-  const offset = 7;
-  const maxLeft = window.innerWidth - tooltip.offsetWidth - 7;
-  const maxTop = window.innerHeight - tooltip.offsetHeight - 7;
-  tooltip.style.left = `${Math.max(7, Math.min(maxLeft, event.clientX + offset))}px`;
-  tooltip.style.top = `${Math.max(7, Math.min(maxTop, event.clientY + offset))}px`;
-}
-
-function hideSymbolTooltip() {
-  document.querySelectorAll(".symbol-tooltip").forEach(tooltip => tooltip.classList.remove("visible"));
-}
-
-function formatDisplayYear(year) {
-  if (typeof year !== "number" || Number.isNaN(year)) return escapeHtml(year ?? "sin fecha");
-  return year < 0 ? `${Math.abs(year)} a. C.` : String(year);
-}
-
-function escapeHtml(value) {
-  return String(value).replace(/[&<>'"]/g, char => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", "'": "&#39;", '"': "&quot;" }[char]));
 }
 
 export function closeEquationModal() {
   if (disposeSimulation) disposeSimulation();
   disposeSimulation = null;
-  hideSymbolTooltip();
   $("#equationModal").close();
+}
+
+function scheduleModalFormulaFit(root) {
+  const run = () => fitModalFormula(root.querySelector(".modal-formula"));
+  window.setTimeout(run, 60);
+  window.setTimeout(run, 180);
+  window.setTimeout(run, 420);
+}
+
+function fitModalFormula(box) {
+  if (!box) return;
+  const math = box.querySelector("mjx-container");
+  if (!math) return;
+  math.style.transform = "";
+  const available = Math.max(1, box.clientWidth - 12);
+  const width = math.getBoundingClientRect().width;
+  if (width > available) math.style.transform = `scale(${Math.max(0.55, available / width)})`;
+}
+
+function scheduleSymbolTooltips(root, eq) {
+  const run = () => annotateFormulaSymbols(root.querySelector(".modal-formula"), eq);
+  window.setTimeout(run, 180);
+  window.setTimeout(run, 420);
+  window.setTimeout(run, 900);
+}
+
+function annotateFormulaSymbols(box, eq) {
+  if (!box) return;
+  box.querySelectorAll(".formula-token-hitbox").forEach(node => node.remove());
+  const glossary = buildEquationGlossary(eq);
+  const symbols = [...box.querySelectorAll("svg g[data-mml-node='mi'], svg g[data-mml-node='mo']")];
+  symbols.forEach(symbolNode => {
+    const symbol = extractMathSymbol(symbolNode);
+    const description = glossary.get(symbol) || GLOBAL_SYMBOLS.get(symbol);
+    if (!description) return;
+    addSymbolHitbox(symbolNode, symbol, description);
+  });
+}
+
+function buildEquationGlossary(eq) {
+  const glossary = new Map(GLOBAL_SYMBOLS);
+  eq.variables.forEach(entry => {
+    const [rawSymbol, ...rest] = entry.split(":");
+    const description = rest.join(":").trim();
+    rawSymbol.split(/[\/|,]| y | e /).forEach(part => {
+      const key = normalizeSymbolKey(part);
+      if (key && description) glossary.set(key, description);
+    });
+  });
+  return glossary;
+}
+
+function extractMathSymbol(node) {
+  const codes = [...node.querySelectorAll("use[data-c]")].map(use => use.getAttribute("data-c"));
+  if (codes.length) return codes.map(code => String.fromCodePoint(parseInt(code, 16))).join("").normalize("NFKC");
+  return node.textContent.trim().normalize("NFKC");
+}
+
+function addSymbolHitbox(symbolNode, symbol, description) {
+  const svg = symbolNode.closest("svg");
+  const box = symbolNode.getBBox();
+  const rect = document.createElementNS("http://www.w3.org/2000/svg", "rect");
+  rect.classList.add("formula-token-hitbox");
+  rect.setAttribute("x", box.x - 3);
+  rect.setAttribute("y", box.y - 3);
+  rect.setAttribute("width", box.width + 6);
+  rect.setAttribute("height", box.height + 6);
+  rect.setAttribute("rx", "4");
+  rect.dataset.symbol = symbol;
+  rect.dataset.description = description;
+  rect.setAttribute("tabindex", "0");
+  rect.setAttribute("aria-label", `${symbol}: ${description}`);
+  symbolNode.parentNode.insertBefore(rect, symbolNode.nextSibling);
+  wireSymbolTooltip(rect, svg);
+}
+
+function wireSymbolTooltip(target, svg) {
+  const show = event => showSymbolTooltip(target.dataset.symbol, target.dataset.description, event.clientX, event.clientY);
+  const hide = () => hideSymbolTooltip();
+  target.addEventListener("mousemove", show);
+  target.addEventListener("focus", () => {
+    const rect = svg.getBoundingClientRect();
+    showSymbolTooltip(target.dataset.symbol, target.dataset.description, rect.left + rect.width / 2, rect.top + rect.height / 2);
+  });
+  target.addEventListener("mouseleave", hide);
+  target.addEventListener("blur", hide);
+}
+
+function showSymbolTooltip(symbol, description, x, y) {
+  let tooltip = document.querySelector(".symbol-tooltip");
+  if (!tooltip) {
+    tooltip = document.createElement("div");
+    tooltip.className = "symbol-tooltip";
+    document.body.appendChild(tooltip);
+  }
+  tooltip.innerHTML = `<strong>${escapeHtml(symbol)}</strong><span>${escapeHtml(description)}</span>`;
+  tooltip.classList.add("visible");
+  tooltip.style.left = `${Math.min(x + 14, window.innerWidth - 280)}px`;
+  tooltip.style.top = `${Math.min(y + 14, window.innerHeight - 120)}px`;
+}
+
+function hideSymbolTooltip() {
+  document.querySelector(".symbol-tooltip")?.classList.remove("visible");
+}
+
+function normalizeSymbolKey(value) {
+  return value
+    .trim()
+    .normalize("NFKC")
+    .replace(/[₀₁₂₃₄₅₆₇₈₉⁰¹²³⁴⁵⁶⁷⁸⁹0-9]/g, "")
+    .replace(/[{}()[\]^_\\]/g, "")
+    .trim();
+}
+
+function escapeHtml(value) {
+  return String(value).replace(/[&<>'"]/g, char => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", "'": "&#39;", '"': "&quot;" }[char]));
 }
