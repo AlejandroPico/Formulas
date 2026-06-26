@@ -1,0 +1,36 @@
+.equation-card h3 {
+  text-wrap: balance;
+}
+
+.card-title-name {
+  display: inline;
+}
+
+.card-context-label {
+  display: inline;
+  margin-left: .46em;
+  color: var(--context-color, var(--muted));
+  font-size: .56em;
+  font-weight: 860;
+  line-height: 1;
+  letter-spacing: .015em;
+  white-space: nowrap;
+  vertical-align: baseline;
+  opacity: .94;
+}
+
+.card-context-label::before {
+  content: "·";
+  margin-right: .42em;
+  color: color-mix(in srgb, var(--context-color, var(--muted)) 58%, var(--muted));
+  font-weight: 700;
+}
+
+.card-context-label.is-year {
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.card-context-label.is-year::before {
+  color: var(--muted);
+}
