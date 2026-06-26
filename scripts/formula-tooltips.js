@@ -251,9 +251,25 @@ function showPopoverAtElement(element, symbol, description) {
 }
 
 function positionPopover(popover, clientX, clientY) {
-  const offset = 9;
-  const maxLeft = Math.max(8, window.innerWidth - popover.offsetWidth - 8);
-  const maxTop = Math.max(8, window.innerHeight - popover.offsetHeight - 8);
+  const offset = 8;
+  const host = popover.parentElement;
+  const insideDialog = host?.matches?.("#equationModal");
+  const width = popover.offsetWidth || 0;
+  const height = popover.offsetHeight || 0;
+
+  if (insideDialog) {
+    const hostRect = host.getBoundingClientRect();
+    const localX = clientX - hostRect.left;
+    const localY = clientY - hostRect.top;
+    const maxLeft = Math.max(8, hostRect.width - width - 8);
+    const maxTop = Math.max(8, hostRect.height - height - 8);
+    popover.style.left = `${clamp(localX + offset, 8, maxLeft)}px`;
+    popover.style.top = `${clamp(localY + offset, 8, maxTop)}px`;
+    return;
+  }
+
+  const maxLeft = Math.max(8, window.innerWidth - width - 8);
+  const maxTop = Math.max(8, window.innerHeight - height - 8);
   popover.style.left = `${clamp(clientX + offset, 8, maxLeft)}px`;
   popover.style.top = `${clamp(clientY + offset, 8, maxTop)}px`;
 }
