@@ -1,0 +1,17 @@
+.equation-card {
+  max-width: calc(100vw - 32px);
+}
+
+.equation-card.formula-scaled .formula-box {
+  min-height: calc(1em / var(--formula-scale, 1));
+}
+
+.equation-card.formula-scaled .formula-box mjx-container,
+.equation-card.formula-scaled .formula-stack > div {
+  transform: scale(var(--formula-scale, 1));
+  transform-origin: center top;
+}
+
+.equation-card.formula-scaled .formula-stack {
+  gap: calc(12px * var(--formula-scale, 1));
+}
