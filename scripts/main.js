@@ -37,11 +37,47 @@ function fillSelect(select, values, active) {
 function bindEvents() {
   const filterToggle = $("#filterToggle");
   const filterPanel = $("#filterPanel");
+  const searchToggle = $("#searchToggle");
+  const searchField = $("#searchField");
+  const searchInput = $("#searchInput");
+  const searchClear = $("#searchClear");
+  const searchControl = $("#searchControl");
 
   filterToggle.addEventListener("click", () => {
     const isOpen = !filterPanel.hidden;
     filterPanel.hidden = isOpen;
     filterToggle.setAttribute("aria-expanded", String(!isOpen));
+  });
+
+  searchToggle.addEventListener("click", () => {
+    const open = searchField.hidden;
+    searchField.hidden = !open;
+    searchControl.classList.toggle("open", open);
+    searchToggle.setAttribute("aria-expanded", String(open));
+    if (open) searchInput.focus();
+  });
+
+  searchInput.addEventListener("input", event => {
+    const query = event.target.value;
+    setState({ query });
+    searchControl.classList.toggle("has-query", Boolean(query.trim()));
+    renderAll();
+  });
+
+  searchClear.addEventListener("click", () => {
+    searchInput.value = "";
+    setState({ query: "" });
+    searchControl.classList.remove("has-query");
+    searchInput.focus();
+    renderAll();
+  });
+
+  searchInput.addEventListener("keydown", event => {
+    if (event.key === "Escape" && !searchInput.value) {
+      searchField.hidden = true;
+      searchControl.classList.remove("open");
+      searchToggle.setAttribute("aria-expanded", "false");
+    }
   });
 
   $("#sortSelect").addEventListener("change", event => {
