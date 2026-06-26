@@ -66,7 +66,7 @@ const GLOBAL_SYMBOLS = new Map(Object.entries({
 }));
 
 export function renderFilters(container, values, activeValue, onChange) {
-  container.innerHTML = values.map(value => `<button class="filter-pill ${value === activeValue ? "active" : ""}" data-value="${value}">${value}</button>`).join("");
+  container.innerHTML = values.map(value => `<button class="filter-pill ${value === activeValue ? "active" : ""}" data-value="${escapeHtml(value)}">${escapeHtml(value)}</button>`).join("");
   container.querySelectorAll("button").forEach(button => button.addEventListener("click", () => onChange(button.dataset.value)));
 }
 
@@ -109,8 +109,8 @@ export function renderEquationGrid(equations, onOpen) {
 }
 
 function renderFormula(formulas) {
-  if (formulas.length === 1) return `\\(${formulas[0]}\\)`;
-  return `<div class="formula-stack">${formulas.map(line => `<div>\\(${line}\\)</div>`).join("")}</div>`;
+  if (formulas.length === 1) return `\(${formulas[0]}\)`;
+  return `<div class="formula-stack">${formulas.map(line => `<div>\(${line}\)</div>`).join("")}</div>`;
 }
 
 function normalizeFormulaList(formula) {
@@ -210,7 +210,7 @@ export function renderTimeline(equations) {
   host.innerHTML = equations
     .slice()
     .sort((a, b) => a.year - b.year)
-    .map(eq => `<article class="timeline-item" style="--item-color:${eq.color}"><div class="timeline-year">${eq.year}</div><div class="timeline-body"><strong>${eq.name}</strong><span>${eq.author} · ${eq.field}</span></div></article>`)
+    .map(eq => `<article class="timeline-item" style="--item-color:${escapeHtml(eq.color)}"><div class="timeline-year">${escapeHtml(eq.year)}</div><div class="timeline-body"><strong>${escapeHtml(eq.name)}</strong><span>${escapeHtml(eq.author)} · ${escapeHtml(eq.field)}</span></div></article>`)
     .join("");
 }
 
@@ -222,9 +222,9 @@ export function openEquationModal(eq) {
   disposeSimulation = null;
 
   content.innerHTML = `
-    <section class="detail-shell" style="--tag-color:${eq.color}">
+    <section class="detail-shell" style="--tag-color:${escapeHtml(eq.color)}">
       <header class="detail-header compact">
-        <h2>${eq.name}</h2>
+        <h2>${escapeHtml(eq.name)}</h2>
       </header>
 
       <nav class="detail-tabs" role="tablist" aria-label="Secciones de la ficha">
@@ -238,35 +238,30 @@ export function openEquationModal(eq) {
       <div class="detail-panels">
         <section class="detail-panel formula-view active" data-panel="formula" role="tabpanel">
           <div class="formula-box modal-formula" aria-label="Fórmula interactiva">${renderFormula(formulas)}</div>
-          <p class="formula-caption">${eq.summary}</p>
+          <p class="formula-caption">${escapeHtml(eq.summary)}</p>
         </section>
 
         <section class="detail-panel text-view" data-panel="context" role="tabpanel" hidden>
           <div class="text-section">
             <h3>Historia</h3>
-            <p>${eq.history}</p>
+            <p>${escapeHtml(eq.history)}</p>
           </div>
           <div class="text-section">
             <h3>Derivación simplificada</h3>
-            <p>${eq.derivation}</p>
+            <p>${escapeHtml(eq.derivation)}</p>
           </div>
           <div class="text-section">
             <h3>Qué significa</h3>
-            <p>${eq.meaning}</p>
+            <p>${escapeHtml(eq.meaning)}</p>
           </div>
         </section>
 
         <section class="detail-panel text-view" data-panel="uses" role="tabpanel" hidden>
-          <ul class="plain-list use-list">${eq.uses.map(v => `<li>${v}</li>`).join("")}</ul>
+          <ul class="plain-list use-list">${(eq.uses || []).map(v => `<li>${escapeHtml(v)}</li>`).join("")}</ul>
         </section>
 
-        <section class="detail-panel text-view" data-panel="metadata" role="tabpanel" hidden>
-          <dl class="metadata-list">
-            <div><dt>Autor / descubridor</dt><dd>${eq.author}</dd></div>
-            <div><dt>Año</dt><dd>${eq.year}</dd></div>
-            <div><dt>Área</dt><dd>${eq.field}</dd></div>
-            <div><dt>Nivel</dt><dd>${eq.level}</dd></div>
-          </dl>
+        <section class="detail-panel text-view metadata-view" data-panel="metadata" role="tabpanel" hidden>
+          ${renderMetadataPanel(eq)}
         </section>
 
         <section class="detail-panel simulation-view" data-panel="simulation" role="tabpanel" hidden>
@@ -282,6 +277,26 @@ export function openEquationModal(eq) {
   requestMathTypeset();
   scheduleModalFormulaFit(content);
   scheduleSymbolTooltips(content, eq);
+}
+
+function renderMetadataPanel(eq) {
+  const variableCount = Array.isArray(eq.variables) ? eq.variables.length : 0;
+  const useCount = Array.isArray(eq.uses) ? eq.uses.length : 0;
+  const formulaCount = normalizeFormulaList(eq.formula).length;
+  return `
+    <article class="metadata-article expanded-text">
+      <h3>Ficha técnica</h3>
+      <p>${escapeHtml(eq.name)} pertenece al área de ${escapeHtml(eq.field)} y está clasificada para nivel ${escapeHtml(eq.level)}. La ficha reúne ${formulaCount} forma${formulaCount === 1 ? "" : "s"} matemática${formulaCount === 1 ? "" : "s"}, ${variableCount} entrada${variableCount === 1 ? "" : "s"} de glosario y ${useCount} campo${useCount === 1 ? "" : "s"} de aplicación.</p>
+      <div class="metadata-clean-grid" aria-label="Datos técnicos de la ficha">
+        <div><span>Autoría o tradición</span><strong>${escapeHtml(eq.author)}</strong></div>
+        <div><span>Fecha histórica</span><strong>${formatDisplayYear(eq.year)}</strong></div>
+        <div><span>Área</span><strong>${escapeHtml(eq.field)}</strong></div>
+        <div><span>Nivel</span><strong>${escapeHtml(eq.level)}</strong></div>
+        <div><span>Simulación asociada</span><strong>${escapeHtml(eq.simulation || "sin simulación")}</strong></div>
+        <div><span>Cobertura interna</span><strong>${formulaCount} fórmulas · ${variableCount} símbolos · ${useCount} usos</strong></div>
+      </div>
+    </article>
+  `;
 }
 
 function bindDetailTabs(content, eq) {
@@ -350,6 +365,7 @@ function scheduleSymbolTooltips(root, eq) {
   window.setTimeout(() => annotateFormulaSymbols(root, eq), 120);
   window.setTimeout(() => annotateFormulaSymbols(root, eq), 320);
   window.setTimeout(() => annotateFormulaSymbols(root, eq), 680);
+  window.setTimeout(() => annotateFormulaSymbols(root, eq), 980);
 }
 
 function annotateFormulaSymbols(root, eq) {
@@ -368,8 +384,9 @@ function annotateFormulaSymbols(root, eq) {
     node.dataset.symbol = symbol;
     node.dataset.description = description;
     node.setAttribute("aria-label", `${symbol}: ${description}`);
-    addSymbolHitbox(node);
+    const hitbox = addSymbolHitbox(node);
     wireSymbolTooltip(node, symbol, description);
+    if (hitbox) wireSymbolTooltip(hitbox, symbol, description);
   });
 }
 
@@ -389,10 +406,9 @@ function buildEquationGlossary(eq) {
 
 function extractVariableKeys(rawKeys) {
   return rawKeys
-    .replace(/\by\b/gi, ",")
-    .replace(/\be\b/gi, ",")
+    .replace(/\s+(?:y|e)\s+/gi, ",")
     .replace(/\//g, ",")
-    .split(/[,,;]+/)
+    .split(/[,;]+/)
     .map(part => part.trim())
     .filter(Boolean)
     .flatMap(part => {
@@ -434,11 +450,9 @@ function normalizeSymbolKey(value) {
 }
 
 function addSymbolHitbox(node) {
-  const svg = node.ownerSVGElement;
-  if (!svg) return;
   try {
     const box = node.getBBox();
-    if (!box.width || !box.height) return;
+    if (!box.width || !box.height) return null;
     const rect = document.createElementNS("http://www.w3.org/2000/svg", "rect");
     rect.setAttribute("class", "formula-token-hitbox");
     rect.setAttribute("x", String(box.x - 5));
@@ -446,42 +460,48 @@ function addSymbolHitbox(node) {
     rect.setAttribute("width", String(box.width + 10));
     rect.setAttribute("height", String(box.height + 10));
     node.insertBefore(rect, node.firstChild);
+    return rect;
   } catch {
-    // Algunos grupos SVG no exponen caja medible; simplemente se omiten.
+    return null;
   }
 }
 
-function wireSymbolTooltip(node, symbol, description) {
-  const host = node.ownerSVGElement?.closest(".equation-modal") || document.body;
-  node.onmousemove = event => showSymbolTooltip(event, symbol, description, host);
-  node.onmouseenter = event => showSymbolTooltip(event, symbol, description, host);
-  node.onmouseleave = () => hideSymbolTooltip(host);
-  node.onclick = event => showSymbolTooltip(event, symbol, description, host);
+function wireSymbolTooltip(target, symbol, description) {
+  target.onmousemove = event => showSymbolTooltip(event, symbol, description);
+  target.onmouseenter = event => showSymbolTooltip(event, symbol, description);
+  target.onmouseleave = hideSymbolTooltip;
+  target.onclick = event => showSymbolTooltip(event, symbol, description);
 }
 
-function getTooltipElement(host) {
-  let tooltip = host.querySelector?.(".symbol-tooltip");
+function getTooltipElement() {
+  let tooltip = document.body.querySelector(":scope > .symbol-tooltip");
   if (!tooltip) {
     tooltip = document.createElement("div");
     tooltip.className = "symbol-tooltip";
-    host.appendChild(tooltip);
+    document.body.appendChild(tooltip);
   }
   return tooltip;
 }
 
-function showSymbolTooltip(event, symbol, description, host) {
-  const tooltip = getTooltipElement(host);
+function showSymbolTooltip(event, symbol, description) {
+  const tooltip = getTooltipElement();
   tooltip.innerHTML = `<strong>${escapeHtml(symbol)}</strong><span>${escapeHtml(description)}</span>`;
   tooltip.classList.add("visible");
-  const offset = 16;
-  const maxLeft = window.innerWidth - tooltip.offsetWidth - 12;
-  const maxTop = window.innerHeight - tooltip.offsetHeight - 12;
-  tooltip.style.left = `${Math.max(12, Math.min(maxLeft, event.clientX + offset))}px`;
-  tooltip.style.top = `${Math.max(12, Math.min(maxTop, event.clientY + offset))}px`;
+  tooltip.style.position = "fixed";
+  const offset = 7;
+  const maxLeft = window.innerWidth - tooltip.offsetWidth - 7;
+  const maxTop = window.innerHeight - tooltip.offsetHeight - 7;
+  tooltip.style.left = `${Math.max(7, Math.min(maxLeft, event.clientX + offset))}px`;
+  tooltip.style.top = `${Math.max(7, Math.min(maxTop, event.clientY + offset))}px`;
 }
 
-function hideSymbolTooltip(host = document) {
-  host.querySelectorAll?.(".symbol-tooltip").forEach(tooltip => tooltip.classList.remove("visible"));
+function hideSymbolTooltip() {
+  document.querySelectorAll(".symbol-tooltip").forEach(tooltip => tooltip.classList.remove("visible"));
+}
+
+function formatDisplayYear(year) {
+  if (typeof year !== "number" || Number.isNaN(year)) return escapeHtml(year ?? "sin fecha");
+  return year < 0 ? `${Math.abs(year)} a. C.` : String(year);
 }
 
 function escapeHtml(value) {
@@ -491,6 +511,6 @@ function escapeHtml(value) {
 export function closeEquationModal() {
   if (disposeSimulation) disposeSimulation();
   disposeSimulation = null;
-  hideSymbolTooltip(document);
+  hideSymbolTooltip();
   $("#equationModal").close();
 }
