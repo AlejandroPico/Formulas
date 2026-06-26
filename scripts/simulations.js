@@ -32,6 +32,8 @@ export function drawHeroCanvas(canvas) {
 }
 
 export function mountSimulation(type, canvas, controlsHost) {
+  if (type === "pythagorean") return mountPythagoreanSimulation(canvas, controlsHost);
+
   const ctx = canvas.getContext("2d");
   const config = getSimulationConfig(type);
   controlsHost.innerHTML = config.controls.map(controlTemplate).join("");
@@ -55,6 +57,236 @@ export function mountSimulation(type, canvas, controlsHost) {
   controls.forEach(input => input.addEventListener("input", () => drawLoop()));
   drawLoop();
   return () => cancelAnimationFrame(raf);
+}
+
+function mountPythagoreanSimulation(canvas, controlsHost) {
+  const ctx = canvas.getContext("2d");
+  canvas.classList.add("pythagorean-canvas");
+  controlsHost.classList.add("pythagorean-controls");
+  controlsHost.innerHTML = `
+    <div class="pythagorean-panel">
+      <div class="pythagorean-formula" aria-label="Teorema de Pitágoras">
+        <span data-side="a">a²</span><span>+</span><span data-side="b">b²</span><span>=</span><span data-side="c">c²</span>
+      </div>
+      <div class="pythagorean-control-grid">
+        <label><span>Cateto a · horizontal</span><strong id="pythagoreanAValue">6.0</strong><input type="range" id="pythagoreanA" min="1" max="10" step="0.1" value="6"></label>
+        <label><span>Cateto b · vertical</span><strong id="pythagoreanBValue">6.0</strong><input type="range" id="pythagoreanB" min="1" max="10" step="0.1" value="6"></label>
+      </div>
+      <div class="pythagorean-live" id="pythagoreanLive"></div>
+    </div>
+  `;
+
+  const rangeA = controlsHost.querySelector("#pythagoreanA");
+  const rangeB = controlsHost.querySelector("#pythagoreanB");
+  const valueA = controlsHost.querySelector("#pythagoreanAValue");
+  const valueB = controlsHost.querySelector("#pythagoreanBValue");
+  const live = controlsHost.querySelector("#pythagoreanLive");
+
+  let resizeObserver;
+  function draw() {
+    const palette = getSimulationPalette(canvas);
+    const colors = getPythagoreanColors(palette);
+    const ratio = window.devicePixelRatio || 1;
+    const rect = canvas.getBoundingClientRect();
+    const width = Math.max(1, rect.width);
+    const height = Math.max(1, rect.height || 320);
+    canvas.width = Math.floor(width * ratio);
+    canvas.height = Math.floor(height * ratio);
+    ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
+
+    const a = Number(rangeA.value);
+    const b = Number(rangeB.value);
+    const c = Math.sqrt(a * a + b * b);
+    valueA.textContent = a.toFixed(1);
+    valueB.textContent = b.toFixed(1);
+
+    drawPythagoreanScene(ctx, width, height, { a, b, c }, colors, palette);
+    updatePythagoreanLive(live, a, b, c);
+  }
+
+  rangeA.addEventListener("input", draw);
+  rangeB.addEventListener("input", draw);
+  if (window.ResizeObserver) {
+    resizeObserver = new ResizeObserver(draw);
+    resizeObserver.observe(canvas);
+  }
+  draw();
+
+  return () => {
+    rangeA.removeEventListener("input", draw);
+    rangeB.removeEventListener("input", draw);
+    resizeObserver?.disconnect();
+    canvas.classList.remove("pythagorean-canvas");
+    controlsHost.classList.remove("pythagorean-controls");
+  };
+}
+
+function drawPythagoreanScene(ctx, w, h, values, colors, palette) {
+  const { a, b, c } = values;
+  clear(ctx, w, h, palette);
+
+  const O = { x: 0, y: 0 };
+  const A = { x: a, y: 0 };
+  const B = { x: 0, y: b };
+  const squareA = [O, A, { x: a, y: -a }, { x: 0, y: -a }];
+  const squareB = [O, B, { x: -b, y: b }, { x: -b, y: 0 }];
+  const squareC = [A, B, { x: b, y: a + b }, { x: a + b, y: a }];
+  const all = [...squareA, ...squareB, ...squareC, O, A, B];
+  const box = getMathBounds(all);
+  const pad = 36;
+  const scale = Math.min((w - pad * 2) / Math.max(1, box.maxX - box.minX), (h - pad * 2) / Math.max(1, box.maxY - box.minY));
+  const toScreen = point => ({ x: pad + (point.x - box.minX) * scale, y: h - pad - (point.y - box.minY) * scale });
+
+  drawPolygon(ctx, squareA.map(toScreen), colors.aFill, colors.aStroke, 1.4);
+  drawPolygon(ctx, squareB.map(toScreen), colors.bFill, colors.bStroke, 1.4);
+  drawPolygon(ctx, squareC.map(toScreen), colors.cFill, colors.cStroke, 1.7);
+
+  const sO = toScreen(O), sA = toScreen(A), sB = toScreen(B);
+  ctx.beginPath();
+  ctx.moveTo(sO.x, sO.y);
+  ctx.lineTo(sA.x, sA.y);
+  ctx.lineTo(sB.x, sB.y);
+  ctx.closePath();
+  ctx.fillStyle = colorMix(palette.bg, palette.text, 0.10);
+  ctx.fill();
+
+  drawSegment(ctx, sO, sA, colors.a, 4.5);
+  drawSegment(ctx, sO, sB, colors.b, 4.5);
+  drawSegment(ctx, sA, sB, colors.c, 5.4);
+  drawRightAngle(ctx, sO, Math.min(24, scale * 0.45), palette);
+
+  drawChip(ctx, `a = ${a.toFixed(1)}`, midpoint(sO, sA), colors.a, palette, 0, -14);
+  drawChip(ctx, `b = ${b.toFixed(1)}`, midpoint(sO, sB), colors.b, palette, 16, 0);
+  drawChip(ctx, `c = ${c.toFixed(2)}`, midpoint(sA, sB), colors.c, palette, 16, -14);
+
+  drawAreaLabel(ctx, `a² = ${(a * a).toFixed(1)}`, polygonCenter(squareA.map(toScreen)), colors.a, palette);
+  drawAreaLabel(ctx, `b² = ${(b * b).toFixed(1)}`, polygonCenter(squareB.map(toScreen)), colors.b, palette);
+  drawAreaLabel(ctx, `c² = ${(c * c).toFixed(1)}`, polygonCenter(squareC.map(toScreen)), colors.c, palette);
+}
+
+function updatePythagoreanLive(host, a, b, c) {
+  const a2 = a * a;
+  const b2 = b * b;
+  const c2 = c * c;
+  host.innerHTML = `
+    <strong>Sustitución en tiempo real</strong>
+    <span><b data-side="a">${a.toFixed(1)}²</b> + <b data-side="b">${b.toFixed(1)}²</b> = <b data-side="c">${c.toFixed(2)}²</b></span>
+    <span><b data-side="a">${a2.toFixed(2)}</b> + <b data-side="b">${b2.toFixed(2)}</b> = <b data-side="c">${c2.toFixed(2)}</b></span>
+    <em>La superficie verde de la hipotenusa equivale exactamente a la suma de las superficies azul y roja.</em>
+  `;
+}
+
+function getPythagoreanColors(palette) {
+  const root = getComputedStyle(document.body);
+  const danger = root.getPropertyValue("--danger").trim() || "#cc4a44";
+  return {
+    a: palette.accent,
+    b: danger,
+    c: "#16a34a",
+    aStroke: palette.accent,
+    bStroke: danger,
+    cStroke: "#16a34a",
+    aFill: colorAlpha(palette.accent, 0.18),
+    bFill: colorAlpha(danger, 0.18),
+    cFill: "rgba(22, 163, 74, 0.18)"
+  };
+}
+
+function getMathBounds(points) {
+  return points.reduce((box, point) => ({
+    minX: Math.min(box.minX, point.x),
+    maxX: Math.max(box.maxX, point.x),
+    minY: Math.min(box.minY, point.y),
+    maxY: Math.max(box.maxY, point.y)
+  }), { minX: Infinity, maxX: -Infinity, minY: Infinity, maxY: -Infinity });
+}
+
+function drawPolygon(ctx, points, fill, stroke, lineWidth = 1) {
+  ctx.beginPath();
+  points.forEach((point, index) => index ? ctx.lineTo(point.x, point.y) : ctx.moveTo(point.x, point.y));
+  ctx.closePath();
+  ctx.fillStyle = fill;
+  ctx.fill();
+  ctx.strokeStyle = stroke;
+  ctx.lineWidth = lineWidth;
+  ctx.stroke();
+}
+
+function drawSegment(ctx, start, end, color, width) {
+  ctx.beginPath();
+  ctx.moveTo(start.x, start.y);
+  ctx.lineTo(end.x, end.y);
+  ctx.strokeStyle = color;
+  ctx.lineWidth = width;
+  ctx.lineCap = "round";
+  ctx.stroke();
+}
+
+function drawRightAngle(ctx, origin, size, palette) {
+  ctx.strokeStyle = palette.muted;
+  ctx.lineWidth = 1.6;
+  ctx.strokeRect(origin.x, origin.y - size, size, size);
+}
+
+function drawChip(ctx, text, point, color, palette, dx = 0, dy = 0) {
+  ctx.save();
+  ctx.font = "850 13px system-ui";
+  const width = ctx.measureText(text).width;
+  const x = point.x + dx;
+  const y = point.y + dy;
+  ctx.fillStyle = colorMix(palette.bg, palette.text, 0.12);
+  roundRect(ctx, x - width / 2 - 8, y - 17, width + 16, 24, 8);
+  ctx.fill();
+  ctx.strokeStyle = colorAlpha(color, 0.7);
+  ctx.stroke();
+  ctx.fillStyle = palette.text;
+  ctx.fillText(text, x - width / 2, y);
+  ctx.restore();
+}
+
+function drawAreaLabel(ctx, text, point, color, palette) {
+  ctx.save();
+  ctx.font = "800 12px system-ui";
+  ctx.fillStyle = color;
+  ctx.textAlign = "center";
+  ctx.textBaseline = "middle";
+  ctx.fillText(text, point.x, point.y);
+  ctx.restore();
+}
+
+function roundRect(ctx, x, y, w, h, r) {
+  ctx.beginPath();
+  ctx.moveTo(x + r, y);
+  ctx.arcTo(x + w, y, x + w, y + h, r);
+  ctx.arcTo(x + w, y + h, x, y + h, r);
+  ctx.arcTo(x, y + h, x, y, r);
+  ctx.arcTo(x, y, x + w, y, r);
+  ctx.closePath();
+}
+
+function midpoint(a, b) {
+  return { x: (a.x + b.x) / 2, y: (a.y + b.y) / 2 };
+}
+
+function polygonCenter(points) {
+  return points.reduce((sum, point) => ({ x: sum.x + point.x / points.length, y: sum.y + point.y / points.length }), { x: 0, y: 0 });
+}
+
+function colorAlpha(color, alpha) {
+  if (color.startsWith("#")) {
+    const hex = color.replace("#", "");
+    const full = hex.length === 3 ? hex.split("").map(ch => ch + ch).join("") : hex;
+    const value = Number.parseInt(full, 16);
+    const r = (value >> 16) & 255;
+    const g = (value >> 8) & 255;
+    const b = value & 255;
+    return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+  }
+  return color;
+}
+
+function colorMix(base, overlay, amount) {
+  return `color-mix(in srgb, ${base} ${Math.round((1 - amount) * 100)}%, ${overlay} ${Math.round(amount * 100)}%)`;
 }
 
 function controlTemplate(control) {
@@ -154,10 +386,10 @@ function drawWave(ctx, w, h, freq, amp, t, palette) {
   for (let x = 0; x < w; x++) { const y = h / 2 + Math.sin(x / 38 * freq + t * 2) * Math.min(h * 0.2, 18 * amp); x ? ctx.lineTo(x, y) : ctx.moveTo(x, y); }
   ctx.stroke(); label(ctx, `Frecuencia ${freq}`, 18, 30, palette);
 }
-function drawField(ctx, w, h, p, t, palette) {
-  clear(ctx, w, h, palette); ctx.strokeStyle = palette.accent2; ctx.lineWidth = 1.8;
+function drawField(ctx, w, h, p) {
+  clear(ctx, w, h, p); ctx.strokeStyle = p.accent2; ctx.lineWidth = 1.8;
   for (let x = 35; x < w; x += Math.max(18, 260 / p.density)) for (let y = 45; y < h; y += Math.max(18, 220 / p.density)) arrow(ctx, x, y, 22, Math.sin(x * 0.02) + Math.cos(y * 0.025));
-  label(ctx, "Campo electromagnético esquemático", 18, 30, palette);
+  label(ctx, "Campo electromagnético esquemático", 18, 30, p);
 }
 function drawParticles(ctx, w, h, p, t, palette) {
   clear(ctx, w, h, palette); for (let i = 0; i < 140; i++) { const x = (i * 47 + t * 28 * p.spread) % w; const y = h/2 + Math.sin(i + t + p.spread) * Math.min(h * 0.33, 12 + p.spread * 8); dot(ctx, x, y, 2.8, palette.accent2); } label(ctx, "Más dispersión → más microestados", 18, 30, palette);
