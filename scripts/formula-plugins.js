@@ -5,6 +5,10 @@ import { mountQuadraticPlugin } from "./plugins/quadratic-plugin.js";
 import { mountSinesPlugin } from "./plugins/sines-plugin.js";
 import { mountCosinesPlugin } from "./plugins/cosines-plugin.js";
 import { mountPythagoreanPlugin } from "./plugins/pythagorean-plugin.js";
+import { mountContinuityPlugin } from "./plugins/continuity-plugin.js";
+import { mountNewtonSecondLawPlugin } from "./plugins/newton-second-law-plugin.js";
+import { mountTaylorPlugin } from "./plugins/taylor-plugin.js";
+import { mountWaveEquationPlugin } from "./plugins/wave-equation-plugin.js";
 
 const PLUGINS = new Map([
   ["ecuacion de bernoulli", mountBernoulliPlugin],
@@ -13,7 +17,11 @@ const PLUGINS = new Map([
   ["formula cuadratica", mountQuadraticPlugin],
   ["ley de los senos", mountSinesPlugin],
   ["ley de los cosenos", mountCosinesPlugin],
-  ["teorema de pitagoras", mountPythagoreanPlugin]
+  ["teorema de pitagoras", mountPythagoreanPlugin],
+  ["ecuacion de continuidad", mountContinuityPlugin],
+  ["segunda ley de newton", mountNewtonSecondLawPlugin],
+  ["serie de taylor", mountTaylorPlugin],
+  ["ecuacion de onda", mountWaveEquationPlugin]
 ]);
 
 const modalContent = document.querySelector("#modalContent");
