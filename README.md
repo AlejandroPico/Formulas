@@ -4,10 +4,17 @@ Proyecto web estático para GitHub Pages orientado a divulgación científica vi
 
 ## Estado actual
 
-Versión **v2.3**: Historia disponible en todas las fichas y pestañas sincronizadas.
+Versión **v2.4**: Pitágoras como ficha patrón pulida.
 
 Cambios principales:
 
+- Añadido `polished-equations.js` para overrides finales de fórmulas especialmente cuidadas.
+- Pitágoras pasa a usar una ficha pulida con fórmula, variables, significado, derivación y simulación propia.
+- Añadido simulador específico `pythagorean`, inspirado en el HTML de demostración aportado por el usuario.
+- El simulador de Pitágoras incluye cuadrados sobre los catetos y la hipotenusa, sliders para `a` y `b`, cálculo vivo de `c`, áreas y sustitución numérica.
+- Añadido `pythagorean-simulation.css` con adaptación visual al sistema de estilos del atlas.
+- Corregido el posicionamiento de tooltips con `position: fixed` global para evitar desplazamientos respecto al ratón.
+- Añadidos tooltips estructurales para raíces, potencias, fracciones, subíndices, superíndices y marcas vectoriales generadas por MathJax.
 - Corregida la sincronización de pestañas cuando existe la pestaña `Historia`.
 - La pestaña `Historia` ya no rompe `Fórmula`, `Contexto`, `Usos`, `Ficha` ni `Simulación`.
 - Todas las fórmulas disponen de pestaña `Historia`.
@@ -69,7 +76,8 @@ Cambios principales:
 │   ├── equations.js
 │   ├── extra-equations.js
 │   ├── final-corrections.js
-│   └── history-essays.js
+│   ├── history-essays.js
+│   └── polished-equations.js
 ├── scripts/
 │   ├── filtering.js
 │   ├── main.js
@@ -86,6 +94,7 @@ Cambios principales:
 │   ├── interaction-fixes.css
 │   ├── layout.css
 │   ├── no-header-label.css
+│   ├── pythagorean-simulation.css
 │   ├── responsive.css
 │   ├── responsive-refresh.css
 │   ├── tokens.css
@@ -105,6 +114,8 @@ Añade un objeto nuevo en `data/equations.js`, `data/extra-equations.js` o `data
 Para sustituir una entrada existente por una versión más completa sin duplicarla, añade un objeto con el mismo `id` en `data/complete-equations.js`.
 
 Para aplicar una corrección final puntual, añade un objeto con el mismo `id` en `data/final-corrections.js`.
+
+Para aplicar una versión final especialmente cuidada de una ficha, añade un objeto en `data/polished-equations.js` con el mismo `id`. Este archivo se carga al final y tiene prioridad.
 
 Para ampliar la historia de una fórmula, añade un objeto en `data/history-essays.js` con `id`, `title`, `note` y `paragraphs`. Si no existe, el sistema genera una ampliación histórica estructurada a partir de los datos de la ficha.
 
@@ -128,4 +139,4 @@ Las propiedades principales son:
 
 `formula` puede ser una cadena LaTeX simple o un array de cadenas LaTeX cuando la ecuación se deba mostrar en varias líneas.
 
-Las simulaciones disponibles inicialmente son: `gravity`, `complex`, `wave`, `field`, `particles`, `spectrum`, `energy`, `quantum`, `spinor` y `flow`.
+Las simulaciones disponibles inicialmente son: `gravity`, `complex`, `wave`, `field`, `particles`, `spectrum`, `energy`, `quantum`, `spinor`, `flow` y `pythagorean`.
