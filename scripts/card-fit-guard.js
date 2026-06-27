@@ -11,20 +11,30 @@ const grid = document.querySelector(GRID_SELECTOR);
 
 if (grid) {
   observer.observe(grid, { childList: true, subtree: true });
-  window.addEventListener("resize", scheduleCardFit);
+  window.addEventListener("resize", () => { scheduleCardFit(); scheduleModalFormulaFit(); });
+  document.addEventListener("pointermove", event => {
+    if (!event.target.closest?.(".formula-tooltip-zone, .formula-token-hitbox")) hideAllFormulaTooltips();
+  }, true);
   document.addEventListener("click", event => {
     const tabButton = event.target.closest?.(".detail-tabs button");
     if (tabButton) {
+      hideAllFormulaTooltips();
       enforceModalTab(tabButton);
       scheduleModalCleanup();
+      scheduleModalFormulaFit();
     }
-    if (event.target.closest?.(".equation-card")) scheduleModalCleanup();
-  });
+    if (event.target.closest?.(".equation-card")) {
+      hideAllFormulaTooltips();
+      scheduleModalCleanup();
+      scheduleModalFormulaFit();
+    }
+  }, true);
   window.setInterval(() => {
     cleanDuplicateModalTabs();
     enhanceUsesPanel();
     enforceCurrentModalState();
-  }, 1200);
+    fitActiveModalFormula();
+  }, 1000);
   scheduleCardFit();
 }
 
@@ -36,9 +46,16 @@ function scheduleCardFit() {
 }
 
 function scheduleModalCleanup() {
-  window.setTimeout(() => { cleanDuplicateModalTabs(); enhanceUsesPanel(); enforceCurrentModalState(); }, 80);
-  window.setTimeout(() => { cleanDuplicateModalTabs(); enhanceUsesPanel(); enforceCurrentModalState(); }, 260);
-  window.setTimeout(() => { cleanDuplicateModalTabs(); enhanceUsesPanel(); enforceCurrentModalState(); }, 620);
+  window.setTimeout(() => { cleanDuplicateModalTabs(); enhanceUsesPanel(); enforceCurrentModalState(); fitActiveModalFormula(); }, 80);
+  window.setTimeout(() => { cleanDuplicateModalTabs(); enhanceUsesPanel(); enforceCurrentModalState(); fitActiveModalFormula(); }, 260);
+  window.setTimeout(() => { cleanDuplicateModalTabs(); enhanceUsesPanel(); enforceCurrentModalState(); fitActiveModalFormula(); }, 620);
+}
+
+function scheduleModalFormulaFit() {
+  window.setTimeout(fitActiveModalFormula, 90);
+  window.setTimeout(fitActiveModalFormula, 240);
+  window.setTimeout(fitActiveModalFormula, 540);
+  window.setTimeout(fitActiveModalFormula, 980);
 }
 
 function fitCards() {
@@ -80,6 +97,43 @@ function finalizeFormulaFit(grid) {
   });
 
   applyMasonrySpans(grid);
+}
+
+function fitActiveModalFormula() {
+  const panel = document.querySelector("#modalContent .detail-panel.formula-view.active");
+  const box = panel?.querySelector(".modal-formula");
+  if (!panel || !box || panel.hidden) return;
+
+  const items = [...box.querySelectorAll("mjx-container")];
+  if (!items.length) return;
+  items.forEach(item => item.style.transform = "");
+  box.style.setProperty("--modal-formula-scale", "1");
+
+  const availableWidth = Math.max(1, box.clientWidth - 28);
+  const availableHeight = Math.max(1, box.clientHeight - 28);
+  const boxRect = box.getBoundingClientRect();
+  const contentRect = getFormulaContentRect(items, boxRect);
+  if (!contentRect.width || !contentRect.height) return;
+
+  const scale = Math.min(1, availableWidth / contentRect.width, availableHeight / contentRect.height);
+  box.style.setProperty("--modal-formula-scale", String(Math.max(0.18, scale * 0.98).toFixed(3)));
+}
+
+function getFormulaContentRect(items, boxRect) {
+  const rects = items.map(item => item.getBoundingClientRect()).filter(rect => rect.width > 0 && rect.height > 0);
+  if (!rects.length) return { width: 0, height: 0 };
+  const left = Math.min(...rects.map(rect => rect.left));
+  const right = Math.max(...rects.map(rect => rect.right));
+  const top = Math.min(...rects.map(rect => rect.top));
+  const bottom = Math.max(...rects.map(rect => rect.bottom));
+  return {
+    width: Math.min(right - left, boxRect.width * 4),
+    height: Math.min(bottom - top, boxRect.height * 4)
+  };
+}
+
+function hideAllFormulaTooltips() {
+  document.querySelectorAll(".formula-symbol-popover, .symbol-tooltip").forEach(node => node.classList.remove("visible"));
 }
 
 function cleanDuplicateModalTabs() {
@@ -142,6 +196,8 @@ function enforceModalTab(button) {
     panel.classList.toggle("active", active);
     panel.hidden = !active;
   });
+
+  if (target !== "formula") hideAllFormulaTooltips();
 }
 
 function getTabId(button) {
