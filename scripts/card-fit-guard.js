@@ -1,6 +1,10 @@
+import { polishedEquations } from "../data/polished-equations.js";
+import { pluginPolishedEquations } from "../data/plugin-polished-equations.js";
+
 const GRID_SELECTOR = "#equationGrid";
 const CARD_SELECTOR = ".equation-card";
 const FORMULA_SELECTOR = ".formula-box";
+const richUsesByTitle = new Map([...polishedEquations, ...pluginPolishedEquations].map(eq => [normalizeTitle(eq.name), eq]));
 
 const observer = new MutationObserver(scheduleCardFit);
 const grid = document.querySelector(GRID_SELECTOR);
@@ -18,6 +22,7 @@ if (grid) {
   });
   window.setInterval(() => {
     cleanDuplicateModalTabs();
+    enhanceUsesPanel();
     enforceCurrentModalState();
   }, 1200);
   scheduleCardFit();
@@ -31,9 +36,9 @@ function scheduleCardFit() {
 }
 
 function scheduleModalCleanup() {
-  window.setTimeout(() => { cleanDuplicateModalTabs(); enforceCurrentModalState(); }, 80);
-  window.setTimeout(() => { cleanDuplicateModalTabs(); enforceCurrentModalState(); }, 260);
-  window.setTimeout(() => { cleanDuplicateModalTabs(); enforceCurrentModalState(); }, 620);
+  window.setTimeout(() => { cleanDuplicateModalTabs(); enhanceUsesPanel(); enforceCurrentModalState(); }, 80);
+  window.setTimeout(() => { cleanDuplicateModalTabs(); enhanceUsesPanel(); enforceCurrentModalState(); }, 260);
+  window.setTimeout(() => { cleanDuplicateModalTabs(); enhanceUsesPanel(); enforceCurrentModalState(); }, 620);
 }
 
 function fitCards() {
@@ -96,6 +101,18 @@ function cleanDuplicateModalTabs() {
     if (seenPanels.has(id)) panel.remove();
     else seenPanels.add(id);
   });
+}
+
+function enhanceUsesPanel() {
+  const modal = document.querySelector("#modalContent");
+  const title = modal?.querySelector(".detail-header h2")?.textContent || "";
+  const equation = richUsesByTitle.get(normalizeTitle(title));
+  const panel = modal?.querySelector(".detail-panel.uses-view");
+  if (!equation || !panel || panel.dataset.richUsesFor === equation.id) return;
+  if (!Array.isArray(equation.useDetails) || !equation.useDetails.length) return;
+
+  panel.innerHTML = `<div class="use-examples">${equation.useDetails.map(item => `<article class="use-example"><h3>${escapeHtml(item.title)}</h3><p>${escapeHtml(item.text)}</p></article>`).join("")}</div>`;
+  panel.dataset.richUsesFor = equation.id;
 }
 
 function enforceCurrentModalState() {
@@ -174,4 +191,12 @@ function applyMasonrySpans(grid) {
     const span = Math.max(minSpan, Math.ceil((height + rowGap) / (rowHeight + rowGap)));
     card.style.gridRowEnd = `span ${span}`;
   });
+}
+
+function normalizeTitle(value) {
+  return String(value ?? "").normalize("NFKD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
+}
+
+function escapeHtml(value) {
+  return String(value).replace(/[&<>'"]/g, char => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", "'": "&#39;", '"': "&quot;" }[char]));
 }
