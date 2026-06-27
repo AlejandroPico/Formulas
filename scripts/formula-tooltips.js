@@ -1,7 +1,7 @@
 const STRUCTURE_TOOLTIPS = {
   msqrt: ["√", "Raíz cuadrada: operación inversa de elevar al cuadrado."],
-  mroot: ["ⁿ√", "Raíz de índice n: generaliza la raíz cuadrada a cualquier índice."],
-  msup: ["exponente", "Potencia: indica una operación de escala, área, energía o multiplicación repetida según el contexto."],
+  mroot: ["ⁿ√", "Raíz de índice n: generaliza la raíz cuadrada a cualquier otro índice."],
+  msup: ["exponente", "Potencia: indica escala, área, energía o multiplicación repetida según el contexto."],
   msub: ["subíndice", "Subíndice: distingue componentes, índices, puntos o familias de variables."],
   msubsup: ["subíndice/exponente", "Notación combinada con índice inferior y marca superior."],
   mfrac: ["fracción", "Cociente: expresa división, razón, proporción o normalización."],
@@ -23,10 +23,9 @@ const FALLBACK_SYMBOLS = new Map(Object.entries({
   "∇": "operador nabla: gradiente, divergencia, rotacional o laplaciano según el uso.",
   "∑": "sumatorio: suma de una familia de términos.",
   "∫": "integral: acumulación continua de una magnitud.",
-  "∏": "productorio: multiplicación de una familia de factores.",
   "∞": "infinito: límite no acotado o extensión indefinida.",
   "π": "pi: constante geométrica de la circunferencia.",
-  "e": "número de Euler o variable, según el contexto de la fórmula.",
+  "e": "número de Euler o variable, según el contexto.",
   "i": "unidad imaginaria: cumple i² = -1.",
   "ℏ": "constante de Planck reducida: h dividido por 2π.",
   "h": "constante de Planck, altura o variable auxiliar, según el contexto.",
@@ -67,11 +66,8 @@ const FALLBACK_SYMBOLS = new Map(Object.entries({
   "Ψ": "psi mayúscula: función de onda del sistema.",
   "Ω": "omega mayúscula: número de microestados o dominio.",
   "ω": "omega: frecuencia angular.",
-  "ε": "épsilon: permitividad, energía pequeña o término de error, según el contexto.",
-  "ϵ": "épsilon: permitividad, energía pequeña o término de error, según el contexto."
+  "ε": "épsilon: permitividad, energía pequeña o término de error, según el contexto."
 }));
-
-let hideTimer = null;
 
 export function mountFormulaTooltips(formulaBox, equation) {
   if (!formulaBox || formulaBox.closest("[hidden]")) return;
@@ -84,9 +80,10 @@ export function mountFormulaTooltips(formulaBox, equation) {
   layer.innerHTML = "";
 
   const formulaRect = formulaBox.getBoundingClientRect();
-  const symbolZones = buildSymbolZones(formulaBox, formulaRect, glossary);
-  const structureZones = buildStructureZones(formulaBox, formulaRect);
-  const zones = [...structureZones, ...symbolZones];
+  const zones = [
+    ...buildStructureZones(formulaBox, formulaRect),
+    ...buildSymbolZones(formulaBox, formulaRect, glossary)
+  ];
 
   zones.forEach(zone => layer.appendChild(createZone(zone)));
   formulaBox.dataset.tooltipZones = String(zones.length);
@@ -100,13 +97,7 @@ function buildSymbolZones(formulaBox, formulaRect, glossary) {
     if (!symbol || !description) return [];
     const rect = node.getBoundingClientRect();
     if (!isUsableRect(rect)) return [];
-    return [{
-      kind: "symbol",
-      symbol,
-      description,
-      rect: toLocalRect(rect, formulaRect, formulaBox),
-      order: index
-    }];
+    return [{ kind: "symbol", symbol, description, rect: toLocalRect(rect, formulaRect, formulaBox), order: index }];
   });
 }
 
@@ -117,13 +108,7 @@ function buildStructureZones(formulaBox, formulaRect) {
     if (!symbol || !description) return [];
     const rect = node.getBoundingClientRect();
     if (!isUsableRect(rect)) return [];
-    return [{
-      kind: "structure",
-      symbol,
-      description,
-      rect: toLocalRect(rect, formulaRect, formulaBox, 4),
-      order: index
-    }];
+    return [{ kind: "structure", symbol, description, rect: toLocalRect(rect, formulaRect, formulaBox, 4), order: index }];
   });
 }
 
@@ -139,12 +124,18 @@ function createZone(zone) {
   button.dataset.description = zone.description;
   button.setAttribute("aria-label", `${zone.symbol}: ${zone.description}`);
 
-  button.addEventListener("pointerenter", event => showPopover(event, zone.symbol, zone.description));
-  button.addEventListener("pointermove", event => showPopover(event, zone.symbol, zone.description));
-  button.addEventListener("pointerleave", () => hidePopover());
+  const show = event => showPopover(event, zone.symbol, zone.description);
+  const hide = () => hidePopover();
+  button.addEventListener("pointerenter", show);
+  button.addEventListener("pointermove", show);
+  button.addEventListener("pointerleave", hide);
   button.addEventListener("focus", () => showPopoverAtElement(button, zone.symbol, zone.description));
-  button.addEventListener("blur", () => hidePopover());
-  button.addEventListener("click", event => showPopover(event, zone.symbol, zone.description));
+  button.addEventListener("blur", hide);
+  button.addEventListener("click", event => {
+    event.preventDefault();
+    event.stopPropagation();
+    hidePopover();
+  });
   return button;
 }
 
@@ -173,25 +164,16 @@ function buildGlossary(eq) {
 }
 
 function extractVariableKeys(rawKeys) {
-  const clean = String(rawKeys ?? "")
-    .replace(/\s+(?:y|e)\s+/gi, ",")
-    .replace(/[\/|]/g, ",");
-  return clean
-    .split(/[,;]+/)
-    .map(part => part.trim())
-    .filter(Boolean)
-    .flatMap(part => {
-      const direct = normalizeSymbolKey(part);
-      const singleSymbols = [...part].map(normalizeSymbolKey).filter(Boolean);
-      return [direct, ...singleSymbols];
-    })
-    .filter(Boolean);
+  const clean = String(rawKeys ?? "").replace(/\s+(?:y|e)\s+/gi, ",").replace(/[\/|]/g, ",");
+  return clean.split(/[,;]+/).map(part => part.trim()).filter(Boolean).flatMap(part => {
+    const direct = normalizeSymbolKey(part);
+    const singleSymbols = [...part].map(normalizeSymbolKey).filter(Boolean);
+    return [direct, ...singleSymbols];
+  }).filter(Boolean);
 }
 
 function extractMathSymbol(node) {
-  const codes = [...node.querySelectorAll(":scope use[data-c]")]
-    .map(use => use.getAttribute("data-c"))
-    .filter(Boolean);
+  const codes = [...node.querySelectorAll(":scope use[data-c]")].map(use => use.getAttribute("data-c")).filter(Boolean);
   if (codes.length) return codes.map(code => codePointToSymbol(code)).join("").normalize("NFKC");
   return (node.textContent || "").normalize("NFKC").trim();
 }
@@ -238,7 +220,6 @@ function showPopover(event, symbol, description) {
   popover.innerHTML = `<strong>${escapeHtml(symbol)}</strong><span>${escapeHtml(description)}</span>`;
   popover.classList.add("visible");
   positionPopover(popover, event.clientX, event.clientY);
-  scheduleAutoHide();
 }
 
 function showPopoverAtElement(element, symbol, description) {
@@ -247,7 +228,6 @@ function showPopoverAtElement(element, symbol, description) {
   popover.innerHTML = `<strong>${escapeHtml(symbol)}</strong><span>${escapeHtml(description)}</span>`;
   popover.classList.add("visible");
   positionPopover(popover, rect.right, rect.top + rect.height / 2);
-  scheduleAutoHide();
 }
 
 function positionPopover(popover, clientX, clientY) {
@@ -293,13 +273,7 @@ function getPopoverHost() {
   return document.querySelector("#equationModal[open]") || document.body;
 }
 
-function scheduleAutoHide() {
-  window.clearTimeout(hideTimer);
-  hideTimer = window.setTimeout(hidePopover, 3600);
-}
-
 function hidePopover() {
-  window.clearTimeout(hideTimer);
   document.querySelectorAll(".formula-symbol-popover").forEach(popover => popover.classList.remove("visible"));
 }
 
