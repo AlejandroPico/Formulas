@@ -15,3 +15,12 @@
 .equation-card.formula-scaled .formula-stack {
   gap: calc(12px * var(--formula-scale, 1));
 }
+
+.detail-panel[hidden],
+.detail-panel:not(.active) {
+  display: none !important;
+}
+
+.detail-panel.active {
+  display: block;
+}
