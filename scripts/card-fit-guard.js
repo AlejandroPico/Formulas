@@ -8,6 +8,10 @@ const grid = document.querySelector(GRID_SELECTOR);
 if (grid) {
   observer.observe(grid, { childList: true, subtree: true });
   window.addEventListener("resize", scheduleCardFit);
+  document.addEventListener("click", event => {
+    if (event.target.closest?.(".equation-card, .detail-tabs button")) scheduleModalCleanup();
+  });
+  window.setInterval(cleanDuplicateModalTabs, 1200);
   scheduleCardFit();
 }
 
@@ -16,6 +20,12 @@ function scheduleCardFit() {
   window.setTimeout(fitCards, 360);
   window.setTimeout(fitCards, 800);
   window.setTimeout(fitCards, 1400);
+}
+
+function scheduleModalCleanup() {
+  window.setTimeout(cleanDuplicateModalTabs, 80);
+  window.setTimeout(cleanDuplicateModalTabs, 260);
+  window.setTimeout(cleanDuplicateModalTabs, 620);
 }
 
 function fitCards() {
@@ -57,6 +67,27 @@ function finalizeFormulaFit(grid) {
   });
 
   applyMasonrySpans(grid);
+}
+
+function cleanDuplicateModalTabs() {
+  const modal = document.querySelector("#modalContent");
+  const tabs = modal?.querySelector(".detail-tabs");
+  const panels = modal?.querySelector(".detail-panels");
+  if (!tabs || !panels) return;
+
+  const seenButtons = new Set();
+  [...tabs.querySelectorAll("button")].forEach(button => {
+    const id = button.dataset.target || button.dataset.tab || button.textContent.trim();
+    if (seenButtons.has(id) && !button.dataset.target) button.remove();
+    else seenButtons.add(id);
+  });
+
+  const seenPanels = new Set();
+  [...panels.querySelectorAll(".detail-panel")].forEach(panel => {
+    const id = panel.dataset.panel || "";
+    if (seenPanels.has(id)) panel.remove();
+    else seenPanels.add(id);
+  });
 }
 
 function getFormulaOverflow(formulaBox) {
