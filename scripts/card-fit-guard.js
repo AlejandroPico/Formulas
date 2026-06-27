@@ -9,9 +9,17 @@ if (grid) {
   observer.observe(grid, { childList: true, subtree: true });
   window.addEventListener("resize", scheduleCardFit);
   document.addEventListener("click", event => {
-    if (event.target.closest?.(".equation-card, .detail-tabs button")) scheduleModalCleanup();
+    const tabButton = event.target.closest?.(".detail-tabs button");
+    if (tabButton) {
+      enforceModalTab(tabButton);
+      scheduleModalCleanup();
+    }
+    if (event.target.closest?.(".equation-card")) scheduleModalCleanup();
   });
-  window.setInterval(cleanDuplicateModalTabs, 1200);
+  window.setInterval(() => {
+    cleanDuplicateModalTabs();
+    enforceCurrentModalState();
+  }, 1200);
   scheduleCardFit();
 }
 
@@ -23,9 +31,9 @@ function scheduleCardFit() {
 }
 
 function scheduleModalCleanup() {
-  window.setTimeout(cleanDuplicateModalTabs, 80);
-  window.setTimeout(cleanDuplicateModalTabs, 260);
-  window.setTimeout(cleanDuplicateModalTabs, 620);
+  window.setTimeout(() => { cleanDuplicateModalTabs(); enforceCurrentModalState(); }, 80);
+  window.setTimeout(() => { cleanDuplicateModalTabs(); enforceCurrentModalState(); }, 260);
+  window.setTimeout(() => { cleanDuplicateModalTabs(); enforceCurrentModalState(); }, 620);
 }
 
 function fitCards() {
@@ -77,8 +85,8 @@ function cleanDuplicateModalTabs() {
 
   const seenButtons = new Set();
   [...tabs.querySelectorAll("button")].forEach(button => {
-    const id = button.dataset.target || button.dataset.tab || button.textContent.trim();
-    if (seenButtons.has(id) && !button.dataset.target) button.remove();
+    const id = getTabId(button);
+    if (seenButtons.has(id)) button.remove();
     else seenButtons.add(id);
   });
 
@@ -88,6 +96,39 @@ function cleanDuplicateModalTabs() {
     if (seenPanels.has(id)) panel.remove();
     else seenPanels.add(id);
   });
+}
+
+function enforceCurrentModalState() {
+  const modal = document.querySelector("#modalContent");
+  const tabs = modal?.querySelector(".detail-tabs");
+  if (!tabs) return;
+  const active = tabs.querySelector("button.active") || tabs.querySelector("button[data-target='formula']") || tabs.querySelector("button");
+  if (active) enforceModalTab(active);
+}
+
+function enforceModalTab(button) {
+  const modal = document.querySelector("#modalContent");
+  const tabs = modal?.querySelector(".detail-tabs");
+  const panels = modal?.querySelector(".detail-panels");
+  if (!tabs || !panels || !button) return;
+  const target = getTabId(button);
+  if (!target) return;
+
+  [...tabs.querySelectorAll("button")].forEach(item => {
+    const active = getTabId(item) === target;
+    item.classList.toggle("active", active);
+    item.setAttribute("aria-selected", String(active));
+  });
+
+  [...panels.querySelectorAll(".detail-panel")].forEach(panel => {
+    const active = panel.dataset.panel === target;
+    panel.classList.toggle("active", active);
+    panel.hidden = !active;
+  });
+}
+
+function getTabId(button) {
+  return button?.dataset?.target || button?.dataset?.tab || "";
 }
 
 function getFormulaOverflow(formulaBox) {
