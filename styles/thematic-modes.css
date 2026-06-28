@@ -66,10 +66,64 @@ body[data-theme="notebook"] {
   color-scheme: light;
 }
 
+body[data-theme="blueprint"] {
+  --bg: #07182f;
+  --bg-soft: #0d2444;
+  --panel: rgba(9, 31, 61, .9);
+  --panel-solid: #0b2342;
+  --card: #0b2f5f;
+  --card-strong: #0b2f5f;
+  --text: #dff7ff;
+  --muted: #9bd3ed;
+  --line: rgba(155, 211, 237, .24);
+  --accent: #72dcff;
+  --accent-2: #8be6d6;
+  --accent-3: #f7f2a5;
+  --shadow: 0 28px 84px rgba(0, 7, 20, .55);
+  color-scheme: dark;
+}
+
+body[data-theme="parchment"] {
+  --bg: #eadbbf;
+  --bg-soft: #d8c29a;
+  --panel: rgba(250, 238, 211, .92);
+  --panel-solid: #faeed3;
+  --card: #f4e2b8;
+  --card-strong: #f4e2b8;
+  --text: #382715;
+  --muted: #7b6040;
+  --line: rgba(87, 56, 25, .18);
+  --accent: #8c4a20;
+  --accent-2: #5b6f3a;
+  --accent-3: #9d6b2e;
+  --shadow: 0 24px 58px rgba(84, 56, 24, .25);
+  color-scheme: light;
+}
+
+body[data-theme="terminal"] {
+  --bg: #030806;
+  --bg-soft: #07120d;
+  --panel: rgba(4, 16, 11, .92);
+  --panel-solid: #06120d;
+  --card: #06130d;
+  --card-strong: #06130d;
+  --text: #9cffb2;
+  --muted: #64bd78;
+  --line: rgba(126, 255, 151, .18);
+  --accent: #8cffa4;
+  --accent-2: #5ee5ff;
+  --accent-3: #d7ff70;
+  --shadow: 0 28px 84px rgba(0, 0, 0, .62);
+  color-scheme: dark;
+}
+
 body[data-theme="chalkboard"] .orbital-bg,
 body[data-theme="whiteboard"] .orbital-bg,
 body[data-theme="postit"] .orbital-bg,
-body[data-theme="notebook"] .orbital-bg {
+body[data-theme="notebook"] .orbital-bg,
+body[data-theme="blueprint"] .orbital-bg,
+body[data-theme="parchment"] .orbital-bg,
+body[data-theme="terminal"] .orbital-bg {
   opacity: .32;
 }
 
@@ -101,9 +155,7 @@ body[data-theme="chalkboard"] .floating-button svg * {
   gap: 4px;
 }
 
-.theme-mode-menu[hidden] {
-  display: none !important;
-}
+.theme-mode-menu[hidden] { display: none !important; }
 
 .theme-mode-menu button {
   width: 100%;
@@ -129,25 +181,20 @@ body[data-theme="chalkboard"] .theme-mode-menu {
   border-color: rgba(80, 49, 20, .32);
 }
 
-body[data-theme="chalkboard"] .theme-mode-menu button {
-  color: #2a190c;
-}
-
+body[data-theme="chalkboard"] .theme-mode-menu button { color: #2a190c; }
 body[data-theme="chalkboard"] .theme-mode-menu button:hover,
-body[data-theme="chalkboard"] .theme-mode-menu button.active {
-  background: rgba(86, 57, 27, .13);
-}
+body[data-theme="chalkboard"] .theme-mode-menu button.active { background: rgba(86, 57, 27, .13); }
 
 body[data-theme="chalkboard"] .equation-card {
   position: relative;
-  color: #f8f1d8;
+  color: var(--board-text, #f8f1d8);
   border: 9px solid #9d6d3d !important;
   border-radius: 8px;
   background:
     radial-gradient(circle at 25% 20%, rgba(255,255,255,.12), transparent 14%),
     radial-gradient(circle at 78% 72%, rgba(255,255,255,.08), transparent 18%),
     linear-gradient(135deg, rgba(255,255,255,.07), transparent 28%),
-    var(--board-surface, #12362e) !important;
+    var(--board-surface, #153c31) !important;
   box-shadow:
     inset 0 0 22px rgba(0,0,0,.28),
     inset 0 0 0 1px rgba(255,255,255,.06),
@@ -179,36 +226,22 @@ body[data-theme="chalkboard"] .equation-card::after {
   opacity: .8;
 }
 
-body[data-theme="chalkboard"] .equation-card[data-board="green"] { --board-surface: #153c31; }
-body[data-theme="chalkboard"] .equation-card[data-board="blue"] { --board-surface: #102f46; }
-body[data-theme="chalkboard"] .equation-card[data-board="black"] { --board-surface: #242527; }
-
 body[data-theme="chalkboard"] .equation-card h3,
 body[data-theme="chalkboard"] .equation-card .formula-box {
-  color: #fbf4df;
+  color: var(--board-text, #fbf4df);
   text-shadow: 0 0 1px rgba(255,255,255,.75), 0 0 12px rgba(255,255,255,.08);
   font-family: "Segoe Print", "Bradley Hand", "Comic Sans MS", cursive;
 }
 
-body[data-theme="chalkboard"] .equation-card .formula-box mjx-container {
-  color: #fbf4df !important;
-}
-
-body[data-theme="chalkboard"] .equation-card:hover {
-  transform: translateY(-3px) rotate(var(--card-tilt, 0deg));
-  border-color: #b78046 !important;
-}
+body[data-theme="chalkboard"] .equation-card .formula-box mjx-container { color: var(--board-text, #fbf4df) !important; }
+body[data-theme="chalkboard"] .equation-card:hover { transform: translateY(-3px) rotate(var(--card-tilt, 0deg)); border-color: #b78046 !important; }
 
 body[data-theme="whiteboard"] .equation-card {
   color: #1e2529;
   border: 7px solid #cbd2d6 !important;
   border-radius: 10px;
-  background:
-    linear-gradient(180deg, rgba(255,255,255,.98), rgba(245,248,249,.95)) !important;
-  box-shadow:
-    inset 0 0 0 1px rgba(255,255,255,.9),
-    inset 0 -10px 18px rgba(44, 59, 66, .035),
-    0 18px 40px rgba(43, 54, 61, .13);
+  background: linear-gradient(180deg, rgba(255,255,255,.98), rgba(245,248,249,.95)) !important;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.9), inset 0 -10px 18px rgba(44, 59, 66, .035), 0 18px 40px rgba(43, 54, 61, .13);
   backdrop-filter: none;
 }
 
@@ -218,29 +251,15 @@ body[data-theme="whiteboard"] .equation-card .formula-box {
   color: #1d252a;
 }
 
-body[data-theme="whiteboard"] .equation-card .formula-box mjx-container {
-  color: var(--marker-color, #1d252a) !important;
-}
-
-body[data-theme="whiteboard"] .equation-card[data-marker="blue"] { --marker-color: #1f63c7; }
-body[data-theme="whiteboard"] .equation-card[data-marker="red"] { --marker-color: #c4314b; }
-body[data-theme="whiteboard"] .equation-card[data-marker="green"] { --marker-color: #14885f; }
-body[data-theme="whiteboard"] .equation-card[data-marker="teal"] { --marker-color: #087c87; }
-body[data-theme="whiteboard"] .equation-card[data-marker="violet"] { --marker-color: #7650b4; }
-body[data-theme="whiteboard"] .equation-card[data-marker="orange"] { --marker-color: #b35b14; }
-body[data-theme="whiteboard"] .equation-card[data-marker="black"] { --marker-color: #1d252a; }
+body[data-theme="whiteboard"] .equation-card .formula-box mjx-container { color: var(--marker-color, #1d252a) !important; }
 
 body[data-theme="postit"] .equation-card {
   position: relative;
   color: var(--note-text, #2d2a1f);
   border: 0 !important;
   border-radius: 4px 3px 5px 3px;
-  background:
-    linear-gradient(180deg, rgba(255,255,255,.26), transparent 18%),
-    var(--note-surface, #fff4a9) !important;
-  box-shadow:
-    0 18px 28px rgba(80, 57, 21, .16),
-    0 2px 0 rgba(255,255,255,.42) inset;
+  background: linear-gradient(180deg, rgba(255,255,255,.26), transparent 18%), var(--note-surface, #fff2a4) !important;
+  box-shadow: 0 18px 28px rgba(80, 57, 21, .16), 0 2px 0 rgba(255,255,255,.42) inset;
   transform: rotate(var(--card-tilt, -.35deg));
   backdrop-filter: none;
 }
@@ -262,34 +281,8 @@ body[data-theme="postit"] .equation-card .formula-box {
   font-family: "Segoe Print", "Bradley Hand", "Comic Sans MS", cursive;
 }
 
-body[data-theme="postit"] .equation-card .formula-box mjx-container {
-  color: var(--note-text, #2d2a1f) !important;
-}
-
-body[data-theme="postit"] .equation-card[data-note="yellow"] { --note-surface: #fff2a4; --note-text: #2d2a1f; }
-body[data-theme="postit"] .equation-card[data-note="coral"] { --note-surface: #ffd0c4; --note-text: #33221e; }
-body[data-theme="postit"] .equation-card[data-note="peach"] { --note-surface: #ffd8aa; --note-text: #342619; }
-body[data-theme="postit"] .equation-card[data-note="sand"] { --note-surface: #eadfbe; --note-text: #302b20; }
-body[data-theme="postit"] .equation-card[data-note="mint"] { --note-surface: #d6f5dc; --note-text: #1e2f24; }
-body[data-theme="postit"] .equation-card[data-note="sage"] { --note-surface: #cbd8bd; --note-text: #202b20; }
-body[data-theme="postit"] .equation-card[data-note="fog"] { --note-surface: #dfe6e8; --note-text: #243036; }
-body[data-theme="postit"] .equation-card[data-note="sky"] { --note-surface: #d3ecff; --note-text: #1f2e3d; }
-body[data-theme="postit"] .equation-card[data-note="blue"] { --note-surface: #b9dcff; --note-text: #1e2f45; }
-body[data-theme="postit"] .equation-card[data-note="navy"] { --note-surface: #294565; --note-text: #f7f1df; }
-body[data-theme="postit"] .equation-card[data-note="purple"] { --note-surface: #d5c7ff; --note-text: #2a2341; }
-body[data-theme="postit"] .equation-card[data-note="lavender"] { --note-surface: #e6ddff; --note-text: #2e2841; }
-body[data-theme="postit"] .equation-card[data-note="salmon"] { --note-surface: #ffc1b5; --note-text: #3a211d; }
-body[data-theme="postit"] .equation-card[data-note="clay"] { --note-surface: #d7a38f; --note-text: #321f18; }
-body[data-theme="postit"] .equation-card[data-note="chalk"] { --note-surface: #f4f1df; --note-text: #2e2c24; }
-body[data-theme="postit"] .equation-card[data-note="rose"] { --note-surface: #ffd7ec; --note-text: #392231; }
-body[data-theme="postit"] .equation-card[data-note="lemon"] { --note-surface: #fff7bf; --note-text: #302b1c; }
-body[data-theme="postit"] .equation-card[data-note="aqua"] { --note-surface: #c6f3f0; --note-text: #1e3332; }
-body[data-theme="postit"] .equation-card[data-note="olive"] { --note-surface: #dce0a9; --note-text: #2c2e1c; }
-body[data-theme="postit"] .equation-card[data-note="plum"] { --note-surface: #5b486d; --note-text: #fff1df; }
-
-body[data-theme="postit"] .equation-card:hover {
-  transform: translateY(-2px) rotate(var(--card-tilt, -.35deg));
-}
+body[data-theme="postit"] .equation-card .formula-box mjx-container { color: var(--note-text, #2d2a1f) !important; }
+body[data-theme="postit"] .equation-card:hover { transform: translateY(-2px) rotate(var(--card-tilt, -.35deg)); }
 
 body[data-theme="notebook"] .equation-card {
   color: #242b32;
@@ -307,33 +300,76 @@ body[data-theme="notebook"] .equation-card {
 }
 
 body[data-theme="notebook"] .equation-card h3,
-body[data-theme="notebook"] .equation-card .formula-box {
-  font-family: "Trebuchet MS", "Segoe Print", system-ui, sans-serif;
+body[data-theme="notebook"] .equation-card .formula-box { font-family: "Trebuchet MS", "Segoe Print", system-ui, sans-serif; }
+body[data-theme="notebook"] .equation-card .formula-box mjx-container { color: #22334a !important; }
+
+body[data-theme="blueprint"] .equation-card {
+  color: #dff7ff;
+  border: 1px solid rgba(130, 225, 255, .35) !important;
+  border-radius: 4px;
+  background:
+    linear-gradient(rgba(126, 221, 255, .13) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(126, 221, 255, .13) 1px, transparent 1px),
+    linear-gradient(rgba(126, 221, 255, .07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(126, 221, 255, .07) 1px, transparent 1px),
+    #0b2f5f !important;
+  background-size: 32px 32px, 32px 32px, 8px 8px, 8px 8px, 100% 100%;
+  box-shadow: 0 18px 42px rgba(0, 12, 30, .35), inset 0 0 28px rgba(114, 220, 255, .05);
+  backdrop-filter: none;
 }
 
-body[data-theme="notebook"] .equation-card .formula-box mjx-container {
-  color: #22334a !important;
+body[data-theme="blueprint"] .equation-card h3,
+body[data-theme="blueprint"] .equation-card .formula-box { color: #dff7ff; font-family: "Trebuchet MS", system-ui, sans-serif; }
+body[data-theme="blueprint"] .equation-card .formula-box mjx-container { color: #dff7ff !important; }
+
+body[data-theme="parchment"] .equation-card {
+  color: #382715;
+  border: 1px solid rgba(102, 67, 31, .22) !important;
+  border-radius: 9px;
+  background:
+    radial-gradient(circle at 18% 12%, rgba(120,80,35,.12), transparent 18%),
+    radial-gradient(circle at 80% 78%, rgba(120,80,35,.10), transparent 20%),
+    linear-gradient(135deg, rgba(255,255,255,.24), transparent 38%),
+    #f4e2b8 !important;
+  box-shadow: 0 18px 42px rgba(84, 56, 24, .2), inset 0 0 20px rgba(116, 76, 34, .08);
+  backdrop-filter: none;
 }
+
+body[data-theme="parchment"] .equation-card h3,
+body[data-theme="parchment"] .equation-card .formula-box { font-family: Georgia, "Times New Roman", serif; color: #382715; }
+body[data-theme="parchment"] .equation-card .formula-box mjx-container { color: #382715 !important; }
+
+body[data-theme="terminal"] .equation-card {
+  color: #9cffb2;
+  border: 1px solid rgba(126, 255, 151, .22) !important;
+  border-radius: 4px;
+  background:
+    linear-gradient(rgba(126,255,151,.045) 50%, transparent 50%),
+    radial-gradient(circle at 50% 0, rgba(126,255,151,.08), transparent 44%),
+    #06130d !important;
+  background-size: 100% 4px, 100% 100%, 100% 100%;
+  box-shadow: 0 18px 42px rgba(0,0,0,.48), inset 0 0 20px rgba(126,255,151,.04);
+  backdrop-filter: none;
+}
+
+body[data-theme="terminal"] .equation-card h3,
+body[data-theme="terminal"] .equation-card .formula-box { font-family: Consolas, "Courier New", monospace; color: #9cffb2; text-shadow: 0 0 10px rgba(126,255,151,.18); }
+body[data-theme="terminal"] .equation-card .formula-box mjx-container { color: #9cffb2 !important; }
 
 body[data-theme="chalkboard"] .equation-modal {
-  background: #15362f;
+  background: var(--active-board-surface, #153c31);
   border: 10px solid #9d6d3d;
-  color: #f8f1d8;
+  color: var(--active-board-text, #f8f1d8);
   box-shadow: 0 30px 80px rgba(55, 36, 20, .42), inset 0 0 26px rgba(0,0,0,.28);
 }
 
 body[data-theme="chalkboard"] .detail-tabs button,
 body[data-theme="chalkboard"] .detail-header h2,
-body[data-theme="chalkboard"] .detail-panel {
-  color: #f8f1d8;
-}
-
+body[data-theme="chalkboard"] .detail-panel { color: var(--active-board-text, #f8f1d8); }
 body[data-theme="chalkboard"] .detail-tabs button:not(.active),
 body[data-theme="chalkboard"] .detail-panel.text-view p,
 body[data-theme="chalkboard"] .use-example p,
-body[data-theme="chalkboard"] .metadata-view > div span {
-  color: rgba(248, 241, 216, .72);
-}
+body[data-theme="chalkboard"] .metadata-view > div span { color: color-mix(in srgb, var(--active-board-text, #f8f1d8) 72%, transparent); }
 
 body[data-theme="whiteboard"] .equation-modal {
   background: #fbfcfc;
@@ -341,12 +377,23 @@ body[data-theme="whiteboard"] .equation-modal {
   color: #1f2528;
 }
 
+body[data-theme="whiteboard"] .modal-formula mjx-container { color: var(--active-marker-color, #1f63c7) !important; }
+
 body[data-theme="postit"] .equation-modal {
-  background: #fff6bd;
-  color: #2d2a1f;
+  background: var(--active-note-surface, #fff2a4);
+  color: var(--active-note-text, #2d2a1f);
   border: 0;
   border-radius: 6px;
 }
+
+body[data-theme="postit"] .detail-tabs button,
+body[data-theme="postit"] .detail-header h2,
+body[data-theme="postit"] .detail-panel,
+body[data-theme="postit"] .modal-formula mjx-container { color: var(--active-note-text, #2d2a1f) !important; }
+body[data-theme="postit"] .detail-tabs button:not(.active),
+body[data-theme="postit"] .detail-panel.text-view p,
+body[data-theme="postit"] .use-example p,
+body[data-theme="postit"] .metadata-view > div span { color: color-mix(in srgb, var(--active-note-text, #2d2a1f) 68%, transparent); }
 
 body[data-theme="notebook"] .equation-modal {
   background:
@@ -357,3 +404,35 @@ body[data-theme="notebook"] .equation-modal {
   color: #242b32;
   border: 1px solid rgba(38, 85, 143, .18);
 }
+
+body[data-theme="blueprint"] .equation-modal {
+  background:
+    linear-gradient(rgba(126, 221, 255, .12) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(126, 221, 255, .12) 1px, transparent 1px),
+    #0b2f5f;
+  background-size: 32px 32px, 32px 32px, 100% 100%;
+  border: 1px solid rgba(130, 225, 255, .35);
+  color: #dff7ff;
+}
+
+body[data-theme="blueprint"] .detail-tabs button,
+body[data-theme="blueprint"] .detail-header h2,
+body[data-theme="blueprint"] .detail-panel,
+body[data-theme="blueprint"] .modal-formula mjx-container { color: #dff7ff !important; }
+
+body[data-theme="parchment"] .equation-modal {
+  background: #f4e2b8;
+  color: #382715;
+  border: 1px solid rgba(102, 67, 31, .22);
+}
+
+body[data-theme="terminal"] .equation-modal {
+  background: #06130d;
+  color: #9cffb2;
+  border: 1px solid rgba(126, 255, 151, .22);
+}
+
+body[data-theme="terminal"] .detail-tabs button,
+body[data-theme="terminal"] .detail-header h2,
+body[data-theme="terminal"] .detail-panel,
+body[data-theme="terminal"] .modal-formula mjx-container { color: #9cffb2 !important; }
