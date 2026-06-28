@@ -66,6 +66,17 @@
   </div>
 
   <aside id="filterPanel" class="filter-popover" aria-label="Filtros del atlas" hidden>
+    <div class="filter-summary" aria-live="polite">
+      <span>Fórmulas visibles</span>
+      <strong id="visibleCount">0 / 0</strong>
+    </div>
+    <label>
+      <span>Visualización</span>
+      <select id="formulaDisplaySelect" aria-label="Modo de visualización de fórmulas">
+        <option value="symbolic" selected>Fórmula simbólica</option>
+        <option value="explained">Fórmula explicada</option>
+      </select>
+    </label>
     <label>
       <span>Orden</span>
       <select id="sortSelect" aria-label="Ordenar ecuaciones">
@@ -107,6 +118,5 @@
   <script type="module" src="scripts/thematic-card-variants.js"></script>
   <script type="module" src="scripts/modal-enhancements.js"></script>
   <script type="module" src="scripts/formula-tooltip-boot.js"></script>
-  <script type="module" src="scripts/formula-plugins.js"></script>
 </body>
 </html>
