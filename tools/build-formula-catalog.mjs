@@ -29,7 +29,7 @@ for (const name of await fs.readdir(FORMULAS_DIR)) {
   const previousEntry = previousById.get(meta.id || name) || {};
   const formulaPath = path.join(folderPath, "formula.tex");
   const formula = meta.formula || previousEntry.formula || await readFormula(formulaPath);
-  const formulaText = meta.formulaText || meta.formula_text || previousEntry.formulaText || [];
+  const formulaText = normalizeFormulaTextList(meta.formulaText || meta.formula_text || previousEntry.formulaText || []);
   const sections = await discoverSections(folderPath);
   const summary = meta.summary || previousEntry.summary || await firstParagraph(path.join(folderPath, "significado.md"));
 
@@ -87,6 +87,21 @@ async function firstParagraph(filePath) {
     .map(block => block.trim())
     .find(block => block && !block.startsWith("#"))
     ?.replace(/\s+/g, " ") || "";
+}
+
+function normalizeFormulaTextList(value) {
+  const list = Array.isArray(value) ? value : value ? [value] : [];
+  return list.map(item => String(item)
+    .replace(/\bes igual a\b/gi, "=")
+    .replace(/\bpor\b/gi, "·")
+    .replace(/\bdividida por\b/gi, "/")
+    .replace(/\bdividido por\b/gi, "/")
+    .replace(/\bmás\b/gi, "+")
+    .replace(/\bmenos\b/gi, "−")
+    .replace(/\s*([=+−±/·])\s*/g, " $1 ")
+    .replace(/\s+/g, " ")
+    .trim()
+  ).filter(Boolean);
 }
 
 async function readJson(filePath, fallback) {
