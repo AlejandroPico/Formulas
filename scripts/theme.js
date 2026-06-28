@@ -2,7 +2,10 @@ const MODES = [
   { id: "auto", label: "◐ Auto" },
   { id: "day", label: "☀ Día" },
   { id: "afternoon", label: "◒ Tarde" },
-  { id: "night", label: "☾ Noche" }
+  { id: "night", label: "☾ Noche" },
+  { id: "chalkboard", label: "▣ Pizarras" },
+  { id: "whiteboard", label: "▭ Pizarra" },
+  { id: "postit", label: "◨ Post-it" }
 ];
 
 let currentIndex = 0;
@@ -22,12 +25,16 @@ export function initTheme(button) {
 
 function applyMode(mode, button) {
   button.textContent = mode.label;
+  button.title = `Tema visual: ${mode.label.replace(/^[^\p{L}\p{N}]+/u, "")}`;
   document.body.dataset.theme = mode.id === "auto" ? resolveAutoTheme() : mode.id;
+  document.body.dataset.themeMode = mode.id;
+  document.dispatchEvent(new CustomEvent("formula-theme-change", { detail: { mode: mode.id, resolved: document.body.dataset.theme } }));
 
   if (timer) clearInterval(timer);
   if (mode.id === "auto") {
     timer = setInterval(() => {
       document.body.dataset.theme = resolveAutoTheme();
+      document.dispatchEvent(new CustomEvent("formula-theme-change", { detail: { mode: "auto", resolved: document.body.dataset.theme } }));
     }, 60_000);
   }
 }
