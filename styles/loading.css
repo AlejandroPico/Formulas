@@ -1,0 +1,97 @@
+.loading-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: grid;
+  place-items: center;
+  padding: 1.5rem;
+  background: color-mix(in oklab, var(--bg) 78%, transparent);
+  backdrop-filter: blur(14px);
+  transition: opacity 180ms ease, transform 180ms ease;
+}
+
+.loading-overlay[hidden] {
+  display: none;
+}
+
+.loading-overlay.leaving {
+  opacity: 0;
+  transform: scale(1.01);
+}
+
+.loading-card {
+  width: min(420px, 92vw);
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  padding: 1.4rem;
+  display: grid;
+  gap: 0.72rem;
+  text-align: center;
+  background: var(--panel-solid);
+  box-shadow: var(--shadow-lg);
+  color: var(--text);
+}
+
+.loading-card strong {
+  font-size: 1.12rem;
+}
+
+.loading-card span {
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.loading-orbit {
+  width: 54px;
+  height: 54px;
+  margin: 0 auto 0.25rem;
+  border-radius: 50%;
+  border: 2px solid color-mix(in oklab, var(--accent) 28%, transparent);
+  border-top-color: var(--accent);
+  animation: formula-loading-spin 900ms linear infinite;
+}
+
+.loading-progress {
+  height: 8px;
+  border-radius: 999px;
+  overflow: hidden;
+  background: color-mix(in oklab, var(--text) 10%, transparent);
+}
+
+.loading-progress i {
+  display: block;
+  height: 100%;
+  width: 0%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  transition: width 180ms ease;
+}
+
+.markdown-view {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.markdown-view h3,
+.markdown-view h4,
+.markdown-view p,
+.markdown-view ul {
+  margin: 0;
+}
+
+.markdown-view ul {
+  padding-left: 1.2rem;
+}
+
+.formula-plugin-error {
+  display: grid;
+  gap: 0.4rem;
+  padding: 1rem;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: color-mix(in oklab, var(--panel-solid) 88%, var(--danger) 12%);
+}
+
+@keyframes formula-loading-spin {
+  to { transform: rotate(360deg); }
+}
