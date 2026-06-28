@@ -25,6 +25,7 @@
   <link rel="stylesheet" href="styles/pythagorean-simulation.css" />
   <link rel="stylesheet" href="styles/formula-popover-position.css" />
   <link rel="stylesheet" href="styles/formula-plugins.css" />
+  <link rel="stylesheet" href="styles/loading.css" />
   <script>
     window.MathJax = {
       options: { enableMenu: false },
@@ -37,6 +38,15 @@
 <body data-theme="auto">
   <div class="orbital-bg" aria-hidden="true">
     <span></span><span></span><span></span>
+  </div>
+
+  <div id="loadingOverlay" class="loading-overlay" role="status" aria-live="polite">
+    <div class="loading-card">
+      <div class="loading-orbit" aria-hidden="true"></div>
+      <strong>Cargando datos</strong>
+      <span id="loadingStatus">Preparando atlas</span>
+      <div class="loading-progress" aria-hidden="true"><i id="loadingProgressBar"></i></div>
+    </div>
   </div>
 
   <div class="floating-controls" aria-label="Controles flotantes">
