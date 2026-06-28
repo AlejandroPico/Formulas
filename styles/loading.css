@@ -69,22 +69,24 @@
 
 .filter-summary {
   display: flex;
-  align-items: center;
+  align-items: baseline;
   justify-content: space-between;
   gap: 0.8rem;
-  padding: 0.66rem 0.72rem;
-  border: 1px solid var(--line);
-  border-radius: 16px;
-  background: color-mix(in oklab, var(--panel-solid) 88%, var(--accent) 12%);
+  padding: 0.1rem 0.05rem 0.42rem;
+  border-bottom: 1px solid color-mix(in oklab, var(--line) 70%, transparent);
 }
 
 .filter-summary span {
   color: var(--muted);
-  font-size: 0.82rem;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
 }
 
 .filter-summary strong {
   color: var(--text);
+  font-size: 0.86rem;
+  font-weight: 850;
   font-variant-numeric: tabular-nums;
 }
 
