@@ -2,7 +2,7 @@ import { loadFormulaFiles } from "./formula-file-loader.js";
 import { state, setState } from "./state.js";
 import { $, unique } from "./utils.js";
 import { filterEquations } from "./filtering.js";
-import { renderEquationGrid, openEquationModal, closeEquationModal } from "./render.js";
+import { renderEquationGrid, openEquationModal, closeEquationModal } from "./render-dynamic.js";
 import { initTheme } from "./theme.js";
 
 const LEGACY_DATA_MODULES = [
@@ -60,6 +60,8 @@ function initFilterControls() {
   fillSelect($("#fieldSelect"), fields, state.field);
   fillSelect($("#levelSelect"), levels, state.level);
   $("#sortSelect").value = "default";
+  const displaySelect = document.querySelector("#formulaDisplaySelect");
+  if (displaySelect) displaySelect.value = state.formulaDisplay;
 }
 
 function fillSelect(select, values, active) {
@@ -74,6 +76,7 @@ function bindEvents() {
   const searchInput = $("#searchInput");
   const searchClear = $("#searchClear");
   const searchControl = $("#searchControl");
+  const formulaDisplaySelect = document.querySelector("#formulaDisplaySelect");
 
   filterToggle.addEventListener("click", () => {
     const isOpen = !filterPanel.hidden;
@@ -131,6 +134,10 @@ function bindEvents() {
     setState({ level, cardLabelMode: level === "Todos" ? state.cardLabelMode : "level" });
     renderAll();
   });
+  formulaDisplaySelect?.addEventListener("change", event => {
+    setState({ formulaDisplay: event.target.value });
+    renderAll();
+  });
 
   $("#modalClose").addEventListener("click", closeEquationModal);
   $("#equationModal").addEventListener("click", event => {
@@ -148,6 +155,13 @@ function getSortLabelMode(sort) {
 function renderAll() {
   const visible = filterEquations(equations, state);
   renderEquationGrid(visible, openEquationModal, state);
+  updateVisibleCount(visible.length, equations.length);
+}
+
+function updateVisibleCount(visible, total) {
+  const target = document.querySelector("#visibleCount");
+  if (!target) return;
+  target.textContent = `${visible} / ${total}`;
 }
 
 function updateLoading({ message, value }) {
