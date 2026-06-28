@@ -3,10 +3,13 @@ const MODES = [
   { id: "day", label: "☀ Día" },
   { id: "afternoon", label: "◒ Tarde" },
   { id: "night", label: "☾ Noche" },
-  { id: "chalkboard", label: "▣ Pizarras" },
-  { id: "whiteboard", label: "▭ Pizarra" },
+  { id: "chalkboard", label: "▣ Colegio" },
+  { id: "whiteboard", label: "▭ Rotulador" },
   { id: "postit", label: "◨ Post-it" },
-  { id: "notebook", label: "▦ Cuaderno" }
+  { id: "notebook", label: "▦ Cuaderno" },
+  { id: "blueprint", label: "◇ Plano" },
+  { id: "parchment", label: "☷ Pergamino" },
+  { id: "terminal", label: "▤ Terminal" }
 ];
 
 let currentIndex = 0;
