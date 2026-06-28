@@ -1,26 +1,5 @@
 export const completedEquations = [
   {
-    id: "pythagorean-theorem",
-    name: "Teorema de Pitágoras",
-    author: "Tradición pitagórica",
-    year: -500,
-    field: "Geometría",
-    level: "ESO",
-    color: "#5d5af6",
-    formula: [
-      String.raw`a^2+b^2=c^2`,
-      String.raw`d=\sqrt{(x_2-x_1)^2+(y_2-y_1)^2}`,
-      String.raw`\lVert\mathbf{x}\rVert=\sqrt{x_1^2+x_2^2+\cdots+x_n^2}`
-    ],
-    summary: "Relaciona ortogonalidad, distancia euclídea y norma en espacios de cualquier dimensión.",
-    meaning: "La forma escolar a²+b²=c² es el caso bidimensional de una estructura métrica más general.",
-    variables: ["a y b: catetos", "c: hipotenusa", "d: distancia", "xᵢ: componentes de un vector"],
-    history: "Es uno de los resultados geométricos más antiguos y universales.",
-    uses: ["Geometría", "Topografía", "Gráficos", "Distancias", "Álgebra lineal"],
-    derivation: "Puede probarse comparando áreas de cuadrados construidos sobre los lados o mediante producto escalar.",
-    simulation: "complex"
-  },
-  {
     id: "quadratic-formula",
     name: "Fórmula cuadrática",
     author: "Álgebra clásica",
