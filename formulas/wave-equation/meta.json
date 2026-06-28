@@ -1,0 +1,10 @@
+{
+  "id": "wave-equation",
+  "name": "Ecuación de onda",
+  "author": "D'Alembert",
+  "year": 1747,
+  "field": "Física matemática",
+  "level": "Universidad",
+  "color": "#38bdf8",
+  "simulation": "wave-equation"
+}
