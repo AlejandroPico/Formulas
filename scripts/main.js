@@ -15,6 +15,12 @@ const LEGACY_DATA_MODULES = [
   { path: "../data/plugin-polished-equations.js", exportName: "pluginPolishedEquations" }
 ];
 
+const MIGRATED_FORMULA_IDS = new Set([
+  "fourier-transform",
+  "cauchy-riemann",
+  "euler-lagrange"
+]);
+
 let equations = [];
 let fields = ["Todas"];
 let levels = ["Todos"];
@@ -48,7 +54,9 @@ async function loadLegacyData() {
   for (const descriptor of LEGACY_DATA_MODULES) {
     try {
       const module = await import(descriptor.path);
-      if (Array.isArray(module[descriptor.exportName])) sets.push(module[descriptor.exportName]);
+      if (Array.isArray(module[descriptor.exportName])) {
+        sets.push(module[descriptor.exportName].filter(eq => !MIGRATED_FORMULA_IDS.has(eq.id)));
+      }
     } catch (error) {
       console.info(`Módulo legacy omitido: ${descriptor.path}`, error);
     }
