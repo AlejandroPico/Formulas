@@ -1,46 +1,5 @@
 export const equations = [
   {
-    id: "newton-gravitation",
-    name: "Ley de gravitación universal",
-    author: "Isaac Newton",
-    year: 1687,
-    field: "Mecánica clásica",
-    level: "Bachillerato",
-    color: "#77d9ff",
-    formula: [
-      String.raw`\mathbf{F}_{12}=-G\frac{m_1m_2}{r^2}\,\hat{\mathbf r}`,
-      String.raw`\Phi(r)=-\frac{GM}{r}`,
-      String.raw`\mathbf{g}=-\nabla\Phi`
-    ],
-    summary: "Describe la atracción gravitatoria entre dos masas y convirtió el cielo y la Tierra en un único problema mecánico.",
-    meaning: "La fuerza gravitatoria aumenta con el producto de las masas y disminuye con el cuadrado de la distancia. Su forma potencial permite expresar campos y órbitas con mayor generalidad.",
-    variables: ["F: fuerza gravitatoria", "G: constante de gravitación universal", "m₁ y m₂: masas de los cuerpos", "r: distancia entre los centros de masa", "Φ: potencial gravitatorio"],
-    history: "Publicada en los Principia, unificó la física terrestre de Galileo con la astronomía de Kepler.",
-    uses: ["Órbitas planetarias", "Satélites artificiales", "Mecánica celeste", "Estimación de masas astronómicas"],
-    derivation: "Puede leerse como una síntesis entre la aceleración centrípeta de una órbita y la tercera ley de Kepler, generalizada a cualquier par de masas.",
-    simulation: "gravity"
-  },
-  {
-    id: "euler-identity",
-    name: "Identidad de Euler",
-    author: "Leonhard Euler",
-    year: 1748,
-    field: "Matemáticas",
-    level: "Universidad inicial",
-    color: "#d6a8ff",
-    formula: [
-      String.raw`e^{ix}=\cos x+i\sin x`,
-      String.raw`e^{i\pi}+1=0`
-    ],
-    summary: "Relaciona cinco constantes fundamentales en una sola igualdad: e, i, π, 1 y 0.",
-    meaning: "La identidad famosa es el caso x=π de la fórmula completa de Euler, que conecta exponenciales complejas con seno y coseno.",
-    variables: ["e: base de los logaritmos naturales", "i: unidad imaginaria", "π: razón entre circunferencia y diámetro", "1 y 0: identidades multiplicativa y aditiva"],
-    history: "Condensa el desarrollo del análisis complejo y de las series infinitas del siglo XVIII.",
-    uses: ["Números complejos", "Señales", "Transformadas", "Física ondulatoria"],
-    derivation: "Sale al comparar las series de Taylor de eˣ, seno y coseno al sustituir x por iθ.",
-    simulation: "complex"
-  },
-  {
     id: "fourier-transform",
     name: "Transformada de Fourier",
     author: "Joseph Fourier",
