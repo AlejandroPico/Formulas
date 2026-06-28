@@ -92,10 +92,10 @@ async function firstParagraph(filePath) {
 function normalizeFormulaTextList(value) {
   const list = Array.isArray(value) ? value : value ? [value] : [];
   return list.map(item => String(item)
-    .replace(/\bes igual a\b/gi, "=")
-    .replace(/\bpor\b/gi, "·")
     .replace(/\bdividida por\b/gi, "/")
     .replace(/\bdividido por\b/gi, "/")
+    .replace(/\bes igual a\b/gi, "=")
+    .replace(/\bpor\b/gi, "·")
     .replace(/\bmás\b/gi, "+")
     .replace(/\bmenos\b/gi, "−")
     .replace(/\s*([=+−±/·])\s*/g, " $1 ")
