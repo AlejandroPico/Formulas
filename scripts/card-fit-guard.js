@@ -32,6 +32,7 @@ if (grid) {
   window.setInterval(() => {
     cleanDuplicateModalTabs();
     enhanceUsesPanel();
+    enhanceMetadataVariables();
     enforceCurrentModalState();
     fitActiveModalFormula();
   }, 1000);
@@ -46,9 +47,9 @@ function scheduleCardFit() {
 }
 
 function scheduleModalCleanup() {
-  window.setTimeout(() => { cleanDuplicateModalTabs(); enhanceUsesPanel(); enforceCurrentModalState(); fitActiveModalFormula(); }, 80);
-  window.setTimeout(() => { cleanDuplicateModalTabs(); enhanceUsesPanel(); enforceCurrentModalState(); fitActiveModalFormula(); }, 260);
-  window.setTimeout(() => { cleanDuplicateModalTabs(); enhanceUsesPanel(); enforceCurrentModalState(); fitActiveModalFormula(); }, 620);
+  window.setTimeout(() => { cleanDuplicateModalTabs(); enhanceUsesPanel(); enhanceMetadataVariables(); enforceCurrentModalState(); fitActiveModalFormula(); }, 80);
+  window.setTimeout(() => { cleanDuplicateModalTabs(); enhanceUsesPanel(); enhanceMetadataVariables(); enforceCurrentModalState(); fitActiveModalFormula(); }, 260);
+  window.setTimeout(() => { cleanDuplicateModalTabs(); enhanceUsesPanel(); enhanceMetadataVariables(); enforceCurrentModalState(); fitActiveModalFormula(); }, 620);
 }
 
 function scheduleModalFormulaFit() {
@@ -56,6 +57,7 @@ function scheduleModalFormulaFit() {
   window.setTimeout(fitActiveModalFormula, 240);
   window.setTimeout(fitActiveModalFormula, 540);
   window.setTimeout(fitActiveModalFormula, 980);
+  window.setTimeout(fitActiveModalFormula, 1500);
 }
 
 function fitCards() {
@@ -106,34 +108,29 @@ function fitActiveModalFormula() {
 
   const items = [...box.querySelectorAll("mjx-container")];
   if (!items.length) return;
-  items.forEach(item => item.style.transform = "");
   box.style.setProperty("--modal-formula-scale", "1");
 
-  const availableWidth = Math.max(1, box.clientWidth - 28);
-  const availableHeight = Math.max(1, box.clientHeight - 28);
-  const boxRect = box.getBoundingClientRect();
-  const contentRect = getFormulaContentRect(items, boxRect);
+  const availableWidth = Math.max(1, box.clientWidth - 22);
+  const availableHeight = Math.max(1, box.clientHeight - 22);
+  const contentRect = getFormulaContentRect(items);
   if (!contentRect.width || !contentRect.height) return;
 
   const scale = Math.min(1, availableWidth / contentRect.width, availableHeight / contentRect.height);
-  box.style.setProperty("--modal-formula-scale", String(Math.max(0.18, scale * 0.98).toFixed(3)));
+  box.style.setProperty("--modal-formula-scale", String(Math.max(0.035, scale * 0.965).toFixed(4)));
 }
 
-function getFormulaContentRect(items, boxRect) {
+function getFormulaContentRect(items) {
   const rects = items.map(item => item.getBoundingClientRect()).filter(rect => rect.width > 0 && rect.height > 0);
   if (!rects.length) return { width: 0, height: 0 };
   const left = Math.min(...rects.map(rect => rect.left));
   const right = Math.max(...rects.map(rect => rect.right));
   const top = Math.min(...rects.map(rect => rect.top));
   const bottom = Math.max(...rects.map(rect => rect.bottom));
-  return {
-    width: Math.min(right - left, boxRect.width * 4),
-    height: Math.min(bottom - top, boxRect.height * 4)
-  };
+  return { width: right - left, height: bottom - top };
 }
 
 function hideAllFormulaTooltips() {
-  document.querySelectorAll(".formula-symbol-popover, .symbol-tooltip").forEach(node => node.classList.remove("visible"));
+  document.querySelectorAll(".formula-symbol-popover, .symbol-tooltip").forEach(node => node.remove());
 }
 
 function cleanDuplicateModalTabs() {
@@ -167,6 +164,27 @@ function enhanceUsesPanel() {
 
   panel.innerHTML = `<div class="use-examples">${equation.useDetails.map(item => `<article class="use-example"><h3>${escapeHtml(item.title)}</h3><p>${escapeHtml(item.text)}</p></article>`).join("")}</div>`;
   panel.dataset.richUsesFor = equation.id;
+}
+
+function enhanceMetadataVariables() {
+  const panel = document.querySelector("#modalContent .metadata-view");
+  if (!panel || panel.dataset.variablesListed === "true") return;
+  const rows = [...panel.querySelectorAll(":scope > div")];
+  const variableRow = rows.find(row => normalizeTitle(row.querySelector("span")?.textContent || "") === "variables");
+  const value = variableRow?.querySelector("strong");
+  if (!variableRow || !value) return;
+  const variables = value.textContent.split(/\s+·\s+/).map(item => item.trim()).filter(Boolean);
+  if (variables.length < 2) return;
+
+  const list = document.createElement("ul");
+  list.className = "metadata-variable-list";
+  variables.forEach(variable => {
+    const item = document.createElement("li");
+    item.textContent = variable;
+    list.appendChild(item);
+  });
+  value.replaceChildren(list);
+  panel.dataset.variablesListed = "true";
 }
 
 function enforceCurrentModalState() {
