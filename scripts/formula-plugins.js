@@ -1,14 +1,14 @@
-import { mountBernoulliPlugin } from "./plugins/bernoulli-plugin.js";
-import { mountGravityPlugin } from "./plugins/gravity-plugin.js";
-import { mountEulerPlugin } from "./plugins/euler-plugin.js";
-import { mountQuadraticPlugin } from "./plugins/quadratic-plugin.js";
-import { mountSinesPlugin } from "./plugins/sines-plugin.js";
-import { mountCosinesPlugin } from "./plugins/cosines-plugin.js";
-import { mountPythagoreanPlugin } from "./plugins/pythagorean-plugin.js";
-import { mountContinuityPlugin } from "./plugins/continuity-plugin.js";
-import { mountNewtonSecondLawPlugin } from "./plugins/newton-second-law-plugin.js";
-import { mountTaylorPlugin } from "./plugins/taylor-plugin.js";
-import { mountWaveEquationPlugin } from "./plugins/wave-equation-plugin.js";
+import { mountBernoulliPlugin } from "../formulas/bernoulli-equation/simulacion/index.js";
+import { mountGravityPlugin } from "../formulas/gravitational-law/simulacion/index.js";
+import { mountEulerPlugin } from "../formulas/euler-identity/simulacion/index.js";
+import { mountQuadraticPlugin } from "../formulas/quadratic-formula/simulacion/index.js";
+import { mountSinesPlugin } from "../formulas/law-of-sines/simulacion/index.js";
+import { mountCosinesPlugin } from "../formulas/law-of-cosines/simulacion/index.js";
+import { mountPythagoreanPlugin } from "../formulas/pythagorean-theorem/simulacion/index.js";
+import { mountContinuityPlugin } from "../formulas/continuity-equation/simulacion/index.js";
+import { mountNewtonSecondLawPlugin } from "../formulas/newton-second-law/simulacion/index.js";
+import { mountTaylorPlugin } from "../formulas/taylor-series/simulacion/index.js";
+import { mountWaveEquationPlugin } from "../formulas/wave-equation/simulacion/index.js";
 
 const PLUGINS = new Map([
   ["ecuacion de bernoulli", mountBernoulliPlugin],
