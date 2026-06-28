@@ -49,10 +49,93 @@ body[data-theme="postit"] {
   color-scheme: light;
 }
 
+body[data-theme="notebook"] {
+  --bg: #f3f0e7;
+  --bg-soft: #e8e2d2;
+  --panel: rgba(255, 252, 244, .92);
+  --panel-solid: #fffcf4;
+  --card: #fffdfa;
+  --card-strong: #fffdfa;
+  --text: #242b32;
+  --muted: #65717d;
+  --line: rgba(44, 94, 154, .16);
+  --accent: #2d6cdf;
+  --accent-2: #d0445f;
+  --accent-3: #0c8a6a;
+  --shadow: 0 20px 48px rgba(55, 63, 74, .13);
+  color-scheme: light;
+}
+
 body[data-theme="chalkboard"] .orbital-bg,
 body[data-theme="whiteboard"] .orbital-bg,
-body[data-theme="postit"] .orbital-bg {
+body[data-theme="postit"] .orbital-bg,
+body[data-theme="notebook"] .orbital-bg {
   opacity: .32;
+}
+
+body[data-theme="chalkboard"] .floating-button,
+body[data-theme="chalkboard"] .theme-toggle {
+  color: #2a190c !important;
+  background: linear-gradient(180deg, #fff6d8, #e5c98d) !important;
+  border: 1px solid rgba(80, 49, 20, .38) !important;
+  box-shadow: 0 12px 28px rgba(70, 43, 17, .22), inset 0 1px rgba(255,255,255,.8) !important;
+}
+
+body[data-theme="chalkboard"] .floating-button svg,
+body[data-theme="chalkboard"] .floating-button svg * {
+  stroke: currentColor !important;
+  color: currentColor !important;
+}
+
+.theme-mode-menu {
+  position: fixed;
+  z-index: 2147483000;
+  min-width: 190px;
+  padding: 8px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: color-mix(in srgb, var(--panel-solid) 94%, transparent);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(18px);
+  display: grid;
+  gap: 4px;
+}
+
+.theme-mode-menu[hidden] {
+  display: none !important;
+}
+
+.theme-mode-menu button {
+  width: 100%;
+  border: 0;
+  border-radius: 11px;
+  padding: 9px 11px;
+  background: transparent;
+  color: var(--text);
+  text-align: left;
+  font: inherit;
+  cursor: pointer;
+}
+
+.theme-mode-menu button:hover,
+.theme-mode-menu button.active {
+  background: color-mix(in srgb, var(--accent) 14%, transparent);
+  color: var(--text);
+}
+
+body[data-theme="chalkboard"] .theme-mode-menu {
+  background: #f7e5b8;
+  color: #2a190c;
+  border-color: rgba(80, 49, 20, .32);
+}
+
+body[data-theme="chalkboard"] .theme-mode-menu button {
+  color: #2a190c;
+}
+
+body[data-theme="chalkboard"] .theme-mode-menu button:hover,
+body[data-theme="chalkboard"] .theme-mode-menu button.active {
+  background: rgba(86, 57, 27, .13);
 }
 
 body[data-theme="chalkboard"] .equation-card {
@@ -142,11 +225,14 @@ body[data-theme="whiteboard"] .equation-card .formula-box mjx-container {
 body[data-theme="whiteboard"] .equation-card[data-marker="blue"] { --marker-color: #1f63c7; }
 body[data-theme="whiteboard"] .equation-card[data-marker="red"] { --marker-color: #c4314b; }
 body[data-theme="whiteboard"] .equation-card[data-marker="green"] { --marker-color: #14885f; }
+body[data-theme="whiteboard"] .equation-card[data-marker="teal"] { --marker-color: #087c87; }
+body[data-theme="whiteboard"] .equation-card[data-marker="violet"] { --marker-color: #7650b4; }
+body[data-theme="whiteboard"] .equation-card[data-marker="orange"] { --marker-color: #b35b14; }
 body[data-theme="whiteboard"] .equation-card[data-marker="black"] { --marker-color: #1d252a; }
 
 body[data-theme="postit"] .equation-card {
   position: relative;
-  color: #2d2a1f;
+  color: var(--note-text, #2d2a1f);
   border: 0 !important;
   border-radius: 4px 3px 5px 3px;
   background:
@@ -172,17 +258,61 @@ body[data-theme="postit"] .equation-card::before {
 
 body[data-theme="postit"] .equation-card h3,
 body[data-theme="postit"] .equation-card .formula-box {
+  color: var(--note-text, #2d2a1f);
   font-family: "Segoe Print", "Bradley Hand", "Comic Sans MS", cursive;
 }
 
-body[data-theme="postit"] .equation-card[data-note="yellow"] { --note-surface: #fff2a4; }
-body[data-theme="postit"] .equation-card[data-note="blue"] { --note-surface: #cfeaff; }
-body[data-theme="postit"] .equation-card[data-note="pink"] { --note-surface: #ffd4df; }
-body[data-theme="postit"] .equation-card[data-note="green"] { --note-surface: #d9f5c8; }
-body[data-theme="postit"] .equation-card[data-note="peach"] { --note-surface: #ffd8aa; }
+body[data-theme="postit"] .equation-card .formula-box mjx-container {
+  color: var(--note-text, #2d2a1f) !important;
+}
+
+body[data-theme="postit"] .equation-card[data-note="yellow"] { --note-surface: #fff2a4; --note-text: #2d2a1f; }
+body[data-theme="postit"] .equation-card[data-note="coral"] { --note-surface: #ffd0c4; --note-text: #33221e; }
+body[data-theme="postit"] .equation-card[data-note="peach"] { --note-surface: #ffd8aa; --note-text: #342619; }
+body[data-theme="postit"] .equation-card[data-note="sand"] { --note-surface: #eadfbe; --note-text: #302b20; }
+body[data-theme="postit"] .equation-card[data-note="mint"] { --note-surface: #d6f5dc; --note-text: #1e2f24; }
+body[data-theme="postit"] .equation-card[data-note="sage"] { --note-surface: #cbd8bd; --note-text: #202b20; }
+body[data-theme="postit"] .equation-card[data-note="fog"] { --note-surface: #dfe6e8; --note-text: #243036; }
+body[data-theme="postit"] .equation-card[data-note="sky"] { --note-surface: #d3ecff; --note-text: #1f2e3d; }
+body[data-theme="postit"] .equation-card[data-note="blue"] { --note-surface: #b9dcff; --note-text: #1e2f45; }
+body[data-theme="postit"] .equation-card[data-note="navy"] { --note-surface: #294565; --note-text: #f7f1df; }
+body[data-theme="postit"] .equation-card[data-note="purple"] { --note-surface: #d5c7ff; --note-text: #2a2341; }
+body[data-theme="postit"] .equation-card[data-note="lavender"] { --note-surface: #e6ddff; --note-text: #2e2841; }
+body[data-theme="postit"] .equation-card[data-note="salmon"] { --note-surface: #ffc1b5; --note-text: #3a211d; }
+body[data-theme="postit"] .equation-card[data-note="clay"] { --note-surface: #d7a38f; --note-text: #321f18; }
+body[data-theme="postit"] .equation-card[data-note="chalk"] { --note-surface: #f4f1df; --note-text: #2e2c24; }
+body[data-theme="postit"] .equation-card[data-note="rose"] { --note-surface: #ffd7ec; --note-text: #392231; }
+body[data-theme="postit"] .equation-card[data-note="lemon"] { --note-surface: #fff7bf; --note-text: #302b1c; }
+body[data-theme="postit"] .equation-card[data-note="aqua"] { --note-surface: #c6f3f0; --note-text: #1e3332; }
+body[data-theme="postit"] .equation-card[data-note="olive"] { --note-surface: #dce0a9; --note-text: #2c2e1c; }
+body[data-theme="postit"] .equation-card[data-note="plum"] { --note-surface: #5b486d; --note-text: #fff1df; }
 
 body[data-theme="postit"] .equation-card:hover {
   transform: translateY(-2px) rotate(var(--card-tilt, -.35deg));
+}
+
+body[data-theme="notebook"] .equation-card {
+  color: #242b32;
+  border: 1px solid rgba(38, 85, 143, .18) !important;
+  border-radius: 6px;
+  background:
+    linear-gradient(90deg, rgba(211, 69, 90, .18) 0 2px, transparent 2px 100%),
+    linear-gradient(rgba(44, 94, 154, .12) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(44, 94, 154, .10) 1px, transparent 1px),
+    #fffdfa !important;
+  background-size: 100% 100%, 100% 24px, 24px 100%, 100% 100%;
+  background-position: 26px 0, 0 16px, 0 0, 0 0;
+  box-shadow: 0 16px 34px rgba(55, 63, 74, .11);
+  backdrop-filter: none;
+}
+
+body[data-theme="notebook"] .equation-card h3,
+body[data-theme="notebook"] .equation-card .formula-box {
+  font-family: "Trebuchet MS", "Segoe Print", system-ui, sans-serif;
+}
+
+body[data-theme="notebook"] .equation-card .formula-box mjx-container {
+  color: #22334a !important;
 }
 
 body[data-theme="chalkboard"] .equation-modal {
@@ -216,4 +346,14 @@ body[data-theme="postit"] .equation-modal {
   color: #2d2a1f;
   border: 0;
   border-radius: 6px;
+}
+
+body[data-theme="notebook"] .equation-modal {
+  background:
+    linear-gradient(rgba(44, 94, 154, .08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(44, 94, 154, .06) 1px, transparent 1px),
+    #fffdfa;
+  background-size: 100% 28px, 28px 100%, 100% 100%;
+  color: #242b32;
+  border: 1px solid rgba(38, 85, 143, .18);
 }
