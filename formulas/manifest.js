@@ -3,6 +3,7 @@ export const formulaManifest = [
     id: "pythagorean-theorem",
     name: "Teorema de Pitágoras",
     folder: "formulas/pythagorean-theorem",
+    source: "files",
     simulation: "formulas/pythagorean-theorem/simulacion/index.js",
     tabs: ["formula", "significado", "historia", "derivacion", "usos", "ficha", "simulacion"]
   },
