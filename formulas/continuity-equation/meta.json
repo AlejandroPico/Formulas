@@ -1,0 +1,10 @@
+{
+  "id": "continuity-equation",
+  "name": "Ecuación de continuidad",
+  "author": "Mecánica clásica",
+  "year": 1750,
+  "field": "Fluidos",
+  "level": "Bachillerato",
+  "color": "#06b6d4",
+  "simulation": "continuity"
+}
