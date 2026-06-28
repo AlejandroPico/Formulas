@@ -58,9 +58,10 @@ function assignThematicVariants() {
   cards.forEach((card, index) => {
     const title = card.querySelector("h3")?.textContent || String(index);
     const hash = stableHash(`${title}-${index}`);
-    const board = BOARDS[hash % BOARDS.length];
-    const marker = MARKERS[(hash >> 2) % MARKERS.length];
-    const note = NOTES[(hash >> 4) % NOTES.length];
+    const board = BOARDS[pickIndex(hash, 0, BOARDS.length)];
+    const marker = MARKERS[pickIndex(hash, 7, MARKERS.length)];
+    const note = NOTES[pickIndex(hash, 13, NOTES.length)];
+    const tilt = TILTS[pickIndex(hash, 21, TILTS.length)];
 
     card.dataset.board = board.id;
     card.dataset.marker = marker.id;
@@ -70,8 +71,12 @@ function assignThematicVariants() {
     card.style.setProperty("--marker-color", marker.color);
     card.style.setProperty("--note-surface", note.surface);
     card.style.setProperty("--note-text", note.text);
-    card.style.setProperty("--card-tilt", TILTS[(hash >> 6) % TILTS.length]);
+    card.style.setProperty("--card-tilt", tilt);
   });
+}
+
+function pickIndex(hash, shift, length) {
+  return ((hash >>> shift) ^ (hash >>> Math.max(0, shift - 5))) % length;
 }
 
 function setActiveCardStyle(card) {
