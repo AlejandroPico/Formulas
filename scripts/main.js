@@ -21,7 +21,14 @@ function mergeEquationSets(...sets) {
 }
 
 async function boot() {
-  const fileEquations = await loadFormulaFiles();
+  showLoading("Preparando atlas", 2);
+  let fileEquations = [];
+  try {
+    fileEquations = await loadFormulaFiles(updateLoading);
+  } catch (error) {
+    console.error("No se pudo cargar la estructura dinámica de fórmulas.", error);
+    updateLoading({ message: "No se pudo escanear formulas; usando datos clásicos", value: 12 });
+  }
   equations = mergeEquationSets(baseEquations, extraEquations, advancedEquations, completedEquations, finalCorrections, polishedEquations, pluginPolishedEquations, fileEquations);
   fields = ["Todas", ...unique(equations.map(eq => eq.field)).sort((a, b) => a.localeCompare(b, "es"))];
   levels = ["Todos", ...unique(equations.map(eq => eq.level))];
@@ -29,6 +36,7 @@ async function boot() {
   initFilterControls();
   bindEvents();
   renderAll();
+  hideLoading();
 }
 
 function initFilterControls() {
@@ -123,6 +131,30 @@ function getSortLabelMode(sort) {
 function renderAll() {
   const visible = filterEquations(equations, state);
   renderEquationGrid(visible, openEquationModal, state);
+}
+
+function updateLoading({ message, value }) {
+  showLoading(message, value);
+}
+
+function showLoading(message, value = 0) {
+  const overlay = document.querySelector("#loadingOverlay");
+  if (!overlay) return;
+  const status = overlay.querySelector("#loadingStatus");
+  const bar = overlay.querySelector("#loadingProgressBar");
+  overlay.hidden = false;
+  if (status) status.textContent = message || "Cargando datos";
+  if (bar) bar.style.width = `${Math.max(0, Math.min(100, Number(value) || 0))}%`;
+}
+
+function hideLoading() {
+  const overlay = document.querySelector("#loadingOverlay");
+  if (!overlay) return;
+  overlay.classList.add("leaving");
+  window.setTimeout(() => {
+    overlay.hidden = true;
+    overlay.classList.remove("leaving");
+  }, 180);
 }
 
 boot();
