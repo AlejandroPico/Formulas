@@ -1,3 +1,8 @@
+const MODE_ALIASES = {
+  "terminal-amber": "terminal",
+  "terminal-cyan": "terminal"
+};
+
 const MODES = [
   { id: "auto", label: "◐ Auto" },
   { id: "day", label: "☀ Día" },
@@ -10,8 +15,6 @@ const MODES = [
   { id: "blueprint", label: "◇ Plano" },
   { id: "parchment", label: "☷ Pergamino" },
   { id: "terminal", label: "▤ Terminal" },
-  { id: "terminal-amber", label: "▤ Ámbar" },
-  { id: "terminal-cyan", label: "▤ Cian" },
   { id: "laboratory", label: "⌬ Laboratorio" },
   { id: "cosmos", label: "✦ Cosmos" },
   { id: "microfilm", label: "▥ Microfilm" }
@@ -24,7 +27,9 @@ let activeButton = null;
 
 export function initTheme(button) {
   activeButton = button;
-  const stored = localStorage.getItem("formula-theme-mode") || "auto";
+  const storedRaw = localStorage.getItem("formula-theme-mode") || "auto";
+  const stored = MODE_ALIASES[storedRaw] || storedRaw;
+  if (stored !== storedRaw) localStorage.setItem("formula-theme-mode", stored);
   currentIndex = Math.max(0, MODES.findIndex(mode => mode.id === stored));
   applyMode(MODES[currentIndex], button);
 
