@@ -1,35 +1,10 @@
-import { mountBernoulliPlugin } from "../formulas/bernoulli-equation/simulacion/index.js";
-import { mountGravityPlugin } from "../formulas/gravitational-law/simulacion/index.js";
-import { mountEulerPlugin } from "../formulas/euler-identity/simulacion/index.js";
-import { mountQuadraticPlugin } from "../formulas/quadratic-formula/simulacion/index.js";
-import { mountSinesPlugin } from "../formulas/law-of-sines/simulacion/index.js";
-import { mountCosinesPlugin } from "../formulas/law-of-cosines/simulacion/index.js";
-import { mountPythagoreanPlugin } from "../formulas/pythagorean-theorem/simulacion/index.js";
-import { mountContinuityPlugin } from "../formulas/continuity-equation/simulacion/index.js";
-import { mountNewtonSecondLawPlugin } from "../formulas/newton-second-law/simulacion/index.js";
-import { mountTaylorPlugin } from "../formulas/taylor-series/simulacion/index.js";
-import { mountWaveEquationPlugin } from "../formulas/wave-equation/simulacion/index.js";
-
-const PLUGINS = new Map([
-  ["ecuacion de bernoulli", mountBernoulliPlugin],
-  ["ley de gravitacion universal", mountGravityPlugin],
-  ["identidad de euler", mountEulerPlugin],
-  ["formula cuadratica", mountQuadraticPlugin],
-  ["ley de los senos", mountSinesPlugin],
-  ["ley de los cosenos", mountCosinesPlugin],
-  ["teorema de pitagoras", mountPythagoreanPlugin],
-  ["ecuacion de continuidad", mountContinuityPlugin],
-  ["segunda ley de newton", mountNewtonSecondLawPlugin],
-  ["serie de taylor", mountTaylorPlugin],
-  ["ecuacion de onda", mountWaveEquationPlugin]
-]);
-
 const modalContent = document.querySelector("#modalContent");
 const mounted = new WeakMap();
+const moduleCache = new Map();
 
 if (modalContent) {
   const observer = new MutationObserver(scheduleMount);
-  observer.observe(modalContent, { childList: true, subtree: true, attributes: true, attributeFilter: ["class", "hidden"] });
+  observer.observe(modalContent, { childList: true, subtree: true, attributes: true, attributeFilter: ["class", "hidden", "data-simulation-module"] });
   document.addEventListener("click", event => {
     if (event.target.closest?.(".detail-tabs button, .equation-card")) scheduleMount();
   });
@@ -42,15 +17,14 @@ function scheduleMount() {
   window.setTimeout(mountActivePlugin, 620);
 }
 
-function mountActivePlugin() {
+async function mountActivePlugin() {
   const panel = modalContent?.querySelector(".detail-panel.simulation-view.active");
   if (!panel || panel.hidden) return;
-  const title = normalize(modalContent.querySelector(".detail-header h2")?.textContent || "");
-  const mount = PLUGINS.get(title);
-  if (!mount) return;
+  const modulePath = panel.dataset.simulationModule;
+  if (!modulePath) return;
 
   const current = mounted.get(panel);
-  if (current?.title === title) return;
+  if (current?.modulePath === modulePath) return;
   current?.dispose?.();
 
   panel.classList.add("has-formula-plugin");
@@ -67,19 +41,52 @@ function mountActivePlugin() {
   `;
   panel.appendChild(host);
 
-  const dispose = mount({
-    root: host,
-    canvas: host.querySelector("canvas"),
-    controls: host.querySelector(".formula-plugin-controls"),
-    readout: host.querySelector(".formula-plugin-readout")
-  });
-  mounted.set(panel, { title, dispose });
+  loadSimulationStyles(panel.dataset.simulationStyle);
+
+  try {
+    const module = await importSimulationModule(modulePath);
+    const mount = resolveMountFunction(module);
+    if (!mount) throw new Error(`El módulo ${modulePath} no exporta una función de montaje.`);
+    const dispose = mount({
+      root: host,
+      canvas: host.querySelector("canvas"),
+      controls: host.querySelector(".formula-plugin-controls"),
+      readout: host.querySelector(".formula-plugin-readout")
+    });
+    mounted.set(panel, { modulePath, dispose });
+  } catch (error) {
+    console.error(error);
+    host.innerHTML = `<div class="formula-plugin-error"><strong>No se pudo cargar la simulación.</strong><span>${escapeHtml(error.message || String(error))}</span></div>`;
+    mounted.set(panel, { modulePath, dispose: null });
+  }
 }
 
-function normalize(value) {
-  return String(value)
-    .normalize("NFKD")
-    .replace(/[\u0300-\u036f]/g, "")
-    .toLowerCase()
-    .trim();
+async function importSimulationModule(modulePath) {
+  const url = new URL(`../${modulePath}`, import.meta.url).href;
+  if (!moduleCache.has(url)) moduleCache.set(url, import(url));
+  return moduleCache.get(url);
+}
+
+function resolveMountFunction(module) {
+  if (typeof module.default === "function") return module.default;
+  if (typeof module.mountSimulation === "function") return module.mountSimulation;
+  const named = Object.entries(module).find(([name, value]) => /^mount.*Plugin$/.test(name) && typeof value === "function");
+  if (named) return named[1];
+  const anyFunction = Object.values(module).find(value => typeof value === "function");
+  return anyFunction || null;
+}
+
+function loadSimulationStyles(stylePath) {
+  if (!stylePath) return;
+  const id = `formula-style-${stylePath.replace(/[^a-z0-9_-]+/gi, "-")}`;
+  if (document.getElementById(id)) return;
+  const link = document.createElement("link");
+  link.id = id;
+  link.rel = "stylesheet";
+  link.href = stylePath;
+  document.head.appendChild(link);
+}
+
+function escapeHtml(value) {
+  return String(value).replace(/[&<>'"]/g, char => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", "'": "&#39;", '"': "&quot;" }[char]));
 }
