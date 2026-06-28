@@ -53,11 +53,12 @@ function scheduleModalCleanup() {
 }
 
 function scheduleModalFormulaFit() {
-  window.setTimeout(fitActiveModalFormula, 90);
-  window.setTimeout(fitActiveModalFormula, 240);
-  window.setTimeout(fitActiveModalFormula, 540);
-  window.setTimeout(fitActiveModalFormula, 980);
-  window.setTimeout(fitActiveModalFormula, 1500);
+  window.setTimeout(fitActiveModalFormula, 70);
+  window.setTimeout(fitActiveModalFormula, 160);
+  window.setTimeout(fitActiveModalFormula, 320);
+  window.setTimeout(fitActiveModalFormula, 640);
+  window.setTimeout(fitActiveModalFormula, 1100);
+  window.setTimeout(fitActiveModalFormula, 1800);
 }
 
 function fitCards() {
@@ -106,27 +107,37 @@ function fitActiveModalFormula() {
   const box = panel?.querySelector(".modal-formula");
   if (!panel || !box || panel.hidden) return;
 
-  const items = [...box.querySelectorAll("mjx-container")];
-  if (!items.length) return;
+  const fitLayer = ensureModalFormulaFitLayer(box);
+  const math = [...fitLayer.querySelectorAll("mjx-container")];
+  if (!math.length) return;
+
   box.style.setProperty("--modal-formula-scale", "1");
+  fitLayer.style.transform = "none";
 
-  const availableWidth = Math.max(1, box.clientWidth - 22);
-  const availableHeight = Math.max(1, box.clientHeight - 22);
-  const contentRect = getFormulaContentRect(items);
-  if (!contentRect.width || !contentRect.height) return;
+  const boxRect = box.getBoundingClientRect();
+  const fitRect = fitLayer.getBoundingClientRect();
+  if (!boxRect.width || !boxRect.height || !fitRect.width || !fitRect.height) return;
 
-  const scale = Math.min(1, availableWidth / contentRect.width, availableHeight / contentRect.height);
-  box.style.setProperty("--modal-formula-scale", String(Math.max(0.035, scale * 0.965).toFixed(4)));
+  const safeWidth = Math.max(1, boxRect.width - Math.max(42, boxRect.width * 0.075));
+  const safeHeight = Math.max(1, boxRect.height - Math.max(36, boxRect.height * 0.075));
+  const scale = Math.min(1, safeWidth / fitRect.width, safeHeight / fitRect.height);
+  const finalScale = Math.max(0.012, scale * 0.985);
+
+  box.style.setProperty("--modal-formula-scale", finalScale.toFixed(5));
+  fitLayer.style.transform = "";
 }
 
-function getFormulaContentRect(items) {
-  const rects = items.map(item => item.getBoundingClientRect()).filter(rect => rect.width > 0 && rect.height > 0);
-  if (!rects.length) return { width: 0, height: 0 };
-  const left = Math.min(...rects.map(rect => rect.left));
-  const right = Math.max(...rects.map(rect => rect.right));
-  const top = Math.min(...rects.map(rect => rect.top));
-  const bottom = Math.max(...rects.map(rect => rect.bottom));
-  return { width: right - left, height: bottom - top };
+function ensureModalFormulaFitLayer(box) {
+  const existing = box.querySelector(":scope > .modal-formula-fit");
+  if (existing) return existing;
+
+  const layer = document.createElement("div");
+  layer.className = "modal-formula-fit";
+  const tooltipLayer = box.querySelector(":scope > .formula-tooltip-layer");
+  const movable = [...box.childNodes].filter(node => node !== tooltipLayer);
+  movable.forEach(node => layer.appendChild(node));
+  box.insertBefore(layer, tooltipLayer || null);
+  return layer;
 }
 
 function hideAllFormulaTooltips() {
