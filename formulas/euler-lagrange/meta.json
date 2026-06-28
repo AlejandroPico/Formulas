@@ -1,0 +1,15 @@
+{
+  "id": "euler-lagrange",
+  "name": "Ecuación de Euler-Lagrange",
+  "author": "Leonhard Euler y Joseph-Louis Lagrange",
+  "year": 1755,
+  "field": "Mecanica analitica",
+  "level": "Universidad",
+  "color": "#d69a2d",
+  "simulation": "euler-lagrange",
+  "formulaText": [
+    "d/dt de parcial de L respecto a velocidad - parcial de L respecto a coordenada = 0",
+    "accion S = integral del lagrangiano L en el tiempo"
+  ],
+  "summary": "Convierte el principio de accion estacionaria en ecuaciones de movimiento."
+}
