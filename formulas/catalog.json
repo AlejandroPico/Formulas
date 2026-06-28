@@ -8,8 +8,8 @@
     "level": "ESO",
     "color": "#5d5af6",
     "folder": "formulas/pythagorean-theorem",
-    "formula": ["a^2 + b^2 = c^2", "d^2 = dx^2 + dy^2", "||x||^2 = x_1^2 + x_2^2 + ... + x_n^2"],
-    "formulaText": ["el cuadrado de la hipotenusa es igual a la suma de los cuadrados de los catetos", "la distancia al cuadrado es igual al desplazamiento horizontal al cuadrado más el desplazamiento vertical al cuadrado"],
+    "formula": ["a^2+b^2=c^2", "d=\\sqrt{(x_2-x_1)^2+(y_2-y_1)^2}", "\\lVert\\mathbf{x}\\rVert=\\sqrt{x_1^2+x_2^2+\\cdots+x_n^2}"],
+    "formulaText": ["cateto a² + cateto b² = hipotenusa c²", "distancia = √((x final − x inicial)² + (y final − y inicial)²)", "norma de vector x = √(componente 1² + componente 2² + ··· + componente n²)"],
     "summary": "Relaciona ortogonalidad, distancia euclídea y norma mediante suma de cuadrados."
   },
   {
@@ -21,8 +21,8 @@
     "level": "ESO",
     "color": "#7b61ff",
     "folder": "formulas/quadratic-formula",
-    "formula": ["a x^2 + b x + c = 0", "Delta = b^2 - 4 a c", "x = (-b +- sqrt(Delta)) / (2 a)"],
-    "formulaText": ["una ecuación cuadrática iguala cero a un término cuadrático, un término lineal y un término independiente", "la solución es menos b más o menos la raíz del discriminante dividido entre dos a"],
+    "formula": ["ax^2+bx+c=0", "\\Delta=b^2-4ac", "x=\\frac{-b\\pm\\sqrt{\\Delta}}{2a}", "x_v=-\\frac{b}{2a}"],
+    "formulaText": ["coeficiente cuadrático · x² + coeficiente lineal · x + término independiente = 0", "discriminante Δ = coeficiente lineal² − 4 · coeficiente cuadrático · término independiente", "x = (−coeficiente lineal ± √discriminante) / (2 · coeficiente cuadrático)", "x del vértice = −coeficiente lineal / (2 · coeficiente cuadrático)"],
     "summary": "Da las soluciones de cualquier ecuación de segundo grado."
   },
   {
@@ -34,8 +34,8 @@
     "level": "Bachillerato",
     "color": "#2dd4bf",
     "folder": "formulas/law-of-sines",
-    "formula": ["a / sin(A) = b / sin(B) = c / sin(C)", "a / sin(A) = 2 R"],
-    "formulaText": ["cada lado dividido por el seno de su ángulo opuesto da la misma cantidad", "esa cantidad común es el diámetro de la circunferencia circunscrita"],
+    "formula": ["\\frac{a}{\\sin A}=\\frac{b}{\\sin B}=\\frac{c}{\\sin C}", "\\frac{a}{\\sin A}=2R"],
+    "formulaText": ["lado a / seno del ángulo A = lado b / seno del ángulo B = lado c / seno del ángulo C", "lado a / seno del ángulo A = 2 · radio circunscrito"],
     "summary": "Relaciona lados y senos de ángulos opuestos en cualquier triángulo."
   },
   {
@@ -47,8 +47,8 @@
     "level": "Bachillerato",
     "color": "#f97316",
     "folder": "formulas/law-of-cosines",
-    "formula": ["c^2 = a^2 + b^2 - 2 a b cos(C)"],
-    "formulaText": ["el cuadrado de un lado es la suma de los cuadrados de los otros dos menos dos veces su producto por el coseno del ángulo comprendido"],
+    "formula": ["c^2=a^2+b^2-2ab\\cos C", "a^2=b^2+c^2-2bc\\cos A", "b^2=a^2+c^2-2ac\\cos B"],
+    "formulaText": ["lado c² = lado a² + lado b² − 2 · lado a · lado b · coseno del ángulo C", "lado a² = lado b² + lado c² − 2 · lado b · lado c · coseno del ángulo A", "lado b² = lado a² + lado c² − 2 · lado a · lado c · coseno del ángulo B"],
     "summary": "Generaliza Pitágoras a triángulos no necesariamente rectángulos."
   },
   {
@@ -60,8 +60,8 @@
     "level": "Bachillerato",
     "color": "#77d9ff",
     "folder": "formulas/gravitational-law",
-    "formula": ["F = G m_1 m_2 / r^2", "g = G M / r^2"],
-    "formulaText": ["la fuerza gravitatoria es proporcional al producto de las masas e inversamente proporcional al cuadrado de la distancia"],
+    "formula": ["F=G\\frac{m_1m_2}{r^2}", "g=G\\frac{M}{r^2}", "\\Phi=-G\\frac{M}{r}"],
+    "formulaText": ["fuerza = constante gravitatoria · (masa 1 · masa 2) / distancia²", "campo gravitatorio = constante gravitatoria · masa central / distancia²", "potencial gravitatorio = −constante gravitatoria · masa central / distancia"],
     "summary": "Describe la atracción entre masas mediante una ley de inversa del cuadrado."
   },
   {
@@ -73,8 +73,8 @@
     "level": "Universidad inicial",
     "color": "#d6a8ff",
     "folder": "formulas/euler-identity",
-    "formula": ["e^(i x) = cos(x) + i sin(x)", "e^(i pi) + 1 = 0"],
-    "formulaText": ["la exponencial imaginaria equivale al coseno más i por el seno", "en pi, esa relación une e, i, pi, uno y cero"],
+    "formula": ["e^{ix}=\\cos x+i\\sin x", "e^{i\\pi}+1=0"],
+    "formulaText": ["e elevado a i · ángulo x = coseno de x + i · seno de x", "e elevado a i · π + 1 = 0"],
     "summary": "Une exponenciales, trigonometría, números complejos y constantes fundamentales."
   },
   {
@@ -86,8 +86,8 @@
     "level": "Bachillerato",
     "color": "#5fa0ff",
     "folder": "formulas/bernoulli-equation",
-    "formula": ["p + 1/2 rho v^2 + rho g h = constant"],
-    "formulaText": ["presión más energía cinética por volumen más energía gravitatoria por volumen permanece constante en un flujo ideal"],
+    "formula": ["p+\\frac{1}{2}\\rho v^2+\\rho gh=\\mathrm{cte}", "\\frac{p}{\\rho g}+\\frac{v^2}{2g}+h=H"],
+    "formulaText": ["presión + 1/2 · densidad · velocidad² + densidad · gravedad · altura = constante", "presión / (densidad · gravedad) + velocidad² / (2 · gravedad) + altura = carga hidráulica"],
     "summary": "Expresa conservación de energía mecánica en un fluido ideal."
   },
   {
@@ -99,8 +99,8 @@
     "level": "Bachillerato",
     "color": "#06b6d4",
     "folder": "formulas/continuity-equation",
-    "formula": ["A_1 v_1 = A_2 v_2", "Q = A v"],
-    "formulaText": ["el caudal de entrada es igual al caudal de salida", "el área por la velocidad permanece constante en un flujo incompresible estacionario"],
+    "formula": ["A_1v_1=A_2v_2", "Q=Av", "\\rho Av=\\mathrm{cte}"],
+    "formulaText": ["área de entrada · velocidad de entrada = área de salida · velocidad de salida", "caudal = área · velocidad", "densidad · área · velocidad = constante"],
     "summary": "Expresa conservación de masa en un flujo."
   },
   {
@@ -112,8 +112,8 @@
     "level": "ESO",
     "color": "#ef4444",
     "folder": "formulas/newton-second-law",
-    "formula": ["F = m a", "a = F / m"],
-    "formulaText": ["fuerza es igual a masa por aceleración", "aceleración es igual a fuerza dividida por masa"],
+    "formula": ["\\mathbf{F}=m\\mathbf{a}", "\\mathbf{a}=\\frac{\\mathbf{F}}{m}"],
+    "formulaText": ["fuerza = masa · aceleración", "aceleración = fuerza / masa"],
     "summary": "Relaciona fuerza neta, masa y aceleración."
   },
   {
@@ -125,8 +125,8 @@
     "level": "Universidad inicial",
     "color": "#a855f7",
     "folder": "formulas/taylor-series",
-    "formula": ["f(x) = f(a) + f'(a)(x-a) + ...", "sin(x) approx x - x^3/6 + x^5/120"],
-    "formulaText": ["una función se aproxima sumando su valor, su pendiente y derivadas sucesivas alrededor de un punto"],
+    "formula": ["f(x)=\\sum_{n=0}^{\\infty}\\frac{f^{(n)}(a)}{n!}(x-a)^n", "\\sin x\\approx x-\\frac{x^3}{3!}+\\frac{x^5}{5!}"],
+    "formulaText": ["función en x = suma desde n = 0 hasta infinito de derivada n de la función en a / n! · (x − a)^n", "seno de x ≈ x − x³ / 3! + x⁵ / 5!"],
     "summary": "Aproxima una función mediante un polinomio construido con sus derivadas."
   },
   {
@@ -138,8 +138,8 @@
     "level": "Universidad",
     "color": "#38bdf8",
     "folder": "formulas/wave-equation",
-    "formula": ["u_tt = c^2 u_xx"],
-    "formulaText": ["la aceleración temporal de la perturbación es proporcional a su curvatura espacial"],
+    "formula": ["\\frac{\\partial^2 u}{\\partial t^2}=c^2\\frac{\\partial^2 u}{\\partial x^2}"],
+    "formulaText": ["segunda derivada temporal de la perturbación = velocidad² · segunda derivada espacial de la perturbación"],
     "summary": "Describe cómo se propaga una perturbación ondulatoria."
   }
 ]
