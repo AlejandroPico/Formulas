@@ -1,0 +1,10 @@
+{
+  "id": "bernoulli-equation",
+  "name": "Ecuación de Bernoulli",
+  "author": "Daniel Bernoulli",
+  "year": 1738,
+  "field": "Fluidos",
+  "level": "Bachillerato",
+  "color": "#5fa0ff",
+  "simulation": "flow"
+}
