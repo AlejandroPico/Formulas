@@ -1,0 +1,10 @@
+{
+  "id": "pythagorean-theorem",
+  "name": "Teorema de Pitágoras",
+  "author": "Tradición pitagórica",
+  "year": -500,
+  "field": "Geometría",
+  "level": "ESO",
+  "color": "#5d5af6",
+  "simulation": "pythagorean"
+}
