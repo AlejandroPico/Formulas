@@ -98,6 +98,7 @@ function scoreTerm(term, index) {
 
   if (index.formulaCompact.includes(term)) score += 120;
   if (index.formulaText.includes(term)) score += 80;
+  if (index.formulaWords.includes(term)) score += 76;
   if (index.author.includes(term)) score += 65;
   if (index.field.includes(term)) score += 54;
   if (index.level.includes(term)) score += 42;
@@ -113,6 +114,7 @@ function scoreTerm(term, index) {
 
 function buildSearchIndex(eq) {
   const formulas = Array.isArray(eq.formula) ? eq.formula : [eq.formula];
+  const formulaWords = Array.isArray(eq.formulaText) ? eq.formulaText : [eq.formulaText || eq.formula_text || eq.explainedFormula || ""];
   const uses = [
     ...(eq.uses ?? []),
     ...(eq.useDetails ?? []).flatMap(item => [item.title, item.text])
@@ -130,6 +132,7 @@ function buildSearchIndex(eq) {
     variables: normalizeQuery((eq.variables ?? []).join(" ")),
     uses: normalizeQuery(uses.join(" ")),
     formulaText: normalizeQuery(formulas.join(" ")),
+    formulaWords: normalizeQuery(formulaWords.join(" ")),
     formulaCompact: normalizeFormulaSearch(formulas.join(" "))
   };
   fields.full = Object.values(fields).join(" ");
