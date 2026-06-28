@@ -67,6 +67,45 @@
   transition: width 180ms ease;
 }
 
+.filter-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+  padding: 0.66rem 0.72rem;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: color-mix(in oklab, var(--panel-solid) 88%, var(--accent) 12%);
+}
+
+.filter-summary span {
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.filter-summary strong {
+  color: var(--text);
+  font-variant-numeric: tabular-nums;
+}
+
+.formula-words,
+.formula-words-stack {
+  font-weight: 780;
+  line-height: 1.28;
+  letter-spacing: -0.02em;
+  color: var(--text);
+}
+
+.formula-explained-mode .formula-box,
+.modal-formula .formula-words {
+  font-size: clamp(0.88rem, 1.7vw, 1.32rem);
+}
+
+.section-loading {
+  color: var(--muted);
+  font-style: italic;
+}
+
 .markdown-view {
   display: grid;
   gap: 0.9rem;
