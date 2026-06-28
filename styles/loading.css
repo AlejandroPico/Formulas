@@ -90,16 +90,37 @@
   font-variant-numeric: tabular-nums;
 }
 
-.formula-words,
+.formula-explained-mode .formula-box {
+  display: block;
+  place-items: initial;
+  text-align: center;
+}
+
 .formula-words-stack {
+  width: 100%;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0.78rem;
+  align-items: center;
+  justify-items: center;
   font-weight: 780;
   line-height: 1.28;
   letter-spacing: -0.02em;
   color: var(--text);
 }
 
-.formula-explained-mode .formula-box,
-.modal-formula .formula-words {
+.formula-words-row {
+  display: block;
+  width: min(100%, 980px);
+  text-align: center;
+  white-space: normal;
+  overflow-wrap: normal;
+  word-break: normal;
+  text-wrap: balance;
+}
+
+.formula-explained-mode .formula-words-row,
+.modal-formula .formula-words-row {
   font-size: clamp(0.88rem, 1.7vw, 1.32rem);
 }
 
