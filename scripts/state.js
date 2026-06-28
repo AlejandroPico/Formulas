@@ -4,6 +4,7 @@ export const state = {
   level: "Todos",
   sort: "chronology",
   cardLabelMode: "none",
+  formulaDisplay: "symbolic",
   selectedEquationId: null
 };
 
