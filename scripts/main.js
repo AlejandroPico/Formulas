@@ -1,16 +1,19 @@
-import { equations as baseEquations } from "../data/equations.js";
-import { extraEquations } from "../data/extra-equations.js";
-import { advancedEquations } from "../data/advanced-equations.js";
-import { completedEquations } from "../data/complete-equations.js";
-import { finalCorrections } from "../data/final-corrections.js";
-import { polishedEquations } from "../data/polished-equations.js";
-import { pluginPolishedEquations } from "../data/plugin-polished-equations.js";
 import { loadFormulaFiles } from "./formula-file-loader.js";
 import { state, setState } from "./state.js";
 import { $, unique } from "./utils.js";
 import { filterEquations } from "./filtering.js";
 import { renderEquationGrid, openEquationModal, closeEquationModal } from "./render.js";
 import { initTheme } from "./theme.js";
+
+const LEGACY_DATA_MODULES = [
+  { path: "../data/equations.js", exportName: "equations" },
+  { path: "../data/extra-equations.js", exportName: "extraEquations" },
+  { path: "../data/advanced-equations.js", exportName: "advancedEquations" },
+  { path: "../data/complete-equations.js", exportName: "completedEquations" },
+  { path: "../data/final-corrections.js", exportName: "finalCorrections" },
+  { path: "../data/polished-equations.js", exportName: "polishedEquations" },
+  { path: "../data/plugin-polished-equations.js", exportName: "pluginPolishedEquations" }
+];
 
 let equations = [];
 let fields = ["Todas"];
@@ -22,14 +25,15 @@ function mergeEquationSets(...sets) {
 
 async function boot() {
   showLoading("Preparando atlas", 2);
+  const legacySets = await loadLegacyData();
   let fileEquations = [];
   try {
     fileEquations = await loadFormulaFiles(updateLoading);
   } catch (error) {
     console.error("No se pudo cargar la estructura dinámica de fórmulas.", error);
-    updateLoading({ message: "No se pudo escanear formulas; usando datos clásicos", value: 12 });
+    updateLoading({ message: "No se pudo escanear formulas", value: 12 });
   }
-  equations = mergeEquationSets(baseEquations, extraEquations, advancedEquations, completedEquations, finalCorrections, polishedEquations, pluginPolishedEquations, fileEquations);
+  equations = mergeEquationSets(...legacySets, fileEquations);
   fields = ["Todas", ...unique(equations.map(eq => eq.field)).sort((a, b) => a.localeCompare(b, "es"))];
   levels = ["Todos", ...unique(equations.map(eq => eq.level))];
   initTheme($("#themeToggle"));
@@ -37,6 +41,19 @@ async function boot() {
   bindEvents();
   renderAll();
   hideLoading();
+}
+
+async function loadLegacyData() {
+  const sets = [];
+  for (const descriptor of LEGACY_DATA_MODULES) {
+    try {
+      const module = await import(descriptor.path);
+      if (Array.isArray(module[descriptor.exportName])) sets.push(module[descriptor.exportName]);
+    } catch (error) {
+      console.info(`Módulo legacy omitido: ${descriptor.path}`, error);
+    }
+  }
+  return sets;
 }
 
 function initFilterControls() {
