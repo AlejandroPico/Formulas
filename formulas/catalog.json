@@ -8,44 +8,10 @@
     "level": "ESO",
     "color": "#5d5af6",
     "folder": "formulas/pythagorean-theorem",
-    "formula": [
-      "a^2+b^2=c^2",
-      "d=\\sqrt{(x_2-x_1)^2+(y_2-y_1)^2}",
-      "\\lVert\\mathbf{x}\\rVert=\\sqrt{x_1^2+x_2^2+\\cdots+x_n^2}"
-    ],
-    "formulaText": [
-      "cateto a² + cateto b² = hipotenusa c²",
-      "distancia = √((x final − x inicial)² + (y final − y inicial)²)",
-      "norma de vector x = √(componente 1² + componente 2² + ··· + componente n²)"
-    ],
+    "formula": ["a^2+b^2=c^2", "d=\\sqrt{(x_2-x_1)^2+(y_2-y_1)^2}", "\\lVert\\mathbf{x}\\rVert=\\sqrt{x_1^2+x_2^2+\\cdots+x_n^2}"],
+    "formulaText": ["cateto a² + cateto b² = hipotenusa c²", "distancia = √((x final − x inicial)² + (y final − y inicial)²)", "norma de vector x = √(componente 1² + componente 2² + ··· + componente n²)"],
     "summary": "Relaciona ortogonalidad, distancia euclídea y norma mediante suma de cuadrados.",
-    "simulation": "pythagorean",
-    "sections": [
-      {
-        "file": "formula.tex"
-      },
-      {
-        "file": "significado.md"
-      },
-      {
-        "file": "historia.md"
-      },
-      {
-        "file": "derivacion.md"
-      },
-      {
-        "file": "usos.md"
-      },
-      {
-        "file": "ficha.md"
-      },
-      {
-        "file": "simulacion/index.js"
-      },
-      {
-        "file": "simulacion/styles.css"
-      }
-    ]
+    "simulation": "pythagorean"
   },
   {
     "id": "quadratic-formula",
@@ -56,91 +22,10 @@
     "level": "ESO",
     "color": "#7b61ff",
     "folder": "formulas/quadratic-formula",
-    "formula": [
-      "ax^2+bx+c=0",
-      "\\Delta=b^2-4ac",
-      "x=\\frac{-b\\pm\\sqrt{\\Delta}}{2a}",
-      "x_v=-\\frac{b}{2a}"
-    ],
-    "formulaText": [
-      "coeficiente cuadrático · x² + coeficiente lineal · x + término independiente = 0",
-      "discriminante Δ = coeficiente lineal² − 4 · coeficiente cuadrático · término independiente",
-      "x = (−coeficiente lineal ± √discriminante) / (2 · coeficiente cuadrático)",
-      "x del vértice = −coeficiente lineal / (2 · coeficiente cuadrático)"
-    ],
+    "formula": ["ax^2+bx+c=0", "\\Delta=b^2-4ac", "x=\\frac{-b\\pm\\sqrt{\\Delta}}{2a}", "x_v=-\\frac{b}{2a}"],
+    "formulaText": ["coeficiente cuadrático · x² + coeficiente lineal · x + término independiente = 0", "discriminante Δ = coeficiente lineal² − 4 · coeficiente cuadrático · término independiente", "x = (−coeficiente lineal ± √discriminante) / (2 · coeficiente cuadrático)", "x del vértice = −coeficiente lineal / (2 · coeficiente cuadrático)"],
     "summary": "Da las soluciones de cualquier ecuación de segundo grado.",
-    "simulation": "quadratic",
-    "sections": [
-      {
-        "file": "formula.tex"
-      },
-      {
-        "file": "significado.md"
-      },
-      {
-        "file": "historia.md"
-      },
-      {
-        "file": "derivacion.md"
-      },
-      {
-        "file": "usos.md"
-      },
-      {
-        "file": "ficha.md"
-      },
-      {
-        "file": "simulacion/index.js"
-      },
-      {
-        "file": "simulacion/styles.css"
-      }
-    ]
-  },
-  {
-    "id": "law-of-cosines",
-    "name": "Ley de los cosenos",
-    "author": "Trigonometría clásica",
-    "year": 1000,
-    "field": "Trigonometría",
-    "level": "Bachillerato",
-    "color": "#f97316",
-    "folder": "formulas/law-of-cosines",
-    "formula": [
-      "c^2=a^2+b^2-2ab\\cos C",
-      "a^2=b^2+c^2-2bc\\cos A",
-      "b^2=a^2+c^2-2ac\\cos B"
-    ],
-    "formulaText": [
-      "lado c² = lado a² + lado b² − 2 · lado a · lado b · coseno del ángulo C",
-      "lado a² = lado b² + lado c² − 2 · lado b · lado c · coseno del ángulo A",
-      "lado b² = lado a² + lado c² − 2 · lado a · lado c · coseno del ángulo B"
-    ],
-    "summary": "Generaliza Pitágoras a triángulos no necesariamente rectángulos.",
-    "simulation": "cosines",
-    "sections": [
-      {
-        "file": "formula.tex"
-      },
-      {
-        "file": "significado.md"
-      },
-      {
-        "file": "historia.md"
-      },
-      {
-        "file": "derivacion.md"
-      },
-      {
-        "file": "usos.md"
-      },
-      {
-        "file": "ficha.md"
-      },
-      {
-        "file": "simulacion/index.js"
-      }
-    ]
+    "simulation": "quadratic"
   },
   {
     "id": "law-of-sines",
@@ -151,42 +36,24 @@
     "level": "Bachillerato",
     "color": "#2dd4bf",
     "folder": "formulas/law-of-sines",
-    "formula": [
-      "\\frac{a}{\\sin A}=\\frac{b}{\\sin B}=\\frac{c}{\\sin C}",
-      "\\frac{a}{\\sin A}=2R"
-    ],
-    "formulaText": [
-      "lado a / seno del ángulo A = lado b / seno del ángulo B = lado c / seno del ángulo C",
-      "lado a / seno del ángulo A = 2 · radio circunscrito"
-    ],
+    "formula": ["\\frac{a}{\\sin A}=\\frac{b}{\\sin B}=\\frac{c}{\\sin C}", "\\frac{a}{\\sin A}=2R"],
+    "formulaText": ["lado a / seno del ángulo A = lado b / seno del ángulo B = lado c / seno del ángulo C", "lado a / seno del ángulo A = 2 · radio circunscrito"],
     "summary": "Relaciona lados y senos de ángulos opuestos en cualquier triángulo.",
-    "simulation": "sines",
-    "sections": [
-      {
-        "file": "formula.tex"
-      },
-      {
-        "file": "significado.md"
-      },
-      {
-        "file": "historia.md"
-      },
-      {
-        "file": "derivacion.md"
-      },
-      {
-        "file": "usos.md"
-      },
-      {
-        "file": "ficha.md"
-      },
-      {
-        "file": "simulacion/index.js"
-      },
-      {
-        "file": "simulacion/styles.css"
-      }
-    ]
+    "simulation": "sines"
+  },
+  {
+    "id": "law-of-cosines",
+    "name": "Ley de los cosenos",
+    "author": "Trigonometría clásica",
+    "year": 1000,
+    "field": "Trigonometría",
+    "level": "Bachillerato",
+    "color": "#f97316",
+    "folder": "formulas/law-of-cosines",
+    "formula": ["c^2=a^2+b^2-2ab\\cos C", "a^2=b^2+c^2-2bc\\cos A", "b^2=a^2+c^2-2ac\\cos B"],
+    "formulaText": ["lado c² = lado a² + lado b² − 2 · lado a · lado b · coseno del ángulo C", "lado a² = lado b² + lado c² − 2 · lado b · lado c · coseno del ángulo A", "lado b² = lado a² + lado c² − 2 · lado a · lado c · coseno del ángulo B"],
+    "summary": "Generaliza Pitágoras a triángulos no necesariamente rectángulos.",
+    "simulation": "cosines"
   },
   {
     "id": "gravitational-law",
@@ -197,223 +64,10 @@
     "level": "Bachillerato",
     "color": "#77d9ff",
     "folder": "formulas/gravitational-law",
-    "formula": [
-      "F=G\\frac{m_1m_2}{r^2}",
-      "g=G\\frac{M}{r^2}",
-      "\\Phi=-G\\frac{M}{r}"
-    ],
-    "formulaText": [
-      "fuerza = constante gravitatoria · (masa 1 · masa 2) / distancia²",
-      "campo gravitatorio = constante gravitatoria · masa central / distancia²",
-      "potencial gravitatorio = −constante gravitatoria · masa central / distancia"
-    ],
+    "formula": ["F=G\\frac{m_1m_2}{r^2}", "g=G\\frac{M}{r^2}", "\\Phi=-G\\frac{M}{r}"],
+    "formulaText": ["fuerza = constante gravitatoria · (masa 1 · masa 2) / distancia²", "campo gravitatorio = constante gravitatoria · masa central / distancia²", "potencial gravitatorio = −constante gravitatoria · masa central / distancia"],
     "summary": "Describe la atracción entre masas mediante una ley de inversa del cuadrado.",
-    "simulation": "gravity",
-    "sections": [
-      {
-        "file": "formula.tex"
-      },
-      {
-        "file": "significado.md"
-      },
-      {
-        "file": "historia.md"
-      },
-      {
-        "file": "derivacion.md"
-      },
-      {
-        "file": "usos.md"
-      },
-      {
-        "file": "ficha.md"
-      },
-      {
-        "file": "simulacion/index.js"
-      }
-    ]
-  },
-  {
-    "id": "newton-second-law",
-    "name": "Segunda ley de Newton",
-    "author": "Isaac Newton",
-    "year": 1687,
-    "field": "Mecánica clásica",
-    "level": "ESO",
-    "color": "#ef4444",
-    "folder": "formulas/newton-second-law",
-    "formula": [
-      "\\mathbf{F}=m\\mathbf{a}",
-      "\\mathbf{a}=\\frac{\\mathbf{F}}{m}"
-    ],
-    "formulaText": [
-      "fuerza es igual a masa por aceleración",
-      "aceleración es igual a fuerza dividida por masa"
-    ],
-    "summary": "Relaciona fuerza neta, masa y aceleración.",
-    "simulation": "newton-second-law",
-    "sections": [
-      {
-        "file": "formula.tex"
-      },
-      {
-        "file": "significado.md"
-      },
-      {
-        "file": "historia.md"
-      },
-      {
-        "file": "derivacion.md"
-      },
-      {
-        "file": "usos.md"
-      },
-      {
-        "file": "ficha.md"
-      },
-      {
-        "file": "simulacion/index.js"
-      },
-      {
-        "file": "simulacion/styles.css"
-      }
-    ]
-  },
-  {
-    "id": "taylor-series",
-    "name": "Serie de Taylor",
-    "author": "Brook Taylor",
-    "year": 1715,
-    "field": "Análisis matemático",
-    "level": "Universidad inicial",
-    "color": "#a855f7",
-    "folder": "formulas/taylor-series",
-    "formula": [
-      "f(x)=\\sum_{n=0}^{\\infty}\\frac{f^{(n)}(a)}{n!}(x-a)^n",
-      "\\sin x\\approx x-\\frac{x^3}{3!}+\\frac{x^5}{5!}"
-    ],
-    "formulaText": [
-      "función en x = suma desde n = 0 hasta infinito de derivada n de la función en a / n! · (x − a)^n",
-      "seno de x ≈ x − x³ / 3! + x⁵ / 5!"
-    ],
-    "summary": "Aproxima una función mediante un polinomio construido con sus derivadas.",
-    "simulation": "taylor",
-    "sections": [
-      {
-        "file": "formula.tex"
-      },
-      {
-        "file": "significado.md"
-      },
-      {
-        "file": "historia.md"
-      },
-      {
-        "file": "derivacion.md"
-      },
-      {
-        "file": "usos.md"
-      },
-      {
-        "file": "ficha.md"
-      },
-      {
-        "file": "simulacion/index.js"
-      },
-      {
-        "file": "simulacion/styles.css"
-      }
-    ]
-  },
-  {
-    "id": "bernoulli-equation",
-    "name": "Ecuación de Bernoulli",
-    "author": "Daniel Bernoulli",
-    "year": 1738,
-    "field": "Fluidos",
-    "level": "Bachillerato",
-    "color": "#5fa0ff",
-    "folder": "formulas/bernoulli-equation",
-    "formula": [
-      "p+\\frac{1}{2}\\rho v^2+\\rho gh=\\mathrm{cte}",
-      "\\frac{p}{\\rho g}+\\frac{v^2}{2g}+h=H"
-    ],
-    "formulaText": [
-      "presión + 1/2 · densidad · velocidad² + densidad · gravedad · altura = constante",
-      "presión / (densidad · gravedad) + velocidad² / (2 · gravedad) + altura = carga hidráulica"
-    ],
-    "summary": "Expresa conservación de energía mecánica en un fluido ideal.",
-    "simulation": "flow",
-    "sections": [
-      {
-        "file": "formula.tex"
-      },
-      {
-        "file": "significado.md"
-      },
-      {
-        "file": "historia.md"
-      },
-      {
-        "file": "derivacion.md"
-      },
-      {
-        "file": "usos.md"
-      },
-      {
-        "file": "ficha.md"
-      },
-      {
-        "file": "simulacion/index.js"
-      },
-      {
-        "file": "simulacion/styles.css"
-      }
-    ]
-  },
-  {
-    "id": "wave-equation",
-    "name": "Ecuación de onda",
-    "author": "D'Alembert",
-    "year": 1747,
-    "field": "Física matemática",
-    "level": "Universidad",
-    "color": "#38bdf8",
-    "folder": "formulas/wave-equation",
-    "formula": [
-      "\\frac{\\partial^2 u}{\\partial t^2}=c^2\\frac{\\partial^2 u}{\\partial x^2}"
-    ],
-    "formulaText": [
-      "segunda derivada temporal de la perturbación = velocidad² · segunda derivada espacial de la perturbación"
-    ],
-    "summary": "Describe cómo se propaga una perturbación ondulatoria.",
-    "simulation": "wave-equation",
-    "sections": [
-      {
-        "file": "formula.tex"
-      },
-      {
-        "file": "significado.md"
-      },
-      {
-        "file": "historia.md"
-      },
-      {
-        "file": "derivacion.md"
-      },
-      {
-        "file": "usos.md"
-      },
-      {
-        "file": "ficha.md"
-      },
-      {
-        "file": "simulacion/index.js"
-      },
-      {
-        "file": "simulacion/styles.css"
-      }
-    ]
+    "simulation": "gravity"
   },
   {
     "id": "euler-identity",
@@ -424,42 +78,24 @@
     "level": "Universidad inicial",
     "color": "#d6a8ff",
     "folder": "formulas/euler-identity",
-    "formula": [
-      "e^{ix}=\\cos x+i\\sin x",
-      "e^{i\\pi}+1=0"
-    ],
-    "formulaText": [
-      "e elevado a i · ángulo x = coseno de x + i · seno de x",
-      "e elevado a i · π + 1 = 0"
-    ],
+    "formula": ["e^{ix}=\\cos x+i\\sin x", "e^{i\\pi}+1=0"],
+    "formulaText": ["e elevado a i · ángulo x = coseno de x + i · seno de x", "e elevado a i · π + 1 = 0"],
     "summary": "Une exponenciales, trigonometría, números complejos y constantes fundamentales.",
-    "simulation": "complex",
-    "sections": [
-      {
-        "file": "formula.tex"
-      },
-      {
-        "file": "significado.md"
-      },
-      {
-        "file": "historia.md"
-      },
-      {
-        "file": "derivacion.md"
-      },
-      {
-        "file": "usos.md"
-      },
-      {
-        "file": "ficha.md"
-      },
-      {
-        "file": "simulacion/index.js"
-      },
-      {
-        "file": "simulacion/styles.css"
-      }
-    ]
+    "simulation": "complex"
+  },
+  {
+    "id": "bernoulli-equation",
+    "name": "Ecuación de Bernoulli",
+    "author": "Daniel Bernoulli",
+    "year": 1738,
+    "field": "Fluidos",
+    "level": "Bachillerato",
+    "color": "#5fa0ff",
+    "folder": "formulas/bernoulli-equation",
+    "formula": ["p+\\frac{1}{2}\\rho v^2+\\rho gh=\\mathrm{cte}", "\\frac{p}{\\rho g}+\\frac{v^2}{2g}+h=H"],
+    "formulaText": ["presión + 1/2 · densidad · velocidad² + densidad · gravedad · altura = constante", "presión / (densidad · gravedad) + velocidad² / (2 · gravedad) + altura = carga hidráulica"],
+    "summary": "Expresa conservación de energía mecánica en un fluido ideal.",
+    "simulation": "flow"
   },
   {
     "id": "continuity-equation",
@@ -470,43 +106,51 @@
     "level": "Bachillerato",
     "color": "#06b6d4",
     "folder": "formulas/continuity-equation",
-    "formula": [
-      "A_1v_1=A_2v_2",
-      "Q=Av",
-      "\\rho Av=\\mathrm{cte}"
-    ],
-    "formulaText": [
-      "área de entrada · velocidad de entrada = área de salida · velocidad de salida",
-      "caudal = área · velocidad",
-      "densidad · área · velocidad = constante"
-    ],
+    "formula": ["A_1v_1=A_2v_2", "Q=Av", "\\rho Av=\\mathrm{cte}"],
+    "formulaText": ["área de entrada · velocidad de entrada = área de salida · velocidad de salida", "caudal = área · velocidad", "densidad · área · velocidad = constante"],
     "summary": "Expresa conservación de masa en un flujo.",
-    "simulation": "continuity",
-    "sections": [
-      {
-        "file": "formula.tex"
-      },
-      {
-        "file": "significado.md"
-      },
-      {
-        "file": "historia.md"
-      },
-      {
-        "file": "derivacion.md"
-      },
-      {
-        "file": "usos.md"
-      },
-      {
-        "file": "ficha.md"
-      },
-      {
-        "file": "simulacion/index.js"
-      },
-      {
-        "file": "simulacion/styles.css"
-      }
-    ]
+    "simulation": "continuity"
+  },
+  {
+    "id": "newton-second-law",
+    "name": "Segunda ley de Newton",
+    "author": "Isaac Newton",
+    "year": 1687,
+    "field": "Mecánica clásica",
+    "level": "ESO",
+    "color": "#ef4444",
+    "folder": "formulas/newton-second-law",
+    "formula": ["\\mathbf{F}=m\\mathbf{a}", "\\mathbf{a}=\\frac{\\mathbf{F}}{m}"],
+    "formulaText": ["fuerza = masa · aceleración", "aceleración = fuerza / masa"],
+    "summary": "Relaciona fuerza neta, masa y aceleración.",
+    "simulation": "newton-second-law"
+  },
+  {
+    "id": "taylor-series",
+    "name": "Serie de Taylor",
+    "author": "Brook Taylor",
+    "year": 1715,
+    "field": "Análisis matemático",
+    "level": "Universidad inicial",
+    "color": "#a855f7",
+    "folder": "formulas/taylor-series",
+    "formula": ["f(x)=\\sum_{n=0}^{\\infty}\\frac{f^{(n)}(a)}{n!}(x-a)^n", "\\sin x\\approx x-\\frac{x^3}{3!}+\\frac{x^5}{5!}"],
+    "formulaText": ["función en x = suma desde n = 0 hasta ∞ de derivada n de función en a / n! · (x − a)^n", "seno de x ≈ x − x³ / 3! + x⁵ / 5!"],
+    "summary": "Aproxima una función mediante un polinomio construido con sus derivadas.",
+    "simulation": "taylor"
+  },
+  {
+    "id": "wave-equation",
+    "name": "Ecuación de onda",
+    "author": "D'Alembert",
+    "year": 1747,
+    "field": "Física matemática",
+    "level": "Universidad",
+    "color": "#38bdf8",
+    "folder": "formulas/wave-equation",
+    "formula": ["\\frac{\\partial^2 u}{\\partial t^2}=c^2\\frac{\\partial^2 u}{\\partial x^2}"],
+    "formulaText": ["segunda derivada temporal de perturbación = velocidad² · segunda derivada espacial de perturbación"],
+    "summary": "Describe cómo se propaga una perturbación ondulatoria.",
+    "simulation": "wave-equation"
   }
 ]
