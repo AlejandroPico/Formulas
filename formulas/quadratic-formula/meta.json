@@ -1,0 +1,10 @@
+{
+  "id": "quadratic-formula",
+  "name": "Fórmula cuadrática",
+  "author": "Álgebra clásica",
+  "year": 820,
+  "field": "Álgebra",
+  "level": "ESO",
+  "color": "#7b61ff",
+  "simulation": "quadratic"
+}
