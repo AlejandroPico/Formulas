@@ -6,6 +6,15 @@ const BOARDS = [
   { id: "blue", surface: "#102f46", text: "#fbf4df" }
 ];
 
+const TERMINALS = [
+  { id: "green", surface: "#06130d", text: "#9cffb2", muted: "#64bd78", line: "rgba(126,255,151,.22)", accent: "#8cffa4", accent2: "#5ee5ff" },
+  { id: "amber", surface: "#140b03", text: "#ffbf6a", muted: "#c78a46", line: "rgba(255,179,88,.24)", accent: "#ffb458", accent2: "#ffdf84" },
+  { id: "cyan", surface: "#06151e", text: "#9beaff", muted: "#67b4c6", line: "rgba(135,238,255,.24)", accent: "#87eeff", accent2: "#a7ffcf" },
+  { id: "green", surface: "#06130d", text: "#9cffb2", muted: "#64bd78", line: "rgba(126,255,151,.22)", accent: "#8cffa4", accent2: "#5ee5ff" },
+  { id: "amber", surface: "#140b03", text: "#ffbf6a", muted: "#c78a46", line: "rgba(255,179,88,.24)", accent: "#ffb458", accent2: "#ffdf84" },
+  { id: "cyan", surface: "#06151e", text: "#9beaff", muted: "#67b4c6", line: "rgba(135,238,255,.24)", accent: "#87eeff", accent2: "#a7ffcf" }
+];
+
 const MARKERS = [
   { id: "blue", color: "#1f63c7" },
   { id: "green", color: "#14885f" },
@@ -61,16 +70,24 @@ function assignThematicVariants() {
     const board = BOARDS[pickIndex(hash, 0, BOARDS.length)];
     const marker = MARKERS[pickIndex(hash, 7, MARKERS.length)];
     const note = NOTES[pickIndex(hash, 13, NOTES.length)];
+    const terminal = TERMINALS[pickIndex(hash, 17, TERMINALS.length)];
     const tilt = TILTS[pickIndex(hash, 21, TILTS.length)];
 
     card.dataset.board = board.id;
     card.dataset.marker = marker.id;
     card.dataset.note = note.id;
+    card.dataset.terminal = terminal.id;
     card.style.setProperty("--board-surface", board.surface);
     card.style.setProperty("--board-text", board.text);
     card.style.setProperty("--marker-color", marker.color);
     card.style.setProperty("--note-surface", note.surface);
     card.style.setProperty("--note-text", note.text);
+    card.style.setProperty("--terminal-surface", terminal.surface);
+    card.style.setProperty("--terminal-text", terminal.text);
+    card.style.setProperty("--terminal-muted", terminal.muted);
+    card.style.setProperty("--terminal-line", terminal.line);
+    card.style.setProperty("--terminal-accent", terminal.accent);
+    card.style.setProperty("--terminal-accent-2", terminal.accent2);
     card.style.setProperty("--card-tilt", tilt);
   });
 }
@@ -85,11 +102,16 @@ function setActiveCardStyle(card) {
   body.dataset.activeBoard = card.dataset.board || "green";
   body.dataset.activeNote = card.dataset.note || "butter";
   body.dataset.activeMarker = card.dataset.marker || "blue";
+  body.dataset.activeTerminal = card.dataset.terminal || "green";
   body.style.setProperty("--active-board-surface", getCardVar(card, "--board-surface", "#153c31"));
   body.style.setProperty("--active-board-text", getCardVar(card, "--board-text", "#fbf4df"));
   body.style.setProperty("--active-note-surface", getCardVar(card, "--note-surface", "#fff2a4"));
   body.style.setProperty("--active-note-text", getCardVar(card, "--note-text", "#2d2a1f"));
   body.style.setProperty("--active-marker-color", getCardVar(card, "--marker-color", "#1f63c7"));
+  body.style.setProperty("--active-terminal-surface", getCardVar(card, "--terminal-surface", "#06130d"));
+  body.style.setProperty("--active-terminal-text", getCardVar(card, "--terminal-text", "#9cffb2"));
+  body.style.setProperty("--active-terminal-line", getCardVar(card, "--terminal-line", "rgba(126,255,151,.22)"));
+  body.style.setProperty("--active-terminal-accent", getCardVar(card, "--terminal-accent", "#8cffa4"));
 }
 
 function getCardVar(card, name, fallback) {
