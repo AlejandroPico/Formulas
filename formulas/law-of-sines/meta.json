@@ -1,0 +1,10 @@
+{
+  "id": "law-of-sines",
+  "name": "Ley de los senos",
+  "author": "Trigonometría clásica",
+  "year": 1000,
+  "field": "Trigonometría",
+  "level": "Bachillerato",
+  "color": "#2dd4bf",
+  "simulation": "sines"
+}
