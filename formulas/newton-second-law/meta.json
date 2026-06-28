@@ -1,0 +1,10 @@
+{
+  "id": "newton-second-law",
+  "name": "Segunda ley de Newton",
+  "author": "Isaac Newton",
+  "year": 1687,
+  "field": "Mecánica clásica",
+  "level": "ESO",
+  "color": "#ef4444",
+  "simulation": "newton-second-law"
+}
