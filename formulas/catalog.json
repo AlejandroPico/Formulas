@@ -16,7 +16,7 @@
     "formulaText": [
       "cateto a² + cateto b² = hipotenusa c²",
       "distancia = √((x final − x inicial)² + (y final − y inicial)²)",
-      "norma de vector x = √(componente 1² + componente 2² + ··· + componente n²)"
+      "norma de vector x = √(componente 1² + componente 2² + · · · + componente n²)"
     ],
     "summary": "Relaciona ortogonalidad, distancia euclídea y norma mediante suma de cuadrados.",
     "simulation": "pythagorean",
@@ -65,8 +65,8 @@
     "formulaText": [
       "coeficiente cuadrático · x² + coeficiente lineal · x + término independiente = 0",
       "discriminante Δ = coeficiente lineal² − 4 · coeficiente cuadrático · término independiente",
-      "x = (−coeficiente lineal ± √discriminante) / (2 · coeficiente cuadrático)",
-      "x del vértice = −coeficiente lineal / (2 · coeficiente cuadrático)"
+      "x = ( − coeficiente lineal ± √discriminante) / (2 · coeficiente cuadrático)",
+      "x del vértice = − coeficiente lineal / (2 · coeficiente cuadrático)"
     ],
     "summary": "Da las soluciones de cualquier ecuación de segundo grado.",
     "simulation": "quadratic",
@@ -205,7 +205,7 @@
     "formulaText": [
       "fuerza = constante gravitatoria · (masa 1 · masa 2) / distancia²",
       "campo gravitatorio = constante gravitatoria · masa central / distancia²",
-      "potencial gravitatorio = −constante gravitatoria · masa central / distancia"
+      "potencial gravitatorio = − constante gravitatoria · masa central / distancia"
     ],
     "summary": "Describe la atracción entre masas mediante una ley de inversa del cuadrado.",
     "simulation": "gravity",
@@ -247,8 +247,8 @@
       "\\mathbf{a}=\\frac{\\mathbf{F}}{m}"
     ],
     "formulaText": [
-      "fuerza es igual a masa por aceleración",
-      "aceleración es igual a fuerza dividida por masa"
+      "fuerza = masa · aceleración",
+      "aceleración = fuerza dividida · masa"
     ],
     "summary": "Relaciona fuerza neta, masa y aceleración.",
     "simulation": "newton-second-law",
@@ -339,7 +339,7 @@
       "\\frac{p}{\\rho g}+\\frac{v^2}{2g}+h=H"
     ],
     "formulaText": [
-      "presión + 1/2 · densidad · velocidad² + densidad · gravedad · altura = constante",
+      "presión + 1 / 2 · densidad · velocidad² + densidad · gravedad · altura = constante",
       "presión / (densidad · gravedad) + velocidad² / (2 · gravedad) + altura = carga hidráulica"
     ],
     "summary": "Expresa conservación de energía mecánica en un fluido ideal.",
