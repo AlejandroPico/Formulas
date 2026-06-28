@@ -1,0 +1,10 @@
+{
+  "id": "taylor-series",
+  "name": "Serie de Taylor",
+  "author": "Brook Taylor",
+  "year": 1715,
+  "field": "Análisis matemático",
+  "level": "Universidad inicial",
+  "color": "#a855f7",
+  "simulation": "taylor"
+}
