@@ -17,52 +17,16 @@ const GLOBAL_SYMBOLS = new Map(Object.entries({
   "∇": "operador nabla: representa gradiente, divergencia, rotacional o laplaciano según cómo se use.",
   "∑": "sumatorio: suma de una familia de términos.",
   "∫": "integral: acumulación continua de una magnitud.",
-  "∏": "productorio: multiplicación de una familia de factores.",
-  "∞": "infinito: límite no acotado o extensión indefinida.",
   "π": "pi: constante geométrica de la circunferencia.",
   "e": "número de Euler: base de los logaritmos naturales y de la exponencial.",
   "i": "unidad imaginaria: cumple i² = -1.",
-  "ℏ": "constante de Planck reducida: h dividido por 2π.",
-  "h": "constante de Planck o altura, según el contexto.",
   "c": "velocidad de la luz, hipotenusa o constante de propagación, según el contexto.",
-  "G": "constante gravitatoria, tensor de Einstein o energía libre, según el contexto.",
-  "R": "constante, radio, curvatura escalar o constante de los gases, según el contexto.",
-  "T": "temperatura, periodo o tensor, según el contexto.",
-  "S": "acción, entropía, superficie o variable de estado, según el contexto.",
-  "H": "Hamiltoniano, entropía de Shannon, carga hidráulica o parámetro de Hubble, según el contexto.",
-  "E": "energía o campo eléctrico, según el contexto.",
-  "B": "campo magnético, radiancia o ancho de banda, según el contexto.",
   "F": "fuerza, campo vectorial o función, según el contexto.",
-  "p": "presión, probabilidad o momento lineal, según el contexto.",
-  "q": "carga eléctrica, coordenada generalizada o variable, según el contexto.",
   "m": "masa o índice, según el contexto.",
-  "r": "distancia radial, radio o tasa, según el contexto.",
-  "t": "tiempo.",
-  "x": "coordenada, variable independiente o dato de entrada, según el contexto.",
-  "y": "coordenada, variable dependiente, etiqueta o salida, según el contexto.",
-  "z": "variable compleja, coordenada o puntuación, según el contexto.",
-  "v": "velocidad o variable, según el contexto.",
   "a": "lado, aceleración, parámetro o factor de escala, según el contexto.",
   "b": "lado, coeficiente o parámetro, según el contexto.",
-  "d": "diferencial, distancia o dimensión, según el contexto.",
-  "f": "función, frecuencia o fuerza externa, según el contexto.",
-  "k": "constante, curvatura o índice discreto, según el contexto.",
-  "n": "número de elementos, índice o cantidad de sustancia, según el contexto.",
-  "u": "campo escalar, temperatura o velocidad de fluido, según el contexto.",
-  "λ": "lambda: longitud de onda, constante o multiplicador, según el contexto.",
-  "Λ": "lambda mayúscula: constante cosmológica u operador, según el contexto.",
-  "μ": "mu: viscosidad, media, potencial químico o constante, según el contexto.",
-  "ρ": "rho: densidad, densidad de carga o matriz densidad, según el contexto.",
-  "σ": "sigma: desviación típica, conductividad, volatilidad o función de activación, según el contexto.",
-  "γ": "gamma: factor relativista, parámetro o índice adiabático, según el contexto.",
-  "θ": "theta: ángulo, parámetro o vector de parámetros, según el contexto.",
-  "τ": "tau: tiempo propio o variable temporal auxiliar.",
-  "ψ": "psi: función de onda o campo cuántico.",
-  "Ψ": "psi mayúscula: función de onda del sistema.",
-  "Ω": "omega mayúscula: número de microestados o dominio.",
-  "ω": "omega: frecuencia angular.",
-  "ε": "épsilon: permitividad, energía pequeña o término de error, según el contexto.",
-  "ϵ": "épsilon: permitividad, energía pequeña o término de error, según el contexto."
+  "x": "coordenada, variable independiente o dato de entrada, según el contexto.",
+  "t": "tiempo."
 }));
 
 export function renderFilters(container, values, activeValue, onChange) {
@@ -87,14 +51,14 @@ export function renderEquationGrid(equations, onOpen, viewState = {}) {
     node.classList.add(`size-${widthLevel}`);
     node.classList.toggle("is-multiline", formulas.length > 1);
     node.dataset.minColSpan = String(minColSpan);
-    node.style.setProperty("--formula-lines", formulas.length);
+    node.style.setProperty("--formula-lines", formulas.length || 1);
     node.style.setProperty("--col-span", minColSpan);
     node.style.setProperty("--context-color", getContextColor(eq, viewState.cardLabelMode));
     node.setAttribute("role", "button");
     node.setAttribute("aria-label", `Abrir ficha de ${eq.name}`);
 
     renderCardTitle($("h3", node), eq, viewState.cardLabelMode);
-    $(".formula-box", node).innerHTML = renderFormula(formulas);
+    $(".formula-box", node).innerHTML = formulas.length ? renderFormula(formulas) : "";
 
     node.addEventListener("click", () => onOpen(eq));
     node.addEventListener("keydown", event => {
@@ -157,10 +121,12 @@ function renderFormula(formulas) {
 }
 
 function normalizeFormulaList(formula) {
-  return Array.isArray(formula) ? formula : [formula];
+  if (Array.isArray(formula)) return formula.filter(Boolean);
+  return formula ? [formula] : [];
 }
 
 function getWidthLevel(formulas) {
+  if (!formulas.length) return 1;
   const length = getMaxFormulaLength(formulas);
   if (length > 82) return 3;
   if (length > 42) return 2;
@@ -176,7 +142,7 @@ function getMaxFormulaLength(formulas) {
 }
 
 function normalizeFormulaLength(formula) {
-  return formula
+  return String(formula)
     .replace(/\\frac/g, "ffff")
     .replace(/\\partial/g, "ddd")
     .replace(/\\mathbf/g, "bb")
@@ -213,92 +179,193 @@ function applyMasonrySpans(grid) {
 export function openEquationModal(eq) {
   const modal = $("#equationModal");
   const content = $("#modalContent");
-  const formulas = normalizeFormulaList(eq.formula);
+  const sections = getEquationSections(eq);
+  const activeKey = sections[0]?.key || "sin-contenido";
+  if (disposeSimulation) disposeSimulation();
+  disposeSimulation = null;
+
   content.innerHTML = `
-    <section class="detail-shell" style="--equation-color: ${eq.color}">
+    <section class="detail-shell" style="--equation-color: ${eq.color || "#5d5af6"}">
       <header class="detail-header compact">
         <h2>${escapeHtml(eq.name)}</h2>
       </header>
       <nav class="detail-tabs" aria-label="Secciones de la ficha">
-        ${tabButton("formula", "Fórmula", true)}
-        ${tabButton("meaning", "Significado")}
-        ${tabButton("history", "Historia")}
-        ${tabButton("derivation", "Derivación")}
-        ${tabButton("uses", "Usos")}
-        ${tabButton("simulation", "Simulación")}
-        ${tabButton("metadata", "Ficha")}
+        ${sections.map((section, index) => tabButton(section.key, section.label, index === 0)).join("")}
       </nav>
       <div class="detail-panels">
-        <section class="detail-panel formula-view active" data-panel="formula">
-          <div class="formula-box modal-formula" aria-label="Fórmula interactiva">${renderFormula(formulas)}</div>
-        </section>
-        <section class="detail-panel text-view" data-panel="meaning">
-          <p>${escapeHtml(eq.meaning)}</p>
-        </section>
-        <section class="detail-panel text-view" data-panel="history">
-          <p>${escapeHtml(eq.history)}</p>
-        </section>
-        <section class="detail-panel text-view" data-panel="derivation">
-          <p>${escapeHtml(eq.derivation)}</p>
-        </section>
-        <section class="detail-panel uses-view" data-panel="uses">
-          ${eq.uses.map(use => `<span>${escapeHtml(use)}</span>`).join("")}
-        </section>
-        <section class="detail-panel simulation-view" data-panel="simulation">
-          <canvas id="simulationCanvas" width="760" height="320" aria-label="Simulación de ${escapeHtml(eq.name)}"></canvas>
-          <div class="sim-controls" id="simulationControls"></div>
-        </section>
-        <section class="detail-panel metadata-view" data-panel="metadata">
-          ${metadataRow("Autoría", eq.author)}
-          ${metadataRow("Año", eq.year < 0 ? `${Math.abs(eq.year)} a. C.` : eq.year)}
-          ${metadataRow("Área", eq.field)}
-          ${metadataRow("Nivel", eq.level)}
-          ${metadataRow("Variables", eq.variables.join(" · "))}
-        </section>
+        ${sections.map((section, index) => renderSectionPanel(section, eq, index === 0)).join("")}
       </div>
     </section>`;
 
   bindTabs(content, eq);
   modal.showModal();
+  activatePanel(content, eq, activeKey);
   requestMathTypeset();
   scheduleModalFormulaFit(content);
   scheduleSymbolTooltips(content, eq);
 }
 
+function getEquationSections(eq) {
+  if (Array.isArray(eq.sections) && eq.sections.length) {
+    return eq.sections
+      .map(section => normalizeDynamicSection(section, eq))
+      .filter(section => sectionHasContent(section));
+  }
+  return legacySections(eq);
+}
+
+function normalizeDynamicSection(section, eq) {
+  const key = section.key || slugify(section.label || section.file || "seccion");
+  const label = section.label || prettify(key);
+  return {
+    key,
+    label,
+    type: section.type || "markdown",
+    content: section.content || "",
+    path: section.path || "",
+    stylePath: section.stylePath || "",
+    formula: section.type === "formula" ? normalizeFormulaList(eq.formula) : []
+  };
+}
+
+function sectionHasContent(section) {
+  if (section.type === "simulation") return Boolean(section.path);
+  if (section.type === "formula") return Boolean(section.content.trim() || section.formula.length);
+  return Boolean(section.content.trim());
+}
+
+function legacySections(eq) {
+  const sections = [];
+  const formulas = normalizeFormulaList(eq.formula);
+  if (formulas.length) sections.push({ key: "formula", label: "Fórmula", type: "formula", formula: formulas, content: formulas.join("\n\n") });
+  if (eq.meaning) sections.push({ key: "meaning", label: "Significado", type: "text", content: eq.meaning });
+  if (eq.history) sections.push({ key: "history", label: "Historia", type: "text", content: eq.history });
+  if (eq.derivation) sections.push({ key: "derivation", label: "Derivación", type: "text", content: eq.derivation });
+  if (Array.isArray(eq.uses) && eq.uses.length) sections.push({ key: "uses", label: "Usos", type: "uses", content: eq.uses });
+  if (eq.simulation) sections.push({ key: "simulation", label: "Simulación", type: "simulation", content: "" });
+  const metadata = legacyMetadataRows(eq);
+  if (metadata.length) sections.push({ key: "metadata", label: "Ficha", type: "metadata", content: metadata });
+  return sections.length ? sections : [{ key: "sin-contenido", label: "Ficha", type: "text", content: "Sin contenido disponible." }];
+}
+
+function legacyMetadataRows(eq) {
+  const rows = [];
+  if (eq.author) rows.push(["Autoría", eq.author]);
+  if (eq.year !== undefined && eq.year !== "") rows.push(["Año", Number(eq.year) < 0 ? `${Math.abs(Number(eq.year))} a. C.` : eq.year]);
+  if (eq.field) rows.push(["Área", eq.field]);
+  if (eq.level) rows.push(["Nivel", eq.level]);
+  if (Array.isArray(eq.variables) && eq.variables.length) rows.push(["Variables", eq.variables.join(" · ")]);
+  return rows;
+}
+
+function renderSectionPanel(section, eq, active) {
+  const activeClass = active ? " active" : "";
+  const hidden = active ? "" : " hidden";
+  const common = `detail-panel ${panelClass(section)}${activeClass}`;
+  if (section.type === "formula") {
+    const formulas = normalizeFormulaList(section.formula?.length ? section.formula : section.content.split(/\n\s*\n/g).filter(Boolean));
+    return `<section class="${common}" data-panel="${escapeHtml(section.key)}"${hidden}><div class="formula-box modal-formula" aria-label="Fórmula interactiva">${renderFormula(formulas)}</div></section>`;
+  }
+  if (section.type === "simulation") {
+    return `<section class="${common}" data-panel="${escapeHtml(section.key)}" data-simulation-module="${escapeHtml(eq.simulationModule || section.path || "")}" data-simulation-style="${escapeHtml(eq.simulationStylePath || section.stylePath || "")}"${hidden}><canvas id="simulationCanvas" width="760" height="320" aria-label="Simulación de ${escapeHtml(eq.name)}"></canvas><div class="sim-controls" id="simulationControls"></div></section>`;
+  }
+  if (section.type === "uses") {
+    return `<section class="${common}" data-panel="${escapeHtml(section.key)}"${hidden}>${section.content.map(use => `<span>${escapeHtml(use)}</span>`).join("")}</section>`;
+  }
+  if (section.type === "metadata") {
+    return `<section class="${common}" data-panel="${escapeHtml(section.key)}"${hidden}>${section.content.map(([label, value]) => metadataRow(label, value)).join("")}</section>`;
+  }
+  if (section.type === "markdown") {
+    return `<section class="${common}" data-panel="${escapeHtml(section.key)}"${hidden}><div class="markdown-view">${renderMarkdown(section.content)}</div></section>`;
+  }
+  return `<section class="${common}" data-panel="${escapeHtml(section.key)}"${hidden}><p>${escapeHtml(section.content)}</p></section>`;
+}
+
+function panelClass(section) {
+  if (section.type === "formula") return "formula-view";
+  if (section.type === "simulation") return "simulation-view";
+  if (section.type === "uses") return "uses-view";
+  if (section.type === "metadata") return "metadata-view";
+  return "text-view";
+}
+
 function tabButton(panel, label, active = false) {
-  return `<button class="${active ? "active" : ""}" data-target="${panel}" type="button">${label}</button>`;
+  return `<button class="${active ? "active" : ""}" data-target="${escapeHtml(panel)}" type="button">${escapeHtml(label)}</button>`;
 }
 
 function metadataRow(label, value) {
-  return `<div><span>${label}</span><strong>${escapeHtml(String(value))}</strong></div>`;
+  return `<div><span>${escapeHtml(label)}</span><strong>${escapeHtml(String(value))}</strong></div>`;
 }
 
 function bindTabs(content, eq) {
   const buttons = [...content.querySelectorAll(".detail-tabs button")];
+  buttons.forEach(button => button.addEventListener("click", () => activatePanel(content, eq, button.dataset.target)));
+}
+
+function activatePanel(content, eq, target) {
+  const buttons = [...content.querySelectorAll(".detail-tabs button")];
   const panels = [...content.querySelectorAll(".detail-panel")];
-  buttons.forEach(button => {
-    button.addEventListener("click", () => {
-      buttons.forEach(item => item.classList.toggle("active", item === button));
-      panels.forEach(panel => panel.classList.toggle("active", panel.dataset.panel === button.dataset.target));
-      if (button.dataset.target === "simulation") {
-        if (disposeSimulation) disposeSimulation();
-        const canvas = $("#simulationCanvas");
-        const controls = $("#simulationControls");
-        disposeSimulation = mountSimulation(eq.simulation, canvas, controls);
-      }
-      if (button.dataset.target === "formula") {
-        requestMathTypeset();
-        scheduleModalFormulaFit(content);
-        scheduleSymbolTooltips(content, eq);
-      }
-    });
+  buttons.forEach(item => item.classList.toggle("active", item.dataset.target === target));
+  panels.forEach(panel => {
+    const active = panel.dataset.panel === target;
+    panel.classList.toggle("active", active);
+    panel.hidden = !active;
   });
+  const panel = panels.find(item => item.dataset.panel === target);
+  if (!panel) return;
+  if (panel.classList.contains("simulation-view") && !panel.dataset.simulationModule) {
+    if (disposeSimulation) disposeSimulation();
+    const canvas = panel.querySelector("#simulationCanvas");
+    const controls = panel.querySelector("#simulationControls");
+    disposeSimulation = mountSimulation(eq.simulation, canvas, controls);
+  }
+  if (panel.classList.contains("formula-view")) {
+    requestMathTypeset();
+    scheduleModalFormulaFit(content);
+    scheduleSymbolTooltips(content, eq);
+  }
 }
 
 export function closeEquationModal() {
   if (disposeSimulation) disposeSimulation();
   disposeSimulation = null;
   $("#equationModal").close();
+}
+
+function renderMarkdown(markdown) {
+  const lines = String(markdown).replace(/\r\n/g, "\n").split("\n");
+  const html = [];
+  let list = [];
+  const flushList = () => {
+    if (!list.length) return;
+    html.push(`<ul>${list.map(item => `<li>${inlineMarkdown(item)}</li>`).join("")}</ul>`);
+    list = [];
+  };
+  lines.forEach(raw => {
+    const line = raw.trim();
+    if (!line) { flushList(); return; }
+    const heading = line.match(/^(#{1,4})\s+(.+)$/);
+    if (heading) {
+      flushList();
+      const level = Math.min(4, heading[1].length + 2);
+      html.push(`<h${level}>${inlineMarkdown(heading[2])}</h${level}>`);
+      return;
+    }
+    if (line.startsWith("- ")) {
+      list.push(line.slice(2));
+      return;
+    }
+    flushList();
+    html.push(`<p>${inlineMarkdown(line)}</p>`);
+  });
+  flushList();
+  return html.join("");
+}
+
+function inlineMarkdown(value) {
+  return escapeHtml(value)
+    .replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>")
+    .replace(/`([^`]+)`/g, "<code>$1</code>");
 }
 
 function scheduleModalFormulaFit(root) {
@@ -340,8 +407,8 @@ function annotateFormulaSymbols(box, eq) {
 
 function buildEquationGlossary(eq) {
   const glossary = new Map(GLOBAL_SYMBOLS);
-  eq.variables.forEach(entry => {
-    const [rawSymbol, ...rest] = entry.split(":");
+  (eq.variables || []).forEach(entry => {
+    const [rawSymbol, ...rest] = String(entry).split(":");
     const description = rest.join(":").trim();
     rawSymbol.split(/[\/|,]| y | e /).forEach(part => {
       const key = normalizeSymbolKey(part);
@@ -405,12 +472,26 @@ function hideSymbolTooltip() {
 }
 
 function normalizeSymbolKey(value) {
-  return value
+  return String(value)
     .trim()
     .normalize("NFKC")
     .replace(/[₀₁₂₃₄₅₆₇₈₉⁰¹²³⁴⁵⁶⁷⁸⁹0-9]/g, "")
     .replace(/[{}()[\]^_\\]/g, "")
     .trim();
+}
+
+function slugify(value) {
+  return String(value)
+    .normalize("NFKD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "") || "seccion";
+}
+
+function prettify(value) {
+  const text = String(value).replace(/[-_]+/g, " ").trim();
+  return text.charAt(0).toLocaleUpperCase("es") + text.slice(1);
 }
 
 function escapeHtml(value) {
