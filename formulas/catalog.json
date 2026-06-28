@@ -573,6 +573,10 @@
     ],
     "summary": "Caracterizan cuándo una función compleja es diferenciable en sentido complejo mediante sus partes real e imaginaria.",
     "simulation": "cauchy-riemann",
-    "sections": []
+    "sections": [
+      {
+        "file": "formula.tex"
+      }
+    ]
   }
 ]
