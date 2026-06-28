@@ -9,7 +9,12 @@ const MODES = [
   { id: "notebook", label: "▦ Cuaderno" },
   { id: "blueprint", label: "◇ Plano" },
   { id: "parchment", label: "☷ Pergamino" },
-  { id: "terminal", label: "▤ Terminal" }
+  { id: "terminal", label: "▤ Terminal" },
+  { id: "terminal-amber", label: "▤ Ámbar" },
+  { id: "terminal-cyan", label: "▤ Cian" },
+  { id: "laboratory", label: "⌬ Laboratorio" },
+  { id: "cosmos", label: "✦ Cosmos" },
+  { id: "microfilm", label: "▥ Microfilm" }
 ];
 
 let currentIndex = 0;
