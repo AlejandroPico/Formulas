@@ -1,0 +1,15 @@
+{
+  "id": "cauchy-riemann",
+  "name": "Ecuaciones de Cauchy-Riemann",
+  "author": "Augustin-Louis Cauchy y Bernhard Riemann",
+  "year": 1851,
+  "field": "Análisis complejo",
+  "level": "Universidad",
+  "color": "#7b61ff",
+  "simulation": "cauchy-riemann",
+  "formulaText": [
+    "derivada parcial de u respecto a x = derivada parcial de v respecto a y",
+    "derivada parcial de u respecto a y = - derivada parcial de v respecto a x"
+  ],
+  "summary": "Caracterizan cuándo una función compleja es diferenciable en sentido complejo mediante sus partes real e imaginaria."
+}
