@@ -3,6 +3,82 @@ import { state } from "./state.js";
 
 let closeCleanup = null;
 
+const VARIABLE_LABELS = {
+  "newton-second-law": {
+    "F": "fuerza",
+    "m": "masa",
+    "a": "aceleración"
+  },
+  "gravitational-law": {
+    "F": "fuerza",
+    "G": "constante gravitatoria",
+    "m_1": "masa 1",
+    "m_2": "masa 2",
+    "M": "masa central",
+    "r": "distancia",
+    "g": "campo gravitatorio",
+    "Phi": "potencial gravitatorio",
+    "\\Phi": "potencial gravitatorio"
+  },
+  "quadratic-formula": {
+    "a": "coeficiente cuadrático",
+    "b": "coeficiente lineal",
+    "c": "término independiente",
+    "Delta": "discriminante",
+    "\\Delta": "discriminante",
+    "x": "x"
+  },
+  "pythagorean-theorem": {
+    "a": "cateto a",
+    "b": "cateto b",
+    "c": "hipotenusa c",
+    "d": "distancia"
+  },
+  "law-of-sines": {
+    "a": "lado a",
+    "b": "lado b",
+    "c": "lado c",
+    "A": "ángulo A",
+    "B": "ángulo B",
+    "C": "ángulo C",
+    "R": "radio circunscrito"
+  },
+  "law-of-cosines": {
+    "a": "lado a",
+    "b": "lado b",
+    "c": "lado c",
+    "A": "ángulo A",
+    "B": "ángulo B",
+    "C": "ángulo C"
+  },
+  "bernoulli-equation": {
+    "p": "presión",
+    "rho": "densidad",
+    "\\rho": "densidad",
+    "v": "velocidad",
+    "g": "gravedad",
+    "h": "altura",
+    "H": "carga hidráulica"
+  },
+  "continuity-equation": {
+    "A_1": "área 1",
+    "A_2": "área 2",
+    "v_1": "velocidad 1",
+    "v_2": "velocidad 2",
+    "Q": "caudal",
+    "A": "área",
+    "v": "velocidad",
+    "rho": "densidad",
+    "\\rho": "densidad"
+  },
+  "wave-equation": {
+    "u": "perturbación",
+    "t": "tiempo",
+    "x": "posición",
+    "c": "velocidad"
+  }
+};
+
 export function renderEquationGrid(equations, onOpen, viewState = {}) {
   const grid = document.querySelector("#equationGrid");
   const template = document.querySelector("#equationCardTemplate");
@@ -116,7 +192,7 @@ async function loadMarkdown(panel) {
     const text = await response.text();
     box.innerHTML = renderMarkdown(text);
     panel.dataset.loaded = "true";
-  } catch (error) {
+  } catch {
     box.innerHTML = '<p class="section-loading">No se pudo cargar esta sección.</p>';
     panel.dataset.loaded = "error";
   }
@@ -159,19 +235,90 @@ function panelHtml(section, eq, active) {
 
 function getDisplayFormula(eq, mode) {
   const symbolic = asList(eq.formula);
-  const explained = asList(eq.formulaText || eq.formula_text || eq.explainedFormula);
-  if (mode === "explained") return { mode: "explained", formulas: explained.length ? explained : symbolic.map(verbalize) };
+  const explained = asList(eq.formulaText || eq.formula_text || eq.explainedFormula).map(normalizeExplainedFormula);
+  if (mode === "explained") return { mode: "explained", formulas: explained.length ? explained : symbolic.map(line => semiverbalizeFormula(line, eq)) };
   return { mode: "symbolic", formulas: symbolic.length ? symbolic : explained };
 }
 
 function renderFormulaDisplay(display) {
-  if (display.mode === "explained") return display.formulas.map(line => `<div class="formula-words">${escapeHtml(line)}</div>`).join("");
-  if (display.formulas.length === 1) return `\\(${display.formulas[0]}\\)`;
-  return `<div class="formula-stack">${display.formulas.map(line => `<div>\\(${line}\\)</div>`).join("")}</div>`;
+  if (display.mode === "explained") {
+    return `<div class="formula-words-stack">${display.formulas.map(line => `<div class="formula-words-row">${escapeHtml(line)}</div>`).join("")}</div>`;
+  }
+  if (display.formulas.length === 1) return `\(${display.formulas[0]}\)`;
+  return `<div class="formula-stack">${display.formulas.map(line => `<div>\(${line}\)</div>`).join("")}</div>`;
 }
 
-function verbalize(formula) {
-  return String(formula).replaceAll("=", " es igual a ").replaceAll("+", " más ").replaceAll("-", " menos ").replaceAll("/", " dividido por ").replaceAll("*", " por ").replaceAll("^2", " al cuadrado ").replace(/\s+/g, " ").trim();
+function normalizeExplainedFormula(value) {
+  return String(value)
+    .replace(/\bes igual a\b/gi, "=")
+    .replace(/\bpor\b/gi, "·")
+    .replace(/\bdividida por\b/gi, "/")
+    .replace(/\bdividido por\b/gi, "/")
+    .replace(/\bmás\b/gi, "+")
+    .replace(/\bmenos\b/gi, "−")
+    .replace(/\s*([=+−±/·])\s*/g, " $1 ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function semiverbalizeFormula(formula, eq) {
+  const labels = VARIABLE_LABELS[eq.id] || {};
+  let text = String(formula)
+    .replace(/\\mathbf\{([^{}]+)\}/g, "$1")
+    .replace(/\\hat\{([^{}]+)\}/g, "$1")
+    .replace(/\\mathrm\{cte\}/g, "constante")
+    .replace(/\\left|\\right/g, "")
+    .replace(/\\cdots/g, "···")
+    .replace(/\\infty/g, "∞")
+    .replace(/\\Delta/g, "Delta")
+    .replace(/\\Phi/g, "Phi")
+    .replace(/\\rho/g, "rho")
+    .replace(/\\pi/g, "π")
+    .replace(/\\sin/g, "sin")
+    .replace(/\\cos/g, "cos")
+    .replace(/\\nabla/g, "∇");
+
+  text = replaceFractions(text);
+  text = replaceSquareRoots(text);
+  text = text
+    .replace(/\^2/g, "²")
+    .replace(/\^3/g, "³")
+    .replace(/\^\{2\}/g, "²")
+    .replace(/\^\{3\}/g, "³")
+    .replace(/\\pm/g, "±")
+    .replace(/\\,/g, " ")
+    .replace(/[{}]/g, "")
+    .replace(/\*/g, "·")
+    .replace(/-/g, "−");
+
+  Object.entries(labels).sort((a, b) => b[0].length - a[0].length).forEach(([symbol, label]) => {
+    const safe = escapeRegExp(symbol.replace(/^\\/, ""));
+    text = text.replace(new RegExp(`(^|[^A-Za-z0-9_])${safe}(?=$|[^A-Za-z0-9_])`, "g"), `$1${label}`);
+  });
+
+  return normalizeExplainedFormula(text);
+}
+
+function replaceFractions(value) {
+  let text = value;
+  const pattern = /\\frac\{([^{}]+)\}\{([^{}]+)\}/g;
+  let previous = "";
+  while (previous !== text) {
+    previous = text;
+    text = text.replace(pattern, "($1) / ($2)");
+  }
+  return text;
+}
+
+function replaceSquareRoots(value) {
+  let text = value;
+  const pattern = /\\sqrt\{([^{}]+)\}/g;
+  let previous = "";
+  while (previous !== text) {
+    previous = text;
+    text = text.replace(pattern, "√($1)");
+  }
+  return text;
 }
 
 function renderMarkdown(markdown) {
@@ -215,8 +362,8 @@ function contextColor(eq, mode) {
 
 function getWidthLevel(lines) {
   const length = Math.max(1, ...asList(lines).map(line => String(line).length));
-  if (length > 82) return 3;
-  if (length > 42) return 2;
+  if (length > 120) return 3;
+  if (length > 64) return 2;
   return 1;
 }
 
@@ -243,4 +390,5 @@ function loadStyle(path) {
 }
 function encodePath(path) { return String(path).split("/").map(encodeURIComponent).join("/"); }
 function cssEscape(value) { return window.CSS?.escape ? CSS.escape(value) : String(value).replace(/"/g, ""); }
+function escapeRegExp(value) { return String(value).replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); }
 function escapeHtml(value) { return String(value).replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;").replaceAll("'", "&#39;"); }
