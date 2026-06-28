@@ -1,0 +1,10 @@
+{
+  "id": "euler-identity",
+  "name": "Identidad de Euler",
+  "author": "Leonhard Euler",
+  "year": 1748,
+  "field": "Matemáticas",
+  "level": "Universidad inicial",
+  "color": "#d6a8ff",
+  "simulation": "complex"
+}
