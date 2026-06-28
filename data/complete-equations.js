@@ -1,27 +1,5 @@
 export const completedEquations = [
   {
-    id: "quadratic-formula",
-    name: "Fórmula cuadrática",
-    author: "Álgebra clásica",
-    year: 820,
-    field: "Álgebra",
-    level: "ESO",
-    color: "#7b61ff",
-    formula: [
-      String.raw`ax^2+bx+c=0`,
-      String.raw`\Delta=b^2-4ac`,
-      String.raw`x=\frac{-b\pm\sqrt{\Delta}}{2a}`, 
-      String.raw`x_v=-\frac{b}{2a}`
-    ],
-    summary: "Da raíces, discriminante y eje del vértice de cualquier ecuación cuadrática.",
-    meaning: "El discriminante determina si las soluciones son reales dobles, reales distintas o complejas.",
-    variables: ["a,b,c: coeficientes", "Δ: discriminante", "xᵥ: abscisa del vértice"],
-    history: "Aparece en la tradición algebraica medieval y renacentista.",
-    uses: ["Álgebra", "Optimización", "Física elemental", "Modelos parabólicos"],
-    derivation: "Se obtiene completando el cuadrado en ax²+bx+c=0.",
-    simulation: "wave"
-  },
-  {
     id: "bayes-theorem",
     name: "Teorema de Bayes",
     author: "Thomas Bayes",
@@ -62,27 +40,6 @@ export const completedEquations = [
     uses: ["Estadística", "Medición", "Riesgo", "Control de calidad"],
     derivation: "Aparece como límite de sumas normalizadas de variables independientes.",
     simulation: "particles"
-  },
-  {
-    id: "bernoulli-equation",
-    name: "Ecuación de Bernoulli",
-    author: "Daniel Bernoulli",
-    year: 1738,
-    field: "Fluidos",
-    level: "Bachillerato",
-    color: "#5fa0ff",
-    formula: [
-      String.raw`p+\frac{1}{2}\rho v^2+\rho gh=\mathrm{cte}`,
-      String.raw`\frac{p}{\rho g}+\frac{v^2}{2g}+h=H`,
-      String.raw`p_1+\frac{1}{2}\rho v_1^2+\rho gh_1=p_2+\frac{1}{2}\rho v_2^2+\rho gh_2`
-    ],
-    summary: "Conservación de energía mecánica en un fluido ideal, expresada en energía o altura de carga.",
-    meaning: "Presión, velocidad y altura se compensan a lo largo de una línea de corriente.",
-    variables: ["p: presión", "ρ: densidad", "v: velocidad", "h: altura", "H: carga hidráulica"],
-    history: "Fundamental en hidrodinámica clásica.",
-    uses: ["Aerodinámica", "Tuberías", "Venturi", "Hidráulica"],
-    derivation: "Aplica conservación de energía a una partícula de fluido ideal.",
-    simulation: "flow"
   },
   {
     id: "ideal-gas-law",
