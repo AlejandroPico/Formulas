@@ -6,5 +6,9 @@
   "field": "Mecánica clásica",
   "level": "ESO",
   "color": "#ef4444",
-  "simulation": "newton-second-law"
+  "simulation": "newton-second-law",
+  "formulaText": [
+    "fuerza es igual a masa por aceleración",
+    "aceleración es igual a fuerza dividida por masa"
+  ]
 }
