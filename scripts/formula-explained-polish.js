@@ -51,6 +51,8 @@ function polishFormulaText(value) {
     .replace(/\^\{2\}/g, "²")
     .replace(/\^\{3\}/g, "³")
     .replace(/\bes igual a\b/gi, "=")
+    .replace(/\bdividida\s*·\s*/gi, "/ ")
+    .replace(/\bdividido\s*·\s*/gi, "/ ")
     .replace(/\bdividida por\b/gi, "/")
     .replace(/\bdividido por\b/gi, "/")
     .replace(/\bpor\b/gi, "·")
