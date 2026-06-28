@@ -1,0 +1,219 @@
+body[data-theme="chalkboard"] {
+  --bg: #eee9dc;
+  --bg-soft: #ded5c2;
+  --panel: rgba(247, 243, 231, .92);
+  --panel-solid: #f7f3e7;
+  --card: #12362e;
+  --card-strong: #12362e;
+  --text: #f7f1dd;
+  --muted: #d9d1b8;
+  --line: rgba(84, 51, 24, .36);
+  --accent: #f2df9b;
+  --accent-2: #a8d4c1;
+  --accent-3: #a7c5de;
+  --shadow: 0 24px 58px rgba(74, 49, 28, .26);
+  color-scheme: light;
+}
+
+body[data-theme="whiteboard"] {
+  --bg: #eef1f2;
+  --bg-soft: #dfe4e7;
+  --panel: rgba(255, 255, 255, .92);
+  --panel-solid: #ffffff;
+  --card: #fbfcfc;
+  --card-strong: #ffffff;
+  --text: #1f2528;
+  --muted: #677176;
+  --line: rgba(35, 47, 54, .16);
+  --accent: #2d6cdf;
+  --accent-2: #e03b5a;
+  --accent-3: #12a879;
+  --shadow: 0 18px 45px rgba(36, 46, 54, .14);
+  color-scheme: light;
+}
+
+body[data-theme="postit"] {
+  --bg: #f5f1e8;
+  --bg-soft: #e8dfcd;
+  --panel: rgba(255, 252, 242, .92);
+  --panel-solid: #fffaf0;
+  --card: #fff4a9;
+  --card-strong: #fff4a9;
+  --text: #2d2a1f;
+  --muted: #6d654d;
+  --line: rgba(87, 70, 31, .14);
+  --accent: #f2b84b;
+  --accent-2: #ff8da1;
+  --accent-3: #8fc7ff;
+  --shadow: 0 22px 56px rgba(89, 65, 20, .18);
+  color-scheme: light;
+}
+
+body[data-theme="chalkboard"] .orbital-bg,
+body[data-theme="whiteboard"] .orbital-bg,
+body[data-theme="postit"] .orbital-bg {
+  opacity: .32;
+}
+
+body[data-theme="chalkboard"] .equation-card {
+  position: relative;
+  color: #f8f1d8;
+  border: 9px solid #9d6d3d !important;
+  border-radius: 8px;
+  background:
+    radial-gradient(circle at 25% 20%, rgba(255,255,255,.12), transparent 14%),
+    radial-gradient(circle at 78% 72%, rgba(255,255,255,.08), transparent 18%),
+    linear-gradient(135deg, rgba(255,255,255,.07), transparent 28%),
+    var(--board-surface, #12362e) !important;
+  box-shadow:
+    inset 0 0 22px rgba(0,0,0,.28),
+    inset 0 0 0 1px rgba(255,255,255,.06),
+    0 18px 42px rgba(72, 48, 25, .22);
+  backdrop-filter: none;
+}
+
+body[data-theme="chalkboard"] .equation-card::before {
+  content: "";
+  display: block !important;
+  position: absolute;
+  inset: -9px;
+  z-index: -1;
+  border-radius: 10px;
+  background:
+    linear-gradient(90deg, rgba(255,255,255,.18), transparent 18%, rgba(0,0,0,.15) 62%, rgba(255,255,255,.1)),
+    repeating-linear-gradient(90deg, #b98249 0 14px, #93602e 14px 25px, #c69256 25px 38px);
+}
+
+body[data-theme="chalkboard"] .equation-card::after {
+  content: "";
+  display: block !important;
+  position: absolute;
+  inset: 6px;
+  pointer-events: none;
+  background:
+    linear-gradient(120deg, transparent 0 12%, rgba(255,255,255,.055) 13%, transparent 14% 100%),
+    radial-gradient(ellipse at 70% 18%, rgba(255,255,255,.06), transparent 32%);
+  opacity: .8;
+}
+
+body[data-theme="chalkboard"] .equation-card[data-board="green"] { --board-surface: #153c31; }
+body[data-theme="chalkboard"] .equation-card[data-board="blue"] { --board-surface: #102f46; }
+body[data-theme="chalkboard"] .equation-card[data-board="black"] { --board-surface: #242527; }
+
+body[data-theme="chalkboard"] .equation-card h3,
+body[data-theme="chalkboard"] .equation-card .formula-box {
+  color: #fbf4df;
+  text-shadow: 0 0 1px rgba(255,255,255,.75), 0 0 12px rgba(255,255,255,.08);
+  font-family: "Segoe Print", "Bradley Hand", "Comic Sans MS", cursive;
+}
+
+body[data-theme="chalkboard"] .equation-card .formula-box mjx-container {
+  color: #fbf4df !important;
+}
+
+body[data-theme="chalkboard"] .equation-card:hover {
+  transform: translateY(-3px) rotate(var(--card-tilt, 0deg));
+  border-color: #b78046 !important;
+}
+
+body[data-theme="whiteboard"] .equation-card {
+  color: #1e2529;
+  border: 7px solid #cbd2d6 !important;
+  border-radius: 10px;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.98), rgba(245,248,249,.95)) !important;
+  box-shadow:
+    inset 0 0 0 1px rgba(255,255,255,.9),
+    inset 0 -10px 18px rgba(44, 59, 66, .035),
+    0 18px 40px rgba(43, 54, 61, .13);
+  backdrop-filter: none;
+}
+
+body[data-theme="whiteboard"] .equation-card h3,
+body[data-theme="whiteboard"] .equation-card .formula-box {
+  font-family: "Segoe Print", "Trebuchet MS", system-ui, sans-serif;
+  color: #1d252a;
+}
+
+body[data-theme="whiteboard"] .equation-card .formula-box mjx-container {
+  color: var(--marker-color, #1d252a) !important;
+}
+
+body[data-theme="whiteboard"] .equation-card[data-marker="blue"] { --marker-color: #1f63c7; }
+body[data-theme="whiteboard"] .equation-card[data-marker="red"] { --marker-color: #c4314b; }
+body[data-theme="whiteboard"] .equation-card[data-marker="green"] { --marker-color: #14885f; }
+body[data-theme="whiteboard"] .equation-card[data-marker="black"] { --marker-color: #1d252a; }
+
+body[data-theme="postit"] .equation-card {
+  position: relative;
+  color: #2d2a1f;
+  border: 0 !important;
+  border-radius: 4px 3px 5px 3px;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.26), transparent 18%),
+    var(--note-surface, #fff4a9) !important;
+  box-shadow:
+    0 18px 28px rgba(80, 57, 21, .16),
+    0 2px 0 rgba(255,255,255,.42) inset;
+  transform: rotate(var(--card-tilt, -.35deg));
+  backdrop-filter: none;
+}
+
+body[data-theme="postit"] .equation-card::before {
+  content: "";
+  display: block !important;
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 18px;
+  background: rgba(255,255,255,.24);
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+body[data-theme="postit"] .equation-card h3,
+body[data-theme="postit"] .equation-card .formula-box {
+  font-family: "Segoe Print", "Bradley Hand", "Comic Sans MS", cursive;
+}
+
+body[data-theme="postit"] .equation-card[data-note="yellow"] { --note-surface: #fff2a4; }
+body[data-theme="postit"] .equation-card[data-note="blue"] { --note-surface: #cfeaff; }
+body[data-theme="postit"] .equation-card[data-note="pink"] { --note-surface: #ffd4df; }
+body[data-theme="postit"] .equation-card[data-note="green"] { --note-surface: #d9f5c8; }
+body[data-theme="postit"] .equation-card[data-note="peach"] { --note-surface: #ffd8aa; }
+
+body[data-theme="postit"] .equation-card:hover {
+  transform: translateY(-2px) rotate(var(--card-tilt, -.35deg));
+}
+
+body[data-theme="chalkboard"] .equation-modal {
+  background: #15362f;
+  border: 10px solid #9d6d3d;
+  color: #f8f1d8;
+  box-shadow: 0 30px 80px rgba(55, 36, 20, .42), inset 0 0 26px rgba(0,0,0,.28);
+}
+
+body[data-theme="chalkboard"] .detail-tabs button,
+body[data-theme="chalkboard"] .detail-header h2,
+body[data-theme="chalkboard"] .detail-panel {
+  color: #f8f1d8;
+}
+
+body[data-theme="chalkboard"] .detail-tabs button:not(.active),
+body[data-theme="chalkboard"] .detail-panel.text-view p,
+body[data-theme="chalkboard"] .use-example p,
+body[data-theme="chalkboard"] .metadata-view > div span {
+  color: rgba(248, 241, 216, .72);
+}
+
+body[data-theme="whiteboard"] .equation-modal {
+  background: #fbfcfc;
+  border: 8px solid #cbd2d6;
+  color: #1f2528;
+}
+
+body[data-theme="postit"] .equation-modal {
+  background: #fff6bd;
+  color: #2d2a1f;
+  border: 0;
+  border-radius: 6px;
+}
