@@ -1,0 +1,247 @@
+body[data-theme="terminal-amber"] {
+  --bg: #0e0802;
+  --bg-soft: #1b1005;
+  --panel: rgba(26, 13, 3, .92);
+  --panel-solid: #1c1005;
+  --card: #140b03;
+  --card-strong: #140b03;
+  --text: #ffbf6a;
+  --muted: #c78a46;
+  --line: rgba(255, 179, 88, .2);
+  --accent: #ffb458;
+  --accent-2: #ffdf84;
+  --accent-3: #ff7f3f;
+  --shadow: 0 28px 84px rgba(0, 0, 0, .62);
+  color-scheme: dark;
+}
+
+body[data-theme="terminal-cyan"] {
+  --bg: #02080d;
+  --bg-soft: #06131b;
+  --panel: rgba(3, 18, 26, .92);
+  --panel-solid: #061822;
+  --card: #06151e;
+  --card-strong: #06151e;
+  --text: #9beaff;
+  --muted: #67b4c6;
+  --line: rgba(135, 238, 255, .2);
+  --accent: #87eeff;
+  --accent-2: #a7ffcf;
+  --accent-3: #d2f4ff;
+  --shadow: 0 28px 84px rgba(0, 0, 0, .62);
+  color-scheme: dark;
+}
+
+body[data-theme="laboratory"] {
+  --bg: #eef3f4;
+  --bg-soft: #dce7e9;
+  --panel: rgba(252, 255, 255, .92);
+  --panel-solid: #fcffff;
+  --card: #fbffff;
+  --card-strong: #ffffff;
+  --text: #172327;
+  --muted: #66777d;
+  --line: rgba(30, 85, 96, .14);
+  --accent: #00a8b8;
+  --accent-2: #2d6cdf;
+  --accent-3: #30a46c;
+  --shadow: 0 22px 58px rgba(38, 62, 68, .14);
+  color-scheme: light;
+}
+
+body[data-theme="cosmos"] {
+  --bg: #050711;
+  --bg-soft: #0b1022;
+  --panel: rgba(11, 16, 34, .9);
+  --panel-solid: #0b1022;
+  --card: #0d142b;
+  --card-strong: #0d142b;
+  --text: #f3f1ff;
+  --muted: #b5b2d6;
+  --line: rgba(210, 200, 255, .16);
+  --accent: #a78bfa;
+  --accent-2: #6ee7f9;
+  --accent-3: #f6d365;
+  --shadow: 0 28px 90px rgba(0, 0, 0, .56);
+  color-scheme: dark;
+}
+
+body[data-theme="microfilm"] {
+  --bg: #101311;
+  --bg-soft: #171b18;
+  --panel: rgba(245, 238, 208, .9);
+  --panel-solid: #f5eed0;
+  --card: #eee7c6;
+  --card-strong: #eee7c6;
+  --text: #27291f;
+  --muted: #6f705d;
+  --line: rgba(33, 36, 26, .18);
+  --accent: #6b6f35;
+  --accent-2: #9b702f;
+  --accent-3: #384f36;
+  --shadow: 0 24px 70px rgba(0, 0, 0, .42);
+  color-scheme: light;
+}
+
+body[data-theme="terminal-amber"] .orbital-bg,
+body[data-theme="terminal-cyan"] .orbital-bg,
+body[data-theme="laboratory"] .orbital-bg,
+body[data-theme="cosmos"] .orbital-bg,
+body[data-theme="microfilm"] .orbital-bg {
+  opacity: .28;
+}
+
+body[data-theme="parchment"] .equation-card {
+  position: relative;
+  overflow: hidden;
+  border: 0 !important;
+  border-radius: 18px 10px 18px 10px;
+  background:
+    radial-gradient(circle at 12% 10%, rgba(88, 49, 18, .18), transparent 12%),
+    radial-gradient(circle at 86% 78%, rgba(88, 49, 18, .14), transparent 18%),
+    radial-gradient(circle at 50% 20%, rgba(255, 255, 255, .28), transparent 36%),
+    linear-gradient(90deg, rgba(123, 83, 37, .18), transparent 8%, transparent 92%, rgba(123, 83, 37, .14)),
+    #f1d7a1 !important;
+  box-shadow:
+    0 20px 42px rgba(83, 50, 19, .24),
+    inset 0 0 22px rgba(98, 55, 19, .12),
+    inset 0 0 0 1px rgba(110, 72, 28, .18);
+}
+
+body[data-theme="parchment"] .equation-card::before,
+body[data-theme="parchment"] .equation-card::after {
+  content: "";
+  display: block !important;
+  position: absolute;
+  pointer-events: none;
+}
+
+body[data-theme="parchment"] .equation-card::before {
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(89, 55, 23, .18), transparent 8%, transparent 92%, rgba(89, 55, 23, .13)),
+    repeating-linear-gradient(0deg, transparent 0 13px, rgba(92, 56, 20, .025) 13px 14px);
+  mix-blend-mode: multiply;
+}
+
+body[data-theme="parchment"] .equation-card::after {
+  width: 46px;
+  height: 46px;
+  right: -6px;
+  bottom: -6px;
+  border-radius: 14px 0 0 0;
+  background: linear-gradient(135deg, rgba(121, 77, 34, .22), rgba(255, 247, 220, .46));
+  box-shadow: -6px -6px 12px rgba(82, 50, 19, .12);
+}
+
+body[data-theme="parchment"] .equation-modal {
+  background:
+    radial-gradient(circle at 12% 10%, rgba(88, 49, 18, .16), transparent 14%),
+    radial-gradient(circle at 88% 82%, rgba(88, 49, 18, .14), transparent 18%),
+    linear-gradient(90deg, rgba(123, 83, 37, .18), transparent 6%, transparent 94%, rgba(123, 83, 37, .16)),
+    #f1d7a1;
+  color: #382715;
+  border: 0;
+  border-radius: 22px 12px 22px 12px;
+  box-shadow: 0 30px 80px rgba(83, 50, 19, .34), inset 0 0 34px rgba(98, 55, 19, .12);
+}
+
+body[data-theme="terminal-amber"] .equation-card,
+body[data-theme="terminal-cyan"] .equation-card,
+body[data-theme="terminal"] .equation-card {
+  border-radius: 5px;
+  background:
+    linear-gradient(rgba(255,255,255,.045) 50%, transparent 50%),
+    radial-gradient(circle at 50% 0, color-mix(in srgb, var(--accent) 12%, transparent), transparent 46%),
+    var(--card) !important;
+  background-size: 100% 4px, 100% 100%, 100% 100%;
+  box-shadow: 0 18px 42px rgba(0,0,0,.48), inset 0 0 24px color-mix(in srgb, var(--accent) 7%, transparent);
+  font-family: Consolas, "Courier New", monospace;
+}
+
+body[data-theme="terminal-amber"] .equation-card h3,
+body[data-theme="terminal-amber"] .equation-card .formula-box,
+body[data-theme="terminal-cyan"] .equation-card h3,
+body[data-theme="terminal-cyan"] .equation-card .formula-box {
+  font-family: Consolas, "Courier New", monospace;
+  color: var(--text);
+  text-shadow: 0 0 12px color-mix(in srgb, var(--accent) 28%, transparent);
+}
+
+body[data-theme="terminal-amber"] .equation-card .formula-box mjx-container,
+body[data-theme="terminal-cyan"] .equation-card .formula-box mjx-container {
+  color: var(--text) !important;
+}
+
+body[data-theme="terminal-amber"] .equation-modal,
+body[data-theme="terminal-cyan"] .equation-modal {
+  background: var(--card);
+  color: var(--text);
+  border: 1px solid var(--line);
+  box-shadow: 0 30px 84px rgba(0,0,0,.62), inset 0 0 28px color-mix(in srgb, var(--accent) 8%, transparent);
+}
+
+body[data-theme="terminal-amber"] .detail-tabs button,
+body[data-theme="terminal-amber"] .detail-header h2,
+body[data-theme="terminal-amber"] .detail-panel,
+body[data-theme="terminal-amber"] .modal-formula mjx-container,
+body[data-theme="terminal-cyan"] .detail-tabs button,
+body[data-theme="terminal-cyan"] .detail-header h2,
+body[data-theme="terminal-cyan"] .detail-panel,
+body[data-theme="terminal-cyan"] .modal-formula mjx-container {
+  color: var(--text) !important;
+}
+
+body[data-theme="laboratory"] .equation-card {
+  border: 1px solid rgba(20, 114, 129, .16) !important;
+  border-radius: 16px;
+  background:
+    linear-gradient(135deg, rgba(0,168,184,.09), transparent 34%),
+    linear-gradient(180deg, rgba(255,255,255,.98), rgba(239,248,250,.94)) !important;
+  box-shadow: 0 18px 42px rgba(38, 62, 68, .12), inset 0 0 0 1px rgba(255,255,255,.82);
+}
+
+body[data-theme="laboratory"] .equation-card h3,
+body[data-theme="laboratory"] .equation-card .formula-box {
+  font-family: "Trebuchet MS", system-ui, sans-serif;
+  color: #172327;
+}
+
+body[data-theme="laboratory"] .equation-card .formula-box mjx-container { color: #0c6974 !important; }
+body[data-theme="laboratory"] .equation-modal { background: #fcffff; color: #172327; border: 1px solid rgba(20, 114, 129, .16); }
+
+body[data-theme="cosmos"] .equation-card {
+  border: 1px solid rgba(210, 200, 255, .14) !important;
+  border-radius: 18px;
+  background:
+    radial-gradient(circle at 18% 22%, rgba(255,255,255,.30) 0 1px, transparent 2px),
+    radial-gradient(circle at 72% 28%, rgba(255,255,255,.22) 0 1px, transparent 2px),
+    radial-gradient(circle at 48% 82%, rgba(167,139,250,.18), transparent 26%),
+    linear-gradient(145deg, #111832, #090d1d) !important;
+  box-shadow: 0 22px 54px rgba(0,0,0,.42), inset 0 0 28px rgba(167,139,250,.06);
+}
+
+body[data-theme="cosmos"] .equation-card h3,
+body[data-theme="cosmos"] .equation-card .formula-box { color: #f3f1ff; }
+body[data-theme="cosmos"] .equation-card .formula-box mjx-container { color: #f3f1ff !important; }
+body[data-theme="cosmos"] .equation-modal { background: linear-gradient(145deg, #111832, #090d1d); color: #f3f1ff; border: 1px solid rgba(210, 200, 255, .14); }
+body[data-theme="cosmos"] .detail-tabs button,
+body[data-theme="cosmos"] .detail-header h2,
+body[data-theme="cosmos"] .detail-panel,
+body[data-theme="cosmos"] .modal-formula mjx-container { color: #f3f1ff !important; }
+
+body[data-theme="microfilm"] .equation-card {
+  border: 8px solid #181b15 !important;
+  border-radius: 6px;
+  background:
+    radial-gradient(circle at 22% 18%, rgba(0,0,0,.07), transparent 12%),
+    repeating-linear-gradient(90deg, rgba(0,0,0,.08) 0 1px, transparent 1px 18px),
+    #eee7c6 !important;
+  box-shadow: 0 22px 52px rgba(0,0,0,.28), inset 0 0 18px rgba(0,0,0,.07);
+  filter: sepia(.16) contrast(1.02);
+}
+
+body[data-theme="microfilm"] .equation-card h3,
+body[data-theme="microfilm"] .equation-card .formula-box { font-family: Georgia, "Times New Roman", serif; color: #27291f; }
+body[data-theme="microfilm"] .equation-card .formula-box mjx-container { color: #27291f !important; }
+body[data-theme="microfilm"] .equation-modal { background: #eee7c6; color: #27291f; border: 8px solid #181b15; }
