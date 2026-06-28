@@ -1,0 +1,10 @@
+{
+  "id": "gravitational-law",
+  "name": "Ley de gravitación universal",
+  "author": "Isaac Newton",
+  "year": 1687,
+  "field": "Mecánica clásica",
+  "level": "Bachillerato",
+  "color": "#77d9ff",
+  "simulation": "gravity"
+}
