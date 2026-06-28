@@ -75,8 +75,9 @@ function assignThematicVariants() {
   });
 }
 
-function pickIndex(hash, shift, length) {
-  return ((hash >>> shift) ^ (hash >>> Math.max(0, shift - 5))) % length;
+function pickIndex(hash, salt, length) {
+  const mixed = Math.imul(hash ^ Math.imul(salt + 1, 0x9e3779b9), 0x85ebca6b) >>> 0;
+  return ((mixed ^ (mixed >>> 16)) >>> 0) % length;
 }
 
 function setActiveCardStyle(card) {
