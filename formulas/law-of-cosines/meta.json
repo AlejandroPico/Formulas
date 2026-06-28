@@ -1,0 +1,10 @@
+{
+  "id": "law-of-cosines",
+  "name": "Ley de los cosenos",
+  "author": "Trigonometría clásica",
+  "year": 1000,
+  "field": "Trigonometría",
+  "level": "Bachillerato",
+  "color": "#f97316",
+  "simulation": "cosines"
+}
