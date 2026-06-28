@@ -1,7 +1,11 @@
-const BOARDS = ["green", "blue", "black"];
-const MARKERS = ["black", "blue", "green", "red"];
-const NOTES = ["yellow", "blue", "pink", "green", "peach"];
-const TILTS = ["-.7deg", ".45deg", "-.25deg", ".65deg", "-.45deg", ".2deg"];
+const BOARDS = ["green", "blue", "black", "green", "blue"];
+const MARKERS = ["blue", "green", "red", "teal", "violet", "orange", "black", "blue", "green", "red"];
+const NOTES = [
+  "yellow", "coral", "peach", "sand", "mint", "sage", "fog", "sky",
+  "blue", "navy", "purple", "lavender", "salmon", "clay", "chalk", "rose",
+  "lemon", "aqua", "olive", "plum"
+];
+const TILTS = ["-.7deg", ".45deg", "-.25deg", ".65deg", "-.45deg", ".2deg", "-.12deg", ".35deg"];
 
 const grid = document.querySelector("#equationGrid");
 
