@@ -525,7 +525,11 @@
     ],
     "summary": "Convierte el principio de accion estacionaria en ecuaciones de movimiento.",
     "simulation": "euler-lagrange",
-    "sections": []
+    "sections": [
+      {
+        "file": "formula.tex"
+      }
+    ]
   },
   {
     "id": "fourier-transform",
