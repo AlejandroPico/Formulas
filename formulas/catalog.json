@@ -248,7 +248,7 @@
     ],
     "formulaText": [
       "fuerza = masa · aceleración",
-      "aceleración = fuerza dividida · masa"
+      "aceleración = fuerza / masa"
     ],
     "summary": "Relaciona fuerza neta, masa y aceleración.",
     "simulation": "newton-second-law",
