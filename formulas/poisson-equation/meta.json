@@ -1,0 +1,15 @@
+{
+  "id": "poisson-equation",
+  "name": "Ecuación de Poisson",
+  "author": "Siméon Denis Poisson",
+  "year": 1813,
+  "field": "Ecuaciones diferenciales",
+  "level": "Universidad",
+  "color": "#3b82f6",
+  "simulation": "poisson-equation",
+  "formulaText": [
+    "laplaciano de phi = fuente",
+    "laplaciano de potencial electrostatico = menos densidad de carga dividido por permitividad"
+  ],
+  "summary": "Relaciona la curvatura de un potencial con una densidad de fuente, como carga, masa o calor."
+}
