@@ -1365,13 +1365,21 @@
     "level": "Universidad",
     "color": "#f97316",
     "folder": "formulas/general-relativity",
-    "formula": [],
+    "formula": [
+      "G_{\\mu\\nu}+\\Lambda g_{\\mu\\nu}=\\frac{8\\pi G}{c^4}T_{\\mu\\nu}",
+      "G_{\\mu\\nu}=R_{\\mu\\nu}-\\frac{1}{2}Rg_{\\mu\\nu}",
+      "r_s=\\frac{2GM}{c^2}"
+    ],
     "formulaText": [
       "tensor de Einstein + constante cosmológica · métrica = constante de acoplamiento · tensor energía momento",
       "geometría del espacio-tiempo = contenido de energía y momento"
     ],
     "summary": "Describe la gravitación como curvatura del espacio-tiempo producida por energía y momento.",
     "simulation": "general-relativity",
-    "sections": []
+    "sections": [
+      {
+        "file": "formula.tex"
+      }
+    ]
   }
 ]
