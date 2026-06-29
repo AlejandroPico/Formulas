@@ -1,0 +1,15 @@
+{
+  "id": "convolution",
+  "name": "Convolución",
+  "author": "Análisis matemático clásico",
+  "year": 1800,
+  "field": "Análisis y señales",
+  "level": "Universidad inicial",
+  "color": "#22c55e",
+  "simulation": "convolution",
+  "formulaText": [
+    "f convolucionada con g en t = integral de f de tau por g de t menos tau respecto a tau",
+    "en discreto: suma de f[k] por g[n-k]"
+  ],
+  "summary": "Combina dos funciones midiendo el solapamiento entre una señal y otra desplazada."
+}
