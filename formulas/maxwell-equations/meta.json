@@ -1,0 +1,17 @@
+{
+  "id": "maxwell-equations",
+  "name": "Ecuaciones de Maxwell",
+  "author": "James Clerk Maxwell",
+  "year": 1865,
+  "field": "Electromagnetismo",
+  "level": "Universidad",
+  "color": "#ffd37a",
+  "simulation": "maxwell-equations",
+  "formulaText": [
+    "divergencia de E = densidad de carga dividido por permitividad del vacio",
+    "divergencia de B = 0",
+    "rotacional de E = menos derivada temporal de B",
+    "rotacional de B = permeabilidad por corriente mas termino de desplazamiento"
+  ],
+  "summary": "Unifican electricidad, magnetismo y luz en un marco de campos electromagneticos."
+}
