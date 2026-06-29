@@ -18,7 +18,11 @@ const LEGACY_DATA_MODULES = [
 const MIGRATED_FORMULA_IDS = new Set([
   "fourier-transform",
   "cauchy-riemann",
-  "euler-lagrange"
+  "euler-lagrange",
+  "hamilton-equations",
+  "gauss-theorem",
+  "stokes-theorem",
+  "cauchy-integral-formula"
 ]);
 
 let equations = [];
