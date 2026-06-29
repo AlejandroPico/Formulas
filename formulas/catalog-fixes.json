@@ -1,0 +1,43 @@
+[
+  {
+    "id": "stokes-theorem",
+    "name": "Teorema de Stokes",
+    "author": "George Gabriel Stokes",
+    "year": 1854,
+    "field": "Cálculo vectorial",
+    "level": "Universidad",
+    "color": "#a855f7",
+    "folder": "formulas/stokes-theorem",
+    "formula": [
+      "\\oint_{\\partial S}\\mathbf F\\cdot d\\mathbf r=\\iint_S(\\nabla\\times\\mathbf F)\\cdot\\mathbf n\\,dS",
+      "\\nabla\\times\\mathbf F=\\bigl(\\frac{\\partial F_z}{\\partial y}-\\frac{\\partial F_y}{\\partial z},\\frac{\\partial F_x}{\\partial z}-\\frac{\\partial F_z}{\\partial x},\\frac{\\partial F_y}{\\partial x}-\\frac{\\partial F_x}{\\partial y}\\bigr)"
+    ],
+    "formulaText": [
+      "integral de F a lo largo de la frontera = flujo del rotacional de F · la superficie"
+    ],
+    "summary": "Relaciona la circulación de un campo por una curva cerrada con el rotacional acumulado sobre una superficie que la tiene como borde.",
+    "simulation": "stokes-theorem"
+  },
+  {
+    "id": "lorentz-transformations",
+    "name": "Transformaciones de Lorentz",
+    "author": "Hendrik Lorentz",
+    "year": 1904,
+    "field": "Relatividad",
+    "level": "Universidad inicial",
+    "color": "#ec4899",
+    "folder": "formulas/lorentz-transformations",
+    "formula": [
+      "x'=\\gamma(x-vt)",
+      "t'=\\gamma\\bigl(t-\\frac{vx}{c^2}\\bigr)",
+      "\\gamma=\\frac{1}{\\sqrt{1-\\frac{v^2}{c^2}}}"
+    ],
+    "formulaText": [
+      "x prima = gamma · (x - velocidad · tiempo)",
+      "t prima = gamma · (tiempo - velocidad · x / c²)",
+      "gamma = 1 / raíz de (1 - v²/c²)"
+    ],
+    "summary": "Relacionan espacio y tiempo medidos por observadores inerciales en movimiento relativo.",
+    "simulation": "lorentz-transformations"
+  }
+]
