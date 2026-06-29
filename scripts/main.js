@@ -32,7 +32,10 @@ const MIGRATED_FORMULA_IDS = new Set([
   "maxwell-equations",
   "navier-stokes",
   "heat-equation",
-  "lorentz-force"
+  "lorentz-force",
+  "mass-energy-equivalence",
+  "general-relativity",
+  "friedmann-equations"
 ]);
 
 const MIGRATED_FORMULA_NAMES = new Set([
@@ -52,7 +55,10 @@ const MIGRATED_FORMULA_NAMES = new Set([
   "ecuaciones de maxwell",
   "navier stokes",
   "ecuacion del calor",
-  "fuerza de lorentz"
+  "fuerza de lorentz",
+  "equivalencia masa energia",
+  "relatividad general de einstein",
+  "ecuaciones de friedmann"
 ]);
 
 let equations = [];
