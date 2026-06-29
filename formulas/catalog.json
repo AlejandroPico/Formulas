@@ -934,6 +934,24 @@
     ]
   },
   {
+    "id": "kirchhoff-laws",
+    "name": "Leyes de Kirchhoff",
+    "author": "Gustav Kirchhoff",
+    "year": 1845,
+    "field": "Circuitos eléctricos",
+    "level": "Bachillerato",
+    "color": "#3b82f6",
+    "folder": "formulas/kirchhoff-laws",
+    "formula": [],
+    "formulaText": [
+      "suma de corrientes que entran en un nodo = suma de corrientes que salen del nodo",
+      "suma algebraica de tensiones en una malla cerrada = 0"
+    ],
+    "summary": "Expresan conservación de carga en nodos y conservación de energía en mallas de un circuito.",
+    "simulation": "kirchhoff-laws",
+    "sections": []
+  },
+  {
     "id": "cauchy-riemann",
     "name": "Ecuaciones de Cauchy-Riemann",
     "author": "Augustin-Louis Cauchy y Bernhard Riemann",
