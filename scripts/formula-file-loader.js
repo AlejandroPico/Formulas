@@ -2,6 +2,7 @@ import { formulaManifest } from "../formulas/manifest.js";
 
 const FORMULAS_ROOT = "formulas";
 const CATALOG_PATH = "formulas/catalog.json";
+const RECENT_CATALOG_PATH = "formulas/catalog-recent.json";
 
 const STANDARD_SECTIONS = [
   { file: "formula.tex", key: "formula", label: "Fórmula", type: "formula", order: 10 },
@@ -27,10 +28,9 @@ export async function loadFormulaFiles(onProgress = () => {}) {
 
 async function loadCatalog() {
   try {
-    const response = await fetch(CATALOG_PATH, { cache: "no-cache" });
-    if (!response.ok) throw new Error(`No se pudo cargar ${CATALOG_PATH}`);
-    const payload = await response.json();
-    return Array.isArray(payload) ? payload : [];
+    const catalog = await loadJsonArray(CATALOG_PATH);
+    const recent = await loadOptionalJsonArray(RECENT_CATALOG_PATH);
+    return mergeCatalogEntries(catalog, recent);
   } catch (error) {
     console.warn("No se pudo cargar formulas/catalog.json; usando manifest como respaldo.", error);
     return recordsFromManifest().map(record => ({
@@ -43,6 +43,34 @@ async function loadCatalog() {
       formula: []
     }));
   }
+}
+
+async function loadJsonArray(path) {
+  const response = await fetch(path, { cache: "no-cache" });
+  if (!response.ok) throw new Error(`No se pudo cargar ${path}`);
+  const payload = await response.json();
+  return Array.isArray(payload) ? payload : [];
+}
+
+async function loadOptionalJsonArray(path) {
+  try {
+    return await loadJsonArray(path);
+  } catch {
+    return [];
+  }
+}
+
+function mergeCatalogEntries(...sets) {
+  const byId = new Map();
+  const byName = new Map();
+  for (const entry of sets.flat()) {
+    if (!entry?.id) continue;
+    const nameKey = sectionKeyFromFile(entry.name || entry.id);
+    if (byName.has(nameKey)) byId.delete(byName.get(nameKey));
+    byName.set(nameKey, entry.id);
+    byId.set(entry.id, entry);
+  }
+  return [...byId.values()];
 }
 
 function recordsFromCatalog(catalog) {
