@@ -565,14 +565,22 @@
     "level": "Universidad",
     "color": "#3b82f6",
     "folder": "formulas/poisson-equation",
-    "formula": [],
+    "formula": [
+      "\\nabla^2\\phi=f",
+      "\\nabla^2\\phi=-\\frac{\\rho}{\\varepsilon_0}",
+      "\\Delta u=f"
+    ],
     "formulaText": [
       "laplaciano de phi = fuente",
       "laplaciano de potencial electrostatico = − densidad de carga / permitividad"
     ],
     "summary": "Relaciona la curvatura de un potencial con una densidad de fuente, como carga, masa o calor.",
     "simulation": "poisson-equation",
-    "sections": []
+    "sections": [
+      {
+        "file": "formula.tex"
+      }
+    ]
   },
   {
     "id": "fourier-transform",
