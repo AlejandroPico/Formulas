@@ -1318,13 +1318,21 @@
     "level": "Bachillerato",
     "color": "#eab308",
     "folder": "formulas/mass-energy-equivalence",
-    "formula": [],
+    "formula": [
+      "E=mc^2",
+      "E_0=m_0c^2",
+      "\\Delta E=\\Delta m\\,c^2"
+    ],
     "formulaText": [
       "energía = masa · velocidad de la luz al cuadrado",
       "energía en reposo = masa en reposo · c al cuadrado"
     ],
     "summary": "Expresa que la masa en reposo contiene una energía equivalente proporcional a c al cuadrado.",
     "simulation": "mass-energy-equivalence",
-    "sections": []
+    "sections": [
+      {
+        "file": "formula.tex"
+      }
+    ]
   }
 ]
