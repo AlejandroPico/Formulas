@@ -35,7 +35,9 @@ const MIGRATED_FORMULA_IDS = new Set([
   "lorentz-force",
   "mass-energy-equivalence",
   "general-relativity",
-  "friedmann-equations"
+  "friedmann-equations",
+  "energy-momentum-relation",
+  "lorentz-transformations"
 ]);
 
 const MIGRATED_FORMULA_NAMES = new Set([
@@ -58,7 +60,9 @@ const MIGRATED_FORMULA_NAMES = new Set([
   "fuerza de lorentz",
   "equivalencia masa energia",
   "relatividad general de einstein",
-  "ecuaciones de friedmann"
+  "ecuaciones de friedmann",
+  "relacion energia momento",
+  "transformaciones de lorentz"
 ]);
 
 let equations = [];
