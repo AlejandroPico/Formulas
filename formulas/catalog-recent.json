@@ -1,0 +1,65 @@
+[
+  {
+    "id": "riemann-zeta-function",
+    "name": "Función Zeta de Riemann",
+    "author": "Bernhard Riemann",
+    "year": 1859,
+    "field": "Teoría de números",
+    "level": "Avanzado",
+    "color": "#ec4899",
+    "folder": "formulas/riemann-zeta-function",
+    "formula": [
+      "\\zeta(s)=\\sum_{n=1}^{\\infty}\\frac{1}{n^s}\\quad(\\operatorname{Re}(s)>1)",
+      "\\zeta(s)=\\prod_{p\\ \\mathrm{primo}}\\frac{1}{1-p^{-s}}",
+      "\\xi(s)=\\frac{1}{2}s(s-1)\\pi^{-s/2}\\Gamma\\left(\\frac{s}{2}\\right)\\zeta(s)"
+    ],
+    "formulaText": [
+      "zeta de s = suma de 1 / n elevado a s",
+      "zeta de s = producto sobre primos de 1 / (1 - p elevado a -s)"
+    ],
+    "summary": "Extiende una serie de potencias al plano complejo y conecta análisis complejo con la distribución de los números primos.",
+    "simulation": "riemann-zeta-function"
+  },
+  {
+    "id": "poisson-equation",
+    "name": "Ecuación de Poisson",
+    "author": "Siméon Denis Poisson",
+    "year": 1813,
+    "field": "Ecuaciones diferenciales",
+    "level": "Universidad",
+    "color": "#3b82f6",
+    "folder": "formulas/poisson-equation",
+    "formula": [
+      "\\nabla^2\\phi=f",
+      "\\nabla^2\\phi=-\\frac{\\rho}{\\varepsilon_0}",
+      "\\Delta u=f"
+    ],
+    "formulaText": [
+      "laplaciano de phi = fuente",
+      "laplaciano de potencial electrostático = - densidad de carga / permitividad"
+    ],
+    "summary": "Relaciona la curvatura de un potencial con una densidad de fuente, como carga, masa o calor.",
+    "simulation": "poisson-equation"
+  },
+  {
+    "id": "convolution",
+    "name": "Convolución",
+    "author": "Análisis matemático clásico",
+    "year": 1800,
+    "field": "Análisis y señales",
+    "level": "Universidad inicial",
+    "color": "#22c55e",
+    "folder": "formulas/convolution",
+    "formula": [
+      "(f*g)(t)=\\int_{-\\infty}^{\\infty}f(\\tau)g(t-\\tau)\\,d\\tau",
+      "(f*g)[n]=\\sum_{k=-\\infty}^{\\infty}f[k]g[n-k]",
+      "\\mathcal F\\{f*g\\}=\\mathcal F\\{f\\}\\,\\mathcal F\\{g\\}"
+    ],
+    "formulaText": [
+      "f convolucionada con g en t = integral de f(tau) · g(t - tau) d tau",
+      "en discreto: suma de f[k] · g[n-k]"
+    ],
+    "summary": "Combina dos funciones midiendo el solapamiento entre una señal y otra desplazada.",
+    "simulation": "convolution"
+  }
+]
