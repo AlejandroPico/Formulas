@@ -605,6 +605,32 @@
     ]
   },
   {
+    "id": "hamilton-equations",
+    "name": "Ecuaciones de Hamilton",
+    "author": "William Rowan Hamilton",
+    "year": 1834,
+    "field": "Mecánica analítica",
+    "level": "Universidad",
+    "color": "#c973ff",
+    "folder": "formulas/hamilton-equations",
+    "formula": [
+      "\\dot q_i=\\frac{\\partial H}{\\partial p_i}",
+      "\\dot p_i=-\\frac{\\partial H}{\\partial q_i}",
+      "H(q,p,t)=\\sum_i p_i\\dot q_i-L(q,\\dot q,t)"
+    ],
+    "formulaText": [
+      "q punto = derivada parcial de H respecto a p",
+      "p punto = − derivada parcial de H respecto a q"
+    ],
+    "summary": "Reescriben la dinámica como flujo en el espacio de fases, usando coordenadas y momentos conjugados.",
+    "simulation": "hamilton-equations",
+    "sections": [
+      {
+        "file": "formula.tex"
+      }
+    ]
+  },
+  {
     "id": "cauchy-riemann",
     "name": "Ecuaciones de Cauchy-Riemann",
     "author": "Augustin-Louis Cauchy y Bernhard Riemann",
