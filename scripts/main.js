@@ -72,6 +72,7 @@ async function boot() {
   equations = mergeEquationSets(...legacySets, fileEquations);
   fields = ["Todas", ...unique(equations.map(eq => eq.field)).sort((a, b) => a.localeCompare(b, "es"))];
   levels = ["Todos", ...unique(equations.map(eq => eq.level))];
+  injectMigrationDebugStyle();
   initTheme($("#themeToggle"));
   initFilterControls();
   bindEvents();
@@ -113,6 +114,7 @@ function initFilterControls() {
   $("#sortSelect").value = "default";
   const displaySelect = document.querySelector("#formulaDisplaySelect");
   if (displaySelect) displaySelect.value = state.formulaDisplay;
+  ensureMigrationDebugControls($("#filterPanel"));
 }
 
 function fillSelect(select, values, active) {
@@ -129,7 +131,14 @@ function bindEvents() {
   const searchControl = $("#searchControl");
   const formulaDisplaySelect = document.querySelector("#formulaDisplaySelect");
 
-  filterToggle.addEventListener("click", () => {
+  filterToggle.addEventListener("click", event => {
+    if (event.altKey) {
+      event.preventDefault();
+      filterPanel.hidden = false;
+      filterToggle.setAttribute("aria-expanded", "true");
+      toggleMigrationDebugControls(filterPanel);
+      return;
+    }
     const isOpen = !filterPanel.hidden;
     filterPanel.hidden = isOpen;
     filterToggle.setAttribute("aria-expanded", String(!isOpen));
@@ -196,6 +205,38 @@ function bindEvents() {
   });
 }
 
+function ensureMigrationDebugControls(filterPanel) {
+  if (!filterPanel || filterPanel.querySelector("#migrationDebugTools")) return;
+  const tools = document.createElement("div");
+  tools.id = "migrationDebugTools";
+  tools.className = "migration-debug-tools";
+  tools.hidden = true;
+  tools.innerHTML = `<button id="migrationTitleToggle" class="migration-debug-button" type="button" aria-pressed="false">Subrayar fichas migradas</button>`;
+  filterPanel.appendChild(tools);
+  tools.querySelector("#migrationTitleToggle").addEventListener("click", () => {
+    setState({ showMigratedTitles: !state.showMigratedTitles });
+    updateMigrationDebugButton();
+    renderAll();
+  });
+  updateMigrationDebugButton();
+}
+
+function toggleMigrationDebugControls(filterPanel) {
+  ensureMigrationDebugControls(filterPanel);
+  const tools = filterPanel.querySelector("#migrationDebugTools");
+  if (!tools) return;
+  tools.hidden = !tools.hidden;
+  if (!tools.hidden) updateMigrationDebugButton();
+}
+
+function updateMigrationDebugButton() {
+  const button = document.querySelector("#migrationTitleToggle");
+  if (!button) return;
+  button.classList.toggle("active", state.showMigratedTitles);
+  button.setAttribute("aria-pressed", String(state.showMigratedTitles));
+  button.textContent = state.showMigratedTitles ? "Ocultar subrayado de migradas" : "Subrayar fichas migradas";
+}
+
 function getSortLabelMode(sort) {
   if (sort === "field") return "field";
   if (sort === "level") return "level";
@@ -206,7 +247,34 @@ function getSortLabelMode(sort) {
 function renderAll() {
   const visible = filterEquations(equations, state);
   renderEquationGrid(visible, openEquationModal, state);
+  applyMigrationTitleMarks(visible);
   updateVisibleCount(visible.length, equations.length);
+}
+
+function applyMigrationTitleMarks(visible) {
+  const cards = [...document.querySelectorAll("#equationGrid .equation-card")];
+  cards.forEach((card, index) => {
+    const eq = visible[index];
+    card.classList.toggle("migration-title-marked", Boolean(state.showMigratedTitles && isFormulaFileEntry(eq)));
+  });
+}
+
+function isFormulaFileEntry(eq) {
+  return Boolean(eq && (eq.source === "files" || String(eq.folder || "").startsWith("formulas/")));
+}
+
+function injectMigrationDebugStyle() {
+  if (document.querySelector("#migrationDebugStyle")) return;
+  const style = document.createElement("style");
+  style.id = "migrationDebugStyle";
+  style.textContent = `
+    .migration-debug-tools[hidden] { display: none; }
+    .migration-debug-tools { margin-top: 8px; padding-top: 10px; border-top: 1px dashed color-mix(in srgb, var(--line) 70%, transparent); }
+    .migration-debug-button { width: 100%; border: 1px solid color-mix(in srgb, var(--line) 78%, transparent); border-radius: 12px; padding: 8px 10px; background: color-mix(in srgb, var(--panel-solid) 56%, transparent); color: var(--text); font: inherit; font-size: .82rem; font-weight: 760; cursor: pointer; }
+    .migration-debug-button.active { border-color: color-mix(in srgb, var(--accent) 68%, var(--line)); color: var(--accent); }
+    .equation-card.migration-title-marked h3 { text-decoration-line: underline; text-decoration-thickness: 2px; text-underline-offset: .18em; text-decoration-color: currentColor; }
+  `;
+  document.head.appendChild(style);
 }
 
 function updateVisibleCount(visible, total) {
