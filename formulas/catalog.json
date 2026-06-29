@@ -1365,14 +1365,22 @@
     "level": "Universidad inicial",
     "color": "#10b981",
     "folder": "formulas/energy-momentum-relation",
-    "formula": [],
+    "formula": [
+      "E^2=(pc)^2+(m_0c^2)^2",
+      "E^2=p^2c^2+m_0^2c^4",
+      "E=\\sqrt{(pc)^2+(m_0c^2)^2}"
+    ],
     "formulaText": [
       "energía al cuadrado = momento · c al cuadrado + masa en reposo · c al cuadrado todo al cuadrado",
       "energía total = raíz cuadrada de momento · c al cuadrado + energía de reposo al cuadrado"
     ],
     "summary": "Relaciona la energía total de una partícula con su momento y su masa en reposo.",
     "simulation": "energy-momentum-relation",
-    "sections": []
+    "sections": [
+      {
+        "file": "formula.tex"
+      }
+    ]
   },
   {
     "id": "general-relativity",
