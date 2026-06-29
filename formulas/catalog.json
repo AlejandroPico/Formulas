@@ -1318,7 +1318,11 @@
     "level": "Universidad inicial",
     "color": "#ec4899",
     "folder": "formulas/lorentz-transformations",
-    "formula": [],
+    "formula": [
+      "x'=\\gamma(x-vt)",
+      "t'=\\gamma\\left(t-\\frac{vx}{c^2}\\right)",
+      "\\gamma=\\frac{1}{\\sqrt{1-\\frac{v^2}{c^2}}}"
+    ],
     "formulaText": [
       "x prima = gamma · x − velocidad · tiempo",
       "t prima = gamma · tiempo − velocidad · x dividido entre c al cuadrado",
@@ -1326,7 +1330,11 @@
     ],
     "summary": "Relacionan las coordenadas de espacio y tiempo medidas por observadores inerciales en movimiento relativo.",
     "simulation": "lorentz-transformations",
-    "sections": []
+    "sections": [
+      {
+        "file": "formula.tex"
+      }
+    ]
   },
   {
     "id": "mass-energy-equivalence",
