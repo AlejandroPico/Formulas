@@ -620,7 +620,11 @@
     ],
     "summary": "Permite recuperar el valor de una función holomorfa dentro de un contorno a partir de sus valores en la frontera.",
     "simulation": "cauchy-integral-formula",
-    "sections": []
+    "sections": [
+      {
+        "file": "formula.tex"
+      }
+    ]
   },
   {
     "id": "hamilton-equations",
