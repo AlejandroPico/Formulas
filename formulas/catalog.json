@@ -989,14 +989,22 @@
     "level": "Avanzado",
     "color": "#77d9ff",
     "folder": "formulas/navier-stokes",
-    "formula": [],
+    "formula": [
+      "\\rho\\left(\\frac{\\partial\\mathbf u}{\\partial t}+\\mathbf u\\cdot\\nabla\\mathbf u\\right)=-\\nabla p+\\mu\\nabla^2\\mathbf u+\\mathbf f",
+      "\\nabla\\cdot\\mathbf u=0",
+      "\\frac{\\partial\\rho}{\\partial t}+\\nabla\\cdot(\\rho\\mathbf u)=0"
+    ],
     "formulaText": [
       "densidad · aceleracion material = − gradiente de presion mas viscosidad · laplaciano de velocidad mas fuerzas externas",
       "divergencia de velocidad = 0 para fluido incomprensible"
     ],
     "summary": "Modela el movimiento de fluidos viscosos mediante conservacion de masa y cantidad de movimiento.",
     "simulation": "navier-stokes",
-    "sections": []
+    "sections": [
+      {
+        "file": "formula.tex"
+      }
+    ]
   },
   {
     "id": "cauchy-riemann",
