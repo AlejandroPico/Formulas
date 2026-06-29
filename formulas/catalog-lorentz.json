@@ -1,0 +1,45 @@
+[
+  {
+    "id": "energy-momentum-relation",
+    "name": "Relación energía-momento",
+    "author": "Relatividad especial",
+    "year": 1905,
+    "field": "Relatividad",
+    "level": "Universidad inicial",
+    "color": "#10b981",
+    "folder": "formulas/energy-momentum-relation",
+    "formula": [
+      "E^2=(pc)^2+(m_0c^2)^2",
+      "E^2=p^2c^2+m_0^2c^4",
+      "E=\\sqrt{(pc)^2+(m_0c^2)^2}"
+    ],
+    "formulaText": [
+      "energía al cuadrado = (momento por c) al cuadrado + energía de reposo al cuadrado",
+      "energía total = raíz de (pc)² + (m0c²)²"
+    ],
+    "summary": "Relaciona la energía total de una partícula con su momento y su masa en reposo.",
+    "simulation": "energy-momentum-relation"
+  },
+  {
+    "id": "lorentz-transformations",
+    "name": "Transformaciones de Lorentz",
+    "author": "Hendrik Lorentz",
+    "year": 1904,
+    "field": "Relatividad",
+    "level": "Universidad inicial",
+    "color": "#ec4899",
+    "folder": "formulas/lorentz-transformations",
+    "formula": [
+      "x'=\\gamma(x-vt)",
+      "t'=\\gamma\\left(t-\\frac{vx}{c^2}\\right)",
+      "\\gamma=\\frac{1}{\\sqrt{1-\\frac{v^2}{c^2}}}"
+    ],
+    "formulaText": [
+      "x prima = gamma · (x - velocidad · tiempo)",
+      "t prima = gamma · (tiempo - velocidad · x / c²)",
+      "gamma = 1 / raíz de (1 - v²/c²)"
+    ],
+    "summary": "Relacionan espacio y tiempo medidos por observadores inerciales en movimiento relativo.",
+    "simulation": "lorentz-transformations"
+  }
+]
