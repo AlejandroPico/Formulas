@@ -942,14 +942,22 @@
     "level": "Bachillerato",
     "color": "#3b82f6",
     "folder": "formulas/kirchhoff-laws",
-    "formula": [],
+    "formula": [
+      "\\sum I_{\\mathrm{entrantes}}=\\sum I_{\\mathrm{salientes}}",
+      "\\sum_k I_k=0",
+      "\\sum_k V_k=0"
+    ],
     "formulaText": [
       "suma de corrientes que entran en un nodo = suma de corrientes que salen del nodo",
       "suma algebraica de tensiones en una malla cerrada = 0"
     ],
     "summary": "Expresan conservación de carga en nodos y conservación de energía en mallas de un circuito.",
     "simulation": "kirchhoff-laws",
-    "sections": []
+    "sections": [
+      {
+        "file": "formula.tex"
+      }
+    ]
   },
   {
     "id": "cauchy-riemann",
