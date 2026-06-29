@@ -685,6 +685,12 @@
       },
       {
         "file": "ficha.md"
+      },
+      {
+        "file": "simulacion/index.js"
+      },
+      {
+        "file": "simulacion/styles.css"
       }
     ]
   },
@@ -734,5 +740,22 @@
         "file": "simulacion/styles.css"
       }
     ]
+  },
+  {
+    "id": "stokes-theorem",
+    "name": "Teorema de Stokes",
+    "author": "George Gabriel Stokes",
+    "year": 1854,
+    "field": "Cálculo vectorial",
+    "level": "Universidad",
+    "color": "#a855f7",
+    "folder": "formulas/stokes-theorem",
+    "formula": [],
+    "formulaText": [
+      "integral de F a lo largo de la frontera = flujo del rotacional de F · la superficie"
+    ],
+    "summary": "Relaciona la circulación de un campo por una curva cerrada con el rotacional acumulado sobre una superficie que la tiene como borde.",
+    "simulation": "stokes-theorem",
+    "sections": []
   }
 ]
