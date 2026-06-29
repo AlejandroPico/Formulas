@@ -73,7 +73,7 @@
     "folder": "formulas/stokes-theorem",
     "formula": [
       "\\oint_{\\partial S}\\mathbf F\\cdot d\\mathbf r=\\iint_S(\\nabla\\times\\mathbf F)\\cdot\\mathbf n\\,dS",
-      "\\nabla\\times\\mathbf F=\\bigl(\\frac{\\partial F_z}{\\partial y}-\\frac{\\partial F_y}{\\partial z},\\frac{\\partial F_x}{\\partial z}-\\frac{\\partial F_z}{\\partial x},\\frac{\\partial F_y}{\\partial x}-\\frac{\\partial F_x}{\\partial y}\\bigr)"
+      "\\nabla\\times\\mathbf F=(\\frac{\\partial F_z}{\\partial y}-\\frac{\\partial F_y}{\\partial z},\\frac{\\partial F_x}{\\partial z}-\\frac{\\partial F_z}{\\partial x},\\frac{\\partial F_y}{\\partial x}-\\frac{\\partial F_x}{\\partial y})"
     ],
     "formulaText": [
       "integral de F a lo largo de la frontera = flujo del rotacional de F · la superficie"
