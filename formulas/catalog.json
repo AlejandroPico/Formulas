@@ -652,6 +652,24 @@
     ]
   },
   {
+    "id": "gauss-theorem",
+    "name": "Teorema de Gauss",
+    "author": "Carl Friedrich Gauss",
+    "year": 1835,
+    "field": "Cálculo vectorial",
+    "level": "Universidad",
+    "color": "#f43f5e",
+    "folder": "formulas/gauss-theorem",
+    "formula": [],
+    "formulaText": [
+      "flujo a través de la frontera = integral de la divergencia en el volumen",
+      "integral sobre superficie de F · normal = integral sobre volumen de divergencia de F"
+    ],
+    "summary": "Relaciona el flujo saliente por una superficie cerrada con la divergencia acumulada dentro del volumen.",
+    "simulation": "gauss-theorem",
+    "sections": []
+  },
+  {
     "id": "cauchy-riemann",
     "name": "Ecuaciones de Cauchy-Riemann",
     "author": "Augustin-Louis Cauchy y Bernhard Riemann",
