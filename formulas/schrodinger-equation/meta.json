@@ -1,0 +1,15 @@
+{
+  "id": "schrodinger-equation",
+  "name": "Ecuación de Schrödinger",
+  "author": "Erwin Schrödinger",
+  "year": 1926,
+  "field": "Mecánica cuántica",
+  "level": "Universidad",
+  "color": "#3b82f6",
+  "simulation": "schrodinger-equation",
+  "formulaText": [
+    "i por h barra por derivada temporal de psi = operador hamiltoniano aplicado a psi",
+    "densidad de probabilidad = valor absoluto de psi al cuadrado"
+  ],
+  "summary": "Describe la evolución temporal de la función de onda de un sistema cuántico no relativista."
+}
