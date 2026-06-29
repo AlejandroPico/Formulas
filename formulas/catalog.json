@@ -756,6 +756,10 @@
     ],
     "summary": "Relaciona la circulación de un campo por una curva cerrada con el rotacional acumulado sobre una superficie que la tiene como borde.",
     "simulation": "stokes-theorem",
-    "sections": []
+    "sections": [
+      {
+        "file": "formula.tex"
+      }
+    ]
   }
 ]
