@@ -1,0 +1,15 @@
+{
+  "id": "riemann-zeta-function",
+  "name": "Función Zeta de Riemann",
+  "author": "Bernhard Riemann",
+  "year": 1859,
+  "field": "Teoría de números",
+  "level": "Avanzado",
+  "color": "#ec4899",
+  "simulation": "riemann-zeta-function",
+  "formulaText": [
+    "zeta de s = suma de 1 dividido entre n elevado a s",
+    "zeta de s = producto sobre primos de uno dividido entre uno menos p elevado a menos s"
+  ],
+  "summary": "Extiende una serie de potencias al plano complejo y conecta análisis complejo con la distribución de los números primos."
+}
