@@ -25,7 +25,11 @@ const MIGRATED_FORMULA_IDS = new Set([
   "cauchy-integral-formula",
   "riemann-zeta-function",
   "poisson-equation",
-  "convolution"
+  "convolution",
+  "coulomb-law",
+  "ohms-law",
+  "kirchhoff-laws",
+  "maxwell-equations"
 ]);
 
 const MIGRATED_FORMULA_NAMES = new Set([
@@ -38,7 +42,11 @@ const MIGRATED_FORMULA_NAMES = new Set([
   "formula integral de cauchy",
   "funcion zeta de riemann",
   "ecuacion de poisson",
-  "convolucion"
+  "convolucion",
+  "ley de coulomb",
+  "ley de ohm",
+  "leyes de kirchhoff",
+  "ecuaciones de maxwell"
 ]);
 
 let equations = [];
