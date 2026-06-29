@@ -845,13 +845,21 @@
     "level": "Avanzado",
     "color": "#ec4899",
     "folder": "formulas/riemann-zeta-function",
-    "formula": [],
+    "formula": [
+      "\\zeta(s)=\\sum_{n=1}^{\\infty}\\frac{1}{n^s}\\quad(\\operatorname{Re}(s)>1)",
+      "\\zeta(s)=\\prod_{p\\ \\mathrm{primo}}\\frac{1}{1-p^{-s}}",
+      "\\xi(s)=\\frac{1}{2}s(s-1)\\pi^{-s/2}\\Gamma\\left(\\frac{s}{2}\\right)\\zeta(s)"
+    ],
     "formulaText": [
       "zeta de s = suma de 1 dividido entre n elevado a s",
       "zeta de s = producto sobre primos de uno dividido entre uno − p elevado a − s"
     ],
     "summary": "Extiende una serie de potencias al plano complejo y conecta análisis complejo con la distribución de los números primos.",
     "simulation": "riemann-zeta-function",
-    "sections": []
+    "sections": [
+      {
+        "file": "formula.tex"
+      }
+    ]
   }
 ]
