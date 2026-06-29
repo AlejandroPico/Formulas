@@ -25,12 +25,32 @@ const MIGRATED_FORMULA_IDS = new Set([
   "cauchy-integral-formula"
 ]);
 
+const MIGRATED_FORMULA_NAMES = new Set([
+  "transformada de fourier",
+  "ecuaciones de cauchy riemann",
+  "ecuacion de euler lagrange",
+  "ecuaciones de hamilton",
+  "teorema de gauss",
+  "teorema de stokes",
+  "formula integral de cauchy"
+]);
+
 let equations = [];
 let fields = ["Todas"];
 let levels = ["Todos"];
 
 function mergeEquationSets(...sets) {
-  return [...sets.flat().reduce((map, eq) => map.set(eq.id, eq), new Map()).values()];
+  const byId = new Map();
+  const byName = new Map();
+  for (const eq of sets.flat()) {
+    const key = normalizeFormulaName(eq.name || eq.id);
+    if (byName.has(key)) {
+      byId.delete(byName.get(key));
+    }
+    byName.set(key, eq.id);
+    byId.set(eq.id, eq);
+  }
+  return [...byId.values()];
 }
 
 async function boot() {
@@ -59,13 +79,26 @@ async function loadLegacyData() {
     try {
       const module = await import(descriptor.path);
       if (Array.isArray(module[descriptor.exportName])) {
-        sets.push(module[descriptor.exportName].filter(eq => !MIGRATED_FORMULA_IDS.has(eq.id)));
+        sets.push(module[descriptor.exportName].filter(eq => !isMigratedLegacyFormula(eq)));
       }
     } catch (error) {
       console.info(`Módulo legacy omitido: ${descriptor.path}`, error);
     }
   }
   return sets;
+}
+
+function isMigratedLegacyFormula(eq) {
+  return MIGRATED_FORMULA_IDS.has(eq.id) || MIGRATED_FORMULA_NAMES.has(normalizeFormulaName(eq.name));
+}
+
+function normalizeFormulaName(value) {
+  return String(value || "")
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/[^a-z0-9]+/gi, " ")
+    .trim()
+    .toLowerCase();
 }
 
 function initFilterControls() {
