@@ -1402,5 +1402,31 @@
         "file": "simulacion/styles.css"
       }
     ]
+  },
+  {
+    "id": "friedmann-equations",
+    "name": "Ecuaciones de Friedmann",
+    "author": "Alexander Friedmann",
+    "year": 1922,
+    "field": "Cosmología",
+    "level": "Universidad",
+    "color": "#38bdf8",
+    "folder": "formulas/friedmann-equations",
+    "formula": [
+      "\\left(\\frac{\\dot a}{a}\\right)^2=\\frac{8\\pi G}{3}\\rho-\\frac{kc^2}{a^2}+\\frac{\\Lambda c^2}{3}",
+      "\\frac{\\ddot a}{a}=-\\frac{4\\pi G}{3}\\left(\\rho+\\frac{3p}{c^2}\\right)+\\frac{\\Lambda c^2}{3}",
+      "H(t)=\\frac{\\dot a}{a}"
+    ],
+    "formulaText": [
+      "tasa de expansión al cuadrado = densidad de materia y radiación − curvatura + constante cosmológica",
+      "aceleración del factor de escala depende de densidad, presión y constante cosmológica"
+    ],
+    "summary": "Describen la evolución del factor de escala del universo en cosmología relativista homogénea e isótropa.",
+    "simulation": "friedmann-equations",
+    "sections": [
+      {
+        "file": "formula.tex"
+      }
+    ]
   }
 ]
