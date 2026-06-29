@@ -1548,13 +1548,21 @@
     "level": "Universidad",
     "color": "#3b82f6",
     "folder": "formulas/schrodinger-equation",
-    "formula": [],
+    "formula": [
+      "i\\hbar\\frac{\\partial \\Psi}{\\partial t}=\\hat H\\Psi",
+      "i\\hbar\\frac{\\partial \\Psi}{\\partial t}=(-\\frac{\\hbar^2}{2m}\\nabla^2+V)\\Psi",
+      "P(x,t)=|\\Psi(x,t)|^2"
+    ],
     "formulaText": [
       "i · h barra · derivada temporal de psi = operador hamiltoniano aplicado a psi",
       "densidad de probabilidad = valor absoluto de psi al cuadrado"
     ],
     "summary": "Describe la evolución temporal de la función de onda de un sistema cuántico no relativista.",
     "simulation": "schrodinger-equation",
-    "sections": []
+    "sections": [
+      {
+        "file": "formula.tex"
+      }
+    ]
   }
 ]
