@@ -605,6 +605,24 @@
     ]
   },
   {
+    "id": "cauchy-integral-formula",
+    "name": "Fórmula Integral de Cauchy",
+    "author": "Augustin-Louis Cauchy",
+    "year": 1831,
+    "field": "Análisis complejo",
+    "level": "Universidad",
+    "color": "#ef4444",
+    "folder": "formulas/cauchy-integral-formula",
+    "formula": [],
+    "formulaText": [
+      "valor de f en z0 = uno partido · 2 pi i · integral de f(z) dividido entre z − z0",
+      "derivada n de f en z0 = factorial n partido · 2 pi i · integral de f(z) dividido entre z − z0 elevado a n mas 1"
+    ],
+    "summary": "Permite recuperar el valor de una función holomorfa dentro de un contorno a partir de sus valores en la frontera.",
+    "simulation": "cauchy-integral-formula",
+    "sections": []
+  },
+  {
     "id": "hamilton-equations",
     "name": "Ecuaciones de Hamilton",
     "author": "William Rowan Hamilton",
