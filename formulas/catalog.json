@@ -557,6 +557,32 @@
     ]
   },
   {
+    "id": "convolution",
+    "name": "Convolución",
+    "author": "Análisis matemático clásico",
+    "year": 1800,
+    "field": "Análisis y señales",
+    "level": "Universidad inicial",
+    "color": "#22c55e",
+    "folder": "formulas/convolution",
+    "formula": [
+      "(f*g)(t)=\\int_{-\\infty}^{\\infty}f(\\tau)g(t-\\tau)\\,d\\tau",
+      "(f*g)[n]=\\sum_{k=-\\infty}^{\\infty}f[k]g[n-k]",
+      "\\mathcal F\\{f*g\\}=\\mathcal F\\{f\\}\\,\\mathcal F\\{g\\}"
+    ],
+    "formulaText": [
+      "f convolucionada con g en t = integral de f de tau · g de t − tau respecto a tau",
+      "en discreto: suma de f[k] · g[n-k]"
+    ],
+    "summary": "Combina dos funciones midiendo el solapamiento entre una señal y otra desplazada.",
+    "simulation": "convolution",
+    "sections": [
+      {
+        "file": "formula.tex"
+      }
+    ]
+  },
+  {
     "id": "poisson-equation",
     "name": "Ecuación de Poisson",
     "author": "Siméon Denis Poisson",
