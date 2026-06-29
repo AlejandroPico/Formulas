@@ -61,5 +61,24 @@
     ],
     "summary": "Combina dos funciones midiendo el solapamiento entre una señal y otra desplazada.",
     "simulation": "convolution"
+  },
+  {
+    "id": "stokes-theorem",
+    "name": "Teorema de Stokes",
+    "author": "George Gabriel Stokes",
+    "year": 1854,
+    "field": "Cálculo vectorial",
+    "level": "Universidad",
+    "color": "#a855f7",
+    "folder": "formulas/stokes-theorem",
+    "formula": [
+      "\\oint_{\\partial S}\\mathbf F\\cdot d\\mathbf r=\\iint_S(\\nabla\\times\\mathbf F)\\cdot\\mathbf n\\,dS",
+      "\\nabla\\times\\mathbf F=\\bigl(\\frac{\\partial F_z}{\\partial y}-\\frac{\\partial F_y}{\\partial z},\\frac{\\partial F_x}{\\partial z}-\\frac{\\partial F_z}{\\partial x},\\frac{\\partial F_y}{\\partial x}-\\frac{\\partial F_x}{\\partial y}\\bigr)"
+    ],
+    "formulaText": [
+      "integral de F a lo largo de la frontera = flujo del rotacional de F · la superficie"
+    ],
+    "summary": "Relaciona la circulación de un campo por una curva cerrada con el rotacional acumulado sobre una superficie que la tiene como borde.",
+    "simulation": "stokes-theorem"
   }
 ]
