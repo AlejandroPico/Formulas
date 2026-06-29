@@ -1,0 +1,15 @@
+{
+  "id": "hamilton-equations",
+  "name": "Ecuaciones de Hamilton",
+  "author": "William Rowan Hamilton",
+  "year": 1834,
+  "field": "Mecánica analítica",
+  "level": "Universidad",
+  "color": "#c973ff",
+  "simulation": "hamilton-equations",
+  "formulaText": [
+    "q punto = derivada parcial de H respecto a p",
+    "p punto = menos derivada parcial de H respecto a q"
+  ],
+  "summary": "Reescriben la dinámica como flujo en el espacio de fases, usando coordenadas y momentos conjugados."
+}
