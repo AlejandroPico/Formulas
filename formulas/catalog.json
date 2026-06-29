@@ -1310,6 +1310,25 @@
     ]
   },
   {
+    "id": "lorentz-transformations",
+    "name": "Transformaciones de Lorentz",
+    "author": "Hendrik Lorentz",
+    "year": 1904,
+    "field": "Relatividad",
+    "level": "Universidad inicial",
+    "color": "#ec4899",
+    "folder": "formulas/lorentz-transformations",
+    "formula": [],
+    "formulaText": [
+      "x prima = gamma · x − velocidad · tiempo",
+      "t prima = gamma · tiempo − velocidad · x dividido entre c al cuadrado",
+      "gamma = uno dividido entre raíz de uno − beta al cuadrado"
+    ],
+    "summary": "Relacionan las coordenadas de espacio y tiempo medidas por observadores inerciales en movimiento relativo.",
+    "simulation": "lorentz-transformations",
+    "sections": []
+  },
+  {
     "id": "mass-energy-equivalence",
     "name": "Equivalencia masa-energía",
     "author": "Albert Einstein",
@@ -1394,6 +1413,12 @@
       },
       {
         "file": "ficha.md"
+      },
+      {
+        "file": "simulacion/index.js"
+      },
+      {
+        "file": "simulacion/styles.css"
       }
     ]
   },
