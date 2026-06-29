@@ -5,6 +5,7 @@ export const state = {
   sort: "chronology",
   cardLabelMode: "none",
   formulaDisplay: "symbolic",
+  showMigratedTitles: false,
   selectedEquationId: null
 };
 
