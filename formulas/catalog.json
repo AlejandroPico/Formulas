@@ -746,6 +746,25 @@
     ]
   },
   {
+    "id": "ohms-law",
+    "name": "Ley de Ohm",
+    "author": "Georg Simon Ohm",
+    "year": 1827,
+    "field": "Electricidad",
+    "level": "ESO",
+    "color": "#22c55e",
+    "folder": "formulas/ohms-law",
+    "formula": [],
+    "formulaText": [
+      "voltaje = corriente · resistencia",
+      "corriente = voltaje dividido entre resistencia",
+      "potencia = voltaje · corriente"
+    ],
+    "summary": "Relaciona tension, corriente y resistencia en un conductor ohmico.",
+    "simulation": "ohms-law",
+    "sections": []
+  },
+  {
     "id": "cauchy-integral-formula",
     "name": "Fórmula Integral de Cauchy",
     "author": "Augustin-Louis Cauchy",
