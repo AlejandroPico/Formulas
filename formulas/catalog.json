@@ -754,7 +754,11 @@
     "level": "ESO",
     "color": "#22c55e",
     "folder": "formulas/ohms-law",
-    "formula": [],
+    "formula": [
+      "V=IR",
+      "I=\\frac{V}{R}",
+      "P=VI=I^2R=\\frac{V^2}{R}"
+    ],
     "formulaText": [
       "voltaje = corriente · resistencia",
       "corriente = voltaje dividido entre resistencia",
@@ -762,7 +766,11 @@
     ],
     "summary": "Relaciona tension, corriente y resistencia en un conductor ohmico.",
     "simulation": "ohms-law",
-    "sections": []
+    "sections": [
+      {
+        "file": "formula.tex"
+      }
+    ]
   },
   {
     "id": "cauchy-integral-formula",
