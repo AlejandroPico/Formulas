@@ -706,13 +706,21 @@
     "level": "Universidad inicial",
     "color": "#f97316",
     "folder": "formulas/heat-equation",
-    "formula": [],
+    "formula": [
+      "\\frac{\\partial u}{\\partial t}=\\alpha\\frac{\\partial^2u}{\\partial x^2}",
+      "\\frac{\\partial u}{\\partial t}=\\alpha\\nabla^2u",
+      "u_t=\\alpha u_{xx}"
+    ],
     "formulaText": [
       "derivada temporal de temperatura = difusividad · segunda derivada espacial de temperatura"
     ],
     "summary": "Describe la difusion de temperatura en el tiempo por conduccion termica.",
     "simulation": "heat-equation",
-    "sections": []
+    "sections": [
+      {
+        "file": "formula.tex"
+      }
+    ]
   },
   {
     "id": "fourier-transform",
