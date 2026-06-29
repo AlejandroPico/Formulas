@@ -613,7 +613,10 @@
     "level": "Universidad",
     "color": "#ef4444",
     "folder": "formulas/cauchy-integral-formula",
-    "formula": [],
+    "formula": [
+      "f(z_0)=\\frac{1}{2\\pi i}\\oint_\\gamma \\frac{f(z)}{z-z_0}\\,dz",
+      "f^{(n)}(z_0)=\\frac{n!}{2\\pi i}\\oint_\\gamma \\frac{f(z)}{(z-z_0)^{n+1}}\\,dz"
+    ],
     "formulaText": [
       "valor de f en z0 = uno partido · 2 pi i · integral de f(z) dividido entre z − z0",
       "derivada n de f en z0 = factorial n partido · 2 pi i · integral de f(z) dividido entre z − z0 elevado a n mas 1"
@@ -703,7 +706,11 @@
     "level": "Universidad",
     "color": "#f43f5e",
     "folder": "formulas/gauss-theorem",
-    "formula": [],
+    "formula": [
+      "\\iint_{\\partial V}\\mathbf F\\cdot\\mathbf n\\,dS=\\iiint_V \\nabla\\cdot\\mathbf F\\,dV",
+      "\\Phi=\\iint_S\\mathbf F\\cdot d\\mathbf S",
+      "\\nabla\\cdot\\mathbf F=\\frac{\\partial F_x}{\\partial x}+\\frac{\\partial F_y}{\\partial y}+\\frac{\\partial F_z}{\\partial z}"
+    ],
     "formulaText": [
       "flujo a través de la frontera = integral de la divergencia en el volumen",
       "integral sobre superficie de F · normal = integral sobre volumen de divergencia de F"
@@ -793,7 +800,10 @@
     "level": "Universidad",
     "color": "#a855f7",
     "folder": "formulas/stokes-theorem",
-    "formula": [],
+    "formula": [
+      "\\oint_{\\partial S}\\mathbf F\\cdot d\\mathbf r=\\iint_S(\\nabla\\times\\mathbf F)\\cdot\\mathbf n\\,dS",
+      "\\nabla\\times\\mathbf F=\\left(\\frac{\\partial F_z}{\\partial y}-\\frac{\\partial F_y}{\\partial z},\\frac{\\partial F_x}{\\partial z}-\\frac{\\partial F_z}{\\partial x},\\frac{\\partial F_y}{\\partial x}-\\frac{\\partial F_x}{\\partial y}\\right)"
+    ],
     "formulaText": [
       "integral de F a lo largo de la frontera = flujo del rotacional de F · la superficie"
     ],
