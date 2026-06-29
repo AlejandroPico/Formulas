@@ -1,0 +1,16 @@
+{
+  "id": "ohms-law",
+  "name": "Ley de Ohm",
+  "author": "Georg Simon Ohm",
+  "year": 1827,
+  "field": "Electricidad",
+  "level": "ESO",
+  "color": "#22c55e",
+  "simulation": "ohms-law",
+  "formulaText": [
+    "voltaje = corriente por resistencia",
+    "corriente = voltaje dividido entre resistencia",
+    "potencia = voltaje por corriente"
+  ],
+  "summary": "Relaciona tension, corriente y resistencia en un conductor ohmico."
+}
