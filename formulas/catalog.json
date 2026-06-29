@@ -698,6 +698,23 @@
     ]
   },
   {
+    "id": "heat-equation",
+    "name": "Ecuación del calor",
+    "author": "Joseph Fourier",
+    "year": 1822,
+    "field": "Ecuaciones diferenciales",
+    "level": "Universidad inicial",
+    "color": "#f97316",
+    "folder": "formulas/heat-equation",
+    "formula": [],
+    "formulaText": [
+      "derivada temporal de temperatura = difusividad · segunda derivada espacial de temperatura"
+    ],
+    "summary": "Describe la difusion de temperatura en el tiempo por conduccion termica.",
+    "simulation": "heat-equation",
+    "sections": []
+  },
+  {
     "id": "fourier-transform",
     "name": "Transformada de Fourier",
     "author": "Joseph Fourier",
