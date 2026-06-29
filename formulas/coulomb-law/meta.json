@@ -1,0 +1,15 @@
+{
+  "id": "coulomb-law",
+  "name": "Ley de Coulomb",
+  "author": "Charles-Augustin de Coulomb",
+  "year": 1785,
+  "field": "Electromagnetismo",
+  "level": "Bachillerato",
+  "color": "#ef4444",
+  "simulation": "coulomb-law",
+  "formulaText": [
+    "fuerza electrica = constante de Coulomb por valor absoluto de carga 1 por valor absoluto de carga 2 dividido entre distancia al cuadrado",
+    "campo electrico = constante de Coulomb por carga dividido entre distancia al cuadrado"
+  ],
+  "summary": "Describe la fuerza electrostatica entre dos cargas puntuales y su dependencia con el producto de cargas y la inversa del cuadrado de la distancia."
+}
