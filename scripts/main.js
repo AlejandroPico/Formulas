@@ -29,7 +29,10 @@ const MIGRATED_FORMULA_IDS = new Set([
   "coulomb-law",
   "ohms-law",
   "kirchhoff-laws",
-  "maxwell-equations"
+  "maxwell-equations",
+  "navier-stokes",
+  "heat-equation",
+  "lorentz-force"
 ]);
 
 const MIGRATED_FORMULA_NAMES = new Set([
@@ -46,7 +49,10 @@ const MIGRATED_FORMULA_NAMES = new Set([
   "ley de coulomb",
   "ley de ohm",
   "leyes de kirchhoff",
-  "ecuaciones de maxwell"
+  "ecuaciones de maxwell",
+  "navier stokes",
+  "ecuacion del calor",
+  "fuerza de lorentz"
 ]);
 
 let equations = [];
