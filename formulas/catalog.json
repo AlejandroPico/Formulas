@@ -1128,7 +1128,12 @@
     "level": "Universidad",
     "color": "#ffd37a",
     "folder": "formulas/maxwell-equations",
-    "formula": [],
+    "formula": [
+      "\\nabla\\cdot\\mathbf{E}=\\frac{\\rho}{\\varepsilon_0}",
+      "\\nabla\\cdot\\mathbf{B}=0",
+      "\\nabla\\times\\mathbf{E}=-\\frac{\\partial\\mathbf{B}}{\\partial t}",
+      "\\nabla\\times\\mathbf{B}=\\mu_0\\mathbf{J}+\\mu_0\\varepsilon_0\\frac{\\partial\\mathbf{E}}{\\partial t}"
+    ],
     "formulaText": [
       "divergencia de E = densidad de carga / permitividad del vacio",
       "divergencia de B = 0",
@@ -1137,6 +1142,10 @@
     ],
     "summary": "Unifican electricidad, magnetismo y luz en un marco de campos electromagneticos.",
     "simulation": "maxwell-equations",
-    "sections": []
+    "sections": [
+      {
+        "file": "formula.tex"
+      }
+    ]
   }
 ]
