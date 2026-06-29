@@ -22,7 +22,10 @@ const MIGRATED_FORMULA_IDS = new Set([
   "hamilton-equations",
   "gauss-theorem",
   "stokes-theorem",
-  "cauchy-integral-formula"
+  "cauchy-integral-formula",
+  "riemann-zeta-function",
+  "poisson-equation",
+  "convolution"
 ]);
 
 const MIGRATED_FORMULA_NAMES = new Set([
@@ -32,7 +35,10 @@ const MIGRATED_FORMULA_NAMES = new Set([
   "ecuaciones de hamilton",
   "teorema de gauss",
   "teorema de stokes",
-  "formula integral de cauchy"
+  "formula integral de cauchy",
+  "funcion zeta de riemann",
+  "ecuacion de poisson",
+  "convolucion"
 ]);
 
 let equations = [];
