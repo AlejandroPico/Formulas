@@ -1,0 +1,15 @@
+{
+  "id": "mass-energy-equivalence",
+  "name": "Equivalencia masa-energía",
+  "author": "Albert Einstein",
+  "year": 1905,
+  "field": "Relatividad",
+  "level": "Bachillerato",
+  "color": "#eab308",
+  "simulation": "mass-energy-equivalence",
+  "formulaText": [
+    "energía = masa por velocidad de la luz al cuadrado",
+    "energía en reposo = masa en reposo por c al cuadrado"
+  ],
+  "summary": "Expresa que la masa en reposo contiene una energía equivalente proporcional a c al cuadrado."
+}
