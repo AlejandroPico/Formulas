@@ -28,7 +28,7 @@ for (const name of await fs.readdir(FORMULAS_DIR)) {
   const meta = await readJson(metaPath, {});
   const previousEntry = previousById.get(meta.id || name) || {};
   const formulaPath = path.join(folderPath, "formula.tex");
-  const formula = meta.formula || previousEntry.formula || await readFormula(formulaPath);
+  const formula = firstNonEmptyList(meta.formula, previousEntry.formula, await readFormula(formulaPath));
   const formulaText = normalizeFormulaTextList(meta.formulaText || meta.formula_text || previousEntry.formulaText || []);
   const sections = await discoverSections(folderPath);
   const summary = meta.summary || previousEntry.summary || await firstParagraph(path.join(folderPath, "significado.md"));
@@ -87,6 +87,14 @@ async function firstParagraph(filePath) {
     .map(block => block.trim())
     .find(block => block && !block.startsWith("#"))
     ?.replace(/\s+/g, " ") || "";
+}
+
+function firstNonEmptyList(...values) {
+  for (const value of values) {
+    if (Array.isArray(value) && value.length) return value;
+    if (typeof value === "string" && value.trim()) return [value.trim()];
+  }
+  return [];
 }
 
 function normalizeFormulaTextList(value) {
