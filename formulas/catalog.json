@@ -981,6 +981,24 @@
     ]
   },
   {
+    "id": "navier-stokes",
+    "name": "Navier-Stokes",
+    "author": "Claude-Louis Navier y George Stokes",
+    "year": 1845,
+    "field": "Fluidos",
+    "level": "Avanzado",
+    "color": "#77d9ff",
+    "folder": "formulas/navier-stokes",
+    "formula": [],
+    "formulaText": [
+      "densidad · aceleracion material = − gradiente de presion mas viscosidad · laplaciano de velocidad mas fuerzas externas",
+      "divergencia de velocidad = 0 para fluido incomprensible"
+    ],
+    "summary": "Modela el movimiento de fluidos viscosos mediante conservacion de masa y cantidad de movimiento.",
+    "simulation": "navier-stokes",
+    "sections": []
+  },
+  {
     "id": "cauchy-riemann",
     "name": "Ecuaciones de Cauchy-Riemann",
     "author": "Augustin-Louis Cauchy y Bernhard Riemann",
