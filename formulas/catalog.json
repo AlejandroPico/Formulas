@@ -1355,5 +1355,23 @@
         "file": "simulacion/styles.css"
       }
     ]
+  },
+  {
+    "id": "general-relativity",
+    "name": "Relatividad general de Einstein",
+    "author": "Albert Einstein",
+    "year": 1915,
+    "field": "Relatividad",
+    "level": "Universidad",
+    "color": "#f97316",
+    "folder": "formulas/general-relativity",
+    "formula": [],
+    "formulaText": [
+      "tensor de Einstein + constante cosmológica · métrica = constante de acoplamiento · tensor energía momento",
+      "geometría del espacio-tiempo = contenido de energía y momento"
+    ],
+    "summary": "Describe la gravitación como curvatura del espacio-tiempo producida por energía y momento.",
+    "simulation": "general-relativity",
+    "sections": []
   }
 ]
