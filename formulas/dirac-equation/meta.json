@@ -1,0 +1,15 @@
+{
+  "id": "dirac-equation",
+  "name": "Ecuación de Dirac",
+  "author": "Paul Dirac",
+  "year": 1928,
+  "field": "Mecánica cuántica relativista",
+  "level": "Avanzado",
+  "color": "#ec4899",
+  "simulation": "dirac-equation",
+  "formulaText": [
+    "i por gamma mu por derivada mu menos masa aplicado a psi = 0",
+    "la ecuación describe espín uno medio y antipartículas"
+  ],
+  "summary": "Une relatividad especial y mecánica cuántica para partículas de espín 1/2, prediciendo naturalmente la antimateria."
+}
