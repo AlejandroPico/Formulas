@@ -1,0 +1,15 @@
+{
+  "id": "friedmann-equations",
+  "name": "Ecuaciones de Friedmann",
+  "author": "Alexander Friedmann",
+  "year": 1922,
+  "field": "Cosmología",
+  "level": "Universidad",
+  "color": "#38bdf8",
+  "simulation": "friedmann-equations",
+  "formulaText": [
+    "tasa de expansión al cuadrado = densidad de materia y radiación menos curvatura más constante cosmológica",
+    "aceleración del factor de escala depende de densidad, presión y constante cosmológica"
+  ],
+  "summary": "Describen la evolución del factor de escala del universo en cosmología relativista homogénea e isótropa."
+}
