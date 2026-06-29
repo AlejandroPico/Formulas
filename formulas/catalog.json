@@ -1261,5 +1261,31 @@
         "file": "simulacion/styles.css"
       }
     ]
+  },
+  {
+    "id": "lorentz-force",
+    "name": "Fuerza de Lorentz",
+    "author": "Hendrik Lorentz",
+    "year": 1895,
+    "field": "Electromagnetismo",
+    "level": "Universidad inicial",
+    "color": "#a855f7",
+    "folder": "formulas/lorentz-force",
+    "formula": [
+      "\\mathbf F=q(\\mathbf E+\\mathbf v\\times\\mathbf B)",
+      "\\mathbf F_B=q\\mathbf v\\times\\mathbf B",
+      "r=\\frac{mv}{|q|B}"
+    ],
+    "formulaText": [
+      "fuerza = carga · campo electrico mas carga · velocidad vectorial · campo magnetico",
+      "si no hay campo electrico, la fuerza magnetica es perpendicular a velocidad y campo magnetico"
+    ],
+    "summary": "Describe la fuerza sobre una carga moviendose en campos electricos y magneticos.",
+    "simulation": "lorentz-force",
+    "sections": [
+      {
+        "file": "formula.tex"
+      }
+    ]
   }
 ]
