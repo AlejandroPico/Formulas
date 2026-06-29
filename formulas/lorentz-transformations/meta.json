@@ -1,0 +1,16 @@
+{
+  "id": "lorentz-transformations",
+  "name": "Transformaciones de Lorentz",
+  "author": "Hendrik Lorentz",
+  "year": 1904,
+  "field": "Relatividad",
+  "level": "Universidad inicial",
+  "color": "#ec4899",
+  "simulation": "lorentz-transformations",
+  "formulaText": [
+    "x prima = gamma por x menos velocidad por tiempo",
+    "t prima = gamma por tiempo menos velocidad por x dividido entre c al cuadrado",
+    "gamma = uno dividido entre raíz de uno menos beta al cuadrado"
+  ],
+  "summary": "Relacionan las coordenadas de espacio y tiempo medidas por observadores inerciales en movimiento relativo."
+}
