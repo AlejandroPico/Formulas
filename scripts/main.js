@@ -59,7 +59,11 @@ const MIGRATED_FORMULA_IDS = new Set([
   "michaelis-menten-kinetics",
   "shannon-hartley-capacity",
   "mean-squared-error",
-  "kullback-leibler-divergence"
+  "kullback-leibler-divergence",
+  "backpropagation",
+  "cross-entropy-loss",
+  "softmax-function",
+  "gradient-descent"
 ]);
 
 const MIGRATED_FORMULA_NAMES = new Set([
@@ -111,7 +115,12 @@ const MIGRATED_FORMULA_NAMES = new Set([
   "capacidad shannon hartley",
   "error cuadratico medio",
   "divergencia de kullback leibler",
-  "kullback leibler"
+  "kullback leibler",
+  "retropropagacion",
+  "backpropagation",
+  "entropia cruzada",
+  "softmax",
+  "descenso del gradiente"
 ]);
 
 let equations = [];
