@@ -1858,6 +1858,9 @@
       },
       {
         "file": "ficha.md"
+      },
+      {
+        "file": "simulacion/index.js"
       }
     ]
   }
