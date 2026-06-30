@@ -1642,14 +1642,22 @@
     "level": "Universidad inicial",
     "color": "#a855f7",
     "folder": "formulas/born-rule",
-    "formula": [],
+    "formula": [
+      "P(x)=|\\psi(x)|^2",
+      "P(a\\leq x\\leq b)=\\int_a^b |\\psi(x)|^2\\,dx",
+      "\\int_{-\\infty}^{\\infty}|\\psi(x)|^2\\,dx=1"
+    ],
     "formulaText": [
       "probabilidad = valor absoluto de la función de onda al cuadrado",
       "la integral de la densidad de probabilidad sobre una región da la probabilidad de detectar allí la partícula"
     ],
     "summary": "Conecta la función de onda con probabilidades observables de medición.",
     "simulation": "born-rule",
-    "sections": []
+    "sections": [
+      {
+        "file": "formula.tex"
+      }
+    ]
   },
   {
     "id": "heisenberg-uncertainty-principle",
