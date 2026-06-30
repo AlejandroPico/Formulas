@@ -1262,6 +1262,32 @@
     ]
   },
   {
+    "id": "gradient-descent",
+    "name": "Descenso del gradiente",
+    "author": "Augustin-Louis Cauchy",
+    "year": 1847,
+    "field": "Optimización y aprendizaje automático",
+    "level": "Universidad inicial",
+    "color": "#3b82f6",
+    "folder": "formulas/gradient-descent",
+    "formula": [
+      "w_{t+1}=w_t-\\eta\\nabla L(w_t)",
+      "\\theta_{t+1}=\\theta_t-\\eta\\nabla_\\theta J(\\theta_t)",
+      "L(w)=w^2\\quad \\nabla L(w)=2w"
+    ],
+    "formulaText": [
+      "nuevo peso = peso actual − tasa de aprendizaje · gradiente de la pérdida",
+      "se avanza en dirección opuesta al gradiente para reducir la función de coste"
+    ],
+    "summary": "Método iterativo que minimiza una función moviéndose contra la pendiente local.",
+    "simulation": "gradient-descent",
+    "sections": [
+      {
+        "file": "formula.tex"
+      }
+    ]
+  },
+  {
     "id": "cauchy-riemann",
     "name": "Ecuaciones de Cauchy-Riemann",
     "author": "Augustin-Louis Cauchy y Bernhard Riemann",
