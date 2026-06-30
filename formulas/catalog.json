@@ -941,14 +941,22 @@
     "level": "Bachillerato y universidad inicial",
     "color": "#38bdf8",
     "folder": "formulas/ideal-gas-law",
-    "formula": [],
+    "formula": [
+      "PV=nRT",
+      "P=\\frac{nRT}{V}",
+      "\\frac{P_1V_1}{T_1}=\\frac{P_2V_2}{T_2}"
+    ],
     "formulaText": [
       "presión · volumen = cantidad de sustancia · constante de los gases · temperatura",
       "a cantidad fija, la presión aumenta con la temperatura y disminuye con el volumen"
     ],
     "summary": "Relaciona presión, volumen, temperatura y cantidad de gas en el modelo ideal.",
     "simulation": "ideal-gas-law",
-    "sections": []
+    "sections": [
+      {
+        "file": "formula.tex"
+      }
+    ]
   },
   {
     "id": "gauss-theorem",
