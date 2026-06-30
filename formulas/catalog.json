@@ -1786,14 +1786,22 @@
     "level": "Universidad inicial",
     "color": "#22c55e",
     "folder": "formulas/michaelis-menten-kinetics",
-    "formula": [],
+    "formula": [
+      "v=\\frac{V_{max}[S]}{K_m+[S]}",
+      "v=\\frac{1}{2}V_{max}\\quad cuando\\quad [S]=K_m",
+      "E+S\\rightleftharpoons ES\\rightarrow E+P"
+    ],
     "formulaText": [
       "velocidad inicial = velocidad máxima · concentración de sustrato dividido entre Km + concentración de sustrato",
       "cuando el sustrato es alto, la enzima se satura y la velocidad se aproxima a Vmax"
     ],
     "summary": "Modelo básico de saturación enzimática que relaciona velocidad de reacción y concentración de sustrato.",
     "simulation": "michaelis-menten-kinetics",
-    "sections": []
+    "sections": [
+      {
+        "file": "formula.tex"
+      }
+    ]
   },
   {
     "id": "general-relativity",
