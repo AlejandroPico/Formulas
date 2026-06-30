@@ -2205,14 +2205,22 @@
     "level": "Universidad inicial",
     "color": "#3b82f6",
     "folder": "formulas/shannon-entropy",
-    "formula": [],
+    "formula": [
+      "H(X)=-\\sum_i p_i\\log_2 p_i",
+      "H(p)=-p\\log_2 p-(1-p)\\log_2(1-p)",
+      "0\\leq H(p)\\leq 1"
+    ],
     "formulaText": [
       "entropía = suma negativa de probabilidades · logaritmo base dos de probabilidades",
       "en una fuente binaria, la incertidumbre máxima ocurre cuando p = 0.5"
     ],
     "summary": "Mide la incertidumbre media o información esperada de una fuente aleatoria.",
     "simulation": "shannon-entropy",
-    "sections": []
+    "sections": [
+      {
+        "file": "formula.tex"
+      }
+    ]
   },
   {
     "id": "path-integral",
