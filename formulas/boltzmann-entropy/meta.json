@@ -1,0 +1,15 @@
+{
+  "id": "boltzmann-entropy",
+  "name": "Entropía de Boltzmann",
+  "author": "Ludwig Boltzmann",
+  "year": 1877,
+  "field": "Mecánica estadística",
+  "level": "Universidad inicial",
+  "color": "#10b981",
+  "simulation": "boltzmann-entropy",
+  "formulaText": [
+    "entropía = constante de Boltzmann por logaritmo del número de microestados compatibles",
+    "más microestados compatibles implican mayor entropía"
+  ],
+  "summary": "Relaciona la entropía macroscópica con el número de microestados microscópicos compatibles."
+}
