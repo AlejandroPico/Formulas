@@ -49,7 +49,10 @@ const MIGRATED_FORMULA_IDS = new Set([
   "bose-einstein-distribution",
   "fermi-dirac-distribution",
   "boltzmann-entropy",
-  "planck-law"
+  "planck-law",
+  "ideal-gas-law",
+  "gibbs-free-energy",
+  "arrhenius-equation"
 ]);
 
 const MIGRATED_FORMULA_NAMES = new Set([
@@ -88,7 +91,10 @@ const MIGRATED_FORMULA_NAMES = new Set([
   "distribucion de bose einstein",
   "distribucion de fermi dirac",
   "entropia de boltzmann",
-  "ley de planck"
+  "ley de planck",
+  "ley de los gases ideales",
+  "energia libre de gibbs",
+  "ecuacion de arrhenius"
 ]);
 
 let equations = [];
