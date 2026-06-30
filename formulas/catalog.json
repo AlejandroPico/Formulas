@@ -1819,5 +1819,23 @@
         "file": "simulacion/styles.css"
       }
     ]
+  },
+  {
+    "id": "path-integral",
+    "name": "Integral de camino de Feynman",
+    "author": "Richard Feynman",
+    "year": 1948,
+    "field": "Mecánica cuántica",
+    "level": "Avanzado",
+    "color": "#8b5cf6",
+    "folder": "formulas/path-integral",
+    "formula": [],
+    "formulaText": [
+      "amplitud de ir de A a B = suma de todas las historias ponderadas · una fase que depende de la acción",
+      "la fase es exponencial de i · acción dividido entre h barra"
+    ],
+    "summary": "Formula la evolución cuántica como una suma sobre todas las trayectorias posibles, ponderadas por la acción.",
+    "simulation": "path-integral",
+    "sections": []
   }
 ]
