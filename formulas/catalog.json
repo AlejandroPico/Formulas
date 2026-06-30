@@ -557,6 +557,24 @@
     ]
   },
   {
+    "id": "bayes-theorem",
+    "name": "Teorema de Bayes",
+    "author": "Thomas Bayes",
+    "year": 1763,
+    "field": "Probabilidad y estadística",
+    "level": "Bachillerato y universidad inicial",
+    "color": "#f59e0b",
+    "folder": "formulas/bayes-theorem",
+    "formula": [],
+    "formulaText": [
+      "probabilidad de A dado B = probabilidad de B dado A · probabilidad de A dividido entre probabilidad de B",
+      "actualiza una probabilidad previa usando evidencia nueva"
+    ],
+    "summary": "Permite actualizar creencias probabilísticas al observar nueva evidencia.",
+    "simulation": "bayes-theorem",
+    "sections": []
+  },
+  {
     "id": "coulomb-law",
     "name": "Ley de Coulomb",
     "author": "Charles-Augustin de Coulomb",
