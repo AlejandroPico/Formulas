@@ -1,0 +1,15 @@
+{
+  "id": "black-scholes-model",
+  "name": "Modelo de Black-Scholes",
+  "author": "Fischer Black, Myron Scholes y Robert Merton",
+  "year": 1973,
+  "field": "Finanzas matemáticas",
+  "level": "Universidad",
+  "color": "#2563eb",
+  "simulation": "black-scholes-model",
+  "formulaText": [
+    "precio de una call europea = precio del subyacente por N(d1) menos strike descontado por N(d2)",
+    "la volatilidad aumenta el valor temporal de la opción"
+  ],
+  "summary": "Modelo clásico para valorar opciones europeas bajo hipótesis de mercado idealizado."
+}
