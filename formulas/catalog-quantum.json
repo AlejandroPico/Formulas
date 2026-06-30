@@ -1,0 +1,85 @@
+[
+  {
+    "id": "schrodinger-equation",
+    "name": "Ecuación de Schrödinger",
+    "author": "Erwin Schrödinger",
+    "year": 1926,
+    "field": "Mecánica cuántica",
+    "level": "Universidad",
+    "color": "#3b82f6",
+    "folder": "formulas/schrodinger-equation",
+    "formula": [
+      "i\\hbar\\frac{\\partial \\Psi}{\\partial t}=\\hat H\\Psi",
+      "i\\hbar\\frac{\\partial \\Psi}{\\partial t}=(-\\frac{\\hbar^2}{2m}\\nabla^2+V)\\Psi",
+      "P(x,t)=|\\Psi(x,t)|^2"
+    ],
+    "formulaText": [
+      "i · h barra · derivada temporal de psi = hamiltoniano aplicado a psi",
+      "densidad de probabilidad = |psi|²"
+    ],
+    "summary": "Describe la evolución temporal de la función de onda de un sistema cuántico no relativista.",
+    "simulation": "schrodinger-equation"
+  },
+  {
+    "id": "dirac-equation",
+    "name": "Ecuación de Dirac",
+    "author": "Paul Dirac",
+    "year": 1928,
+    "field": "Mecánica cuántica relativista",
+    "level": "Avanzado",
+    "color": "#ec4899",
+    "folder": "formulas/dirac-equation",
+    "formula": [
+      "(i\\gamma^\\mu\\partial_\\mu-m)\\psi=0",
+      "(i\\hbar\\gamma^\\mu\\partial_\\mu-mc)\\psi=0",
+      "E^2=p^2c^2+m^2c^4"
+    ],
+    "formulaText": [
+      "i gamma mu derivada mu menos masa aplicado a psi = 0",
+      "ecuación relativista para espinores y antipartículas"
+    ],
+    "summary": "Une relatividad especial y mecánica cuántica para partículas de espín 1/2.",
+    "simulation": "dirac-equation"
+  },
+  {
+    "id": "heisenberg-uncertainty-principle",
+    "name": "Principio de incertidumbre de Heisenberg",
+    "author": "Werner Heisenberg",
+    "year": 1927,
+    "field": "Mecánica cuántica",
+    "level": "Universidad inicial",
+    "color": "#ef4444",
+    "folder": "formulas/heisenberg-uncertainty-principle",
+    "formula": [
+      "\\Delta x\\,\\Delta p\\geq\\frac{\\hbar}{2}",
+      "\\Delta E\\,\\Delta t\\gtrsim\\frac{\\hbar}{2}",
+      "[x,p]=i\\hbar"
+    ],
+    "formulaText": [
+      "incertidumbre en posición · incertidumbre en momento ≥ h barra / 2"
+    ],
+    "summary": "Establece un límite fundamental a la precisión conjunta con la que pueden conocerse posición y momento.",
+    "simulation": "heisenberg-uncertainty-principle"
+  },
+  {
+    "id": "de-broglie-relation",
+    "name": "Relación de de Broglie",
+    "author": "Louis de Broglie",
+    "year": 1924,
+    "field": "Mecánica cuántica",
+    "level": "Universidad inicial",
+    "color": "#10b981",
+    "folder": "formulas/de-broglie-relation",
+    "formula": [
+      "\\lambda=\\frac{h}{p}",
+      "p=\\frac{h}{\\lambda}",
+      "p=mv"
+    ],
+    "formulaText": [
+      "longitud de onda = constante de Planck / momento",
+      "momento = constante de Planck / longitud de onda"
+    ],
+    "summary": "Asocia una longitud de onda a toda partícula con momento, expresando la dualidad onda-partícula.",
+    "simulation": "de-broglie-relation"
+  }
+]
