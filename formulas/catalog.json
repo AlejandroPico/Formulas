@@ -2346,14 +2346,22 @@
     "level": "Universidad inicial",
     "color": "#3b82f6",
     "folder": "formulas/shannon-hartley-capacity",
-    "formula": [],
+    "formula": [
+      "C=B\\log_2(1+\\frac{S}{N})",
+      "C=B\\log_2(1+\\mathrm{SNR})",
+      "\\mathrm{SNR}_{dB}=10\\log_{10}(\\frac{S}{N})"
+    ],
     "formulaText": [
       "capacidad = ancho de banda · logaritmo base dos de uno + relación señal ruido",
       "+ ancho de banda y mejor SNR aumentan la tasa máxima teórica"
     ],
     "summary": "Da el límite teórico de transmisión fiable de un canal con ruido gaussiano.",
     "simulation": "shannon-hartley-capacity",
-    "sections": []
+    "sections": [
+      {
+        "file": "formula.tex"
+      }
+    ]
   },
   {
     "id": "shannon-entropy",
