@@ -651,6 +651,24 @@
     ]
   },
   {
+    "id": "normal-distribution",
+    "name": "Distribución normal",
+    "author": "Gauss y Laplace",
+    "year": 1809,
+    "field": "Probabilidad y estadística",
+    "level": "Bachillerato y universidad inicial",
+    "color": "#10b981",
+    "folder": "formulas/normal-distribution",
+    "formula": [],
+    "formulaText": [
+      "densidad normal = uno dividido entre sigma raíz de dos pi · exponencial negativa del cuadrado normalizado",
+      "la media fija el centro y la desviación estándar fija el ancho"
+    ],
+    "summary": "Modelo de distribución continua con forma de campana, central en estadística y teoría de errores.",
+    "simulation": "normal-distribution",
+    "sections": []
+  },
+  {
     "id": "poisson-equation",
     "name": "Ecuación de Poisson",
     "author": "Siméon Denis Poisson",
