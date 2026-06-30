@@ -1689,14 +1689,22 @@
     "level": "Universidad",
     "color": "#ef4444",
     "folder": "formulas/fermi-dirac-distribution",
-    "formula": [],
+    "formula": [
+      "f(E)=\\frac{1}{\\exp((E-E_F)/(k_BT))+1}",
+      "f(E_F)=\\frac{1}{2}",
+      "0\\leq f(E)\\leq 1"
+    ],
     "formulaText": [
       "ocupación media = uno dividido entre exponencial de energía − energía de Fermi sobre k T + uno",
       "los fermiones obedecen exclusión de Pauli"
     ],
     "summary": "Describe la ocupación de estados cuánticos por fermiones indistinguibles sujetos al principio de exclusión.",
     "simulation": "fermi-dirac-distribution",
-    "sections": []
+    "sections": [
+      {
+        "file": "formula.tex"
+      }
+    ]
   },
   {
     "id": "klein-gordon-equation",
