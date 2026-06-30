@@ -1548,14 +1548,22 @@
     "level": "Universidad inicial",
     "color": "#10b981",
     "folder": "formulas/de-broglie-relation",
-    "formula": [],
+    "formula": [
+      "\\lambda=\\frac{h}{p}",
+      "p=\\frac{h}{\\lambda}",
+      "p=mv"
+    ],
     "formulaText": [
       "longitud de onda = constante de Planck dividida entre momento",
       "momento = constante de Planck dividida entre longitud de onda"
     ],
     "summary": "Asocia una longitud de onda a toda partícula con momento, expresando la dualidad onda-partícula.",
     "simulation": "de-broglie-relation",
-    "sections": []
+    "sections": [
+      {
+        "file": "formula.tex"
+      }
+    ]
   },
   {
     "id": "schrodinger-equation",
