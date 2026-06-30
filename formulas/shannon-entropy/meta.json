@@ -1,0 +1,15 @@
+{
+  "id": "shannon-entropy",
+  "name": "Entropía de Shannon",
+  "author": "Claude Shannon",
+  "year": 1948,
+  "field": "Teoría de la información",
+  "level": "Universidad inicial",
+  "color": "#3b82f6",
+  "simulation": "shannon-entropy",
+  "formulaText": [
+    "entropía = suma negativa de probabilidades por logaritmo base dos de probabilidades",
+    "en una fuente binaria, la incertidumbre máxima ocurre cuando p = 0.5"
+  ],
+  "summary": "Mide la incertidumbre media o información esperada de una fuente aleatoria."
+}
