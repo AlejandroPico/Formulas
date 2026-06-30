@@ -1587,6 +1587,31 @@
     ]
   },
   {
+    "id": "heisenberg-uncertainty-principle",
+    "name": "Principio de incertidumbre de Heisenberg",
+    "author": "Werner Heisenberg",
+    "year": 1927,
+    "field": "Mecánica cuántica",
+    "level": "Universidad inicial",
+    "color": "#ef4444",
+    "folder": "formulas/heisenberg-uncertainty-principle",
+    "formula": [
+      "\\Delta x\\,\\Delta p\\geq\\frac{\\hbar}{2}",
+      "\\Delta E\\,\\Delta t\\gtrsim\\frac{\\hbar}{2}",
+      "[x,p]=i\\hbar"
+    ],
+    "formulaText": [
+      "incertidumbre en posición · incertidumbre en momento es mayor o igual que h barra dividido entre dos"
+    ],
+    "summary": "Establece un límite fundamental a la precisión conjunta con la que pueden conocerse posición y momento.",
+    "simulation": "heisenberg-uncertainty-principle",
+    "sections": [
+      {
+        "file": "formula.tex"
+      }
+    ]
+  },
+  {
     "id": "dirac-equation",
     "name": "Ecuación de Dirac",
     "author": "Paul Dirac",
