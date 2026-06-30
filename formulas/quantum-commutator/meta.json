@@ -1,0 +1,15 @@
+{
+  "id": "quantum-commutator",
+  "name": "Conmutador cuántico",
+  "author": "Mecánica cuántica",
+  "year": 1925,
+  "field": "Mecánica cuántica",
+  "level": "Universidad inicial",
+  "color": "#38bdf8",
+  "simulation": "quantum-commutator",
+  "formulaText": [
+    "conmutador de A y B = A B menos B A",
+    "posición y momento no conmutan: su conmutador vale i h barra"
+  ],
+  "summary": "Mide cuánto cambia el resultado al aplicar dos operadores en órdenes distintos."
+}
