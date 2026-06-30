@@ -1634,6 +1634,32 @@
     ]
   },
   {
+    "id": "klein-gordon-equation",
+    "name": "Ecuación de Klein-Gordon",
+    "author": "Oskar Klein y Walter Gordon",
+    "year": 1926,
+    "field": "Mecánica cuántica relativista",
+    "level": "Avanzado",
+    "color": "#38bdf8",
+    "folder": "formulas/klein-gordon-equation",
+    "formula": [
+      "(\\Box+\\frac{m^2c^2}{\\hbar^2})\\phi=0",
+      "\\frac{1}{c^2}\\frac{\\partial^2\\phi}{\\partial t^2}-\\nabla^2\\phi+\\frac{m^2c^2}{\\hbar^2}\\phi=0",
+      "E^2=p^2c^2+m^2c^4"
+    ],
+    "formulaText": [
+      "operador de onda + término de masa aplicado al campo = 0",
+      "energía al cuadrado = momento al cuadrado · c al cuadrado + masa al cuadrado · c a la cuarta"
+    ],
+    "summary": "Describe campos cuánticos relativistas escalares de espín cero.",
+    "simulation": "klein-gordon-equation",
+    "sections": [
+      {
+        "file": "formula.tex"
+      }
+    ]
+  },
+  {
     "id": "schrodinger-equation",
     "name": "Ecuación de Schrödinger",
     "author": "Erwin Schrödinger",
@@ -1861,6 +1887,9 @@
       },
       {
         "file": "simulacion/index.js"
+      },
+      {
+        "file": "simulacion/styles.css"
       }
     ]
   }
