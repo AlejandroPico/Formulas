@@ -698,6 +698,24 @@
     ]
   },
   {
+    "id": "mean-squared-error",
+    "name": "Error cuadrático medio",
+    "author": "Estadística y mínimos cuadrados",
+    "year": 1805,
+    "field": "Estadística y aprendizaje automático",
+    "level": "Bachillerato y universidad inicial",
+    "color": "#2563eb",
+    "folder": "formulas/mean-squared-error",
+    "formula": [],
+    "formulaText": [
+      "MSE = media de los errores al cuadrado entre valores reales y predichos",
+      "penaliza mucho los errores grandes porque los eleva al cuadrado"
+    ],
+    "summary": "Mide el error promedio de un modelo penalizando cuadráticamente las desviaciones.",
+    "simulation": "mean-squared-error",
+    "sections": []
+  },
+  {
     "id": "normal-distribution",
     "name": "Distribución normal",
     "author": "Gauss y Laplace",
