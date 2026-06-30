@@ -1,0 +1,15 @@
+{
+  "id": "klein-gordon-equation",
+  "name": "Ecuación de Klein-Gordon",
+  "author": "Oskar Klein y Walter Gordon",
+  "year": 1926,
+  "field": "Mecánica cuántica relativista",
+  "level": "Avanzado",
+  "color": "#38bdf8",
+  "simulation": "klein-gordon-equation",
+  "formulaText": [
+    "operador de onda más término de masa aplicado al campo = 0",
+    "energía al cuadrado = momento al cuadrado por c al cuadrado más masa al cuadrado por c a la cuarta"
+  ],
+  "summary": "Describe campos cuánticos relativistas escalares de espín cero."
+}
