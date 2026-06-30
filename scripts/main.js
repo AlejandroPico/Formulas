@@ -52,7 +52,11 @@ const MIGRATED_FORMULA_IDS = new Set([
   "planck-law",
   "ideal-gas-law",
   "gibbs-free-energy",
-  "arrhenius-equation"
+  "arrhenius-equation",
+  "shannon-entropy",
+  "normal-distribution",
+  "bayes-theorem",
+  "michaelis-menten-kinetics"
 ]);
 
 const MIGRATED_FORMULA_NAMES = new Set([
@@ -94,7 +98,12 @@ const MIGRATED_FORMULA_NAMES = new Set([
   "ley de planck",
   "ley de los gases ideales",
   "energia libre de gibbs",
-  "ecuacion de arrhenius"
+  "ecuacion de arrhenius",
+  "entropia de shannon",
+  "distribucion normal",
+  "teorema de bayes",
+  "cinetica de michaelis menten",
+  "michaelis menten"
 ]);
 
 let equations = [];
