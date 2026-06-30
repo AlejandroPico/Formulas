@@ -56,7 +56,10 @@ const MIGRATED_FORMULA_IDS = new Set([
   "shannon-entropy",
   "normal-distribution",
   "bayes-theorem",
-  "michaelis-menten-kinetics"
+  "michaelis-menten-kinetics",
+  "shannon-hartley-capacity",
+  "mean-squared-error",
+  "kullback-leibler-divergence"
 ]);
 
 const MIGRATED_FORMULA_NAMES = new Set([
@@ -103,7 +106,12 @@ const MIGRATED_FORMULA_NAMES = new Set([
   "distribucion normal",
   "teorema de bayes",
   "cinetica de michaelis menten",
-  "michaelis menten"
+  "michaelis menten",
+  "capacidad de shannon hartley",
+  "capacidad shannon hartley",
+  "error cuadratico medio",
+  "divergencia de kullback leibler",
+  "kullback leibler"
 ]);
 
 let equations = [];
