@@ -1,0 +1,65 @@
+[
+  {
+    "id": "shannon-entropy",
+    "name": "Entropía de Shannon",
+    "author": "Claude Shannon",
+    "year": 1948,
+    "field": "Teoría de la información",
+    "level": "Universidad inicial",
+    "color": "#3b82f6",
+    "folder": "formulas/shannon-entropy",
+    "formula": [
+      "H(X)=-\\sum_i p_i\\log_2 p_i",
+      "H(p)=-p\\log_2 p-(1-p)\\log_2(1-p)",
+      "0\\leq H(p)\\leq 1"
+    ],
+    "formulaText": [
+      "entropía = suma negativa de probabilidades por logaritmo base dos de probabilidades",
+      "en una fuente binaria, la incertidumbre máxima ocurre cuando p = 0.5"
+    ],
+    "summary": "Mide la incertidumbre media o información esperada de una fuente aleatoria.",
+    "simulation": "shannon-entropy"
+  },
+  {
+    "id": "normal-distribution",
+    "name": "Distribución normal",
+    "author": "Gauss y Laplace",
+    "year": 1809,
+    "field": "Probabilidad y estadística",
+    "level": "Bachillerato y universidad inicial",
+    "color": "#10b981",
+    "folder": "formulas/normal-distribution",
+    "formula": [
+      "f(x)=\\frac{1}{\\sigma\\sqrt{2\\pi}}e^{-\\frac{1}{2}((x-\\mu)/\\sigma)^2}",
+      "X\\sim\\mathcal N(\\mu,\\sigma^2)",
+      "Z=\\frac{X-\\mu}{\\sigma}"
+    ],
+    "formulaText": [
+      "densidad normal = uno dividido entre sigma raíz de dos pi por exponencial negativa del cuadrado normalizado",
+      "la media fija el centro y la desviación estándar fija el ancho"
+    ],
+    "summary": "Modelo de distribución continua con forma de campana, central en estadística y teoría de errores.",
+    "simulation": "normal-distribution"
+  },
+  {
+    "id": "bayes-theorem",
+    "name": "Teorema de Bayes",
+    "author": "Thomas Bayes",
+    "year": 1763,
+    "field": "Probabilidad y estadística",
+    "level": "Bachillerato y universidad inicial",
+    "color": "#f59e0b",
+    "folder": "formulas/bayes-theorem",
+    "formula": [
+      "P(A|B)=\\frac{P(B|A)P(A)}{P(B)}",
+      "P(B)=P(B|A)P(A)+P(B|\\neg A)P(\\neg A)",
+      "P(A|B)=\\frac{P(B|A)P(A)}{P(B|A)P(A)+P(B|\\neg A)(1-P(A))}"
+    ],
+    "formulaText": [
+      "probabilidad de A dado B = probabilidad de B dado A por probabilidad de A dividido entre probabilidad de B",
+      "actualiza una probabilidad previa usando evidencia nueva"
+    ],
+    "summary": "Permite actualizar creencias probabilísticas al observar nueva evidencia.",
+    "simulation": "bayes-theorem"
+  }
+]
