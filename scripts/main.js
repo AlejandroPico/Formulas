@@ -41,7 +41,11 @@ const MIGRATED_FORMULA_IDS = new Set([
   "schrodinger-equation",
   "dirac-equation",
   "heisenberg-uncertainty-principle",
-  "de-broglie-relation"
+  "de-broglie-relation",
+  "born-rule",
+  "quantum-commutator",
+  "path-integral",
+  "klein-gordon-equation"
 ]);
 
 const MIGRATED_FORMULA_NAMES = new Set([
@@ -71,7 +75,12 @@ const MIGRATED_FORMULA_NAMES = new Set([
   "ecuacion de schroedinger",
   "ecuacion de dirac",
   "principio de incertidumbre de heisenberg",
-  "relacion de de broglie"
+  "relacion de de broglie",
+  "regla de born",
+  "conmutador cuantico",
+  "integral de camino de feynman",
+  "integral de camino",
+  "ecuacion de klein gordon"
 ]);
 
 let equations = [];
