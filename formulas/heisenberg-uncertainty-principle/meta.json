@@ -1,0 +1,14 @@
+{
+  "id": "heisenberg-uncertainty-principle",
+  "name": "Principio de incertidumbre de Heisenberg",
+  "author": "Werner Heisenberg",
+  "year": 1927,
+  "field": "Mecánica cuántica",
+  "level": "Universidad inicial",
+  "color": "#ef4444",
+  "simulation": "heisenberg-uncertainty-principle",
+  "formulaText": [
+    "incertidumbre en posición por incertidumbre en momento es mayor o igual que h barra dividido entre dos"
+  ],
+  "summary": "Establece un límite fundamental a la precisión conjunta con la que pueden conocerse posición y momento."
+}
