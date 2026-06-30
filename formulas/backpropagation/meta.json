@@ -1,0 +1,15 @@
+{
+  "id": "backpropagation",
+  "name": "Retropropagación",
+  "author": "Rumelhart, Hinton y Williams",
+  "year": 1986,
+  "field": "Aprendizaje automático",
+  "level": "Universidad",
+  "color": "#ef4444",
+  "simulation": "backpropagation",
+  "formulaText": [
+    "el gradiente de una pérdida respecto a un peso se calcula encadenando derivadas locales",
+    "el error se propaga hacia atrás desde la salida hasta las capas anteriores"
+  ],
+  "summary": "Algoritmo que calcula gradientes en redes neuronales aplicando la regla de la cadena capa por capa."
+}
