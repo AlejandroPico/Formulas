@@ -706,14 +706,22 @@
     "level": "Bachillerato y universidad inicial",
     "color": "#2563eb",
     "folder": "formulas/mean-squared-error",
-    "formula": [],
+    "formula": [
+      "MSE=\\frac{1}{n}\\sum_{i=1}^{n}(y_i-\\hat y_i)^2",
+      "J(\\theta)=\\frac{1}{n}\\sum_{i=1}^{n}(y_i-f_\\theta(x_i))^2",
+      "RMSE=\\sqrt{MSE}"
+    ],
     "formulaText": [
       "MSE = media de los errores al cuadrado entre valores reales y predichos",
       "penaliza mucho los errores grandes porque los eleva al cuadrado"
     ],
     "summary": "Mide el error promedio de un modelo penalizando cuadráticamente las desviaciones.",
     "simulation": "mean-squared-error",
-    "sections": []
+    "sections": [
+      {
+        "file": "formula.tex"
+      }
+    ]
   },
   {
     "id": "normal-distribution",
