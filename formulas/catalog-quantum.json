@@ -81,5 +81,89 @@
     ],
     "summary": "Asocia una longitud de onda a toda partícula con momento, expresando la dualidad onda-partícula.",
     "simulation": "de-broglie-relation"
+  },
+  {
+    "id": "born-rule",
+    "name": "Regla de Born",
+    "author": "Max Born",
+    "year": 1926,
+    "field": "Mecánica cuántica",
+    "level": "Universidad inicial",
+    "color": "#a855f7",
+    "folder": "formulas/born-rule",
+    "formula": [
+      "P(x)=|\\psi(x)|^2",
+      "P(a\\leq x\\leq b)=\\int_a^b |\\psi(x)|^2\\,dx",
+      "\\int_{-\\infty}^{\\infty}|\\psi(x)|^2\\,dx=1"
+    ],
+    "formulaText": [
+      "probabilidad = |psi|²",
+      "probabilidad en una región = integral de |psi|²"
+    ],
+    "summary": "Conecta la función de onda con probabilidades observables de medición.",
+    "simulation": "born-rule"
+  },
+  {
+    "id": "quantum-commutator",
+    "name": "Conmutador cuántico",
+    "author": "Mecánica cuántica",
+    "year": 1925,
+    "field": "Mecánica cuántica",
+    "level": "Universidad inicial",
+    "color": "#38bdf8",
+    "folder": "formulas/quantum-commutator",
+    "formula": [
+      "[A,B]=AB-BA",
+      "[x,p]=i\\hbar",
+      "\\Delta x\\,\\Delta p\\geq\\frac{1}{2}|\\langle[x,p]\\rangle|"
+    ],
+    "formulaText": [
+      "conmutador de A y B = AB - BA",
+      "posición y momento no conmutan"
+    ],
+    "summary": "Mide cuánto cambia el resultado al aplicar dos operadores en órdenes distintos.",
+    "simulation": "quantum-commutator"
+  },
+  {
+    "id": "path-integral",
+    "name": "Integral de camino de Feynman",
+    "author": "Richard Feynman",
+    "year": 1948,
+    "field": "Mecánica cuántica",
+    "level": "Avanzado",
+    "color": "#8b5cf6",
+    "folder": "formulas/path-integral",
+    "formula": [
+      "K(B,A)=\\int \\mathcal D x\\,\\exp(iS[x]/\\hbar)",
+      "S=\\int L\\,dt",
+      "K=\\langle B|A\\rangle"
+    ],
+    "formulaText": [
+      "amplitud = suma sobre historias ponderadas por fase",
+      "fase = exp(iS/h barra)"
+    ],
+    "summary": "Formula la evolución cuántica como una suma sobre todas las trayectorias posibles, ponderadas por la acción.",
+    "simulation": "path-integral"
+  },
+  {
+    "id": "klein-gordon-equation",
+    "name": "Ecuación de Klein-Gordon",
+    "author": "Oskar Klein y Walter Gordon",
+    "year": 1926,
+    "field": "Mecánica cuántica relativista",
+    "level": "Avanzado",
+    "color": "#38bdf8",
+    "folder": "formulas/klein-gordon-equation",
+    "formula": [
+      "(\\Box+\\frac{m^2c^2}{\\hbar^2})\\phi=0",
+      "\\frac{1}{c^2}\\frac{\\partial^2\\phi}{\\partial t^2}-\\nabla^2\\phi+\\frac{m^2c^2}{\\hbar^2}\\phi=0",
+      "E^2=p^2c^2+m^2c^4"
+    ],
+    "formulaText": [
+      "operador de onda más término de masa aplicado al campo = 0",
+      "relación relativista energía-momento"
+    ],
+    "summary": "Describe campos cuánticos relativistas escalares de espín cero.",
+    "simulation": "klein-gordon-equation"
   }
 ]
