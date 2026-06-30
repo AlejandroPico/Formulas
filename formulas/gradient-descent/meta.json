@@ -1,0 +1,15 @@
+{
+  "id": "gradient-descent",
+  "name": "Descenso del gradiente",
+  "author": "Augustin-Louis Cauchy",
+  "year": 1847,
+  "field": "Optimización y aprendizaje automático",
+  "level": "Universidad inicial",
+  "color": "#3b82f6",
+  "simulation": "gradient-descent",
+  "formulaText": [
+    "nuevo peso = peso actual menos tasa de aprendizaje por gradiente de la pérdida",
+    "se avanza en dirección opuesta al gradiente para reducir la función de coste"
+  ],
+  "summary": "Método iterativo que minimiza una función moviéndose contra la pendiente local."
+}
