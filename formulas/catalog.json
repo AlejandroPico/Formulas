@@ -2534,13 +2534,21 @@
     "level": "Universidad",
     "color": "#ef4444",
     "folder": "formulas/kullback-leibler-divergence",
-    "formula": [],
+    "formula": [
+      "D_{KL}(P\\parallel Q)=\\sum_x P(x)\\log\\frac{P(x)}{Q(x)}",
+      "D_{KL}(P\\parallel Q)=\\int p(x)\\log\\frac{p(x)}{q(x)}\\,dx",
+      "D_{KL}(P\\parallel Q)\\geq 0"
+    ],
     "formulaText": [
       "divergencia KL = esperanza bajo P del logaritmo de P dividido entre Q",
       "mide pérdida de información al aproximar P mediante Q"
     ],
     "summary": "Cuantifica cuánto se pierde al usar una distribución aproximada Q en lugar de una distribución P.",
     "simulation": "kullback-leibler-divergence",
-    "sections": []
+    "sections": [
+      {
+        "file": "formula.tex"
+      }
+    ]
   }
 ]
