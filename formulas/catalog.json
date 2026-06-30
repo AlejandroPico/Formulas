@@ -2620,6 +2620,24 @@
     ]
   },
   {
+    "id": "softmax-function",
+    "name": "Softmax",
+    "author": "Aprendizaje automático",
+    "year": 1959,
+    "field": "Aprendizaje automático",
+    "level": "Universidad inicial",
+    "color": "#a855f7",
+    "folder": "formulas/softmax-function",
+    "formula": [],
+    "formulaText": [
+      "softmax convierte logits en probabilidades normalizadas que suman uno",
+      "cada salida es exponencial del logit dividido entre la suma de exponenciales"
+    ],
+    "summary": "Transforma puntuaciones reales en una distribución de probabilidad multiclase.",
+    "simulation": "softmax-function",
+    "sections": []
+  },
+  {
     "id": "backpropagation",
     "name": "Retropropagación",
     "author": "Rumelhart, Hinton y Williams",
