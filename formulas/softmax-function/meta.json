@@ -1,0 +1,15 @@
+{
+  "id": "softmax-function",
+  "name": "Softmax",
+  "author": "Aprendizaje automático",
+  "year": 1959,
+  "field": "Aprendizaje automático",
+  "level": "Universidad inicial",
+  "color": "#a855f7",
+  "simulation": "softmax-function",
+  "formulaText": [
+    "softmax convierte logits en probabilidades normalizadas que suman uno",
+    "cada salida es exponencial del logit dividido entre la suma de exponenciales"
+  ],
+  "summary": "Transforma puntuaciones reales en una distribución de probabilidad multiclase."
+}
