@@ -2714,6 +2714,24 @@
     ]
   },
   {
+    "id": "black-scholes-model",
+    "name": "Modelo de Black-Scholes",
+    "author": "Fischer Black, Myron Scholes y Robert Merton",
+    "year": 1973,
+    "field": "Finanzas matemáticas",
+    "level": "Universidad",
+    "color": "#2563eb",
+    "folder": "formulas/black-scholes-model",
+    "formula": [],
+    "formulaText": [
+      "precio de una call europea = precio del subyacente · N(d1) − strike descontado · N(d2)",
+      "la volatilidad aumenta el valor temporal de la opción"
+    ],
+    "summary": "Modelo clásico para valorar opciones europeas bajo hipótesis de mercado idealizado.",
+    "simulation": "black-scholes-model",
+    "sections": []
+  },
+  {
     "id": "backpropagation",
     "name": "Retropropagación",
     "author": "Rumelhart, Hinton y Williams",
