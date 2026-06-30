@@ -37,7 +37,11 @@ const MIGRATED_FORMULA_IDS = new Set([
   "general-relativity",
   "friedmann-equations",
   "energy-momentum-relation",
-  "lorentz-transformations"
+  "lorentz-transformations",
+  "schrodinger-equation",
+  "dirac-equation",
+  "heisenberg-uncertainty-principle",
+  "de-broglie-relation"
 ]);
 
 const MIGRATED_FORMULA_NAMES = new Set([
@@ -62,7 +66,12 @@ const MIGRATED_FORMULA_NAMES = new Set([
   "relatividad general de einstein",
   "ecuaciones de friedmann",
   "relacion energia momento",
-  "transformaciones de lorentz"
+  "transformaciones de lorentz",
+  "ecuacion de schrodinger",
+  "ecuacion de schroedinger",
+  "ecuacion de dirac",
+  "principio de incertidumbre de heisenberg",
+  "relacion de de broglie"
 ]);
 
 let equations = [];
