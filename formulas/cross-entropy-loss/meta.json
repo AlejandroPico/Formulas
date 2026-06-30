@@ -1,0 +1,15 @@
+{
+  "id": "cross-entropy-loss",
+  "name": "Entropía cruzada",
+  "author": "Teoría de la información y aprendizaje automático",
+  "year": 1948,
+  "field": "Aprendizaje automático",
+  "level": "Universidad inicial",
+  "color": "#ef4444",
+  "simulation": "cross-entropy-loss",
+  "formulaText": [
+    "pérdida = menos suma de etiquetas reales por logaritmo de probabilidades predichas",
+    "penaliza mucho asignar baja probabilidad a la clase correcta"
+  ],
+  "summary": "Función de pérdida usada para clasificación probabilística, especialmente con softmax."
+}
