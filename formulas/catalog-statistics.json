@@ -61,5 +61,68 @@
     ],
     "summary": "Permite actualizar creencias probabilísticas al observar nueva evidencia.",
     "simulation": "bayes-theorem"
+  },
+  {
+    "id": "shannon-hartley-capacity",
+    "name": "Capacidad de Shannon-Hartley",
+    "author": "Claude Shannon y Ralph Hartley",
+    "year": 1948,
+    "field": "Teoría de la información",
+    "level": "Universidad inicial",
+    "color": "#3b82f6",
+    "folder": "formulas/shannon-hartley-capacity",
+    "formula": [
+      "C=B\\log_2(1+\\frac{S}{N})",
+      "C=B\\log_2(1+\\mathrm{SNR})",
+      "\\mathrm{SNR}_{dB}=10\\log_{10}(\\frac{S}{N})"
+    ],
+    "formulaText": [
+      "capacidad = ancho de banda por logaritmo base dos de uno más relación señal ruido",
+      "más ancho de banda y mejor SNR aumentan la tasa máxima teórica"
+    ],
+    "summary": "Da el límite teórico de transmisión fiable de un canal con ruido gaussiano.",
+    "simulation": "shannon-hartley-capacity"
+  },
+  {
+    "id": "mean-squared-error",
+    "name": "Error cuadrático medio",
+    "author": "Estadística y mínimos cuadrados",
+    "year": 1805,
+    "field": "Estadística y aprendizaje automático",
+    "level": "Bachillerato y universidad inicial",
+    "color": "#2563eb",
+    "folder": "formulas/mean-squared-error",
+    "formula": [
+      "MSE=\\frac{1}{n}\\sum_{i=1}^{n}(y_i-\\hat y_i)^2",
+      "J(\\theta)=\\frac{1}{n}\\sum_{i=1}^{n}(y_i-f_\\theta(x_i))^2",
+      "RMSE=\\sqrt{MSE}"
+    ],
+    "formulaText": [
+      "MSE = media de los errores al cuadrado entre valores reales y predichos",
+      "penaliza mucho los errores grandes porque los eleva al cuadrado"
+    ],
+    "summary": "Mide el error promedio de un modelo penalizando cuadráticamente las desviaciones.",
+    "simulation": "mean-squared-error"
+  },
+  {
+    "id": "kullback-leibler-divergence",
+    "name": "Divergencia de Kullback-Leibler",
+    "author": "Solomon Kullback y Richard Leibler",
+    "year": 1951,
+    "field": "Teoría de la información y estadística",
+    "level": "Universidad",
+    "color": "#ef4444",
+    "folder": "formulas/kullback-leibler-divergence",
+    "formula": [
+      "D_{KL}(P\\parallel Q)=\\sum_x P(x)\\log\\frac{P(x)}{Q(x)}",
+      "D_{KL}(P\\parallel Q)=\\int p(x)\\log\\frac{p(x)}{q(x)}\\,dx",
+      "D_{KL}(P\\parallel Q)\\geq 0"
+    ],
+    "formulaText": [
+      "divergencia KL = esperanza bajo P del logaritmo de P dividido entre Q",
+      "mide pérdida de información al aproximar P mediante Q"
+    ],
+    "summary": "Cuantifica cuánto se pierde al usar una distribución aproximada Q en lugar de una distribución P.",
+    "simulation": "kullback-leibler-divergence"
   }
 ]
