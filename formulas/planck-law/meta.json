@@ -1,0 +1,15 @@
+{
+  "id": "planck-law",
+  "name": "Ley de Planck",
+  "author": "Max Planck",
+  "year": 1900,
+  "field": "Física térmica y cuántica",
+  "level": "Universidad inicial",
+  "color": "#eab308",
+  "simulation": "planck-law",
+  "formulaText": [
+    "radiancia espectral = constante dividida por longitud de onda a la quinta y por exponencial menos uno",
+    "al aumentar la temperatura, el pico se desplaza a longitudes de onda menores"
+  ],
+  "summary": "Describe el espectro de radiación térmica de un cuerpo negro."
+}
