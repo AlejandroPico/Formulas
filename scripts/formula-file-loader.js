@@ -7,6 +7,7 @@ const LORENTZ_CATALOG_PATH = "formulas/catalog-lorentz.json";
 const QUANTUM_CATALOG_PATH = "formulas/catalog-quantum.json";
 const CHEMISTRY_CATALOG_PATH = "formulas/catalog-chemistry.json";
 const STATISTICS_CATALOG_PATH = "formulas/catalog-statistics.json";
+const MACHINE_LEARNING_CATALOG_PATH = "formulas/catalog-machine-learning.json";
 
 const STANDARD_SECTIONS = [
   { file: "formula.tex", key: "formula", label: "Fórmula", type: "formula", order: 10 },
@@ -38,7 +39,8 @@ async function loadCatalog() {
     const quantum = await loadOptionalJsonArray(QUANTUM_CATALOG_PATH);
     const chemistry = await loadOptionalJsonArray(CHEMISTRY_CATALOG_PATH);
     const statistics = await loadOptionalJsonArray(STATISTICS_CATALOG_PATH);
-    return mergeCatalogEntries(catalog, recent, lorentz, quantum, chemistry, statistics);
+    const machineLearning = await loadOptionalJsonArray(MACHINE_LEARNING_CATALOG_PATH);
+    return mergeCatalogEntries(catalog, recent, lorentz, quantum, chemistry, statistics, machineLearning);
   } catch (error) {
     console.warn("No se pudo cargar formulas/catalog.json; usando manifest como respaldo.", error);
     return recordsFromManifest().map(record => ({
