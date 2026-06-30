@@ -1587,6 +1587,32 @@
     ]
   },
   {
+    "id": "quantum-commutator",
+    "name": "Conmutador cuántico",
+    "author": "Mecánica cuántica",
+    "year": 1925,
+    "field": "Mecánica cuántica",
+    "level": "Universidad inicial",
+    "color": "#38bdf8",
+    "folder": "formulas/quantum-commutator",
+    "formula": [
+      "[A,B]=AB-BA",
+      "[x,p]=i\\hbar",
+      "\\Delta x\\,\\Delta p\\geq\\frac{1}{2}|\\langle[x,p]\\rangle|"
+    ],
+    "formulaText": [
+      "conmutador de A y B = A B − B A",
+      "posición y momento no conmutan: su conmutador vale i h barra"
+    ],
+    "summary": "Mide cuánto cambia el resultado al aplicar dos operadores en órdenes distintos.",
+    "simulation": "quantum-commutator",
+    "sections": [
+      {
+        "file": "formula.tex"
+      }
+    ]
+  },
+  {
     "id": "schrodinger-equation",
     "name": "Ecuación de Schrödinger",
     "author": "Erwin Schrödinger",
