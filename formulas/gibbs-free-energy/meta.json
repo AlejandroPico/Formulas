@@ -1,0 +1,15 @@
+{
+  "id": "gibbs-free-energy",
+  "name": "Energía libre de Gibbs",
+  "author": "Josiah Willard Gibbs",
+  "year": 1876,
+  "field": "Termodinámica química",
+  "level": "Universidad inicial",
+  "color": "#22c55e",
+  "simulation": "gibbs-free-energy",
+  "formulaText": [
+    "variación de energía libre = variación de entalpía menos temperatura por variación de entropía",
+    "si delta G es negativa, el proceso es espontáneo a presión y temperatura constantes"
+  ],
+  "summary": "Determina la espontaneidad termodinámica de un proceso a temperatura y presión constantes."
+}
