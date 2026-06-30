@@ -1,0 +1,15 @@
+{
+  "id": "normal-distribution",
+  "name": "Distribución normal",
+  "author": "Gauss y Laplace",
+  "year": 1809,
+  "field": "Probabilidad y estadística",
+  "level": "Bachillerato y universidad inicial",
+  "color": "#10b981",
+  "simulation": "normal-distribution",
+  "formulaText": [
+    "densidad normal = uno dividido entre sigma raíz de dos pi por exponencial negativa del cuadrado normalizado",
+    "la media fija el centro y la desviación estándar fija el ancho"
+  ],
+  "summary": "Modelo de distribución continua con forma de campana, central en estadística y teoría de errores."
+}
