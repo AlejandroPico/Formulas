@@ -2581,13 +2581,21 @@
     "level": "Universidad",
     "color": "#ef4444",
     "folder": "formulas/backpropagation",
-    "formula": [],
+    "formula": [
+      "\\frac{\\partial L}{\\partial w_1}=\\frac{\\partial L}{\\partial \\hat y}\\frac{\\partial \\hat y}{\\partial h}\\frac{\\partial h}{\\partial w_1}",
+      "\\delta^{(l)}=((W^{(l+1)})^T\\delta^{(l+1)})\\odot \\sigma'(z^{(l)})",
+      "\\frac{\\partial L}{\\partial W^{(l)}}=\\delta^{(l)}(a^{(l-1)})^T"
+    ],
     "formulaText": [
       "el gradiente de una pérdida respecto a un peso se calcula encadenando derivadas locales",
       "el error se propaga hacia atrás desde la salida hasta las capas anteriores"
     ],
     "summary": "Algoritmo que calcula gradientes en redes neuronales aplicando la regla de la cadena capa por capa.",
     "simulation": "backpropagation",
-    "sections": []
+    "sections": [
+      {
+        "file": "formula.tex"
+      }
+    ]
   }
 ]
