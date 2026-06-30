@@ -1548,14 +1548,22 @@
     "level": "Universidad",
     "color": "#38bdf8",
     "folder": "formulas/bose-einstein-distribution",
-    "formula": [],
+    "formula": [
+      "\\bar n(E)=\\frac{1}{\\exp((E-\\mu)/(k_BT))-1}",
+      "\\mu<E_0",
+      "N=\\sum_i \\bar n_i"
+    ],
     "formulaText": [
       "ocupación media = uno dividido entre exponencial de energía − potencial químico sobre k T − uno",
       "los bosones pueden ocupar masivamente el mismo estado"
     ],
     "summary": "Describe la ocupación estadística de estados cuánticos por bosones indistinguibles.",
     "simulation": "bose-einstein-distribution",
-    "sections": []
+    "sections": [
+      {
+        "file": "formula.tex"
+      }
+    ]
   },
   {
     "id": "de-broglie-relation",
