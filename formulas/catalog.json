@@ -1357,6 +1357,35 @@
     ]
   },
   {
+    "id": "planck-law",
+    "name": "Ley de Planck",
+    "author": "Max Planck",
+    "year": 1900,
+    "field": "Física térmica y cuántica",
+    "level": "Universidad inicial",
+    "color": "#eab308",
+    "folder": "formulas/planck-law",
+    "formula": [
+      "B_\\lambda(T)=\\frac{2hc^2}{\\lambda^5}\\frac{1}{\\exp(hc/(\\lambda k_BT))-1}",
+      "\\lambda_{max}T=b",
+      "E=h\\nu"
+    ],
+    "formulaText": [
+      "radiancia espectral = constante / longitud de onda a la quinta y · exponencial − uno",
+      "al aumentar la temperatura, el pico se desplaza a longitudes de onda menores"
+    ],
+    "summary": "Describe el espectro de radiación térmica de un cuerpo negro.",
+    "simulation": "planck-law",
+    "sections": [
+      {
+        "file": "formula.tex"
+      },
+      {
+        "file": "significado.md"
+      }
+    ]
+  },
+  {
     "id": "lorentz-transformations",
     "name": "Transformaciones de Lorentz",
     "author": "Hendrik Lorentz",
