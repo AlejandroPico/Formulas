@@ -2338,6 +2338,24 @@
     ]
   },
   {
+    "id": "shannon-hartley-capacity",
+    "name": "Capacidad de Shannon-Hartley",
+    "author": "Claude Shannon y Ralph Hartley",
+    "year": 1948,
+    "field": "Teoría de la información",
+    "level": "Universidad inicial",
+    "color": "#3b82f6",
+    "folder": "formulas/shannon-hartley-capacity",
+    "formula": [],
+    "formulaText": [
+      "capacidad = ancho de banda · logaritmo base dos de uno + relación señal ruido",
+      "+ ancho de banda y mejor SNR aumentan la tasa máxima teórica"
+    ],
+    "summary": "Da el límite teórico de transmisión fiable de un canal con ruido gaussiano.",
+    "simulation": "shannon-hartley-capacity",
+    "sections": []
+  },
+  {
     "id": "shannon-entropy",
     "name": "Entropía de Shannon",
     "author": "Claude Shannon",
