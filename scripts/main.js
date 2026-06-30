@@ -45,7 +45,11 @@ const MIGRATED_FORMULA_IDS = new Set([
   "born-rule",
   "quantum-commutator",
   "path-integral",
-  "klein-gordon-equation"
+  "klein-gordon-equation",
+  "bose-einstein-distribution",
+  "fermi-dirac-distribution",
+  "boltzmann-entropy",
+  "planck-law"
 ]);
 
 const MIGRATED_FORMULA_NAMES = new Set([
@@ -80,7 +84,11 @@ const MIGRATED_FORMULA_NAMES = new Set([
   "conmutador cuantico",
   "integral de camino de feynman",
   "integral de camino",
-  "ecuacion de klein gordon"
+  "ecuacion de klein gordon",
+  "distribucion de bose einstein",
+  "distribucion de fermi dirac",
+  "entropia de boltzmann",
+  "ley de planck"
 ]);
 
 let equations = [];
