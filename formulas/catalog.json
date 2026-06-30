@@ -2722,14 +2722,22 @@
     "level": "Universidad",
     "color": "#2563eb",
     "folder": "formulas/black-scholes-model",
-    "formula": [],
+    "formula": [
+      "C=SN(d_1)-Ke^{-rT}N(d_2)",
+      "d_1=\\frac{\\ln(S/K)+(r+\\sigma^2/2)T}{\\sigma\\sqrt{T}}",
+      "d_2=d_1-\\sigma\\sqrt{T}"
+    ],
     "formulaText": [
       "precio de una call europea = precio del subyacente · N(d1) − strike descontado · N(d2)",
       "la volatilidad aumenta el valor temporal de la opción"
     ],
     "summary": "Modelo clásico para valorar opciones europeas bajo hipótesis de mercado idealizado.",
     "simulation": "black-scholes-model",
-    "sections": []
+    "sections": [
+      {
+        "file": "formula.tex"
+      }
+    ]
   },
   {
     "id": "backpropagation",
