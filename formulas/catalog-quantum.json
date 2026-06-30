@@ -165,5 +165,89 @@
     ],
     "summary": "Describe campos cuánticos relativistas escalares de espín cero.",
     "simulation": "klein-gordon-equation"
+  },
+  {
+    "id": "bose-einstein-distribution",
+    "name": "Distribución de Bose-Einstein",
+    "author": "Satyendra Nath Bose y Albert Einstein",
+    "year": 1924,
+    "field": "Mecánica estadística cuántica",
+    "level": "Universidad",
+    "color": "#38bdf8",
+    "folder": "formulas/bose-einstein-distribution",
+    "formula": [
+      "\\bar n(E)=\\frac{1}{\\exp((E-\\mu)/(k_BT))-1}",
+      "\\mu<E_0",
+      "N=\\sum_i \\bar n_i"
+    ],
+    "formulaText": [
+      "ocupación media = 1 / (exp((E-mu)/kBT) - 1)",
+      "los bosones pueden ocupar masivamente el mismo estado"
+    ],
+    "summary": "Describe la ocupación estadística de estados cuánticos por bosones indistinguibles.",
+    "simulation": "bose-einstein-distribution"
+  },
+  {
+    "id": "fermi-dirac-distribution",
+    "name": "Distribución de Fermi-Dirac",
+    "author": "Enrico Fermi y Paul Dirac",
+    "year": 1926,
+    "field": "Mecánica estadística cuántica",
+    "level": "Universidad",
+    "color": "#ef4444",
+    "folder": "formulas/fermi-dirac-distribution",
+    "formula": [
+      "f(E)=\\frac{1}{\\exp((E-E_F)/(k_BT))+1}",
+      "f(E_F)=\\frac{1}{2}",
+      "0\\leq f(E)\\leq 1"
+    ],
+    "formulaText": [
+      "ocupación media = 1 / (exp((E-EF)/kBT) + 1)",
+      "los fermiones obedecen exclusión de Pauli"
+    ],
+    "summary": "Describe la ocupación de estados cuánticos por fermiones indistinguibles sujetos al principio de exclusión.",
+    "simulation": "fermi-dirac-distribution"
+  },
+  {
+    "id": "boltzmann-entropy",
+    "name": "Entropía de Boltzmann",
+    "author": "Ludwig Boltzmann",
+    "year": 1877,
+    "field": "Mecánica estadística",
+    "level": "Universidad inicial",
+    "color": "#10b981",
+    "folder": "formulas/boltzmann-entropy",
+    "formula": [
+      "S=k_B\\ln W",
+      "W=\\frac{N!}{N_L!N_R!}",
+      "\\Delta S=k_B\\ln(\\frac{W_2}{W_1})"
+    ],
+    "formulaText": [
+      "entropía = kB por logaritmo del número de microestados",
+      "más microestados compatibles implican mayor entropía"
+    ],
+    "summary": "Relaciona la entropía macroscópica con el número de microestados microscópicos compatibles.",
+    "simulation": "boltzmann-entropy"
+  },
+  {
+    "id": "planck-law",
+    "name": "Ley de Planck",
+    "author": "Max Planck",
+    "year": 1900,
+    "field": "Física térmica y cuántica",
+    "level": "Universidad inicial",
+    "color": "#eab308",
+    "folder": "formulas/planck-law",
+    "formula": [
+      "B_\\lambda(T)=\\frac{2hc^2}{\\lambda^5}\\frac{1}{\\exp(hc/(\\lambda k_BT))-1}",
+      "\\lambda_{max}T=b",
+      "E=h\\nu"
+    ],
+    "formulaText": [
+      "radiancia espectral = constante / lambda^5 / (exp(hc/lambda kBT)-1)",
+      "al aumentar T, el pico se desplaza a longitudes de onda menores"
+    ],
+    "summary": "Describe el espectro de radiación térmica de un cuerpo negro.",
+    "simulation": "planck-law"
   }
 ]
