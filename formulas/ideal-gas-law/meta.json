@@ -1,0 +1,15 @@
+{
+  "id": "ideal-gas-law",
+  "name": "Ley de los gases ideales",
+  "author": "Clapeyron",
+  "year": 1834,
+  "field": "Termodinámica",
+  "level": "Bachillerato y universidad inicial",
+  "color": "#38bdf8",
+  "simulation": "ideal-gas-law",
+  "formulaText": [
+    "presión por volumen = cantidad de sustancia por constante de los gases por temperatura",
+    "a cantidad fija, la presión aumenta con la temperatura y disminuye con el volumen"
+  ],
+  "summary": "Relaciona presión, volumen, temperatura y cantidad de gas en el modelo ideal."
+}
