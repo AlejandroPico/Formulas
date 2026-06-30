@@ -933,6 +933,24 @@
     ]
   },
   {
+    "id": "ideal-gas-law",
+    "name": "Ley de los gases ideales",
+    "author": "Clapeyron",
+    "year": 1834,
+    "field": "Termodinámica",
+    "level": "Bachillerato y universidad inicial",
+    "color": "#38bdf8",
+    "folder": "formulas/ideal-gas-law",
+    "formula": [],
+    "formulaText": [
+      "presión · volumen = cantidad de sustancia · constante de los gases · temperatura",
+      "a cantidad fija, la presión aumenta con la temperatura y disminuye con el volumen"
+    ],
+    "summary": "Relaciona presión, volumen, temperatura y cantidad de gas en el modelo ideal.",
+    "simulation": "ideal-gas-law",
+    "sections": []
+  },
+  {
     "id": "gauss-theorem",
     "name": "Teorema de Gauss",
     "author": "Carl Friedrich Gauss",
