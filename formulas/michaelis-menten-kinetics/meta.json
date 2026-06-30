@@ -1,0 +1,15 @@
+{
+  "id": "michaelis-menten-kinetics",
+  "name": "Cinética de Michaelis-Menten",
+  "author": "Leonor Michaelis y Maud Menten",
+  "year": 1913,
+  "field": "Bioquímica y cinética enzimática",
+  "level": "Universidad inicial",
+  "color": "#22c55e",
+  "simulation": "michaelis-menten-kinetics",
+  "formulaText": [
+    "velocidad inicial = velocidad máxima por concentración de sustrato dividido entre Km más concentración de sustrato",
+    "cuando el sustrato es alto, la enzima se satura y la velocidad se aproxima a Vmax"
+  ],
+  "summary": "Modelo básico de saturación enzimática que relaciona velocidad de reacción y concentración de sustrato."
+}
