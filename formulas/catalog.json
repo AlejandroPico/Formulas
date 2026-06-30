@@ -1271,14 +1271,22 @@
     "level": "Universidad inicial",
     "color": "#10b981",
     "folder": "formulas/boltzmann-entropy",
-    "formula": [],
+    "formula": [
+      "S=k_B\\ln W",
+      "W=\\frac{N!}{N_L!N_R!}",
+      "\\Delta S=k_B\\ln(\\frac{W_2}{W_1})"
+    ],
     "formulaText": [
       "entropía = constante de Boltzmann · logaritmo del número de microestados compatibles",
       "+ microestados compatibles implican mayor entropía"
     ],
     "summary": "Relaciona la entropía macroscópica con el número de microestados microscópicos compatibles.",
     "simulation": "boltzmann-entropy",
-    "sections": []
+    "sections": [
+      {
+        "file": "formula.tex"
+      }
+    ]
   },
   {
     "id": "lorentz-force",
