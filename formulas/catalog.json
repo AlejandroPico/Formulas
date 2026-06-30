@@ -2159,14 +2159,22 @@
     "level": "Universidad inicial",
     "color": "#22c55e",
     "folder": "formulas/lotka-volterra-equations",
-    "formula": [],
+    "formula": [
+      "\\frac{dx}{dt}=\\alpha x-\\beta xy",
+      "\\frac{dy}{dt}=\\delta xy-\\gamma y",
+      "x,y\\geq 0"
+    ],
     "formulaText": [
       "las presas crecen de forma natural y disminuyen · encuentros con depredadores",
       "los depredadores crecen al alimentarse de presas y mueren en ausencia de alimento"
     ],
     "summary": "Modelo depredador-presa que genera oscilaciones acopladas entre dos poblaciones.",
     "simulation": "lotka-volterra-equations",
-    "sections": []
+    "sections": [
+      {
+        "file": "formula.tex"
+      }
+    ]
   },
   {
     "id": "fermi-dirac-distribution",
