@@ -1,0 +1,15 @@
+{
+  "id": "kullback-leibler-divergence",
+  "name": "Divergencia de Kullback-Leibler",
+  "author": "Solomon Kullback y Richard Leibler",
+  "year": 1951,
+  "field": "Teoría de la información y estadística",
+  "level": "Universidad",
+  "color": "#ef4444",
+  "simulation": "kullback-leibler-divergence",
+  "formulaText": [
+    "divergencia KL = esperanza bajo P del logaritmo de P dividido entre Q",
+    "mide pérdida de información al aproximar P mediante Q"
+  ],
+  "summary": "Cuantifica cuánto se pierde al usar una distribución aproximada Q en lugar de una distribución P."
+}
