@@ -1404,6 +1404,32 @@
     ]
   },
   {
+    "id": "arrhenius-equation",
+    "name": "Ecuación de Arrhenius",
+    "author": "Svante Arrhenius",
+    "year": 1889,
+    "field": "Cinética química",
+    "level": "Universidad inicial",
+    "color": "#f97316",
+    "folder": "formulas/arrhenius-equation",
+    "formula": [
+      "k=Ae^{-E_a/(RT)}",
+      "\\ln k=\\ln A-\\frac{E_a}{R}\\frac{1}{T}",
+      "\\frac{k_2}{k_1}=\\exp(-\\frac{E_a}{R}(\\frac{1}{T_2}-\\frac{1}{T_1}))"
+    ],
+    "formulaText": [
+      "constante de velocidad = factor preexponencial · exponencial negativa de energía de activación sobre R T",
+      "al aumentar la temperatura o disminuir la barrera de activación, la reacción se acelera"
+    ],
+    "summary": "Relaciona la constante de velocidad de una reacción con la temperatura y la energía de activación.",
+    "simulation": "arrhenius-equation",
+    "sections": [
+      {
+        "file": "formula.tex"
+      }
+    ]
+  },
+  {
     "id": "lorentz-force",
     "name": "Fuerza de Lorentz",
     "author": "Hendrik Lorentz",
