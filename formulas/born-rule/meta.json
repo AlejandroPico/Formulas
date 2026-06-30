@@ -1,0 +1,15 @@
+{
+  "id": "born-rule",
+  "name": "Regla de Born",
+  "author": "Max Born",
+  "year": 1926,
+  "field": "Mecánica cuántica",
+  "level": "Universidad inicial",
+  "color": "#a855f7",
+  "simulation": "born-rule",
+  "formulaText": [
+    "probabilidad = valor absoluto de la función de onda al cuadrado",
+    "la integral de la densidad de probabilidad sobre una región da la probabilidad de detectar allí la partícula"
+  ],
+  "summary": "Conecta la función de onda con probabilidades observables de medición."
+}
