@@ -2628,14 +2628,25 @@
     "level": "Universidad inicial",
     "color": "#a855f7",
     "folder": "formulas/softmax-function",
-    "formula": [],
+    "formula": [
+      "\\sigma(z)_i=\\frac{e^{z_i}}{\\sum_j e^{z_j}}",
+      "\\sum_i \\sigma(z)_i=1",
+      "\\sigma(z)_i=\\frac{e^{z_i-c}}{\\sum_j e^{z_j-c}}"
+    ],
     "formulaText": [
       "softmax convierte logits en probabilidades normalizadas que suman uno",
       "cada salida es exponencial del logit dividido entre la suma de exponenciales"
     ],
     "summary": "Transforma puntuaciones reales en una distribución de probabilidad multiclase.",
     "simulation": "softmax-function",
-    "sections": []
+    "sections": [
+      {
+        "file": "formula.tex"
+      },
+      {
+        "file": "significado.md"
+      }
+    ]
   },
   {
     "id": "backpropagation",
