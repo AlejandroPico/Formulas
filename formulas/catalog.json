@@ -1681,6 +1681,24 @@
     ]
   },
   {
+    "id": "fermi-dirac-distribution",
+    "name": "Distribución de Fermi-Dirac",
+    "author": "Enrico Fermi y Paul Dirac",
+    "year": 1926,
+    "field": "Mecánica estadística cuántica",
+    "level": "Universidad",
+    "color": "#ef4444",
+    "folder": "formulas/fermi-dirac-distribution",
+    "formula": [],
+    "formulaText": [
+      "ocupación media = uno dividido entre exponencial de energía − energía de Fermi sobre k T + uno",
+      "los fermiones obedecen exclusión de Pauli"
+    ],
+    "summary": "Describe la ocupación de estados cuánticos por fermiones indistinguibles sujetos al principio de exclusión.",
+    "simulation": "fermi-dirac-distribution",
+    "sections": []
+  },
+  {
     "id": "klein-gordon-equation",
     "name": "Ecuación de Klein-Gordon",
     "author": "Oskar Klein y Walter Gordon",
