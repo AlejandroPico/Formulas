@@ -61,5 +61,26 @@
     ],
     "summary": "Relaciona la constante de velocidad de una reacción con la temperatura y la energía de activación.",
     "simulation": "arrhenius-equation"
+  },
+  {
+    "id": "michaelis-menten-kinetics",
+    "name": "Cinética de Michaelis-Menten",
+    "author": "Leonor Michaelis y Maud Menten",
+    "year": 1913,
+    "field": "Bioquímica y cinética enzimática",
+    "level": "Universidad inicial",
+    "color": "#22c55e",
+    "folder": "formulas/michaelis-menten-kinetics",
+    "formula": [
+      "v=\\frac{V_{max}[S]}{K_m+[S]}",
+      "v=\\frac{1}{2}V_{max}\\quad cuando\\quad [S]=K_m",
+      "E+S\\leftrightarrow ES\\rightarrow E+P"
+    ],
+    "formulaText": [
+      "velocidad inicial = velocidad máxima por concentración de sustrato dividido entre Km más concentración de sustrato",
+      "cuando el sustrato es alto, la enzima se satura y la velocidad se aproxima a Vmax"
+    ],
+    "summary": "Modelo básico de saturación enzimática que relaciona velocidad de reacción y concentración de sustrato.",
+    "simulation": "michaelis-menten-kinetics"
   }
 ]
