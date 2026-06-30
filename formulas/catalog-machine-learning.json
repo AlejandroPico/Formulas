@@ -1,0 +1,86 @@
+[
+  {
+    "id": "backpropagation",
+    "name": "Retropropagación",
+    "author": "Rumelhart, Hinton y Williams",
+    "year": 1986,
+    "field": "Aprendizaje automático",
+    "level": "Universidad",
+    "color": "#ef4444",
+    "folder": "formulas/backpropagation",
+    "formula": [
+      "\\frac{\\partial L}{\\partial w_1}=\\frac{\\partial L}{\\partial \\hat y}\\frac{\\partial \\hat y}{\\partial h}\\frac{\\partial h}{\\partial w_1}",
+      "\\delta^{(l)}=((W^{(l+1)})^T\\delta^{(l+1)})\\odot \\sigma'(z^{(l)})",
+      "\\frac{\\partial L}{\\partial W^{(l)}}=\\delta^{(l)}(a^{(l-1)})^T"
+    ],
+    "formulaText": [
+      "el gradiente de una pérdida respecto a un peso se calcula encadenando derivadas locales",
+      "el error se propaga hacia atrás desde la salida hasta las capas anteriores"
+    ],
+    "summary": "Algoritmo que calcula gradientes en redes neuronales aplicando la regla de la cadena capa por capa.",
+    "simulation": "backpropagation"
+  },
+  {
+    "id": "cross-entropy-loss",
+    "name": "Entropía cruzada",
+    "author": "Teoría de la información y aprendizaje automático",
+    "year": 1948,
+    "field": "Aprendizaje automático",
+    "level": "Universidad inicial",
+    "color": "#ef4444",
+    "folder": "formulas/cross-entropy-loss",
+    "formula": [
+      "H(p,q)=-\\sum_i p_i\\log q_i",
+      "L=-\\log \\hat y_{correcta}",
+      "L=-\\sum_i y_i\\log \\hat y_i"
+    ],
+    "formulaText": [
+      "pérdida = menos suma de etiquetas reales por logaritmo de probabilidades predichas",
+      "penaliza mucho asignar baja probabilidad a la clase correcta"
+    ],
+    "summary": "Función de pérdida usada para clasificación probabilística, especialmente con softmax.",
+    "simulation": "cross-entropy-loss"
+  },
+  {
+    "id": "softmax-function",
+    "name": "Softmax",
+    "author": "Aprendizaje automático",
+    "year": 1959,
+    "field": "Aprendizaje automático",
+    "level": "Universidad inicial",
+    "color": "#a855f7",
+    "folder": "formulas/softmax-function",
+    "formula": [
+      "\\sigma(z)_i=\\frac{e^{z_i}}{\\sum_j e^{z_j}}",
+      "\\sum_i \\sigma(z)_i=1",
+      "\\sigma(z)_i=\\frac{e^{z_i-c}}{\\sum_j e^{z_j-c}}"
+    ],
+    "formulaText": [
+      "softmax convierte logits en probabilidades normalizadas que suman uno",
+      "cada salida es exponencial del logit dividido entre la suma de exponenciales"
+    ],
+    "summary": "Transforma puntuaciones reales en una distribución de probabilidad multiclase.",
+    "simulation": "softmax-function"
+  },
+  {
+    "id": "gradient-descent",
+    "name": "Descenso del gradiente",
+    "author": "Augustin-Louis Cauchy",
+    "year": 1847,
+    "field": "Optimización y aprendizaje automático",
+    "level": "Universidad inicial",
+    "color": "#3b82f6",
+    "folder": "formulas/gradient-descent",
+    "formula": [
+      "w_{t+1}=w_t-\\eta\\nabla L(w_t)",
+      "\\theta_{t+1}=\\theta_t-\\eta\\nabla_\\theta J(\\theta_t)",
+      "L(w)=w^2\\quad \\nabla L(w)=2w"
+    ],
+    "formulaText": [
+      "nuevo peso = peso actual menos tasa de aprendizaje por gradiente de la pérdida",
+      "se avanza en dirección opuesta al gradiente para reducir la función de coste"
+    ],
+    "summary": "Método iterativo que minimiza una función moviéndose contra la pendiente local.",
+    "simulation": "gradient-descent"
+  }
+]
