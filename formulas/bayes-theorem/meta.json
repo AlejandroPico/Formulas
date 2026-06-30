@@ -1,0 +1,15 @@
+{
+  "id": "bayes-theorem",
+  "name": "Teorema de Bayes",
+  "author": "Thomas Bayes",
+  "year": 1763,
+  "field": "Probabilidad y estadística",
+  "level": "Bachillerato y universidad inicial",
+  "color": "#f59e0b",
+  "simulation": "bayes-theorem",
+  "formulaText": [
+    "probabilidad de A dado B = probabilidad de B dado A por probabilidad de A dividido entre probabilidad de B",
+    "actualiza una probabilidad previa usando evidencia nueva"
+  ],
+  "summary": "Permite actualizar creencias probabilísticas al observar nueva evidencia."
+}
