@@ -1,0 +1,15 @@
+{
+  "id": "logistic-sigmoid-function",
+  "name": "Función sigmoide logística",
+  "author": "Modelo logístico",
+  "year": 1845,
+  "field": "Aprendizaje automático y análisis matemático",
+  "level": "Bachillerato y universidad inicial",
+  "color": "#ec4899",
+  "simulation": "logistic-sigmoid-function",
+  "formulaText": [
+    "sigmoide = uno dividido entre uno más exponencial negativa de x",
+    "convierte valores reales en salidas entre cero y uno"
+  ],
+  "summary": "Función en forma de S usada como activación y como enlace probabilístico."
+}
