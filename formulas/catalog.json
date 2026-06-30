@@ -1168,6 +1168,24 @@
     ]
   },
   {
+    "id": "logistic-equation",
+    "name": "Ecuación logística",
+    "author": "Pierre François Verhulst",
+    "year": 1838,
+    "field": "Sistemas dinámicos y biología matemática",
+    "level": "Bachillerato y universidad inicial",
+    "color": "#22c55e",
+    "folder": "formulas/logistic-equation",
+    "formula": [],
+    "formulaText": [
+      "la población crece proporcionalmente a N y se frena al acercarse a la capacidad de carga K",
+      "el factor uno − N sobre K reduce el crecimiento cuando el entorno se satura"
+    ],
+    "summary": "Modelo de crecimiento limitado por recursos con saturación hacia una capacidad de carga.",
+    "simulation": "logistic-equation",
+    "sections": []
+  },
+  {
     "id": "kirchhoff-laws",
     "name": "Leyes de Kirchhoff",
     "author": "Gustav Kirchhoff",
