@@ -1,0 +1,15 @@
+{
+  "id": "bose-einstein-distribution",
+  "name": "Distribución de Bose-Einstein",
+  "author": "Satyendra Nath Bose y Albert Einstein",
+  "year": 1924,
+  "field": "Mecánica estadística cuántica",
+  "level": "Universidad",
+  "color": "#38bdf8",
+  "simulation": "bose-einstein-distribution",
+  "formulaText": [
+    "ocupación media = uno dividido entre exponencial de energía menos potencial químico sobre k T menos uno",
+    "los bosones pueden ocupar masivamente el mismo estado"
+  ],
+  "summary": "Describe la ocupación estadística de estados cuánticos por bosones indistinguibles."
+}
