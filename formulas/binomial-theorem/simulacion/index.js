@@ -1,1 +1,2 @@
-const x = 1;
+const x = () => {};
+export default x;
