@@ -1,1 +1,2 @@
-export default 1;
+const mountSimulation = () => {};
+export default mountSimulation;
