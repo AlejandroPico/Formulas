@@ -2994,5 +2994,23 @@
         "file": "simulacion/styles.css"
       }
     ]
+  },
+  {
+    "id": "scaled-dot-product-attention",
+    "name": "Atención escalada",
+    "author": "Vaswani et al.",
+    "year": 2017,
+    "field": "Aprendizaje automático y transformers",
+    "level": "Universidad",
+    "color": "#3b82f6",
+    "folder": "formulas/scaled-dot-product-attention",
+    "formula": [],
+    "formulaText": [
+      "atención = softmax de Q · K transpuesta dividido entre raíz de d_k, multiplicado · V",
+      "el escalado evita saturar softmax cuando las dimensiones son grandes"
+    ],
+    "summary": "Mecanismo central de los transformers para ponderar valores según similitud entre consultas y claves.",
+    "simulation": "scaled-dot-product-attention",
+    "sections": []
   }
 ]
