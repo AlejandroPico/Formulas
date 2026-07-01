@@ -1,0 +1,15 @@
+{
+  "id": "bellman-equation",
+  "name": "Ecuación de Bellman",
+  "author": "Richard Bellman",
+  "year": 1957,
+  "field": "Aprendizaje por refuerzo y programación dinámica",
+  "level": "Universidad",
+  "color": "#22c55e",
+  "simulation": "bellman-equation",
+  "formulaText": [
+    "el valor de un estado es recompensa inmediata más valor futuro descontado",
+    "el factor gamma controla cuánto importan recompensas lejanas"
+  ],
+  "summary": "Relación recursiva que define el valor óptimo de estados o acciones en decisión secuencial."
+}
