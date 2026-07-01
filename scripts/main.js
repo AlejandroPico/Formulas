@@ -18,6 +18,8 @@ async function boot() {
     equations = [];
     updateLoading({ message: "No se pudo escanear formulas", value: 12 });
   }
+  window.FormulasAtlas = { equations };
+  window.dispatchEvent(new CustomEvent("formulas:catalog-ready", { detail: { equations } }));
   fields = ["Todas", ...unique(equations.map(eq => eq.field)).sort((a, b) => a.localeCompare(b, "es"))];
   levels = ["Todos", ...unique(equations.map(eq => eq.level))];
   initTheme($("#themeToggle"));
