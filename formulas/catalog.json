@@ -322,6 +322,35 @@
     ]
   },
   {
+    "id": "vietes-formulas",
+    "name": "Formulas de Viete",
+    "author": "Francois Viete",
+    "year": 1591,
+    "field": "Algebra",
+    "level": "Bachillerato",
+    "color": "#14b8a6",
+    "folder": "formulas/vietes-formulas",
+    "formula": [
+      "ax^2+bx+c=a(x-x_1)(x-x_2)",
+      "x_1+x_2=-b/a",
+      "x_1x_2=c/a"
+    ],
+    "formulaText": [
+      "suma de raices = − b partido a",
+      "producto de raices = c partido a"
+    ],
+    "summary": "Relaciona raices y coeficientes de una ecuacion cuadratica.",
+    "simulation": "vietes-formulas",
+    "sections": [
+      {
+        "file": "formula.tex"
+      },
+      {
+        "file": "significado.md"
+      }
+    ]
+  },
+  {
     "id": "binomial-theorem",
     "name": "Fórmula del binomio de Newton",
     "author": "Isaac Newton",
