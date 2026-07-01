@@ -2816,14 +2816,22 @@
     "level": "Universidad",
     "color": "#22c55e",
     "folder": "formulas/bellman-equation",
-    "formula": [],
+    "formula": [
+      "V(s)=R(s)+\\gamma\\max_{s'}V(s')",
+      "V^*(s)=\\max_a\\left[R(s,a)+\\gamma\\sum_{s'}P(s'|s,a)V^*(s')\\right]",
+      "Q^*(s,a)=R(s,a)+\\gamma\\sum_{s'}P(s'|s,a)\\max_{a'}Q^*(s',a')"
+    ],
     "formulaText": [
       "el valor de un estado es recompensa inmediata + valor futuro descontado",
       "el factor gamma controla cuánto importan recompensas lejanas"
     ],
     "summary": "Relación recursiva que define el valor óptimo de estados o acciones en decisión secuencial.",
     "simulation": "bellman-equation",
-    "sections": []
+    "sections": [
+      {
+        "file": "formula.tex"
+      }
+    ]
   },
   {
     "id": "softmax-function",
