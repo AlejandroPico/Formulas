@@ -129,6 +129,12 @@
         "file": "usos.md"
       },
       {
+        "file": "derivación.md"
+      },
+      {
+        "file": "ficha-tecnica.md"
+      },
+      {
         "file": "simulacion/index.js"
       },
       {
@@ -356,6 +362,9 @@
       },
       {
         "file": "ficha.md"
+      },
+      {
+        "file": "aplicaciones.md"
       }
     ]
   },
