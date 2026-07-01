@@ -1,0 +1,41 @@
+Actúa como desarrollador y editor científico del proyecto "Atlas de Ecuaciones Famosas". El repositorio usa una arquitectura moderna basada exclusivamente en la carpeta formulas/. No uses la antigua carpeta data/. Cada fórmula vive en una carpeta propia: formulas/<formula-id>/.
+
+Objetivo: añadir o migrar una nueva fórmula, ecuación, identidad, modelo o ficha científica al sistema moderno. Puede que te entregue solo el nombre de la fórmula, contenido parcial, o un HTML con JavaScript que ya contiene un widget/simulador. Debes analizarlo, mejorarlo y adaptarlo al sistema del atlas.
+
+Estructura obligatoria por fórmula:
+formulas/<formula-id>/
+- meta.json
+- formula.tex
+- significado.md
+- historia.md
+- derivacion.md
+- usos.md
+- ficha.md
+- simulacion/index.js
+- simulacion/styles.css
+
+El loader escanea los catálogos formulas/catalog*.json y las carpetas indicadas. Cada archivo .md o .tex adicional en la raíz de la carpeta puede convertirse en una pestaña extra. Las pestañas estándar son: Fórmula, Significado, Historia, Derivación, Usos, Ficha, Aprendizaje, Unidades y Simulación. Aprendizaje integra prerrequisitos y ruta de aprendizaje. Unidades debe aportar unidades habituales, comprobación dimensional y variables principales limpias; no debe limitarse a listar comandos LaTeX crudos.
+
+meta.json debe incluir como mínimo: id, name, author, year, field, level, color, simulation, formulaText y summary. Usa niveles normalizados: ESO, Bachillerato, Universidad inicial, Universidad o Avanzado. Añade tags si procede: área, técnica, disciplina, tipo de modelo, uso educativo y conceptos clave.
+
+formula.tex debe contener la fórmula simbólica en LaTeX, una o varias líneas separadas por líneas en blanco. Evita errores de MathJax: no uses left o ight si no son imprescindibles; si los usas, deben estar perfectamente emparejados. Comprueba llaves, paréntesis y corchetes. Para fórmulas con paréntesis exteriores, usa paréntesis literales normales cuando sea suficiente. No incrustes palabras largas dentro de subíndices si puede usarse una letra estándar; por ejemplo, usa c para clase correcta en vez de "correcta".
+
+formulaText debe ser la versión explicada o semiverbalizada de la fórmula. La interfaz tiene dos modos: fórmula simbólica y fórmula explicada. La simbólica se renderiza con MathJax. La explicada debe ser legible para estudiantes y no depender de LaTeX complejo.
+
+significado.md debe explicar qué dice la fórmula, cómo se interpreta y qué intuición física, matemática, estadística o computacional transmite.
+
+historia.md debe explicar contexto histórico, autores, año aproximado, problema que resolvía, impacto y evolución.
+
+derivacion.md debe incluir una derivación razonable al nivel de la ficha. Si la derivación completa es demasiado avanzada, resume el camino conceptual y aclara los supuestos.
+
+usos.md debe enumerar aplicaciones reales: educación, laboratorio, ingeniería, investigación, informática, economía, biología o el campo que corresponda.
+
+ficha.md debe incluir identificación, variables, lectura del simulador, notas de validez, limitaciones y recomendaciones didácticas.
+
+Simulador: si te paso un HTML con JavaScript, debes analizar el widget original, conservar la idea central, corregir errores, eliminar código global frágil y migrarlo a simulacion/index.js. El módulo debe exportar una función de montaje por defecto o nombrada. Recibirá un objeto con root, canvas, controls y readout. Debe crear controles claros, dibujar en canvas si procede, actualizar readout, y devolver una función de limpieza si usa intervalos, requestAnimationFrame o listeners persistentes. simulacion/styles.css debe contener estilos locales si hacen falta.
+
+Catálogo: añade o actualiza la entrada en el catálogo correspondiente dentro de formulas/catalog*.json si el generador automático aún no la incorpora. La entrada debe apuntar a folder: "formulas/<formula-id>" y simulation: "<formula-id>" cuando exista simulador. Evita duplicados por nombre o por id.
+
+Validación antes de terminar: comprueba que no hay referencias a data/. Comprueba que formula.tex existe. Comprueba que las secciones estándar existen. Comprueba que las fórmulas no tienen llaves/paréntesis desbalanceados. Comprueba que el simulador exporta una función de montaje. Comprueba que el nombre, id, field, level y tags son coherentes.
+
+Resultado esperado: crea los archivos completos, mejora el simulador si existe, añade metadatos, fórmula simbólica, fórmula explicada, significado, historia, derivación, usos, ficha, unidades/prerrequisitos si procede, y deja la fórmula integrada en el atlas sin duplicar fichas antiguas.
