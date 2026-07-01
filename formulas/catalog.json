@@ -3004,13 +3004,21 @@
     "level": "Universidad",
     "color": "#3b82f6",
     "folder": "formulas/scaled-dot-product-attention",
-    "formula": [],
+    "formula": [
+      "\\operatorname{Attention}(Q,K,V)=\\operatorname{softmax}(\\frac{QK^T}{\\sqrt{d_k}})V",
+      "A=\\operatorname{softmax}(\\frac{QK^T}{\\sqrt{d_k}})",
+      "\\sum_j A_{ij}=1"
+    ],
     "formulaText": [
       "atención = softmax de Q · K transpuesta dividido entre raíz de d_k, multiplicado · V",
       "el escalado evita saturar softmax cuando las dimensiones son grandes"
     ],
     "summary": "Mecanismo central de los transformers para ponderar valores según similitud entre consultas y claves.",
     "simulation": "scaled-dot-product-attention",
-    "sections": []
+    "sections": [
+      {
+        "file": "formula.tex"
+      }
+    ]
   }
 ]
