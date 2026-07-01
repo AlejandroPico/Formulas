@@ -126,6 +126,9 @@
         "file": "historia.md"
       },
       {
+        "file": "usos.md"
+      },
+      {
         "file": "simulacion/index.js"
       }
     ]
