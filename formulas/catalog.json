@@ -274,6 +274,9 @@
         "file": "usos.md"
       },
       {
+        "file": "ficha.md"
+      },
+      {
         "file": "simulacion/index.js"
       }
     ]
