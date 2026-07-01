@@ -137,6 +137,44 @@
     ]
   },
   {
+    "id": "geometric-progression-sum",
+    "name": "Suma de progresión geométrica",
+    "author": "Tradición matemática clásica",
+    "year": -300,
+    "field": "Aritmética y álgebra",
+    "level": "ESO",
+    "color": "#06b6d4",
+    "folder": "formulas/geometric-progression-sum",
+    "formula": [
+      "a_n=a_1r^{n-1}",
+      "S_n=a_1(r^n-1)/(r-1)",
+      "S_\\infty=a_1/(1-r)"
+    ],
+    "formulaText": [
+      "suma finita de términos multiplicados · una razón constante",
+      "si |r| es menor que uno, la serie infinita converge"
+    ],
+    "summary": "Calcula sumas donde cada término se obtiene multiplicando por una razón constante.",
+    "simulation": "geometric-progression-sum",
+    "sections": [
+      {
+        "file": "formula.tex"
+      },
+      {
+        "file": "significado.md"
+      },
+      {
+        "file": "historia.md"
+      },
+      {
+        "file": "derivacion.md"
+      },
+      {
+        "file": "usos.md"
+      }
+    ]
+  },
+  {
     "id": "quadratic-formula",
     "name": "Fórmula cuadrática",
     "author": "Álgebra clásica",
