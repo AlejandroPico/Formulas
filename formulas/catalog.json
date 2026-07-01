@@ -48,6 +48,33 @@
     ]
   },
   {
+    "id": "notable-identities",
+    "name": "Identidades notables",
+    "author": "Álgebra clásica",
+    "year": -300,
+    "field": "Álgebra elemental",
+    "level": "ESO",
+    "color": "#ef4444",
+    "folder": "formulas/notable-identities",
+    "formula": [
+      "(a+b)^2=a^2+2ab+b^2",
+      "(a-b)^2=a^2-2ab+b^2",
+      "(a+b)(a-b)=a^2-b^2"
+    ],
+    "formulaText": [
+      "cuadrado de una suma = primer cuadrado + dos veces el producto + segundo cuadrado",
+      "cuadrado de una diferencia = primer cuadrado − dos veces el producto + segundo cuadrado",
+      "suma · diferencia = diferencia de cuadrados"
+    ],
+    "summary": "Patrones algebraicos básicos para expandir, factorizar y reconocer productos de binomios.",
+    "simulation": "notable-identities",
+    "sections": [
+      {
+        "file": "formula.tex"
+      }
+    ]
+  },
+  {
     "id": "quadratic-formula",
     "name": "Fórmula cuadrática",
     "author": "Álgebra clásica",
