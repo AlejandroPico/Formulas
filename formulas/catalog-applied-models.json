@@ -1,0 +1,128 @@
+[
+  {
+    "id": "black-scholes-model",
+    "name": "Modelo de Black-Scholes",
+    "author": "Fischer Black, Myron Scholes y Robert Merton",
+    "year": 1973,
+    "field": "Finanzas matemáticas",
+    "level": "Universidad",
+    "color": "#2563eb",
+    "folder": "formulas/black-scholes-model",
+    "formula": [
+      "C=SN(d_1)-Ke^{-rT}N(d_2)",
+      "d_1=\\frac{\\ln(S/K)+(r+\\sigma^2/2)T}{\\sigma\\sqrt{T}}",
+      "d_2=d_1-\\sigma\\sqrt{T}"
+    ],
+    "formulaText": [
+      "precio de una call europea = precio del subyacente por N(d1) menos strike descontado por N(d2)",
+      "la volatilidad aumenta el valor temporal de la opción"
+    ],
+    "summary": "Modelo clásico para valorar opciones europeas bajo hipótesis de mercado idealizado.",
+    "simulation": "black-scholes-model"
+  },
+  {
+    "id": "lotka-volterra-equations",
+    "name": "Ecuaciones de Lotka-Volterra",
+    "author": "Alfred Lotka y Vito Volterra",
+    "year": 1925,
+    "field": "Sistemas dinámicos y biología matemática",
+    "level": "Universidad inicial",
+    "color": "#22c55e",
+    "folder": "formulas/lotka-volterra-equations",
+    "formula": [
+      "\\frac{dx}{dt}=\\alpha x-\\beta xy",
+      "\\frac{dy}{dt}=\\delta xy-\\gamma y",
+      "x,y\\geq 0"
+    ],
+    "formulaText": [
+      "las presas crecen de forma natural y disminuyen por encuentros con depredadores",
+      "los depredadores crecen al alimentarse de presas y mueren en ausencia de alimento"
+    ],
+    "summary": "Modelo depredador-presa que genera oscilaciones acopladas entre dos poblaciones.",
+    "simulation": "lotka-volterra-equations"
+  },
+  {
+    "id": "logistic-equation",
+    "name": "Ecuación logística",
+    "author": "Pierre François Verhulst",
+    "year": 1838,
+    "field": "Sistemas dinámicos y biología matemática",
+    "level": "Bachillerato y universidad inicial",
+    "color": "#22c55e",
+    "folder": "formulas/logistic-equation",
+    "formula": [
+      "\\frac{dN}{dt}=rN(1-\\frac{N}{K})",
+      "N(t)=\\frac{K}{1+Ae^{-rt}}",
+      "0\\leq N\\leq K"
+    ],
+    "formulaText": [
+      "la población crece proporcionalmente a N y se frena al acercarse a la capacidad de carga K",
+      "el factor uno menos N sobre K reduce el crecimiento cuando el entorno se satura"
+    ],
+    "summary": "Modelo de crecimiento limitado por recursos con saturación hacia una capacidad de carga.",
+    "simulation": "logistic-equation"
+  },
+  {
+    "id": "logistic-sigmoid-function",
+    "name": "Función sigmoide logística",
+    "author": "Modelo logístico",
+    "year": 1845,
+    "field": "Aprendizaje automático y análisis matemático",
+    "level": "Bachillerato y universidad inicial",
+    "color": "#ec4899",
+    "folder": "formulas/logistic-sigmoid-function",
+    "formula": [
+      "\\sigma(x)=\\frac{1}{1+e^{-x}}",
+      "\\sigma'(x)=\\sigma(x)(1-\\sigma(x))",
+      "0<\\sigma(x)<1"
+    ],
+    "formulaText": [
+      "sigmoide = uno dividido entre uno más exponencial negativa de x",
+      "convierte valores reales en salidas entre cero y uno"
+    ],
+    "summary": "Función en forma de S usada como activación y como enlace probabilístico.",
+    "simulation": "logistic-sigmoid-function"
+  },
+  {
+    "id": "bellman-equation",
+    "name": "Ecuación de Bellman",
+    "author": "Richard Bellman",
+    "year": 1957,
+    "field": "Aprendizaje por refuerzo y programación dinámica",
+    "level": "Universidad",
+    "color": "#22c55e",
+    "folder": "formulas/bellman-equation",
+    "formula": [
+      "V(s)=R(s)+\\gamma\\max_{s'}V(s')",
+      "V^*(s)=\\max_a\\{R(s,a)+\\gamma\\sum_{s'}P(s'|s,a)V^*(s')\\}",
+      "Q^*(s,a)=R(s,a)+\\gamma\\sum_{s'}P(s'|s,a)\\max_{a'}Q^*(s',a')"
+    ],
+    "formulaText": [
+      "el valor de un estado es recompensa inmediata más valor futuro descontado",
+      "el factor gamma controla cuánto importan recompensas lejanas"
+    ],
+    "summary": "Relación recursiva que define el valor óptimo de estados o acciones en decisión secuencial.",
+    "simulation": "bellman-equation"
+  },
+  {
+    "id": "scaled-dot-product-attention",
+    "name": "Atención escalada",
+    "author": "Vaswani et al.",
+    "year": 2017,
+    "field": "Aprendizaje automático y transformers",
+    "level": "Universidad",
+    "color": "#3b82f6",
+    "folder": "formulas/scaled-dot-product-attention",
+    "formula": [
+      "\\operatorname{Attention}(Q,K,V)=\\operatorname{softmax}(\\frac{QK^T}{\\sqrt{d_k}})V",
+      "A=\\operatorname{softmax}(\\frac{QK^T}{\\sqrt{d_k}})",
+      "\\sum_j A_{ij}=1"
+    ],
+    "formulaText": [
+      "atención = softmax de Q por K transpuesta dividido entre raíz de d_k, multiplicado por V",
+      "el escalado evita saturar softmax cuando las dimensiones son grandes"
+    ],
+    "summary": "Mecanismo central de los transformers para ponderar valores según similitud entre consultas y claves.",
+    "simulation": "scaled-dot-product-attention"
+  }
+]
