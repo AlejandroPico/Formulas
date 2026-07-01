@@ -30,8 +30,8 @@ const DOMAIN_PROFILES = [
     tags: ["matemáticas", "abstracción", "demostración"],
     prerequisites: ["Álgebra elemental", "notación funcional", "manipulación simbólica"],
     path: ["Repasar variables y operaciones", "estudiar la interpretación geométrica o analítica", "resolver ejercicios guiados", "comparar con fórmulas relacionadas"],
-    units: "Normalmente adimensional o dependiente de las magnitudes introducidas.",
-    dimensions: "Depende de la interpretación concreta de las variables."
+    units: "Normalmente no tiene una unidad fija: depende de la magnitud que representen sus variables.",
+    dimensions: "Debe comprobarse que cada igualdad compare objetos del mismo tipo algebraico o geométrico."
   },
   {
     match: /mecánica|mecanica|relatividad|cosmolog|física|fisica|fluidos|electro|cuántica|cuantica|termodinámica|termodinamica/i,
@@ -39,7 +39,7 @@ const DOMAIN_PROFILES = [
     prerequisites: ["Álgebra", "cálculo diferencial", "unidades del SI", "lectura de vectores o campos si aparecen"],
     path: ["Identificar magnitudes y unidades", "comprobar dimensionalidad", "estudiar casos límite", "ejecutar la simulación variando parámetros"],
     units: "Preferentemente unidades SI: metro, kilogramo, segundo, amperio, kelvin, mol y candela según corresponda.",
-    dimensions: "Debe conservar homogeneidad dimensional entre ambos lados de la igualdad."
+    dimensions: "La expresión debe conservar homogeneidad dimensional: ambos lados de una igualdad deben tener la misma dimensión física."
   },
   {
     match: /química|quimica|cinética|cinetica|bioquímica|bioquimica|termoquímica|termoquimica/i,
@@ -63,7 +63,7 @@ const DOMAIN_PROFILES = [
     prerequisites: ["Álgebra lineal", "cálculo diferencial", "probabilidad", "programación básica"],
     path: ["Entender entradas y salidas", "identificar función objetivo", "probar parámetros en el simulador", "relacionar fórmula con entrenamiento o inferencia"],
     units: "Habitualmente adimensional; logits, pérdidas y probabilidades dependen de normalizaciones del modelo.",
-    dimensions: "Muchas expresiones son escalares o tensores sin dimensión física directa."
+    dimensions: "Muchas expresiones son escalares, vectores o tensores sin dimensión física directa. Lo importante es que las formas matriciales sean compatibles."
   },
   {
     match: /finanzas|econom/i,
@@ -82,6 +82,23 @@ const DOMAIN_PROFILES = [
     dimensions: "Las tasas suelen tener dimensión inversa de tiempo; las poblaciones o concentraciones deben mantenerse positivas."
   }
 ];
+
+const LATEX_SYMBOL_MAP = new Map([
+  ["alpha", "α"], ["beta", "β"], ["gamma", "γ"], ["delta", "δ"], ["Delta", "Δ"],
+  ["epsilon", "ε"], ["varepsilon", "ε"], ["lambda", "λ"], ["Lambda", "Λ"],
+  ["mu", "μ"], ["nu", "ν"], ["rho", "ρ"], ["sigma", "σ"], ["Sigma", "Σ"],
+  ["theta", "θ"], ["Theta", "Θ"], ["phi", "φ"], ["varphi", "φ"], ["Phi", "Φ"],
+  ["omega", "ω"], ["Omega", "Ω"], ["psi", "ψ"], ["Psi", "Ψ"], ["tau", "τ"], ["eta", "η"],
+  ["hbar", "ℏ"]
+]);
+
+const IGNORED_LATEX_COMMANDS = new Set([
+  "frac", "sqrt", "left", "right", "lVert", "rVert", "langle", "rangle", "cdot", "times", "pm", "mp",
+  "sum", "prod", "int", "iint", "iiint", "oint", "partial", "nabla", "Box", "mathcal", "mathbf", "hat",
+  "operatorname", "mathrm", "exp", "log", "ln", "sin", "cos", "tan", "max", "min", "lim", "quad", "qquad",
+  "leq", "geq", "neq", "approx", "sim", "infty", "cdots", "ldots", "dots", "to", "rightarrow", "leftrightarrow",
+  "parallel", "odot", "sqrt", "overline", "bar", "tilde"
+]);
 
 const STANDARD_SECTIONS = [
   { file: "formula.tex", key: "formula", label: "Fórmula", type: "formula", order: 10 },
@@ -214,7 +231,8 @@ function buildFormulaEntry(record) {
   const learningPath = normalizeList(record.learningPath || record.ruta || profile.path);
   const units = record.units || record.unidades || profile.units;
   const dimensions = record.dimensions || record.dimensiones || profile.dimensions;
-  const sections = buildSectionIndex(record, formula, { profile, tags, prerequisites, learningPath, units, dimensions });
+  const symbols = extractFormulaSymbols(formula);
+  const sections = buildSectionIndex(record, formula, { profile, tags, prerequisites, learningPath, units, dimensions, symbols });
   const simulationSection = sections.find(section => section.type === "simulation");
 
   return {
@@ -234,7 +252,7 @@ function buildFormulaEntry(record) {
     learningPath,
     units,
     dimensions,
-    symbols: extractFormulaSymbols(formula),
+    symbols,
     summary: record.summary || "",
     meaning: "",
     history: "",
@@ -264,13 +282,6 @@ function buildSectionIndex(record, formula, derived = {}) {
   customRootSections(record).forEach(section => sections.push(section));
   sections.push(generatedLearningSection(record, derived));
   sections.push(generatedUnitsSection(record, formula, derived));
-  sections.push({
-    key: "despejar",
-    label: "Despejar",
-    type: "solver",
-    order: 82,
-    content: ""
-  });
   if (record.files.has("simulacion/index.js")) {
     sections.push({
       key: "simulacion",
@@ -296,12 +307,13 @@ function generatedLearningSection(record, derived) {
 }
 
 function generatedUnitsSection(record, formula, derived) {
+  const variables = derived.symbols?.length ? derived.symbols.map(symbol => `- \`${symbol}\``).join("\n") : "- No se han identificado variables principales limpias.";
   return {
     key: "unidades",
     label: "Unidades",
     type: "markdown",
     order: 80,
-    content: `# Unidades y dimensionalidad\n\n## Unidades habituales\n\n${derived.units}\n\n## Lectura dimensional\n\n${derived.dimensions}\n\n## Símbolos detectados\n\n${extractFormulaSymbols(formula).map(symbol => `- \`${symbol}\``).join("\n") || "- No se han detectado símbolos simples."}`
+    content: `# Unidades y dimensionalidad\n\n## Para qué sirve esta pestaña\n\nEsta sección no repite la fórmula: sirve como guía rápida para saber en qué unidades conviene trabajar y qué comprobación dimensional debe hacerse antes de usarla en clase, laboratorio, simulación o cálculo numérico.\n\n## Unidades habituales\n\n${derived.units}\n\n## Comprobación dimensional\n\n${derived.dimensions}\n\n## Variables principales detectadas\n\n${variables}\n\n## Uso recomendado\n\n- Convierte todas las magnitudes a un sistema coherente antes de sustituir valores.\n- Comprueba que los dos lados de cada igualdad tienen la misma unidad o dimensión.\n- En fórmulas estadísticas, de información o IA, revisa si las cantidades son adimensionales, probabilidades, bits, nats, logits, tensores o tasas normalizadas.\n- En fórmulas físicas, químicas o de ingeniería, documenta explícitamente las unidades usadas en la simulación o en el ejercicio.`
   };
 }
 
@@ -355,11 +367,30 @@ function deriveTags(record, formula, profile) {
 }
 
 function extractFormulaSymbols(formulas) {
-  const text = normalizeFormulaList(formulas).join(" ");
-  const latexCommands = [...text.matchAll(/\\([a-zA-Z]+)/g)].map(match => `\\${match[1]}`);
-  const latin = [...text.matchAll(/(?<!\\)[A-Za-z](?:_[A-Za-z0-9']+)?/g)].map(match => match[0]);
-  const greek = [...text.matchAll(/[α-ωΑ-Ω]/g)].map(match => match[0]);
-  return [...new Set([...latexCommands, ...latin, ...greek])].filter(symbol => !["\\frac", "\\left", "\\right", "\\operatorname", "\\mathrm", "\\mathbf"].includes(symbol)).slice(0, 24);
+  const raw = normalizeFormulaList(formulas).join(" ");
+  const commandSymbols = [...raw.matchAll(/\\([a-zA-Z]+)/g)]
+    .map(match => latexCommandToSymbol(match[1]))
+    .filter(Boolean);
+  const sanitized = raw
+    .replace(/\\operatorname\{[^{}]*\}/g, " ")
+    .replace(/\\mathrm\{[^{}]*\}/g, " ")
+    .replace(/\\mathbf\{([^{}]+)\}/g, "$1")
+    .replace(/\\hat\{([^{}]+)\}/g, "$1")
+    .replace(/\\mathcal\s*\{?([A-Za-z])\}?/g, "$1")
+    .replace(/\\[a-zA-Z]+/g, " ")
+    .replace(/_[{]?[A-Za-z0-9'.,]+[}]?/g, " ")
+    .replace(/\^[{]?[A-Za-z0-9+\-*/.,]+[}]?/g, " ");
+  const latin = [...sanitized.matchAll(/\b[A-Za-z]\b/g)].map(match => match[0]);
+  const greek = [...sanitized.matchAll(/[α-ωΑ-Ωℏ]/g)].map(match => match[0]);
+  return [...new Set([...commandSymbols, ...latin, ...greek])]
+    .filter(symbol => !/[0-9]/.test(symbol))
+    .filter(symbol => !["e", "i", "d", "N"].includes(symbol) || /\bN\b/.test(raw))
+    .slice(0, 18);
+}
+
+function latexCommandToSymbol(command) {
+  if (IGNORED_LATEX_COMMANDS.has(command)) return "";
+  return LATEX_SYMBOL_MAP.get(command) || "";
 }
 
 function normalizeList(value) {
