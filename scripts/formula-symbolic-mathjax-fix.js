@@ -58,10 +58,15 @@ function shouldWrap(text) {
 }
 
 function cleanMathText(value) {
-  return String(value)
-    .replace(/^\(+|\)+$/g, "")
-    .replace(/\s+/g, " ")
-    .trim();
+  const text = String(value).replace(/\s+/g, " ").trim();
+  return unwrapSyntheticDisplayParentheses(text);
+}
+
+function unwrapSyntheticDisplayParentheses(text) {
+  if (!text.startsWith("(") || !text.endsWith(")")) return text;
+  const inner = text.slice(1, -1).trim();
+  if (!inner || !MATH_PATTERN.test(inner)) return text;
+  return inner;
 }
 
 function mathSpan(formula) {
