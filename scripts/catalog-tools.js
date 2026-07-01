@@ -95,6 +95,7 @@ function openCatalogDialog(mode = "inventory") {
         <input type="search" placeholder="Filtrar catálogo por nombre, área, nivel, etiqueta o símbolo…" data-catalog-search>
         <button type="button" data-download="csv">Descargar CSV</button>
         <button type="button" data-download="json">Descargar JSON</button>
+        <button type="button" data-download="excel">Descargar Excel</button>
       </section>
       <section class="catalog-summary">
         <article><strong>${rows.length}</strong><span>fórmulas</span></article>
@@ -130,6 +131,7 @@ function bindCatalogDialog(dialog, rows, validation) {
   });
   dialog.querySelector("[data-download='csv']")?.addEventListener("click", () => downloadCsv(rows));
   dialog.querySelector("[data-download='json']")?.addEventListener("click", () => downloadJson(rows, validation));
+  dialog.querySelector("[data-download='excel']")?.addEventListener("click", () => downloadExcel(rows, validation));
 }
 
 function buildInventoryRows(items) {
@@ -160,7 +162,6 @@ function buildInventoryRows(items) {
       hasSheet: sectionKeys.includes("ficha"),
       hasLearning: sectionKeys.includes("aprendizaje"),
       hasUnits: sectionKeys.includes("unidades"),
-      hasSolver: sectionKeys.includes("despejar"),
       hasSimulation: sectionKeys.includes("simulacion"),
       completeness: requiredSectionsPresent(sectionKeys) ? "Completa" : "Incompleta"
     };
@@ -178,13 +179,23 @@ function validateRow(row) {
   if (row.completeness !== "Completa") issues.push("secciones incompletas");
   for (const formula of row.formulas.split(" | ").filter(Boolean)) {
     if (!balanced(formula, "{", "}")) issues.push("llaves desbalanceadas");
-    if (!balanced(formula, "(", ")")) issues.push("paréntesis visualmente sospechosos");
-    const left = (formula.match(/\\left/g) || []).length;
-    const right = (formula.match(/\\right/g) || []).length;
+    if (!balanced(stripLatexCommandsForParenCheck(formula), "(", ")")) issues.push("paréntesis visualmente sospechosos");
+    const left = countLatexDelimiterCommand(formula, "left");
+    const right = countLatexDelimiterCommand(formula, "right");
     if (left !== right) issues.push("left/right desbalanceados");
-    if (/\\right(?![\s.()\[\]{}|\\])/.test(formula)) issues.push("right sin delimitador reconocido");
+    if (/\\right(?![A-Za-z\s.()\[\]{}|\\])/u.test(formula)) issues.push("right sin delimitador reconocido");
   }
   return [...new Set(issues)];
+}
+
+function stripLatexCommandsForParenCheck(value) {
+  return String(value)
+    .replace(/\\(?:rightarrow|leftarrow|leftrightarrow|Rightarrow|Leftarrow|Leftrightarrow)/g, "")
+    .replace(/\\(?:left|right)(?=[\s.()\[\]{}|\\])/g, "");
+}
+
+function countLatexDelimiterCommand(value, command) {
+  return (String(value).match(new RegExp(`\\\\${command}(?![A-Za-z])`, "g")) || []).length;
 }
 
 function balanced(text, open, close) {
@@ -229,14 +240,23 @@ function countBy(rows, key) {
   return map;
 }
 
+const EXPORT_COLUMNS = ["id", "name", "author", "year", "field", "level", "folder", "formulaCount", "hasSimulation", "completeness", "tags", "symbols", "prerequisites", "learningPath", "units", "dimensions", "formulas"];
+
 function downloadCsv(rows) {
-  const columns = ["id", "name", "author", "year", "field", "level", "folder", "formulaCount", "hasSimulation", "completeness", "tags", "symbols", "prerequisites", "learningPath", "units", "dimensions", "formulas"];
-  const csv = [columns.join(";"), ...rows.map(row => columns.map(column => csvCell(row[column])).join(";"))].join("\n");
+  const csv = [EXPORT_COLUMNS.join(";"), ...rows.map(row => EXPORT_COLUMNS.map(column => csvCell(row[column])).join(";"))].join("\n");
   downloadBlob(csv, "catalogo-formulas.csv", "text/csv;charset=utf-8");
 }
 
 function downloadJson(rows, validation) {
   downloadBlob(JSON.stringify({ generatedAt: new Date().toISOString(), formulas: rows, validation }, null, 2), "catalogo-formulas.json", "application/json;charset=utf-8");
+}
+
+function downloadExcel(rows, validation) {
+  const validationById = new Map(validation.map(row => [row.id, row.issues.join(", ") || "OK"]));
+  const columns = [...EXPORT_COLUMNS, "latexValidation"];
+  const tableRows = rows.map(row => `<tr>${columns.map(column => `<td>${esc(column === "latexValidation" ? validationById.get(row.id) : row[column])}</td>`).join("")}</tr>`).join("");
+  const workbook = `<!doctype html><html><head><meta charset="utf-8"><style>table{border-collapse:collapse}th,td{border:1px solid #999;padding:4px 8px}th{background:#e5e7eb}</style></head><body><table><thead><tr>${columns.map(column => `<th>${esc(column)}</th>`).join("")}</tr></thead><tbody>${tableRows}</tbody></table></body></html>`;
+  downloadBlob(`\ufeff${workbook}`, "catalogo-formulas.xls", "application/vnd.ms-excel;charset=utf-8");
 }
 
 function csvCell(value) {
@@ -284,7 +304,7 @@ formulas/<formula-id>/
 - simulacion/index.js
 - simulacion/styles.css
 
-El loader escanea los catálogos formulas/catalog*.json y las carpetas indicadas. Cada archivo .md o .tex adicional en la raíz de la carpeta puede convertirse en una pestaña extra. Las pestañas estándar son: Fórmula, Significado, Historia, Derivación, Usos, Ficha, Aprendizaje, Unidades, Despejar y Simulación. Aprendizaje integra prerrequisitos y ruta de aprendizaje. Unidades integra unidades habituales, dimensionalidad y símbolos detectados.
+El loader escanea los catálogos formulas/catalog*.json y las carpetas indicadas. Cada archivo .md o .tex adicional en la raíz de la carpeta puede convertirse en una pestaña extra. Las pestañas estándar son: Fórmula, Significado, Historia, Derivación, Usos, Ficha, Aprendizaje, Unidades y Simulación. Aprendizaje integra prerrequisitos y ruta de aprendizaje. Unidades debe aportar unidades habituales, comprobación dimensional y variables principales limpias; no debe limitarse a listar comandos LaTeX crudos.
 
 meta.json debe incluir como mínimo: id, name, author, year, field, level, color, simulation, formulaText y summary. Usa niveles normalizados: ESO, Bachillerato, Universidad inicial, Universidad o Avanzado. Añade tags si procede: área, técnica, disciplina, tipo de modelo, uso educativo y conceptos clave.
 
