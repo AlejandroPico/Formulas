@@ -16,6 +16,73 @@ const CATALOG_NAME_ALIASES = new Map([
   ["divergencia-kl", "divergencia-de-kullback-leibler"]
 ]);
 
+const LEVEL_ALIASES = [
+  [/eso|secundaria/i, "ESO"],
+  [/bachiller/i, "Bachillerato"],
+  [/universidad inicial|universitario inicial|inicial/i, "Universidad inicial"],
+  [/universidad|grado|ingenier/i, "Universidad"],
+  [/avanzado|doctorado|investig/i, "Avanzado"]
+];
+
+const DOMAIN_PROFILES = [
+  {
+    match: /geometr|trigonom|álgebra|algebra|análisis|analisis|cálculo|calculo|teoría de números|teoria de numeros/i,
+    tags: ["matemáticas", "abstracción", "demostración"],
+    prerequisites: ["Álgebra elemental", "notación funcional", "manipulación simbólica"],
+    path: ["Repasar variables y operaciones", "estudiar la interpretación geométrica o analítica", "resolver ejercicios guiados", "comparar con fórmulas relacionadas"],
+    units: "Normalmente adimensional o dependiente de las magnitudes introducidas.",
+    dimensions: "Depende de la interpretación concreta de las variables."
+  },
+  {
+    match: /mecánica|mecanica|relatividad|cosmolog|física|fisica|fluidos|electro|cuántica|cuantica|termodinámica|termodinamica/i,
+    tags: ["física", "modelo", "magnitudes"],
+    prerequisites: ["Álgebra", "cálculo diferencial", "unidades del SI", "lectura de vectores o campos si aparecen"],
+    path: ["Identificar magnitudes y unidades", "comprobar dimensionalidad", "estudiar casos límite", "ejecutar la simulación variando parámetros"],
+    units: "Preferentemente unidades SI: metro, kilogramo, segundo, amperio, kelvin, mol y candela según corresponda.",
+    dimensions: "Debe conservar homogeneidad dimensional entre ambos lados de la igualdad."
+  },
+  {
+    match: /química|quimica|cinética|cinetica|bioquímica|bioquimica|termoquímica|termoquimica/i,
+    tags: ["química", "laboratorio", "modelo experimental"],
+    prerequisites: ["Moles y concentración", "temperatura absoluta", "energía", "logaritmos y exponenciales"],
+    path: ["Revisar significado de constantes", "pasar unidades a SI o unidades químicas coherentes", "comparar con datos experimentales", "analizar sensibilidad de parámetros"],
+    units: "Se usan K, mol, L, J, Pa, M o unidades SI equivalentes según el contexto químico.",
+    dimensions: "Las constantes deben expresarse en unidades compatibles con la forma concreta de la ecuación."
+  },
+  {
+    match: /probabilidad|estadística|estadistica|información|informacion|telecomunicaciones/i,
+    tags: ["probabilidad", "estadística", "información"],
+    prerequisites: ["Probabilidad básica", "sumatorios o integrales", "logaritmos", "distribuciones"],
+    path: ["Interpretar variables aleatorias", "localizar normalizaciones", "analizar límites", "relacionar con incertidumbre o datos"],
+    units: "Probabilidades adimensionales; información en bits si el logaritmo es base 2 o nats si es natural.",
+    dimensions: "Las probabilidades deben ser adimensionales y estar normalizadas cuando proceda."
+  },
+  {
+    match: /aprendizaje|machine|inteligencia|optimización|optimizacion|transformers|refuerzo/i,
+    tags: ["IA", "optimización", "datos"],
+    prerequisites: ["Álgebra lineal", "cálculo diferencial", "probabilidad", "programación básica"],
+    path: ["Entender entradas y salidas", "identificar función objetivo", "probar parámetros en el simulador", "relacionar fórmula con entrenamiento o inferencia"],
+    units: "Habitualmente adimensional; logits, pérdidas y probabilidades dependen de normalizaciones del modelo.",
+    dimensions: "Muchas expresiones son escalares o tensores sin dimensión física directa."
+  },
+  {
+    match: /finanzas|econom/i,
+    tags: ["finanzas", "riesgo", "modelo cuantitativo"],
+    prerequisites: ["Interés compuesto", "probabilidad", "estadística", "cálculo básico"],
+    path: ["Identificar supuestos del modelo", "comparar variables de mercado", "probar sensibilidad", "evaluar límites de aplicabilidad"],
+    units: "Moneda, tiempo anualizado, tasas en tanto por uno y volatilidad anualizada según convención.",
+    dimensions: "Las tasas deben estar en escalas temporales coherentes con el vencimiento."
+  },
+  {
+    match: /biología|biologia|bio|población|poblacion|epidemiolog/i,
+    tags: ["biología matemática", "dinámica", "modelo poblacional"],
+    prerequisites: ["Funciones", "ecuaciones diferenciales básicas", "tasas de cambio", "lectura de gráficas"],
+    path: ["Interpretar poblaciones o concentraciones", "estudiar equilibrios", "simular variación de parámetros", "comparar con datos reales"],
+    units: "Poblaciones, concentraciones, tiempo y tasas ajustadas al sistema estudiado.",
+    dimensions: "Las tasas suelen tener dimensión inversa de tiempo; las poblaciones o concentraciones deben mantenerse positivas."
+  }
+];
+
 const STANDARD_SECTIONS = [
   { file: "formula.tex", key: "formula", label: "Fórmula", type: "formula", order: 10 },
   { file: "significado.md", key: "significado", label: "Significado", type: "markdown", order: 20 },
@@ -103,6 +170,7 @@ function recordsFromCatalog(catalog) {
     return {
       ...entry,
       folder,
+      level: normalizeEducationalLevel(entry.level || "Sin nivel"),
       files: filesFromCatalogEntry(entry, folder)
     };
   });
@@ -140,7 +208,13 @@ function recordsFromManifest() {
 function buildFormulaEntry(record) {
   const formula = normalizeFormulaList(record.formula);
   const formulaText = normalizeFormulaList(record.formulaText || record.formula_text || record.explainedFormula || []);
-  const sections = buildSectionIndex(record, formula);
+  const profile = domainProfile(record);
+  const tags = deriveTags(record, formula, profile);
+  const prerequisites = normalizeList(record.prerequisites || record.requisitos || profile.prerequisites);
+  const learningPath = normalizeList(record.learningPath || record.ruta || profile.path);
+  const units = record.units || record.unidades || profile.units;
+  const dimensions = record.dimensions || record.dimensiones || profile.dimensions;
+  const sections = buildSectionIndex(record, formula, { profile, tags, prerequisites, learningPath, units, dimensions });
   const simulationSection = sections.find(section => section.type === "simulation");
 
   return {
@@ -149,12 +223,18 @@ function buildFormulaEntry(record) {
     author: record.author || "",
     year: record.year ?? "",
     field: record.field || "Sin área",
-    level: record.level || "Sin nivel",
+    level: normalizeEducationalLevel(record.level || "Sin nivel"),
     color: record.color || "#5d5af6",
     source: "files",
     folder: record.folder,
     formula,
     formulaText,
+    tags,
+    prerequisites,
+    learningPath,
+    units,
+    dimensions,
+    symbols: extractFormulaSymbols(formula),
     summary: record.summary || "",
     meaning: "",
     history: "",
@@ -169,7 +249,7 @@ function buildFormulaEntry(record) {
   };
 }
 
-function buildSectionIndex(record, formula) {
+function buildSectionIndex(record, formula, derived = {}) {
   const sections = [];
   for (const descriptor of STANDARD_SECTIONS) {
     const path = record.files.get(descriptor.file);
@@ -182,6 +262,15 @@ function buildSectionIndex(record, formula) {
     });
   }
   customRootSections(record).forEach(section => sections.push(section));
+  sections.push(generatedLearningSection(record, derived));
+  sections.push(generatedUnitsSection(record, formula, derived));
+  sections.push({
+    key: "despejar",
+    label: "Despejar",
+    type: "solver",
+    order: 82,
+    content: ""
+  });
   if (record.files.has("simulacion/index.js")) {
     sections.push({
       key: "simulacion",
@@ -194,6 +283,26 @@ function buildSectionIndex(record, formula) {
     });
   }
   return sections.sort((a, b) => a.order - b.order || a.label.localeCompare(b.label, "es"));
+}
+
+function generatedLearningSection(record, derived) {
+  return {
+    key: "aprendizaje",
+    label: "Aprendizaje",
+    type: "markdown",
+    order: 70,
+    content: `# Aprendizaje\n\n## Prerrequisitos\n\n${derived.prerequisites.map(item => `- ${item}`).join("\n")}\n\n## Ruta sugerida\n\n${derived.learningPath.map((item, index) => `- ${index + 1}. ${item}`).join("\n")}\n\n## Etiquetas\n\n${derived.tags.map(tag => `- ${tag}`).join("\n")}`
+  };
+}
+
+function generatedUnitsSection(record, formula, derived) {
+  return {
+    key: "unidades",
+    label: "Unidades",
+    type: "markdown",
+    order: 80,
+    content: `# Unidades y dimensionalidad\n\n## Unidades habituales\n\n${derived.units}\n\n## Lectura dimensional\n\n${derived.dimensions}\n\n## Símbolos detectados\n\n${extractFormulaSymbols(formula).map(symbol => `- \`${symbol}\``).join("\n") || "- No se han detectado símbolos simples."}`
+  };
 }
 
 function customRootSections(record) {
@@ -211,6 +320,52 @@ function customRootSections(record) {
       content: "",
       lazy: true
     }));
+}
+
+function normalizeEducationalLevel(value) {
+  const text = String(value || "Sin nivel").trim();
+  for (const [pattern, normalized] of LEVEL_ALIASES) {
+    if (pattern.test(text)) return normalized;
+  }
+  if (/avanzado/i.test(text)) return "Avanzado";
+  return text || "Sin nivel";
+}
+
+function domainProfile(record) {
+  const haystack = `${record.field || ""} ${record.name || ""} ${record.id || ""}`;
+  return DOMAIN_PROFILES.find(profile => profile.match.test(haystack)) || {
+    tags: ["fórmula", "modelo", "atlas"],
+    prerequisites: ["Lectura de expresiones algebraicas", "identificación de variables", "manejo básico de unidades"],
+    path: ["Leer la fórmula simbólica", "pasar a fórmula explicada", "revisar significado y ficha", "probar simulación si existe"],
+    units: "Depende de la interpretación de las variables.",
+    dimensions: "Debe comprobarse que ambos lados de la relación tengan dimensiones compatibles."
+  };
+}
+
+function deriveTags(record, formula, profile) {
+  const base = [record.field, record.level, ...(record.tags || []), ...profile.tags];
+  const text = `${record.name || ""} ${record.id || ""} ${record.field || ""} ${formula.join(" ")}`.toLowerCase();
+  if (/\\nabla|campo|vector|mathbf/.test(text)) base.push("campos", "vectores");
+  if (/\\int|integral/.test(text)) base.push("integrales");
+  if (/\\sum|sumatorio|sigma/.test(text)) base.push("sumatorios");
+  if (/\\partial|derivada|differential|ecuacion/.test(text)) base.push("ecuaciones diferenciales");
+  if (/probabilidad|softmax|entropy|entrop/.test(text)) base.push("probabilidad");
+  if (/simulacion|simulation/.test(record.simulation || "")) base.push("simulación");
+  return [...new Set(base.map(tag => String(tag || "").trim()).filter(Boolean))];
+}
+
+function extractFormulaSymbols(formulas) {
+  const text = normalizeFormulaList(formulas).join(" ");
+  const latexCommands = [...text.matchAll(/\\([a-zA-Z]+)/g)].map(match => `\\${match[1]}`);
+  const latin = [...text.matchAll(/(?<!\\)[A-Za-z](?:_[A-Za-z0-9']+)?/g)].map(match => match[0]);
+  const greek = [...text.matchAll(/[α-ωΑ-Ω]/g)].map(match => match[0]);
+  return [...new Set([...latexCommands, ...latin, ...greek])].filter(symbol => !["\\frac", "\\left", "\\right", "\\operatorname", "\\mathrm", "\\mathbf"].includes(symbol)).slice(0, 24);
+}
+
+function normalizeList(value) {
+  if (Array.isArray(value)) return value.map(item => String(item).trim()).filter(Boolean);
+  if (!value) return [];
+  return String(value).split(/\n|;/g).map(item => item.trim()).filter(Boolean);
 }
 
 function normalizeFormulaList(value) {
