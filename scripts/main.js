@@ -63,7 +63,13 @@ const MIGRATED_FORMULA_IDS = new Set([
   "backpropagation",
   "cross-entropy-loss",
   "softmax-function",
-  "gradient-descent"
+  "gradient-descent",
+  "black-scholes-model",
+  "lotka-volterra-equations",
+  "logistic-equation",
+  "logistic-sigmoid-function",
+  "bellman-equation",
+  "scaled-dot-product-attention"
 ]);
 
 const MIGRATED_FORMULA_NAMES = new Set([
@@ -120,7 +126,18 @@ const MIGRATED_FORMULA_NAMES = new Set([
   "backpropagation",
   "entropia cruzada",
   "softmax",
-  "descenso del gradiente"
+  "descenso del gradiente",
+  "modelo de black scholes",
+  "black scholes",
+  "ecuaciones de lotka volterra",
+  "lotka volterra",
+  "ecuacion logistica",
+  "funcion sigmoide logistica",
+  "sigmoide logistica",
+  "ecuacion de bellman",
+  "bellman",
+  "atencion escalada",
+  "atencion de producto escalar escalada"
 ]);
 
 let equations = [];
