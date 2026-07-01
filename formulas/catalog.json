@@ -1215,6 +1215,32 @@
     ]
   },
   {
+    "id": "logistic-sigmoid-function",
+    "name": "Función sigmoide logística",
+    "author": "Modelo logístico",
+    "year": 1845,
+    "field": "Aprendizaje automático y análisis matemático",
+    "level": "Bachillerato y universidad inicial",
+    "color": "#ec4899",
+    "folder": "formulas/logistic-sigmoid-function",
+    "formula": [
+      "\\sigma(x)=\\frac{1}{1+e^{-x}}",
+      "\\sigma'(x)=\\sigma(x)(1-\\sigma(x))",
+      "0<\\sigma(x)<1"
+    ],
+    "formulaText": [
+      "sigmoide = uno dividido entre uno + exponencial negativa de x",
+      "convierte valores reales en salidas entre cero y uno"
+    ],
+    "summary": "Función en forma de S usada como activación y como enlace probabilístico.",
+    "simulation": "logistic-sigmoid-function",
+    "sections": [
+      {
+        "file": "formula.tex"
+      }
+    ]
+  },
+  {
     "id": "kirchhoff-laws",
     "name": "Leyes de Kirchhoff",
     "author": "Gustav Kirchhoff",
