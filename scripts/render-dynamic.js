@@ -158,6 +158,7 @@ function activate(root, key) {
   if (panel.dataset.kind === "markdown" && panel.dataset.loaded !== "true") loadMarkdown(panel);
   if (panel.dataset.kind === "simulation") mountDynamicSimulation(panel);
   if (panel.dataset.kind === "formula") requestMathTypeset();
+  if (panel.dataset.kind === "solver") mountBasicSolver(panel);
 }
 
 async function mountDynamicSimulation(panel) {
@@ -202,6 +203,7 @@ function sectionsFor(eq) {
   if (Array.isArray(eq.sections) && eq.sections.length) {
     return eq.sections.filter(section => {
       if (section.type === "simulation") return Boolean(section.path);
+      if (section.type === "solver") return Boolean(eq.formula?.length);
       if (section.type === "formula") return Boolean(section.path || eq.formula?.length || section.content);
       return Boolean(section.path || section.content);
     });
@@ -224,6 +226,9 @@ function panelHtml(section, eq, active) {
   if (section.type === "simulation") {
     return `<section class="${cls}" data-panel="${escapeHtml(section.key)}" data-kind="simulation" data-module="${escapeHtml(eq.simulationModule || section.path || "")}" data-style="${escapeHtml(eq.simulationStylePath || section.stylePath || "")}"${hidden}><section class="formula-plugin-host"><canvas class="formula-plugin-canvas" aria-label="Simulación interactiva"></canvas><div class="formula-plugin-controls"></div><div class="formula-plugin-readout" aria-live="polite"></div></section></section>`;
   }
+  if (section.type === "solver") {
+    return `<section class="${cls} solver-view" data-panel="${escapeHtml(section.key)}" data-kind="solver" data-formulas="${escapeHtml(JSON.stringify(asList(eq.formula)))}"${hidden}><div class="basic-solver"><p class="section-loading">Preparando despejador básico...</p></div></section>`;
+  }
   if (section.type === "markdown") {
     const loaded = section.content ? "true" : "false";
     const body = section.content ? renderMarkdown(section.content) : '<p class="section-loading">Cargando sección...</p>';
@@ -231,6 +236,76 @@ function panelHtml(section, eq, active) {
   }
   if (section.type === "uses") return `<section class="${cls}" data-panel="${escapeHtml(section.key)}"${hidden}>${section.content.map(use => `<span>${escapeHtml(use)}</span>`).join("")}</section>`;
   return `<section class="${cls}" data-panel="${escapeHtml(section.key)}"${hidden}><p>${escapeHtml(section.content || "")}</p></section>`;
+}
+
+function mountBasicSolver(panel) {
+  if (panel.dataset.mounted === "true") return;
+  panel.dataset.mounted = "true";
+  const formulas = JSON.parse(panel.dataset.formulas || "[]");
+  const symbols = extractCandidateSymbols(formulas);
+  const host = panel.querySelector(".basic-solver");
+  if (!formulas.length || !symbols.length) {
+    host.innerHTML = "<p>No hay suficientes símbolos simples para preparar un despeje básico.</p>";
+    return;
+  }
+  host.innerHTML = `
+    <label>Fórmula <select data-solver-formula>${formulas.map((formula, index) => `<option value="${index}">${escapeHtml(formula.slice(0, 90))}</option>`).join("")}</select></label>
+    <label>Símbolo <select data-solver-symbol>${symbols.map(symbol => `<option value="${escapeHtml(symbol)}">${escapeHtml(symbol)}</option>`).join("")}</select></label>
+    <div class="solver-result formula-box"></div>
+    <p class="solver-note">Despejador básico: resuelve patrones elementales y avisa cuando la expresión requiere álgebra simbólica avanzada.</p>`;
+  const update = () => {
+    const formula = formulas[Number(host.querySelector("[data-solver-formula]").value)] || "";
+    const symbol = host.querySelector("[data-solver-symbol]").value;
+    host.querySelector(".solver-result").innerHTML = renderFormulaDisplay({ mode: "symbolic", formulas: [solveFormula(formula, symbol)] });
+    requestMathTypeset();
+  };
+  host.addEventListener("change", update);
+  update();
+}
+
+function solveFormula(formula, symbol) {
+  const [rawLeft, ...rawRight] = String(formula).split("=");
+  if (!rawRight.length) return `\\text{La fórmula seleccionada no contiene una igualdad simple.}`;
+  const left = rawLeft.trim();
+  const right = rawRight.join("=").trim();
+  if (normalizeSymbol(left) === normalizeSymbol(symbol)) return `${left}=${right}`;
+  const simple = simplifyPlain(right);
+  const lhs = left;
+  const sym = normalizeSymbol(symbol);
+  const product = simple.match(/^(.+?)(?:\\,|\s|\*)?(.+)$/);
+  if (product && simple.includes("*") && simple.split("*").length === 2) {
+    const [a, b] = simple.split("*").map(item => item.trim());
+    if (normalizeSymbol(a) === sym) return `${a}=\\frac{${lhs}}{${b}}`;
+    if (normalizeSymbol(b) === sym) return `${b}=\\frac{${lhs}}{${a}}`;
+  }
+  const frac = simple.match(/^\\frac\{([^{}]+)\}\{([^{}]+)\}$/);
+  if (frac) {
+    const [, numerator, denominator] = frac;
+    if (normalizeSymbol(numerator) === sym) return `${numerator}=${lhs}${denominator}`;
+    if (normalizeSymbol(denominator) === sym) return `${denominator}=\\frac{${numerator}}{${lhs}}`;
+  }
+  if (right.includes(symbol)) return `\\text{${escapeLatexText(symbol)} aparece en la expresión, pero requiere despeje simbólico avanzado.}`;
+  return `\\text{${escapeLatexText(symbol)} no aparece de forma despejable en esta igualdad.}`;
+}
+
+function extractCandidateSymbols(formulas) {
+  const text = formulas.join(" ");
+  const symbols = [...text.matchAll(/\\?[A-Za-z](?:_[A-Za-z0-9']+)?|[α-ωΑ-Ω]/g)]
+    .map(match => match[0])
+    .filter(symbol => !/^\\(?:frac|sqrt|sum|int|left|right|operatorname|mathrm|mathbf)$/.test(symbol));
+  return [...new Set(symbols)].slice(0, 30);
+}
+
+function simplifyPlain(value) {
+  return String(value).replace(/\\,/g, "").replace(/\s+/g, "").replace(/\cdot|·|⋅|×/g, "*");
+}
+
+function normalizeSymbol(value) {
+  return String(value || "").replace(/[{}\s]/g, "").replace(/^\\/, "");
+}
+
+function escapeLatexText(value) {
+  return String(value).replace(/[{}]/g, "");
 }
 
 function getDisplayFormula(eq, mode) {
@@ -244,8 +319,8 @@ function renderFormulaDisplay(display) {
   if (display.mode === "explained") {
     return `<div class="formula-words-stack">${display.formulas.map(line => `<div class="formula-words-row">${escapeHtml(line)}</div>`).join("")}</div>`;
   }
-  if (display.formulas.length === 1) return `\(${display.formulas[0]}\)`;
-  return `<div class="formula-stack">${display.formulas.map(line => `<div>\(${line}\)</div>`).join("")}</div>`;
+  if (display.formulas.length === 1) return `\\(${display.formulas[0]}\\)`;
+  return `<div class="formula-stack">${display.formulas.map(line => `<div>\\(${line}\\)</div>`).join("")}</div>`;
 }
 
 function normalizeExplainedFormula(value) {
