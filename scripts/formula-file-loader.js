@@ -9,6 +9,12 @@ const CHEMISTRY_CATALOG_PATH = "formulas/catalog-chemistry.json";
 const STATISTICS_CATALOG_PATH = "formulas/catalog-statistics.json";
 const MACHINE_LEARNING_CATALOG_PATH = "formulas/catalog-machine-learning.json";
 const APPLIED_MODELS_CATALOG_PATH = "formulas/catalog-applied-models.json";
+const FORMULA_FIXES_CATALOG_PATH = "formulas/catalog-formula-fixes.json";
+
+const CATALOG_NAME_ALIASES = new Map([
+  ["ecuacion-de-friedmann", "ecuaciones-de-friedmann"],
+  ["divergencia-kl", "divergencia-de-kullback-leibler"]
+]);
 
 const STANDARD_SECTIONS = [
   { file: "formula.tex", key: "formula", label: "Fórmula", type: "formula", order: 10 },
@@ -42,7 +48,8 @@ async function loadCatalog() {
     const statistics = await loadOptionalJsonArray(STATISTICS_CATALOG_PATH);
     const machineLearning = await loadOptionalJsonArray(MACHINE_LEARNING_CATALOG_PATH);
     const appliedModels = await loadOptionalJsonArray(APPLIED_MODELS_CATALOG_PATH);
-    return mergeCatalogEntries(catalog, recent, lorentz, quantum, chemistry, statistics, machineLearning, appliedModels);
+    const formulaFixes = await loadOptionalJsonArray(FORMULA_FIXES_CATALOG_PATH);
+    return mergeCatalogEntries(catalog, recent, lorentz, quantum, chemistry, statistics, machineLearning, appliedModels, formulaFixes);
   } catch (error) {
     console.warn("No se pudo cargar formulas/catalog.json; usando manifest como respaldo.", error);
     return recordsFromManifest().map(record => ({
@@ -77,12 +84,17 @@ function mergeCatalogEntries(...sets) {
   const byName = new Map();
   for (const entry of sets.flat()) {
     if (!entry?.id) continue;
-    const nameKey = sectionKeyFromFile(entry.name || entry.id);
+    const nameKey = catalogDedupKey(entry);
     if (byName.has(nameKey)) byId.delete(byName.get(nameKey));
     byName.set(nameKey, entry.id);
     byId.set(entry.id, entry);
   }
   return [...byId.values()];
+}
+
+function catalogDedupKey(entry) {
+  const key = sectionKeyFromFile(entry.name || entry.id);
+  return CATALOG_NAME_ALIASES.get(key) || key;
 }
 
 function recordsFromCatalog(catalog) {
