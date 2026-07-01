@@ -10,6 +10,7 @@ const levelOrder = {
 
 const GREEK_ALIASES = {
   alpha: "α",
+  alfa: "α",
   beta: "β",
   gamma: "γ",
   delta: "δ",
@@ -27,10 +28,33 @@ const GREEK_ALIASES = {
   psi: "ψ",
   omega: "ω",
   nabla: "∇",
+  gradiente: "∇",
+  divergencia: "∇",
+  rotacional: "∇",
   sumatorio: "∑",
+  suma: "∑",
   integral: "∫",
   infinito: "∞",
-  raiz: "√"
+  raiz: "√",
+  sqrt: "√"
+};
+
+const LATEX_SYMBOL_ALIASES = {
+  "∇": "nabla gradiente divergencia rotacional",
+  "∑": "sumatorio suma sigma",
+  "∫": "integral acumulacion",
+  "√": "raiz sqrt radical",
+  "∞": "infinito",
+  "α": "alpha alfa",
+  "β": "beta",
+  "γ": "gamma",
+  "δ": "delta",
+  "λ": "lambda longitud onda",
+  "μ": "mu media potencial quimico",
+  "π": "pi",
+  "ρ": "rho densidad",
+  "σ": "sigma desviacion volatilidad softmax sigmoide",
+  "ψ": "psi onda funcion onda"
 };
 
 export function filterEquations(equations, state) {
@@ -39,7 +63,7 @@ export function filterEquations(equations, state) {
 
   return equations
     .filter((eq) => state.field === "Todas" || eq.field === state.field)
-    .filter((eq) => state.level === "Todos" || eq.level === state.level)
+    .filter((eq) => state.level === "Todos" || eq.level === state.level || eq.levelNormalized === state.level)
     .map((eq) => ({ eq, score: hasSearch ? scoreEquation(eq, terms) : 0 }))
     .filter((item) => !hasSearch || item.score > 0)
     .sort((a, b) => hasSearch ? b.score - a.score || sortEquations(a.eq, b.eq, state.sort) : sortEquations(a.eq, b.eq, state.sort))
@@ -58,7 +82,11 @@ function parseSearchTerms(query) {
 
 function expandTerm(term) {
   const expanded = [term];
-  if (GREEK_ALIASES[term]) expanded.push(normalizeQuery(GREEK_ALIASES[term]));
+  if (GREEK_ALIASES[term]) {
+    expanded.push(normalizeQuery(GREEK_ALIASES[term]));
+    expanded.push(normalizeQuery(LATEX_SYMBOL_ALIASES[GREEK_ALIASES[term]] || ""));
+  }
+  if (LATEX_SYMBOL_ALIASES[term]) expanded.push(...normalizeQuery(LATEX_SYMBOL_ALIASES[term]).split(/\s+/));
   if (term === "pitagoras" || term === "pythagoras") expanded.push("pitagoras", "pythagoras", "pitagorico", "pythagorean");
   if (term === "einstein") expanded.push("relatividad", "relativity");
   if (term === "maxwell") expanded.push("electromagnetismo", "electromagnetic");
@@ -66,7 +94,7 @@ function expandTerm(term) {
   if (term === "ia" || term === "ai") expanded.push("inteligencia", "artificial", "machine", "learning", "aprendizaje");
   if (term === "distancia") expanded.push("euclidea", "norma", "vector");
   if (term === "energia") expanded.push("energy", "e=mc2", "emc2");
-  return expanded;
+  return expanded.filter(Boolean);
 }
 
 function scoreEquation(eq, terms) {
@@ -96,6 +124,8 @@ function scoreTerm(term, index) {
   else if (wordStarts(index.name, term)) score += 130;
   else if (index.name.includes(term)) score += 95;
 
+  if (index.symbols.includes(term)) score += 155;
+  if (index.tags.includes(term)) score += 125;
   if (index.formulaCompact.includes(term)) score += 120;
   if (index.formulaText.includes(term)) score += 80;
   if (index.formulaWords.includes(term)) score += 76;
@@ -108,6 +138,10 @@ function scoreTerm(term, index) {
   if (index.meaning.includes(term)) score += 34;
   if (index.history.includes(term)) score += 26;
   if (index.derivation.includes(term)) score += 30;
+  if (index.prerequisites.includes(term)) score += 34;
+  if (index.learningPath.includes(term)) score += 30;
+  if (index.units.includes(term)) score += 32;
+  if (index.dimensions.includes(term)) score += 32;
   if (index.full.includes(term)) score += 12;
   return score;
 }
@@ -119,24 +153,42 @@ function buildSearchIndex(eq) {
     ...(eq.uses ?? []),
     ...(eq.useDetails ?? []).flatMap(item => [item.title, item.text])
   ];
+  const symbols = [
+    ...(eq.symbols ?? []),
+    ...extractSymbolsFromFormula(formulas.join(" "))
+  ];
   const fields = {
     id: normalizeQuery(eq.id),
     name: normalizeQuery(eq.name),
     author: normalizeQuery(eq.author),
     field: normalizeQuery(eq.field),
-    level: normalizeQuery(eq.level),
+    level: normalizeQuery(`${eq.level || ""} ${eq.levelNormalized || ""}`),
     summary: normalizeQuery(eq.summary),
     meaning: normalizeQuery(eq.meaning),
     history: normalizeQuery(eq.history),
     derivation: normalizeQuery(eq.derivation),
     variables: normalizeQuery((eq.variables ?? []).join(" ")),
     uses: normalizeQuery(uses.join(" ")),
+    tags: normalizeQuery((eq.tags ?? []).join(" ")),
+    symbols: normalizeQuery(symbols.concat(symbols.map(symbol => LATEX_SYMBOL_ALIASES[symbol] || "")).join(" ")),
+    prerequisites: normalizeQuery((eq.prerequisites ?? []).join(" ")),
+    learningPath: normalizeQuery((eq.learningPath ?? []).join(" ")),
+    units: normalizeQuery(eq.units),
+    dimensions: normalizeQuery(eq.dimensions),
     formulaText: normalizeQuery(formulas.join(" ")),
     formulaWords: normalizeQuery(formulaWords.join(" ")),
     formulaCompact: normalizeFormulaSearch(formulas.join(" "))
   };
   fields.full = Object.values(fields).join(" ");
   return fields;
+}
+
+function extractSymbolsFromFormula(value) {
+  const text = String(value || "");
+  const commands = [...text.matchAll(/\\([a-zA-Z]+)/g)].map(match => `\\${match[1]}`);
+  const chars = [...text.matchAll(/[α-ωΑ-Ω∇∑∫√∞]/g)].map(match => match[0]);
+  const latin = [...text.matchAll(/(?<!\\)[A-Za-z](?:_[A-Za-z0-9']+)?/g)].map(match => match[0]);
+  return [...new Set([...commands, ...chars, ...latin])];
 }
 
 function wordStarts(text, term) {
@@ -154,6 +206,7 @@ function normalizeQuery(value) {
     .replace(/[³]/g, "3")
     .replace(/\^/g, "")
     .replace(/[_{}()[\],.;:]/g, " ")
+    .replace(/\\/g, "")
     .replace(/\s+/g, " ")
     .trim();
 }
@@ -178,6 +231,6 @@ function normalizeFormulaSearch(value) {
 function sortEquations(a, b, sort) {
   if (sort === "name") return a.name.localeCompare(b.name, "es");
   if (sort === "field") return a.field.localeCompare(b.field, "es") || a.year - b.year;
-  if (sort === "level") return (levelOrder[a.level] ?? 99) - (levelOrder[b.level] ?? 99) || a.year - b.year;
+  if (sort === "level") return (levelOrder[a.level] ?? levelOrder[a.levelNormalized] ?? 99) - (levelOrder[b.level] ?? levelOrder[b.levelNormalized] ?? 99) || a.year - b.year;
   return a.year - b.year;
 }
