@@ -96,6 +96,38 @@
     ]
   },
   {
+    "id": "arithmetic-progression-sum",
+    "name": "Suma de progresión aritmética",
+    "author": "Tradición aritmética clásica",
+    "year": -300,
+    "field": "Aritmética y álgebra",
+    "level": "ESO",
+    "color": "#f59e0b",
+    "folder": "formulas/arithmetic-progression-sum",
+    "formula": [
+      "a_n=a_1+(n-1)d",
+      "S_n=n(a_1+a_n)/2"
+    ],
+    "formulaText": [
+      "término n = primer término + número de saltos · diferencia",
+      "suma = número de términos · media entre primero y último",
+      "suma = n partido de 2 · dos veces el primero + n − uno veces la diferencia"
+    ],
+    "summary": "Calcula la suma de términos separados por una diferencia constante.",
+    "simulation": "arithmetic-progression-sum",
+    "sections": [
+      {
+        "file": "formula.tex"
+      },
+      {
+        "file": "significado.md"
+      },
+      {
+        "file": "simulacion/index.js"
+      }
+    ]
+  },
+  {
     "id": "quadratic-formula",
     "name": "Fórmula cuadrática",
     "author": "Álgebra clásica",
@@ -278,6 +310,9 @@
       },
       {
         "file": "simulacion/index.js"
+      },
+      {
+        "file": "simulacion/styles.css"
       }
     ]
   },
