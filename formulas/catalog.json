@@ -193,6 +193,31 @@
     ]
   },
   {
+    "id": "determinants-2x2-3x3",
+    "name": "Determinantes 2x2 y 3x3",
+    "author": "Algebra lineal clasica",
+    "year": -200,
+    "field": "Algebra lineal",
+    "level": "Bachillerato",
+    "color": "#3b82f6",
+    "folder": "formulas/determinants-2x2-3x3",
+    "formula": [
+      "det([[a,b],[c,d]]) = ad - bc",
+      "det([[a,b,c],[d,e,f],[g,h,i]]) = aei + bfg + cdh - ceg - afh - bdi"
+    ],
+    "formulaText": [
+      "determinante 2x2 · productos cruzados",
+      "determinante 3x3 · regla de Sarrus"
+    ],
+    "summary": "Calcula determinantes pequenos y visualiza productos positivos y negativos.",
+    "simulation": "determinants-2x2-3x3",
+    "sections": [
+      {
+        "file": "formula.tex"
+      }
+    ]
+  },
+  {
     "id": "quadratic-formula",
     "name": "Fórmula cuadrática",
     "author": "Álgebra clásica",
@@ -789,6 +814,12 @@
       },
       {
         "file": "ficha.md"
+      },
+      {
+        "file": "simulacion/index.js"
+      },
+      {
+        "file": "simulacion/styles.css"
       }
     ]
   },
