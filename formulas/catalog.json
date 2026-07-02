@@ -1738,6 +1738,31 @@
     ]
   },
   {
+    "id": "cayley-hamilton-theorem",
+    "name": "Teorema de Cayley-Hamilton",
+    "author": "Arthur Cayley / William Hamilton",
+    "year": 1858,
+    "field": "Algebra lineal",
+    "level": "Universidad inicial",
+    "color": "#f43f5e",
+    "folder": "formulas/cayley-hamilton-theorem",
+    "formula": [
+      "p_A(\\lambda)=\\det(\\lambda I-A)",
+      "p_A(A)=0",
+      "A^2-\\operatorname{tr}(A)A+\\det(A)I=0\\quad\\text{para matrices }2\\times2"
+    ],
+    "formulaText": [
+      "toda matriz cuadrada satisface su propio polinomio caracteristico"
+    ],
+    "summary": "Verifica que una matriz cuadrada anula su polinomio caracteristico.",
+    "simulation": "cayley-hamilton-theorem",
+    "sections": [
+      {
+        "file": "formula.tex"
+      }
+    ]
+  },
+  {
     "id": "riemann-zeta-function",
     "name": "Función Zeta de Riemann",
     "author": "Bernhard Riemann",
