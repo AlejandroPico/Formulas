@@ -939,6 +939,45 @@
     ]
   },
   {
+    "id": "cross-product",
+    "name": "Producto vectorial",
+    "author": "Algebra vectorial clasica",
+    "year": 1773,
+    "field": "Algebra vectorial",
+    "level": "Bachillerato",
+    "color": "#0ea5e9",
+    "folder": "formulas/cross-product",
+    "formula": [
+      "\\mathbf{u}\\times\\mathbf{v}=\\begin{pmatrix}u_2v_3-u_3v_2\\\\u_3v_1-u_1v_3\\\\u_1v_2-u_2v_1\\end{pmatrix}",
+      "\\|\\mathbf{u}\\times\\mathbf{v}\\|=\\|\\mathbf{u}\\|\\,\\|\\mathbf{v}\\|\\sin\\theta"
+    ],
+    "formulaText": [
+      "producto vectorial como vector perpendicular y area orientada"
+    ],
+    "summary": "Calcula y visualiza el area del paralelogramo generado por dos vectores.",
+    "simulation": "cross-product",
+    "sections": [
+      {
+        "file": "formula.tex"
+      },
+      {
+        "file": "significado.md"
+      },
+      {
+        "file": "historia.md"
+      },
+      {
+        "file": "derivacion.md"
+      },
+      {
+        "file": "usos.md"
+      },
+      {
+        "file": "ficha.md"
+      }
+    ]
+  },
+  {
     "id": "coulomb-law",
     "name": "Ley de Coulomb",
     "author": "Charles-Augustin de Coulomb",
