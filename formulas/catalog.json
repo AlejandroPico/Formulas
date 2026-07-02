@@ -974,6 +974,12 @@
       },
       {
         "file": "ficha.md"
+      },
+      {
+        "file": "simulacion/index.js"
+      },
+      {
+        "file": "simulacion/styles.css"
       }
     ]
   },
@@ -1675,6 +1681,48 @@
       },
       {
         "file": "simulacion/styles.css"
+      }
+    ]
+  },
+  {
+    "id": "dot-product",
+    "name": "Producto escalar",
+    "author": "Algebra vectorial clasica",
+    "year": 1843,
+    "field": "Algebra vectorial",
+    "level": "ESO/Bachillerato",
+    "color": "#f59e0b",
+    "folder": "formulas/dot-product",
+    "formula": [
+      "\\mathbf{u}\\cdot\\mathbf{v}=\\sum_{i=1}^{n}u_i v_i",
+      "\\mathbf{u}\\cdot\\mathbf{v}=\\|\\mathbf{u}\\|\\,\\|\\mathbf{v}\\|\\cos\\theta"
+    ],
+    "formulaText": [
+      "producto escalar como proyeccion y medida angular"
+    ],
+    "summary": "Relaciona componentes, longitud y angulo entre dos vectores.",
+    "simulation": "dot-product",
+    "sections": [
+      {
+        "file": "formula.tex"
+      },
+      {
+        "file": "significado.md"
+      },
+      {
+        "file": "historia.md"
+      },
+      {
+        "file": "derivacion.md"
+      },
+      {
+        "file": "usos.md"
+      },
+      {
+        "file": "ficha.md"
+      },
+      {
+        "file": "simulacion/index.js"
       }
     ]
   },
