@@ -226,6 +226,15 @@
       },
       {
         "file": "usos.md"
+      },
+      {
+        "file": "ficha.md"
+      },
+      {
+        "file": "simulacion/index.js"
+      },
+      {
+        "file": "simulacion/styles.css"
       }
     ]
   },
@@ -973,6 +982,30 @@
       },
       {
         "file": "simulacion/styles.css"
+      }
+    ]
+  },
+  {
+    "id": "lagrange-interpolation",
+    "name": "Interpolacion de Lagrange",
+    "author": "Joseph-Louis Lagrange",
+    "year": 1795,
+    "field": "Analisis numerico",
+    "level": "Universidad inicial",
+    "color": "#3b82f6",
+    "folder": "formulas/lagrange-interpolation",
+    "formula": [
+      "P(x)=\\sum_{i=0}^{n} y_i L_i(x)",
+      "L_i(x)=\\prod_{j\\ne i}\\frac{x-x_j}{x_i-x_j}"
+    ],
+    "formulaText": [
+      "polinomio que interpola puntos mediante bases de Lagrange"
+    ],
+    "summary": "Construye el polinomio que pasa exactamente por un conjunto de nodos dados.",
+    "simulation": "lagrange-interpolation",
+    "sections": [
+      {
+        "file": "formula.tex"
       }
     ]
   },
