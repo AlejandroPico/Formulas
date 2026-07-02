@@ -1,0 +1,1 @@
+{"id":"cramers-rule","name":"Regla de Cramer","author":"Gabriel Cramer","year":1750,"field":"Algebra lineal","level":"Bachillerato","color":"#f59e0b","simulation":"cramers-rule","formulaText":["solucion de un sistema lineal mediante cocientes de determinantes"],"summary":"Resuelve sistemas lineales cuadrados sustituyendo columnas por el vector de terminos independientes."}
