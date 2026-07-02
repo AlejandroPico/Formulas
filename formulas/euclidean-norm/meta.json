@@ -1,0 +1,1 @@
+{"id":"euclidean-norm","name":"Norma euclidea","author":"Geometria euclidea","year":-300,"field":"Geometria y algebra vectorial","level":"ESO/Bachillerato","color":"#8b5cf6","simulation":"euclidean-norm","formulaText":["longitud de un vector mediante la raiz de la suma de cuadrados"],"summary":"Visualiza la longitud euclidea como hipotenusa de un triangulo rectangulo."}
