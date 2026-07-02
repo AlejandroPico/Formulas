@@ -4,6 +4,7 @@ import { $, unique } from "./utils.js";
 import { filterEquations } from "./filtering.js";
 import { renderEquationGrid, openEquationModal, closeEquationModal } from "./render-dynamic.js";
 import { initTheme } from "./theme.js";
+import "./formula-prompt-override.js";
 
 let equations = [];
 let fields = ["Todas"];
