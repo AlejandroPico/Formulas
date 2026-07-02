@@ -753,6 +753,23 @@
     ]
   },
   {
+    "id": "cramers-rule",
+    "name": "Regla de Cramer",
+    "author": "Gabriel Cramer",
+    "year": 1750,
+    "field": "Algebra lineal",
+    "level": "Bachillerato",
+    "color": "#f59e0b",
+    "folder": "formulas/cramers-rule",
+    "formula": [],
+    "formulaText": [
+      "solucion de un sistema lineal mediante cocientes de determinantes"
+    ],
+    "summary": "Resuelve sistemas lineales cuadrados sustituyendo columnas por el vector de terminos independientes.",
+    "simulation": "cramers-rule",
+    "sections": []
+  },
+  {
     "id": "euler-lagrange",
     "name": "Ecuación de Euler-Lagrange",
     "author": "Leonhard Euler y Joseph-Louis Lagrange",
@@ -1774,6 +1791,12 @@
       },
       {
         "file": "ficha.md"
+      },
+      {
+        "file": "simulacion/index.js"
+      },
+      {
+        "file": "simulacion/styles.css"
       }
     ]
   },
