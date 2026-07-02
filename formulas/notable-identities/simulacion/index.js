@@ -1,2 +1,2 @@
-const x=({readout})=>{readout.textContent='Simulacion interactiva cargada';};
+const x=({controls,readout})=>{const a=document.createElement('input');a.type='range';a.min=1;a.max=20;a.value=7;controls.appendChild(a);const b=document.createElement('input');b.type='range';b.min=1;b.max=20;b.value=4;controls.appendChild(b);const f=()=>{const A=+a.value,B=+b.value;readout.textContent='(a+b)^2 = '+(A*A)+' + '+(2*A*B)+' + '+(B*B)+' = '+((A+B)*(A+B));};a.oninput=f;b.oninput=f;f();};
 export default x;
