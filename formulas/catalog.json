@@ -1024,6 +1024,9 @@
       },
       {
         "file": "simulacion/index.js"
+      },
+      {
+        "file": "simulacion/styles.css"
       }
     ]
   },
@@ -1047,6 +1050,51 @@
     ],
     "summary": "Combina dos funciones midiendo el solapamiento entre una señal y otra desplazada.",
     "simulation": "convolution",
+    "sections": [
+      {
+        "file": "formula.tex"
+      },
+      {
+        "file": "significado.md"
+      },
+      {
+        "file": "historia.md"
+      },
+      {
+        "file": "derivacion.md"
+      },
+      {
+        "file": "usos.md"
+      },
+      {
+        "file": "ficha.md"
+      },
+      {
+        "file": "simulacion/index.js"
+      },
+      {
+        "file": "simulacion/styles.css"
+      }
+    ]
+  },
+  {
+    "id": "ruffini-rule",
+    "name": "Regla de Ruffini",
+    "author": "Paolo Ruffini",
+    "year": 1804,
+    "field": "Algebra y polinomios",
+    "level": "Bachillerato",
+    "color": "#10b981",
+    "folder": "formulas/ruffini-rule",
+    "formula": [
+      "P(x)=(x-r)Q(x)+P(r)",
+      "\\frac{P(x)}{x-r}=Q(x)+\\frac{P(r)}{x-r}"
+    ],
+    "formulaText": [
+      "division sintetica de un polinomio entre x-r"
+    ],
+    "summary": "Divide un polinomio por un binomio lineal y obtiene cociente y resto.",
+    "simulation": "ruffini-rule",
     "sections": [
       {
         "file": "formula.tex"
