@@ -1,2 +1,2 @@
-const x=({readout})=>{readout.textContent='Formulas de Viete listas';};
+const x=({controls,readout})=>{const a=document.createElement('input');a.type='range';a.min=0;a.max=16;a.value=5;controls.appendChild(a);const b=document.createElement('input');b.type='range';b.min=0;b.max=16;b.value=13;controls.appendChild(b);const f=()=>{const A=+a.value-8,B=+b.value-8;readout.textContent='raices: '+A+' y '+B+' | suma='+(A+B)+' | producto='+(A*B);};a.oninput=f;b.oninput=f;f();};
 export default x;
