@@ -1,0 +1,1 @@
+{"id":"ruffini-rule","name":"Regla de Ruffini","author":"Paolo Ruffini","year":1804,"field":"Algebra y polinomios","level":"Bachillerato","color":"#10b981","simulation":"ruffini-rule","formulaText":["division sintetica de un polinomio entre x-r"],"summary":"Divide un polinomio por un binomio lineal y obtiene cociente y resto."}
