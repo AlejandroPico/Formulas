@@ -96,6 +96,51 @@
     ]
   },
   {
+    "id": "euclidean-norm",
+    "name": "Norma euclidea",
+    "author": "Geometria euclidea",
+    "year": -300,
+    "field": "Geometria y algebra vectorial",
+    "level": "ESO/Bachillerato",
+    "color": "#8b5cf6",
+    "folder": "formulas/euclidean-norm",
+    "formula": [
+      "\\|\\mathbf{x}\\|_2=\\sqrt{x_1^2+x_2^2+\\cdots+x_n^2}",
+      "\\|\\mathbf{x}\\|_2=\\sqrt{\\mathbf{x}\\cdot\\mathbf{x}}"
+    ],
+    "formulaText": [
+      "longitud de un vector mediante la raiz de la suma de cuadrados"
+    ],
+    "summary": "Visualiza la longitud euclidea como hipotenusa de un triangulo rectangulo.",
+    "simulation": "euclidean-norm",
+    "sections": [
+      {
+        "file": "formula.tex"
+      },
+      {
+        "file": "significado.md"
+      },
+      {
+        "file": "historia.md"
+      },
+      {
+        "file": "derivacion.md"
+      },
+      {
+        "file": "usos.md"
+      },
+      {
+        "file": "ficha.md"
+      },
+      {
+        "file": "simulacion/index.js"
+      },
+      {
+        "file": "simulacion/styles.css"
+      }
+    ]
+  },
+  {
     "id": "arithmetic-progression-sum",
     "name": "Suma de progresión aritmética",
     "author": "Tradición aritmética clásica",
@@ -1723,6 +1768,9 @@
       },
       {
         "file": "simulacion/index.js"
+      },
+      {
+        "file": "simulacion/styles.css"
       }
     ]
   },
@@ -2338,6 +2386,51 @@
     ]
   },
   {
+    "id": "spectral-decomposition",
+    "name": "Descomposicion espectral",
+    "author": "Algebra lineal moderna",
+    "year": 1900,
+    "field": "Algebra lineal",
+    "level": "Universidad inicial",
+    "color": "#0ea5e9",
+    "folder": "formulas/spectral-decomposition",
+    "formula": [
+      "A=Q\\Lambda Q^T",
+      "A=\\sum_{i=1}^{n}\\lambda_i\\mathbf{v}_i\\mathbf{v}_i^T"
+    ],
+    "formulaText": [
+      "matriz simetrica reconstruida desde autovalores y autovectores ortonormales"
+    ],
+    "summary": "Reconstruye una matriz simetrica como suma de proyecciones espectrales.",
+    "simulation": "spectral-decomposition",
+    "sections": [
+      {
+        "file": "formula.tex"
+      },
+      {
+        "file": "significado.md"
+      },
+      {
+        "file": "historia.md"
+      },
+      {
+        "file": "derivacion.md"
+      },
+      {
+        "file": "usos.md"
+      },
+      {
+        "file": "ficha.md"
+      },
+      {
+        "file": "simulacion/index.js"
+      },
+      {
+        "file": "simulacion/styles.css"
+      }
+    ]
+  },
+  {
     "id": "planck-law",
     "name": "Ley de Planck",
     "author": "Max Planck",
@@ -2357,6 +2450,51 @@
     ],
     "summary": "Describe el espectro de radiación térmica de un cuerpo negro.",
     "simulation": "planck-law",
+    "sections": [
+      {
+        "file": "formula.tex"
+      },
+      {
+        "file": "significado.md"
+      },
+      {
+        "file": "historia.md"
+      },
+      {
+        "file": "derivacion.md"
+      },
+      {
+        "file": "usos.md"
+      },
+      {
+        "file": "ficha.md"
+      },
+      {
+        "file": "simulacion/index.js"
+      },
+      {
+        "file": "simulacion/styles.css"
+      }
+    ]
+  },
+  {
+    "id": "eigenvalues-eigenvectors",
+    "name": "Valores propios y vectores propios",
+    "author": "Algebra lineal moderna",
+    "year": 1900,
+    "field": "Algebra lineal",
+    "level": "Universidad inicial",
+    "color": "#10b981",
+    "folder": "formulas/eigenvalues-eigenvectors",
+    "formula": [
+      "A\\mathbf{v}=\\lambda\\mathbf{v}",
+      "\\det(A-\\lambda I)=0"
+    ],
+    "formulaText": [
+      "un vector propio conserva direccion bajo una transformacion lineal"
+    ],
+    "summary": "Visualiza cuando Av queda paralelo a v y aparece un valor propio lambda.",
+    "simulation": "eigenvalues-eigenvectors",
     "sections": [
       {
         "file": "formula.tex"
