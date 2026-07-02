@@ -365,6 +365,12 @@
       },
       {
         "file": "aplicaciones.md"
+      },
+      {
+        "file": "simulacion/index.js"
+      },
+      {
+        "file": "simulacion/styles.css"
       }
     ]
   },
