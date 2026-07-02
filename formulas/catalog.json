@@ -761,13 +761,21 @@
     "level": "Bachillerato",
     "color": "#f59e0b",
     "folder": "formulas/cramers-rule",
-    "formula": [],
+    "formula": [
+      "A x = b",
+      "x_i = det(A_i) / det(A)",
+      "det(A) != 0"
+    ],
     "formulaText": [
       "solucion de un sistema lineal mediante cocientes de determinantes"
     ],
     "summary": "Resuelve sistemas lineales cuadrados sustituyendo columnas por el vector de terminos independientes.",
     "simulation": "cramers-rule",
-    "sections": []
+    "sections": [
+      {
+        "file": "formula.tex"
+      }
+    ]
   },
   {
     "id": "euler-lagrange",
