@@ -1254,6 +1254,48 @@
     ]
   },
   {
+    "id": "laplace-transform",
+    "name": "Transformada de Laplace",
+    "author": "Pierre-Simon Laplace",
+    "year": 1782,
+    "field": "Análisis integral y ecuaciones diferenciales",
+    "level": "Universidad inicial",
+    "color": "#8b5cf6",
+    "folder": "formulas/laplace-transform",
+    "formula": [
+      "F(s)=\\mathcal{L}\\{f(t)\\}=\\int_0^\\infty e^{-st}f(t)\\,dt",
+      "\\mathcal{L}\\{1\\}=\\frac{1}{s}"
+    ],
+    "formulaText": [
+      "transforma una función temporal en una función del parámetro s"
+    ],
+    "summary": "Visualiza cómo el factor exponencial e^{-st} atenúa una señal y convierte área temporal en F(s).",
+    "simulation": true,
+    "sections": [
+      {
+        "file": "formula.tex"
+      },
+      {
+        "file": "significado.md"
+      },
+      {
+        "file": "historia.md"
+      },
+      {
+        "file": "derivacion.md"
+      },
+      {
+        "file": "usos.md"
+      },
+      {
+        "file": "ficha.md"
+      },
+      {
+        "file": "simulacion/index.js"
+      }
+    ]
+  },
+  {
     "id": "coulomb-law",
     "name": "Ley de Coulomb",
     "author": "Charles-Augustin de Coulomb",
