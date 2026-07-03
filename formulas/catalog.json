@@ -885,6 +885,44 @@
     ]
   },
   {
+    "id": "euler-maclaurin-summation",
+    "name": "Fórmula de sumación de Euler-Maclaurin",
+    "author": "Leonhard Euler / Colin Maclaurin",
+    "year": 1735,
+    "field": "Análisis numérico",
+    "level": "Universidad inicial",
+    "color": "#f59e0b",
+    "folder": "formulas/euler-maclaurin-summation",
+    "formula": [
+      "\\sum_{k=a}^{b} f(k)\\approx\\int_a^b f(x)\\,dx+\\frac{f(a)+f(b)}{2}+\\frac{B_2}{2!}\\bigl(f'(b)-f'(a)\\bigr)"
+    ],
+    "formulaText": [
+      "aproxima sumas discretas mediante integrales y correcciones de borde"
+    ],
+    "summary": "Compara una suma discreta con su aproximación integral corregida por Euler-Maclaurin.",
+    "simulation": true,
+    "sections": [
+      {
+        "file": "formula.tex"
+      },
+      {
+        "file": "significado.md"
+      },
+      {
+        "file": "historia.md"
+      },
+      {
+        "file": "derivacion.md"
+      },
+      {
+        "file": "usos.md"
+      },
+      {
+        "file": "ficha.md"
+      }
+    ]
+  },
+  {
     "id": "bernoulli-equation",
     "name": "Ecuación de Bernoulli",
     "author": "Daniel Bernoulli",
@@ -1292,6 +1330,9 @@
       },
       {
         "file": "simulacion/index.js"
+      },
+      {
+        "file": "simulacion/styles.css"
       }
     ]
   },
@@ -1546,6 +1587,51 @@
     ],
     "summary": "Modelo de distribución continua con forma de campana, central en estadística y teoría de errores.",
     "simulation": "normal-distribution",
+    "sections": [
+      {
+        "file": "formula.tex"
+      },
+      {
+        "file": "significado.md"
+      },
+      {
+        "file": "historia.md"
+      },
+      {
+        "file": "derivacion.md"
+      },
+      {
+        "file": "usos.md"
+      },
+      {
+        "file": "ficha.md"
+      },
+      {
+        "file": "simulacion/index.js"
+      },
+      {
+        "file": "simulacion/styles.css"
+      }
+    ]
+  },
+  {
+    "id": "gaussian-integral",
+    "name": "Integral de Gauss",
+    "author": "Carl Friedrich Gauss",
+    "year": 1809,
+    "field": "Análisis real y probabilidad",
+    "level": "Universidad inicial",
+    "color": "#10b981",
+    "folder": "formulas/gaussian-integral",
+    "formula": [
+      "\\int_{-\\infty}^{\\infty} e^{-x^2}\\,dx=\\sqrt{\\pi}",
+      "\\int_{-b}^{b} e^{-x^2}\\,dx\\to\\sqrt{\\pi}"
+    ],
+    "formulaText": [
+      "área total bajo la campana e^{-x²}"
+    ],
+    "summary": "Visualiza cómo la integral simétrica de la campana gaussiana converge a la raíz de pi.",
+    "simulation": true,
     "sections": [
       {
         "file": "formula.tex"
