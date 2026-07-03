@@ -862,6 +862,24 @@
       },
       {
         "file": "significado.md"
+      },
+      {
+        "file": "historia.md"
+      },
+      {
+        "file": "derivacion.md"
+      },
+      {
+        "file": "usos.md"
+      },
+      {
+        "file": "ficha.md"
+      },
+      {
+        "file": "simulacion/index.js"
+      },
+      {
+        "file": "simulacion/styles.css"
       }
     ]
   },
@@ -2244,6 +2262,38 @@
       },
       {
         "file": "simulacion/styles.css"
+      }
+    ]
+  },
+  {
+    "id": "sturm-liouville-equation",
+    "name": "Ecuación de Sturm-Liouville",
+    "author": "Jacques Sturm / Joseph Liouville",
+    "year": 1836,
+    "field": "Ecuaciones diferenciales y análisis espectral",
+    "level": "Universidad",
+    "color": "#059669",
+    "folder": "formulas/sturm-liouville-equation",
+    "formula": [
+      "\\frac{d}{dx}(p(x)y')+q(x)y+\\lambda w(x)y=0",
+      "-y''=\\lambda y",
+      "y(0)=y(1)=0",
+      "y_n(x)=\\sin(n\\pi x),\\quad \\lambda_n=n^2\\pi^2"
+    ],
+    "formulaText": [
+      "problema de autovalores para operadores diferenciales autoadjuntos"
+    ],
+    "summary": "Visualiza modos propios senoidales, autovalores y nodos internos en un problema de contorno.",
+    "simulation": true,
+    "sections": [
+      {
+        "file": "formula.tex"
+      },
+      {
+        "file": "significado.md"
+      },
+      {
+        "file": "historia.md"
       }
     ]
   },
