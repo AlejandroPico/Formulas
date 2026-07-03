@@ -1,10 +1,1 @@
-{
-  "id": "taylor-series",
-  "name": "Serie de Taylor",
-  "author": "Brook Taylor",
-  "year": 1715,
-  "field": "Análisis matemático",
-  "level": "Universidad inicial",
-  "color": "#a855f7",
-  "simulation": "taylor"
-}
+{"id":"taylor-series","name":"Serie de Taylor","author":"Brook Taylor","year":1715,"field":"Análisis matemático","level":"Bachillerato/Universidad inicial","color":"#dc2626","simulation":true,"formulaText":"aproximación polinómica alrededor de un punto a","summary":"Visualiza cómo un polinomio de Taylor aproxima una función cerca del centro de expansión."}
