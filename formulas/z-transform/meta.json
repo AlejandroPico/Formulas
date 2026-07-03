@@ -1,0 +1,1 @@
+{"id":"z-transform","name":"Transformada Z","author":"Análisis de señales discreto","year":1947,"field":"Señales y sistemas discretos","level":"Universidad inicial","color":"#0ea5e9","simulation":true,"formulaText":"transforma una señal discreta x[n] en una función X(z) del plano complejo","summary":"Visualiza polos, región de convergencia y estabilidad en el plano Z."}
