@@ -3672,6 +3672,30 @@
     ]
   },
   {
+    "id": "z-transform",
+    "name": "Transformada Z",
+    "author": "Análisis de señales discreto",
+    "year": 1947,
+    "field": "Señales y sistemas discretos",
+    "level": "Universidad inicial",
+    "color": "#0ea5e9",
+    "folder": "formulas/z-transform",
+    "formula": [
+      "X(z)=\\sum_{n=-\\infty}^{\\infty}x[n]z^{-n}",
+      "x[n]=a^n u[n] \\quad\\Longrightarrow\\quad X(z)=\\frac{1}{1-az^{-1}},\\quad |z|>|a|"
+    ],
+    "formulaText": [
+      "transforma una señal discreta x[n] en una función X(z) del plano complejo"
+    ],
+    "summary": "Visualiza polos, región de convergencia y estabilidad en el plano Z.",
+    "simulation": true,
+    "sections": [
+      {
+        "file": "formula.tex"
+      }
+    ]
+  },
+  {
     "id": "shannon-hartley-capacity",
     "name": "Capacidad de Shannon-Hartley",
     "author": "Claude Shannon y Ralph Hartley",
