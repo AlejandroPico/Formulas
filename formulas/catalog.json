@@ -844,19 +844,18 @@
     "author": "Brook Taylor",
     "year": 1715,
     "field": "Análisis matemático",
-    "level": "Universidad inicial",
-    "color": "#a855f7",
+    "level": "Bachillerato/Universidad inicial",
+    "color": "#dc2626",
     "folder": "formulas/taylor-series",
     "formula": [
       "f(x)=\\sum_{n=0}^{\\infty}\\frac{f^{(n)}(a)}{n!}(x-a)^n",
       "\\sin x\\approx x-\\frac{x^3}{3!}+\\frac{x^5}{5!}"
     ],
     "formulaText": [
-      "función en x = suma desde n = 0 hasta ∞ de derivada n de función en a / n! · (x − a)^n",
-      "seno de x ≈ x − x³ / 3! + x⁵ / 5!"
+      "aproximación polinómica alrededor de un punto a"
     ],
-    "summary": "Aproxima una función mediante un polinomio construido con sus derivadas.",
-    "simulation": "taylor",
+    "summary": "Visualiza cómo un polinomio de Taylor aproxima una función cerca del centro de expansión.",
+    "simulation": true,
     "sections": [
       {
         "file": "formula.tex"
