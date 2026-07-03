@@ -839,6 +839,33 @@
     ]
   },
   {
+    "id": "integration-by-parts",
+    "name": "Integración por partes",
+    "author": "Cálculo diferencial e integral clásico",
+    "year": 1700,
+    "field": "Cálculo integral",
+    "level": "Bachillerato/Universidad inicial",
+    "color": "#2563eb",
+    "folder": "formulas/integration-by-parts",
+    "formula": [
+      "\\int u\\,dv=uv-\\int v\\,du",
+      "\\int_a^b u(x)v'(x)\\,dx=[u(x)v(x)]_a^b-\\int_a^b v(x)u'(x)\\,dx"
+    ],
+    "formulaText": [
+      "transforma la integral de un producto usando la regla del producto al revés"
+    ],
+    "summary": "Visualiza la identidad ∫u dv = uv − ∫v du mediante áreas complementarias.",
+    "simulation": true,
+    "sections": [
+      {
+        "file": "formula.tex"
+      },
+      {
+        "file": "significado.md"
+      }
+    ]
+  },
+  {
     "id": "taylor-series",
     "name": "Serie de Taylor",
     "author": "Brook Taylor",
@@ -1982,6 +2009,9 @@
       },
       {
         "file": "simulacion/index.js"
+      },
+      {
+        "file": "simulacion/styles.css"
       }
     ]
   },
@@ -2004,6 +2034,51 @@
     ],
     "summary": "Permite recuperar el valor de una función holomorfa dentro de un contorno a partir de sus valores en la frontera.",
     "simulation": "cauchy-integral-formula",
+    "sections": [
+      {
+        "file": "formula.tex"
+      },
+      {
+        "file": "significado.md"
+      },
+      {
+        "file": "historia.md"
+      },
+      {
+        "file": "derivacion.md"
+      },
+      {
+        "file": "usos.md"
+      },
+      {
+        "file": "ficha.md"
+      },
+      {
+        "file": "simulacion/index.js"
+      },
+      {
+        "file": "simulacion/styles.css"
+      }
+    ]
+  },
+  {
+    "id": "divergence-theorem",
+    "name": "Teorema de la divergencia",
+    "author": "Gauss / Ostrogradsky",
+    "year": 1831,
+    "field": "Cálculo vectorial",
+    "level": "Universidad inicial",
+    "color": "#8b5cf6",
+    "folder": "formulas/divergence-theorem",
+    "formula": [
+      "\\oiint_{\\partial V}\\mathbf F\\cdot\\mathbf n\\,dS=\\iiint_V \\nabla\\cdot\\mathbf F\\,dV",
+      "\\mathbf F=(kx,ky) \\quad\\Longrightarrow\\quad \\nabla\\cdot\\mathbf F=2k"
+    ],
+    "formulaText": [
+      "relaciona el flujo que atraviesa una frontera cerrada con la divergencia acumulada en el volumen"
+    ],
+    "summary": "Visualiza una fuente interna cuyo flujo saliente coincide con la divergencia integrada.",
+    "simulation": true,
     "sections": [
       {
         "file": "formula.tex"
