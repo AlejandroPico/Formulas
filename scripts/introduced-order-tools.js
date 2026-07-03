@@ -13,6 +13,21 @@ function ensureIntroSortOption() {
 }
 
 function activateIntroducedFirst() {
+  const fieldSelect = document.querySelector("#fieldSelect");
+  const levelSelect = document.querySelector("#levelSelect");
+  const searchInput = document.querySelector("#searchInput");
+  if (fieldSelect && fieldSelect.value !== "Todas") {
+    fieldSelect.value = "Todas";
+    fieldSelect.dispatchEvent(new Event("change", { bubbles: true }));
+  }
+  if (levelSelect && levelSelect.value !== "Todos") {
+    levelSelect.value = "Todos";
+    levelSelect.dispatchEvent(new Event("change", { bubbles: true }));
+  }
+  if (searchInput && searchInput.value) {
+    searchInput.value = "";
+    searchInput.dispatchEvent(new Event("input", { bubbles: true }));
+  }
   const sortSelect = ensureIntroSortOption();
   if (!sortSelect) return;
   sortSelect.value = INTRO_SORT_VALUE;
