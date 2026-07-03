@@ -1479,6 +1479,33 @@
     ]
   },
   {
+    "id": "parseval-theorem",
+    "name": "Teorema de Parseval",
+    "author": "Marc-Antoine Parseval",
+    "year": 1799,
+    "field": "Análisis armónico y señales",
+    "level": "Universidad inicial",
+    "color": "#8b5cf6",
+    "folder": "formulas/parseval-theorem",
+    "formula": [
+      "\\sum_{n=-\\infty}^{\\infty}|x[n]|^2=\\frac{1}{2\\pi}\\int_{-\\pi}^{\\pi}|X(e^{j\\omega})|^2\\,d\\omega",
+      "\\|x\\|_2^2=\\frac{1}{2\\pi}\\|X\\|_2^2"
+    ],
+    "formulaText": [
+      "la energía puede medirse de forma equivalente en tiempo o frecuencia"
+    ],
+    "summary": "Compara la energía de una señal discreta con la energía de su espectro.",
+    "simulation": true,
+    "sections": [
+      {
+        "file": "formula.tex"
+      },
+      {
+        "file": "significado.md"
+      }
+    ]
+  },
+  {
     "id": "convolution",
     "name": "Convolución",
     "author": "Análisis matemático clásico",
@@ -3707,6 +3734,12 @@
       },
       {
         "file": "ficha.md"
+      },
+      {
+        "file": "simulacion/index.js"
+      },
+      {
+        "file": "simulacion/styles.css"
       }
     ]
   },
