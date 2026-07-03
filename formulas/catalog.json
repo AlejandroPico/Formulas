@@ -919,6 +919,12 @@
       },
       {
         "file": "ficha.md"
+      },
+      {
+        "file": "simulacion/index.js"
+      },
+      {
+        "file": "simulacion/styles.css"
       }
     ]
   },
@@ -965,6 +971,45 @@
       },
       {
         "file": "simulacion/styles.css"
+      }
+    ]
+  },
+  {
+    "id": "maclaurin-series",
+    "name": "Serie de Maclaurin",
+    "author": "Colin Maclaurin",
+    "year": 1742,
+    "field": "Análisis matemático",
+    "level": "Bachillerato/Universidad inicial",
+    "color": "#2563eb",
+    "folder": "formulas/maclaurin-series",
+    "formula": [
+      "f(x)=\\sum_{n=0}^{\\infty}\\frac{f^{(n)}(0)}{n!}x^n",
+      "e^x=\\sum_{n=0}^{\\infty}\\frac{x^n}{n!}"
+    ],
+    "formulaText": [
+      "aproximación polinómica alrededor de cero"
+    ],
+    "summary": "Visualiza cómo los polinomios de Maclaurin aproximan e^x al aumentar el grado.",
+    "simulation": true,
+    "sections": [
+      {
+        "file": "formula.tex"
+      },
+      {
+        "file": "significado.md"
+      },
+      {
+        "file": "historia.md"
+      },
+      {
+        "file": "derivacion.md"
+      },
+      {
+        "file": "usos.md"
+      },
+      {
+        "file": "ficha.md"
       }
     ]
   },
