@@ -523,6 +523,30 @@
     ]
   },
   {
+    "id": "derivative-as-limit",
+    "name": "Derivada como límite",
+    "author": "Cálculo diferencial clásico",
+    "year": 1684,
+    "field": "Cálculo diferencial",
+    "level": "Bachillerato/Universidad inicial",
+    "color": "#ef4444",
+    "folder": "formulas/derivative-as-limit",
+    "formula": [
+      "f'(x)=\\lim_{h\\to0}\\frac{f(x+h)-f(x)}{h}",
+      "m_h=\\frac{f(x_0+h)-f(x_0)}{h}"
+    ],
+    "formulaText": [
+      "derivada como límite del cociente incremental"
+    ],
+    "summary": "Visualiza cómo la recta secante tiende a la tangente cuando h se aproxima a cero.",
+    "simulation": true,
+    "sections": [
+      {
+        "file": "formula.tex"
+      }
+    ]
+  },
+  {
     "id": "gravitational-law",
     "name": "Ley de gravitación universal",
     "author": "Isaac Newton",
