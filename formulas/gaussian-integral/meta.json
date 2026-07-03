@@ -1,0 +1,1 @@
+{"id":"gaussian-integral","name":"Integral de Gauss","author":"Carl Friedrich Gauss","year":1809,"field":"Análisis real y probabilidad","level":"Universidad inicial","color":"#10b981","simulation":true,"formulaText":"área total bajo la campana e^{-x²}","summary":"Visualiza cómo la integral simétrica de la campana gaussiana converge a la raíz de pi."}
