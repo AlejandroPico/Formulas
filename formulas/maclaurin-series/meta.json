@@ -1,0 +1,1 @@
+{"id":"maclaurin-series","name":"Serie de Maclaurin","author":"Colin Maclaurin","year":1742,"field":"Análisis matemático","level":"Bachillerato/Universidad inicial","color":"#2563eb","simulation":true,"formulaText":"aproximación polinómica alrededor de cero","summary":"Visualiza cómo los polinomios de Maclaurin aproximan e^x al aumentar el grado."}
