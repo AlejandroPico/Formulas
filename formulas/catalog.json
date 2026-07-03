@@ -523,6 +523,135 @@
     ]
   },
   {
+    "id": "chain-rule",
+    "name": "Regla de la cadena",
+    "author": "Cálculo diferencial clásico",
+    "year": 1676,
+    "field": "Cálculo diferencial",
+    "level": "Bachillerato/Universidad inicial",
+    "color": "#a855f7",
+    "folder": "formulas/chain-rule",
+    "formula": [
+      "(f\\circ g)'(x)=f'(g(x))\\,g'(x)",
+      "\\frac{dy}{dx}=\\frac{dy}{du}\\frac{du}{dx}"
+    ],
+    "formulaText": [
+      "derivada de una función compuesta"
+    ],
+    "summary": "Muestra cómo una variación pasa por una función interior y después por una exterior.",
+    "simulation": true,
+    "sections": [
+      {
+        "file": "formula.tex"
+      },
+      {
+        "file": "significado.md"
+      },
+      {
+        "file": "historia.md"
+      },
+      {
+        "file": "derivacion.md"
+      },
+      {
+        "file": "usos.md"
+      },
+      {
+        "file": "ficha.md"
+      },
+      {
+        "file": "simulacion/index.js"
+      },
+      {
+        "file": "simulacion/styles.css"
+      }
+    ]
+  },
+  {
+    "id": "quotient-rule",
+    "name": "Regla del cociente",
+    "author": "Cálculo diferencial clásico",
+    "year": 1676,
+    "field": "Cálculo diferencial",
+    "level": "Bachillerato/Universidad inicial",
+    "color": "#0284c7",
+    "folder": "formulas/quotient-rule",
+    "formula": [
+      "\\left(\\frac{f}{g}\\right)'=\\frac{f'g-fg'}{g^2}",
+      "g(x)\\ne0"
+    ],
+    "formulaText": [
+      "derivada de un cociente de funciones"
+    ],
+    "summary": "Muestra el equilibrio entre el cambio del numerador y el cambio del denominador.",
+    "simulation": true,
+    "sections": [
+      {
+        "file": "formula.tex"
+      },
+      {
+        "file": "significado.md"
+      },
+      {
+        "file": "historia.md"
+      },
+      {
+        "file": "derivacion.md"
+      },
+      {
+        "file": "usos.md"
+      },
+      {
+        "file": "ficha.md"
+      }
+    ]
+  },
+  {
+    "id": "product-rule",
+    "name": "Regla del producto",
+    "author": "Cálculo diferencial clásico",
+    "year": 1676,
+    "field": "Cálculo diferencial",
+    "level": "Bachillerato/Universidad inicial",
+    "color": "#eab308",
+    "folder": "formulas/product-rule",
+    "formula": [
+      "(fg)'=f'g+fg'",
+      "\\frac{d}{dx}\\bigl(f(x)g(x)\\bigr)=f'(x)g(x)+f(x)g'(x)"
+    ],
+    "formulaText": [
+      "derivada de un producto de funciones"
+    ],
+    "summary": "Visualiza la variación de un área cuando cambian sus dos lados.",
+    "simulation": true,
+    "sections": [
+      {
+        "file": "formula.tex"
+      },
+      {
+        "file": "significado.md"
+      },
+      {
+        "file": "historia.md"
+      },
+      {
+        "file": "derivacion.md"
+      },
+      {
+        "file": "usos.md"
+      },
+      {
+        "file": "ficha.md"
+      },
+      {
+        "file": "simulacion/index.js"
+      },
+      {
+        "file": "simulacion/styles.css"
+      }
+    ]
+  },
+  {
     "id": "derivative-as-limit",
     "name": "Derivada como límite",
     "author": "Cálculo diferencial clásico",
@@ -558,6 +687,12 @@
       },
       {
         "file": "ficha.md"
+      },
+      {
+        "file": "simulacion/index.js"
+      },
+      {
+        "file": "simulacion/styles.css"
       }
     ]
   },
