@@ -60,13 +60,14 @@ const LATEX_SYMBOL_ALIASES = {
 export function filterEquations(equations, state) {
   const terms = parseSearchTerms(state.query);
   const hasSearch = terms.length > 0;
+  const insertionIndex = new Map(equations.map((eq, index) => [eq, index]));
 
   return equations
     .filter((eq) => state.field === "Todas" || eq.field === state.field)
     .filter((eq) => state.level === "Todos" || eq.level === state.level || eq.levelNormalized === state.level)
     .map((eq) => ({ eq, score: hasSearch ? scoreEquation(eq, terms) : 0 }))
     .filter((item) => !hasSearch || item.score > 0)
-    .sort((a, b) => hasSearch ? b.score - a.score || sortEquations(a.eq, b.eq, state.sort) : sortEquations(a.eq, b.eq, state.sort))
+    .sort((a, b) => hasSearch ? b.score - a.score || sortEquations(a.eq, b.eq, state.sort, insertionIndex) : sortEquations(a.eq, b.eq, state.sort, insertionIndex))
     .map((item) => item.eq);
 }
 
@@ -228,7 +229,9 @@ function normalizeFormulaSearch(value) {
     .trim();
 }
 
-function sortEquations(a, b, sort) {
+function sortEquations(a, b, sort, insertionIndex = new Map()) {
+  if (sort === "introduced-desc") return (insertionIndex.get(b) ?? 0) - (insertionIndex.get(a) ?? 0);
+  if (sort === "introduced-asc") return (insertionIndex.get(a) ?? 0) - (insertionIndex.get(b) ?? 0);
   if (sort === "name") return a.name.localeCompare(b.name, "es");
   if (sort === "field") return a.field.localeCompare(b.field, "es") || a.year - b.year;
   if (sort === "level") return (levelOrder[a.level] ?? levelOrder[a.levelNormalized] ?? 99) - (levelOrder[b.level] ?? levelOrder[b.levelNormalized] ?? 99) || a.year - b.year;
