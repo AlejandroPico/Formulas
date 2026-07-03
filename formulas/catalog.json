@@ -1514,6 +1514,12 @@
       },
       {
         "file": "ficha.md"
+      },
+      {
+        "file": "simulacion/index.js"
+      },
+      {
+        "file": "simulacion/styles.css"
       }
     ]
   },
@@ -1934,6 +1940,30 @@
       },
       {
         "file": "simulacion/styles.css"
+      }
+    ]
+  },
+  {
+    "id": "green-theorem",
+    "name": "Teorema de Green",
+    "author": "George Green",
+    "year": 1828,
+    "field": "Cálculo vectorial",
+    "level": "Universidad inicial",
+    "color": "#10b981",
+    "folder": "formulas/green-theorem",
+    "formula": [
+      "\\oint_C (P\\,dx+Q\\,dy)=\\iint_D (\\frac{\\partial Q}{\\partial x}-\\frac{\\partial P}{\\partial y})\\,dA",
+      "\\mathbf F=(-y,x) \\quad\\Longrightarrow\\quad \\operatorname{rot}\\mathbf F=2"
+    ],
+    "formulaText": [
+      "relaciona la circulación sobre una frontera cerrada con el rotacional acumulado en la región interior"
+    ],
+    "summary": "Visualiza cómo una integral de línea se convierte en una integral doble sobre la región encerrada.",
+    "simulation": true,
+    "sections": [
+      {
+        "file": "formula.tex"
       }
     ]
   },
