@@ -3188,13 +3188,19 @@
     "level": "Universidad",
     "color": "#10b981",
     "folder": "formulas/geodesic-equation",
-    "formula": [],
+    "formula": [
+      "x''^mu + Gamma^mu_ab x'^a x'^b = 0"
+    ],
     "formulaText": [
       "describe las trayectorias localmente + rectas sobre una superficie o variedad"
     ],
     "summary": "Compara una secante euclídea con una geodésica sobre una esfera.",
     "simulation": true,
-    "sections": []
+    "sections": [
+      {
+        "file": "formula.tex"
+      }
+    ]
   },
   {
     "id": "stokes-theorem",
