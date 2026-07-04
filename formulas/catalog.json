@@ -2818,6 +2818,30 @@
     ]
   },
   {
+    "id": "curve-curvature",
+    "name": "Curvatura de una curva",
+    "author": "Geometría diferencial",
+    "year": 1850,
+    "field": "Geometría diferencial",
+    "level": "Universidad inicial",
+    "color": "#0284c7",
+    "folder": "formulas/curve-curvature",
+    "formula": [
+      "\\kappa=\\frac{|f''(x)|}{(1+(f'(x))^2)^{3/2}}",
+      "R=\\frac{1}{\\kappa}"
+    ],
+    "formulaText": [
+      "mide cuánto cambia la dirección de una curva en cada punto"
+    ],
+    "summary": "Visualiza la curvatura de una parábola mediante su círculo osculador.",
+    "simulation": true,
+    "sections": [
+      {
+        "file": "formula.tex"
+      }
+    ]
+  },
+  {
     "id": "cauchy-riemann",
     "name": "Ecuaciones de Cauchy-Riemann",
     "author": "Augustin-Louis Cauchy y Bernhard Riemann",
