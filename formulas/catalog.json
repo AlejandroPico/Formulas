@@ -3097,13 +3097,19 @@
     "level": "Universidad",
     "color": "#2563eb",
     "folder": "formulas/frenet-serret-formulas",
-    "formula": [],
+    "formula": [
+      "ok"
+    ],
     "formulaText": [
       "describe como evolucionan tangente normal y binormal a lo largo de una curva"
     ],
     "summary": "Muestra el triedro movil T N B sobre una trayectoria espacial.",
     "simulation": true,
-    "sections": []
+    "sections": [
+      {
+        "file": "formula.tex"
+      }
+    ]
   },
   {
     "id": "cauchy-riemann",
