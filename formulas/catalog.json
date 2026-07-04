@@ -675,6 +675,66 @@
     "sections": [
       {
         "file": "formula.tex"
+      },
+      {
+        "file": "significado.md"
+      },
+      {
+        "file": "historia.md"
+      },
+      {
+        "file": "derivacion.md"
+      },
+      {
+        "file": "usos.md"
+      },
+      {
+        "file": "ficha.md"
+      },
+      {
+        "file": "simulacion/index.js"
+      },
+      {
+        "file": "simulacion/styles.css"
+      }
+    ]
+  },
+  {
+    "id": "angle-sum-formulas",
+    "name": "Fórmulas de suma de ángulos",
+    "author": "Trigonometría clásica",
+    "year": 1600,
+    "field": "Trigonometría",
+    "level": "Bachillerato",
+    "color": "#10b981",
+    "folder": "formulas/angle-sum-formulas",
+    "formula": [
+      "\\sin(\\alpha+\\beta)=\\sin(\\alpha)\\cos(\\beta)+\\cos(\\alpha)\\sin(\\beta)",
+      "\\cos(\\alpha+\\beta)=\\cos(\\alpha)\\cos(\\beta)-\\sin(\\alpha)\\sin(\\beta)"
+    ],
+    "formulaText": [
+      "expresan seno y coseno de la suma de dos ángulos"
+    ],
+    "summary": "Visualiza α, β y α+β y comprueba la identidad del seno de una suma.",
+    "simulation": true,
+    "sections": [
+      {
+        "file": "formula.tex"
+      },
+      {
+        "file": "significado.md"
+      },
+      {
+        "file": "historia.md"
+      },
+      {
+        "file": "derivacion.md"
+      },
+      {
+        "file": "usos.md"
+      },
+      {
+        "file": "ficha.md"
       }
     ]
   },
