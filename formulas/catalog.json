@@ -655,6 +655,32 @@
     ]
   },
   {
+    "id": "law-of-tangents",
+    "name": "Ley de tangentes",
+    "author": "Trigonometría clásica",
+    "year": 1600,
+    "field": "Trigonometría",
+    "level": "Bachillerato",
+    "color": "#eab308",
+    "folder": "formulas/law-of-tangents",
+    "formula": [
+      "\\frac{a-b}{a+b}=\\frac{\\tan((A-B)/2)}{\\tan((A+B)/2)}"
+    ],
+    "formulaText": [
+      "relaciona la diferencia y suma de dos lados con tangentes de semisumas y semidiferencias angulares"
+    ],
+    "summary": "Compara la razón de lados con la razón trigonométrica de la ley de tangentes.",
+    "simulation": true,
+    "sections": [
+      {
+        "file": "formula.tex"
+      },
+      {
+        "file": "significado.md"
+      }
+    ]
+  },
+  {
     "id": "binomial-theorem",
     "name": "Fórmula del binomio de Newton",
     "author": "Isaac Newton",
@@ -1053,6 +1079,15 @@
       },
       {
         "file": "usos.md"
+      },
+      {
+        "file": "ficha.md"
+      },
+      {
+        "file": "simulacion/index.js"
+      },
+      {
+        "file": "simulacion/styles.css"
       }
     ]
   },
