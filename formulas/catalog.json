@@ -427,13 +427,29 @@
     "level": "ESO/Bachillerato",
     "color": "#10b981",
     "folder": "formulas/heron-formula",
-    "formula": [],
+    "formula": [
+      "A=sqrt(s(s-a)(s-b)(s-c))",
+      "s=(a+b+c)/2"
+    ],
     "formulaText": [
       "el área de un triángulo se obtiene a partir de sus tres lados y el semiperímetro"
     ],
     "summary": "Calcula el área de un triángulo usando solo las longitudes de sus lados.",
     "simulation": true,
-    "sections": []
+    "sections": [
+      {
+        "file": "formula.tex"
+      },
+      {
+        "file": "significado.md"
+      },
+      {
+        "file": "historia.md"
+      },
+      {
+        "file": "derivacion.md"
+      }
+    ]
   },
   {
     "id": "quadratic-formula",
