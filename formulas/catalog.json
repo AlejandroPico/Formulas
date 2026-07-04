@@ -186,6 +186,33 @@
     ]
   },
   {
+    "id": "circumference-length",
+    "name": "Longitud de una circunferencia",
+    "author": "Geometría clásica",
+    "year": -300,
+    "field": "Geometría plana",
+    "level": "ESO",
+    "color": "#f43f5e",
+    "folder": "formulas/circumference-length",
+    "formula": [
+      "L=2\\pi r",
+      "L=\\pi d"
+    ],
+    "formulaText": [
+      "la longitud de la circunferencia es dos pi · el radio"
+    ],
+    "summary": "Visualiza la circunferencia como un borde circular que se despliega en una línea de longitud 2πr.",
+    "simulation": true,
+    "sections": [
+      {
+        "file": "formula.tex"
+      },
+      {
+        "file": "significado.md"
+      }
+    ]
+  },
+  {
     "id": "euclidean-norm",
     "name": "Norma euclidea",
     "author": "Geometria euclidea",
