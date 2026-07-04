@@ -655,6 +655,30 @@
     ]
   },
   {
+    "id": "double-angle-formulas",
+    "name": "Fórmulas de ángulo doble",
+    "author": "Trigonometría clásica",
+    "year": 1600,
+    "field": "Trigonometría",
+    "level": "Bachillerato",
+    "color": "#f43f5e",
+    "folder": "formulas/double-angle-formulas",
+    "formula": [
+      "\\sin(2\\theta)=2\\sin(\\theta)\\cos(\\theta)",
+      "\\cos(2\\theta)=\\cos^2(\\theta)-\\sin^2(\\theta)"
+    ],
+    "formulaText": [
+      "expresan seno y coseno de 2θ usando seno y coseno de θ"
+    ],
+    "summary": "Compara el vector de θ con el vector de 2θ y verifica las identidades de ángulo doble.",
+    "simulation": true,
+    "sections": [
+      {
+        "file": "formula.tex"
+      }
+    ]
+  },
+  {
     "id": "law-of-tangents",
     "name": "Ley de tangentes",
     "author": "Trigonometría clásica",
@@ -677,6 +701,24 @@
       },
       {
         "file": "significado.md"
+      },
+      {
+        "file": "historia.md"
+      },
+      {
+        "file": "derivacion.md"
+      },
+      {
+        "file": "usos.md"
+      },
+      {
+        "file": "ficha.md"
+      },
+      {
+        "file": "simulacion/index.js"
+      },
+      {
+        "file": "simulacion/styles.css"
       }
     ]
   },
