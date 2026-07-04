@@ -3123,6 +3123,12 @@
       },
       {
         "file": "ficha.md"
+      },
+      {
+        "file": "simulacion/index.js"
+      },
+      {
+        "file": "simulacion/styles.css"
       }
     ]
   },
@@ -3172,6 +3178,23 @@
         "file": "simulacion/styles.css"
       }
     ]
+  },
+  {
+    "id": "geodesic-equation",
+    "name": "Ecuación geodésica",
+    "author": "Geometría diferencial",
+    "year": 1854,
+    "field": "Geometría diferencial",
+    "level": "Universidad",
+    "color": "#10b981",
+    "folder": "formulas/geodesic-equation",
+    "formula": [],
+    "formulaText": [
+      "describe las trayectorias localmente + rectas sobre una superficie o variedad"
+    ],
+    "summary": "Compara una secante euclídea con una geodésica sobre una esfera.",
+    "simulation": true,
+    "sections": []
   },
   {
     "id": "stokes-theorem",
