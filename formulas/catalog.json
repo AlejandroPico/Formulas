@@ -86,6 +86,9 @@
       },
       {
         "file": "simulacion/index.js"
+      },
+      {
+        "file": "simulacion/styles.css"
       }
     ]
   },
