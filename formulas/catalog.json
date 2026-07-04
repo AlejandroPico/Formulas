@@ -1019,6 +1019,23 @@
     ]
   },
   {
+    "id": "polar-coordinates",
+    "name": "Coordenadas polares",
+    "author": "Geometría analítica",
+    "year": 1691,
+    "field": "Geometría analítica",
+    "level": "Bachillerato",
+    "color": "#a855f7",
+    "folder": "formulas/polar-coordinates",
+    "formula": [],
+    "formulaText": [
+      "convierte radio y ángulo en coordenadas cartesianas"
+    ],
+    "summary": "Mapea un punto polar (r, θ) a sus coordenadas cartesianas x e y.",
+    "simulation": true,
+    "sections": []
+  },
+  {
     "id": "integration-by-parts",
     "name": "Integración por partes",
     "author": "Cálculo diferencial e integral clásico",
@@ -2853,6 +2870,12 @@
       },
       {
         "file": "ficha.md"
+      },
+      {
+        "file": "simulacion/index.js"
+      },
+      {
+        "file": "simulacion/styles.css"
       }
     ]
   },
