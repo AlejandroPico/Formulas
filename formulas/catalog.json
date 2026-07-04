@@ -48,6 +48,75 @@
     ]
   },
   {
+    "id": "circle-area",
+    "name": "Área del círculo",
+    "author": "Geometría clásica",
+    "year": -300,
+    "field": "Geometría plana",
+    "level": "ESO",
+    "color": "#0ea5e9",
+    "folder": "formulas/circle-area",
+    "formula": [
+      "A=\\pi r^2",
+      "A=\\frac{\\pi d^2}{4}"
+    ],
+    "formulaText": [
+      "el área del círculo es pi · el radio al cuadrado"
+    ],
+    "summary": "Visualiza cómo el área crece con el cuadrado del radio.",
+    "simulation": true,
+    "sections": [
+      {
+        "file": "formula.tex"
+      }
+    ]
+  },
+  {
+    "id": "pythagorean-trig-identity",
+    "name": "Identidad pitagórica trigonométrica",
+    "author": "Trigonometría clásica",
+    "year": -300,
+    "field": "Trigonometría",
+    "level": "ESO/Bachillerato",
+    "color": "#3b82f6",
+    "folder": "formulas/pythagorean-trig-identity",
+    "formula": [
+      "\\sin^2(\\theta)+\\cos^2(\\theta)=1",
+      "x=\\cos(\\theta),\\quad y=\\sin(\\theta),\\quad x^2+y^2=1"
+    ],
+    "formulaText": [
+      "el cuadrado del seno + el cuadrado del coseno siempre vale uno"
+    ],
+    "summary": "Visualiza seno, coseno e hipotenusa en la circunferencia unidad.",
+    "simulation": true,
+    "sections": [
+      {
+        "file": "formula.tex"
+      },
+      {
+        "file": "significado.md"
+      },
+      {
+        "file": "historia.md"
+      },
+      {
+        "file": "derivacion.md"
+      },
+      {
+        "file": "usos.md"
+      },
+      {
+        "file": "ficha.md"
+      },
+      {
+        "file": "simulacion/index.js"
+      },
+      {
+        "file": "simulacion/styles.css"
+      }
+    ]
+  },
+  {
     "id": "notable-identities",
     "name": "Identidades notables",
     "author": "Álgebra clásica",
