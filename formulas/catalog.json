@@ -3232,13 +3232,28 @@
     "level": "Universidad",
     "color": "#0284c7",
     "folder": "formulas/riemannian-metric",
-    "formula": [],
+    "formula": [
+      "ok"
+    ],
     "formulaText": [
       "define cómo medir longitudes e intervalos en una geometría curvada"
     ],
     "summary": "Visualiza cómo el tensor métrico modifica la distancia local.",
     "simulation": true,
-    "sections": []
+    "sections": [
+      {
+        "file": "formula.tex"
+      },
+      {
+        "file": "significado.md"
+      },
+      {
+        "file": "historia.md"
+      },
+      {
+        "file": "derivacion.md"
+      }
+    ]
   },
   {
     "id": "stokes-theorem",
