@@ -1,0 +1,1 @@
+{"id":"heron-formula","name":"Fórmula de Herón","author":"Herón de Alejandría","year":60,"field":"Geometría plana","level":"ESO/Bachillerato","color":"#10b981","simulation":true,"formulaText":"el área de un triángulo se obtiene a partir de sus tres lados y el semiperímetro","summary":"Calcula el área de un triángulo usando solo las longitudes de sus lados."}
