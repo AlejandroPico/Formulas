@@ -1027,13 +1027,34 @@
     "level": "Bachillerato",
     "color": "#a855f7",
     "folder": "formulas/polar-coordinates",
-    "formula": [],
+    "formula": [
+      "x=r cos(theta)",
+      "y=r sin(theta)",
+      "r=sqrt(x^2+y^2)",
+      "theta=atan2(y,x)"
+    ],
     "formulaText": [
       "convierte radio y ángulo en coordenadas cartesianas"
     ],
     "summary": "Mapea un punto polar (r, θ) a sus coordenadas cartesianas x e y.",
     "simulation": true,
-    "sections": []
+    "sections": [
+      {
+        "file": "formula.tex"
+      },
+      {
+        "file": "significado.md"
+      },
+      {
+        "file": "historia.md"
+      },
+      {
+        "file": "derivacion.md"
+      },
+      {
+        "file": "usos.md"
+      }
+    ]
   },
   {
     "id": "integration-by-parts",
