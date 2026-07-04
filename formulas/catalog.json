@@ -68,6 +68,12 @@
     "sections": [
       {
         "file": "formula.tex"
+      },
+      {
+        "file": "significado.md"
+      },
+      {
+        "file": "historia.md"
       }
     ]
   },
