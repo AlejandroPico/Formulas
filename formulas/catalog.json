@@ -448,6 +448,18 @@
       },
       {
         "file": "derivacion.md"
+      },
+      {
+        "file": "usos.md"
+      },
+      {
+        "file": "ficha.md"
+      },
+      {
+        "file": "simulacion/index.js"
+      },
+      {
+        "file": "simulacion/styles.css"
       }
     ]
   },
@@ -1527,6 +1539,51 @@
     ],
     "summary": "Calcula y visualiza el area del paralelogramo generado por dos vectores.",
     "simulation": "cross-product",
+    "sections": [
+      {
+        "file": "formula.tex"
+      },
+      {
+        "file": "significado.md"
+      },
+      {
+        "file": "historia.md"
+      },
+      {
+        "file": "derivacion.md"
+      },
+      {
+        "file": "usos.md"
+      },
+      {
+        "file": "ficha.md"
+      },
+      {
+        "file": "simulacion/index.js"
+      },
+      {
+        "file": "simulacion/styles.css"
+      }
+    ]
+  },
+  {
+    "id": "spherical-heron-formula",
+    "name": "Fórmula de Herón esférica",
+    "author": "L'Huilier / geometría esférica",
+    "year": 1782,
+    "field": "Geometría esférica",
+    "level": "Universidad inicial",
+    "color": "#8b5cf6",
+    "folder": "formulas/spherical-heron-formula",
+    "formula": [
+      "\\tan^2(\\frac{E}{4})=\\tan(\\frac{s}{2})\\tan(\\frac{s-a}{2})\\tan(\\frac{s-b}{2})\\tan(\\frac{s-c}{2})",
+      "s=\\frac{a+b+c}{2},\\quad A=ER^2"
+    ],
+    "formulaText": [
+      "calcula el exceso esférico de un triángulo sobre una esfera a partir de sus lados curvos"
+    ],
+    "summary": "Visualiza cómo el área de un triángulo esférico se obtiene mediante el exceso esférico.",
+    "simulation": true,
     "sections": [
       {
         "file": "formula.tex"
