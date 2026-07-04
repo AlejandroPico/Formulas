@@ -9,6 +9,7 @@ import "./formula-prompt-override.js";
 let equations = [];
 let fields = ["Todas"];
 let levels = ["Todos"];
+let controlsReady = false;
 
 async function boot() {
   showLoading("Preparando atlas", 2);
@@ -19,10 +20,18 @@ async function boot() {
     equations = [];
     updateLoading({ message: "No se pudo escanear formulas", value: 12 });
   }
-  window.FormulasAtlas = { equations };
+  window.FormulasAtlas = {
+    equations,
+    refresh() {
+      syncDynamicCatalog(true);
+      renderAll();
+    },
+    getAll() {
+      return equations;
+    }
+  };
   window.dispatchEvent(new CustomEvent("formulas:catalog-ready", { detail: { equations } }));
-  fields = ["Todas", ...unique(equations.map(eq => eq.field)).sort((a, b) => a.localeCompare(b, "es"))];
-  levels = ["Todos", ...unique(equations.map(eq => eq.level))];
+  syncDynamicCatalog(false);
   initTheme($("#themeToggle"));
   initFilterControls();
   bindEvents();
@@ -30,15 +39,30 @@ async function boot() {
   hideLoading();
 }
 
+function syncDynamicCatalog(updateControls = false) {
+  const live = window.FormulasAtlas?.equations;
+  if (Array.isArray(live) && live !== equations) equations = live;
+  fields = ["Todas", ...unique(equations.map(eq => eq.field)).sort((a, b) => a.localeCompare(b, "es"))];
+  levels = ["Todos", ...unique(equations.map(eq => eq.level))];
+  if (!fields.includes(state.field)) setState({ field: "Todas" });
+  if (!levels.includes(state.level)) setState({ level: "Todos" });
+  if (updateControls && controlsReady) {
+    fillSelect($("#fieldSelect"), fields, state.field);
+    fillSelect($("#levelSelect"), levels, state.level);
+  }
+}
+
 function initFilterControls() {
   fillSelect($("#fieldSelect"), fields, state.field);
   fillSelect($("#levelSelect"), levels, state.level);
-  $("#sortSelect").value = "default";
+  $("#sortSelect").value = state.sort === "chronology" ? "default" : state.sort;
   const displaySelect = document.querySelector("#formulaDisplaySelect");
   if (displaySelect) displaySelect.value = state.formulaDisplay;
+  controlsReady = true;
 }
 
 function fillSelect(select, values, active) {
+  if (!select) return;
   select.innerHTML = values.map(value => `<option value="${value}"${value === active ? " selected" : ""}>${value}</option>`).join("");
 }
 
@@ -51,6 +75,11 @@ function bindEvents() {
   const searchClear = $("#searchClear");
   const searchControl = $("#searchControl");
   const formulaDisplaySelect = document.querySelector("#formulaDisplaySelect");
+
+  window.addEventListener("formulas:catalog-mutated", () => {
+    syncDynamicCatalog(true);
+    renderAll();
+  });
 
   filterToggle.addEventListener("click", () => {
     const isOpen = !filterPanel.hidden;
@@ -127,6 +156,7 @@ function getSortLabelMode(sort) {
 }
 
 function renderAll() {
+  syncDynamicCatalog(false);
   const visible = filterEquations(equations, state);
   renderEquationGrid(visible, openEquationModal, state);
   updateVisibleCount(visible.length, equations.length);
