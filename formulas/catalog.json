@@ -2999,6 +2999,30 @@
     ]
   },
   {
+    "id": "curve-torsion",
+    "name": "Torsión de una curva",
+    "author": "Geometría diferencial",
+    "year": 1847,
+    "field": "Geometría diferencial",
+    "level": "Universidad",
+    "color": "#e11d48",
+    "folder": "formulas/curve-torsion",
+    "formula": [
+      "\\tau=\\frac{(r'\\times r'')\\cdot r'''}{\\|r'\\times r''\\|^2}",
+      "\\tau_{helix}=\\frac{b}{R^2+b^2}"
+    ],
+    "formulaText": [
+      "mide cuánto se retuerce una curva espacial fuera de su plano osculador"
+    ],
+    "summary": "Visualiza la torsión de una hélice y cómo depende del paso vertical.",
+    "simulation": true,
+    "sections": [
+      {
+        "file": "formula.tex"
+      }
+    ]
+  },
+  {
     "id": "curve-curvature",
     "name": "Curvatura de una curva",
     "author": "Geometría diferencial",
