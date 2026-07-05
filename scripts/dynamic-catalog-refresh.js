@@ -1,5 +1,5 @@
-const RECENT_BATCHES=[12,13,14,15,16,17,18,19,20];
-const VERSION='20260705m';
+const RECENT_BATCHES=[12,13,14,15,16,17,18,19,20,21];
+const VERSION='20260705n';
 const loaded=new Map();
 function normalizeFolders(){
   const items=window.FormulasAtlas&&Array.isArray(window.FormulasAtlas.equations)?window.FormulasAtlas.equations:[];
