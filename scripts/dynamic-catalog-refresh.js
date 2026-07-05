@@ -1,5 +1,5 @@
 const RECENT_BATCHES=[12,13,14,15];
-const VERSION='20260705c';
+const VERSION='20260705d';
 const loaded=new Set();
 const refresh=()=>window.FormulasAtlas?.refresh?.();
 function loadRecentBatches(){
