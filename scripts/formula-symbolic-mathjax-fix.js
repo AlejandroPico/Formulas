@@ -5,8 +5,6 @@ observer.observe(document.documentElement, { childList: true, subtree: true });
 document.addEventListener("DOMContentLoaded", scheduleFix);
 window.addEventListener("load", scheduleFix);
 
-loadBatch11Fallback();
-
 let pending = false;
 
 function scheduleFix() {
@@ -89,11 +87,4 @@ function requestTypeset() {
   if (run()) return;
   window.setTimeout(run, 250);
   window.setTimeout(run, 700);
-}
-
-function loadBatch11Fallback() {
-  const script = document.createElement("script");
-  script.type = "module";
-  script.src = "scripts/batch-11-ping.js?v=2";
-  document.head.appendChild(script);
 }
