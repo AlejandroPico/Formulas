@@ -1,13 +1,13 @@
 const RECENT_BATCHES=[12,13,14,15,16,17,18];
-const VERSION='20260705i';
+const VERSION='20260705j';
 const loaded=new Map();
-const refresh=()=>window.FormulasAtlas?.refresh?.();
+const refresh=()=>window.FormulasAtlas&&window.FormulasAtlas.refresh&&window.FormulasAtlas.refresh();
 function loadRecentBatches(){
   RECENT_BATCHES.forEach(n=>{
     if(loaded.get(n)===VERSION)return;
-    import(`./latest-formula-batch-${n}.js?v=${VERSION}`)
+    import('./latest-formula-batch-'+n+'.js?v='+VERSION)
       .then(()=>{loaded.set(n,VERSION);refresh();})
-      .catch(err=>{loaded.delete(n);console.warn(`No se pudo cargar latest-formula-batch-${n}`,err);});
+      .catch(err=>{loaded.delete(n);console.warn('No se pudo cargar latest-formula-batch-'+n,err);});
   });
 }
 function pulse(){loadRecentBatches();refresh()}
