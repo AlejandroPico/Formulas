@@ -16,3 +16,4 @@ function reg(){const a=window.FormulasAtlas;if(!a||!Array.isArray(a.equations))r
 function retry(){let n=0;const tick=()=>{if(reg()||n++>50)return;setTimeout(tick,250)};tick()}
 window.addEventListener('formulas:catalog-ready',retry);document.addEventListener('DOMContentLoaded',retry);retry();
 import('./latest-formula-batch-17.js?v=20260705h').catch(err=>console.warn('No se pudo encadenar latest-formula-batch-17 desde batch 16',err));
+import('./latest-formula-batch-18.js?v=20260705i').catch(err=>console.warn('No se pudo encadenar latest-formula-batch-18 desde batch 16',err));
