@@ -10,6 +10,7 @@ let equations = [];
 let fields = ["Todas"];
 let levels = ["Todos"];
 let controlsReady = false;
+let renderQueued = false;
 
 async function boot() {
   showLoading("Preparando atlas", 2);
@@ -24,7 +25,7 @@ async function boot() {
     equations,
     refresh() {
       syncDynamicCatalog(true);
-      renderAll();
+      scheduleRender();
     },
     getAll() {
       return equations;
@@ -78,7 +79,7 @@ function bindEvents() {
 
   window.addEventListener("formulas:catalog-mutated", () => {
     syncDynamicCatalog(true);
-    renderAll();
+    scheduleRender();
   });
 
   filterToggle.addEventListener("click", () => {
@@ -99,7 +100,7 @@ function bindEvents() {
     const query = event.target.value;
     setState({ query });
     searchControl.classList.toggle("has-query", Boolean(query.trim()));
-    renderAll();
+    scheduleRender();
   });
 
   searchClear.addEventListener("click", () => {
@@ -153,6 +154,15 @@ function getSortLabelMode(sort) {
   if (sort === "level") return "level";
   if (sort === "chronology") return "year";
   return "none";
+}
+
+function scheduleRender() {
+  if (renderQueued) return;
+  renderQueued = true;
+  window.requestAnimationFrame(() => {
+    renderQueued = false;
+    renderAll();
+  });
 }
 
 function renderAll() {
