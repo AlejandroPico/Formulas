@@ -1,7 +1,11 @@
 const RECENT_BATCHES=[12,13,14,15,16,17,18];
-const VERSION='20260705j';
+const VERSION='20260705k';
 const loaded=new Map();
-const refresh=()=>window.FormulasAtlas&&window.FormulasAtlas.refresh&&window.FormulasAtlas.refresh();
+function normalizeFolders(){
+  const items=window.FormulasAtlas&&Array.isArray(window.FormulasAtlas.equations)?window.FormulasAtlas.equations:[];
+  items.forEach(eq=>{if(eq&&eq.id&&!eq.folder)eq.folder='formulas/'+eq.id;});
+}
+const refresh=()=>{normalizeFolders();window.FormulasAtlas&&window.FormulasAtlas.refresh&&window.FormulasAtlas.refresh();};
 function loadRecentBatches(){
   RECENT_BATCHES.forEach(n=>{
     if(loaded.get(n)===VERSION)return;
@@ -13,4 +17,5 @@ function loadRecentBatches(){
 function pulse(){loadRecentBatches();refresh()}
 window.addEventListener('formulas:catalog-ready',()=>[0,600,1400,2600,4200,7000].forEach(t=>setTimeout(pulse,t)));
 document.addEventListener('DOMContentLoaded',()=>[250,1200,2800,5200].forEach(t=>setTimeout(pulse,t)));
+window.addEventListener('formulas:catalog-mutated',()=>setTimeout(pulse,80));
 setTimeout(pulse,9000);
