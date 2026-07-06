@@ -32,3 +32,4 @@ function entry(a){const r={id:a[0],name:a[1],year:a[2],field:a[3],level:a[4],col
 function reg(){const a=window.FormulasAtlas;if(!a||!Array.isArray(a.equations))return false;NLP_BATCH.forEach(x=>{const n=entry(x),old=a.equations.find(e=>e.id===n.id);if(old)Object.assign(old,n);else a.equations.push(n)});window.dispatchEvent(new CustomEvent('formulas:catalog-mutated',{detail:{source:'latest-formula-batch-25',count:NLP_BATCH.length}}));window.FormulasAtlas.refresh?.();return true}
 function retry(){let n=0;const tick=()=>{if(reg()||n++>50)return;setTimeout(tick,250)};tick()}
 window.addEventListener('formulas:catalog-ready',retry);document.addEventListener('DOMContentLoaded',retry);retry();
+import('./latest-formula-batch-26.js?v=20260705u').catch(err=>console.warn('No se pudo encadenar latest-formula-batch-26 desde batch 25',err));
