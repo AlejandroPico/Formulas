@@ -1,0 +1,13 @@
+export default function mount({root,canvas,controls,readout}){
+root.classList.add('sim-wide','calc-wide','bio-sir-sim');root.style.setProperty('--equation-color','#dc2626');
+const ctx=canvas.getContext('2d');controls.innerHTML='<label><span>β transmisión</span><input id="b" type="range" min="0.10" max="1.00" step="0.05" value="0.40"><output>0.40</output></label><label><span>γ recuperación</span><input id="g" type="range" min="0.04" max="0.50" step="0.02" value="0.14"><output>0.14</output></label>';
+const bIn=controls.querySelector('#b'),gIn=controls.querySelector('#g'),outs=controls.querySelectorAll('output');
+function size(){const b=canvas.getBoundingClientRect();canvas.width=Math.max(440,Math.floor(b.width||850));canvas.height=Math.max(380,Math.floor(b.height||530));return[canvas.width,canvas.height]}
+function line(x1,y1,x2,y2){ctx.beginPath();ctx.moveTo(x1,y1);ctx.lineTo(x2,y2);ctx.stroke()}
+function curve(a,x,y,w,h,c){ctx.strokeStyle=c;ctx.lineWidth=2.6;ctx.beginPath();a.forEach((v,i)=>{const xx=x+i/(a.length-1)*w,yy=y-v*h;if(i)ctx.lineTo(xx,yy);else ctx.moveTo(xx,yy)});ctx.stroke()}
+function badge(t,x,y,c){ctx.font='12px monospace';ctx.fillStyle='rgba(15,23,42,.9)';ctx.fillRect(x-5,y-15,ctx.measureText(t).width+10,22);ctx.fillStyle=c;ctx.fillText(t,x,y)}
+function bar(x,y,w,l,v,c,m){ctx.fillStyle='#1e293b';ctx.fillRect(x,y,w,25);ctx.fillStyle=c;ctx.fillRect(x,y,w*Math.max(0,Math.min(1,v/m)),25);ctx.fillStyle='#e2e8f0';ctx.font='12px monospace';ctx.fillText(l+': '+v.toFixed(3),x+8,y+17)}
+function sim(beta,gamma){let S=.99,I=.01,R=0,o={S:[],I:[],R:[]};for(let k=0;k<280;k++){o.S.push(S);o.I.push(I);o.R.push(R);const dS=-beta*S*I,dI=beta*S*I-gamma*I,dR=gamma*I;S+=dS*.35;I+=dI*.35;R+=dR*.35}return o}
+function draw(){const beta=+bIn.value,gamma=+gIn.value,R0=beta/gamma;outs[0].textContent=beta.toFixed(2);outs[1].textContent=gamma.toFixed(2);const[W,H]=size(),r=sim(beta,gamma);ctx.fillStyle='#020617';ctx.fillRect(0,0,W,H);ctx.fillStyle='#e2e8f0';ctx.font='bold 22px sans-serif';ctx.fillText('Modelo SIR: susceptibles, infectados, recuperados',24,36);ctx.font='14px monospace';ctx.fillText('dS/dt=-βSI ; dI/dt=βSI-γI ; dR/dt=γI',24,64);const x=62,y=H-82,w=W*.55,h=H*.56;ctx.strokeStyle='#334155';line(x,y-h,x,y);line(x,y,x+w,y);curve(r.S,x,y,w,h,'#2563eb');curve(r.I,x,y,w,h,'#dc2626');curve(r.R,x,y,w,h,'#16a34a');badge('S',W*.66,130,'#2563eb');badge('I',W*.66,158,'#dc2626');badge('R',W*.66,186,'#16a34a');bar(W*.66,235,W*.28,'R0',R0,'#dc2626',8);readout.innerHTML='<b>R0 = '+R0.toFixed(2)+'</b><br>'+(R0>1?'R0 > 1: se produce un brote con pico epidémico.':'R0 ≤ 1: la infección decae sin gran brote.')}
+bIn.oninput=gIn.oninput=draw;draw();return()=>{};
+}
