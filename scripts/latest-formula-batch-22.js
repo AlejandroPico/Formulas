@@ -15,3 +15,4 @@ function entry(r){const sim=simPath(r);return{...r,folder:'formulas/'+r.id,sourc
 function reg(){const a=window.FormulasAtlas;if(!a||!Array.isArray(a.equations))return false;BIO_BATCH.forEach(r=>{const n=entry(r),old=a.equations.find(e=>e.id===r.id);if(old)Object.assign(old,n);else a.equations.push(n)});window.dispatchEvent(new CustomEvent('formulas:catalog-mutated',{detail:{source:'latest-formula-batch-22',count:BIO_BATCH.length}}));window.FormulasAtlas.refresh?.();return true}
 function retry(){let n=0;const tick=()=>{if(reg()||n++>50)return;setTimeout(tick,250)};tick()}
 window.addEventListener('formulas:catalog-ready',retry);document.addEventListener('DOMContentLoaded',retry);retry();
+import('./latest-formula-batch-23.js?v=20260705q').catch(err=>console.warn('No se pudo encadenar latest-formula-batch-23 desde batch 22',err));
