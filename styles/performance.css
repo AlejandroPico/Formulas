@@ -1,0 +1,36 @@
+.equation-card {
+  grid-row: span var(--row-span, 16);
+  contain: layout paint style;
+  content-visibility: auto;
+  contain-intrinsic-size: 236px 170px;
+}
+
+.equation-grid.is-progressive-rendering::after {
+  content: "Cargando más fórmulas…";
+  grid-column: 1 / -1;
+  justify-self: center;
+  margin: 18px 0 6px;
+  padding: 9px 14px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--muted);
+  background: color-mix(in srgb, var(--panel-solid) 72%, transparent);
+  font-size: .78rem;
+  font-weight: 850;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+.equation-grid[aria-busy="true"] {
+  cursor: progress;
+}
+
+.equation-grid[aria-busy="true"] .equation-card {
+  cursor: pointer;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .equation-card {
+    transition: none !important;
+  }
+}
