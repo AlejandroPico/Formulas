@@ -2,7 +2,7 @@ import { loadFormulaFiles } from "./formula-file-loader.js";
 import { state, setState } from "./state.js";
 import { $, unique } from "./utils.js";
 import { filterEquations } from "./filtering.js";
-import { renderEquationGrid, openEquationModal, closeEquationModal } from "./render-dynamic.js";
+import { renderEquationGrid, openEquationModal, closeEquationModal } from "./render-performance.js";
 import { initTheme } from "./theme.js";
 import "./formula-prompt-override.js";
 
@@ -11,6 +11,7 @@ let fields = ["Todas"];
 let levels = ["Todos"];
 let controlsReady = false;
 let renderQueued = false;
+let renderTimer = 0;
 
 async function boot() {
   showLoading("Preparando atlas", 2);
@@ -157,15 +158,23 @@ function getSortLabelMode(sort) {
 }
 
 function scheduleRender() {
-  if (renderQueued) return;
-  renderQueued = true;
-  window.requestAnimationFrame(() => {
-    renderQueued = false;
-    renderAll();
-  });
+  window.clearTimeout(renderTimer);
+  renderTimer = window.setTimeout(() => {
+    renderTimer = 0;
+    if (renderQueued) return;
+    renderQueued = true;
+    window.requestAnimationFrame(() => {
+      renderQueued = false;
+      renderAll();
+    });
+  }, 120);
 }
 
 function renderAll() {
+  if (renderTimer) {
+    window.clearTimeout(renderTimer);
+    renderTimer = 0;
+  }
   syncDynamicCatalog(false);
   const visible = filterEquations(equations, state);
   renderEquationGrid(visible, openEquationModal, state);
