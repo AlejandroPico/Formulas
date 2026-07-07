@@ -1,34 +1,11 @@
 const GRID_SELECTOR = "#equationGrid";
 const CARD_SELECTOR = ".equation-card";
-const FORMULA_SELECTOR = ".formula-box";
 
 const grid = document.querySelector(GRID_SELECTOR);
-let cardFitTimer = 0;
 let modalFitTimer = 0;
-let pendingCardFit = false;
 
 if (grid) {
-  const observer = new MutationObserver(mutations => {
-    if (mutations.some(mutation => [...mutation.addedNodes].some(node => node.nodeType === 1 && (node.matches?.(CARD_SELECTOR) || node.querySelector?.(CARD_SELECTOR))))) {
-      scheduleCardFit();
-    }
-  });
-  observer.observe(grid, { childList: true });
-
-  window.addEventListener("resize", () => {
-    grid.querySelectorAll(CARD_SELECTOR).forEach(card => { card.dataset.fitChecked = "false"; });
-    scheduleCardFit();
-    scheduleModalFormulaFit();
-  });
-
-  window.addEventListener("formulas:math-typeset", event => {
-    const targets = event.detail?.targets || [];
-    targets.forEach(target => {
-      const card = target.matches?.(CARD_SELECTOR) ? target : target.closest?.(CARD_SELECTOR);
-      if (card) card.dataset.fitChecked = "false";
-    });
-    scheduleCardFit();
-  });
+  window.addEventListener("resize", scheduleModalFormulaFit);
 
   document.addEventListener("pointermove", event => {
     if (!event.target.closest?.(".formula-tooltip-zone, .formula-token-hitbox")) hideAllFormulaTooltips();
@@ -56,65 +33,6 @@ if (grid) {
     enforceCurrentModalState();
     fitActiveModalFormula();
   }, 1600);
-
-  scheduleCardFit();
-}
-
-function scheduleCardFit() {
-  pendingCardFit = true;
-  window.clearTimeout(cardFitTimer);
-  cardFitTimer = window.setTimeout(() => {
-    cardFitTimer = 0;
-    if (!pendingCardFit) return;
-    pendingCardFit = false;
-    fitCardsChunked();
-  }, 180);
-}
-
-function fitCardsChunked() {
-  const grid = document.querySelector(GRID_SELECTOR);
-  if (!grid) return;
-  const maxColumns = getGridColumnCount(grid);
-  const candidates = [...grid.querySelectorAll(CARD_SELECTOR)].filter(card => card.dataset.fitChecked !== "true");
-  const slice = candidates.slice(0, 120);
-
-  slice.forEach(card => fitSingleCard(card, maxColumns));
-  finalizeFormulaFit(slice);
-
-  if (candidates.length > slice.length) {
-    scheduleIdle(() => fitCardsChunked());
-  }
-}
-
-function fitSingleCard(card, maxColumns) {
-  card.style.removeProperty("--formula-scale");
-  card.classList.remove("formula-scaled");
-  const formulaBox = card.querySelector(FORMULA_SELECTOR);
-  if (!formulaBox) {
-    card.dataset.fitChecked = "true";
-    return;
-  }
-
-  const overflow = getFormulaOverflow(formulaBox);
-  if (overflow > 1.03) {
-    const currentSpan = getCurrentSpan(card);
-    const targetSpan = Math.min(maxColumns, Math.max(currentSpan + 1, Math.ceil(currentSpan * overflow)));
-    if (targetSpan > currentSpan) card.style.setProperty("--col-span", String(targetSpan));
-  }
-  card.dataset.fitChecked = "true";
-}
-
-function finalizeFormulaFit(cards) {
-  cards.forEach(card => {
-    const formulaBox = card.querySelector(FORMULA_SELECTOR);
-    if (!formulaBox) return;
-    const overflow = getFormulaOverflow(formulaBox);
-    if (overflow <= 1.02) return;
-
-    const scale = Math.max(0.72, Math.min(1, 1 / overflow));
-    card.style.setProperty("--formula-scale", scale.toFixed(3));
-    card.classList.add("formula-scaled");
-  });
 }
 
 function scheduleModalCleanup() {
@@ -244,47 +162,6 @@ function enforceModalTab(button) {
 
 function getTabId(button) {
   return button?.dataset?.target || button?.dataset?.tab || "";
-}
-
-function getFormulaOverflow(formulaBox) {
-  const available = Math.max(1, formulaBox.clientWidth - 2);
-  const formulaWidth = getFormulaWidth(formulaBox);
-  return formulaWidth / available;
-}
-
-function getFormulaWidth(formulaBox) {
-  const nodes = [
-    ...formulaBox.querySelectorAll("mjx-container"),
-    ...formulaBox.querySelectorAll(".formula-stack > div")
-  ];
-  if (!nodes.length) return formulaBox.scrollWidth;
-  return Math.max(...nodes.map(node => {
-    const previousTransform = node.style.transform;
-    node.style.transform = "";
-    const width = node.getBoundingClientRect().width || node.scrollWidth || 0;
-    node.style.transform = previousTransform;
-    return width;
-  }));
-}
-
-function getCurrentSpan(card) {
-  const inline = Number.parseInt(card.style.getPropertyValue("--col-span"), 10);
-  const data = Number.parseInt(card.dataset.minColSpan, 10);
-  return Math.max(1, inline || data || 2);
-}
-
-function getGridColumnCount(grid) {
-  const template = getComputedStyle(grid).gridTemplateColumns;
-  const columns = template.split(" ").filter(Boolean).length;
-  return Math.max(2, columns || 8);
-}
-
-function scheduleIdle(callback) {
-  if (window.requestIdleCallback) {
-    window.requestIdleCallback(callback, { timeout: 160 });
-    return;
-  }
-  window.setTimeout(callback, 16);
 }
 
 function normalizeTitle(value) {
