@@ -21,6 +21,15 @@ if (grid) {
     scheduleModalFormulaFit();
   });
 
+  window.addEventListener("formulas:math-typeset", event => {
+    const targets = event.detail?.targets || [];
+    targets.forEach(target => {
+      const card = target.matches?.(CARD_SELECTOR) ? target : target.closest?.(CARD_SELECTOR);
+      if (card) card.dataset.fitChecked = "false";
+    });
+    scheduleCardFit();
+  });
+
   document.addEventListener("pointermove", event => {
     if (!event.target.closest?.(".formula-tooltip-zone, .formula-token-hitbox")) hideAllFormulaTooltips();
   }, true);
@@ -62,18 +71,18 @@ function scheduleCardFit() {
   }, 180);
 }
 
-function fitCardsChunked(offset = 0) {
+function fitCardsChunked() {
   const grid = document.querySelector(GRID_SELECTOR);
   if (!grid) return;
   const maxColumns = getGridColumnCount(grid);
   const candidates = [...grid.querySelectorAll(CARD_SELECTOR)].filter(card => card.dataset.fitChecked !== "true");
-  const slice = candidates.slice(offset, offset + 120);
+  const slice = candidates.slice(0, 120);
 
   slice.forEach(card => fitSingleCard(card, maxColumns));
   finalizeFormulaFit(slice);
 
-  if (offset + slice.length < candidates.length) {
-    scheduleIdle(() => fitCardsChunked(offset + slice.length));
+  if (candidates.length > slice.length) {
+    scheduleIdle(() => fitCardsChunked());
   }
 }
 
