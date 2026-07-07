@@ -32,6 +32,7 @@ export function requestMathTypeset(target = document.body) {
       .catch(() => {})
       .finally(() => {
         mathRenderRunning = false;
+        window.dispatchEvent(new CustomEvent("formulas:math-typeset", { detail: { targets } }));
         if (mathQueue.size) requestMathTypeset([]);
       });
   };
