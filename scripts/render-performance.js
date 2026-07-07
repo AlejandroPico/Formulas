@@ -1,20 +1,19 @@
-import { requestMathTypeset } from "./utils.js";
 export { openEquationModal, closeEquationModal } from "./render-dynamic.js";
 
-let activeGridRender = null;
-const FIRST_CHUNK = 48;
-const NEXT_CHUNK = 96;
+const CARD_MIN_WIDTH = 236;
+const CARD_ROW_HEIGHT = 214;
+const CARD_GAP = 14;
+const OVERSCAN_ROWS = 4;
+
+let virtualState = null;
+let scrollBound = false;
+let renderScheduled = false;
 
 const VARIABLE_LABELS = {
   "newton-second-law": { F: "fuerza", m: "masa", a: "aceleración" },
   "gravitational-law": { F: "fuerza", G: "constante gravitatoria", m_1: "masa 1", m_2: "masa 2", M: "masa central", r: "distancia", g: "campo gravitatorio", Phi: "potencial gravitatorio", "\\Phi": "potencial gravitatorio" },
   "quadratic-formula": { a: "coeficiente cuadrático", b: "coeficiente lineal", c: "término independiente", Delta: "discriminante", "\\Delta": "discriminante", x: "x" },
-  "pythagorean-theorem": { a: "cateto a", b: "cateto b", c: "hipotenusa c", d: "distancia" },
-  "law-of-sines": { a: "lado a", b: "lado b", c: "lado c", A: "ángulo A", B: "ángulo B", C: "ángulo C", R: "radio circunscrito" },
-  "law-of-cosines": { a: "lado a", b: "lado b", c: "lado c", A: "ángulo A", B: "ángulo B", C: "ángulo C" },
-  "bernoulli-equation": { p: "presión", rho: "densidad", "\\rho": "densidad", v: "velocidad", g: "gravedad", h: "altura", H: "carga hidráulica" },
-  "continuity-equation": { A_1: "área 1", A_2: "área 2", v_1: "velocidad 1", v_2: "velocidad 2", Q: "caudal", A: "área", v: "velocidad", rho: "densidad", "\\rho": "densidad" },
-  "wave-equation": { u: "perturbación", t: "tiempo", x: "posición", c: "velocidad" }
+  "pythagorean-theorem": { a: "cateto a", b: "cateto b", c: "hipotenusa c", d: "distancia" }
 };
 
 export function renderEquationGrid(equations, onOpen, viewState = {}) {
@@ -22,70 +21,80 @@ export function renderEquationGrid(equations, onOpen, viewState = {}) {
   const template = document.querySelector("#equationCardTemplate");
   if (!grid || !template) return;
 
-  if (activeGridRender) activeGridRender.cancelled = true;
-  const controller = { cancelled: false };
-  activeGridRender = controller;
-
   bindGridDelegation(grid);
+  bindViewportListeners();
+
   grid.__equations = equations;
   grid.__onOpen = onOpen;
+  grid.classList.add("is-virtualized");
   grid.textContent = "";
-  grid.classList.remove("is-progressive-rendering");
-  grid.removeAttribute("aria-busy");
 
   if (!equations.length) {
+    virtualState = null;
+    grid.classList.remove("is-virtualized");
     grid.innerHTML = '<div class="empty-state">No hay ecuaciones que coincidan con los filtros actuales.</div>';
     return;
   }
 
-  grid.classList.add("is-progressive-rendering");
-  grid.setAttribute("aria-busy", "true");
-
-  let index = 0;
-  const appendChunk = chunkSize => {
-    if (controller.cancelled) return;
-    const fragment = document.createDocumentFragment();
-    const mathTargets = [];
-    const end = Math.min(index + chunkSize, equations.length);
-
-    for (; index < end; index += 1) {
-      const card = buildCard(equations[index], index, template, viewState);
-      fragment.appendChild(card);
-      mathTargets.push(card);
-    }
-
-    grid.appendChild(fragment);
-    requestMathTypeset(mathTargets);
-
-    if (index < equations.length) {
-      scheduleIdle(() => appendChunk(NEXT_CHUNK));
-      return;
-    }
-
-    grid.classList.remove("is-progressive-rendering");
-    grid.removeAttribute("aria-busy");
+  virtualState = {
+    equations,
+    viewState,
+    template,
+    grid,
+    columns: getColumnCount(grid),
+    start: -1,
+    end: -1
   };
 
-  appendChunk(Math.min(FIRST_CHUNK, equations.length));
+  updateVirtualGrid(true);
+}
+
+function updateVirtualGrid(force = false) {
+  if (!virtualState) return;
+  const { grid, equations, viewState, template } = virtualState;
+  const columns = getColumnCount(grid);
+  const top = Math.max(0, window.scrollY - grid.getBoundingClientRect().top - window.scrollY);
+  const viewportTop = Math.max(0, window.scrollY - pageTop(grid));
+  const viewportBottom = viewportTop + window.innerHeight;
+  const rowPitch = CARD_ROW_HEIGHT + CARD_GAP;
+  const totalRows = Math.ceil(equations.length / columns);
+  const startRow = Math.max(0, Math.floor(viewportTop / rowPitch) - OVERSCAN_ROWS);
+  const endRow = Math.min(totalRows, Math.ceil(viewportBottom / rowPitch) + OVERSCAN_ROWS);
+  const start = Math.max(0, startRow * columns);
+  const end = Math.min(equations.length, endRow * columns);
+
+  if (!force && virtualState.columns === columns && virtualState.start === start && virtualState.end === end) return;
+  virtualState.columns = columns;
+  virtualState.start = start;
+  virtualState.end = end;
+
+  const fragment = document.createDocumentFragment();
+  fragment.appendChild(spacer(startRow * rowPitch, "top"));
+  for (let index = start; index < end; index += 1) {
+    fragment.appendChild(buildCard(equations[index], index, template, viewState));
+  }
+  fragment.appendChild(spacer(Math.max(0, (totalRows - endRow) * rowPitch), "bottom"));
+
+  grid.replaceChildren(fragment);
 }
 
 function buildCard(eq, index, template, viewState) {
-  const display = getDisplayFormula(eq, viewState.formulaDisplay || "symbolic");
+  const display = getCardDisplay(eq, viewState.formulaDisplay || "symbolic");
   const card = template.content.firstElementChild.cloneNode(true);
-  const widthLevel = getWidthLevel(display.formulas);
-  card.classList.add(`size-${widthLevel}`);
-  card.classList.toggle("is-multiline", display.formulas.length > 1);
-  card.classList.toggle("formula-explained-mode", display.mode === "explained");
   card.dataset.eqIndex = String(index);
-  card.style.setProperty("--formula-lines", display.formulas.length || 1);
-  card.style.setProperty("--col-span", getColumnSpan(widthLevel));
-  card.style.setProperty("--row-span", getRowSpan(widthLevel, display.formulas.length, display.mode));
   card.style.setProperty("--context-color", contextColor(eq, viewState.cardLabelMode));
   card.setAttribute("role", "button");
   card.setAttribute("aria-label", `Abrir ficha de ${eq.name}`);
   card.querySelector("h3").innerHTML = cardTitle(eq, viewState.cardLabelMode);
-  card.querySelector(".formula-box").innerHTML = renderFormulaDisplay(display);
+  card.querySelector(".formula-box").innerHTML = `<span class="formula-card-text">${escapeHtml(display)}</span>`;
   return card;
+}
+
+function getCardDisplay(eq, mode) {
+  const formula = asList(eq.formula);
+  const explained = asList(eq.formulaText || eq.formula_text || eq.explainedFormula).map(normalizeExplainedFormula);
+  if (mode === "explained") return explained[0] || eq.summary || semiverbalizeFormula(formula[0] || "", eq);
+  return stripMathForCard(formula[0] || explained[0] || eq.summary || "");
 }
 
 function bindGridDelegation(grid) {
@@ -109,19 +118,36 @@ function bindGridDelegation(grid) {
   });
 }
 
-function getDisplayFormula(eq, mode) {
-  const symbolic = asList(eq.formula);
-  const explained = asList(eq.formulaText || eq.formula_text || eq.explainedFormula).map(normalizeExplainedFormula);
-  if (mode === "explained") return { mode: "explained", formulas: explained.length ? explained : symbolic.map(line => semiverbalizeFormula(line, eq)) };
-  return { mode: "symbolic", formulas: symbolic.length ? symbolic : explained };
+function bindViewportListeners() {
+  if (scrollBound) return;
+  scrollBound = true;
+  window.addEventListener("scroll", scheduleVirtualUpdate, { passive: true });
+  window.addEventListener("resize", scheduleVirtualUpdate);
 }
 
-function renderFormulaDisplay(display) {
-  if (display.mode === "explained") {
-    return `<div class="formula-words-stack">${display.formulas.map(line => `<div class="formula-words-row">${escapeHtml(line)}</div>`).join("")}</div>`;
-  }
-  if (display.formulas.length === 1) return `\\(${display.formulas[0]}\\)`;
-  return `<div class="formula-stack">${display.formulas.map(line => `<div>\\(${line}\\)</div>`).join("")}</div>`;
+function scheduleVirtualUpdate() {
+  if (renderScheduled) return;
+  renderScheduled = true;
+  window.requestAnimationFrame(() => {
+    renderScheduled = false;
+    updateVirtualGrid(false);
+  });
+}
+
+function spacer(height, kind) {
+  const node = document.createElement("div");
+  node.className = `virtual-grid-spacer virtual-grid-spacer-${kind}`;
+  node.style.height = `${Math.round(height)}px`;
+  return node;
+}
+
+function getColumnCount(grid) {
+  const width = Math.max(1, grid.clientWidth || grid.getBoundingClientRect().width || window.innerWidth);
+  return Math.max(1, Math.floor((width + CARD_GAP) / (CARD_MIN_WIDTH + CARD_GAP)));
+}
+
+function pageTop(element) {
+  return element.getBoundingClientRect().top + window.scrollY;
 }
 
 function normalizeExplainedFormula(value) {
@@ -152,15 +178,7 @@ function semiverbalizeFormula(formula, eq) {
     .replace(/\\pi/g, "π")
     .replace(/\\sin/g, "sin")
     .replace(/\\cos/g, "cos")
-    .replace(/\\nabla/g, "∇");
-
-  text = replaceFractions(text);
-  text = replaceSquareRoots(text);
-  text = text
-    .replace(/\^2/g, "²")
-    .replace(/\^3/g, "³")
-    .replace(/\^\{2\}/g, "²")
-    .replace(/\^\{3\}/g, "³")
+    .replace(/\\nabla/g, "∇")
     .replace(/\\pm/g, "±")
     .replace(/\\,/g, " ")
     .replace(/[{}]/g, "")
@@ -175,26 +193,21 @@ function semiverbalizeFormula(formula, eq) {
   return normalizeExplainedFormula(text);
 }
 
-function replaceFractions(value) {
-  let text = value;
-  const pattern = /\\frac\{([^{}]+)\}\{([^{}]+)\}/g;
-  let previous = "";
-  while (previous !== text) {
-    previous = text;
-    text = text.replace(pattern, "($1) / ($2)");
-  }
-  return text;
-}
-
-function replaceSquareRoots(value) {
-  let text = value;
-  const pattern = /\\sqrt\{([^{}]+)\}/g;
-  let previous = "";
-  while (previous !== text) {
-    previous = text;
-    text = text.replace(pattern, "√($1)");
-  }
-  return text;
+function stripMathForCard(value) {
+  return String(value)
+    .replace(/\\frac\{([^{}]+)\}\{([^{}]+)\}/g, "($1)/($2)")
+    .replace(/\\sqrt\{([^{}]+)\}/g, "√($1)")
+    .replace(/\\left|\\right/g, "")
+    .replace(/\\cdot/g, "·")
+    .replace(/\\times/g, "×")
+    .replace(/\\pm/g, "±")
+    .replace(/\\Delta/g, "Δ")
+    .replace(/\\rho/g, "ρ")
+    .replace(/\\lambda/g, "λ")
+    .replace(/\\pi/g, "π")
+    .replace(/[{}]/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
 }
 
 function cardTitle(eq, mode) {
@@ -215,27 +228,6 @@ function contextColor(eq, mode) {
   return `hsl(${hash % 360} 78% 48%)`;
 }
 
-function getWidthLevel(lines) {
-  const length = Math.max(1, ...asList(lines).map(line => String(line).length));
-  if (length > 120) return 3;
-  if (length > 64) return 2;
-  return 1;
-}
-
-function getColumnSpan(level) { return { 1: 2, 2: 3, 3: 4 }[level] || 2; }
-function getRowSpan(level, lines, mode) {
-  const base = { 1: 16, 2: 17, 3: 19 }[level] || 16;
-  const extraLines = Math.max(0, Number(lines || 1) - 1) * 5;
-  const explained = mode === "explained" ? 2 : 0;
-  return base + extraLines + explained;
-}
 function asList(value) { return Array.isArray(value) ? value.filter(Boolean) : value ? [value] : []; }
-function scheduleIdle(callback) {
-  if (window.requestIdleCallback) {
-    window.requestIdleCallback(callback, { timeout: 120 });
-    return;
-  }
-  window.setTimeout(callback, 16);
-}
 function escapeRegExp(value) { return String(value).replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); }
 function escapeHtml(value) { return String(value).replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;").replaceAll("'", "&#39;"); }
