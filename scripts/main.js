@@ -24,13 +24,12 @@ async function boot() {
   }
   window.FormulasAtlas = {
     equations,
-    refresh() {
+    refresh(options = {}) {
+      if (!options.force) return;
       syncDynamicCatalog(true);
       scheduleRender();
     },
-    getAll() {
-      return equations;
-    }
+    getAll() { return equations; }
   };
   window.dispatchEvent(new CustomEvent("formulas:catalog-ready", { detail: { equations } }));
   syncDynamicCatalog(false);
@@ -78,10 +77,7 @@ function bindEvents() {
   const searchControl = $("#searchControl");
   const formulaDisplaySelect = document.querySelector("#formulaDisplaySelect");
 
-  window.addEventListener("formulas:catalog-mutated", () => {
-    syncDynamicCatalog(true);
-    scheduleRender();
-  });
+  window.addEventListener("formulas:catalog-mutated", () => {});
 
   filterToggle.addEventListener("click", () => {
     const isOpen = !filterPanel.hidden;
@@ -98,9 +94,8 @@ function bindEvents() {
   });
 
   searchInput.addEventListener("input", event => {
-    const query = event.target.value;
-    setState({ query });
-    searchControl.classList.toggle("has-query", Boolean(query.trim()));
+    setState({ query: event.target.value });
+    searchControl.classList.toggle("has-query", Boolean(event.target.value.trim()));
     scheduleRender();
   });
 
@@ -122,11 +117,8 @@ function bindEvents() {
 
   $("#sortSelect").addEventListener("change", event => {
     const selectedSort = event.target.value;
-    if (selectedSort === "default") {
-      setState({ sort: "chronology", cardLabelMode: "none" });
-    } else {
-      setState({ sort: selectedSort, cardLabelMode: getSortLabelMode(selectedSort) });
-    }
+    if (selectedSort === "default") setState({ sort: "chronology", cardLabelMode: "none" });
+    else setState({ sort: selectedSort, cardLabelMode: getSortLabelMode(selectedSort) });
     renderAll();
   });
   $("#fieldSelect").addEventListener("change", event => {
@@ -167,7 +159,7 @@ function scheduleRender() {
       renderQueued = false;
       renderAll();
     });
-  }, 120);
+  }, 80);
 }
 
 function renderAll() {
@@ -183,13 +175,10 @@ function renderAll() {
 
 function updateVisibleCount(visible, total) {
   const target = document.querySelector("#visibleCount");
-  if (!target) return;
-  target.textContent = `${visible} / ${total}`;
+  if (target) target.textContent = `${visible} / ${total}`;
 }
 
-function updateLoading({ message, value }) {
-  showLoading(message, value);
-}
+function updateLoading({ message, value }) { showLoading(message, value); }
 
 function showLoading(message, value = 0) {
   const overlay = document.querySelector("#loadingOverlay");
