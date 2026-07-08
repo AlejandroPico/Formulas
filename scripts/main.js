@@ -12,6 +12,8 @@ let levels = ["Todos"];
 let controlsReady = false;
 let renderQueued = false;
 let renderTimer = 0;
+let runtimeRefreshTimer = 0;
+let lastRenderedTotal = 0;
 
 async function boot() {
   showLoading("Preparando atlas", 2);
@@ -25,9 +27,7 @@ async function boot() {
   window.FormulasAtlas = {
     equations,
     refresh(options = {}) {
-      if (!options.force) return;
-      syncDynamicCatalog(true);
-      scheduleRender();
+      scheduleRuntimeRefresh(Boolean(options.force));
     },
     getAll() { return equations; }
   };
@@ -77,7 +77,7 @@ function bindEvents() {
   const searchControl = $("#searchControl");
   const formulaDisplaySelect = document.querySelector("#formulaDisplaySelect");
 
-  window.addEventListener("formulas:catalog-mutated", () => {});
+  window.addEventListener("formulas:catalog-mutated", () => scheduleRuntimeRefresh(false));
 
   filterToggle.addEventListener("click", () => {
     const isOpen = !filterPanel.hidden;
@@ -149,6 +149,17 @@ function getSortLabelMode(sort) {
   return "none";
 }
 
+function scheduleRuntimeRefresh(force) {
+  window.clearTimeout(runtimeRefreshTimer);
+  runtimeRefreshTimer = window.setTimeout(() => {
+    runtimeRefreshTimer = 0;
+    const total = window.FormulasAtlas?.equations?.length || equations.length;
+    if (!force && total === lastRenderedTotal) return;
+    syncDynamicCatalog(true);
+    renderAll();
+  }, 650);
+}
+
 function scheduleRender() {
   window.clearTimeout(renderTimer);
   renderTimer = window.setTimeout(() => {
@@ -171,6 +182,7 @@ function renderAll() {
   const visible = filterEquations(equations, state);
   renderEquationGrid(visible, openEquationModal, state);
   updateVisibleCount(visible.length, equations.length);
+  lastRenderedTotal = equations.length;
 }
 
 function updateVisibleCount(visible, total) {
