@@ -7,7 +7,6 @@ const grid = document.querySelector(GRID_SELECTOR);
 
 if (grid) {
   observer.observe(grid, { childList: true, subtree: true });
-  window.addEventListener("formulas:math-typeset", scheduleCardFit);
   window.addEventListener("resize", () => { scheduleCardFit(); scheduleModalFormulaFit(); });
   document.addEventListener("pointermove", event => {
     if (!event.target.closest?.(".formula-tooltip-zone, .formula-token-hitbox")) hideAllFormulaTooltips();
@@ -59,7 +58,7 @@ function scheduleModalFormulaFit() {
 
 function fitCards() {
   const grid = document.querySelector(GRID_SELECTOR);
-  if (!grid) return;
+  if (!grid || grid.classList.contains("is-packed-masonry")) return;
   const maxColumns = getGridColumnCount(grid);
   const cards = [...grid.querySelectorAll(CARD_SELECTOR)];
 
@@ -84,6 +83,7 @@ function fitCards() {
 }
 
 function finalizeFormulaFit(grid) {
+  if (grid.classList.contains("is-packed-masonry")) return;
   grid.querySelectorAll(CARD_SELECTOR).forEach(card => {
     const formulaBox = card.querySelector(FORMULA_SELECTOR);
     if (!formulaBox) return;
