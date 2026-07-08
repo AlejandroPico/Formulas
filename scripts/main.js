@@ -2,7 +2,7 @@ import { loadFormulaFiles } from "./formula-file-loader.js";
 import { state, setState } from "./state.js";
 import { $, unique } from "./utils.js";
 import { filterEquations } from "./filtering.js";
-import { renderEquationGrid, openEquationModal, closeEquationModal } from "./render-performance.js";
+import { renderEquationGrid, openEquationModal, closeEquationModal } from "./render-performance.js?v=packed-masonry-20260708";
 import { initTheme } from "./theme.js";
 import "./formula-prompt-override.js";
 
