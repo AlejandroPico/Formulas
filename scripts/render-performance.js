@@ -76,7 +76,7 @@ function buildCard(eq, index, template, viewState) {
   card.dataset.eqIndex = String(index);
   card.style.setProperty("--formula-lines", display.formulas.length || 1);
   card.style.setProperty("--col-span", getColumnSpan(widthLevel));
-  card.style.setProperty("--row-span", getRowSpan(widthLevel, display.formulas.length, display.mode));
+  card.style.setProperty("--row-span", getInitialRowSpan(widthLevel, display.formulas.length, display.mode));
   card.style.setProperty("--context-color", contextColor(eq, viewState.cardLabelMode));
   card.setAttribute("role", "button");
   card.setAttribute("aria-label", `Abrir ficha de ${eq.name}`);
@@ -211,10 +211,10 @@ function getWidthLevel(lines) {
 }
 
 function getColumnSpan(level) { return { 1: 2, 2: 3, 3: 4 }[level] || 2; }
-function getRowSpan(level, lines, mode) {
-  const base = { 1: 17, 2: 20, 3: 23 }[level] || 17;
-  const extraLines = Math.max(0, Number(lines || 1) - 1) * 5;
-  const explained = mode === "explained" ? 2 : 0;
+function getInitialRowSpan(level, lines, mode) {
+  const base = { 1: 8, 2: 9, 3: 10 }[level] || 8;
+  const extraLines = Math.max(0, Number(lines || 1) - 1) * 2;
+  const explained = mode === "explained" ? 1 : 0;
   return base + extraLines + explained;
 }
 function asList(value) { return Array.isArray(value) ? value.filter(Boolean) : value ? [value] : []; }
