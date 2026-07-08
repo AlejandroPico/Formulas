@@ -7,6 +7,7 @@ const grid = document.querySelector(GRID_SELECTOR);
 
 if (grid) {
   observer.observe(grid, { childList: true, subtree: true });
+  window.addEventListener("formulas:math-typeset", scheduleCardFit);
   window.addEventListener("resize", () => { scheduleCardFit(); scheduleModalFormulaFit(); });
   document.addEventListener("pointermove", event => {
     if (!event.target.closest?.(".formula-tooltip-zone, .formula-token-hitbox")) hideAllFormulaTooltips();
@@ -254,9 +255,9 @@ function applyMasonrySpans(grid) {
   const rowHeight = parseFloat(computed.gridAutoRows) || 10;
   const rowGap = parseFloat(computed.rowGap) || 0;
   grid.querySelectorAll(CARD_SELECTOR).forEach(card => {
-    const minSpan = Number(card.dataset.minColSpan || 2);
+    const minRowSpan = Number.parseInt(card.style.getPropertyValue("--row-span"), 10) || 8;
     const height = card.getBoundingClientRect().height;
-    const span = Math.max(minSpan, Math.ceil((height + rowGap) / (rowHeight + rowGap)));
+    const span = Math.max(minRowSpan, Math.ceil((height + rowGap) / (rowHeight + rowGap)));
     card.style.gridRowEnd = `span ${span}`;
   });
 }
