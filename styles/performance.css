@@ -10,44 +10,42 @@
 
 .equation-grid.is-progressive-masonry .equation-card {
   grid-column: span var(--col-span, 2) !important;
-  grid-row: span var(--row-span, 17) !important;
-  min-height: 0;
+  grid-row: span var(--row-span, 8);
+  min-height: 156px;
   height: auto;
   max-width: calc(100vw - 32px);
-  contain: layout paint style;
-  content-visibility: auto;
-  contain-intrinsic-size: 250px 190px;
+  overflow: visible;
+  contain: paint style;
 }
 
 .equation-grid.is-progressive-masonry .equation-card.size-2 {
-  contain-intrinsic-size: 382px 220px;
+  min-height: 168px;
 }
 
 .equation-grid.is-progressive-masonry .equation-card.size-3 {
-  contain-intrinsic-size: 500px 250px;
+  min-height: 184px;
+}
+
+.equation-grid.is-progressive-masonry .equation-card.is-multiline {
+  min-height: calc(126px + var(--formula-lines, 2) * 44px);
 }
 
 .equation-grid.is-progressive-masonry .equation-card h3 {
-  min-height: 2.65em;
+  min-height: 0;
   overflow-wrap: anywhere;
 }
 
 .equation-grid.is-progressive-masonry .equation-card .formula-box {
-  min-height: 76px;
-  overflow: hidden;
+  min-height: 0;
+  overflow: visible;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
 }
 
-.equation-grid.is-progressive-masonry .equation-card.size-2 .formula-box,
-.equation-grid.is-progressive-masonry .equation-card.size-3 .formula-box {
-  min-height: 94px;
-}
-
 .equation-grid.is-progressive-masonry .equation-card .formula-box mjx-container {
-  max-width: 100%;
-  overflow: hidden;
+  max-width: none;
+  overflow: visible;
 }
 
 .equation-grid.is-progressive-masonry .formula-stack {
