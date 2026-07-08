@@ -1,22 +1,30 @@
 .equation-grid.is-virtualized {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(236px, 1fr));
-  grid-auto-rows: auto;
-  grid-auto-flow: row;
-  align-items: stretch;
-  justify-content: stretch;
+  grid-template-columns: repeat(auto-fill, 118px);
+  grid-auto-rows: 18px;
+  grid-auto-flow: dense;
+  align-items: start;
+  justify-content: center;
   gap: 14px;
 }
 
 .equation-grid.is-virtualized .equation-card {
-  grid-column: auto !important;
-  grid-row: auto !important;
-  min-height: 200px;
-  height: 200px;
-  max-width: none;
+  grid-column: span var(--col-span, 2) !important;
+  grid-row: span var(--row-span, 16) !important;
+  min-height: 0;
+  height: auto;
+  max-width: calc(100vw - 32px);
   contain: layout paint style;
   content-visibility: auto;
-  contain-intrinsic-size: 236px 200px;
+  contain-intrinsic-size: 250px 190px;
+}
+
+.equation-grid.is-virtualized .equation-card.size-2 {
+  contain-intrinsic-size: 382px 214px;
+}
+
+.equation-grid.is-virtualized .equation-card.size-3 {
+  contain-intrinsic-size: 500px 238px;
 }
 
 .equation-grid.is-virtualized .virtual-grid-spacer {
@@ -26,33 +34,30 @@
 }
 
 .equation-grid.is-virtualized .equation-card h3 {
-  min-height: 2.8em;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+  min-height: 2.65em;
+  overflow-wrap: anywhere;
 }
 
 .equation-grid.is-virtualized .equation-card .formula-box {
-  min-height: 72px;
-  height: 72px;
+  min-height: 76px;
   overflow: hidden;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
 }
 
-.formula-card-text {
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+.equation-grid.is-virtualized .equation-card.size-2 .formula-box,
+.equation-grid.is-virtualized .equation-card.size-3 .formula-box {
+  min-height: 94px;
+}
+
+.equation-grid.is-virtualized .equation-card .formula-box mjx-container {
   max-width: 100%;
-  color: var(--text);
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
-  font-size: .9rem;
-  line-height: 1.28;
-  overflow-wrap: anywhere;
+  overflow: hidden;
+}
+
+.equation-grid.is-virtualized .formula-stack {
+  width: 100%;
 }
 
 @media (prefers-reduced-motion: reduce) {
