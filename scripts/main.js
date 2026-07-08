@@ -2,7 +2,7 @@ import { loadFormulaFiles } from "./formula-file-loader.js";
 import { state, setState } from "./state.js";
 import { $, unique } from "./utils.js";
 import { filterEquations } from "./filtering.js";
-import { renderEquationGrid, openEquationModal, closeEquationModal } from "./render-dynamic.js";
+import { renderEquationGrid, openEquationModal, closeEquationModal } from "./render-performance.js";
 import { initTheme } from "./theme.js";
 import "./formula-prompt-override.js";
 
@@ -11,6 +11,9 @@ let fields = ["Todas"];
 let levels = ["Todos"];
 let controlsReady = false;
 let renderQueued = false;
+let renderTimer = 0;
+let runtimeRefreshTimer = 0;
+let lastRenderedTotal = 0;
 
 async function boot() {
   showLoading("Preparando atlas", 2);
@@ -23,9 +26,8 @@ async function boot() {
   }
   window.FormulasAtlas = {
     equations,
-    refresh() {
-      syncDynamicCatalog(true);
-      scheduleRender();
+    refresh(options = {}) {
+      scheduleRuntimeRefresh(Boolean(options.force));
     },
     getAll() {
       return equations;
@@ -77,10 +79,7 @@ function bindEvents() {
   const searchControl = $("#searchControl");
   const formulaDisplaySelect = document.querySelector("#formulaDisplaySelect");
 
-  window.addEventListener("formulas:catalog-mutated", () => {
-    syncDynamicCatalog(true);
-    scheduleRender();
-  });
+  window.addEventListener("formulas:catalog-mutated", () => scheduleRuntimeRefresh(false));
 
   filterToggle.addEventListener("click", () => {
     const isOpen = !filterPanel.hidden;
@@ -156,20 +155,40 @@ function getSortLabelMode(sort) {
   return "none";
 }
 
-function scheduleRender() {
-  if (renderQueued) return;
-  renderQueued = true;
-  window.requestAnimationFrame(() => {
-    renderQueued = false;
+function scheduleRuntimeRefresh(force) {
+  window.clearTimeout(runtimeRefreshTimer);
+  runtimeRefreshTimer = window.setTimeout(() => {
+    runtimeRefreshTimer = 0;
+    const total = window.FormulasAtlas?.equations?.length || equations.length;
+    if (!force && total === lastRenderedTotal) return;
+    syncDynamicCatalog(true);
     renderAll();
-  });
+  }, 2200);
+}
+
+function scheduleRender() {
+  window.clearTimeout(renderTimer);
+  renderTimer = window.setTimeout(() => {
+    renderTimer = 0;
+    if (renderQueued) return;
+    renderQueued = true;
+    window.requestAnimationFrame(() => {
+      renderQueued = false;
+      renderAll();
+    });
+  }, 120);
 }
 
 function renderAll() {
+  if (renderTimer) {
+    window.clearTimeout(renderTimer);
+    renderTimer = 0;
+  }
   syncDynamicCatalog(false);
   const visible = filterEquations(equations, state);
   renderEquationGrid(visible, openEquationModal, state);
   updateVisibleCount(visible.length, equations.length);
+  lastRenderedTotal = equations.length;
 }
 
 function updateVisibleCount(visible, total) {
