@@ -1,41 +1,51 @@
-.equation-grid.is-progressive-masonry {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, 118px);
-  grid-auto-rows: 10px;
-  grid-auto-flow: dense;
-  align-items: start;
-  justify-content: center;
-  gap: 14px;
+.equation-grid.is-packed-masonry {
+  position: relative;
+  display: block;
+  min-height: 320px;
+  width: 100%;
 }
 
-.equation-grid.is-progressive-masonry .equation-card {
-  grid-column: span var(--col-span, 2) !important;
-  grid-row: span var(--row-span, 8);
+.equation-grid.is-packed-masonry .equation-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: var(--packed-width, 236px);
   min-height: 156px;
   height: auto;
   max-width: calc(100vw - 32px);
   overflow: visible;
   contain: paint style;
+  will-change: transform;
+  transition: opacity .18s ease, box-shadow .18s ease, border-color .18s ease, background .18s ease;
 }
 
-.equation-grid.is-progressive-masonry .equation-card.size-2 {
+.equation-grid.is-packed-masonry .equation-card:not(.is-packed) {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.equation-grid.is-packed-masonry .equation-card.is-packed {
+  opacity: 1;
+}
+
+.equation-grid.is-packed-masonry .equation-card.size-2 {
   min-height: 168px;
 }
 
-.equation-grid.is-progressive-masonry .equation-card.size-3 {
+.equation-grid.is-packed-masonry .equation-card.size-3 {
   min-height: 184px;
 }
 
-.equation-grid.is-progressive-masonry .equation-card.is-multiline {
+.equation-grid.is-packed-masonry .equation-card.is-multiline {
   min-height: calc(126px + var(--formula-lines, 2) * 44px);
 }
 
-.equation-grid.is-progressive-masonry .equation-card h3 {
+.equation-grid.is-packed-masonry .equation-card h3 {
   min-height: 0;
   overflow-wrap: anywhere;
 }
 
-.equation-grid.is-progressive-masonry .equation-card .formula-box {
+.equation-grid.is-packed-masonry .equation-card .formula-box {
   min-height: 0;
   overflow: visible;
   display: flex;
@@ -43,18 +53,21 @@
   justify-content: center;
 }
 
-.equation-grid.is-progressive-masonry .equation-card .formula-box mjx-container {
+.equation-grid.is-packed-masonry .equation-card .formula-box mjx-container {
   max-width: none;
   overflow: visible;
 }
 
-.equation-grid.is-progressive-masonry .formula-stack {
+.equation-grid.is-packed-masonry .formula-stack {
   width: 100%;
 }
 
-.equation-grid.is-progressive-masonry.is-loading-more::after {
+.equation-grid.is-packed-masonry.is-loading-more::after {
   content: "Cargando más fórmulas…";
-  grid-column: 1 / -1;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -48px;
   min-height: 44px;
   display: grid;
   place-items: center;
