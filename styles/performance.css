@@ -1,16 +1,16 @@
-.equation-grid.is-virtualized {
+.equation-grid.is-progressive-masonry {
   display: grid;
   grid-template-columns: repeat(auto-fill, 118px);
-  grid-auto-rows: 18px;
+  grid-auto-rows: 10px;
   grid-auto-flow: dense;
   align-items: start;
   justify-content: center;
   gap: 14px;
 }
 
-.equation-grid.is-virtualized .equation-card {
+.equation-grid.is-progressive-masonry .equation-card {
   grid-column: span var(--col-span, 2) !important;
-  grid-row: span var(--row-span, 16) !important;
+  grid-row: span var(--row-span, 17) !important;
   min-height: 0;
   height: auto;
   max-width: calc(100vw - 32px);
@@ -19,45 +19,49 @@
   contain-intrinsic-size: 250px 190px;
 }
 
-.equation-grid.is-virtualized .equation-card.size-2 {
-  contain-intrinsic-size: 382px 214px;
+.equation-grid.is-progressive-masonry .equation-card.size-2 {
+  contain-intrinsic-size: 382px 220px;
 }
 
-.equation-grid.is-virtualized .equation-card.size-3 {
-  contain-intrinsic-size: 500px 238px;
+.equation-grid.is-progressive-masonry .equation-card.size-3 {
+  contain-intrinsic-size: 500px 250px;
 }
 
-.equation-grid.is-virtualized .virtual-grid-spacer {
-  grid-column: 1 / -1;
-  pointer-events: none;
-  min-height: 0;
-}
-
-.equation-grid.is-virtualized .equation-card h3 {
+.equation-grid.is-progressive-masonry .equation-card h3 {
   min-height: 2.65em;
   overflow-wrap: anywhere;
 }
 
-.equation-grid.is-virtualized .equation-card .formula-box {
+.equation-grid.is-progressive-masonry .equation-card .formula-box {
   min-height: 76px;
   overflow: hidden;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
 }
 
-.equation-grid.is-virtualized .equation-card.size-2 .formula-box,
-.equation-grid.is-virtualized .equation-card.size-3 .formula-box {
+.equation-grid.is-progressive-masonry .equation-card.size-2 .formula-box,
+.equation-grid.is-progressive-masonry .equation-card.size-3 .formula-box {
   min-height: 94px;
 }
 
-.equation-grid.is-virtualized .equation-card .formula-box mjx-container {
+.equation-grid.is-progressive-masonry .equation-card .formula-box mjx-container {
   max-width: 100%;
   overflow: hidden;
 }
 
-.equation-grid.is-virtualized .formula-stack {
+.equation-grid.is-progressive-masonry .formula-stack {
   width: 100%;
+}
+
+.equation-grid.is-progressive-masonry.is-loading-more::after {
+  content: "Cargando más fórmulas…";
+  grid-column: 1 / -1;
+  min-height: 44px;
+  display: grid;
+  place-items: center;
+  color: var(--muted);
+  font-size: .88rem;
 }
 
 @media (prefers-reduced-motion: reduce) {
