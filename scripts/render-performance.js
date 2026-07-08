@@ -1,14 +1,14 @@
 import { requestMathTypeset } from "./utils.js";
 export { openEquationModal, closeEquationModal } from "./render-dynamic.js";
 
-const CARD_SLOT_WIDTH = 250;
-const CARD_ROW_HEIGHT = 18;
-const CARD_GAP = 14;
-const OVERSCAN_ROWS = 5;
+const FIRST_BATCH = 72;
+const NEXT_BATCH = 72;
+const IDLE_TIMEOUT = 180;
 
-let virtualState = null;
-let scrollBound = false;
-let renderScheduled = false;
+let activeRenderToken = 0;
+let activeSignature = "";
+let currentEquations = [];
+let currentOnOpen = null;
 
 const VARIABLE_LABELS = {
   "newton-second-law": { F: "fuerza", m: "masa", a: "aceleración" },
@@ -23,63 +23,50 @@ export function renderEquationGrid(equations, onOpen, viewState = {}) {
   if (!grid || !template) return;
 
   bindGridDelegation(grid);
-  bindViewportListeners();
+  currentEquations = equations;
+  currentOnOpen = onOpen;
+  grid.__equations = currentEquations;
+  grid.__onOpen = currentOnOpen;
 
-  grid.__equations = equations;
-  grid.__onOpen = onOpen;
-  grid.classList.add("is-virtualized");
+  const signature = buildSignature(equations, viewState);
+  if (signature === activeSignature) return;
+  activeSignature = signature;
+
+  const token = ++activeRenderToken;
+  grid.classList.remove("is-virtualized");
+  grid.classList.add("is-progressive-masonry");
   grid.textContent = "";
 
   if (!equations.length) {
-    virtualState = null;
-    grid.classList.remove("is-virtualized");
+    grid.classList.remove("is-progressive-masonry", "is-loading-more");
     grid.innerHTML = '<div class="empty-state">No hay ecuaciones que coincidan con los filtros actuales.</div>';
     return;
   }
 
-  virtualState = {
-    equations,
-    viewState,
-    template,
-    grid,
-    columns: getColumnCount(grid),
-    start: -1,
-    end: -1
-  };
-
-  updateVirtualGrid(true);
+  appendBatch({ grid, template, equations, viewState, token, start: 0, size: FIRST_BATCH });
 }
 
-function updateVirtualGrid(force = false) {
-  if (!virtualState) return;
-  const { grid, equations, viewState, template } = virtualState;
-  const columns = getColumnCount(grid);
-  const rowPitch = CARD_ROW_HEIGHT + CARD_GAP;
-  const viewportTop = Math.max(0, window.scrollY - pageTop(grid));
-  const viewportBottom = viewportTop + window.innerHeight;
-  const approxRows = Math.ceil(equations.length / columns);
-  const startRow = Math.max(0, Math.floor(viewportTop / rowPitch) - OVERSCAN_ROWS);
-  const endRow = Math.min(approxRows, Math.ceil(viewportBottom / rowPitch) + OVERSCAN_ROWS);
-  const start = Math.max(0, startRow * columns);
-  const end = Math.min(equations.length, endRow * columns);
-
-  if (!force && virtualState.columns === columns && virtualState.start === start && virtualState.end === end) return;
-  virtualState.columns = columns;
-  virtualState.start = start;
-  virtualState.end = end;
-
+function appendBatch({ grid, template, equations, viewState, token, start, size }) {
+  if (token !== activeRenderToken) return;
+  const end = Math.min(equations.length, start + size);
   const fragment = document.createDocumentFragment();
-  fragment.appendChild(spacer(startRow * rowPitch, "top"));
   const mathTargets = [];
+
   for (let index = start; index < end; index += 1) {
     const card = buildCard(equations[index], index, template, viewState);
     fragment.appendChild(card);
     if (!card.classList.contains("formula-explained-mode")) mathTargets.push(card);
   }
-  fragment.appendChild(spacer(Math.max(0, (approxRows - endRow) * rowPitch), "bottom"));
 
-  grid.replaceChildren(fragment);
+  grid.appendChild(fragment);
   if (mathTargets.length) requestMathTypeset(mathTargets);
+
+  if (end < equations.length) {
+    grid.classList.add("is-loading-more");
+    scheduleIdle(() => appendBatch({ grid, template, equations, viewState, token, start: end, size: NEXT_BATCH }));
+  } else {
+    grid.classList.remove("is-loading-more");
+  }
 }
 
 function buildCard(eq, index, template, viewState) {
@@ -137,36 +124,17 @@ function bindGridDelegation(grid) {
   });
 }
 
-function bindViewportListeners() {
-  if (scrollBound) return;
-  scrollBound = true;
-  window.addEventListener("scroll", scheduleVirtualUpdate, { passive: true });
-  window.addEventListener("resize", () => updateVirtualGrid(true));
+function scheduleIdle(callback) {
+  if ("requestIdleCallback" in window) {
+    window.requestIdleCallback(callback, { timeout: IDLE_TIMEOUT });
+  } else {
+    window.setTimeout(callback, 32);
+  }
 }
 
-function scheduleVirtualUpdate() {
-  if (renderScheduled) return;
-  renderScheduled = true;
-  window.requestAnimationFrame(() => {
-    renderScheduled = false;
-    updateVirtualGrid(false);
-  });
-}
-
-function spacer(height, kind) {
-  const node = document.createElement("div");
-  node.className = `virtual-grid-spacer virtual-grid-spacer-${kind}`;
-  node.style.height = `${Math.round(height)}px`;
-  return node;
-}
-
-function getColumnCount(grid) {
-  const width = Math.max(1, grid.clientWidth || grid.getBoundingClientRect().width || window.innerWidth);
-  return Math.max(1, Math.floor((width + CARD_GAP) / CARD_SLOT_WIDTH));
-}
-
-function pageTop(element) {
-  return element.getBoundingClientRect().top + window.scrollY;
+function buildSignature(equations, viewState) {
+  const ids = equations.map(eq => eq.id || eq.name).join("|");
+  return `${viewState.formulaDisplay || "symbolic"}::${viewState.sort || ""}::${viewState.field || ""}::${viewState.level || ""}::${viewState.query || ""}::${viewState.cardLabelMode || ""}::${ids}`;
 }
 
 function normalizeExplainedFormula(value) {
@@ -232,14 +200,14 @@ function contextColor(eq, mode) {
 
 function getWidthLevel(lines) {
   const length = Math.max(1, ...asList(lines).map(line => String(line).length));
-  if (length > 120) return 3;
-  if (length > 64) return 2;
+  if (length > 112) return 3;
+  if (length > 58) return 2;
   return 1;
 }
 
 function getColumnSpan(level) { return { 1: 2, 2: 3, 3: 4 }[level] || 2; }
 function getRowSpan(level, lines, mode) {
-  const base = { 1: 16, 2: 18, 3: 20 }[level] || 16;
+  const base = { 1: 17, 2: 20, 3: 23 }[level] || 17;
   const extraLines = Math.max(0, Number(lines || 1) - 1) * 5;
   const explained = mode === "explained" ? 2 : 0;
   return base + extraLines + explained;
