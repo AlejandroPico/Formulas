@@ -5,9 +5,15 @@ const FIRST_BATCH = 72;
 const NEXT_BATCH = 72;
 const IDLE_TIMEOUT = 180;
 const PERFORMANCE_STYLESHEET = "styles/performance.css";
+const BASE_COLUMN_WIDTH = 118;
+const GAP = 14;
+const MIN_CARD_SPAN = 2;
+const MAX_CARD_SPAN = 6;
 
 let activeRenderToken = 0;
 let activeSignature = "";
+let layoutQueued = false;
+let resizeBound = false;
 
 const VARIABLE_LABELS = {
   "newton-second-law": { F: "fuerza", m: "masa", a: "aceleración" },
@@ -18,6 +24,8 @@ const VARIABLE_LABELS = {
 
 export function renderEquationGrid(equations, onOpen, viewState = {}) {
   ensurePerformanceStyles();
+  bindGlobalLayoutEvents();
+
   const grid = document.querySelector("#equationGrid");
   const template = document.querySelector("#equationCardTemplate");
   if (!grid || !template) return;
@@ -31,11 +39,14 @@ export function renderEquationGrid(equations, onOpen, viewState = {}) {
   activeSignature = signature;
 
   const token = ++activeRenderToken;
-  grid.classList.add("is-progressive-masonry");
+  grid.classList.remove("is-progressive-masonry");
+  grid.classList.add("is-packed-masonry");
   grid.textContent = "";
+  grid.style.height = "0px";
 
   if (!equations.length) {
-    grid.classList.remove("is-progressive-masonry", "is-loading-more");
+    grid.classList.remove("is-packed-masonry", "is-loading-more");
+    grid.removeAttribute("style");
     grid.innerHTML = '<div class="empty-state">No hay ecuaciones que coincidan con los filtros actuales.</div>';
     return;
   }
@@ -56,6 +67,7 @@ function appendBatch({ grid, template, equations, viewState, token, start, size 
   }
 
   grid.appendChild(fragment);
+  schedulePackedLayout();
   if (mathTargets.length) requestMathTypeset(mathTargets);
 
   if (end < equations.length) {
@@ -74,15 +86,122 @@ function buildCard(eq, index, template, viewState) {
   card.classList.toggle("is-multiline", display.formulas.length > 1);
   card.classList.toggle("formula-explained-mode", display.mode === "explained");
   card.dataset.eqIndex = String(index);
+  card.dataset.widthLevel = String(widthLevel);
   card.style.setProperty("--formula-lines", display.formulas.length || 1);
-  card.style.setProperty("--col-span", getColumnSpan(widthLevel));
-  card.style.setProperty("--row-span", getInitialRowSpan(widthLevel, display.formulas.length, display.mode));
   card.style.setProperty("--context-color", contextColor(eq, viewState.cardLabelMode));
   card.setAttribute("role", "button");
   card.setAttribute("aria-label", `Abrir ficha de ${eq.name}`);
   card.querySelector("h3").innerHTML = cardTitle(eq, viewState.cardLabelMode);
   card.querySelector(".formula-box").innerHTML = renderFormulaDisplay(display);
   return card;
+}
+
+function schedulePackedLayout() {
+  if (layoutQueued) return;
+  layoutQueued = true;
+  window.requestAnimationFrame(() => {
+    layoutQueued = false;
+    layoutPackedMasonry();
+  });
+}
+
+function layoutPackedMasonry() {
+  const grid = document.querySelector("#equationGrid.is-packed-masonry");
+  if (!grid) return;
+
+  const cards = [...grid.querySelectorAll(".equation-card")];
+  if (!cards.length) {
+    grid.style.height = "0px";
+    return;
+  }
+
+  const columnCount = getColumnCount(grid);
+  const packedWidth = columnCount * BASE_COLUMN_WIDTH + (columnCount - 1) * GAP;
+  const leftOffset = Math.max(0, Math.floor((grid.clientWidth - packedWidth) / 2));
+  const columnHeights = Array(columnCount).fill(0);
+
+  cards.forEach(card => {
+    const span = Math.min(columnCount, Math.max(MIN_CARD_SPAN, getMeasuredColumnSpan(card, columnCount)));
+    const width = span * BASE_COLUMN_WIDTH + (span - 1) * GAP;
+    card.style.width = `${width}px`;
+    card.style.setProperty("--packed-width", `${width}px`);
+
+    const height = Math.ceil(card.getBoundingClientRect().height || card.offsetHeight || 160);
+    const slot = findBestSlot(columnHeights, span);
+    const x = leftOffset + slot.column * (BASE_COLUMN_WIDTH + GAP);
+    const y = slot.y;
+
+    card.style.transform = `translate3d(${x}px, ${y}px, 0)`;
+    card.style.setProperty("--packed-x", `${x}px`);
+    card.style.setProperty("--packed-y", `${y}px`);
+    card.classList.add("is-packed");
+
+    const nextHeight = y + height + GAP;
+    for (let i = slot.column; i < slot.column + span; i += 1) columnHeights[i] = nextHeight;
+  });
+
+  const totalHeight = Math.max(...columnHeights, 0);
+  grid.style.height = `${Math.ceil(totalHeight)}px`;
+}
+
+function getColumnCount(grid) {
+  const width = Math.max(1, grid.clientWidth || window.innerWidth);
+  return Math.max(1, Math.floor((width + GAP) / (BASE_COLUMN_WIDTH + GAP)));
+}
+
+function findBestSlot(columnHeights, span) {
+  let bestColumn = 0;
+  let bestY = Number.POSITIVE_INFINITY;
+  for (let column = 0; column <= columnHeights.length - span; column += 1) {
+    const y = Math.max(...columnHeights.slice(column, column + span));
+    if (y < bestY) {
+      bestY = y;
+      bestColumn = column;
+    }
+  }
+  return { column: bestColumn, y: Number.isFinite(bestY) ? bestY : 0 };
+}
+
+function getMeasuredColumnSpan(card, maxColumns) {
+  const formulaBox = card.querySelector(".formula-box");
+  const formulaWidth = getFormulaWidth(formulaBox);
+  const titleWidth = getTitleWidth(card);
+  const baseLevel = Number(card.dataset.widthLevel || 1);
+  const desiredWidth = Math.max(
+    220,
+    titleWidth + 46,
+    formulaWidth + 58,
+    baseLevel === 2 ? 330 : 0,
+    baseLevel === 3 ? 462 : 0
+  );
+  const span = Math.ceil((desiredWidth + GAP) / (BASE_COLUMN_WIDTH + GAP));
+  return clamp(span, MIN_CARD_SPAN, Math.min(MAX_CARD_SPAN, maxColumns));
+}
+
+function getFormulaWidth(formulaBox) {
+  if (!formulaBox) return 220;
+  const nodes = [
+    ...formulaBox.querySelectorAll("mjx-container"),
+    ...formulaBox.querySelectorAll(".formula-stack > div"),
+    ...formulaBox.querySelectorAll(".formula-words-row")
+  ];
+  const widths = nodes.map(node => getUnscaledWidth(node)).filter(Boolean);
+  return Math.max(formulaBox.scrollWidth || 0, ...widths, 160);
+}
+
+function getTitleWidth(card) {
+  const title = card.querySelector("h3");
+  if (!title) return 0;
+  return Math.min(520, title.scrollWidth || getUnscaledWidth(title) || 0);
+}
+
+function getUnscaledWidth(node) {
+  if (!node) return 0;
+  const previousTransform = node.style.transform;
+  node.style.transform = "none";
+  const width = node.getBoundingClientRect().width || node.scrollWidth || 0;
+  node.style.transform = previousTransform;
+  return width;
 }
 
 function getDisplayFormula(eq, mode) {
@@ -135,6 +254,13 @@ function ensurePerformanceStyles() {
   link.rel = "stylesheet";
   link.href = PERFORMANCE_STYLESHEET;
   document.head.appendChild(link);
+}
+
+function bindGlobalLayoutEvents() {
+  if (resizeBound) return;
+  resizeBound = true;
+  window.addEventListener("formulas:math-typeset", schedulePackedLayout);
+  window.addEventListener("resize", schedulePackedLayout);
 }
 
 function buildSignature(equations, viewState) {
@@ -210,13 +336,7 @@ function getWidthLevel(lines) {
   return 1;
 }
 
-function getColumnSpan(level) { return { 1: 2, 2: 3, 3: 4 }[level] || 2; }
-function getInitialRowSpan(level, lines, mode) {
-  const base = { 1: 8, 2: 9, 3: 10 }[level] || 8;
-  const extraLines = Math.max(0, Number(lines || 1) - 1) * 2;
-  const explained = mode === "explained" ? 1 : 0;
-  return base + extraLines + explained;
-}
+function clamp(value, min, max) { return Math.max(min, Math.min(max, value)); }
 function asList(value) { return Array.isArray(value) ? value.filter(Boolean) : value ? [value] : []; }
 function escapeRegExp(value) { return String(value).replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); }
 function escapeHtml(value) { return String(value).replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;").replaceAll("'", "&#39;"); }
