@@ -4,6 +4,7 @@ export { openEquationModal, closeEquationModal } from "./render-dynamic.js";
 const FIRST_BATCH = 72;
 const NEXT_BATCH = 72;
 const IDLE_TIMEOUT = 180;
+const PERFORMANCE_STYLESHEET = "styles/performance.css";
 
 let activeRenderToken = 0;
 let activeSignature = "";
@@ -16,6 +17,7 @@ const VARIABLE_LABELS = {
 };
 
 export function renderEquationGrid(equations, onOpen, viewState = {}) {
+  ensurePerformanceStyles();
   const grid = document.querySelector("#equationGrid");
   const template = document.querySelector("#equationCardTemplate");
   if (!grid || !template) return;
@@ -125,6 +127,14 @@ function scheduleIdle(callback) {
   } else {
     window.setTimeout(callback, 32);
   }
+}
+
+function ensurePerformanceStyles() {
+  if (document.querySelector(`link[href="${PERFORMANCE_STYLESHEET}"]`)) return;
+  const link = document.createElement("link");
+  link.rel = "stylesheet";
+  link.href = PERFORMANCE_STYLESHEET;
+  document.head.appendChild(link);
 }
 
 function buildSignature(equations, viewState) {
