@@ -157,7 +157,7 @@ function scheduleRuntimeRefresh(force) {
     if (!force && total === lastRenderedTotal) return;
     syncDynamicCatalog(true);
     renderAll();
-  }, 650);
+  }, 2200);
 }
 
 function scheduleRender() {
