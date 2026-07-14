@@ -19,7 +19,7 @@
   <link rel="stylesheet" href="styles/card-refresh.css" />
   <link rel="stylesheet" href="styles/card-context-labels.css" />
   <link rel="stylesheet" href="styles/card-fit-guard.css" />
-  <link rel="stylesheet" href="styles/performance.css" />
+  <link rel="stylesheet" href="styles/performance.css?v=20260715a" />
   <link rel="stylesheet" href="styles/thematic-modes.css" />
   <link rel="stylesheet" href="styles/thematic-extra-modes.css" />
   <link rel="stylesheet" href="styles/terminal-variants.css" />
@@ -33,13 +33,14 @@
   <script>
     window.MathJax = {
       options: { enableMenu: false },
+      startup: { typeset: false },
       tex: { inlineMath: [['\\(', '\\)'], ['$', '$']] },
       svg: { fontCache: 'global' }
     };
   </script>
   <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
 </head>
-<body data-theme="auto">
+<body data-theme="auto" data-layout-build="measured-mosaic-20260715a">
   <div class="orbital-bg" aria-hidden="true">
     <span></span><span></span><span></span>
   </div>
@@ -91,14 +92,8 @@
         <option value="level">Nivel educativo</option>
       </select>
     </label>
-    <label>
-      <span>Área</span>
-      <select id="fieldSelect" aria-label="Filtrar por área científica"></select>
-    </label>
-    <label>
-      <span>Nivel</span>
-      <select id="levelSelect" aria-label="Filtrar por nivel educativo"></select>
-    </label>
+    <label><span>Área</span><select id="fieldSelect" aria-label="Filtrar por área científica"></select></label>
+    <label><span>Nivel</span><select id="levelSelect" aria-label="Filtrar por nivel educativo"></select></label>
   </aside>
 
   <main class="app-shell">
@@ -117,15 +112,9 @@
     </article>
   </template>
 
-  <script type="module" src="scripts/main.js"></script>
-  <script type="module" src="scripts/catalog-tools.js"></script>
+  <script type="module" src="scripts/main.js?v=20260715a"></script>
+  <script type="module" src="scripts/catalog-tools.js?v=20260715a"></script>
   <script type="module" src="scripts/introduced-order-tools.js"></script>
-  <script type="module" src="scripts/latest-formula-batch.js"></script>
-  <script type="module" src="scripts/latest-formula-batch-2.js"></script>
-  <script type="module" src="scripts/latest-formula-batch-3.js"></script>
-  <script type="module" src="scripts/latest-formula-batch-4.js"></script>
-  <script type="module" src="scripts/latest-formula-batch-5.js"></script>
-  <script type="module" src="scripts/latest-formula-batch-6.js"></script>
   <script type="module" src="scripts/latest-formula-batch-7.js"></script>
   <script type="module" src="scripts/latest-formula-batch-8.js"></script>
   <script type="module" src="scripts/latest-formula-batch-9.js"></script>
@@ -137,9 +126,9 @@
   <script type="module" src="scripts/latest-formula-batch-15.js"></script>
   <script type="module" src="scripts/latest-formula-batch-16.js"></script>
   <script type="module" src="scripts/latest-formula-batch-17.js"></script>
-  <script type="module" src="scripts/dynamic-catalog-refresh.js?v=20260706a"></script>
+  <script type="module" src="scripts/dynamic-catalog-refresh.js?v=20260715a"></script>
   <script type="module" src="scripts/latest-formula-batch-25.js?v=20260705t"></script>
-  <script type="module" src="scripts/latest-formula-batch-26.js?v=20260705u"></script>
+  <script type="module" src="scripts/latest-formula-batch-26.js?v=20260715a"></script>
   <script type="module" src="scripts/latest-formula-batch-27.js?v=20260705v"></script>
   <script type="module" src="scripts/latest-formula-batch-28.js?v=20260705w"></script>
   <script type="module" src="scripts/latest-formula-batch-29.js?v=20260705x"></script>
@@ -150,7 +139,5 @@
   <script type="module" src="scripts/thematic-card-variants.js"></script>
   <script type="module" src="scripts/modal-enhancements.js"></script>
   <script type="module" src="scripts/formula-tooltip-boot.js"></script>
-  <script type="module" src="scripts/formula-explained-polish.js"></script>
-  <script type="module" src="scripts/formula-symbolic-mathjax-fix.js"></script>
 </body>
 </html>
