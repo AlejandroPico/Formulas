@@ -1,9 +1,7 @@
 export const $ = (selector, root = document) => root.querySelector(selector);
 export const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
 
-let mathRenderQueued = false;
-let mathRenderRunning = false;
-let mathQueue = new Set();
+let mathChain = Promise.resolve();
 
 export function normalizeText(value) {
   return String(value ?? "")
@@ -17,37 +15,47 @@ export function unique(values) {
 }
 
 export function requestMathTypeset(target = document.body) {
-  collectMathTargets(target).forEach(node => mathQueue.add(node));
-  if (mathRenderQueued) return;
-  mathRenderQueued = true;
+  const requested = collectMathTargets(target);
+  const task = async () => {
+    const mathJax = await waitForMathJax();
+    const targets = requested.filter(node => node?.isConnected);
+    if (!targets.length || !mathJax?.typesetPromise) return targets;
 
-  const run = () => {
-    mathRenderQueued = false;
-    if (mathRenderRunning || !window.MathJax?.typesetPromise) return;
-    const targets = [...mathQueue].filter(node => node?.isConnected);
-    mathQueue.clear();
-    if (!targets.length) return;
-    mathRenderRunning = true;
-    window.MathJax.typesetPromise(targets)
-      .catch(() => {})
-      .finally(() => {
-        mathRenderRunning = false;
-        window.dispatchEvent(new CustomEvent("formulas:math-typeset", { detail: { targets } }));
-        if (mathQueue.size) requestMathTypeset([]);
-      });
+    await mathJax.typesetPromise(targets);
+    window.dispatchEvent(new CustomEvent("formulas:math-typeset", { detail: { targets } }));
+    return targets;
   };
 
-  if (window.MathJax?.typesetPromise) {
-    window.requestAnimationFrame(run);
-    return;
-  }
+  mathChain = mathChain.then(task, task);
+  return mathChain;
+}
 
-  window.addEventListener("load", () => window.setTimeout(run, 80), { once: true });
+async function waitForMathJax() {
+  if (window.MathJax?.startup?.promise) {
+    try { await window.MathJax.startup.promise; } catch { /* MathJax informará después */ }
+  }
+  if (window.MathJax?.typesetPromise) return window.MathJax;
+
+  return new Promise(resolve => {
+    const startedAt = performance.now();
+    const poll = () => {
+      if (window.MathJax?.typesetPromise) {
+        resolve(window.MathJax);
+        return;
+      }
+      if (performance.now() - startedAt > 10000) {
+        resolve(window.MathJax || null);
+        return;
+      }
+      window.setTimeout(poll, 40);
+    };
+    poll();
+  });
 }
 
 function collectMathTargets(target) {
   if (!target) return [];
-  if (Array.isArray(target)) return target.filter(Boolean);
-  if (target instanceof NodeList || target instanceof HTMLCollection) return [...target].filter(Boolean);
+  if (Array.isArray(target)) return [...new Set(target.filter(Boolean))];
+  if (target instanceof NodeList || target instanceof HTMLCollection) return [...new Set([...target].filter(Boolean))];
   return [target];
 }
