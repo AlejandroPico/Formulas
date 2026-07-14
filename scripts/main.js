@@ -1,8 +1,8 @@
 import { loadFormulaFiles } from "./formula-file-loader.js";
 import { state, setState } from "./state.js";
-import { $, unique } from "./utils.js";
+import { $, unique } from "./utils.js?v=20260715a";
 import { filterEquations } from "./filtering.js";
-import { renderEquationGrid, openEquationModal, closeEquationModal } from "./render-performance.js";
+import { renderEquationGrid, openEquationModal, closeEquationModal } from "./render-performance.js?v=20260715a";
 import { initTheme } from "./theme.js";
 import "./formula-prompt-override.js";
 
@@ -14,6 +14,7 @@ let renderQueued = false;
 let renderTimer = 0;
 let runtimeRefreshTimer = 0;
 let lastRenderedTotal = 0;
+let loadingHidden = false;
 
 async function boot() {
   showLoading("Preparando atlas", 2);
@@ -24,6 +25,7 @@ async function boot() {
     equations = [];
     updateLoading({ message: "No se pudo escanear formulas", value: 12 });
   }
+
   window.FormulasAtlas = {
     equations,
     refresh(options = {}) {
@@ -31,13 +33,16 @@ async function boot() {
     },
     getAll() { return equations; }
   };
+
   window.dispatchEvent(new CustomEvent("formulas:catalog-ready", { detail: { equations } }));
   syncDynamicCatalog(false);
   initTheme($("#themeToggle"));
   initFilterControls();
   bindEvents();
+
+  window.addEventListener("formulas:first-layout-ready", hideLoading, { once: true });
   renderAll();
-  hideLoading();
+  window.setTimeout(hideLoading, 1800);
 }
 
 function syncDynamicCatalog(updateControls = false) {
@@ -121,16 +126,19 @@ function bindEvents() {
     else setState({ sort: selectedSort, cardLabelMode: getSortLabelMode(selectedSort) });
     renderAll();
   });
+
   $("#fieldSelect").addEventListener("change", event => {
     const field = event.target.value;
     setState({ field, cardLabelMode: field === "Todas" ? state.cardLabelMode : "field" });
     renderAll();
   });
+
   $("#levelSelect").addEventListener("change", event => {
     const level = event.target.value;
     setState({ level, cardLabelMode: level === "Todos" ? state.cardLabelMode : "level" });
     renderAll();
   });
+
   formulaDisplaySelect?.addEventListener("change", event => {
     setState({ formulaDisplay: event.target.value });
     renderAll();
@@ -157,7 +165,7 @@ function scheduleRuntimeRefresh(force) {
     if (!force && total === lastRenderedTotal) return;
     syncDynamicCatalog(true);
     renderAll();
-  }, 2200);
+  }, 700);
 }
 
 function scheduleRender() {
@@ -170,7 +178,7 @@ function scheduleRender() {
       renderQueued = false;
       renderAll();
     });
-  }, 80);
+  }, 90);
 }
 
 function renderAll() {
@@ -194,7 +202,7 @@ function updateLoading({ message, value }) { showLoading(message, value); }
 
 function showLoading(message, value = 0) {
   const overlay = document.querySelector("#loadingOverlay");
-  if (!overlay) return;
+  if (!overlay || loadingHidden) return;
   const status = overlay.querySelector("#loadingStatus");
   const bar = overlay.querySelector("#loadingProgressBar");
   overlay.hidden = false;
@@ -203,6 +211,8 @@ function showLoading(message, value = 0) {
 }
 
 function hideLoading() {
+  if (loadingHidden) return;
+  loadingHidden = true;
   const overlay = document.querySelector("#loadingOverlay");
   if (!overlay) return;
   overlay.classList.add("leaving");
