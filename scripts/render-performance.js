@@ -4,12 +4,12 @@ export { openEquationModal, closeEquationModal } from "./render-dynamic.js";
 const FIRST_BATCH = 48;
 const NEXT_BATCH = 48;
 const IDLE_TIMEOUT = 220;
-const CELL = 10;
 const GAP = 14;
 const MIN_CARD_WIDTH = 220;
-const MAX_CARD_WIDTH = 820;
+const MAX_CARD_WIDTH = 960;
 const CARD_HORIZONTAL_PADDING = 48;
 const MIN_FORMULA_SCALE = 0.72;
+const VIRTUAL_CANVAS_HEIGHT = 1000000;
 
 let activeRenderToken = 0;
 let activeSignature = "";
@@ -40,7 +40,7 @@ export function renderEquationGrid(equations, onOpen, viewState = {}) {
 
   const token = ++activeRenderToken;
   grid.className = "equation-grid is-measured-mosaic";
-  grid.dataset.layoutEngine = "measured-skyline-v2";
+  grid.dataset.layoutEngine = "measured-maxrects-v3";
   grid.replaceChildren();
   grid.style.height = "0px";
 
@@ -58,15 +58,15 @@ export function renderEquationGrid(equations, onOpen, viewState = {}) {
 }
 
 function createLayoutState(grid, template, equations, viewState, token) {
-  const columns = Math.max(1, Math.floor(Math.max(1, grid.clientWidth) / CELL));
+  const width = Math.max(1, grid.clientWidth);
   return {
     grid,
     template,
     equations,
     viewState,
     token,
-    columns,
-    columnHeights: new Float64Array(columns),
+    width,
+    freeRects: [{ x: 0, y: 0, width, height: VIRTUAL_CANVAS_HEIGHT }],
     maxHeight: 0,
     placedCards: []
   };
@@ -127,7 +127,7 @@ function measureAndPlaceCard(state, card) {
   const desiredWidth = Math.max(
     MIN_CARD_WIDTH,
     formulaWidth + CARD_HORIZONTAL_PADDING,
-    Math.min(480, titleWidth + CARD_HORIZONTAL_PADDING)
+    Math.min(520, titleWidth + CARD_HORIZONTAL_PADDING)
   );
   const finalWidth = Math.min(maxWidth, Math.ceil(desiredWidth));
   const formulaScale = formulaWidth + CARD_HORIZONTAL_PADDING > finalWidth
@@ -140,46 +140,103 @@ function measureAndPlaceCard(state, card) {
   card.classList.add("is-sized");
 
   const height = Math.ceil(card.getBoundingClientRect().height || card.offsetHeight || 150);
-  const span = Math.min(state.columns, Math.max(1, Math.ceil((finalWidth + GAP) / CELL)));
-  const slot = findBestSkylineSlot(state.columnHeights, span);
-  const usableWidth = state.columns * CELL;
-  const offsetX = Math.max(0, Math.floor((state.grid.clientWidth - usableWidth) / 2));
-  const x = offsetX + slot.column * CELL;
-  const y = slot.y;
-  const nextHeight = y + height + GAP;
+  const packedWidth = Math.min(state.width, finalWidth + GAP);
+  const packedHeight = height + GAP;
+  const slot = findBestFreeRectangle(state.freeRects, packedWidth, packedHeight)
+    || { x: 0, y: state.maxHeight, width: state.width, height: VIRTUAL_CANVAS_HEIGHT - state.maxHeight };
+  const used = { x: slot.x, y: slot.y, width: packedWidth, height: packedHeight };
 
-  for (let column = slot.column; column < slot.column + span; column += 1) {
-    state.columnHeights[column] = nextHeight;
-  }
-  state.maxHeight = Math.max(state.maxHeight, nextHeight);
+  state.freeRects = splitAndPruneFreeRectangles(state.freeRects, used);
+  state.maxHeight = Math.max(state.maxHeight, used.y + used.height);
   state.placedCards.push(card);
 
-  card.style.transform = `translate3d(${x}px, ${y}px, 0)`;
+  card.style.transform = `translate3d(${used.x}px, ${used.y}px, 0)`;
   card.dataset.cardWidth = String(finalWidth);
   card.dataset.cardHeight = String(height);
   card.classList.add("is-placed");
 }
 
-function findBestSkylineSlot(heights, span) {
-  let bestColumn = 0;
+function findBestFreeRectangle(freeRects, width, height) {
+  let best = null;
   let bestY = Number.POSITIVE_INFINITY;
-  let bestWaste = Number.POSITIVE_INFINITY;
+  let bestShortSide = Number.POSITIVE_INFINITY;
+  let bestArea = Number.POSITIVE_INFINITY;
 
-  for (let column = 0; column <= heights.length - span; column += 1) {
-    let y = 0;
-    for (let i = column; i < column + span; i += 1) y = Math.max(y, heights[i]);
-
-    let waste = 0;
-    for (let i = column; i < column + span; i += 1) waste += y - heights[i];
-
-    if (y < bestY || (y === bestY && waste < bestWaste)) {
-      bestColumn = column;
-      bestY = y;
-      bestWaste = waste;
+  for (const rect of freeRects) {
+    if (width > rect.width || height > rect.height) continue;
+    const shortSide = Math.min(rect.width - width, rect.height - height);
+    const area = rect.width * rect.height - width * height;
+    if (
+      rect.y < bestY
+      || (rect.y === bestY && shortSide < bestShortSide)
+      || (rect.y === bestY && shortSide === bestShortSide && area < bestArea)
+      || (rect.y === bestY && shortSide === bestShortSide && area === bestArea && rect.x < (best?.x ?? Number.POSITIVE_INFINITY))
+    ) {
+      best = rect;
+      bestY = rect.y;
+      bestShortSide = shortSide;
+      bestArea = area;
     }
   }
 
-  return { column: bestColumn, y: Number.isFinite(bestY) ? bestY : 0 };
+  return best;
+}
+
+function splitAndPruneFreeRectangles(freeRects, used) {
+  const split = [];
+  for (const free of freeRects) {
+    if (!rectanglesIntersect(free, used)) {
+      split.push(free);
+      continue;
+    }
+
+    const freeRight = free.x + free.width;
+    const freeBottom = free.y + free.height;
+    const usedRight = used.x + used.width;
+    const usedBottom = used.y + used.height;
+
+    if (used.x > free.x) split.push({ x: free.x, y: free.y, width: used.x - free.x, height: free.height });
+    if (usedRight < freeRight) split.push({ x: usedRight, y: free.y, width: freeRight - usedRight, height: free.height });
+    if (used.y > free.y) split.push({ x: free.x, y: free.y, width: free.width, height: used.y - free.y });
+    if (usedBottom < freeBottom) split.push({ x: free.x, y: usedBottom, width: free.width, height: freeBottom - usedBottom });
+  }
+
+  return pruneContainedRectangles(split.filter(rect => rect.width >= 1 && rect.height >= 1));
+}
+
+function rectanglesIntersect(a, b) {
+  return a.x < b.x + b.width
+    && a.x + a.width > b.x
+    && a.y < b.y + b.height
+    && a.y + a.height > b.y;
+}
+
+function pruneContainedRectangles(rectangles) {
+  const result = [];
+  for (let i = 0; i < rectangles.length; i += 1) {
+    const candidate = rectangles[i];
+    let contained = false;
+    for (let j = 0; j < rectangles.length; j += 1) {
+      if (i === j) continue;
+      if (containsRectangle(rectangles[j], candidate)) {
+        contained = true;
+        break;
+      }
+    }
+    if (!contained && !result.some(rect => sameRectangle(rect, candidate))) result.push(candidate);
+  }
+  return result;
+}
+
+function containsRectangle(outer, inner) {
+  return inner.x >= outer.x
+    && inner.y >= outer.y
+    && inner.x + inner.width <= outer.x + outer.width
+    && inner.y + inner.height <= outer.y + outer.height;
+}
+
+function sameRectangle(a, b) {
+  return a.x === b.x && a.y === b.y && a.width === b.width && a.height === b.height;
 }
 
 function measureFormulaWidth(card) {
@@ -218,8 +275,8 @@ function updateGridHeight(state) {
 function repackVisibleCards() {
   if (!layoutState || !isActive(layoutState)) return;
   const state = layoutState;
-  state.columns = Math.max(1, Math.floor(Math.max(1, state.grid.clientWidth) / CELL));
-  state.columnHeights = new Float64Array(state.columns);
+  state.width = Math.max(1, state.grid.clientWidth);
+  state.freeRects = [{ x: 0, y: 0, width: state.width, height: VIRTUAL_CANVAS_HEIGHT }];
   state.maxHeight = 0;
   state.placedCards = [];
   const cards = [...state.grid.querySelectorAll(".equation-card.is-sized")];
