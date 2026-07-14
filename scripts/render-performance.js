@@ -40,7 +40,7 @@ export function renderEquationGrid(equations, onOpen, viewState = {}) {
 
   const token = ++activeRenderToken;
   grid.className = "equation-grid is-measured-mosaic";
-  grid.dataset.layoutEngine = "measured-mosaic-v1";
+  grid.dataset.layoutEngine = "measured-skyline-v2";
   grid.replaceChildren();
   grid.style.height = "0px";
 
@@ -66,8 +66,8 @@ function createLayoutState(grid, template, equations, viewState, token) {
     viewState,
     token,
     columns,
-    occupancy: [],
-    maxRow: 0,
+    columnHeights: new Float64Array(columns),
+    maxHeight: 0,
     placedCards: []
   };
 }
@@ -140,22 +140,46 @@ function measureAndPlaceCard(state, card) {
   card.classList.add("is-sized");
 
   const height = Math.ceil(card.getBoundingClientRect().height || card.offsetHeight || 150);
-  const spanX = Math.min(state.columns, Math.max(1, Math.ceil((finalWidth + GAP) / CELL)));
-  const spanY = Math.max(1, Math.ceil((height + GAP) / CELL));
-  const slot = findFirstFreeSlot(state, spanX, spanY);
+  const span = Math.min(state.columns, Math.max(1, Math.ceil((finalWidth + GAP) / CELL)));
+  const slot = findBestSkylineSlot(state.columnHeights, span);
   const usableWidth = state.columns * CELL;
   const offsetX = Math.max(0, Math.floor((state.grid.clientWidth - usableWidth) / 2));
   const x = offsetX + slot.column * CELL;
-  const y = slot.row * CELL;
+  const y = slot.y;
+  const nextHeight = y + height + GAP;
 
-  occupy(state, slot.column, slot.row, spanX, spanY);
-  state.maxRow = Math.max(state.maxRow, slot.row + spanY);
+  for (let column = slot.column; column < slot.column + span; column += 1) {
+    state.columnHeights[column] = nextHeight;
+  }
+  state.maxHeight = Math.max(state.maxHeight, nextHeight);
   state.placedCards.push(card);
 
   card.style.transform = `translate3d(${x}px, ${y}px, 0)`;
   card.dataset.cardWidth = String(finalWidth);
   card.dataset.cardHeight = String(height);
   card.classList.add("is-placed");
+}
+
+function findBestSkylineSlot(heights, span) {
+  let bestColumn = 0;
+  let bestY = Number.POSITIVE_INFINITY;
+  let bestWaste = Number.POSITIVE_INFINITY;
+
+  for (let column = 0; column <= heights.length - span; column += 1) {
+    let y = 0;
+    for (let i = column; i < column + span; i += 1) y = Math.max(y, heights[i]);
+
+    let waste = 0;
+    for (let i = column; i < column + span; i += 1) waste += y - heights[i];
+
+    if (y < bestY || (y === bestY && waste < bestWaste)) {
+      bestColumn = column;
+      bestY = y;
+      bestWaste = waste;
+    }
+  }
+
+  return { column: bestColumn, y: Number.isFinite(bestY) ? bestY : 0 };
 }
 
 function measureFormulaWidth(card) {
@@ -187,44 +211,16 @@ function measureTitleWidth(card) {
   return width;
 }
 
-function findFirstFreeSlot(state, spanX, spanY) {
-  const searchLimit = Math.max(state.maxRow + spanY + 1, spanY + 1);
-  for (let row = 0; row <= searchLimit; row += 1) {
-    for (let column = 0; column <= state.columns - spanX; column += 1) {
-      if (canOccupy(state, column, row, spanX, spanY)) return { column, row };
-    }
-  }
-  return { column: 0, row: state.maxRow };
-}
-
-function canOccupy(state, column, row, spanX, spanY) {
-  for (let y = row; y < row + spanY; y += 1) {
-    const line = state.occupancy[y];
-    if (!line) continue;
-    for (let x = column; x < column + spanX; x += 1) {
-      if (line[x]) return false;
-    }
-  }
-  return true;
-}
-
-function occupy(state, column, row, spanX, spanY) {
-  for (let y = row; y < row + spanY; y += 1) {
-    if (!state.occupancy[y]) state.occupancy[y] = new Uint8Array(state.columns);
-    for (let x = column; x < column + spanX; x += 1) state.occupancy[y][x] = 1;
-  }
-}
-
 function updateGridHeight(state) {
-  state.grid.style.height = `${Math.max(180, state.maxRow * CELL)}px`;
+  state.grid.style.height = `${Math.max(180, Math.ceil(state.maxHeight))}px`;
 }
 
 function repackVisibleCards() {
   if (!layoutState || !isActive(layoutState)) return;
   const state = layoutState;
   state.columns = Math.max(1, Math.floor(Math.max(1, state.grid.clientWidth) / CELL));
-  state.occupancy = [];
-  state.maxRow = 0;
+  state.columnHeights = new Float64Array(state.columns);
+  state.maxHeight = 0;
   state.placedCards = [];
   const cards = [...state.grid.querySelectorAll(".equation-card.is-sized")];
   cards.forEach(card => {
