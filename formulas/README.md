@@ -1,60 +1,32 @@
-# Arquitectura de fichas por fórmula
+# Arquitectura moderna de `formulas/`
 
-Esta carpeta será la base de la siguiente reorganización del proyecto.
+Esta carpeta es la fuente principal del **Atlas de Ecuaciones Famosas**. Las fórmulas nuevas no deben añadirse a `data/` ni depender de arrays globales repartidos por scripts.
 
-## Objetivo
+## Estructura de una fórmula
 
-Cada fórmula debe poder vivir en su propia carpeta, con archivos separados para sus pestañas y recursos. La interfaz no debería depender de múltiples parches sueltos sobre arrays globales, sino de una estructura clara y predecible.
-
-## Estructura propuesta
+Cada fórmula vive en una carpeta propia:
 
 ```text
-formulas/
-├── manifest.js
-├── pythagorean-theorem/
-│   ├── meta.json
-│   ├── formula.tex
-│   ├── significado.md
-│   ├── historia.md
-│   ├── derivacion.md
-│   ├── usos.md
-│   ├── ficha.md
-│   └── simulacion/
-│       ├── index.js
-│       └── styles.css
-├── euler-identity/
-│   ├── meta.json
-│   ├── formula.tex
-│   ├── significado.md
-│   ├── historia.md
-│   ├── derivacion.md
-│   ├── usos.md
-│   └── simulacion/
-│       └── index.js
-└── wave-equation/
-    ├── meta.json
-    ├── formula.tex
-    ├── significado.md
-    ├── historia.md
-    ├── derivacion.md
-    ├── usos.md
-    └── simulacion/
-        └── index.js
+formulas/<formula-id>/
+├── meta.json
+├── formula.tex
+├── significado.md
+├── historia.md
+├── derivacion.md
+├── usos.md
+├── ficha.md
+└── simulacion/
+    ├── index.js
+    └── styles.css
 ```
 
-## Regla de funcionamiento
+Los archivos de simulación solo son obligatorios cuando la fórmula dispone de un widget interactivo.
 
-En GitHub Pages el navegador no puede listar carpetas del repositorio de forma automática como si estuviera leyendo un disco local. Por eso hace falta un manifiesto estático.
+## Catálogos
 
-`manifest.js` será el índice que diga qué fórmulas existen y qué pestañas tiene cada una.
+GitHub Pages no permite listar directorios del repositorio desde el navegador. Por ello, las carpetas se registran mediante los archivos `formulas/catalog*.json`.
 
-Si una fórmula no tiene carpeta `simulacion/`, la pestaña Simulación no debe aparecer.
-
-Si una fórmula añade una carpeta o archivo nuevo para una pestaña futura, el manifiesto deberá incluirlo para que el front lo cargue.
-
-## Modelo de ficha
-
-`meta.json` contendrá datos de catálogo:
+Cada entrada debe incluir como mínimo:
 
 ```json
 {
@@ -64,32 +36,88 @@ Si una fórmula añade una carpeta o archivo nuevo para una pestaña futura, el 
   "year": -500,
   "field": "Geometría",
   "level": "ESO",
-  "color": "#5d5af6"
+  "color": "#5d5af6",
+  "folder": "formulas/pythagorean-theorem",
+  "formula": ["a^2+b^2=c^2"],
+  "formulaText": ["cateto a² + cateto b² = hipotenusa c²"],
+  "summary": "Relaciona los lados de un triángulo rectángulo.",
+  "simulation": "pythagorean-theorem"
 }
 ```
 
-Los archivos de texto serán contenido de pestaña:
+El loader combina actualmente:
 
-- `formula.tex`: fórmulas LaTeX principales.
-- `significado.md`: interpretación conceptual.
-- `historia.md`: contexto histórico.
-- `derivacion.md`: deducción paso a paso.
-- `usos.md`: aplicaciones y ejemplos.
-- `ficha.md`: datos técnicos complementarios.
+- `catalog.json`
+- `catalog-recent.json`
+- `catalog-lorentz.json`
+- `catalog-quantum.json`
+- `catalog-chemistry.json`
+- `catalog-statistics.json`
+- `catalog-machine-learning.json`
+- `catalog-applied-models.json`
+- `catalog-formula-fixes.json`
 
-La simulación será código independiente:
+Una fórmula nueva debe registrarse en uno de estos catálogos sin duplicar `id` ni nombre.
 
-- `simulacion/index.js`: monta el plugin.
-- `simulacion/styles.css`: estilos específicos si hicieran falta.
+## Pestañas estándar
 
-## Ventaja
+La ficha completa contiene:
 
-Con esta arquitectura se evita que varias capas distintas modifiquen el mismo modal. Cada ficha declara sus pestañas, y el render solo muestra lo que exista en el manifiesto.
+1. Fórmula
+2. Significado
+3. Historia
+4. Derivación
+5. Usos
+6. Ficha
+7. Aprendizaje
+8. Unidades
+9. Simulación, cuando exista
 
-## Fase recomendada de migración
+`Aprendizaje` y `Unidades` pueden generarse a partir de los metadatos, prerrequisitos, etiquetas, símbolos y dimensionalidad. Los demás contenidos deben existir en archivos propios.
 
-1. Mantener el catálogo actual funcionando.
-2. Crear `formulas/manifest.js` como índice paralelo.
-3. Migrar primero las fórmulas con simulador específico.
-4. Cambiar el modal para leer pestañas desde el manifiesto.
-5. Eliminar progresivamente archivos agregadores antiguos cuando todo esté migrado.
+Cualquier archivo `.md` o `.tex` adicional en la raíz de la carpeta puede declararse como pestaña extra desde el catálogo.
+
+## Reglas de `formula.tex`
+
+- Una expresión por bloque.
+- Varias fórmulas se separan mediante una línea en blanco.
+- No se separan con comas para mostrarlas en la tarjeta.
+- Las llaves, paréntesis y corchetes deben estar equilibrados.
+- `\left` y `\right` deben aparecer emparejados.
+- Se debe preferir LaTeX estándar compatible con MathJax.
+
+En el mosaico principal, cada bloque se representa en una línea independiente, una fórmula debajo de otra.
+
+## Metadatos y niveles
+
+`meta.json` debe incluir `id`, `name`, `author`, `year`, `field`, `level`, `color`, `simulation`, `formulaText` y `summary`.
+
+Niveles normalizados:
+
+- ESO
+- Bachillerato
+- Universidad inicial
+- Universidad
+- Avanzado
+
+## Simuladores
+
+`simulacion/index.js` debe exportar una función de montaje por defecto o nombrada. Recibe un objeto con `root`, `canvas`, `controls` y `readout`. Si crea listeners persistentes, intervalos o animaciones, debe devolver una función de limpieza.
+
+Los estilos específicos se mantienen en `simulacion/styles.css` y deben estar encapsulados dentro del componente.
+
+## Validación
+
+Antes de integrar una fórmula:
+
+- comprobar que la carpeta y `formula.tex` existen;
+- comprobar las pestañas estándar;
+- comprobar metadatos, nivel y etiquetas;
+- comprobar llaves, paréntesis, corchetes, `left/right` y `begin/end`;
+- comprobar que el simulador exporta una función de montaje;
+- comprobar que no se referencia la carpeta antigua `data/`;
+- comprobar que no existen duplicados por `id` o nombre.
+
+## Migración del sistema antiguo
+
+Los archivos `scripts/latest-formula-batch-*.js` son una capa de compatibilidad temporal. No deben utilizarse para fórmulas nuevas. Su contenido debe migrarse gradualmente a carpetas dentro de `formulas/` y a los catálogos JSON correspondientes. Una vez migrado todo el inventario, esos scripts podrán eliminarse del arranque.
