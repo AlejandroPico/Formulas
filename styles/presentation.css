@@ -1,0 +1,331 @@
+.project-intro {
+  position: fixed;
+  z-index: 160;
+  inset: 0;
+  display: grid;
+  align-content: center;
+  overflow: hidden;
+  padding: clamp(52px, 8vw, 112px) clamp(24px, 9vw, 150px);
+  background:
+    radial-gradient(circle at 82% 18%, color-mix(in srgb, var(--accent) 12%, transparent), transparent 32rem),
+    radial-gradient(circle at 12% 86%, color-mix(in srgb, var(--accent) 7%, transparent), transparent 28rem),
+    var(--bg);
+  color: var(--text);
+  opacity: 1;
+  filter: blur(0);
+  transition: opacity .62s ease, filter .62s ease, visibility .62s step-end;
+}
+
+.project-intro.is-leaving {
+  visibility: hidden;
+  opacity: 0;
+  filter: blur(18px);
+  pointer-events: none;
+}
+
+.project-intro__kicker {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: clamp(28px, 4vw, 46px);
+  color: var(--muted);
+  font-size: .7rem;
+  font-weight: 800;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+}
+
+.project-intro__kicker::before {
+  width: 32px;
+  height: 1px;
+  background: var(--accent);
+  content: "";
+}
+
+.project-intro h1 {
+  max-width: 1080px;
+  margin: 0;
+  font-family: "Cambria Math", "STIX Two Math", "Times New Roman", Georgia, serif;
+  font-size: clamp(4.5rem, 11vw, 10.5rem);
+  font-weight: 400;
+  letter-spacing: -.07em;
+  line-height: .79;
+}
+
+.project-intro h1 em {
+  display: inline-block;
+  margin-left: clamp(24px, 8vw, 132px);
+  color: var(--accent);
+  font-weight: 400;
+}
+
+.project-intro__copy {
+  max-width: 520px;
+  margin: clamp(46px, 7vh, 76px) 0 0 min(40vw, 570px);
+  color: var(--muted);
+  font-family: "Cambria Math", "STIX Two Math", "Times New Roman", Georgia, serif;
+  font-size: clamp(1rem, 1.45vw, 1.3rem);
+  line-height: 1.55;
+}
+
+.project-intro__orbit {
+  position: absolute;
+  top: 14%;
+  right: 6vw;
+  width: min(24vw, 340px);
+  aspect-ratio: 1;
+  opacity: .55;
+  pointer-events: none;
+}
+
+.project-intro__orbit span {
+  position: absolute;
+  border: 1px solid color-mix(in srgb, var(--muted) 32%, transparent);
+  border-radius: 50%;
+}
+
+.project-intro__orbit span:first-child { inset: 8% 0 2% 18%; transform: rotate(18deg); }
+.project-intro__orbit span:nth-child(2) { inset: 0 18% 14% 0; transform: rotate(-22deg); }
+.project-intro__orbit span:last-child {
+  top: 48%;
+  left: 49%;
+  width: 9px;
+  height: 9px;
+  border: 0;
+  background: var(--accent);
+}
+
+.project-intro__formulae {
+  position: absolute;
+  right: clamp(24px, 7vw, 120px);
+  bottom: clamp(28px, 6vh, 72px);
+  display: grid;
+  gap: 7px;
+  color: color-mix(in srgb, var(--muted) 72%, transparent);
+  font-family: "Cambria Math", "STIX Two Math", "Times New Roman", serif;
+  font-size: clamp(.8rem, 1.2vw, 1.05rem);
+  font-style: italic;
+  text-align: right;
+}
+
+.about-dialog {
+  width: min(1080px, calc(100vw - 32px));
+  max-width: none;
+  max-height: min(760px, calc(100vh - 32px));
+  margin: auto;
+  padding: 0;
+  border: 0;
+  border-radius: 24px;
+  overflow: hidden;
+  background: transparent;
+  color: var(--text);
+}
+
+.about-dialog::backdrop {
+  background: rgba(2, 6, 23, .52);
+  backdrop-filter: blur(8px);
+}
+
+.about-dialog__panel {
+  position: relative;
+  display: grid;
+  grid-template-columns: 42px minmax(280px, .9fr) minmax(390px, 1.1fr);
+  gap: clamp(28px, 4vw, 52px);
+  max-height: min(760px, calc(100vh - 32px));
+  overflow: auto;
+  padding: clamp(34px, 5vw, 58px);
+  border: 1px solid color-mix(in srgb, var(--line) 78%, transparent);
+  border-radius: 24px;
+  background:
+    radial-gradient(circle at 14% 12%, color-mix(in srgb, var(--accent) 7%, transparent), transparent 24rem),
+    var(--panel-solid);
+  box-shadow: 0 28px 90px rgba(15, 23, 42, .28);
+}
+
+.about-dialog__close {
+  position: absolute;
+  z-index: 2;
+  top: 22px;
+  right: 22px;
+  display: grid;
+  width: 40px;
+  height: 40px;
+  place-items: center;
+  border: 1px solid color-mix(in srgb, var(--line) 82%, transparent);
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--panel-solid) 84%, transparent);
+  color: var(--text);
+  font-size: 1.45rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.about-dialog__close:hover {
+  border-color: color-mix(in srgb, var(--accent) 65%, var(--line));
+  color: var(--accent);
+}
+
+.about-dialog__index {
+  color: var(--muted);
+  font-size: .68rem;
+  font-weight: 800;
+  letter-spacing: .16em;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+
+.about-dialog__intro {
+  display: grid;
+  align-content: start;
+  gap: 30px;
+}
+
+.about-dialog__heading .eyebrow {
+  display: block;
+  margin-bottom: 12px;
+  color: var(--accent);
+  font-size: .66rem;
+  font-weight: 800;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+}
+
+.about-dialog__heading h2 {
+  margin: 0;
+  font-family: "Cambria Math", "STIX Two Math", "Times New Roman", Georgia, serif;
+  font-size: clamp(2.35rem, 4.5vw, 4.6rem);
+  font-weight: 400;
+  letter-spacing: -.05em;
+  line-height: .98;
+}
+
+.about-dialog__links {
+  display: grid;
+  gap: 10px;
+}
+
+.about-dialog__links a {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 15px 16px;
+  border: 1px solid color-mix(in srgb, var(--line) 78%, transparent);
+  border-radius: 15px;
+  background: color-mix(in srgb, var(--panel-solid) 76%, transparent);
+  color: var(--text);
+  text-decoration: none;
+  transition: transform .16s ease, border-color .16s ease, background .16s ease;
+}
+
+.about-dialog__links a:hover {
+  border-color: color-mix(in srgb, var(--accent) 62%, var(--line));
+  background: color-mix(in srgb, var(--accent) 6%, var(--panel-solid));
+  transform: translateY(-1px);
+}
+
+.about-dialog__links span {
+  display: grid;
+  gap: 3px;
+  min-width: 0;
+  font-weight: 760;
+}
+
+.about-dialog__links small {
+  color: var(--muted);
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.about-dialog__links svg {
+  flex: 0 0 auto;
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+}
+
+.about-dialog__copy {
+  display: grid;
+  align-content: start;
+  gap: 18px;
+  padding-top: 3px;
+  color: var(--muted);
+  line-height: 1.68;
+}
+
+.about-dialog__copy p { margin: 0; }
+.about-dialog__copy strong { color: var(--text); }
+.about-dialog__copy .about-dialog__lead {
+  color: var(--text);
+  font-family: "Cambria Math", "STIX Two Math", "Times New Roman", Georgia, serif;
+  font-size: 1.12rem;
+  line-height: 1.55;
+}
+
+#aboutToggle svg {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+body.about-open { overflow: hidden; }
+
+@media (max-width: 820px) {
+  .about-dialog__panel {
+    grid-template-columns: minmax(240px, .9fr) minmax(300px, 1.1fr);
+    gap: 28px;
+    padding: 40px 34px;
+  }
+
+  .about-dialog__index { display: none; }
+  .project-intro__copy { margin-left: min(28vw, 220px); }
+}
+
+@media (max-width: 620px) {
+  .project-intro {
+    padding: 92px 24px 66px;
+  }
+
+  .project-intro h1 {
+    font-size: clamp(3.9rem, 20vw, 6.4rem);
+    line-height: .83;
+  }
+
+  .project-intro h1 em { margin-left: 20px; }
+  .project-intro__copy { margin: 42px 0 0; max-width: 86%; }
+  .project-intro__formulae { right: 22px; bottom: 28px; }
+  .project-intro__orbit { right: -36px; width: 58vw; opacity: .35; }
+
+  .about-dialog {
+    width: 100vw;
+    max-height: 100vh;
+    border-radius: 0;
+  }
+
+  .about-dialog__panel {
+    min-height: 100vh;
+    max-height: 100vh;
+    grid-template-columns: 1fr;
+    gap: 26px;
+    padding: 70px 24px 44px;
+    border-radius: 0;
+  }
+
+  .about-dialog__intro,
+  .about-dialog__copy,
+  .about-dialog__links { grid-column: 1; }
+  .about-dialog__links { grid-template-columns: 1fr; }
+  .about-dialog__heading h2 { font-size: clamp(2.3rem, 12vw, 3.5rem); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project-intro { display: none; }
+  .about-dialog__links a { transition: none; }
+}
