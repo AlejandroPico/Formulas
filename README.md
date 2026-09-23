@@ -8,6 +8,12 @@ Arquitectura moderna basada exclusivamente en la carpeta `formulas/`.
 
 El sistema antiguo basado en `data/*.js` se ha retirado. La aplicación carga las fichas desde catálogos y carpetas individuales dentro de `formulas/`, y cada ficha puede tener secciones propias en archivos independientes.
 
+En móvil, las herramientas están en un menú lateral: búsqueda, filtros y tipo de visualización, tema y acerca del proyecto. La búsqueda se despliega dentro del menú y permanece dentro de la anchura de la pantalla en vertical y horizontal.
+
+## Instalación en Android
+
+Abra [Fórmulas](https://alejandropico.github.io/Formulas/) en Chrome y elija **Instalar aplicación**. El manifiesto y el service worker permiten abrir el atlas en una ventana independiente y conservar recursos estáticos y fichas consultadas. La carga inicial de MathJax procede de un CDN y necesita conexión; la instalación requiere HTTPS o localhost.
+
 ## Estructura principal
 
 ```text

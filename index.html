@@ -2,10 +2,17 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#101116" />
+  <meta name="application-name" content="Fórmulas" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Fórmulas" />
   <title>Atlas de Ecuaciones Famosas</title>
   <meta name="description" content="Biblioteca interactiva de ecuaciones famosas: Newton, Maxwell, Schrödinger, Einstein, Navier-Stokes, Boltzmann, Fourier, Euler, Dirac y Planck." />
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png" />
   <link rel="preconnect" href="https://cdn.jsdelivr.net" />
   <link rel="stylesheet" href="styles/tokens.css" />
   <link rel="stylesheet" href="styles/base.css" />
@@ -31,6 +38,7 @@
   <link rel="stylesheet" href="styles/loading.css" />
   <link rel="stylesheet" href="styles/performance.css?v=20260715c" />
   <link rel="stylesheet" href="styles/presentation.css?v=20260818b" />
+  <link rel="stylesheet" href="styles/mobile-menu.css?v=20260923a" />
   <script>
     window.MathJax = {
       options: { enableMenu: false },
@@ -69,50 +77,54 @@
     </div>
   </div>
 
-  <div class="floating-controls" aria-label="Controles flotantes">
+  <button id="mobileMenuToggle" class="mobile-menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileTools">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16" /></svg>
+  </button>
+  <button id="mobileMenuScrim" class="mobile-menu-scrim" type="button" aria-label="Cerrar menú" hidden></button>
+  <div class="floating-controls" id="mobileTools" aria-label="Herramientas del atlas">
+    <div class="mobile-menu-header"><span>Fórmulas<small>Herramientas del atlas</small></span><button id="mobileMenuClose" type="button" aria-label="Cerrar menú">×</button></div>
     <div class="search-control" id="searchControl">
       <div class="search-field" id="searchField" hidden>
         <input id="searchInput" type="search" autocomplete="off" spellcheck="false" placeholder="Buscar por fórmula, autor, uso, símbolo…" aria-label="Buscar ecuaciones" />
         <button id="searchClear" class="search-clear" type="button" aria-label="Limpiar búsqueda">×</button>
       </div>
       <button id="searchToggle" class="floating-button" type="button" aria-label="Abrir búsqueda" aria-expanded="false">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.4" /><path d="m16 16 4.2 4.2" /></svg>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.4" /><path d="m16 16 4.2 4.2" /></svg><span class="mobile-control-label">Búsqueda</span>
       </button>
     </div>
     <button id="filterToggle" class="floating-button" type="button" aria-label="Abrir filtros" aria-expanded="false">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 5.5h17l-6.7 7.7v4.9l-3.6 1.8v-6.7L3.5 5.5Z" /></svg>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 5.5h17l-6.7 7.7v4.9l-3.6 1.8v-6.7L3.5 5.5Z" /></svg><span class="mobile-control-label">Filtros y visualización</span>
     </button>
+    <aside id="filterPanel" class="filter-popover" aria-label="Filtros del atlas" hidden>
+      <div class="filter-summary" aria-live="polite">
+        <span>Fórmulas visibles</span>
+        <strong id="visibleCount">0 / 0</strong>
+      </div>
+      <label>
+        <span>Visualización</span>
+        <select id="formulaDisplaySelect" aria-label="Modo de visualización de fórmulas">
+          <option value="symbolic" selected>Fórmula simbólica</option>
+          <option value="explained">Fórmula explicada</option>
+        </select>
+      </label>
+      <label>
+        <span>Orden</span>
+        <select id="sortSelect" aria-label="Ordenar ecuaciones">
+          <option value="default" selected>Orden</option>
+          <option value="chronology">Orden histórico</option>
+          <option value="name">Nombre</option>
+          <option value="field">Área científica</option>
+          <option value="level">Nivel educativo</option>
+        </select>
+      </label>
+      <label><span>Área</span><select id="fieldSelect" aria-label="Filtrar por área científica"></select></label>
+      <label><span>Nivel</span><select id="levelSelect" aria-label="Filtrar por nivel educativo"></select></label>
+    </aside>
     <button id="aboutToggle" class="floating-button" type="button" aria-label="Acerca del proyecto" title="Acerca del proyecto">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.25" /><path d="M12 10.7v5.1" /><path d="M12 7.6h.01" /></svg>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.25" /><path d="M12 10.7v5.1" /><path d="M12 7.6h.01" /></svg><span class="mobile-control-label">Acerca del proyecto</span>
     </button>
     <button id="themeToggle" class="theme-toggle" type="button" aria-label="Cambiar tema visual">◐ Auto</button>
   </div>
-
-  <aside id="filterPanel" class="filter-popover" aria-label="Filtros del atlas" hidden>
-    <div class="filter-summary" aria-live="polite">
-      <span>Fórmulas visibles</span>
-      <strong id="visibleCount">0 / 0</strong>
-    </div>
-    <label>
-      <span>Visualización</span>
-      <select id="formulaDisplaySelect" aria-label="Modo de visualización de fórmulas">
-        <option value="symbolic" selected>Fórmula simbólica</option>
-        <option value="explained">Fórmula explicada</option>
-      </select>
-    </label>
-    <label>
-      <span>Orden</span>
-      <select id="sortSelect" aria-label="Ordenar ecuaciones">
-        <option value="default" selected>Orden</option>
-        <option value="chronology">Orden histórico</option>
-        <option value="name">Nombre</option>
-        <option value="field">Área científica</option>
-        <option value="level">Nivel educativo</option>
-      </select>
-    </label>
-    <label><span>Área</span><select id="fieldSelect" aria-label="Filtrar por área científica"></select></label>
-    <label><span>Nivel</span><select id="levelSelect" aria-label="Filtrar por nivel educativo"></select></label>
-  </aside>
 
   <main class="app-shell">
     <section class="equation-grid" id="equationGrid" aria-live="polite"></section>
@@ -198,5 +210,7 @@
   <script type="module" src="scripts/thematic-card-variants.js"></script>
   <script type="module" src="scripts/modal-enhancements.js"></script>
   <script type="module" src="scripts/formula-tooltip-boot.js"></script>
+  <script type="module" src="scripts/mobile-menu.js?v=20260923a"></script>
+  <script defer src="pwa.js"></script>
 </body>
 </html>

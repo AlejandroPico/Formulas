@@ -37,7 +37,10 @@ function initAbout() {
 
   aboutDialog.addEventListener("close", () => {
     document.body.classList.remove("about-open");
-    aboutToggle.focus({ preventScroll: true });
+    const focusTarget = window.matchMedia("(max-width: 900px)").matches
+      ? document.querySelector("#mobileMenuToggle")
+      : aboutToggle;
+    focusTarget?.focus({ preventScroll: true });
   });
 
   aboutDialog.addEventListener("cancel", event => {
