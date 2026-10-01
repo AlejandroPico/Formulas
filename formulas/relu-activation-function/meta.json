@@ -1,0 +1,49 @@
+{
+  "id": "relu-activation-function",
+  "name": "Función ReLU: Rectified Linear Unit",
+  "year": 1969,
+  "field": "Deep Learning",
+  "level": "Universidad inicial",
+  "color": "#10b981",
+  "formula": [
+    "ReLU(x)=max(0,x)",
+    "ReLU′(x)=0 si x<0; 1 si x>0"
+  ],
+  "summary": "Activación rectificada, barata y eficaz, con riesgo de neurona muerta en la región negativa.",
+  "sim": "scripts/ml-relu-sim.js?v=20260705b",
+  "k": "relu",
+  "folder": "formulas/relu-activation-function",
+  "source": "files",
+  "formulaText": [
+    "Activación rectificada, barata y eficaz, con riesgo de neurona muerta en la región negativa."
+  ],
+  "tags": [
+    "machine learning",
+    "deep learning",
+    "optimizacion",
+    "redes neuronales",
+    "activacion",
+    "backpropagation",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "calculo",
+    "gradiente",
+    "derivadas",
+    "probabilidad",
+    "algebra lineal"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "historia",
+    "derivacion",
+    "simulacion"
+  ],
+  "units": "Unidades didácticas normalizadas.",
+  "dimensions": "Ver ficha.",
+  "symbols": [],
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-24.js",
+  "createdAt": "2026-07-06"
+}

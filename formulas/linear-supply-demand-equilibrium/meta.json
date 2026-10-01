@@ -1,0 +1,56 @@
+{
+  "id": "linear-supply-demand-equilibrium",
+  "name": "Ley de oferta y demanda lineal",
+  "year": 1890,
+  "field": "Microeconomía / Mercados",
+  "level": "Bachillerato/Universidad inicial",
+  "color": "#2563eb",
+  "formula": [
+    "Q_d=a−bP",
+    "Q_s=c+dP",
+    "P*=(a−c)/(b+d)"
+  ],
+  "summary": "Encuentra el precio y cantidad de equilibrio al igualar oferta y demanda lineales.",
+  "sim": "scripts/economics-supply-demand-linear-sim.js?v=20260706a",
+  "k": "market",
+  "folder": "formulas/linear-supply-demand-equilibrium",
+  "source": "files",
+  "formulaText": [
+    "Q_d=a−bP",
+    "Q_s=c+dP",
+    "P*=(a−c)/(b+d)",
+    "Encuentra el precio y cantidad de equilibrio al igualar oferta y demanda lineales."
+  ],
+  "tags": [
+    "economia",
+    "microeconomia",
+    "macroeconomia",
+    "finanzas",
+    "riesgo",
+    "renta fija",
+    "kelly",
+    "var",
+    "solow",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "algebra",
+    "calculo basico",
+    "microeconomia",
+    "macroeconomia",
+    "finanzas basicas"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "historia",
+    "derivacion",
+    "simulacion"
+  ],
+  "units": "Unidades económicas y financieras normalizadas.",
+  "dimensions": "Ver ficha.",
+  "symbols": [],
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-32.js",
+  "createdAt": "2026-07-07"
+}

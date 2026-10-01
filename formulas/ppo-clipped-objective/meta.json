@@ -1,0 +1,50 @@
+{
+  "id": "ppo-clipped-objective",
+  "name": "PPO: función objetivo recortada",
+  "year": 2017,
+  "field": "Reinforcement Learning",
+  "level": "Universidad intermedia",
+  "color": "#dc2626",
+  "formula": [
+    "L^CLIP=E[min(r_tÂ_t,clip(r_t,1−ε,1+ε)Â_t)]"
+  ],
+  "summary": "Limita cuánto puede mejorar artificialmente una política nueva respecto a la anterior.",
+  "sim": "scripts/rl-ppo-clip-sim.js?v=20260705a",
+  "k": "ppo",
+  "folder": "formulas/ppo-clipped-objective",
+  "source": "files",
+  "formulaText": [
+    "Limita cuánto puede mejorar artificialmente una política nueva respecto a la anterior."
+  ],
+  "tags": [
+    "reinforcement learning",
+    "transformers",
+    "attention",
+    "positional encoding",
+    "ppo",
+    "q-learning",
+    "sarsa",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "probabilidad",
+    "gradiente",
+    "bellman",
+    "algebra lineal",
+    "softmax",
+    "redes neuronales"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "historia",
+    "derivacion",
+    "simulacion"
+  ],
+  "units": "Unidades didácticas normalizadas.",
+  "dimensions": "Ver ficha.",
+  "symbols": [],
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-27.js",
+  "createdAt": "2026-07-06"
+}

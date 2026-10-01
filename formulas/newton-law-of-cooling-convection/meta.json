@@ -1,0 +1,49 @@
+{
+  "id": "newton-law-of-cooling-convection",
+  "name": "Transferencia de calor convectiva: ley de enfriamiento de Newton",
+  "year": 1701,
+  "field": "Transferencia de calor",
+  "level": "Universidad inicial",
+  "color": "#ea580c",
+  "formula": [
+    "q=hA(T_s−T_∞)"
+  ],
+  "summary": "Calcula el flujo térmico entre una superficie y un fluido mediante el coeficiente convectivo.",
+  "sim": "scripts/thermal-newton-convection-sim.js?v=20260705a",
+  "k": "convection",
+  "folder": "formulas/newton-law-of-cooling-convection",
+  "source": "files",
+  "formulaText": [
+    "Calcula el flujo térmico entre una superficie y un fluido mediante el coeficiente convectivo."
+  ],
+  "tags": [
+    "mecanica",
+    "hidraulica",
+    "transferencia de calor",
+    "fatiga",
+    "elasticidad",
+    "mohr",
+    "hooke",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "algebra",
+    "calculo basico",
+    "mecanica de fluidos",
+    "mecanica de solidos",
+    "transferencia de calor"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "historia",
+    "derivacion",
+    "simulacion"
+  ],
+  "units": "Unidades didácticas normalizadas.",
+  "dimensions": "Ver ficha.",
+  "symbols": [],
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-30.js",
+  "createdAt": "2026-07-06"
+}

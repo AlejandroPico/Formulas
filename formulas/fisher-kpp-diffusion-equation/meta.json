@@ -1,0 +1,47 @@
+{
+  "id": "fisher-kpp-diffusion-equation",
+  "name": "Ecuación de difusión de Fisher-KPP",
+  "year": 1937,
+  "field": "Biología matemática",
+  "level": "Universidad intermedia",
+  "color": "#a855f7",
+  "formula": [
+    "∂u/∂t=D∂²u/∂x²+ru(1−u)",
+    "v_min=2√(Dr)"
+  ],
+  "summary": "Modelo de frente viajero que combina difusión espacial y crecimiento logístico local.",
+  "sim": "scripts/bio-fisher-kpp-sim.js?v=20260705a",
+  "folder": "formulas/fisher-kpp-diffusion-equation",
+  "source": "files",
+  "author": "",
+  "formulaText": [
+    "Modelo de frente viajero que combina difusión espacial y crecimiento logístico local."
+  ],
+  "tags": [
+    "biologia matematica",
+    "biofisica",
+    "farmacologia",
+    "ecologia",
+    "microbiologia",
+    "epidemiologia",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "calculo",
+    "ecuaciones diferenciales",
+    "logaritmos",
+    "biologia general",
+    "quimica fisica"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "simulacion"
+  ],
+  "units": "Unidades didácticas normalizadas.",
+  "dimensions": "Ver ficha.",
+  "symbols": [],
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-23.js",
+  "createdAt": "2026-07-06"
+}

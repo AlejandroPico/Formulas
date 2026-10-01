@@ -1,0 +1,49 @@
+{
+  "id": "born-haber-cycle",
+  "name": "Ciclo de Born-Haber",
+  "year": 1919,
+  "field": "Química física",
+  "level": "Universidad inicial",
+  "color": "#8b5cf6",
+  "formula": [
+    "ΔH_f^°=ΔH_sub+1/2D+IE+EA+U_L"
+  ],
+  "summary": "Aplica la ley de Hess para descomponer la formación de un sólido iónico en etapas energéticas.",
+  "topic": "bornHaber",
+  "folder": "formulas/born-haber-cycle",
+  "source": "files",
+  "author": "",
+  "formulaText": [
+    "Aplica la ley de Hess para descomponer la formación de un sólido iónico en etapas energéticas."
+  ],
+  "tags": [
+    "quimica fisica",
+    "electroquimica",
+    "quimica cuantica",
+    "born haber",
+    "bohr",
+    "hidrogeno",
+    "debye huckel",
+    "nernst",
+    "faraday",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "quimica general",
+    "termodinamica",
+    "electroquimica",
+    "estructura atomica",
+    "logaritmos"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "simulacion"
+  ],
+  "units": "Unidades didácticas normalizadas.",
+  "dimensions": "Ver ficha.",
+  "symbols": [],
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-21.js",
+  "createdAt": "2026-07-06"
+}

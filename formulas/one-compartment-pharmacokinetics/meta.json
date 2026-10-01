@@ -1,0 +1,47 @@
+{
+  "id": "one-compartment-pharmacokinetics",
+  "name": "Farmacocinética de un compartimento",
+  "year": 1937,
+  "field": "Farmacocinética",
+  "level": "Universidad inicial",
+  "color": "#ea580c",
+  "formula": [
+    "C(t)=(Dosis/V_d)e^(−k_et)",
+    "t_1/2=ln(2)/k_e"
+  ],
+  "summary": "Modelo monocompartimental de concentración plasmática con eliminación de primer orden.",
+  "sim": "scripts/bio-pharmacokinetics-one-compartment-sim.js?v=20260705a",
+  "folder": "formulas/one-compartment-pharmacokinetics",
+  "source": "files",
+  "author": "",
+  "formulaText": [
+    "Modelo monocompartimental de concentración plasmática con eliminación de primer orden."
+  ],
+  "tags": [
+    "biologia matematica",
+    "biofisica",
+    "farmacologia",
+    "ecologia",
+    "microbiologia",
+    "epidemiologia",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "calculo",
+    "ecuaciones diferenciales",
+    "logaritmos",
+    "biologia general",
+    "quimica fisica"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "simulacion"
+  ],
+  "units": "Unidades didácticas normalizadas.",
+  "dimensions": "Ver ficha.",
+  "symbols": [],
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-23.js",
+  "createdAt": "2026-07-06"
+}

@@ -1,0 +1,43 @@
+{
+  "id": "electric-gauss-law",
+  "name": "Ley de Gauss eléctrica",
+  "year": 1835,
+  "field": "Electromagnetismo",
+  "level": "Universidad inicial",
+  "color": "#ef4444",
+  "formula": [
+    "∮E·dA=Qenc/ε0"
+  ],
+  "summary": "El flujo eléctrico neto a través de una superficie cerrada depende solo de la carga encerrada.",
+  "topic": "gaussElectric",
+  "source": "files",
+  "author": "",
+  "formulaText": [
+    "El flujo eléctrico neto a través de una superficie cerrada depende solo de la carga encerrada."
+  ],
+  "tags": [
+    "electromagnetismo",
+    "maxwell",
+    "campo",
+    "flujo",
+    "potencial",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "vectores",
+    "calculo basico",
+    "electrostatica"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "simulacion"
+  ],
+  "units": "Ver unidades.",
+  "dimensions": "Ver unidades.",
+  "symbols": [],
+  "folder": "formulas/electric-gauss-law",
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-12.js",
+  "createdAt": "2026-07-05"
+}

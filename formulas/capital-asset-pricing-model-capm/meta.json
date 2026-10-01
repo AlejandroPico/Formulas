@@ -1,0 +1,54 @@
+{
+  "id": "capital-asset-pricing-model-capm",
+  "name": "CAPM: Capital Asset Pricing Model",
+  "year": 1964,
+  "field": "Finanzas / Valoración de activos",
+  "level": "Universidad intermedia",
+  "color": "#6366f1",
+  "formula": [
+    "E(R_i)=R_f+β_i(E(R_m)-R_f)"
+  ],
+  "summary": "Relaciona rendimiento esperado con riesgo sistemático medido por beta.",
+  "sim": "scripts/finance-capm-sim.js?v=20260705a",
+  "k": "capm",
+  "folder": "formulas/capital-asset-pricing-model-capm",
+  "source": "files",
+  "formulaText": [
+    "E(R_i)=R_f+β_i(E(R_m)-R_f)",
+    "Relaciona rendimiento esperado con riesgo sistemático medido por beta."
+  ],
+  "tags": [
+    "finanzas",
+    "valor temporal del dinero",
+    "derivados",
+    "renta fija",
+    "capm",
+    "sharpe",
+    "npv",
+    "irr",
+    "duracion",
+    "convexidad",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "algebra",
+    "logaritmos",
+    "probabilidad",
+    "estadistica",
+    "finanzas basicas",
+    "renta fija"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "historia",
+    "derivacion",
+    "simulacion"
+  ],
+  "units": "Unidades financieras normalizadas.",
+  "dimensions": "Ver ficha.",
+  "symbols": [],
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-31.js",
+  "createdAt": "2026-07-07"
+}

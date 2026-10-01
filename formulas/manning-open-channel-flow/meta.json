@@ -1,0 +1,49 @@
+{
+  "id": "manning-open-channel-flow",
+  "name": "Ecuación de Manning: flujo en canales abiertos",
+  "year": 1890,
+  "field": "Hidráulica / Canales abiertos",
+  "level": "Universidad inicial",
+  "color": "#10b981",
+  "formula": [
+    "v=(1/n)R_h^{2/3}S^{1/2}"
+  ],
+  "summary": "Estima la velocidad media de un canal abierto según rugosidad, radio hidráulico y pendiente.",
+  "sim": "scripts/hydraulics-manning-channel-sim.js?v=20260705a",
+  "k": "manning",
+  "folder": "formulas/manning-open-channel-flow",
+  "source": "files",
+  "formulaText": [
+    "Estima la velocidad media de un canal abierto según rugosidad, radio hidráulico y pendiente."
+  ],
+  "tags": [
+    "mecanica",
+    "hidraulica",
+    "transferencia de calor",
+    "fatiga",
+    "elasticidad",
+    "mohr",
+    "hooke",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "algebra",
+    "calculo basico",
+    "mecanica de fluidos",
+    "mecanica de solidos",
+    "transferencia de calor"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "historia",
+    "derivacion",
+    "simulacion"
+  ],
+  "units": "Unidades didácticas normalizadas.",
+  "dimensions": "Ver ficha.",
+  "symbols": [],
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-30.js",
+  "createdAt": "2026-07-06"
+}

@@ -1,0 +1,49 @@
+{
+  "id": "fourier-heat-conduction-1d-steady",
+  "name": "Conducción de calor de Fourier 1D estacionaria",
+  "year": 1822,
+  "field": "Transferencia de calor",
+  "level": "Universidad inicial",
+  "color": "#ea580c",
+  "formula": [
+    "Q=kAΔT/L",
+    "R_th=L/(kA)"
+  ],
+  "summary": "Describe el flujo térmico estacionario a través de una pared plana.",
+  "sim": "scripts/thermal-fourier-conduction-sim.js?v=20260705a",
+  "k": "fourier",
+  "folder": "formulas/fourier-heat-conduction-1d-steady",
+  "source": "files",
+  "formulaText": [
+    "Describe el flujo térmico estacionario a través de una pared plana."
+  ],
+  "tags": [
+    "mecanica",
+    "resistencia de materiales",
+    "transferencia de calor",
+    "electronica",
+    "instrumentacion",
+    "mosfet",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "algebra",
+    "calculo basico",
+    "unidades",
+    "ley de ohm",
+    "mecanica de solidos"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "historia",
+    "derivacion",
+    "simulacion"
+  ],
+  "units": "Unidades didácticas normalizadas.",
+  "dimensions": "Ver ficha.",
+  "symbols": [],
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-29.js",
+  "createdAt": "2026-07-06"
+}

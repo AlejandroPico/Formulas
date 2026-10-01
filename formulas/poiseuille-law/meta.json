@@ -1,0 +1,43 @@
+{
+  "id": "poiseuille-law",
+  "name": "Ley de Poiseuille",
+  "year": 1840,
+  "field": "Mecánica de fluidos",
+  "level": "Universidad inicial",
+  "color": "#a855f7",
+  "formula": [
+    "Q=πΔPR⁴/(8μL)"
+  ],
+  "summary": "Caudal laminar en un tubo cilíndrico, extremadamente sensible al radio.",
+  "topic": "poiseuille",
+  "source": "files",
+  "author": "",
+  "formulaText": [
+    "Caudal laminar en un tubo cilíndrico, extremadamente sensible al radio."
+  ],
+  "tags": [
+    "fisica",
+    "fluidos",
+    "ondas",
+    "oscilaciones",
+    "hidraulica",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "algebra",
+    "calculo basico",
+    "mecanica"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "simulacion"
+  ],
+  "units": "Ver unidades.",
+  "dimensions": "Ver unidades.",
+  "symbols": [],
+  "folder": "formulas/poiseuille-law",
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-10.js",
+  "createdAt": "2026-07-05"
+}

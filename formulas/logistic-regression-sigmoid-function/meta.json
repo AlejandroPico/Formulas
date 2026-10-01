@@ -1,0 +1,50 @@
+{
+  "id": "logistic-regression-sigmoid-function",
+  "name": "Regresión logística: función sigmoide",
+  "year": 1845,
+  "field": "Estadística / Machine Learning",
+  "level": "Universidad inicial",
+  "color": "#2563eb",
+  "formula": [
+    "σ(z)=1/(1+e^(−z))",
+    "z=w·x+b",
+    "σ′(z)=σ(z)(1−σ(z))"
+  ],
+  "summary": "Convierte una puntuación lineal en probabilidad calibrada para clasificación binaria.",
+  "sim": "scripts/ml-sigmoid-logistic-sim.js?v=20260705b",
+  "k": "sig",
+  "folder": "formulas/logistic-regression-sigmoid-function",
+  "source": "files",
+  "formulaText": [
+    "Convierte una puntuación lineal en probabilidad calibrada para clasificación binaria."
+  ],
+  "tags": [
+    "machine learning",
+    "deep learning",
+    "optimizacion",
+    "redes neuronales",
+    "activacion",
+    "backpropagation",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "calculo",
+    "gradiente",
+    "derivadas",
+    "probabilidad",
+    "algebra lineal"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "historia",
+    "derivacion",
+    "simulacion"
+  ],
+  "units": "Unidades didácticas normalizadas.",
+  "dimensions": "Ver ficha.",
+  "symbols": [],
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-24.js",
+  "createdAt": "2026-07-06"
+}

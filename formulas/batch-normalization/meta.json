@@ -1,0 +1,49 @@
+{
+  "id": "batch-normalization",
+  "name": "Batch Normalization",
+  "year": 2015,
+  "field": "Deep Learning",
+  "level": "Universidad intermedia",
+  "color": "#2563eb",
+  "formula": [
+    "μ_B=(1/m)Σ_i x_i",
+    "x̂_i=(x_i−μ_B)/√(σ_B²+ε)",
+    "y_i=γx̂_i+β"
+  ],
+  "summary": "Normaliza activaciones usando estadísticas del mini-batch para estabilizar entrenamiento.",
+  "sim": "scripts/ml-batchnorm-sim.js?v=20260705a",
+  "k": "bn",
+  "folder": "formulas/batch-normalization",
+  "source": "files",
+  "formulaText": [
+    "Normaliza activaciones usando estadísticas del mini-batch para estabilizar entrenamiento."
+  ],
+  "tags": [
+    "machine learning",
+    "nlp",
+    "teoria de la informacion",
+    "normalizacion",
+    "funciones de perdida",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "probabilidad",
+    "logaritmos",
+    "estadistica",
+    "machine learning",
+    "redes neuronales"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "historia",
+    "derivacion",
+    "simulacion"
+  ],
+  "units": "Unidades didácticas normalizadas.",
+  "dimensions": "Ver ficha.",
+  "symbols": [],
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-25.js",
+  "createdAt": "2026-07-06"
+}

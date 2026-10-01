@@ -1,0 +1,43 @@
+{
+  "id": "ampere-maxwell-law",
+  "name": "Ley de Ampère-Maxwell",
+  "year": 1861,
+  "field": "Electromagnetismo",
+  "level": "Universidad inicial",
+  "color": "#8b5cf6",
+  "formula": [
+    "∮B·dl=μ0(I+ε0 dΦE/dt)"
+  ],
+  "summary": "La circulación magnética depende de la corriente de conducción y de la corriente de desplazamiento.",
+  "topic": "ampere",
+  "source": "files",
+  "author": "",
+  "formulaText": [
+    "La circulación magnética depende de la corriente de conducción y de la corriente de desplazamiento."
+  ],
+  "tags": [
+    "electromagnetismo",
+    "maxwell",
+    "campo",
+    "flujo",
+    "potencial",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "vectores",
+    "calculo basico",
+    "electrostatica"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "simulacion"
+  ],
+  "units": "Ver unidades.",
+  "dimensions": "Ver unidades.",
+  "symbols": [],
+  "folder": "formulas/ampere-maxwell-law",
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-12.js",
+  "createdAt": "2026-07-05"
+}

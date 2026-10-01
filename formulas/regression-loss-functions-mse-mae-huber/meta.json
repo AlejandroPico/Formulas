@@ -1,0 +1,49 @@
+{
+  "id": "regression-loss-functions-mse-mae-huber",
+  "name": "Pérdidas de regresión: MSE, MAE y Huber",
+  "year": 1964,
+  "field": "Machine Learning / Estadística robusta",
+  "level": "Universidad inicial",
+  "color": "#10b981",
+  "formula": [
+    "MSE=mean(e²)",
+    "MAE=mean(|e|)",
+    "Huberδ(e)=½e² si |e|≤δ; δ(|e|−½δ) si |e|>δ"
+  ],
+  "summary": "Compara sensibilidad cuadrática, robustez absoluta y transición suave Huber.",
+  "sim": "scripts/ml-regression-losses-sim.js?v=20260705a",
+  "k": "loss",
+  "folder": "formulas/regression-loss-functions-mse-mae-huber",
+  "source": "files",
+  "formulaText": [
+    "Compara sensibilidad cuadrática, robustez absoluta y transición suave Huber."
+  ],
+  "tags": [
+    "machine learning",
+    "nlp",
+    "teoria de la informacion",
+    "normalizacion",
+    "funciones de perdida",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "probabilidad",
+    "logaritmos",
+    "estadistica",
+    "machine learning",
+    "redes neuronales"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "historia",
+    "derivacion",
+    "simulacion"
+  ],
+  "units": "Unidades didácticas normalizadas.",
+  "dimensions": "Ver ficha.",
+  "symbols": [],
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-25.js",
+  "createdAt": "2026-07-06"
+}

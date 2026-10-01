@@ -1,0 +1,48 @@
+{
+  "id": "jensen-shannon-divergence",
+  "name": "Divergencia de Jensen-Shannon",
+  "year": 1991,
+  "field": "Teoría de la información",
+  "level": "Universidad intermedia",
+  "color": "#0ea5e9",
+  "formula": [
+    "JSD(P||Q)=½D_KL(P||M)+½D_KL(Q||M)",
+    "M=(P+Q)/2"
+  ],
+  "summary": "Compara distribuciones de forma simétrica, suavizada y acotada.",
+  "sim": "scripts/ml-jsd-sim.js?v=20260705a",
+  "k": "jsd",
+  "folder": "formulas/jensen-shannon-divergence",
+  "source": "files",
+  "formulaText": [
+    "Compara distribuciones de forma simétrica, suavizada y acotada."
+  ],
+  "tags": [
+    "machine learning",
+    "nlp",
+    "teoria de la informacion",
+    "normalizacion",
+    "funciones de perdida",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "probabilidad",
+    "logaritmos",
+    "estadistica",
+    "machine learning",
+    "redes neuronales"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "historia",
+    "derivacion",
+    "simulacion"
+  ],
+  "units": "Unidades didácticas normalizadas.",
+  "dimensions": "Ver ficha.",
+  "symbols": [],
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-25.js",
+  "createdAt": "2026-07-06"
+}

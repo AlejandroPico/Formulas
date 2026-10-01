@@ -1,0 +1,48 @@
+{
+  "id": "ionic-product-of-water",
+  "name": "Producto iónico del agua",
+  "year": 1909,
+  "field": "Química ácido-base",
+  "level": "Bachillerato/Universidad inicial",
+  "color": "#10b981",
+  "formula": [
+    "K_w=[H_3O^+][OH^-]",
+    "pK_w=pH+pOH"
+  ],
+  "summary": "Relaciona las concentraciones de hidronio e hidróxido en agua y fija la escala ácido-base.",
+  "topic": "kw",
+  "folder": "formulas/ionic-product-of-water",
+  "source": "files",
+  "author": "",
+  "formulaText": [
+    "Relaciona las concentraciones de hidronio e hidróxido en agua y fija la escala ácido-base."
+  ],
+  "tags": [
+    "quimica",
+    "cinetica",
+    "equilibrio quimico",
+    "acido base",
+    "ph",
+    "beer lambert",
+    "tampon",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "quimica general",
+    "logaritmos",
+    "concentracion molar",
+    "equilibrio",
+    "funciones exponenciales"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "simulacion"
+  ],
+  "units": "Unidades didácticas normalizadas.",
+  "dimensions": "Ver ficha.",
+  "symbols": [],
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-20.js",
+  "createdAt": "2026-07-06"
+}

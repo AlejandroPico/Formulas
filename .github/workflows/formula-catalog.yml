@@ -27,8 +27,11 @@ jobs:
       - name: Build formula catalog
         run: node tools/build-formula-catalog.mjs
 
+      - name: Check inventory and Pythagoras mathematics
+        run: node tools/check-atlas.mjs
+
       - name: Commit catalog changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "Update formula catalog"
-          file_pattern: formulas/catalog.json
+          file_pattern: formulas/catalog-index.json formulas/search-index.json

@@ -1,0 +1,52 @@
+{
+  "id": "parametric-value-at-risk-var",
+  "name": "VaR paramétrico: Value at Risk normal",
+  "year": 1994,
+  "field": "Finanzas / Gestión de riesgo",
+  "level": "Universidad inicial",
+  "color": "#ea580c",
+  "formula": [
+    "VaR=Z_α · σ · V"
+  ],
+  "summary": "Estima una pérdida máxima diaria bajo normalidad, volatilidad constante y nivel de confianza dado.",
+  "sim": "scripts/finance-parametric-var-sim.js?v=20260706a",
+  "k": "var",
+  "folder": "formulas/parametric-value-at-risk-var",
+  "source": "files",
+  "formulaText": [
+    "VaR=Z_α · σ · V",
+    "Estima una pérdida máxima diaria bajo normalidad, volatilidad constante y nivel de confianza dado."
+  ],
+  "tags": [
+    "economia",
+    "microeconomia",
+    "macroeconomia",
+    "finanzas",
+    "riesgo",
+    "renta fija",
+    "kelly",
+    "var",
+    "solow",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "algebra",
+    "calculo basico",
+    "microeconomia",
+    "macroeconomia",
+    "finanzas basicas"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "historia",
+    "derivacion",
+    "simulacion"
+  ],
+  "units": "Unidades económicas y financieras normalizadas.",
+  "dimensions": "Ver ficha.",
+  "symbols": [],
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-32.js",
+  "createdAt": "2026-07-07"
+}

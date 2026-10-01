@@ -1,0 +1,58 @@
+{
+  "id": "bond-duration-interest-rate-sensitivity",
+  "name": "Duración de bonos: sensibilidad a tipos de interés",
+  "year": 1938,
+  "field": "Renta fija / Gestión de riesgo",
+  "level": "Universidad inicial",
+  "color": "#10b981",
+  "formula": [
+    "Delta P / P ≈ -D_mod · Delta y",
+    "Delta P / P ≈ -D_mod · Delta y + 0.5 · C · (Delta y)^2",
+    "D_mod = D_Mac / (1 + y/m)"
+  ],
+  "summary": "Aproxima la sensibilidad del precio de un bono ante movimientos de tipos, incorporando duración modificada y convexidad.",
+  "sim": "scripts/finance-bond-duration-sim.js?v=20260705b",
+  "k": "duration",
+  "folder": "formulas/bond-duration-interest-rate-sensitivity",
+  "source": "files",
+  "formulaText": [
+    "Delta P / P ≈ -D_mod · Delta y",
+    "Delta P / P ≈ -D_mod · Delta y + 0.5 · C · (Delta y)^2",
+    "D_mod = D_Mac / (1 + y/m)",
+    "Aproxima la sensibilidad del precio de un bono ante movimientos de tipos, incorporando duración modificada y convexidad."
+  ],
+  "tags": [
+    "finanzas",
+    "valor temporal del dinero",
+    "derivados",
+    "renta fija",
+    "capm",
+    "sharpe",
+    "npv",
+    "irr",
+    "duracion",
+    "convexidad",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "algebra",
+    "logaritmos",
+    "probabilidad",
+    "estadistica",
+    "finanzas basicas",
+    "renta fija"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "historia",
+    "derivacion",
+    "simulacion"
+  ],
+  "units": "Unidades financieras normalizadas.",
+  "dimensions": "Ver ficha.",
+  "symbols": [],
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-31.js",
+  "createdAt": "2026-07-07"
+}

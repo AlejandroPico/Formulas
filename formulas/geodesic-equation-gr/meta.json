@@ -1,0 +1,45 @@
+{
+  "id": "geodesic-equation-gr",
+  "name": "Ecuación geodésica",
+  "year": 1915,
+  "field": "Relatividad general",
+  "level": "Universidad inicial",
+  "color": "#38bdf8",
+  "formula": [
+    "d²xμ/ds²+Γμαβ(dxα/ds)(dxβ/ds)=0"
+  ],
+  "summary": "Describe la trayectoria libre de una partícula como línea recta local en una geometría curva.",
+  "topic": "geodesic",
+  "sim": "scripts/geodesic-equation-simulation.js?v=20260705b",
+  "source": "files",
+  "author": "",
+  "formulaText": [
+    "Describe la trayectoria libre de una partícula como línea recta local en una geometría curva."
+  ],
+  "tags": [
+    "cosmologia",
+    "relatividad general",
+    "einstein",
+    "hubble",
+    "redshift",
+    "geodesica",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "relatividad",
+    "calculo basico",
+    "cosmologia"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "simulacion"
+  ],
+  "units": "Ver unidades.",
+  "dimensions": "Ver unidades.",
+  "symbols": [],
+  "folder": "formulas/geodesic-equation-gr",
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-15.js",
+  "createdAt": "2026-07-05"
+}

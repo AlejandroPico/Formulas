@@ -1,0 +1,48 @@
+{
+  "id": "dynamic-chemical-equilibrium",
+  "name": "Equilibrio químico dinámico",
+  "year": 1864,
+  "field": "Equilibrio químico",
+  "level": "Bachillerato/Universidad inicial",
+  "color": "#f97316",
+  "formula": [
+    "A ⇌ B",
+    "v_d=v_i"
+  ],
+  "summary": "Explica que el equilibrio no es reposo: las velocidades directa e inversa se igualan.",
+  "topic": "dynamicEq",
+  "folder": "formulas/dynamic-chemical-equilibrium",
+  "source": "files",
+  "author": "",
+  "formulaText": [
+    "Explica que el equilibrio no es reposo: las velocidades directa e inversa se igualan."
+  ],
+  "tags": [
+    "quimica",
+    "cinetica",
+    "equilibrio quimico",
+    "acido base",
+    "ph",
+    "beer lambert",
+    "tampon",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "quimica general",
+    "logaritmos",
+    "concentracion molar",
+    "equilibrio",
+    "funciones exponenciales"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "simulacion"
+  ],
+  "units": "Unidades didácticas normalizadas.",
+  "dimensions": "Ver ficha.",
+  "symbols": [],
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-20.js",
+  "createdAt": "2026-07-06"
+}

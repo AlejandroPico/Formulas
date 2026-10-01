@@ -4,6 +4,8 @@ const PROMPT_DIALOG_ID = "formulaPromptDialog";
 const REQUIRED_SECTION_KEYS = ["formula", "significado", "historia", "derivacion", "usos", "ficha", "aprendizaje", "unidades"];
 
 let equations = window.FormulasAtlas?.equations || [];
+let reviews = {};
+let reviewLoadError = false;
 
 window.addEventListener("formulas:catalog-ready", event => {
   equations = event.detail?.equations || [];
@@ -47,12 +49,14 @@ function ensureAdminTools(filterPanel) {
     <strong>Herramientas avanzadas</strong>
     <button type="button" data-admin-action="catalog">Catálogo</button>
     <button type="button" data-admin-action="validator">Validador LaTeX</button>
+    <button type="button" data-admin-action="reviews">Revisiones</button>
     <button type="button" data-admin-action="prompt">Superprompt</button>
   `;
   tools.addEventListener("click", event => {
     const action = event.target.closest("button")?.dataset.adminAction;
     if (action === "catalog") openCatalogDialog("inventory");
     if (action === "validator") openCatalogDialog("validator");
+    if (action === "reviews") openCatalogDialog("reviews");
     if (action === "prompt") openPromptDialog();
   });
   filterPanel.appendChild(tools);
@@ -74,10 +78,18 @@ function createDialogs() {
   }
 }
 
-function openCatalogDialog(mode = "inventory") {
+async function openCatalogDialog(mode = "inventory") {
+  try {
+    const response = await fetch('formulas/revisions.json', { cache: 'no-cache' });
+    if (!response.ok) throw new Error('No se pudo leer el registro');
+    reviews = (await response.json()).reviews || {};
+    reviewLoadError = false;
+  } catch { reviews = {}; reviewLoadError = true; }
   const dialog = document.querySelector(`#${CATALOG_DIALOG_ID}`);
   const rows = buildInventoryRows(getEquations());
   const validation = rows.map(row => ({ ...row, issues: validateRow(row) }));
+  const nameCounts = countBy(rows.map(row => ({ name: normalize(row.name) })), 'name');
+  validation.forEach(row => { if (nameCounts.get(normalize(row.name)) > 1) row.issues.push(issue('structure', 'nombre repetido; revisar alcance y duplicados')); });
   const fields = countBy(rows, "field");
   const levels = countBy(rows, "level");
   const complete = validation.filter(row => row.completeness === "Completa").length;
@@ -96,9 +108,11 @@ function openCatalogDialog(mode = "inventory") {
         <button type="button" data-catalog-tab="inventory" class="${mode === "inventory" ? "active" : ""}">Inventario</button>
         <button type="button" data-catalog-tab="coverage" class="${mode === "coverage" ? "active" : ""}">Cobertura</button>
         <button type="button" data-catalog-tab="validator" class="${mode === "validator" ? "active" : ""}">Validador</button>
+        <button type="button" data-catalog-tab="reviews" class="${mode === "reviews" ? "active" : ""}">Revisiones <small>${rows.filter(row => row.revision).length} / ${rows.length}</small></button>
       </nav>
       <section class="catalog-actions">
-        <input type="search" placeholder="Filtrar catálogo por nombre, área, nivel, etiqueta o símbolo…" data-catalog-search>
+        <input type="search" aria-label="Buscar en el catálogo" placeholder="Nombre, área, nivel o símbolo…" data-catalog-search>
+        <select data-review-filter aria-label="Estado de revisión"><option value="all">Todas las revisiones</option><option value="pending">Pendientes</option><option value="reviewed">Revisadas</option></select>
         <button type="button" data-download="csv">Descargar CSV</button>
         <button type="button" data-download="json">Descargar JSON</button>
         <button type="button" data-download="excel">Descargar Excel</button>
@@ -115,11 +129,12 @@ function openCatalogDialog(mode = "inventory") {
       </section>
       <section data-view="inventory" class="catalog-view ${mode === "inventory" ? "active" : ""}">${inventoryTable(rows)}</section>
       <section data-view="coverage" class="catalog-view ${mode === "coverage" ? "active" : ""}">${coverageView(rows, fields, levels)}</section>
-      <section data-view="validator" class="catalog-view ${mode === "validator" ? "active" : ""}">${validatorTable(validation)}</section>
+      <section data-view="validator" class="catalog-view ${mode === "validator" ? "active" : ""}"><p class="catalog-note">Comprueba metadatos, secciones declaradas, duplicados y delimitadores. Un resultado técnico correcto no equivale a una revisión científica completa ni verifica la ejecución del simulador.</p>${validatorTable(validation)}</section>
+      <section data-view="reviews" class="catalog-view ${mode === "reviews" ? "active" : ""}">${reviewsTable(rows)}</section>
     </article>`;
 
   bindCatalogDialog(dialog, rows, validation);
-  dialog.showModal();
+  if (!dialog.open) dialog.showModal();
 }
 
 function bindCatalogDialog(dialog, rows, validation) {
@@ -131,12 +146,24 @@ function bindCatalogDialog(dialog, rows, validation) {
       dialog.querySelectorAll("[data-view]").forEach(view => view.classList.toggle("active", view.dataset.view === button.dataset.catalogTab));
     });
   });
-  dialog.querySelector("[data-catalog-search]")?.addEventListener("input", event => {
-    const query = normalize(event.target.value);
+  const filterRows = () => {
+    const query = normalize(dialog.querySelector('[data-catalog-search]').value);
+    const status = dialog.querySelector('[data-review-filter]').value;
     dialog.querySelectorAll("tbody tr[data-index]").forEach(row => {
-      row.hidden = Boolean(query && !normalize(row.textContent).includes(query));
+      const entry = rows[Number(row.dataset.index)];
+      const haystack = [entry.name, entry.field, entry.level, entry.tags, entry.symbols, row.textContent].join(' ');
+      row.hidden = Boolean(query && !normalize(haystack).includes(query)) || (status === 'pending' && entry.revision > 0) || (status === 'reviewed' && !entry.revision);
     });
-  });
+  };
+  dialog.querySelector('[data-catalog-search]').addEventListener('input', filterRows);
+  dialog.querySelector('[data-review-filter]').addEventListener('change', filterRows);
+  dialog.querySelectorAll('[data-open-formula]').forEach(button => button.addEventListener('click', async () => {
+    const eq = getEquations().find(item => item.id === button.dataset.openFormula);
+    if (!eq) return;
+    dialog.close();
+    const { openEquationModal } = await import('./render-dynamic.js');
+    openEquationModal(eq);
+  }));
   dialog.querySelector("[data-download='csv']")?.addEventListener("click", () => downloadCsv(rows));
   dialog.querySelector("[data-download='json']")?.addEventListener("click", () => downloadJson(rows, validation));
   dialog.querySelector("[data-download='excel']")?.addEventListener("click", () => downloadExcel(rows, validation));
@@ -144,6 +171,8 @@ function bindCatalogDialog(dialog, rows, validation) {
 
 function buildInventoryRows(items) {
   return items.map(eq => {
+    const history = reviews[eq.id] || [];
+    const latest = history.at(-1);
     const sections = Array.isArray(eq.sections) ? eq.sections : [];
     const sectionKeys = [...new Set(sections.map(section => section?.key).filter(Boolean))];
     const formulaList = Array.isArray(eq.formula) ? eq.formula.map(value => String(value).trim()).filter(Boolean) : [];
@@ -156,6 +185,13 @@ function buildInventoryRows(items) {
       field: eq.field || "Sin área",
       level: eq.level || "Sin nivel",
       folder: eq.folder || "",
+      createdAt: eq.createdAt || '',
+      revision: latest?.revision || 0,
+      reviewedAt: latest?.date || '',
+      simulatorVersion: latest?.simulatorVersion || '',
+      reviewSummary: latest?.summary || '',
+      reviewScope: latest?.scope?.join(', ') || '',
+      reviewHistory: history,
       formulaList,
       formulas: formulaList.join(" ⟐ "),
       formulaCount: formulaList.length,
@@ -185,6 +221,7 @@ function validateRow(row) {
 
   row.formulaList.forEach((formula, index) => {
     const prefix = row.formulaList.length > 1 ? `fórmula ${index + 1}: ` : "";
+    if (/^ok$|\bequals\b|\bprime equals\b/i.test(formula)) issues.push(issue('latex', `${prefix}texto provisional; falta expresión simbólica`));
     if (!balanced(formula, "{", "}")) issues.push(issue("latex", `${prefix}llaves desbalanceadas`));
     if (!balanced(stripLatexCommandsForDelimiterCheck(formula), "(", ")")) issues.push(issue("latex", `${prefix}paréntesis desbalanceados`));
     if (!balanced(stripLatexCommandsForDelimiterCheck(formula), "[", "]")) issues.push(issue("latex", `${prefix}corchetes desbalanceados`));
@@ -245,14 +282,26 @@ function inventoryTable(rows) {
 
 function validatorTable(rows) {
   return `<div class="catalog-table-wrap"><table class="catalog-table">
-    <thead><tr><th>Nombre</th><th>Carpeta</th><th>Fórmulas</th><th>Resultado</th></tr></thead>
+    <thead><tr><th>Nombre</th><th>Carpeta</th><th>Fórmulas</th><th>Resultado técnico</th><th>Revisión completa</th><th>Simulador</th></tr></thead>
     <tbody>${rows.map((row, index) => {
       const result = row.issues.length
         ? row.issues.map(item => `<span class="validator-issue is-${item.kind}">${esc(item.message)}</span>`).join(" ")
         : "OK";
-      return `<tr data-index="${index}" class="${row.issues.length ? "has-warning" : "is-ok"}"><td><strong>${esc(row.name)}</strong></td><td><code>${esc(row.folder)}</code></td><td>${row.formulaCount}</td><td>${result}</td></tr>`;
+      return `<tr data-index="${index}" class="${row.issues.length ? "has-warning" : "is-ok"}"><td><strong>${esc(row.name)}</strong></td><td><code>${esc(row.folder)}</code></td><td>${row.formulaCount}</td><td>${result}</td><td>${reviewStatus(row)}</td><td>${row.simulatorVersion ? `v${esc(row.simulatorVersion)} · ${formatDate(row.reviewedAt)}` : 'Pendiente de revisión'}</td></tr>`;
     }).join("")}</tbody>
   </table></div>`;
+}
+
+function reviewStatus(row) {
+  if (reviewLoadError) return '<span class="review-pending">Registro no disponible</span>';
+  return `<span class="${row.revision ? 'review-done' : 'review-pending'}">${row.revision ? `✓ Revisada · r${esc(row.revision)}` : '○ Pendiente'}</span>`;
+}
+function formatDate(value) {
+  return /^\d{4}-\d{2}-\d{2}$/.test(value || '') ? new Date(`${value}T12:00:00`).toLocaleDateString('es-ES') : 'Sin constancia';
+}
+function reviewsTable(rows) {
+  return `<p class="catalog-note">${reviewLoadError ? 'No se pudo cargar el registro de revisiones. Vuelve a abrir el catálogo para reintentar.' : 'Una revisión completa incluye todas las pestañas, los símbolos y el simulador. La fecha de creación corresponde a su primera incorporación en Git; el año histórico aparece en Inventario.'}</p>
+    <div class="catalog-table-wrap"><table class="catalog-table"><thead><tr><th>Fórmula</th><th>Creación</th><th>Estado</th><th>Última revisión</th><th>Simulador</th><th>Historial</th></tr></thead><tbody>${rows.map((row, index) => `<tr data-index="${index}"><td><button class="catalog-formula-link" data-open-formula="${esc(row.id)}">${esc(row.name)}</button><small>${esc(row.field)}</small></td><td>${formatDate(row.createdAt)}</td><td>${reviewStatus(row)}</td><td>${row.reviewedAt ? formatDate(row.reviewedAt) : '—'}</td><td>${row.simulatorVersion ? `v${esc(row.simulatorVersion)}` : '—'}</td><td>${row.reviewHistory.length ? `<details><summary>${esc(row.reviewSummary)}</summary>${row.reviewHistory.map(review => `<p><strong>r${esc(review.revision)} · ${formatDate(review.date)}</strong><br>${esc(review.summary)}<br><small>${esc(review.scope.join(' · '))}</small></p>`).join('')}</details>` : 'Aún no revisada'}</td></tr>`).join('')}</tbody></table></div>`;
 }
 
 function coverageView(rows, fields, levels) {
@@ -272,7 +321,7 @@ function countBy(rows, key) {
   return map;
 }
 
-const EXPORT_COLUMNS = ["id", "name", "author", "year", "field", "level", "folder", "formulaCount", "hasSimulation", "completeness", "tags", "symbols", "prerequisites", "learningPath", "units", "dimensions", "formulas"];
+const EXPORT_COLUMNS = ["id", "name", "author", "year", "field", "level", "folder", "formulaCount", "hasSimulation", "completeness", "createdAt", "revision", "reviewedAt", "simulatorVersion", "reviewScope", "tags", "symbols", "prerequisites", "learningPath", "units", "dimensions", "formulas"];
 
 function downloadCsv(rows) {
   const csv = [EXPORT_COLUMNS.join(";"), ...rows.map(row => EXPORT_COLUMNS.map(column => csvCell(row[column])).join(";"))].join("\n");

@@ -1,0 +1,43 @@
+{
+  "id": "capacitor-stored-energy",
+  "name": "Energía almacenada en un condensador",
+  "year": 1745,
+  "field": "Circuitos eléctricos",
+  "level": "Bachillerato/Universidad inicial",
+  "color": "#0ea5e9",
+  "formula": [
+    "U=½CV²"
+  ],
+  "summary": "Energía electrostática almacenada entre las placas de un condensador cargado.",
+  "topic": "capacitor",
+  "source": "files",
+  "author": "",
+  "formulaText": [
+    "Energía electrostática almacenada entre las placas de un condensador cargado."
+  ],
+  "tags": [
+    "electromagnetismo",
+    "circuitos",
+    "ondas",
+    "energia",
+    "impedancia",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "electromagnetismo",
+    "fasores",
+    "calculo basico"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "simulacion"
+  ],
+  "units": "Ver unidades.",
+  "dimensions": "Ver unidades.",
+  "symbols": [],
+  "folder": "formulas/capacitor-stored-energy",
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-13.js",
+  "createdAt": "2026-07-05"
+}

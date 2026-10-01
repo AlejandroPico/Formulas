@@ -1,0 +1,47 @@
+{
+  "id": "pauli-equation",
+  "name": "Ecuación de Pauli",
+  "year": 1927,
+  "field": "Mecánica cuántica",
+  "level": "Universidad intermedia",
+  "color": "#ef4444",
+  "formula": [
+    "Ĥ≈(p−qA)²/(2m)−μ·B"
+  ],
+  "summary": "Extiende Schrödinger para partículas de espín 1/2 en campo electromagnético.",
+  "topic": "pauliEq",
+  "source": "files",
+  "author": "",
+  "formulaText": [
+    "Extiende Schrödinger para partículas de espín 1/2 en campo electromagnético."
+  ],
+  "tags": [
+    "informacion cuantica",
+    "mecanica cuantica",
+    "matriz densidad",
+    "von neumann",
+    "fidelidad",
+    "bloch",
+    "conmutador",
+    "pauli",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "algebra lineal",
+    "numeros complejos",
+    "mecanica cuantica",
+    "operadores"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "simulacion"
+  ],
+  "units": "Unidades normalizadas didácticas.",
+  "dimensions": "Ver ficha.",
+  "symbols": [],
+  "folder": "formulas/pauli-equation",
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-17.js",
+  "createdAt": "2026-07-05"
+}

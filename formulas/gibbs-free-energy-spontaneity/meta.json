@@ -1,0 +1,48 @@
+{
+  "id": "gibbs-free-energy-spontaneity",
+  "name": "Energía libre de Gibbs: espontaneidad de reacción",
+  "year": 1876,
+  "field": "Termodinámica química",
+  "level": "Universidad inicial",
+  "color": "#10b981",
+  "formula": [
+    "ΔG=ΔH−TΔS"
+  ],
+  "summary": "Determina espontaneidad a temperatura y presión constantes mediante el balance entre entalpía y entropía.",
+  "topic": "gibbs",
+  "source": "files",
+  "author": "",
+  "formulaText": [
+    "Determina espontaneidad a temperatura y presión constantes mediante el balance entre entalpía y entropía."
+  ],
+  "tags": [
+    "termodinamica",
+    "energia libre",
+    "maxwell",
+    "boltzmann",
+    "gibbs",
+    "helmholtz",
+    "carnot",
+    "primera ley",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "energia",
+    "calor",
+    "trabajo",
+    "calculo basico",
+    "fisica general"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "simulacion"
+  ],
+  "units": "Unidades didácticas normalizadas.",
+  "dimensions": "Ver ficha.",
+  "symbols": [],
+  "folder": "formulas/gibbs-free-energy-spontaneity",
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-18.js",
+  "createdAt": "2026-07-05"
+}

@@ -1,1 +1,48 @@
-
+.formula-plugin-host.pyth-game {
+  display: grid !important; position: relative !important;
+  grid-template-rows: max-content minmax(220px, 1fr) max-content max-content !important;
+  height: 100% !important; min-height: 0; overflow: auto !important; gap: 12px !important;
+  padding: 14px 22px 18px; color: var(--text); background: var(--panel-solid);
+}
+.pyth-game .pyth-heading { min-width: 0; }
+.pyth-game .pyth-heading nav { display: flex; gap: 20px; }
+.pyth-game button { border: 0; border-radius: 0 !important; background: transparent; color: var(--text); padding: 9px 12px; font: inherit; font-size: .86rem; font-weight: 500; }
+.pyth-game .pyth-heading button { padding: 6px 0; border-bottom: 2px solid transparent; }
+.pyth-game .pyth-heading button.active { border-bottom-color: var(--text); }
+.pyth-game .pyth-mission > span { display: block; color: var(--muted); letter-spacing: .08em; font-size: .7rem; margin-top: 12px; }
+.pyth-game h3 { margin: 4px 0; font-size: clamp(1.2rem, 2vw, 1.65rem); font-weight: 550; letter-spacing: -.025em; }
+.pyth-game .pyth-mission p { margin: 4px 0 0; font-size: .86rem; line-height: 1.6; max-width: 760px; }
+.formula-plugin-host.pyth-game .formula-plugin-canvas { position: static !important; inset: auto !important; width: 100% !important; height: 100% !important; min-height: 220px !important; border-radius: 0; cursor: grab; touch-action: none; }
+.formula-plugin-host.pyth-game .formula-plugin-controls {
+  position: static !important; inset: auto !important; display: flex !important;
+  width: 100% !important; max-width: none !important; padding: 0 !important; gap: 16px !important;
+  border: 0 !important; border-radius: 0 !important; background: transparent !important;
+  box-shadow: none !important; flex-wrap: wrap; align-items: end;
+  min-height: max-content !important;
+}
+.pyth-game .pyth-answer-form { display: flex; flex-wrap: wrap; gap: 10px; align-items: end; margin-right: auto; }
+.formula-plugin-host.pyth-game .formula-plugin-controls label { display: grid !important; grid-template-columns: 1fr !important; gap: 5px !important; color: var(--muted) !important; font-size: .8rem !important; }
+.pyth-game input[type="number"] { width: 140px; border: 1px solid var(--line); border-radius: 0; padding: 8px 10px; background: transparent; color: var(--text); }
+.pyth-game .pyth-answer-form button { background: var(--text); color: var(--panel-solid); }
+.pyth-game .pyth-actions { display: flex; gap: 8px; }
+.pyth-game button:disabled { opacity: .45; cursor: default; }
+.pyth-game input[type="range"] { width: 200px !important; min-width: 0; accent-color: var(--accent); }
+.formula-plugin-host.pyth-game .formula-plugin-controls output { color: var(--text) !important; text-align: left !important; font-size: .82rem; }
+.formula-plugin-host.pyth-game .formula-plugin-readout {
+  position: static !important; inset: auto !important; max-height: none !important;
+  max-width: none !important; width: 100% !important; padding: 8px 0 0 !important;
+  border: 0 !important; border-top: 1px solid var(--line) !important; border-radius: 0 !important;
+  background: transparent !important; box-shadow: none !important; color: var(--text) !important;
+  display: grid; gap: 4px; font-size: .83rem; line-height: 1.6; backdrop-filter: none !important;
+  min-height: max-content !important; text-align: left; justify-content: start;
+}
+.pyth-game .formula-plugin-readout strong { color: var(--text); font-weight: 600; }
+.pyth-game .formula-plugin-readout span { font-family: inherit; font-size: inherit; }
+.pyth-game .formula-plugin-readout.is-solved strong { color: #24875c; }
+@media (max-width: 760px) {
+  .formula-plugin-host.pyth-game { padding: 10px 12px; }
+  .pyth-game .pyth-answer-form { width: 100%; }
+  .pyth-game .pyth-answer-form button { flex: 1; }
+  .pyth-game .pyth-actions { width: 100%; justify-content: space-between; }
+  .pyth-game input[type="range"] { width: min(260px, 65vw) !important; }
+}

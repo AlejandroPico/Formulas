@@ -1,0 +1,44 @@
+{
+  "id": "stokes-drag-law",
+  "name": "Ley de Stokes de arrastre",
+  "year": 1851,
+  "field": "Mecánica de fluidos",
+  "level": "Universidad inicial",
+  "color": "#dc2626",
+  "formula": [
+    "Fd=6πμrv"
+  ],
+  "summary": "Arrastre viscoso lineal sobre una esfera pequeña en régimen laminar de Reynolds bajo.",
+  "topic": "stokes",
+  "source": "files",
+  "author": "",
+  "formulaText": [
+    "Arrastre viscoso lineal sobre una esfera pequeña en régimen laminar de Reynolds bajo."
+  ],
+  "tags": [
+    "fluidos",
+    "transporte",
+    "edp",
+    "viscosidad",
+    "adveccion",
+    "difusion",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "calculo vectorial",
+    "mecanica de fluidos",
+    "ecuaciones diferenciales"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "simulacion"
+  ],
+  "units": "Ver unidades.",
+  "dimensions": "Ver unidades.",
+  "symbols": [],
+  "folder": "formulas/stokes-drag-law",
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-11.js",
+  "createdAt": "2026-07-05"
+}

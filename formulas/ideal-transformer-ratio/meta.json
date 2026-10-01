@@ -1,0 +1,49 @@
+{
+  "id": "ideal-transformer-ratio",
+  "name": "Relación de transformación en transformador ideal",
+  "year": 1831,
+  "field": "Electrotecnia / Máquinas eléctricas",
+  "level": "Bachillerato/Universidad inicial",
+  "color": "#8b5cf6",
+  "formula": [
+    "V_p/V_s=N_p/N_s=a",
+    "I_p/I_s=N_s/N_p"
+  ],
+  "summary": "Relaciona tensión, corriente y número de espiras en un transformador ideal.",
+  "sim": "scripts/electronics-ideal-transformer-sim.js?v=20260705a",
+  "k": "trafo",
+  "folder": "formulas/ideal-transformer-ratio",
+  "source": "files",
+  "formulaText": [
+    "Relaciona tensión, corriente y número de espiras en un transformador ideal."
+  ],
+  "tags": [
+    "electronica",
+    "electrotecnia",
+    "corriente alterna",
+    "semiconductores",
+    "trifasica",
+    "potencia",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "ley de ohm",
+    "logaritmos",
+    "exponenciales",
+    "fasores",
+    "corriente alterna"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "historia",
+    "derivacion",
+    "simulacion"
+  ],
+  "units": "Unidades didácticas normalizadas.",
+  "dimensions": "Ver ficha.",
+  "symbols": [],
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-28.js",
+  "createdAt": "2026-07-06"
+}

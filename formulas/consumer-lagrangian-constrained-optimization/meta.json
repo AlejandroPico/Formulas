@@ -1,0 +1,54 @@
+{
+  "id": "consumer-lagrangian-constrained-optimization",
+  "name": "Lagrangiano del consumidor: optimización restringida",
+  "year": 1930,
+  "field": "Microeconomía / Optimización",
+  "level": "Universidad inicial",
+  "color": "#8b5cf6",
+  "formula": [
+    "L=U(x,y)+λ(M−p_x x−p_y y)",
+    "U=x·y ⇒ x*=M/(2p_x), y*=M/(2p_y)"
+  ],
+  "summary": "Resuelve la cesta óptima de consumo bajo una restricción presupuestaria.",
+  "sim": "scripts/economics-consumer-lagrangian-sim.js?v=20260706a",
+  "k": "lagrange",
+  "folder": "formulas/consumer-lagrangian-constrained-optimization",
+  "source": "files",
+  "formulaText": [
+    "L=U(x,y)+λ(M−p_x x−p_y y)",
+    "U=x·y ⇒ x*=M/(2p_x), y*=M/(2p_y)",
+    "Resuelve la cesta óptima de consumo bajo una restricción presupuestaria."
+  ],
+  "tags": [
+    "economia",
+    "microeconomia",
+    "macroeconomia",
+    "finanzas",
+    "riesgo",
+    "renta fija",
+    "kelly",
+    "var",
+    "solow",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "algebra",
+    "calculo basico",
+    "microeconomia",
+    "macroeconomia",
+    "finanzas basicas"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "historia",
+    "derivacion",
+    "simulacion"
+  ],
+  "units": "Unidades económicas y financieras normalizadas.",
+  "dimensions": "Ver ficha.",
+  "symbols": [],
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-32.js",
+  "createdAt": "2026-07-07"
+}

@@ -1,0 +1,45 @@
+{
+  "id": "incompressible-navier-stokes-equation",
+  "name": "Ecuación de Navier-Stokes incompresible",
+  "year": 1822,
+  "field": "Mecánica de fluidos",
+  "level": "Universidad avanzada",
+  "color": "#a855f7",
+  "formula": [
+    "ρ Du/Dt=−∇P+μ∇²u",
+    "∇·u=0"
+  ],
+  "summary": "Ecuación fundamental de fluidos viscosos incompresibles con presión y difusión viscosa.",
+  "topic": "navier",
+  "source": "files",
+  "author": "",
+  "formulaText": [
+    "Ecuación fundamental de fluidos viscosos incompresibles con presión y difusión viscosa."
+  ],
+  "tags": [
+    "fluidos",
+    "transporte",
+    "edp",
+    "viscosidad",
+    "adveccion",
+    "difusion",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "calculo vectorial",
+    "mecanica de fluidos",
+    "ecuaciones diferenciales"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "simulacion"
+  ],
+  "units": "Ver unidades.",
+  "dimensions": "Ver unidades.",
+  "symbols": [],
+  "folder": "formulas/incompressible-navier-stokes-equation",
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-11.js",
+  "createdAt": "2026-07-05"
+}

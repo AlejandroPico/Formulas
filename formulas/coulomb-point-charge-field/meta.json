@@ -1,0 +1,43 @@
+{
+  "id": "coulomb-point-charge-field",
+  "name": "Ley de Coulomb: campo de una carga puntual",
+  "year": 1785,
+  "field": "Electromagnetismo",
+  "level": "Bachillerato/Universidad inicial",
+  "color": "#dc2626",
+  "formula": [
+    "E=ke Q/r²"
+  ],
+  "summary": "Campo eléctrico radial generado por una carga puntual, decreciente con el cuadrado de la distancia.",
+  "topic": "coulomb",
+  "source": "files",
+  "author": "",
+  "formulaText": [
+    "Campo eléctrico radial generado por una carga puntual, decreciente con el cuadrado de la distancia."
+  ],
+  "tags": [
+    "electromagnetismo",
+    "maxwell",
+    "campo",
+    "flujo",
+    "potencial",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "vectores",
+    "calculo basico",
+    "electrostatica"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "simulacion"
+  ],
+  "units": "Ver unidades.",
+  "dimensions": "Ver unidades.",
+  "symbols": [],
+  "folder": "formulas/coulomb-point-charge-field",
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-12.js",
+  "createdAt": "2026-07-05"
+}

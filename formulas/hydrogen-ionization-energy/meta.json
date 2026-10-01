@@ -1,0 +1,50 @@
+{
+  "id": "hydrogen-ionization-energy",
+  "name": "Energía de ionización del hidrógeno",
+  "year": 1913,
+  "field": "Química cuántica",
+  "level": "Bachillerato/Universidad inicial",
+  "color": "#10b981",
+  "formula": [
+    "E_n=−13.6 eV/n^2",
+    "E_ion=13.6 eV/n^2"
+  ],
+  "summary": "Energía necesaria para llevar el electrón del hidrógeno desde un nivel ligado al continuo.",
+  "topic": "hydrogenIon",
+  "folder": "formulas/hydrogen-ionization-energy",
+  "source": "files",
+  "author": "",
+  "formulaText": [
+    "Energía necesaria para llevar el electrón del hidrógeno desde un nivel ligado al continuo."
+  ],
+  "tags": [
+    "quimica fisica",
+    "electroquimica",
+    "quimica cuantica",
+    "born haber",
+    "bohr",
+    "hidrogeno",
+    "debye huckel",
+    "nernst",
+    "faraday",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "quimica general",
+    "termodinamica",
+    "electroquimica",
+    "estructura atomica",
+    "logaritmos"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "simulacion"
+  ],
+  "units": "Unidades didácticas normalizadas.",
+  "dimensions": "Ver ficha.",
+  "symbols": [],
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-21.js",
+  "createdAt": "2026-07-06"
+}

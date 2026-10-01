@@ -1,0 +1,49 @@
+{
+  "id": "wohler-sn-fatigue-curve",
+  "name": "Fatiga de materiales: curva de Wöhler S-N",
+  "year": 1870,
+  "field": "Resistencia de materiales / Fatiga",
+  "level": "Universidad inicial",
+  "color": "#dc2626",
+  "formula": [
+    "S=A·N^b"
+  ],
+  "summary": "Relaciona amplitud de esfuerzo y número de ciclos hasta fallo por fatiga.",
+  "sim": "scripts/materials-fatigue-wohler-sim.js?v=20260705a",
+  "k": "fatigue",
+  "folder": "formulas/wohler-sn-fatigue-curve",
+  "source": "files",
+  "formulaText": [
+    "Relaciona amplitud de esfuerzo y número de ciclos hasta fallo por fatiga."
+  ],
+  "tags": [
+    "mecanica",
+    "hidraulica",
+    "transferencia de calor",
+    "fatiga",
+    "elasticidad",
+    "mohr",
+    "hooke",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "algebra",
+    "calculo basico",
+    "mecanica de fluidos",
+    "mecanica de solidos",
+    "transferencia de calor"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "historia",
+    "derivacion",
+    "simulacion"
+  ],
+  "units": "Unidades didácticas normalizadas.",
+  "dimensions": "Ver ficha.",
+  "symbols": [],
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-30.js",
+  "createdAt": "2026-07-06"
+}

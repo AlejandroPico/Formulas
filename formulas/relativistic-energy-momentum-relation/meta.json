@@ -1,0 +1,42 @@
+{
+  "id": "relativistic-energy-momentum-relation",
+  "name": "Relación energía-momento relativista",
+  "year": 1905,
+  "field": "Relatividad especial",
+  "level": "Universidad inicial",
+  "color": "#8b5cf6",
+  "formula": [
+    "E²=(pc)²+(m0c²)²"
+  ],
+  "summary": "Relación entre energía total, momento y energía de reposo.",
+  "topic": "energyMomentum",
+  "source": "files",
+  "author": "",
+  "formulaText": [
+    "Relación entre energía total, momento y energía de reposo."
+  ],
+  "tags": [
+    "relatividad",
+    "gravedad",
+    "lorentz",
+    "schwarzschild",
+    "espaciotiempo",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "algebra",
+    "fisica clasica"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "simulacion"
+  ],
+  "units": "Ver unidades.",
+  "dimensions": "Ver unidades.",
+  "symbols": [],
+  "folder": "formulas/relativistic-energy-momentum-relation",
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-14.js",
+  "createdAt": "2026-07-05"
+}

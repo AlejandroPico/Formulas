@@ -1,0 +1,48 @@
+{
+  "id": "maxwell-boltzmann-speed-distribution",
+  "name": "Distribución de velocidades de Maxwell-Boltzmann",
+  "year": 1860,
+  "field": "Termodinámica estadística",
+  "level": "Universidad inicial",
+  "color": "#2563eb",
+  "formula": [
+    "f(v)=4π(m/2πkBT)^(3/2)v²e^(-mv²/2kBT)"
+  ],
+  "summary": "Describe la distribución de velocidades moleculares en un gas ideal en equilibrio térmico.",
+  "topic": "maxwellBoltzmann",
+  "source": "files",
+  "author": "",
+  "formulaText": [
+    "Describe la distribución de velocidades moleculares en un gas ideal en equilibrio térmico."
+  ],
+  "tags": [
+    "termodinamica",
+    "energia libre",
+    "maxwell",
+    "boltzmann",
+    "gibbs",
+    "helmholtz",
+    "carnot",
+    "primera ley",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "energia",
+    "calor",
+    "trabajo",
+    "calculo basico",
+    "fisica general"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "simulacion"
+  ],
+  "units": "Unidades didácticas normalizadas.",
+  "dimensions": "Ver ficha.",
+  "symbols": [],
+  "folder": "formulas/maxwell-boltzmann-speed-distribution",
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-18.js",
+  "createdAt": "2026-07-05"
+}

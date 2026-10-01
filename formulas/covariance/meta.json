@@ -1,0 +1,40 @@
+{
+  "id": "covariance",
+  "name": "Covarianza",
+  "year": 1900,
+  "field": "Probabilidad y estadística",
+  "level": "Bachillerato/Universidad inicial",
+  "color": "#10b981",
+  "formula": [
+    "σxy=(1/N)∑(xᵢ−μx)(yᵢ−μy)"
+  ],
+  "summary": "Mide si dos variables tienden a moverse juntas o en sentido opuesto.",
+  "method": "covariance",
+  "source": "files",
+  "author": "",
+  "formulaText": [
+    "Mide si dos variables tienden a moverse juntas o en sentido opuesto."
+  ],
+  "tags": [
+    "estadistica",
+    "inferencia",
+    "datos",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "estadistica descriptiva",
+    "probabilidad"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "simulacion"
+  ],
+  "units": "Ver unidades.",
+  "dimensions": "Ver unidades.",
+  "symbols": [],
+  "folder": "formulas/covariance",
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-7.js",
+  "createdAt": "2026-07-04"
+}

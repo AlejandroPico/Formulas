@@ -1,0 +1,48 @@
+{
+  "id": "canonical-commutation-relation",
+  "name": "Regla de conmutación canónica",
+  "year": 1925,
+  "field": "Mecánica cuántica",
+  "level": "Universidad inicial",
+  "color": "#8b5cf6",
+  "formula": [
+    "[x̂,p̂]=iℏ",
+    "ΔxΔp≥ℏ/2"
+  ],
+  "summary": "El conmutador no nulo entre posición y momento explica la incertidumbre cuántica.",
+  "topic": "comm",
+  "source": "files",
+  "author": "",
+  "formulaText": [
+    "El conmutador no nulo entre posición y momento explica la incertidumbre cuántica."
+  ],
+  "tags": [
+    "informacion cuantica",
+    "mecanica cuantica",
+    "matriz densidad",
+    "von neumann",
+    "fidelidad",
+    "bloch",
+    "conmutador",
+    "pauli",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "algebra lineal",
+    "numeros complejos",
+    "mecanica cuantica",
+    "operadores"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "simulacion"
+  ],
+  "units": "Unidades normalizadas didácticas.",
+  "dimensions": "Ver ficha.",
+  "symbols": [],
+  "folder": "formulas/canonical-commutation-relation",
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-17.js",
+  "createdAt": "2026-07-05"
+}

@@ -1,0 +1,49 @@
+{
+  "id": "normal-stress-axial-load",
+  "name": "Tensión normal: tracción y compresión",
+  "year": 1822,
+  "field": "Resistencia de materiales",
+  "level": "Bachillerato/Universidad inicial",
+  "color": "#2563eb",
+  "formula": [
+    "σ=P/A",
+    "A=πd²/4"
+  ],
+  "summary": "Relaciona carga axial y área resistente para estimar tensión de tracción o compresión.",
+  "sim": "scripts/mechanics-normal-stress-sim.js?v=20260705a",
+  "k": "normal",
+  "folder": "formulas/normal-stress-axial-load",
+  "source": "files",
+  "formulaText": [
+    "Relaciona carga axial y área resistente para estimar tensión de tracción o compresión."
+  ],
+  "tags": [
+    "mecanica",
+    "resistencia de materiales",
+    "transferencia de calor",
+    "electronica",
+    "instrumentacion",
+    "mosfet",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "algebra",
+    "calculo basico",
+    "unidades",
+    "ley de ohm",
+    "mecanica de solidos"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "historia",
+    "derivacion",
+    "simulacion"
+  ],
+  "units": "Unidades didácticas normalizadas.",
+  "dimensions": "Ver ficha.",
+  "symbols": [],
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-29.js",
+  "createdAt": "2026-07-06"
+}

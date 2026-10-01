@@ -1,0 +1,50 @@
+{
+  "id": "bohr-radius",
+  "name": "Radio de Bohr",
+  "year": 1913,
+  "field": "Química cuántica",
+  "level": "Bachillerato/Universidad inicial",
+  "color": "#0ea5e9",
+  "formula": [
+    "r_n=n^2a_0/Z",
+    "a_0≈0.529 Å"
+  ],
+  "summary": "Radio característico de las órbitas permitidas en el modelo de Bohr para átomos hidrogenoides.",
+  "topic": "bohrRadius",
+  "folder": "formulas/bohr-radius",
+  "source": "files",
+  "author": "",
+  "formulaText": [
+    "Radio característico de las órbitas permitidas en el modelo de Bohr para átomos hidrogenoides."
+  ],
+  "tags": [
+    "quimica fisica",
+    "electroquimica",
+    "quimica cuantica",
+    "born haber",
+    "bohr",
+    "hidrogeno",
+    "debye huckel",
+    "nernst",
+    "faraday",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "quimica general",
+    "termodinamica",
+    "electroquimica",
+    "estructura atomica",
+    "logaritmos"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "simulacion"
+  ],
+  "units": "Unidades didácticas normalizadas.",
+  "dimensions": "Ver ficha.",
+  "symbols": [],
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-21.js",
+  "createdAt": "2026-07-06"
+}

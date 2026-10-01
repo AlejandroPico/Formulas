@@ -1,0 +1,47 @@
+{
+  "id": "wiens-displacement-law",
+  "name": "Ley de desplazamiento de Wien",
+  "year": 1893,
+  "field": "Radiación térmica",
+  "level": "Bachillerato/Universidad inicial",
+  "color": "#2563eb",
+  "formula": [
+    "λ_max T=b"
+  ],
+  "summary": "La longitud de onda del máximo de emisión de un cuerpo negro es inversamente proporcional a su temperatura.",
+  "topic": "wien",
+  "folder": "formulas/wiens-displacement-law",
+  "source": "files",
+  "author": "",
+  "formulaText": [
+    "La longitud de onda del máximo de emisión de un cuerpo negro es inversamente proporcional a su temperatura."
+  ],
+  "tags": [
+    "termodinamica",
+    "mecanica estadistica",
+    "radiacion termica",
+    "cuerpo negro",
+    "gas real",
+    "boltzmann",
+    "einstein",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "termodinamica",
+    "calculo basico",
+    "energia",
+    "temperatura",
+    "probabilidad"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "simulacion"
+  ],
+  "units": "Unidades didácticas normalizadas.",
+  "dimensions": "Ver ficha.",
+  "symbols": [],
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-19.js",
+  "createdAt": "2026-07-06"
+}

@@ -1,8 +1,8 @@
 import { requestMathTypeset } from "./utils.js?v=20260715a";
 export { openEquationModal, closeEquationModal } from "./render-dynamic.js";
 
-const FIRST_BATCH = 48;
-const NEXT_BATCH = 48;
+const FIRST_BATCH = 24;
+const NEXT_BATCH = 24;
 const IDLE_TIMEOUT = 220;
 const GAP = 14;
 const MIN_CARD_WIDTH = 220;
@@ -41,6 +41,7 @@ export function renderEquationGrid(equations, onOpen, viewState = {}) {
   const token = ++activeRenderToken;
   grid.className = "equation-grid is-measured-mosaic";
   grid.dataset.layoutEngine = "measured-maxrects-v3";
+  window.MathJax?.typesetClear?.([grid]);
   grid.replaceChildren();
   grid.style.height = "0px";
 
@@ -69,11 +70,14 @@ function createLayoutState(grid, template, equations, viewState, token) {
     freeRects: [{ x: 0, y: 0, width, height: VIRTUAL_CANVAS_HEIGHT }],
     maxHeight: 0,
     placedCards: []
+    ,nextIndex: 0, loading: false
   };
 }
 
 async function processBatch(state, start, size, firstBatch = false) {
   if (!isActive(state)) return;
+  if (state.loading) return;
+  state.loading = true;
   const end = Math.min(state.equations.length, start + size);
   const fragment = document.createDocumentFragment();
   const cards = [];
@@ -92,12 +96,14 @@ async function processBatch(state, start, size, firstBatch = false) {
 
   cards.forEach(card => measureAndPlaceCard(state, card));
   updateGridHeight(state);
+  state.nextIndex = end;
+  state.loading = false;
 
   if (firstBatch) window.dispatchEvent(new CustomEvent("formulas:first-layout-ready"));
 
   if (end < state.equations.length) {
     state.grid.classList.add("is-loading-more");
-    scheduleIdle(() => processBatch(state, end, NEXT_BATCH, false));
+    maybeLoadMore();
   } else {
     state.grid.classList.remove("is-loading-more");
   }
@@ -327,9 +333,19 @@ function bindGridDelegation(grid) {
 function bindGlobalEvents() {
   if (globalEventsBound) return;
   globalEventsBound = true;
+  window.addEventListener('scroll', maybeLoadMore, { passive: true });
   window.addEventListener("resize", () => {
     window.clearTimeout(resizeTimer);
-    resizeTimer = window.setTimeout(repackVisibleCards, 140);
+    resizeTimer = window.setTimeout(() => { repackVisibleCards(); maybeLoadMore(); }, 140);
+  });
+}
+
+function maybeLoadMore() {
+  const current = layoutState;
+  if (!isActive(current) || current.loading || current.nextIndex >= current.equations.length) return;
+  const bottom = current.grid.getBoundingClientRect().bottom;
+  if (bottom < window.innerHeight + 800) scheduleIdle(() => {
+    if (isActive(current)) processBatch(current, current.nextIndex, NEXT_BATCH);
   });
 }
 

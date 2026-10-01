@@ -1,0 +1,43 @@
+{
+  "id": "poynting-vector",
+  "name": "Vector de Poynting",
+  "year": 1884,
+  "field": "Electromagnetismo",
+  "level": "Universidad inicial",
+  "color": "#10b981",
+  "formula": [
+    "S=E×H"
+  ],
+  "summary": "Vector que representa la densidad de flujo de potencia electromagnética.",
+  "topic": "poynting",
+  "source": "files",
+  "author": "",
+  "formulaText": [
+    "Vector que representa la densidad de flujo de potencia electromagnética."
+  ],
+  "tags": [
+    "electromagnetismo",
+    "circuitos",
+    "ondas",
+    "energia",
+    "impedancia",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "electromagnetismo",
+    "fasores",
+    "calculo basico"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "simulacion"
+  ],
+  "units": "Ver unidades.",
+  "dimensions": "Ver unidades.",
+  "symbols": [],
+  "folder": "formulas/poynting-vector",
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-13.js",
+  "createdAt": "2026-07-05"
+}

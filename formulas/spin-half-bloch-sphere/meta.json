@@ -1,0 +1,46 @@
+{
+  "id": "spin-half-bloch-sphere",
+  "name": "Espín 1/2 y la esfera de Bloch",
+  "year": 1946,
+  "field": "Mecánica cuántica",
+  "level": "Universidad inicial",
+  "color": "#ea580c",
+  "formula": [
+    "|ψ⟩=cos(θ/2)|0⟩+e^{iφ}sin(θ/2)|1⟩"
+  ],
+  "summary": "Representa un qubit o espín 1/2 como vector sobre la esfera de Bloch.",
+  "topic": "bloch",
+  "source": "files",
+  "author": "",
+  "formulaText": [
+    "Representa un qubit o espín 1/2 como vector sobre la esfera de Bloch."
+  ],
+  "tags": [
+    "mecanica cuantica",
+    "cuantica",
+    "schrodinger",
+    "hamiltoniano",
+    "pauli",
+    "bloch",
+    "oscilador",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "algebra lineal",
+    "numeros complejos",
+    "calculo",
+    "fisica ondulatoria"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "simulacion"
+  ],
+  "units": "Unidades normalizadas didácticas.",
+  "dimensions": "Ver ficha.",
+  "symbols": [],
+  "folder": "formulas/spin-half-bloch-sphere",
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-16.js",
+  "createdAt": "2026-07-05"
+}

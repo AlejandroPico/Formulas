@@ -1,0 +1,48 @@
+{
+  "id": "tf-idf-term-frequency-inverse-document-frequency",
+  "name": "TF-IDF: Frecuencia de término e inversa de documento",
+  "year": 1972,
+  "field": "NLP / Recuperación de información",
+  "level": "Universidad inicial",
+  "color": "#ec4899",
+  "formula": [
+    "TF-IDF(t,d)=TF(t,d)·IDF(t)",
+    "IDF(t)=log(N/DF(t))"
+  ],
+  "summary": "Pondera un término por ser frecuente en un documento pero raro en el corpus.",
+  "sim": "scripts/ml-tfidf-sim.js?v=20260705a",
+  "k": "tfidf",
+  "folder": "formulas/tf-idf-term-frequency-inverse-document-frequency",
+  "source": "files",
+  "formulaText": [
+    "Pondera un término por ser frecuente en un documento pero raro en el corpus."
+  ],
+  "tags": [
+    "machine learning",
+    "nlp",
+    "teoria de la informacion",
+    "normalizacion",
+    "funciones de perdida",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "probabilidad",
+    "logaritmos",
+    "estadistica",
+    "machine learning",
+    "redes neuronales"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "historia",
+    "derivacion",
+    "simulacion"
+  ],
+  "units": "Unidades didácticas normalizadas.",
+  "dimensions": "Ver ficha.",
+  "symbols": [],
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-25.js",
+  "createdAt": "2026-07-06"
+}

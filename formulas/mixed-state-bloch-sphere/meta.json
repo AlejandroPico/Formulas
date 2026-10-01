@@ -1,0 +1,48 @@
+{
+  "id": "mixed-state-bloch-sphere",
+  "name": "Fórmula de la esfera de Bloch: estados mixtos generales",
+  "year": 1946,
+  "field": "Información cuántica",
+  "level": "Universidad intermedia",
+  "color": "#e11d48",
+  "formula": [
+    "ρ=1/2(I+r·σ)",
+    "|r|≤1"
+  ],
+  "summary": "Representa estados puros y mixtos de un qubit mediante el vector de Bloch y la pureza Tr(ρ²).",
+  "topic": "mixedBloch",
+  "source": "files",
+  "author": "",
+  "formulaText": [
+    "Representa estados puros y mixtos de un qubit mediante el vector de Bloch y la pureza Tr(ρ²)."
+  ],
+  "tags": [
+    "informacion cuantica",
+    "mecanica cuantica",
+    "matriz densidad",
+    "von neumann",
+    "fidelidad",
+    "bloch",
+    "conmutador",
+    "pauli",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "algebra lineal",
+    "numeros complejos",
+    "mecanica cuantica",
+    "operadores"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "simulacion"
+  ],
+  "units": "Unidades normalizadas didácticas.",
+  "dimensions": "Ver ficha.",
+  "symbols": [],
+  "folder": "formulas/mixed-state-bloch-sphere",
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-17.js",
+  "createdAt": "2026-07-05"
+}

@@ -1,0 +1,47 @@
+{
+  "id": "quantum-fidelity",
+  "name": "Fidelidad cuántica",
+  "year": 1976,
+  "field": "Información cuántica",
+  "level": "Universidad inicial",
+  "color": "#10b981",
+  "formula": [
+    "F(|ψ⟩,|φ⟩)=|⟨ψ|φ⟩|²"
+  ],
+  "summary": "Métrica de solapamiento que compara cuán parecidos son dos estados cuánticos.",
+  "topic": "fidelity",
+  "source": "files",
+  "author": "",
+  "formulaText": [
+    "Métrica de solapamiento que compara cuán parecidos son dos estados cuánticos."
+  ],
+  "tags": [
+    "informacion cuantica",
+    "mecanica cuantica",
+    "matriz densidad",
+    "von neumann",
+    "fidelidad",
+    "bloch",
+    "conmutador",
+    "pauli",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "algebra lineal",
+    "numeros complejos",
+    "mecanica cuantica",
+    "operadores"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "simulacion"
+  ],
+  "units": "Unidades normalizadas didácticas.",
+  "dimensions": "Ver ficha.",
+  "symbols": [],
+  "folder": "formulas/quantum-fidelity",
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-17.js",
+  "createdAt": "2026-07-05"
+}

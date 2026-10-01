@@ -1,7 +1,18 @@
-# Historia
+# Una relación anterior a su nombre
 
-El teorema de Pitágoras es uno de los resultados geométricos más antiguos y universales. Aunque lleva el nombre de Pitágoras y de la tradición pitagórica griega, relaciones equivalentes aparecen en tablillas babilónicas y en tradiciones matemáticas de varias culturas antiguas.
+## Antes de Pitágoras
 
-Su importancia histórica no reside solo en el resultado numérico, sino en el paso conceptual que representa: convertir una relación espacial en una afirmación demostrable y general. En la tradición griega, el teorema se convirtió en un ejemplo central de demostración geométrica rigurosa.
+Las tablillas babilónicas del periodo aproximado 1900–1600 a. C. muestran cálculos de diagonales y lados compatibles con esta relación. Plimpton 322 contiene relaciones numéricas asociadas a triángulos rectángulos; YBC 7289 conserva una aproximación muy precisa de √2 para una diagonal.
 
-Con el tiempo, dejó de ser únicamente una propiedad de triángulos rectángulos y pasó a formar parte del lenguaje general de la distancia, la norma y la geometría analítica.
+## La tradición griega
+
+El nombre remite a Pitágoras y a su escuela, en el siglo VI a. C. La atribución histórica no demuestra que él fuera el primero en descubrirla o probarla. El año del catálogo es una referencia aproximada a esa tradición.
+
+## Una demostración que se conserva
+
+Hacia el 300 a. C., Euclides incluyó una demostración geométrica en la proposición I.47 de los **Elementos**. La relación también aparece en la tradición matemática china.
+
+## Lecturas
+
+- [Euclides, Elementos, I.47 — texto y demostración](https://mathcs.clarku.edu/~djoyce/elements/bookI/propI47.html)
+- [MacTutor, Universidad de St Andrews — tablillas babilónicas](https://mathshistory.st-andrews.ac.uk/HistTopics/Babylonian_Pythagoras/)

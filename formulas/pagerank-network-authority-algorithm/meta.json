@@ -1,0 +1,50 @@
+{
+  "id": "pagerank-network-authority-algorithm",
+  "name": "PageRank: autoridad de redes",
+  "year": 1998,
+  "field": "Grafos / Recuperación de información",
+  "level": "Universidad inicial",
+  "color": "#2563eb",
+  "formula": [
+    "PR(A)=(1−d)/N+dΣ_{M∈In(A)}PR(M)/L(M)"
+  ],
+  "summary": "Calcula autoridad de nodos como distribución estacionaria de un paseo aleatorio con teletransporte.",
+  "sim": "scripts/ml-pagerank-sim.js?v=20260705a",
+  "k": "pr",
+  "folder": "formulas/pagerank-network-authority-algorithm",
+  "source": "files",
+  "formulaText": [
+    "Calcula autoridad de nodos como distribución estacionaria de un paseo aleatorio con teletransporte."
+  ],
+  "tags": [
+    "machine learning",
+    "clustering",
+    "svm",
+    "kernel",
+    "pca",
+    "svd",
+    "pagerank",
+    "grafos",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "algebra lineal",
+    "distancias",
+    "optimizacion",
+    "probabilidad",
+    "estadistica"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "historia",
+    "derivacion",
+    "simulacion"
+  ],
+  "units": "Unidades didácticas normalizadas.",
+  "dimensions": "Ver ficha.",
+  "symbols": [],
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-26.js",
+  "createdAt": "2026-07-06"
+}

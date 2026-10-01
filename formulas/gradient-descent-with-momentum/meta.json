@@ -1,0 +1,49 @@
+{
+  "id": "gradient-descent-with-momentum",
+  "name": "Descenso de gradiente con momento",
+  "year": 1964,
+  "field": "Optimización",
+  "level": "Universidad inicial",
+  "color": "#ea580c",
+  "formula": [
+    "v_t=γv_{t−1}+η∇J(θ)",
+    "θ←θ−v_t"
+  ],
+  "summary": "Añade inercia al descenso de gradiente para acelerar direcciones persistentes y suavizar zigzags.",
+  "sim": "scripts/ml-momentum-sim.js?v=20260705b",
+  "k": "mom",
+  "folder": "formulas/gradient-descent-with-momentum",
+  "source": "files",
+  "formulaText": [
+    "Añade inercia al descenso de gradiente para acelerar direcciones persistentes y suavizar zigzags."
+  ],
+  "tags": [
+    "machine learning",
+    "deep learning",
+    "optimizacion",
+    "redes neuronales",
+    "activacion",
+    "backpropagation",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "calculo",
+    "gradiente",
+    "derivadas",
+    "probabilidad",
+    "algebra lineal"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "historia",
+    "derivacion",
+    "simulacion"
+  ],
+  "units": "Unidades didácticas normalizadas.",
+  "dimensions": "Ver ficha.",
+  "symbols": [],
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-24.js",
+  "createdAt": "2026-07-06"
+}

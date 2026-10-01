@@ -1,0 +1,54 @@
+{
+  "id": "black-scholes-european-put-option",
+  "name": "Modelo Black-Scholes: valoración de opciones Put",
+  "year": 1973,
+  "field": "Finanzas cuantitativas / Derivados",
+  "level": "Universidad intermedia",
+  "color": "#ec4899",
+  "formula": [
+    "P=Ke^{-rT}N(-d_2)-S_0N(-d_1)"
+  ],
+  "summary": "Valora una opción put europea bajo volatilidad lognormal y cobertura continua.",
+  "sim": "scripts/finance-black-scholes-put-sim.js?v=20260705a",
+  "k": "bsput",
+  "folder": "formulas/black-scholes-european-put-option",
+  "source": "files",
+  "formulaText": [
+    "P=Ke^{-rT}N(-d_2)-S_0N(-d_1)",
+    "Valora una opción put europea bajo volatilidad lognormal y cobertura continua."
+  ],
+  "tags": [
+    "finanzas",
+    "valor temporal del dinero",
+    "derivados",
+    "renta fija",
+    "capm",
+    "sharpe",
+    "npv",
+    "irr",
+    "duracion",
+    "convexidad",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "algebra",
+    "logaritmos",
+    "probabilidad",
+    "estadistica",
+    "finanzas basicas",
+    "renta fija"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "historia",
+    "derivacion",
+    "simulacion"
+  ],
+  "units": "Unidades financieras normalizadas.",
+  "dimensions": "Ver ficha.",
+  "symbols": [],
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-31.js",
+  "createdAt": "2026-07-07"
+}

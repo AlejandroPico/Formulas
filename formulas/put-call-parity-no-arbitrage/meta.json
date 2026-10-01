@@ -1,0 +1,54 @@
+{
+  "id": "put-call-parity-no-arbitrage",
+  "name": "Paridad Put-Call: relación de no arbitraje",
+  "year": 1969,
+  "field": "Finanzas cuantitativas / Derivados",
+  "level": "Universidad inicial",
+  "color": "#2563eb",
+  "formula": [
+    "C+Ke^{-rT}=P+S_0"
+  ],
+  "summary": "Vincula call, put, subyacente y bono sin riesgo para impedir arbitraje.",
+  "sim": "scripts/finance-put-call-parity-sim.js?v=20260705a",
+  "k": "parity",
+  "folder": "formulas/put-call-parity-no-arbitrage",
+  "source": "files",
+  "formulaText": [
+    "C+Ke^{-rT}=P+S_0",
+    "Vincula call, put, subyacente y bono sin riesgo para impedir arbitraje."
+  ],
+  "tags": [
+    "finanzas",
+    "valor temporal del dinero",
+    "derivados",
+    "renta fija",
+    "capm",
+    "sharpe",
+    "npv",
+    "irr",
+    "duracion",
+    "convexidad",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "algebra",
+    "logaritmos",
+    "probabilidad",
+    "estadistica",
+    "finanzas basicas",
+    "renta fija"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "historia",
+    "derivacion",
+    "simulacion"
+  ],
+  "units": "Unidades financieras normalizadas.",
+  "dimensions": "Ver ficha.",
+  "symbols": [],
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-31.js",
+  "createdAt": "2026-07-07"
+}

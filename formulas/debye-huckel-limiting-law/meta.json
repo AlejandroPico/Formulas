@@ -1,0 +1,49 @@
+{
+  "id": "debye-huckel-limiting-law",
+  "name": "Ley límite de Debye-Hückel",
+  "year": 1923,
+  "field": "Química física",
+  "level": "Universidad intermedia",
+  "color": "#8b5cf6",
+  "formula": [
+    "log10(γ_±)=−A|z_+z_-|√I"
+  ],
+  "summary": "Estima la disminución de la actividad iónica por apantallamiento electrostático en disoluciones diluidas.",
+  "topic": "debye",
+  "folder": "formulas/debye-huckel-limiting-law",
+  "source": "files",
+  "author": "",
+  "formulaText": [
+    "Estima la disminución de la actividad iónica por apantallamiento electrostático en disoluciones diluidas."
+  ],
+  "tags": [
+    "quimica fisica",
+    "electroquimica",
+    "quimica cuantica",
+    "born haber",
+    "bohr",
+    "hidrogeno",
+    "debye huckel",
+    "nernst",
+    "faraday",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "quimica general",
+    "termodinamica",
+    "electroquimica",
+    "estructura atomica",
+    "logaritmos"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "simulacion"
+  ],
+  "units": "Unidades didácticas normalizadas.",
+  "dimensions": "Ver ficha.",
+  "symbols": [],
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-21.js",
+  "createdAt": "2026-07-06"
+}

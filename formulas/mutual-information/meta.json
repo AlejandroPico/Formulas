@@ -1,0 +1,48 @@
+{
+  "id": "mutual-information",
+  "name": "Información mutua",
+  "year": 1948,
+  "field": "Teoría de la información",
+  "level": "Universidad inicial",
+  "color": "#10b981",
+  "formula": [
+    "I(X;Y)=H(X)+H(Y)−H(X,Y)",
+    "I(X;Y)=Σp(x,y)log(p(x,y)/(p(x)p(y)))"
+  ],
+  "summary": "Cuantifica cuánto reduce una variable la incertidumbre sobre otra.",
+  "sim": "scripts/ml-mutual-information-sim.js?v=20260705a",
+  "k": "mi",
+  "folder": "formulas/mutual-information",
+  "source": "files",
+  "formulaText": [
+    "Cuantifica cuánto reduce una variable la incertidumbre sobre otra."
+  ],
+  "tags": [
+    "machine learning",
+    "nlp",
+    "teoria de la informacion",
+    "normalizacion",
+    "funciones de perdida",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "probabilidad",
+    "logaritmos",
+    "estadistica",
+    "machine learning",
+    "redes neuronales"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "historia",
+    "derivacion",
+    "simulacion"
+  ],
+  "units": "Unidades didácticas normalizadas.",
+  "dimensions": "Ver ficha.",
+  "symbols": [],
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-25.js",
+  "createdAt": "2026-07-06"
+}

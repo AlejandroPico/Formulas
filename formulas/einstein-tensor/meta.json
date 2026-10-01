@@ -1,0 +1,44 @@
+{
+  "id": "einstein-tensor",
+  "name": "Tensor de Einstein",
+  "year": 1915,
+  "field": "Relatividad general",
+  "level": "Universidad avanzada",
+  "color": "#10b981",
+  "formula": [
+    "Gμν=Rμν−½Rgμν=κTμν"
+  ],
+  "summary": "Conecta la geometría del espaciotiempo con el contenido de energía y momento.",
+  "topic": "einstein",
+  "source": "files",
+  "author": "",
+  "formulaText": [
+    "Conecta la geometría del espaciotiempo con el contenido de energía y momento."
+  ],
+  "tags": [
+    "cosmologia",
+    "relatividad general",
+    "einstein",
+    "hubble",
+    "redshift",
+    "geodesica",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "relatividad",
+    "calculo basico",
+    "cosmologia"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "simulacion"
+  ],
+  "units": "Ver unidades.",
+  "dimensions": "Ver unidades.",
+  "symbols": [],
+  "folder": "formulas/einstein-tensor",
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-15.js",
+  "createdAt": "2026-07-05"
+}

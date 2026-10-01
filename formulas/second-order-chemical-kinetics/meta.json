@@ -1,0 +1,49 @@
+{
+  "id": "second-order-chemical-kinetics",
+  "name": "Cinética de segundo orden",
+  "year": 1850,
+  "field": "Química cinética",
+  "level": "Bachillerato/Universidad inicial",
+  "color": "#ef4444",
+  "formula": [
+    "1/[A]_t=1/[A]_0+kt",
+    "v=k[A]^2",
+    "t_(1/2)=1/(k[A]_0)"
+  ],
+  "summary": "Describe reacciones cuya velocidad depende del cuadrado de la concentración o de dos reactivos.",
+  "topic": "secondOrder",
+  "folder": "formulas/second-order-chemical-kinetics",
+  "source": "files",
+  "author": "",
+  "formulaText": [
+    "Describe reacciones cuya velocidad depende del cuadrado de la concentración o de dos reactivos."
+  ],
+  "tags": [
+    "quimica",
+    "cinetica",
+    "equilibrio quimico",
+    "acido base",
+    "ph",
+    "beer lambert",
+    "tampon",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "quimica general",
+    "logaritmos",
+    "concentracion molar",
+    "equilibrio",
+    "funciones exponenciales"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "simulacion"
+  ],
+  "units": "Unidades didácticas normalizadas.",
+  "dimensions": "Ver ficha.",
+  "symbols": [],
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-20.js",
+  "createdAt": "2026-07-06"
+}

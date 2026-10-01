@@ -1,0 +1,51 @@
+{
+  "id": "k-means-clustering",
+  "name": "Agrupamiento K-means: K-medias",
+  "year": 1957,
+  "field": "Machine Learning / Clustering",
+  "level": "Universidad inicial",
+  "color": "#2563eb",
+  "formula": [
+    "arg min Σ_i Σ_{x∈C_i} ||x−μ_i||²",
+    "μ_i=media(C_i)"
+  ],
+  "summary": "Particiona datos en K grupos minimizando la suma de distancias cuadráticas a centroides.",
+  "sim": "scripts/ml-kmeans-sim.js?v=20260705a",
+  "k": "kmeans",
+  "folder": "formulas/k-means-clustering",
+  "source": "files",
+  "formulaText": [
+    "Particiona datos en K grupos minimizando la suma de distancias cuadráticas a centroides."
+  ],
+  "tags": [
+    "machine learning",
+    "clustering",
+    "svm",
+    "kernel",
+    "pca",
+    "svd",
+    "pagerank",
+    "grafos",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "algebra lineal",
+    "distancias",
+    "optimizacion",
+    "probabilidad",
+    "estadistica"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "historia",
+    "derivacion",
+    "simulacion"
+  ],
+  "units": "Unidades didácticas normalizadas.",
+  "dimensions": "Ver ficha.",
+  "symbols": [],
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-26.js",
+  "createdAt": "2026-07-06"
+}

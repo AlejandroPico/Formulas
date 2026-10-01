@@ -1,0 +1,47 @@
+{
+  "id": "van-der-waals-equation-of-state",
+  "name": "Ecuación de estado de van der Waals",
+  "year": 1873,
+  "field": "Termodinámica",
+  "level": "Universidad inicial",
+  "color": "#10b981",
+  "formula": [
+    "(P+a/V_m^2)(V_m-b)=RT"
+  ],
+  "summary": "Corrige el gas ideal incorporando atracción intermolecular y volumen molecular excluido.",
+  "topic": "vanDerWaals",
+  "folder": "formulas/van-der-waals-equation-of-state",
+  "source": "files",
+  "author": "",
+  "formulaText": [
+    "Corrige el gas ideal incorporando atracción intermolecular y volumen molecular excluido."
+  ],
+  "tags": [
+    "termodinamica",
+    "mecanica estadistica",
+    "radiacion termica",
+    "cuerpo negro",
+    "gas real",
+    "boltzmann",
+    "einstein",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "termodinamica",
+    "calculo basico",
+    "energia",
+    "temperatura",
+    "probabilidad"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "simulacion"
+  ],
+  "units": "Unidades didácticas normalizadas.",
+  "dimensions": "Ver ficha.",
+  "symbols": [],
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-19.js",
+  "createdAt": "2026-07-06"
+}

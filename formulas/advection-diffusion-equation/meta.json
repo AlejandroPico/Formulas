@@ -1,0 +1,44 @@
+{
+  "id": "advection-diffusion-equation",
+  "name": "Ecuación de advección-difusión",
+  "year": 1855,
+  "field": "EDP y transporte",
+  "level": "Universidad inicial",
+  "color": "#ea580c",
+  "formula": [
+    "∂φ/∂t+c∂φ/∂x=D∂²φ/∂x²"
+  ],
+  "summary": "Combina transporte por corriente y ensanchamiento difusivo de una concentración.",
+  "topic": "advectiondiffusion",
+  "source": "files",
+  "author": "",
+  "formulaText": [
+    "Combina transporte por corriente y ensanchamiento difusivo de una concentración."
+  ],
+  "tags": [
+    "fluidos",
+    "transporte",
+    "edp",
+    "viscosidad",
+    "adveccion",
+    "difusion",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "calculo vectorial",
+    "mecanica de fluidos",
+    "ecuaciones diferenciales"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "simulacion"
+  ],
+  "units": "Ver unidades.",
+  "dimensions": "Ver unidades.",
+  "symbols": [],
+  "folder": "formulas/advection-diffusion-equation",
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-11.js",
+  "createdAt": "2026-07-05"
+}

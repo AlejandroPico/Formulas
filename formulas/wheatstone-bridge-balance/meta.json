@@ -1,0 +1,48 @@
+{
+  "id": "wheatstone-bridge-balance",
+  "name": "Puente de Wheatstone",
+  "year": 1843,
+  "field": "Instrumentación eléctrica",
+  "level": "Bachillerato/Universidad inicial",
+  "color": "#8b5cf6",
+  "formula": [
+    "V_out=0 ⇒ R_x=(R_2R_3)/R_1"
+  ],
+  "summary": "Determina una resistencia desconocida equilibrando dos divisores de tensión.",
+  "sim": "scripts/electronics-wheatstone-bridge-sim.js?v=20260705a",
+  "k": "wheat",
+  "folder": "formulas/wheatstone-bridge-balance",
+  "source": "files",
+  "formulaText": [
+    "Determina una resistencia desconocida equilibrando dos divisores de tensión."
+  ],
+  "tags": [
+    "mecanica",
+    "resistencia de materiales",
+    "transferencia de calor",
+    "electronica",
+    "instrumentacion",
+    "mosfet",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "algebra",
+    "calculo basico",
+    "unidades",
+    "ley de ohm",
+    "mecanica de solidos"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "historia",
+    "derivacion",
+    "simulacion"
+  ],
+  "units": "Unidades didácticas normalizadas.",
+  "dimensions": "Ver ficha.",
+  "symbols": [],
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-29.js",
+  "createdAt": "2026-07-06"
+}

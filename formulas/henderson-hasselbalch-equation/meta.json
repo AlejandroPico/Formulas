@@ -1,0 +1,47 @@
+{
+  "id": "henderson-hasselbalch-equation",
+  "name": "Ecuación de Henderson-Hasselbalch",
+  "year": 1916,
+  "field": "Química ácido-base",
+  "level": "Bachillerato/Universidad inicial",
+  "color": "#0284c7",
+  "formula": [
+    "pH=pK_a+log10([A^-]/[HA])"
+  ],
+  "summary": "Permite estimar el pH de un tampón a partir de pKa y la proporción base/ácido.",
+  "topic": "henderson",
+  "folder": "formulas/henderson-hasselbalch-equation",
+  "source": "files",
+  "author": "",
+  "formulaText": [
+    "Permite estimar el pH de un tampón a partir de pKa y la proporción base/ácido."
+  ],
+  "tags": [
+    "quimica",
+    "cinetica",
+    "equilibrio quimico",
+    "acido base",
+    "ph",
+    "beer lambert",
+    "tampon",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "quimica general",
+    "logaritmos",
+    "concentracion molar",
+    "equilibrio",
+    "funciones exponenciales"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "simulacion"
+  ],
+  "units": "Unidades didácticas normalizadas.",
+  "dimensions": "Ver ficha.",
+  "symbols": [],
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-20.js",
+  "createdAt": "2026-07-06"
+}

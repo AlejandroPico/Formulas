@@ -1,0 +1,50 @@
+{
+  "id": "generalized-hooke-law-plane-stress",
+  "name": "Ley de Hooke tensorial: tensión plana",
+  "year": 1678,
+  "field": "Elasticidad / Mecánica de sólidos",
+  "level": "Universidad intermedia",
+  "color": "#2563eb",
+  "formula": [
+    "ε_x=(σ_x−νσ_y)/E",
+    "ε_y=(σ_y−νσ_x)/E"
+  ],
+  "summary": "Relaciona tensiones normales y deformaciones acopladas por Poisson en un material elástico isotrópico.",
+  "sim": "scripts/mechanics-tensor-hooke-plane-stress-sim.js?v=20260705a",
+  "k": "hooke",
+  "folder": "formulas/generalized-hooke-law-plane-stress",
+  "source": "files",
+  "formulaText": [
+    "Relaciona tensiones normales y deformaciones acopladas por Poisson en un material elástico isotrópico."
+  ],
+  "tags": [
+    "mecanica",
+    "hidraulica",
+    "transferencia de calor",
+    "fatiga",
+    "elasticidad",
+    "mohr",
+    "hooke",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "algebra",
+    "calculo basico",
+    "mecanica de fluidos",
+    "mecanica de solidos",
+    "transferencia de calor"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "historia",
+    "derivacion",
+    "simulacion"
+  ],
+  "units": "Unidades didácticas normalizadas.",
+  "dimensions": "Ver ficha.",
+  "symbols": [],
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-30.js",
+  "createdAt": "2026-07-06"
+}

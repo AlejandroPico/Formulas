@@ -1,0 +1,43 @@
+{
+  "id": "faraday-induction-law",
+  "name": "Ley de Faraday",
+  "year": 1831,
+  "field": "Electromagnetismo",
+  "level": "Universidad inicial",
+  "color": "#ea580c",
+  "formula": [
+    "ε=−dΦB/dt"
+  ],
+  "summary": "Una variación temporal del flujo magnético induce una fuerza electromotriz opuesta al cambio.",
+  "topic": "faraday",
+  "source": "files",
+  "author": "",
+  "formulaText": [
+    "Una variación temporal del flujo magnético induce una fuerza electromotriz opuesta al cambio."
+  ],
+  "tags": [
+    "electromagnetismo",
+    "maxwell",
+    "campo",
+    "flujo",
+    "potencial",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "vectores",
+    "calculo basico",
+    "electrostatica"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "simulacion"
+  ],
+  "units": "Ver unidades.",
+  "dimensions": "Ver unidades.",
+  "symbols": [],
+  "folder": "formulas/faraday-induction-law",
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-12.js",
+  "createdAt": "2026-07-05"
+}

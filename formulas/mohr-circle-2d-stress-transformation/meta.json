@@ -1,0 +1,50 @@
+{
+  "id": "mohr-circle-2d-stress-transformation",
+  "name": "Círculo de Mohr: transformación de tensiones 2D",
+  "year": 1882,
+  "field": "Mecánica de sólidos",
+  "level": "Universidad inicial",
+  "color": "#8b5cf6",
+  "formula": [
+    "R=√[((σ_x−σ_y)/2)²+τ_xy²]",
+    "σ_{1,2}=σ_prom±R"
+  ],
+  "summary": "Obtiene tensiones principales y cortante máxima mediante una construcción geométrica.",
+  "sim": "scripts/mechanics-mohr-circle-sim.js?v=20260705a",
+  "k": "mohr",
+  "folder": "formulas/mohr-circle-2d-stress-transformation",
+  "source": "files",
+  "formulaText": [
+    "Obtiene tensiones principales y cortante máxima mediante una construcción geométrica."
+  ],
+  "tags": [
+    "mecanica",
+    "hidraulica",
+    "transferencia de calor",
+    "fatiga",
+    "elasticidad",
+    "mohr",
+    "hooke",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "algebra",
+    "calculo basico",
+    "mecanica de fluidos",
+    "mecanica de solidos",
+    "transferencia de calor"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "historia",
+    "derivacion",
+    "simulacion"
+  ],
+  "units": "Unidades didácticas normalizadas.",
+  "dimensions": "Ver ficha.",
+  "symbols": [],
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-30.js",
+  "createdAt": "2026-07-06"
+}

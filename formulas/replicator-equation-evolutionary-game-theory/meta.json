@@ -1,0 +1,46 @@
+{
+  "id": "replicator-equation-evolutionary-game-theory",
+  "name": "Ecuación del replicador: teoría de juegos evolutiva",
+  "year": 1978,
+  "field": "Biología matemática",
+  "level": "Universidad intermedia",
+  "color": "#dc2626",
+  "formula": [
+    "dx_i/dt=x_i(f_i(x)−φ(x))"
+  ],
+  "summary": "Describe cómo crece o decrece la frecuencia de una estrategia según su fitness relativo.",
+  "topic": "replicator",
+  "folder": "formulas/replicator-equation-evolutionary-game-theory",
+  "source": "files",
+  "author": "",
+  "formulaText": [
+    "Describe cómo crece o decrece la frecuencia de una estrategia según su fitness relativo."
+  ],
+  "tags": [
+    "biologia matematica",
+    "biofisica",
+    "neurociencia",
+    "epidemiologia",
+    "evolucion",
+    "genetica de poblaciones",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "calculo",
+    "ecuaciones diferenciales",
+    "biologia general",
+    "probabilidad",
+    "logaritmos"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "simulacion"
+  ],
+  "units": "Unidades didácticas normalizadas.",
+  "dimensions": "Ver ficha.",
+  "symbols": [],
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-22.js",
+  "createdAt": "2026-07-06"
+}

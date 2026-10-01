@@ -1,0 +1,40 @@
+{
+  "id": "variance",
+  "name": "Varianza",
+  "year": 1918,
+  "field": "Probabilidad y estadística",
+  "level": "ESO/Bachillerato",
+  "color": "#ea580c",
+  "formula": [
+    "σ²=(1/N)∑(xᵢ−μ)²"
+  ],
+  "summary": "Cuantifica la dispersión media cuadrática respecto a la media.",
+  "method": "variance",
+  "source": "files",
+  "author": "",
+  "formulaText": [
+    "Cuantifica la dispersión media cuadrática respecto a la media."
+  ],
+  "tags": [
+    "estadistica",
+    "inferencia",
+    "datos",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "estadistica descriptiva",
+    "probabilidad"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "simulacion"
+  ],
+  "units": "Ver unidades.",
+  "dimensions": "Ver unidades.",
+  "symbols": [],
+  "folder": "formulas/variance",
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-7.js",
+  "createdAt": "2026-07-04"
+}

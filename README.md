@@ -1,90 +1,59 @@
 # Atlas de Ecuaciones Famosas
 
-Proyecto web estático para GitHub Pages orientado a divulgación científica visual.
+Atlas educativo estático para GitHub Pages. La colección actual contiene **282 fórmulas**. No utiliza SQLite ni requiere backend.
 
-## Estado actual
+## Arquitectura
 
-Arquitectura moderna basada exclusivamente en la carpeta `formulas/`.
+`formulas/<id>/` contiene los metadatos, las expresiones y las pestañas de cada fórmula. El navegador descarga `formulas/catalog-index.json` para conocer toda la colección, dibuja las tarjetas por lotes al acercarse al final de la pantalla y carga los textos y simuladores al abrir sus pestañas.
 
-El sistema antiguo basado en `data/*.js` se ha retirado. La aplicación carga las fichas desde catálogos y carpetas individuales dentro de `formulas/`, y cada ficha puede tener secciones propias en archivos independientes.
-
-En móvil, las herramientas están en un menú lateral: búsqueda, filtros y tipo de visualización, tema y acerca del proyecto. La búsqueda se despliega dentro del menú y permanece dentro de la anchura de la pantalla en vertical y horizontal.
-
-## Instalación en Android
-
-Abra [Fórmulas](https://alejandropico.github.io/Formulas/) en Chrome y elija **Instalar aplicación**. El manifiesto y el service worker permiten abrir el atlas en una ventana independiente y conservar recursos estáticos y fichas consultadas. La carga inicial de MathJax procede de un CDN y necesita conexión; la instalación requiere HTTPS o localhost.
-
-## Estructura principal
+La búsqueda de texto dentro de las pestañas usa `formulas/search-index.json`, descargado al empezar a buscar. Puede encontrar fórmulas cuyas tarjetas todavía no se han dibujado.
 
 ```text
-.
-├── favicon.svg
-├── index.html
-├── formulas/
-│   ├── catalog.json
-│   ├── catalog-*.json
-│   ├── manifest.js
-│   ├── shared/
-│   └── <formula-id>/
-│       ├── meta.json
-│       ├── formula.tex
-│       ├── significado.md
-│       ├── historia.md
-│       ├── derivacion.md
-│       ├── usos.md
-│       ├── ficha.md
-│       └── simulacion/
-│           ├── index.js
-│           └── styles.css
-├── scripts/
-├── styles/
-└── .nojekyll
+formulas/<id>/
+  meta.json
+  formula.tex
+  significado.md
+  historia.md
+  derivacion.md
+  usos.md
+  ficha.md
+  aprendizaje.md
+  unidades.md
+  simulacion/index.js
+  simulacion/styles.css
 ```
 
-## Carga de fichas
+Los archivos adicionales `.md` y `.tex` también se descubren al generar el catálogo. GitHub Pages no permite listar carpetas en el navegador: después de editar o añadir archivos, regenera los índices con:
 
-La entrada principal es `scripts/main.js`, que carga las fórmulas mediante `scripts/formula-file-loader.js`.
-
-El loader combina `formulas/catalog.json` y los suplementos `formulas/catalog-*.json`. Cada entrada apunta a una carpeta de fórmula dentro de `formulas/`.
-
-## Cómo añadir una fórmula
-
-Crea una carpeta nueva dentro de `formulas/` con este patrón:
-
-```text
-formulas/<formula-id>/
-├── meta.json
-├── formula.tex
-├── significado.md
-├── historia.md
-├── derivacion.md
-├── usos.md
-├── ficha.md
-└── simulacion/
-    ├── index.js
-    └── styles.css
+```sh
+node tools/build-formula-catalog.mjs
+node tools/check-atlas.mjs
 ```
 
-Después añade la entrada al catálogo correspondiente o deja que el generador de catálogo la incorpore si procede.
+El workflow `formula-catalog.yml` regenera y comprueba los índices al cambiar `formulas/`. Los catálogos antiguos y scripts de lotes quedan como referencia de la migración; ya no registran contenido durante el arranque.
 
-## Secciones dinámicas
+## Símbolos y simuladores
 
-Las secciones estándar son:
+`formula.tex` utiliza un bloque por expresión, separado por una línea en blanco. `meta.json` puede definir `symbolGlossary` y `formulaGlossaries` para explicar cada símbolo y distinguir significados entre expresiones. El motor MathJax 3.2.2 se incluye localmente.
 
-- `formula.tex` → Fórmula
-- `significado.md` → Significado
-- `historia.md` → Historia
-- `derivacion.md` → Derivación
-- `usos.md` → Usos
-- `ficha.md` → Ficha
-- `simulacion/index.js` → Simulación
+Cada simulador exporta una función de montaje que recibe `{ root, canvas, controls, readout }` y devuelve una función de limpieza. Se carga cuando se visita Simulación y se limpia al salir. Los widgets antiguos migrados mantienen sus implementaciones originales mediante módulos de importación; su revisión pedagógica sigue pendiente.
 
-El loader también puede incorporar archivos `.md` o `.tex` adicionales de la raíz de cada fórmula como pestañas extra.
+## Revisiones
 
-## Simulaciones
+Mantén **Alt** y pulsa Filtros para acceder a Inventario, Cobertura, Validador y **Revisiones**. Los temas especiales siguen disponibles con Alt + clic en Estilos.
 
-Cada simulación moderna vive dentro de su fórmula, en `formulas/<formula-id>/simulacion/`. El módulo debe exportar una función de montaje que reciba `root`, `canvas`, `controls` y `readout`.
+`formulas/revisions.json` guarda el historial permanente. Cada revisión registra fecha, número, alcance, versión del simulador, resumen y comprobaciones. Una fórmula solo se marca revisada después de revisar todas sus pestañas, símbolos y simulador. La creación se obtiene de su primera incorporación al historial de Git, no de su año histórico.
 
-## GitHub Pages
+Pitágoras tiene un juego de seis puentes, exploración mediante arrastre y comparación de áreas. Es la primera fórmula revisada en esta etapa.
 
-El proyecto sigue siendo completamente estático. No requiere backend ni proceso de compilación obligatorio para visualizarse en GitHub Pages.
+## Probar y previsualizar
+
+```sh
+node tools/serve.mjs
+```
+
+Abre `http://127.0.0.1:4173/Formulas/`. Las pruebas de navegador están en `tools/check-browser.mjs`; necesitan Playwright y Edge. Comprueban escritorio y móvil y guardan sus capturas e informe en `artifacts/`, excluido de Git.
+
+En Android, abre [Fórmulas](https://alejandropico.github.io/Formulas/) en Chrome y elige **Instalar aplicación**. El service worker conserva el motor matemático y los recursos consultados. La primera descarga necesita conexión; la instalación requiere HTTPS o localhost.
+
+Consulta [la primera revisión](docs/primera-revision.md) y `AGENTS.md` para los hallazgos pendientes y las reglas de futuras revisiones.

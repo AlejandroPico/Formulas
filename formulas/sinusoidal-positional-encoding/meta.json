@@ -1,0 +1,51 @@
+{
+  "id": "sinusoidal-positional-encoding",
+  "name": "Codificación posicional sinusoidal",
+  "year": 2017,
+  "field": "Transformers / Posición",
+  "level": "Universidad inicial",
+  "color": "#ec4899",
+  "formula": [
+    "PE(pos,2i)=sin(pos/10000^{2i/d})",
+    "PE(pos,2i+1)=cos(pos/10000^{2i/d})"
+  ],
+  "summary": "Añade una firma posicional multi-frecuencia a embeddings sin recurrencia ni convolución.",
+  "sim": "scripts/transformer-sinusoidal-pe-sim.js?v=20260705a",
+  "k": "pe",
+  "folder": "formulas/sinusoidal-positional-encoding",
+  "source": "files",
+  "formulaText": [
+    "Añade una firma posicional multi-frecuencia a embeddings sin recurrencia ni convolución."
+  ],
+  "tags": [
+    "reinforcement learning",
+    "transformers",
+    "attention",
+    "positional encoding",
+    "ppo",
+    "q-learning",
+    "sarsa",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "probabilidad",
+    "gradiente",
+    "bellman",
+    "algebra lineal",
+    "softmax",
+    "redes neuronales"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "historia",
+    "derivacion",
+    "simulacion"
+  ],
+  "units": "Unidades didácticas normalizadas.",
+  "dimensions": "Ver ficha.",
+  "symbols": [],
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-27.js",
+  "createdAt": "2026-07-06"
+}

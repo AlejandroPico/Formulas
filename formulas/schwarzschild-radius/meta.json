@@ -1,0 +1,42 @@
+{
+  "id": "schwarzschild-radius",
+  "name": "Radio de Schwarzschild",
+  "year": 1916,
+  "field": "Relatividad general",
+  "level": "Universidad inicial",
+  "color": "#f59e0b",
+  "formula": [
+    "rs=2GM/c²"
+  ],
+  "summary": "Radio del horizonte asociado a una masa compacta.",
+  "topic": "radius",
+  "source": "files",
+  "author": "",
+  "formulaText": [
+    "Radio del horizonte asociado a una masa compacta."
+  ],
+  "tags": [
+    "relatividad",
+    "gravedad",
+    "lorentz",
+    "schwarzschild",
+    "espaciotiempo",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "algebra",
+    "fisica clasica"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "simulacion"
+  ],
+  "units": "Ver unidades.",
+  "dimensions": "Ver unidades.",
+  "symbols": [],
+  "folder": "formulas/schwarzschild-radius",
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-14.js",
+  "createdAt": "2026-07-05"
+}

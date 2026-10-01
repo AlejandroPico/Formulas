@@ -1,5 +1,6 @@
 import { promises as fs } from "node:fs";
 import path from "node:path";
+import { execFileSync } from "node:child_process";
 
 const ROOT = process.cwd();
 const FORMULAS_DIR = path.join(ROOT, "formulas");
@@ -14,9 +15,18 @@ const STANDARD = [
   "ficha.md"
 ];
 
-const previous = await readJson(CATALOG_PATH, []);
+const catalogFiles = (await fs.readdir(FORMULAS_DIR)).filter(file => /^catalog.*\.json$/.test(file) && file !== 'catalog-index.json');
+const previous = (await Promise.all(catalogFiles.map(file => readJson(path.join(FORMULAS_DIR, file), [])))).flat();
 const previousById = new Map(previous.map(entry => [entry.id, entry]));
 const entries = [];
+const searchIndex = {};
+const createdDates = new Map();
+let date = '';
+const history = execFileSync('git', ['log', '--format=DATE:%aI', '--name-only', '--diff-filter=A', '--', 'formulas', 'scripts'], { encoding: 'utf8' });
+for (const line of history.split(/\r?\n/)) {
+  if (line.startsWith('DATE:')) date = line.slice(5, 15);
+  else if (line.trim()) createdDates.set(line.trim(), date);
+}
 
 for (const name of await fs.readdir(FORMULAS_DIR)) {
   const folderPath = path.join(FORMULAS_DIR, name);
@@ -28,12 +38,15 @@ for (const name of await fs.readdir(FORMULAS_DIR)) {
   const meta = await readJson(metaPath, {});
   const previousEntry = previousById.get(meta.id || name) || {};
   const formulaPath = path.join(folderPath, "formula.tex");
-  const formula = firstNonEmptyList(meta.formula, previousEntry.formula, await readFormula(formulaPath));
+  const formula = firstNonEmptyList(await readFormula(formulaPath), meta.formula, previousEntry.formula);
   const formulaText = normalizeFormulaTextList(meta.formulaText || meta.formula_text || previousEntry.formulaText || []);
   const sections = await discoverSections(folderPath);
   const summary = meta.summary || previousEntry.summary || await firstParagraph(path.join(folderPath, "significado.md"));
+  searchIndex[meta.id || name] = (await Promise.all(sections.filter(section => section.file.endsWith('.md')).map(section => fs.readFile(path.join(folderPath, section.file), 'utf8')))).join(' ').replace(/\s+/g, ' ').trim();
 
   entries.push({
+    ...previousEntry,
+    ...meta,
     id: meta.id || name,
     name: meta.name || titleFromId(name),
     author: meta.author || "",
@@ -46,12 +59,14 @@ for (const name of await fs.readdir(FORMULAS_DIR)) {
     formulaText,
     summary,
     simulation: meta.simulation ?? (sections.some(section => section.file === "simulacion/index.js") ? name : false),
+    createdAt: meta.createdAt || createdDates.get(`formulas/${name}/meta.json`) || null,
     sections
   });
 }
 
 entries.sort((a, b) => Number(a.year || 0) - Number(b.year || 0) || a.name.localeCompare(b.name, "es"));
-await fs.writeFile(CATALOG_PATH, `${JSON.stringify(entries, null, 2)}\n`, "utf8");
+await fs.writeFile(path.join(FORMULAS_DIR, 'catalog-index.json'), `${JSON.stringify(entries)}\n`, "utf8");
+await fs.writeFile(path.join(FORMULAS_DIR, 'search-index.json'), `${JSON.stringify(searchIndex)}\n`, 'utf8');
 console.log(`Catalog written: ${entries.length} formulas`);
 
 async function discoverSections(folderPath) {

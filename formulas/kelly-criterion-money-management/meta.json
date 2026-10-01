@@ -1,0 +1,54 @@
+{
+  "id": "kelly-criterion-money-management",
+  "name": "Criterio de Kelly: gestión óptima de fracción apostada",
+  "year": 1956,
+  "field": "Finanzas / Gestión monetaria",
+  "level": "Universidad intermedia",
+  "color": "#16a34a",
+  "formula": [
+    "f*=(b·p−q)/b",
+    "q=1−p"
+  ],
+  "summary": "Maximiza el crecimiento logarítmico esperado del capital cuando existe ventaja probabilística.",
+  "sim": "scripts/finance-kelly-criterion-sim.js?v=20260706a",
+  "k": "kelly",
+  "folder": "formulas/kelly-criterion-money-management",
+  "source": "files",
+  "formulaText": [
+    "f*=(b·p−q)/b",
+    "q=1−p",
+    "Maximiza el crecimiento logarítmico esperado del capital cuando existe ventaja probabilística."
+  ],
+  "tags": [
+    "economia",
+    "microeconomia",
+    "macroeconomia",
+    "finanzas",
+    "riesgo",
+    "renta fija",
+    "kelly",
+    "var",
+    "solow",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "algebra",
+    "calculo basico",
+    "microeconomia",
+    "macroeconomia",
+    "finanzas basicas"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "historia",
+    "derivacion",
+    "simulacion"
+  ],
+  "units": "Unidades económicas y financieras normalizadas.",
+  "dimensions": "Ver ficha.",
+  "symbols": [],
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-32.js",
+  "createdAt": "2026-07-07"
+}

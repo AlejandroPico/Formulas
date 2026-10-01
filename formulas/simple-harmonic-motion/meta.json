@@ -1,0 +1,43 @@
+{
+  "id": "simple-harmonic-motion",
+  "name": "Movimiento armónico simple",
+  "year": 1602,
+  "field": "Mecánica clásica",
+  "level": "Bachillerato",
+  "color": "#0ea5e9",
+  "formula": [
+    "x(t)=A·cos(ωt)"
+  ],
+  "summary": "Oscilación periódica descrita como proyección de un movimiento circular uniforme.",
+  "topic": "sho",
+  "source": "files",
+  "author": "",
+  "formulaText": [
+    "Oscilación periódica descrita como proyección de un movimiento circular uniforme."
+  ],
+  "tags": [
+    "fisica",
+    "mecanica",
+    "energia",
+    "momento",
+    "oscilaciones",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "algebra",
+    "vectores basicos",
+    "cinematica"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "simulacion"
+  ],
+  "units": "Ver unidades.",
+  "dimensions": "Ver unidades.",
+  "symbols": [],
+  "folder": "formulas/simple-harmonic-motion",
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-9.js",
+  "createdAt": "2026-07-05"
+}

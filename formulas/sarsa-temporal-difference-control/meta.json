@@ -1,0 +1,50 @@
+{
+  "id": "sarsa-temporal-difference-control",
+  "name": "SARSA: control TD dentro de política",
+  "year": 1994,
+  "field": "Reinforcement Learning",
+  "level": "Universidad inicial",
+  "color": "#ea580c",
+  "formula": [
+    "Q(s,a)←Q(s,a)+α[r+γQ(s′,a′)−Q(s,a)]"
+  ],
+  "summary": "Actualiza usando la acción siguiente que la política realmente eligió.",
+  "sim": "scripts/rl-sarsa-sim.js?v=20260705a",
+  "k": "sarsa",
+  "folder": "formulas/sarsa-temporal-difference-control",
+  "source": "files",
+  "formulaText": [
+    "Actualiza usando la acción siguiente que la política realmente eligió."
+  ],
+  "tags": [
+    "reinforcement learning",
+    "transformers",
+    "attention",
+    "positional encoding",
+    "ppo",
+    "q-learning",
+    "sarsa",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "probabilidad",
+    "gradiente",
+    "bellman",
+    "algebra lineal",
+    "softmax",
+    "redes neuronales"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "historia",
+    "derivacion",
+    "simulacion"
+  ],
+  "units": "Unidades didácticas normalizadas.",
+  "dimensions": "Ver ficha.",
+  "symbols": [],
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-27.js",
+  "createdAt": "2026-07-06"
+}

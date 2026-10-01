@@ -1,0 +1,49 @@
+{
+  "id": "hyperbolic-tangent-activation",
+  "name": "Tangente hiperbólica (tanh)",
+  "year": 1811,
+  "field": "Redes neuronales",
+  "level": "Universidad inicial",
+  "color": "#dc2626",
+  "formula": [
+    "tanh(x)=(e^x−e^(−x))/(e^x+e^(−x))",
+    "tanh′(x)=1−tanh^2(x)"
+  ],
+  "summary": "Activación centrada en cero, acotada entre −1 y 1, con saturación en valores extremos.",
+  "sim": "scripts/ml-tanh-sim.js?v=20260705b",
+  "k": "tanh",
+  "folder": "formulas/hyperbolic-tangent-activation",
+  "source": "files",
+  "formulaText": [
+    "Activación centrada en cero, acotada entre −1 y 1, con saturación en valores extremos."
+  ],
+  "tags": [
+    "machine learning",
+    "deep learning",
+    "optimizacion",
+    "redes neuronales",
+    "activacion",
+    "backpropagation",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "calculo",
+    "gradiente",
+    "derivadas",
+    "probabilidad",
+    "algebra lineal"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "historia",
+    "derivacion",
+    "simulacion"
+  ],
+  "units": "Unidades didácticas normalizadas.",
+  "dimensions": "Ver ficha.",
+  "symbols": [],
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-24.js",
+  "createdAt": "2026-07-06"
+}

@@ -1,0 +1,51 @@
+{
+  "id": "adam-optimizer-adaptive-moment-estimation",
+  "name": "Adam Optimizer: estimación adaptativa de momentos",
+  "year": 2014,
+  "field": "Machine Learning",
+  "level": "Universidad intermedia",
+  "color": "#6366f1",
+  "formula": [
+    "m_t=β_1m_{t−1}+(1−β_1)g_t",
+    "v_t=β_2v_{t−1}+(1−β_2)g_t^2",
+    "m̂_t=m_t/(1−β_1^t),  v̂_t=v_t/(1−β_2^t)",
+    "θ_{t+1}=θ_t−ηm̂_t/(√v̂_t+ε)"
+  ],
+  "summary": "Optimizador adaptativo que combina momento de primer orden, escala RMS y corrección de sesgo.",
+  "sim": "scripts/ml-adam-sim.js?v=20260705b",
+  "k": "adam",
+  "folder": "formulas/adam-optimizer-adaptive-moment-estimation",
+  "source": "files",
+  "formulaText": [
+    "Optimizador adaptativo que combina momento de primer orden, escala RMS y corrección de sesgo."
+  ],
+  "tags": [
+    "machine learning",
+    "deep learning",
+    "optimizacion",
+    "redes neuronales",
+    "activacion",
+    "backpropagation",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "calculo",
+    "gradiente",
+    "derivadas",
+    "probabilidad",
+    "algebra lineal"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "historia",
+    "derivacion",
+    "simulacion"
+  ],
+  "units": "Unidades didácticas normalizadas.",
+  "dimensions": "Ver ficha.",
+  "symbols": [],
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-24.js",
+  "createdAt": "2026-07-06"
+}

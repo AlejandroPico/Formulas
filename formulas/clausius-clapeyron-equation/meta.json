@@ -1,0 +1,48 @@
+{
+  "id": "clausius-clapeyron-equation",
+  "name": "Ecuación de Clausius-Clapeyron",
+  "year": 1850,
+  "field": "Termodinámica",
+  "level": "Universidad inicial",
+  "color": "#8b5cf6",
+  "formula": [
+    "dP/dT=L/(TΔV)",
+    "ln(P/P0)=−(L/R)(1/T−1/T0)"
+  ],
+  "summary": "Relaciona la pendiente de la curva de coexistencia con el calor latente y el cambio de volumen.",
+  "topic": "clapeyron",
+  "folder": "formulas/clausius-clapeyron-equation",
+  "source": "files",
+  "author": "",
+  "formulaText": [
+    "Relaciona la pendiente de la curva de coexistencia con el calor latente y el cambio de volumen."
+  ],
+  "tags": [
+    "termodinamica",
+    "mecanica estadistica",
+    "radiacion termica",
+    "cuerpo negro",
+    "gas real",
+    "boltzmann",
+    "einstein",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "termodinamica",
+    "calculo basico",
+    "energia",
+    "temperatura",
+    "probabilidad"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "simulacion"
+  ],
+  "units": "Unidades didácticas normalizadas.",
+  "dimensions": "Ver ficha.",
+  "symbols": [],
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-19.js",
+  "createdAt": "2026-07-06"
+}

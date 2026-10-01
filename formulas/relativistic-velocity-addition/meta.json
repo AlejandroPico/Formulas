@@ -1,0 +1,42 @@
+{
+  "id": "relativistic-velocity-addition",
+  "name": "Composición relativista de velocidades",
+  "year": 1905,
+  "field": "Relatividad especial",
+  "level": "Bachillerato/Universidad inicial",
+  "color": "#10b981",
+  "formula": [
+    "u'=(v+u)/(1+vu/c²)"
+  ],
+  "summary": "Regla de suma de velocidades que impide superar la velocidad de la luz.",
+  "topic": "velocity",
+  "source": "files",
+  "author": "",
+  "formulaText": [
+    "Regla de suma de velocidades que impide superar la velocidad de la luz."
+  ],
+  "tags": [
+    "relatividad",
+    "gravedad",
+    "lorentz",
+    "schwarzschild",
+    "espaciotiempo",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "algebra",
+    "fisica clasica"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "simulacion"
+  ],
+  "units": "Ver unidades.",
+  "dimensions": "Ver unidades.",
+  "symbols": [],
+  "folder": "formulas/relativistic-velocity-addition",
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-14.js",
+  "createdAt": "2026-07-05"
+}

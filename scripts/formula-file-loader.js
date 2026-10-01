@@ -1,20 +1,5 @@
-import { formulaManifest } from "../formulas/manifest.js";
 
 const FORMULAS_ROOT = "formulas";
-const CATALOG_PATH = "formulas/catalog.json";
-const RECENT_CATALOG_PATH = "formulas/catalog-recent.json";
-const LORENTZ_CATALOG_PATH = "formulas/catalog-lorentz.json";
-const QUANTUM_CATALOG_PATH = "formulas/catalog-quantum.json";
-const CHEMISTRY_CATALOG_PATH = "formulas/catalog-chemistry.json";
-const STATISTICS_CATALOG_PATH = "formulas/catalog-statistics.json";
-const MACHINE_LEARNING_CATALOG_PATH = "formulas/catalog-machine-learning.json";
-const APPLIED_MODELS_CATALOG_PATH = "formulas/catalog-applied-models.json";
-const FORMULA_FIXES_CATALOG_PATH = "formulas/catalog-formula-fixes.json";
-
-const CATALOG_NAME_ALIASES = new Map([
-  ["ecuacion-de-friedmann", "ecuaciones-de-friedmann"],
-  ["divergencia-kl", "divergencia-de-kullback-leibler"]
-]);
 
 const LEVEL_ALIASES = [
   [/eso|secundaria/i, "ESO"],
@@ -107,6 +92,8 @@ const STANDARD_SECTIONS = [
   { file: "derivacion.md", key: "derivacion", label: "Derivación", type: "markdown", order: 40 },
   { file: "usos.md", key: "usos", label: "Usos", type: "markdown", order: 50 },
   { file: "ficha.md", key: "ficha", label: "Ficha", type: "markdown", order: 60 }
+  ,{ file: "aprendizaje.md", key: "aprendizaje", label: "Aprendizaje", type: "markdown", order: 70 }
+  ,{ file: "unidades.md", key: "unidades", label: "Unidades", type: "markdown", order: 80 }
 ];
 
 export async function loadFormulaFiles(onProgress = () => {}) {
@@ -123,29 +110,7 @@ export async function loadFormulaFiles(onProgress = () => {}) {
 }
 
 async function loadCatalog() {
-  try {
-    const catalog = await loadJsonArray(CATALOG_PATH);
-    const recent = await loadOptionalJsonArray(RECENT_CATALOG_PATH);
-    const lorentz = await loadOptionalJsonArray(LORENTZ_CATALOG_PATH);
-    const quantum = await loadOptionalJsonArray(QUANTUM_CATALOG_PATH);
-    const chemistry = await loadOptionalJsonArray(CHEMISTRY_CATALOG_PATH);
-    const statistics = await loadOptionalJsonArray(STATISTICS_CATALOG_PATH);
-    const machineLearning = await loadOptionalJsonArray(MACHINE_LEARNING_CATALOG_PATH);
-    const appliedModels = await loadOptionalJsonArray(APPLIED_MODELS_CATALOG_PATH);
-    const formulaFixes = await loadOptionalJsonArray(FORMULA_FIXES_CATALOG_PATH);
-    return mergeCatalogEntries(catalog, recent, lorentz, quantum, chemistry, statistics, machineLearning, appliedModels, formulaFixes);
-  } catch (error) {
-    console.warn("No se pudo cargar formulas/catalog.json; usando manifest como respaldo.", error);
-    return recordsFromManifest().map(record => ({
-      id: record.id,
-      folder: record.folder,
-      name: prettifyFileName(record.id),
-      field: "Sin área",
-      level: "Sin nivel",
-      color: "#5d5af6",
-      formula: []
-    }));
-  }
+  return loadJsonArray('formulas/catalog-index.json');
 }
 
 async function loadJsonArray(path) {
@@ -153,32 +118,6 @@ async function loadJsonArray(path) {
   if (!response.ok) throw new Error(`No se pudo cargar ${path}`);
   const payload = await response.json();
   return Array.isArray(payload) ? payload : [];
-}
-
-async function loadOptionalJsonArray(path) {
-  try {
-    return await loadJsonArray(path);
-  } catch {
-    return [];
-  }
-}
-
-function mergeCatalogEntries(...sets) {
-  const byId = new Map();
-  const byName = new Map();
-  for (const entry of sets.flat()) {
-    if (!entry?.id) continue;
-    const nameKey = catalogDedupKey(entry);
-    if (byName.has(nameKey)) byId.delete(byName.get(nameKey));
-    byName.set(nameKey, entry.id);
-    byId.set(entry.id, entry);
-  }
-  return [...byId.values()];
-}
-
-function catalogDedupKey(entry) {
-  const key = sectionKeyFromFile(entry.name || entry.id);
-  return CATALOG_NAME_ALIASES.get(key) || key;
 }
 
 function recordsFromCatalog(catalog) {
@@ -201,7 +140,7 @@ function filesFromCatalogEntry(entry, folder) {
     if (!section?.file) return;
     files.set(section.file, `${folder}/${section.file}`);
   });
-  if (entry.simulation !== false) {
+  if (!Array.isArray(entry.sections) && entry.simulation !== false) {
     files.set("simulacion/index.js", `${folder}/simulacion/index.js`);
     files.set("simulacion/styles.css", `${folder}/simulacion/styles.css`);
   }
@@ -214,12 +153,6 @@ function defaultSectionFiles(entry) {
     entry.extraSections.forEach(file => sections.push({ file }));
   }
   return sections;
-}
-
-function recordsFromManifest() {
-  return formulaManifest
-    .filter(entry => entry.source === "files")
-    .map(entry => ({ id: entry.id, folder: entry.folder, files: filesFromCatalogEntry(entry, entry.folder) }));
 }
 
 function buildFormulaEntry(record) {
@@ -245,6 +178,9 @@ function buildFormulaEntry(record) {
     color: record.color || "#5d5af6",
     source: "files",
     folder: record.folder,
+    createdAt: record.createdAt || null,
+    symbolGlossary: record.symbolGlossary || {},
+    formulaGlossaries: record.formulaGlossaries || [],
     formula,
     formulaText,
     tags,
@@ -258,7 +194,7 @@ function buildFormulaEntry(record) {
     history: "",
     derivation: "",
     uses: [],
-    variables: [],
+    variables: record.variables || [],
     ficha: "",
     simulation: record.simulation || record.id,
     simulationModule: simulationSection?.path || "",
@@ -280,8 +216,8 @@ function buildSectionIndex(record, formula, derived = {}) {
     });
   }
   customRootSections(record).forEach(section => sections.push(section));
-  sections.push(generatedLearningSection(record, derived));
-  sections.push(generatedUnitsSection(record, formula, derived));
+  if (!sections.some(section => section.key === 'aprendizaje')) sections.push(generatedLearningSection(record, derived));
+  if (!sections.some(section => section.key === 'unidades')) sections.push(generatedUnitsSection(record, formula, derived));
   if (record.files.has("simulacion/index.js")) {
     sections.push({
       key: "simulacion",

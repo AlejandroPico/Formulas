@@ -1,0 +1,47 @@
+{
+  "id": "von-neumann-equation",
+  "name": "Ecuación de von Neumann",
+  "year": 1927,
+  "field": "Mecánica cuántica",
+  "level": "Universidad intermedia",
+  "color": "#0ea5e9",
+  "formula": [
+    "∂ρ/∂t=-(i/ℏ)[Ĥ,ρ]"
+  ],
+  "summary": "Describe la evolución temporal unitaria de la matriz densidad.",
+  "topic": "von",
+  "source": "files",
+  "author": "",
+  "formulaText": [
+    "Describe la evolución temporal unitaria de la matriz densidad."
+  ],
+  "tags": [
+    "informacion cuantica",
+    "mecanica cuantica",
+    "matriz densidad",
+    "von neumann",
+    "fidelidad",
+    "bloch",
+    "conmutador",
+    "pauli",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "algebra lineal",
+    "numeros complejos",
+    "mecanica cuantica",
+    "operadores"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "simulacion"
+  ],
+  "units": "Unidades normalizadas didácticas.",
+  "dimensions": "Ver ficha.",
+  "symbols": [],
+  "folder": "formulas/von-neumann-equation",
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-17.js",
+  "createdAt": "2026-07-05"
+}

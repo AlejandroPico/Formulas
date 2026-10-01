@@ -1,0 +1,48 @@
+{
+  "id": "helmholtz-free-energy",
+  "name": "Energía libre de Helmholtz",
+  "year": 1882,
+  "field": "Termodinámica",
+  "level": "Universidad inicial",
+  "color": "#0284c7",
+  "formula": [
+    "A=U−TS"
+  ],
+  "summary": "Mide el trabajo útil máximo a temperatura y volumen constantes.",
+  "topic": "helmholtz",
+  "source": "files",
+  "author": "",
+  "formulaText": [
+    "Mide el trabajo útil máximo a temperatura y volumen constantes."
+  ],
+  "tags": [
+    "termodinamica",
+    "energia libre",
+    "maxwell",
+    "boltzmann",
+    "gibbs",
+    "helmholtz",
+    "carnot",
+    "primera ley",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "energia",
+    "calor",
+    "trabajo",
+    "calculo basico",
+    "fisica general"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "simulacion"
+  ],
+  "units": "Unidades didácticas normalizadas.",
+  "dimensions": "Ver ficha.",
+  "symbols": [],
+  "folder": "formulas/helmholtz-free-energy",
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-18.js",
+  "createdAt": "2026-07-05"
+}

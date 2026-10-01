@@ -1,0 +1,43 @@
+{
+  "id": "hookes-law",
+  "name": "Ley de Hooke",
+  "year": 1678,
+  "field": "Mecánica clásica",
+  "level": "Bachillerato",
+  "color": "#ef4444",
+  "formula": [
+    "F=−k·Δx"
+  ],
+  "summary": "La fuerza elástica de un muelle es proporcional y opuesta a su deformación.",
+  "topic": "hooke",
+  "source": "files",
+  "author": "",
+  "formulaText": [
+    "La fuerza elástica de un muelle es proporcional y opuesta a su deformación."
+  ],
+  "tags": [
+    "fisica",
+    "mecanica",
+    "energia",
+    "momento",
+    "oscilaciones",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "algebra",
+    "vectores basicos",
+    "cinematica"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "simulacion"
+  ],
+  "units": "Ver unidades.",
+  "dimensions": "Ver unidades.",
+  "symbols": [],
+  "folder": "formulas/hookes-law",
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-9.js",
+  "createdAt": "2026-07-05"
+}

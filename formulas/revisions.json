@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "reviews": {
+    "pythagorean-theorem": [
+      {
+        "revision": 1,
+        "date": "2026-10-01",
+        "simulatorVersion": 2,
+        "scope": ["formula", "significado", "historia", "derivacion", "usos", "ficha", "aprendizaje", "unidades", "simulacion", "simbolos"],
+        "summary": "Revisión completa: símbolos por expresión, textos específicos y juego de seis puentes con exploración y áreas.",
+        "checks": ["Identidades, inversión y escalado en 144 triángulos", "Distancia, dominio y tolerancias", "Las nueve pestañas en navegador", "Símbolos con ratón y enfoque", "Seis misiones y respuesta incorrecta", "Arrastre y teclado", "Escritorio y móvil sin solapamientos", "Limpieza al cambiar pestaña y cerrar", "Historia contrastada con Euclides y MacTutor"]
+      }
+    ]
+  }
+}

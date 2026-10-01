@@ -1,0 +1,50 @@
+{
+  "id": "faraday-laws-electrolysis",
+  "name": "Leyes de Faraday de la electrólisis",
+  "year": 1834,
+  "field": "Electroquímica",
+  "level": "Bachillerato/Universidad inicial",
+  "color": "#ea580c",
+  "formula": [
+    "m=ItM/(zF)",
+    "Q=It"
+  ],
+  "summary": "Relaciona la masa electrodepositada con la carga transferida durante la electrólisis.",
+  "topic": "faraday",
+  "folder": "formulas/faraday-laws-electrolysis",
+  "source": "files",
+  "author": "",
+  "formulaText": [
+    "Relaciona la masa electrodepositada con la carga transferida durante la electrólisis."
+  ],
+  "tags": [
+    "quimica fisica",
+    "electroquimica",
+    "quimica cuantica",
+    "born haber",
+    "bohr",
+    "hidrogeno",
+    "debye huckel",
+    "nernst",
+    "faraday",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "quimica general",
+    "termodinamica",
+    "electroquimica",
+    "estructura atomica",
+    "logaritmos"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "simulacion"
+  ],
+  "units": "Unidades didácticas normalizadas.",
+  "dimensions": "Ver ficha.",
+  "symbols": [],
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-21.js",
+  "createdAt": "2026-07-06"
+}

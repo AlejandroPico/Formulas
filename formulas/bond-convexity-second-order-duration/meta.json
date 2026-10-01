@@ -1,0 +1,52 @@
+{
+  "id": "bond-convexity-second-order-duration",
+  "name": "Convexidad de bonos: corrección de segundo orden",
+  "year": 1938,
+  "field": "Renta fija / Gestión de riesgo",
+  "level": "Universidad intermedia",
+  "color": "#2563eb",
+  "formula": [
+    "Delta P / P ≈ -D_mod · Delta y + 0.5 · C · (Delta y)^2"
+  ],
+  "summary": "Corrige la aproximación lineal de duración incorporando la curvatura precio-rendimiento del bono.",
+  "sim": "scripts/finance-bond-convexity-sim.js?v=20260706a",
+  "k": "convexity",
+  "folder": "formulas/bond-convexity-second-order-duration",
+  "source": "files",
+  "formulaText": [
+    "Delta P / P ≈ -D_mod · Delta y + 0.5 · C · (Delta y)^2",
+    "Corrige la aproximación lineal de duración incorporando la curvatura precio-rendimiento del bono."
+  ],
+  "tags": [
+    "economia",
+    "microeconomia",
+    "macroeconomia",
+    "finanzas",
+    "riesgo",
+    "renta fija",
+    "kelly",
+    "var",
+    "solow",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "algebra",
+    "calculo basico",
+    "microeconomia",
+    "macroeconomia",
+    "finanzas basicas"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "historia",
+    "derivacion",
+    "simulacion"
+  ],
+  "units": "Unidades económicas y financieras normalizadas.",
+  "dimensions": "Ver ficha.",
+  "symbols": [],
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-32.js",
+  "createdAt": "2026-07-07"
+}

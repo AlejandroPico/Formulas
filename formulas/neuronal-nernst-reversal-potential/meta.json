@@ -1,0 +1,47 @@
+{
+  "id": "neuronal-nernst-reversal-potential",
+  "name": "Potencial de reversión neuronal de Nernst",
+  "year": 1888,
+  "field": "Biofísica",
+  "level": "Universidad inicial",
+  "color": "#16a34a",
+  "formula": [
+    "E_ion=(RT/zF)ln([ion]_out/[ion]_in)",
+    "E_K≈61.54log10([K^+]_out/[K^+]_in) a 37°C"
+  ],
+  "summary": "Calcula el potencial eléctrico que equilibra el gradiente químico de un ion neuronal.",
+  "topic": "neuralNernst",
+  "folder": "formulas/neuronal-nernst-reversal-potential",
+  "source": "files",
+  "author": "",
+  "formulaText": [
+    "Calcula el potencial eléctrico que equilibra el gradiente químico de un ion neuronal."
+  ],
+  "tags": [
+    "biologia matematica",
+    "biofisica",
+    "neurociencia",
+    "epidemiologia",
+    "evolucion",
+    "genetica de poblaciones",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "calculo",
+    "ecuaciones diferenciales",
+    "biologia general",
+    "probabilidad",
+    "logaritmos"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "simulacion"
+  ],
+  "units": "Unidades didácticas normalizadas.",
+  "dimensions": "Ver ficha.",
+  "symbols": [],
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-22.js",
+  "createdAt": "2026-07-06"
+}

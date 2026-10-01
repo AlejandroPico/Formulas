@@ -1,0 +1,48 @@
+{
+  "id": "von-neumann-entanglement-entropy",
+  "name": "Entrelazamiento y entropía de von Neumann",
+  "year": 1932,
+  "field": "Información cuántica",
+  "level": "Universidad intermedia",
+  "color": "#ea580c",
+  "formula": [
+    "S(ρ)=-Tr(ρ lnρ)",
+    "S=-Σλi lnλi"
+  ],
+  "summary": "Mide la mezcla del subsistema reducido y, para estados bipartitos puros, cuantifica entrelazamiento.",
+  "topic": "entropy",
+  "source": "files",
+  "author": "",
+  "formulaText": [
+    "Mide la mezcla del subsistema reducido y, para estados bipartitos puros, cuantifica entrelazamiento."
+  ],
+  "tags": [
+    "informacion cuantica",
+    "mecanica cuantica",
+    "matriz densidad",
+    "von neumann",
+    "fidelidad",
+    "bloch",
+    "conmutador",
+    "pauli",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "algebra lineal",
+    "numeros complejos",
+    "mecanica cuantica",
+    "operadores"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "simulacion"
+  ],
+  "units": "Unidades normalizadas didácticas.",
+  "dimensions": "Ver ficha.",
+  "symbols": [],
+  "folder": "formulas/von-neumann-entanglement-entropy",
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-17.js",
+  "createdAt": "2026-07-05"
+}
