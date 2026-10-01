@@ -1,5 +1,7 @@
 # Atlas de fórmulas
 
+Por indicación expresa del propietario, trabaja directamente en `main` y publica los cambios en esa rama. No crees ramas secundarias ni pull requests salvo que el usuario lo pida explícitamente.
+
 Lee `GUIA_FORMULAS_MAESTRA.md` y `formulas/README.md`. La fuente editable es `formulas/<id>/`; el catálogo y el índice de búsqueda se generan con `node tools/build-formula-catalog.mjs`. No añadas lotes de registro en JavaScript ni nuevas capas de parche sobre `window.fetch`.
 
 Las nueve pestañas habituales son fórmula, significado, historia, derivación, usos, ficha, aprendizaje, unidades y simulación. Para una revisión completa, edita archivos propios para aprendizaje y unidades, y define los símbolos en `meta.json` mediante `symbolGlossary` y, si una letra cambia de significado entre expresiones, `formulaGlossaries`.
