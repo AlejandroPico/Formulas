@@ -1,35 +1,9 @@
 # Derivación
 
-Se busca un polinomio que imite a la función cerca del origen:
+Supón P_N=Σc_n(x−a)^n y exige P_N^(n)(a)=f^(n)(a). Al derivar n veces y evaluar en el centro, solo el término n aporta n!c_n; por tanto c_n=f^(n)(a)/n!. La diferencia restante se expresa con el teorema de Taylor; para la forma de Lagrange se necesita suficiente regularidad entre a y x. Para que una serie infinita represente f, además debe tender a cero el resto al crecer N. Ser infinitamente derivable no basta: la función e^(−1/x²), extendida por cero en x=0, es un ejemplo suave cuya serie en cero no la representa cerca de ese punto.
 
-`P(x)=c₀+c₁x+c₂x²+c₃x³+⋯`.
+## Comprobación
 
-Para que ese polinomio represente bien a `f`, se impone que sus derivadas en `0` coincidan con las de la función original.
+Para eˣ, P₂(1)=1+1+1/2=2,5, mientras e≈2,71828. Para sin x, P₃(1)=1−1/6≈0,83333. En ln(1+x), el radio de convergencia en cero es 1: x=2 está fuera aunque el logaritmo exista allí.
 
-Primero, evaluando en `0`:
-
-`P(0)=c₀=f(0)`.
-
-Derivando una vez:
-
-`P′(x)=c₁+2c₂x+3c₃x²+⋯`, luego `P′(0)=c₁=f′(0)`.
-
-Derivando dos veces:
-
-`P″(0)=2!c₂=f″(0)`, de modo que `c₂=f″(0)/2!`.
-
-En general, al derivar `n` veces y evaluar en `0`, queda:
-
-`P⁽ⁿ⁾(0)=n!cₙ`.
-
-Por tanto:
-
-`cₙ=f⁽ⁿ⁾(0)/n!`.
-
-Sustituyendo todos los coeficientes aparece la serie:
-
-`f(x)=∑ₙ₌₀∞ f⁽ⁿ⁾(0)xⁿ/n!`.
-
-Para `e^x`, como todas sus derivadas son `e^x` y `e^0=1`, todos los coeficientes son `1/n!`. Por eso:
-
-`eˣ=1+x+x²/2!+x³/3!+⋯`.
+Comprueba las hipótesis antes de trasladar el resultado a otro sistema: Para el polinomio, derivadas hasta orden N en el centro. Para el resto de Lagrange, suficiente regularidad hasta orden N+1 en el intervalo. Para la serie infinita, convergencia a la función. ln(1+x) requiere x>−1.

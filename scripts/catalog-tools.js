@@ -47,16 +47,12 @@ function ensureAdminTools(filterPanel) {
   tools.hidden = true;
   tools.innerHTML = `
     <strong>Herramientas avanzadas</strong>
-    <button type="button" data-admin-action="catalog">Catálogo</button>
-    <button type="button" data-admin-action="validator">Validador LaTeX</button>
-    <button type="button" data-admin-action="reviews">Revisiones</button>
+    <button type="button" data-admin-action="inventory">Inventario</button>
     <button type="button" data-admin-action="prompt">Superprompt</button>
   `;
   tools.addEventListener("click", event => {
     const action = event.target.closest("button")?.dataset.adminAction;
-    if (action === "catalog") openCatalogDialog("inventory");
-    if (action === "validator") openCatalogDialog("validator");
-    if (action === "reviews") openCatalogDialog("reviews");
+    if (action === "inventory") openCatalogDialog("inventory");
     if (action === "prompt") openPromptDialog();
   });
   filterPanel.appendChild(tools);

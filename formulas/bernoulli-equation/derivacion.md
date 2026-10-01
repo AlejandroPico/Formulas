@@ -1,7 +1,9 @@
 # Derivación
 
-La derivación aplica conservación de energía a una pequeña porción de fluido ideal.
+Aplica el balance trabajo-energía a un elemento de fluido a lo largo de una línea de corriente. El trabajo de las presiones y la gravedad cambia su energía cinética. Para régimen estacionario, fluido incompresible y rozamiento despreciable, el resultado es p+½ρv²+ρgz constante. Divide por ρg para expresarlo en carga. Combina con Q=Av para relacionar dos secciones, pero no deduzcas sus velocidades solo de Bernoulli sin un dato de caudal o una segunda condición.
 
-El trabajo asociado a la presión se combina con la energía cinética del movimiento y la energía potencial debida a la altura.
+## Comprobación
 
-Al seguir la misma línea de corriente, la suma de esas contribuciones permanece constante si no hay pérdidas ni aporte externo de energía.
+Con caudal 0,01 m³/s y secciones 0,01 y 0,005 m², las velocidades son 1 y 2 m/s. A la misma altura, la salida pierde 1,5 kPa respecto a la entrada si ρ=1000 kg/m³, sin pérdidas ni máquinas.
+
+Comprueba las hipótesis antes de trasladar el resultado a otro sistema: Flujo estacionario, incompresible y sin disipación ni máquinas, a lo largo de una línea de corriente. Densidad constante positiva.

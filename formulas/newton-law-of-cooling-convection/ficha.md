@@ -1,21 +1,35 @@
-# Ficha
+# Transferencia de calor convectiva: ley de enfriamiento de Newton
 
-**Nombre:** Transferencia de calor convectiva: ley de enfriamiento de Newton
+El intercambio convectivo es proporcional a la diferencia de temperaturas; una pieza uniforme se acerca exponencialmente al ambiente.
 
-**Área:** Transferencia de calor
+## Magnitudes
 
-**Nivel:** Universidad inicial
+| Símbolo | Lectura |
+| :-- | :-- |
+| Q | Calor transferido; el punto superior indica potencia térmica saliente. |
+| h | Coeficiente de transferencia convectiva en W/(m²·K). |
+| A | Superficie de intercambio con el fluido. |
+| T | Temperatura uniforme de la pieza en el modelo concentrado. |
+| s | Subíndice de superficie: temperatura superficial. |
+| C | Capacidad térmica total de la pieza: masa por calor específico. |
+| m | Masa de la pieza. |
+| c | Calor específico por unidad de masa. |
+| p | Subíndice p: calor específico a presión constante. |
+| t | Tiempo desde la temperatura inicial. |
+| τ | Constante de tiempo térmica C/(hA). |
 
-**Resumen:** Calcula el flujo térmico entre una superficie y un fluido mediante el coeficiente convectivo.
+## Cuándo se aplica
 
-## Lectura e interpretación
+Ambiente, h, A y C constantes; pieza uniforme, sin generación, radiación ni cambio de fase. Bi<0,1 es un criterio habitual para el modelo concentrado, no una garantía universal.
 
-# Interpretación
+## Evita estos errores
 
-Mueve los controles y observa qué domina: coeficiente convectivo, rugosidad, velocidad cuadrática, vida logarítmica, círculo de tensiones o acoplamiento de Poisson.
+Confundir potencia con calor; introducir minutos sin conversión; sumar °C como temperaturas absolutas termodinámicas; omitir el signo en calentamiento; ignorar gradientes internos.
 
-## Validez y limitaciones
+## Laboratorio
 
-# Limitaciones
+**Temperaturas · Explorar · Balance térmico**
 
-h no es universal: depende de geometría, velocidad, propiedades del fluido, régimen y orientación.
+Reproduce enfriamiento o calentamiento en un ambiente fijo. Un segundo de reproducción representa un minuto del experimento.
+
+El flujo positivo sale de la pieza. Si la pieza está más fría que el ambiente, la potencia es negativa y la pieza se calienta. Comprueba Biot antes de tratarla como uniforme.

@@ -801,6 +801,633 @@
           "Regresión de las diez revisiones anteriores, Pitágoras y carga progresiva"
         ]
       }
+    ],
+    "compound-interest-exponential-capital-growth": [
+      {
+        "revision": 1,
+        "date": "2026-10-01",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "interpretacion",
+          "limitaciones",
+          "nota"
+        ],
+        "summary": "Revisión completa: el interés también produce intereses, cuatro misiones y modos Metas, Explorar, Poder adquisitivo. Textos, unidades, dominio y símbolos propios.",
+        "checks": [
+          "Casos matemáticos independientes y cuatro respuestas contrastadas",
+          "Todas las pestañas, incluidas las adicionales",
+          "Símbolos sin definiciones genéricas, con ratón y enfoque",
+          "Cuatro misiones, respuestas incorrectas, pistas y ajustes",
+          "Tres modos y controles de teclado",
+          "Escritorio y móvil sin solapamiento de controles",
+          "Arrastres y tacto en escenas interactivas",
+          "Reproducción con pausa y limpieza al salir",
+          "Referencias de estudio y condiciones de validez"
+        ]
+      }
+    ],
+    "derivative-as-limit": [
+      {
+        "revision": 1,
+        "date": "2026-10-01",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos"
+        ],
+        "summary": "Revisión completa: acerca dos puntos sin hacerlos coincidir, cuatro misiones y modos Pendientes, Explorar, Dos lados. Textos, unidades, dominio y símbolos propios.",
+        "checks": [
+          "Casos matemáticos independientes y cuatro respuestas contrastadas",
+          "Todas las pestañas, incluidas las adicionales",
+          "Símbolos sin definiciones genéricas, con ratón y enfoque",
+          "Cuatro misiones, respuestas incorrectas, pistas y ajustes",
+          "Tres modos y controles de teclado",
+          "Escritorio y móvil sin solapamiento de controles",
+          "Arrastres y tacto en escenas interactivas",
+          "Reproducción con pausa y limpieza al salir",
+          "Referencias de estudio y condiciones de validez"
+        ]
+      }
+    ],
+    "linear-momentum-conservation": [
+      {
+        "revision": 1,
+        "date": "2026-10-01",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos"
+        ],
+        "summary": "Revisión completa: dos carritos, un balance, cuatro misiones y modos Choques, Explorar, Energía. Textos, unidades, dominio y símbolos propios.",
+        "checks": [
+          "Casos matemáticos independientes y cuatro respuestas contrastadas",
+          "Todas las pestañas, incluidas las adicionales",
+          "Símbolos sin definiciones genéricas, con ratón y enfoque",
+          "Cuatro misiones, respuestas incorrectas, pistas y ajustes",
+          "Tres modos y controles de teclado",
+          "Escritorio y móvil sin solapamiento de controles",
+          "Arrastres y tacto en escenas interactivas",
+          "Reproducción con pausa y limpieza al salir",
+          "Referencias de estudio y condiciones de validez"
+        ]
+      }
+    ],
+    "gravitational-potential-energy": [
+      {
+        "revision": 1,
+        "date": "2026-10-01",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos"
+        ],
+        "summary": "Revisión completa: la altura se transforma en movimiento, cuatro misiones y modos Elevadores, Explorar, Caída. Textos, unidades, dominio y símbolos propios.",
+        "checks": [
+          "Casos matemáticos independientes y cuatro respuestas contrastadas",
+          "Todas las pestañas, incluidas las adicionales",
+          "Símbolos sin definiciones genéricas, con ratón y enfoque",
+          "Cuatro misiones, respuestas incorrectas, pistas y ajustes",
+          "Tres modos y controles de teclado",
+          "Escritorio y móvil sin solapamiento de controles",
+          "Arrastres y tacto en escenas interactivas",
+          "Reproducción con pausa y limpieza al salir",
+          "Referencias de estudio y condiciones de validez"
+        ]
+      }
+    ],
+    "gravitational-law": [
+      {
+        "revision": 1,
+        "date": "2026-10-01",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos"
+        ],
+        "summary": "Revisión completa: una órbita guiada por la gravedad, cuatro misiones y modos Órbitas, Explorar, Energía orbital. Textos, unidades, dominio y símbolos propios.",
+        "checks": [
+          "Casos matemáticos independientes y cuatro respuestas contrastadas",
+          "Todas las pestañas, incluidas las adicionales",
+          "Símbolos sin definiciones genéricas, con ratón y enfoque",
+          "Cuatro misiones, respuestas incorrectas, pistas y ajustes",
+          "Tres modos y controles de teclado",
+          "Escritorio y móvil sin solapamiento de controles",
+          "Arrastres y tacto en escenas interactivas",
+          "Reproducción con pausa y limpieza al salir",
+          "Referencias de estudio y condiciones de validez"
+        ]
+      }
+    ],
+    "newton-second-law": [
+      {
+        "revision": 1,
+        "date": "2026-10-01",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos"
+        ],
+        "summary": "Revisión completa: diseña el impulso de una nave, cuatro misiones y modos Rutas, Explorar, Trayectoria. Textos, unidades, dominio y símbolos propios.",
+        "checks": [
+          "Casos matemáticos independientes y cuatro respuestas contrastadas",
+          "Todas las pestañas, incluidas las adicionales",
+          "Símbolos sin definiciones genéricas, con ratón y enfoque",
+          "Cuatro misiones, respuestas incorrectas, pistas y ajustes",
+          "Tres modos y controles de teclado",
+          "Escritorio y móvil sin solapamiento de controles",
+          "Arrastres y tacto en escenas interactivas",
+          "Reproducción con pausa y limpieza al salir",
+          "Referencias de estudio y condiciones de validez"
+        ]
+      }
+    ],
+    "polar-coordinates": [
+      {
+        "revision": 1,
+        "date": "2026-10-01",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos"
+        ],
+        "summary": "Revisión completa: encuentra la baliza del radar, cuatro misiones y modos Balizas, Explorar, Cuadrantes. Textos, unidades, dominio y símbolos propios.",
+        "checks": [
+          "Casos matemáticos independientes y cuatro respuestas contrastadas",
+          "Todas las pestañas, incluidas las adicionales",
+          "Símbolos sin definiciones genéricas, con ratón y enfoque",
+          "Cuatro misiones, respuestas incorrectas, pistas y ajustes",
+          "Tres modos y controles de teclado",
+          "Escritorio y móvil sin solapamiento de controles",
+          "Arrastres y tacto en escenas interactivas",
+          "Reproducción con pausa y limpieza al salir",
+          "Referencias de estudio y condiciones de validez"
+        ]
+      }
+    ],
+    "integration-by-parts": [
+      {
+        "revision": 1,
+        "date": "2026-10-01",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos"
+        ],
+        "summary": "Revisión completa: intercambia una integral por otra, cuatro misiones y modos Intercambios, Explorar, Balance firmado. Textos, unidades, dominio y símbolos propios.",
+        "checks": [
+          "Casos matemáticos independientes y cuatro respuestas contrastadas",
+          "Todas las pestañas, incluidas las adicionales",
+          "Símbolos sin definiciones genéricas, con ratón y enfoque",
+          "Cuatro misiones, respuestas incorrectas, pistas y ajustes",
+          "Tres modos y controles de teclado",
+          "Escritorio y móvil sin solapamiento de controles",
+          "Arrastres y tacto en escenas interactivas",
+          "Reproducción con pausa y limpieza al salir",
+          "Referencias de estudio y condiciones de validez"
+        ]
+      }
+    ],
+    "newton-law-of-cooling-convection": [
+      {
+        "revision": 1,
+        "date": "2026-10-01",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "interpretacion",
+          "limitaciones"
+        ],
+        "summary": "Revisión completa: controla la temperatura de una pieza, cuatro misiones y modos Temperaturas, Explorar, Balance térmico. Textos, unidades, dominio y símbolos propios.",
+        "checks": [
+          "Casos matemáticos independientes y cuatro respuestas contrastadas",
+          "Todas las pestañas, incluidas las adicionales",
+          "Símbolos sin definiciones genéricas, con ratón y enfoque",
+          "Cuatro misiones, respuestas incorrectas, pistas y ajustes",
+          "Tres modos y controles de teclado",
+          "Escritorio y móvil sin solapamiento de controles",
+          "Arrastres y tacto en escenas interactivas",
+          "Reproducción con pausa y limpieza al salir",
+          "Referencias de estudio y condiciones de validez"
+        ]
+      }
+    ],
+    "taylor-series": [
+      {
+        "revision": 1,
+        "date": "2026-10-01",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos"
+        ],
+        "summary": "Revisión completa: construye una curva desde un punto, cuatro misiones y modos Aproximaciones, Explorar, Error. Textos, unidades, dominio y símbolos propios.",
+        "checks": [
+          "Casos matemáticos independientes y cuatro respuestas contrastadas",
+          "Todas las pestañas, incluidas las adicionales",
+          "Símbolos sin definiciones genéricas, con ratón y enfoque",
+          "Cuatro misiones, respuestas incorrectas, pistas y ajustes",
+          "Tres modos y controles de teclado",
+          "Escritorio y móvil sin solapamiento de controles",
+          "Arrastres y tacto en escenas interactivas",
+          "Reproducción con pausa y limpieza al salir",
+          "Referencias de estudio y condiciones de validez"
+        ]
+      }
+    ],
+    "maclaurin-series": [
+      {
+        "revision": 1,
+        "date": "2026-10-01",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos"
+        ],
+        "summary": "Revisión completa: empieza en cero y añade potencias, cuatro misiones y modos Potencias, Explorar, Convergencia. Textos, unidades, dominio y símbolos propios.",
+        "checks": [
+          "Casos matemáticos independientes y cuatro respuestas contrastadas",
+          "Todas las pestañas, incluidas las adicionales",
+          "Símbolos sin definiciones genéricas, con ratón y enfoque",
+          "Cuatro misiones, respuestas incorrectas, pistas y ajustes",
+          "Tres modos y controles de teclado",
+          "Escritorio y móvil sin solapamiento de controles",
+          "Arrastres y tacto en escenas interactivas",
+          "Reproducción con pausa y limpieza al salir",
+          "Referencias de estudio y condiciones de validez"
+        ]
+      }
+    ],
+    "euler-maclaurin-summation": [
+      {
+        "revision": 1,
+        "date": "2026-10-01",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos"
+        ],
+        "summary": "Revisión completa: corrige el borde de una suma, cuatro misiones y modos Correcciones, Explorar, Residuos. Textos, unidades, dominio y símbolos propios.",
+        "checks": [
+          "Casos matemáticos independientes y cuatro respuestas contrastadas",
+          "Todas las pestañas, incluidas las adicionales",
+          "Símbolos sin definiciones genéricas, con ratón y enfoque",
+          "Cuatro misiones, respuestas incorrectas, pistas y ajustes",
+          "Tres modos y controles de teclado",
+          "Escritorio y móvil sin solapamiento de controles",
+          "Arrastres y tacto en escenas interactivas",
+          "Reproducción con pausa y limpieza al salir",
+          "Referencias de estudio y condiciones de validez"
+        ]
+      }
+    ],
+    "bernoulli-equation": [
+      {
+        "revision": 1,
+        "date": "2026-10-01",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos"
+        ],
+        "summary": "Revisión completa: presión, velocidad y altura, cuatro misiones y modos Conductos, Explorar, Cargas. Textos, unidades, dominio y símbolos propios.",
+        "checks": [
+          "Casos matemáticos independientes y cuatro respuestas contrastadas",
+          "Todas las pestañas, incluidas las adicionales",
+          "Símbolos sin definiciones genéricas, con ratón y enfoque",
+          "Cuatro misiones, respuestas incorrectas, pistas y ajustes",
+          "Tres modos y controles de teclado",
+          "Escritorio y móvil sin solapamiento de controles",
+          "Arrastres y tacto en escenas interactivas",
+          "Reproducción con pausa y limpieza al salir",
+          "Referencias de estudio y condiciones de validez"
+        ]
+      }
+    ],
+    "bernoulli-equation-real-fluid": [
+      {
+        "revision": 1,
+        "date": "2026-10-01",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos"
+        ],
+        "summary": "Revisión completa: una conducción también disipa energía, cuatro misiones y modos Bombas, Explorar, Balance de cargas. Textos, unidades, dominio y símbolos propios.",
+        "checks": [
+          "Casos matemáticos independientes y cuatro respuestas contrastadas",
+          "Todas las pestañas, incluidas las adicionales",
+          "Símbolos sin definiciones genéricas, con ratón y enfoque",
+          "Cuatro misiones, respuestas incorrectas, pistas y ajustes",
+          "Tres modos y controles de teclado",
+          "Escritorio y móvil sin solapamiento de controles",
+          "Arrastres y tacto en escenas interactivas",
+          "Reproducción con pausa y limpieza al salir",
+          "Referencias de estudio y condiciones de validez"
+        ]
+      }
+    ],
+    "continuity-equation": [
+      {
+        "revision": 1,
+        "date": "2026-10-01",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos"
+        ],
+        "summary": "Revisión completa: la masa que entra debe salir, cuatro misiones y modos Caudales, Explorar, Densidad. Textos, unidades, dominio y símbolos propios.",
+        "checks": [
+          "Casos matemáticos independientes y cuatro respuestas contrastadas",
+          "Todas las pestañas, incluidas las adicionales",
+          "Símbolos sin definiciones genéricas, con ratón y enfoque",
+          "Cuatro misiones, respuestas incorrectas, pistas y ajustes",
+          "Tres modos y controles de teclado",
+          "Escritorio y móvil sin solapamiento de controles",
+          "Arrastres y tacto en escenas interactivas",
+          "Reproducción con pausa y limpieza al salir",
+          "Referencias de estudio y condiciones de validez"
+        ]
+      }
+    ],
+    "capacitor-stored-energy": [
+      {
+        "revision": 1,
+        "date": "2026-10-01",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos"
+        ],
+        "summary": "Revisión completa: carga, guarda y descarga, cuatro misiones y modos Cargas, Explorar, Circuito RC. Textos, unidades, dominio y símbolos propios.",
+        "checks": [
+          "Casos matemáticos independientes y cuatro respuestas contrastadas",
+          "Todas las pestañas, incluidas las adicionales",
+          "Símbolos sin definiciones genéricas, con ratón y enfoque",
+          "Cuatro misiones, respuestas incorrectas, pistas y ajustes",
+          "Tres modos y controles de teclado",
+          "Escritorio y móvil sin solapamiento de controles",
+          "Arrastres y tacto en escenas interactivas",
+          "Reproducción con pausa y limpieza al salir",
+          "Referencias de estudio y condiciones de validez"
+        ]
+      }
+    ],
+    "one-dimensional-wave-equation": [
+      {
+        "revision": 1,
+        "date": "2026-10-01",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos"
+        ],
+        "summary": "Revisión completa: una señal viaja; el medio oscila, cuatro misiones y modos Señales, Explorar, Interferencia. Textos, unidades, dominio y símbolos propios.",
+        "checks": [
+          "Casos matemáticos independientes y cuatro respuestas contrastadas",
+          "Todas las pestañas, incluidas las adicionales",
+          "Símbolos sin definiciones genéricas, con ratón y enfoque",
+          "Cuatro misiones, respuestas incorrectas, pistas y ajustes",
+          "Tres modos y controles de teclado",
+          "Escritorio y móvil sin solapamiento de controles",
+          "Arrastres y tacto en escenas interactivas",
+          "Reproducción con pausa y limpieza al salir",
+          "Referencias de estudio y condiciones de validez"
+        ]
+      }
+    ],
+    "wave-equation": [
+      {
+        "revision": 1,
+        "date": "2026-10-01",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos"
+        ],
+        "summary": "Revisión completa: explora una membrana en tres dimensiones, cuatro misiones y modos Resonancias, Explorar, Membrana 3D. Textos, unidades, dominio y símbolos propios.",
+        "checks": [
+          "Casos matemáticos independientes y cuatro respuestas contrastadas",
+          "Todas las pestañas, incluidas las adicionales",
+          "Símbolos sin definiciones genéricas, con ratón y enfoque",
+          "Cuatro misiones, respuestas incorrectas, pistas y ajustes",
+          "Tres modos y controles de teclado",
+          "Escritorio y móvil sin solapamiento de controles",
+          "Arrastres y tacto en escenas interactivas",
+          "Reproducción con pausa y limpieza al salir",
+          "Referencias de estudio y condiciones de validez"
+        ]
+      }
+    ],
+    "euler-identity": [
+      {
+        "revision": 1,
+        "date": "2026-10-01",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos"
+        ],
+        "summary": "Revisión completa: una exponencial dibuja una vuelta, cuatro misiones y modos Giros, Explorar, Componentes. Textos, unidades, dominio y símbolos propios.",
+        "checks": [
+          "Casos matemáticos independientes y cuatro respuestas contrastadas",
+          "Todas las pestañas, incluidas las adicionales",
+          "Símbolos sin definiciones genéricas, con ratón y enfoque",
+          "Cuatro misiones, respuestas incorrectas, pistas y ajustes",
+          "Tres modos y controles de teclado",
+          "Escritorio y móvil sin solapamiento de controles",
+          "Arrastres y tacto en escenas interactivas",
+          "Reproducción con pausa y limpieza al salir",
+          "Referencias de estudio y condiciones de validez"
+        ]
+      }
+    ],
+    "euler-bernoulli-beam-bending": [
+      {
+        "revision": 1,
+        "date": "2026-10-01",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "interpretacion",
+          "limitaciones"
+        ],
+        "summary": "Revisión completa: diseña una ménsula que flexione menos, cuatro misiones y modos Ménsulas, Explorar, Momento y pendiente. Textos, unidades, dominio y símbolos propios.",
+        "checks": [
+          "Casos matemáticos independientes y cuatro respuestas contrastadas",
+          "Todas las pestañas, incluidas las adicionales",
+          "Símbolos sin definiciones genéricas, con ratón y enfoque",
+          "Cuatro misiones, respuestas incorrectas, pistas y ajustes",
+          "Tres modos y controles de teclado",
+          "Escritorio y móvil sin solapamiento de controles",
+          "Arrastres y tacto en escenas interactivas",
+          "Reproducción con pausa y limpieza al salir",
+          "Referencias de estudio y condiciones de validez"
+        ]
+      }
     ]
   }
 }

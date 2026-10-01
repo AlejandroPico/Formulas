@@ -234,8 +234,8 @@ function normalizeFormulaSearch(value) {
 }
 
 function sortEquations(a, b, sort, insertionIndex = new Map()) {
-  if (sort === "introduced-desc") return (insertionIndex.get(b) ?? 0) - (insertionIndex.get(a) ?? 0);
-  if (sort === "introduced-asc") return (insertionIndex.get(a) ?? 0) - (insertionIndex.get(b) ?? 0);
+  if (sort === "introduced-desc") return (b.createdAt || '').localeCompare(a.createdAt || '') || (insertionIndex.get(b) ?? 0) - (insertionIndex.get(a) ?? 0);
+  if (sort === "introduced-asc") return (a.createdAt || '').localeCompare(b.createdAt || '') || (insertionIndex.get(a) ?? 0) - (insertionIndex.get(b) ?? 0);
   if (sort === "name") return a.name.localeCompare(b.name, "es");
   if (sort === "field") return a.field.localeCompare(b.field, "es") || a.year - b.year;
   if (sort === "level") return (levelOrder[a.level] ?? levelOrder[a.levelNormalized] ?? 99) - (levelOrder[b.level] ?? levelOrder[b.levelNormalized] ?? 99) || a.year - b.year;

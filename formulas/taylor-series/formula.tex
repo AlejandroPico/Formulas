@@ -1,3 +1,5 @@
-f(x)=\sum_{n=0}^{\infty}\frac{f^{(n)}(a)}{n!}(x-a)^n
+P_N(x)=\sum_{n=0}^{N}\frac{f^{(n)}(a)}{n!}(x-a)^n
 
-\cos x=\sum_{m=0}^{\infty}(-1)^m\frac{x^{2m}}{(2m)!}
+f(x)=P_N(x)+R_N(x)
+
+R_N(x)=\frac{f^{(N+1)}(\xi)}{(N+1)!}(x-a)^{N+1}

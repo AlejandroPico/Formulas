@@ -1,11 +1,11 @@
 # Significado
 
-La integración por partes es la regla del producto escrita al revés. Si al derivar un producto aparece `d(uv)=u dv+v du`, entonces al integrar se obtiene una relación entre esas dos áreas diferenciales:
+La regla del producto, leída en sentido inverso, intercambia una integral por un término de borde y otra integral.
 
-`∫u dv = uv − ∫v du`.
+## Un ejemplo
 
-La fórmula permite cambiar una integral difícil por otra potencialmente más sencilla. La elección de `u` y `dv` es la parte estratégica: conviene escoger como `u` una función que se simplifique al derivar, y como `dv` una parte que pueda integrarse sin complicarse.
+Con u=x y dv=eˣdx, ∫₀¹xeˣdx=[xeˣ]₀¹−∫₀¹eˣdx=e−(e−1)=1. Invertir los límites cambia el signo y da −1, sin cambiar la curva del integrando.
 
-Geométricamente, puede interpretarse como una descomposición de un rectángulo variable. El producto `uv` representa un área total; las dos integrales `∫u dv` y `∫v du` representan formas complementarias de acumular los incrementos de esa área.
+## Cómo leerlo
 
-El simulador muestra esta intuición mediante bloques de área: una parte asociada a `u dv` y otra a `v du`, ambas relacionadas por el rectángulo `uv`.
+No se deriva todo el integrando. Se elige u para que du simplifique el problema y dv para que v pueda encontrarse. El término de borde es el producto evaluado en b menos en a. La integral restante se resta con orientación completa: si es negativa, esa resta añade. El modo Balance firmado distingue las tres contribuciones y evita interpretar toda integral como área positiva.

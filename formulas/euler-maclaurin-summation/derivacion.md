@@ -1,27 +1,9 @@
 # Derivación
 
-La idea de partida es comparar una suma discreta con el área bajo una curva. Para una función suave `f`, la suma
+Aplica integración por partes en cada intervalo unitario usando funciones de Bernoulli periódicas. Al sumar, los bordes internos se cancelan y aparecen solo a y b. Los valores B₂/2!=1/12 y B₄/4!=−1/720 producen las primeras correcciones. Repetir el proceso incorpora derivadas impares en extremos y un integral de resto con una derivada de orden par. Para f=x², f′=2x y f‴=0, de modo que solo queda la primera corrección. Para funciones generales, comprueba la regularidad y estima el resto antes de truncar.
 
-`∑ₖ₌ₐᵇ f(k)`
+## Comprobación
 
-puede imaginarse como una colección de barras centradas en valores enteros. La integral
+Para f=x² entre 1 y 4, la suma es 30. La integral aporta 21, los extremos 8,5 y B₂ aporta 0,5. Las correcciones superiores se anulan para ese polinomio, de modo que este caso queda exacto.
 
-`∫ₐᵇ f(x)dx`
-
-mide el área continua bajo la curva. Si la función cambia lentamente, ambas cantidades se parecen; si cambia rápido o si los extremos pesan mucho, aparece error.
-
-La primera corrección corresponde a los extremos:
-
-`[f(a)+f(b)]/2`.
-
-Este término recuerda a la regla del trapecio: no basta con integrar la curva, hay que ajustar cómo empieza y cómo termina la suma discreta.
-
-Después aparecen correcciones basadas en números de Bernoulli. La primera de ellas usa `B₂=1/6` y depende de la diferencia entre derivadas en los extremos:
-
-`B₂/2! · [f′(b)−f′(a)]`.
-
-La expansión completa continúa con derivadas de orden impar más alto:
-
-`f'''`, `f⁽⁵⁾`, `f⁽⁷⁾`, etc.
-
-En la práctica se suele truncar la fórmula. El simulador usa una versión reducida: integral, corrección de extremos y primera corrección de derivadas. Esta forma ya muestra la idea esencial: una suma discreta puede entenderse como una integral corregida por información local de los bordes.
+Comprueba las hipótesis antes de trasladar el resultado a otro sistema: a y b enteros ordenados, función suficientemente regular para las correcciones y el resto. Para ln x, intervalo positivo. La versión finita mantiene R_p.

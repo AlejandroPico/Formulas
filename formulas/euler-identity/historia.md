@@ -1,7 +1,5 @@
 # Historia
 
-Euler desarrolló la relación entre la función exponencial y las funciones trigonométricas en el contexto del análisis del siglo XVIII.
+Euler desarrolló en el siglo XVIII las relaciones entre exponenciales y trigonometría que sostienen esta identidad. Su caso θ=π ganó fama por reunir constantes de distintas áreas en una igualdad breve. La conexión es más amplia que la expresión famosa: la fórmula general explica rotaciones, fases y representaciones complejas de señales. Las series absolutamente convergentes proporcionan una justificación precisa del agrupamiento de términos.
 
-La identidad famosa aparece como un caso particular de esa relación general. Con el tiempo se convirtió en símbolo de la conexión profunda entre ramas aparentemente separadas de las matemáticas.
-
-Su importancia se extiende al análisis complejo, las series, las señales y la física ondulatoria.
+Fuente de estudio: [Referencia y formulación](https://dlmf.nist.gov/4.2). La fecha histórica de la ficha se distingue de las fechas de creación y revisión que aparecen en Inventario.

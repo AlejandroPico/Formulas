@@ -1,11 +1,11 @@
 # Significado
 
-Las coordenadas polares describen un punto mediante una distancia al origen `r` y un ángulo `θ` respecto del eje horizontal.
+Una distancia y una dirección sitúan el mismo punto que dos coordenadas cartesianas.
 
-La conversión a coordenadas cartesianas es:
+## Un ejemplo
 
-`x=r cos(θ)` y `y=r sin(θ)`.
+r=5 y θ=90° representan (0,5); r=5 y θ=180° representan (−5,0). En el origen r=0, todos los ángulos representan (0,0), así que no existe una dirección geométrica única.
 
-La idea es descomponer el vector radial en sus proyecciones horizontal y vertical. El radio marca la longitud del vector; el ángulo decide cómo se reparte esa longitud entre `x` e `y`.
+## Cómo leerlo
 
-El simulador muestra una rejilla polar con círculos concéntricos y ejes cartesianos. Al mover `r` y `θ`, el punto se desplaza y se actualizan sus proyecciones.
+Las dos primeras expresiones proyectan el radio. La raíz recupera su longitud y atan2 recupera una representación principal del ángulo sin perder cuadrante. Los ángulos θ y θ+360° representan el mismo punto. El laboratorio restringe r≥0; una convención con radios negativos es posible si se añade media vuelta al ángulo, pero no se mezclan ambas convenciones.

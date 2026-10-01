@@ -1,7 +1,5 @@
 # Historia
 
-Las coordenadas polares aparecen de forma natural al estudiar direcciones, radios y movimientos circulares. Se consolidaron con la geometría analítica y el cálculo, especialmente en problemas con simetría radial.
+Las representaciones por distancia y dirección aparecen de forma natural en astronomía y geometría. El sistema polar permite describir círculos y curvas radiales con una notación adaptada a su simetría. El cálculo moderno incorporó este cambio de coordenadas para áreas e integrales. La inversión mediante atan2 es una formulación computacional que conserva información de cuadrante que una razón aislada no contiene.
 
-Son muy útiles cuando una figura se describe mejor por distancia y ángulo que por coordenadas rectangulares. Circunferencias, espirales, órbitas y campos centrales suelen expresarse de manera más simple en forma polar.
-
-La notación moderna se relaciona con el desarrollo del plano cartesiano, la trigonometría y el análisis de curvas.
+Fuente de estudio: [Referencia y formulación](https://openstax.org/books/calculus-volume-2/pages/7-3-polar-coordinates). La fecha histórica de la ficha se distingue de las fechas de creación y revisión que aparecen en Inventario.

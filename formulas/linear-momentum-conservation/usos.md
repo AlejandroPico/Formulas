@@ -1,7 +1,7 @@
 # Usos
 
-- Resolucion de problemas de mecanica.
-- Analisis de choques y oscilaciones.
-- Energia en sistemas gravitatorios y elasticos.
-- Modelos introductorios de ingenieria.
-- Docencia visual de fisica clasica.
+Analizar choques, retrocesos y separación de cuerpos; usar el centro de masas para comprobar un cálculo; distinguir momento de energía. Si existe una pared, un motor o rozamiento externo, añade su impulso al balance. El modelo de carritos puntuales es una idealización y no describe la duración ni la deformación del contacto.
+
+## Un criterio de aplicación
+
+Masas constantes positivas; movimiento unidimensional; choque instantáneo aislado; restitución entre cero y uno. Las fórmulas finales de choque se aplican al encuentro, no a carritos que se alejan.

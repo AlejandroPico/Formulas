@@ -1,22 +1,29 @@
-# Ficha
+# Integración por partes
 
-## Identificación
+La regla del producto, leída en sentido inverso, intercambia una integral por un término de borde y otra integral.
 
-- Nombre: Integración por partes.
-- Área: cálculo integral.
-- Idea central: integrar un producto trasladando la derivada de una parte a la otra.
+## Magnitudes
 
-## Variables
+| Símbolo | Lectura |
+| :-- | :-- |
+| u | Factor que se elige para derivar. |
+| v | Primitiva del factor elegido como dv; su derivada reconstruye ese factor. |
+| x | Variable de integración. |
+| a | Límite inferior orientado de la integral. |
+| b | Límite superior orientado de la integral. |
 
-- `u`: parte elegida para derivar.
-- `dv`: parte elegida para integrar.
-- `du`: diferencial de `u`.
-- `v`: primitiva de `dv`.
+## Cuándo se aplica
 
-## Lectura del simulador
+Funciones suficientemente regulares en el intervalo para aplicar producto y teorema fundamental del cálculo. ln x requiere x>0 en todo el intervalo.
 
-El rectángulo principal representa `uv`. Los bloques laterales representan las contribuciones asociadas a `u dv` y `v du`. La identidad indica que una acumulación puede obtenerse restando la acumulación complementaria al producto total.
+## Evita estos errores
 
-## Limitaciones
+Olvidar la resta; evaluar uv solo en b; intercambiar límites en un único término; elegir dv sin poder encontrar su primitiva.
 
-La visualización es geométrica y diferencial. En ejercicios reales, el éxito depende de escoger adecuadamente `u` y `dv`. Algunas integrales requieren aplicar la técnica varias veces o combinarla con sustitución.
+## Laboratorio
+
+**Intercambios · Explorar · Balance firmado**
+
+Elige una pareja u y v′ y mueve el límite superior. Comprueba integral original = término de borde − integral restante.
+
+El área es firmada. Invertir los límites cambia el signo de las tres contribuciones, incluso cuando la curva no cambia.

@@ -1,7 +1,5 @@
 # Historia
 
-Newton publicó la ley de gravitación en los Principia, dentro de una síntesis que unió la física terrestre con la astronomía de Kepler.
+Newton publicó los Principia en 1687 y relacionó la dinámica terrestre con los movimientos orbitales mediante una misma gravitación. Las leyes observacionales de Kepler aportaron una estructura que la nueva mecánica pudo explicar. La forma de una órbita y la ley del periodo dejaron así de ser reglas aisladas. La teoría clásica continúa siendo un modelo útil cuando los efectos relativistas y las perturbaciones no dominan.
 
-La ley permitió explicar órbitas planetarias, mareas, caída de cuerpos y movimiento de proyectiles bajo un marco mecánico común.
-
-Fue una de las grandes unificaciones de la ciencia clásica y permaneció como teoría gravitatoria dominante hasta la relatividad general.
+Fuente de estudio: [Referencia y formulación](https://openstax.org/books/university-physics-volume-1/pages/13-5-keplers-laws-of-planetary-motion). La fecha histórica de la ficha se distingue de las fechas de creación y revisión que aparecen en Inventario.

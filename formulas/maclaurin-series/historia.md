@@ -1,9 +1,5 @@
 # Historia
 
-La serie de Maclaurin lleva el nombre de Colin Maclaurin, matemático escocés del siglo XVIII que sistematizó y difundió el uso de expansiones en serie centradas en el origen. Aunque forma parte de la familia general de las series de Taylor, el caso `a=0` adquirió identidad propia por su sencillez y utilidad.
+Colin Maclaurin sistematizó y difundió las expansiones centradas en cero en su Treatise of Fluxions de 1742. El caso pertenece a la fórmula general de Taylor; su centro especial simplifica la notación y muchas funciones elementales. Las series permitieron construir tablas y aproximaciones, pero el análisis posterior precisó sus condiciones de convergencia. El polinomio truncado y la igualdad infinita deben distinguirse también en una visualización moderna.
 
-Estas series se volvieron fundamentales porque permiten convertir funciones trascendentes, como `e^x`, `sin(x)`, `cos(x)` o `ln(1+x)`, en sumas de potencias. Esa conversión facilitó cálculos manuales, tablas numéricas, aproximaciones astronómicas, desarrollos físicos y posteriormente métodos computacionales.
-
-En los siglos XVIII y XIX, las series eran una herramienta central del análisis. Antes de las calculadoras y ordenadores, aproximar funciones mediante polinomios era una necesidad práctica. En física matemática, las expansiones de Maclaurin se volvieron esenciales para estudiar pequeñas oscilaciones, perturbaciones, límites y comportamiento local.
-
-Hoy siguen siendo fundamentales en análisis numérico, computación científica, gráficos, simulación, optimización y aprendizaje automático. Muchas funciones que una máquina evalúa de forma aparentemente inmediata se calculan internamente mediante variantes de aproximaciones polinómicas o racionales inspiradas en estas ideas.
+Fuente de estudio: [Referencia y formulación](https://openstax.org/books/calculus-volume-2/pages/6-3-taylor-and-maclaurin-series). La fecha histórica de la ficha se distingue de las fechas de creación y revisión que aparecen en Inventario.

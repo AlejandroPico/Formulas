@@ -1,21 +1,30 @@
-# Ficha
+# Interés compuesto: crecimiento exponencial del capital
 
-**Nombre:** Interés compuesto: crecimiento exponencial del capital
+Los intereses reinvertidos también generan intereses; la frecuencia modifica la tasa efectiva.
 
-**Área:** Finanzas / Valor temporal del dinero
+## Magnitudes
 
-**Nivel:** Bachillerato/Universidad inicial
+| Símbolo | Lectura |
+| :-- | :-- |
+| A | Capital acumulado al terminar el plazo, en la misma moneda que P. |
+| P | Capital inicial, sin aportaciones ni retiradas. |
+| r | Tasa nominal anual expresada como tanto por uno; 10 % equivale a 0,10. |
+| n | Número positivo de capitalizaciones al año. |
+| t | Plazo expresado en años compatibles con la tasa. |
+| i | Tasa anual efectiva: crecimiento compuesto de un año. |
 
-**Resumen:** Modela la acumulación de capital cuando los intereses generan nuevos intereses.
+## Cuándo se aplica
 
-## Lectura e interpretación
+Capital inicial no negativo, tasa y frecuencia fijas, reinversión completa, sin comisiones, impuestos, aportaciones ni retiradas. El factor 1+r/n debe ser positivo. El laboratorio usa plazos enteros en años.
 
-# Interpretación
+## Evita estos errores
 
-Mueve los controles y observa qué domina: capitalización, tasa de descuento, raíz VAN=0, beta, volatilidad, valor temporal, no arbitraje o duración.
+Introducir 10 como tasa simbólica en lugar de 0,10; confundir tasa nominal con efectiva; mezclar meses con años; presentar el poder adquisitivo como saldo bancario.
 
-## Validez y limitaciones
+## Laboratorio
 
-# Limitaciones
+**Metas · Explorar · Poder adquisitivo**
 
-No incorpora impuestos, comisiones, riesgo, inflación variable ni rentabilidades aleatorias.
+Cambia el capital, la tasa nominal y la frecuencia. Compara interés simple, compuesto y el límite continuo.
+
+La curva de poder adquisitivo descuenta una inflación constante. Mantén separados euros nominales y euros del momento inicial.

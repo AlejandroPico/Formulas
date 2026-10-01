@@ -1,17 +1,28 @@
-# Ficha
+# Coordenadas polares
 
-## Identificacion
+Una distancia y una dirección sitúan el mismo punto que dos coordenadas cartesianas.
 
-- Nombre: Coordenadas polares.
-- Area: geometria analitica.
-- Formula: x=r cos(theta), y=r sin(theta).
+## Magnitudes
 
-## Variables
+| Símbolo | Lectura |
+| :-- | :-- |
+| x | Coordenada horizontal cartesiana. |
+| y | Coordenada vertical cartesiana. |
+| r | Radio no negativo: distancia al origen. |
+| θ | Ángulo medido desde el eje x positivo, con sentido antihorario positivo. |
 
-- r: distancia al origen.
-- theta: angulo respecto del eje horizontal.
-- x, y: coordenadas cartesianas.
+## Cuándo se aplica
 
-## Lectura del simulador
+Plano euclídeo con origen y eje de referencia fijados. r≥0; atan2 describe la dirección solo para r>0. El ángulo es periódico.
 
-La linea morada es el radio polar. Las proyecciones punteadas muestran como ese radio se descompone en las coordenadas x e y.
+## Evita estos errores
+
+Usar arctan(y/x) sin cuadrante; intercambiar los argumentos de atan2; tratar r² como distancia; asignar al origen una dirección única.
+
+## Laboratorio
+
+**Balizas · Explorar · Cuadrantes**
+
+Arrastra la baliza. El radio mide distancia y el ángulo marca dirección desde el eje x positivo.
+
+Compara la coordenada angular elegida con atan2(y,x), que conserva el cuadrante. En el origen la dirección no está definida.

@@ -40,7 +40,7 @@ Cada simulador exporta una función de montaje que recibe `{ root, canvas, contr
 
 ## Revisiones
 
-Mantén **Alt** y pulsa Filtros para acceder a Inventario, Cobertura, Validador y **Revisiones**. Los temas especiales siguen disponibles con Alt + clic en Estilos.
+Mantén **Alt** y pulsa Filtros para mostrar el botón **Inventario**. Dentro están Inventario, Cobertura, Validador y Revisiones. «Últimas introducidas» se conserva únicamente en el filtro normal. Los temas especiales siguen disponibles con Alt + clic en Estilos.
 
 `formulas/revisions.json` guarda el historial permanente. Cada revisión registra fecha, número, alcance, versión del simulador, resumen y comprobaciones. Una fórmula solo se marca revisada después de revisar todas sus pestañas, símbolos y simulador. La creación se obtiene de su primera incorporación al historial de Git, no de su año histórico.
 
@@ -51,6 +51,8 @@ Las diez siguientes revisiones añaden 40 misiones, exploración libre y demostr
 ## Probar y previsualizar
 
 La tercera tanda añade quince revisiones completas y 60 misiones de trigonometría, álgebra, cálculo y mecánica. Incluye raíces complejas, comparación del péndulo no lineal, oscilaciones con reproducción y pausa, y una placa 3D de tensión plana. Consulta [la tercera revisión](docs/tercera-revision.md). Los cálculos se comprueban con `node tools/check-discovery-labs.mjs`; las fichas y los gestos con `node tools/check-discovery-browser.mjs` y `node tools/check-discovery-inputs.mjs`.
+
+La cuarta tanda añade veinte revisiones y 80 misiones: capitalización, límites, dinámica, fluidos, series, circuitos, ondas y vigas. Incluye órbitas keplerianas y una membrana 3D con líneas nodales, además de reproducción y balances de energía. Consulta [la cuarta revisión](docs/cuarta-revision.md). Las comprobaciones están en `tools/check-frontier-labs.mjs`, `tools/check-frontier-browser.mjs` y `tools/check-frontier-inputs.mjs`. El historial conserva las revisiones anteriores.
 
 ```sh
 node tools/serve.mjs

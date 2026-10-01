@@ -1,9 +1,11 @@
 # Significado
 
-La fórmula de sumación de Euler-Maclaurin conecta dos mundos: las sumas discretas y las integrales continuas. Una suma como `∑f(k)` puede verse como una acumulación de barras; una integral como `∫f(x)dx` puede verse como un área suave bajo una curva. Euler-Maclaurin explica cómo pasar de una a otra añadiendo correcciones.
+Una suma discreta se relaciona con una integral, los extremos, derivadas de borde y un resto.
 
-La aproximación básica por integral suele capturar la tendencia global, pero no siempre reproduce bien los extremos. Por eso aparece el término `[f(a)+f(b)]/2`, que corrige el borde inicial y final. Después aparecen términos con derivadas y números de Bernoulli: estos refinan la aproximación teniendo en cuenta la pendiente, la curvatura y la variación local en los extremos.
+## Un ejemplo
 
-La fórmula es especialmente valiosa cuando la suma tiene muchos términos o cuando interesa una expansión asintótica. En lugar de sumar término a término, se aproxima el comportamiento global mediante una integral y se corrige el error de discretización.
+Para f=x² entre 1 y 4, la suma es 30. La integral aporta 21, los extremos 8,5 y B₂ aporta 0,5. Las correcciones superiores se anulan para ese polinomio, de modo que este caso queda exacto.
 
-En el simulador, las barras representan la suma real y la curva representa la función continua. La diferencia visual entre barras y área es precisamente el tipo de diferencia que Euler-Maclaurin intenta controlar.
+## Cómo leerlo
+
+La integral aproxima una acumulación continua y no coincide automáticamente con la suma en enteros. El término de extremos repara parte de esa diferencia; las correcciones usan diferencias de derivadas impares en a y b. R_p conserva lo que falta. El simulador calcula la suma directamente para contrastar el resultado y ofrece hasta B₄. No presenta una aproximación como igualdad exacta si no se anula o controla el resto.
