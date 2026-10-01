@@ -1,7 +1,9 @@
-# Significado
+# Las raíces son los cortes con cero
 
-Da las soluciones de cualquier ecuación de segundo grado escrita en forma ax² + bx + c = 0.
+Una ecuación cuadrática tiene forma ax²+bx+c = 0, con a ≠ 0. El discriminante Δ = b²−4ac organiza sus soluciones: Δ > 0 produce dos raíces reales; Δ = 0 produce una raíz doble; Δ < 0 produce dos raíces complejas conjugadas y ningún corte real.
 
-La fórmula concentra en una sola expresión toda la información de la parábola: sus cortes con el eje horizontal, la existencia o no de raíces reales y la posición del eje de simetría.
+La parábola y = ax²+bx+c tiene vértice en xᵥ = −b/(2a). Su coordenada vertical es −Δ/(4a); el vértice no es, en general, una raíz.
 
-El discriminante indica el comportamiento cualitativo: si es positivo hay dos raíces reales, si es cero hay una raíz doble y si es negativo las soluciones son complejas.
+Si a = 0, la ecuación cambia de tipo. Con b ≠ 0 queda x = −c/b; con a = b = 0 puede no tener soluciones o cumplirse para todo x. El simulador representa estos casos **sin modificar tus coeficientes**.
+
+**Dianas** pide raíces y clasificaciones; **Explorar** dibuja la curva; **Vértice** permite arrastrarla y muestra la forma completando el cuadrado.

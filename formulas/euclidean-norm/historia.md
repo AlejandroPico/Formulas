@@ -1,7 +1,7 @@
-# Historia
+# De Pitágoras a los vectores
 
-La norma euclidea procede de la geometria clasica y del teorema de Pitagoras. Al introducir coordenadas, la distancia entre el origen y un punto pudo escribirse como una formula algebraica.
+Pitágoras proporciona la relación entre desplazamientos perpendiculares en un plano. La geometría analítica y el desarrollo del lenguaje vectorial extendieron esta idea a coordenadas y a espacios de más dimensiones.
 
-Con el desarrollo del algebra lineal, esta longitud se generalizo a espacios de cualquier dimension. En analisis, fisica, estadistica y computacion, la norma euclidea es una de las medidas de magnitud mas usadas.
+La notación de norma pertenece al álgebra y al análisis modernos; no debe presentarse como un símbolo escrito por Euclides. En esta ficha se estudia la norma de vectores reales, no la norma de Frobenius de una matriz.
 
-Su papel moderno es enorme: define distancias, errores cuadraticos, regularizacion, metricas de similitud y geometria de espacios vectoriales.
+La terminología puede contrastarse en [MathWorld: Euclidean Norm](https://mathworld.wolfram.com/EuclideanNorm.html) y su definición vectorial en [MathWorld: L2-Norm](https://mathworld.wolfram.com/L2-Norm.html).

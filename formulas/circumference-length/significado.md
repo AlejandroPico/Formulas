@@ -1,9 +1,9 @@
-# Significado
+# Una vuelta es una distancia
 
-La longitud de una circunferencia mide el perímetro del círculo: la distancia que se recorre al dar una vuelta completa por su borde.
+**L = 2πr** mide el borde de un círculo. Como d = 2r, también L = πd. La razón L/d es siempre π: cambiar el tamaño no cambia la forma.
 
-La fórmula `L=2πr` expresa que esa longitud es proporcional al radio. Si duplicas el radio, duplicas la longitud del borde.
+Una rueda de radio 1 u avanza 2π u al completar una vuelta **si rueda sin deslizar**. Para v vueltas, la distancia es vL. Para un arco de ángulo θ, la distancia de borde es ℓ = rθ, con θ en radianes.
 
-También puede escribirse como `L=πd`, porque el diámetro es `d=2r`. El número `π` es precisamente la razón constante entre la longitud de cualquier circunferencia y su diámetro.
+Duplicar r duplica L. Esta relación es lineal, a diferencia del área, que se cuadruplica.
 
-El simulador representa un círculo rodante y la longitud desplegada como una línea recta equivalente al borde completo.
+En **Ruta**, calcula radios, vueltas y recorridos; **Rodar** relaciona el giro con una distancia recta; **Polígonos** compara el borde con segmentos. El dibujo mantiene la misma escala para la rueda y su recorrido.

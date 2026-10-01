@@ -1,9 +1,9 @@
-# Significado
+# Cuánto se estira y si se invierte
 
-El determinante es un número asociado a una matriz cuadrada. En dimensión `2`, mide el factor de escala orientado de un paralelogramo; en dimensión `3`, mide el factor de escala orientado de un paralelepípedo.
+En 2D, las columnas de una matriz son dos vectores que forman un paralelogramo. Su determinante es un área orientada: el valor absoluto es el área y el signo indica la orientación.
 
-Para una matriz `2x2`, la fórmula `ad-bc` compara dos productos cruzados. El producto `ad` contribuye con orientación positiva y el producto `bc` con orientación negativa.
+En 3D, tres columnas generan un paralelepípedo. El valor absoluto del determinante mide su volumen. Un resultado negativo **no es un volumen físico negativo**: indica inversión de orientación respecto a los ejes.
 
-Para una matriz `3x3`, la regla de Sarrus organiza tres productos positivos y tres negativos. Es una regla visual útil para aprender, aunque solo vale para matrices `3x3`.
+Si el determinante es cero, las columnas son dependientes y la figura pierde dimensión. Una matriz cuadrada es invertible exactamente cuando su determinante es distinto de cero.
 
-El simulador permite alternar entre `2x2` y `3x3`, modificar los valores y ver el desarrollo numérico. La mejora principal es hacer explícito qué productos suman y cuáles se restan.
+**Taller** propone cálculos y transformaciones; **Geometría** permite editar matrices 2×2 y 3×3 y girar el sólido; **Productos** muestra las contribuciones con signo. Sarrus solo se aplica a 3×3.

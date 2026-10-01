@@ -1,21 +1,13 @@
-# Ficha
+# Identidad pitagórica trigonométrica
 
-## Identificación
+**Tipo** · identidad: vale para todo θ real, no solo para las soluciones de una ecuación.
 
-- Nombre: Identidad pitagórica trigonométrica.
-- Área: trigonometría y geometría analítica.
-- Fórmula: `sin²θ+cos²θ=1`.
+**Variables** · θ es el ángulo; x e y son coordenadas adimensionales del círculo unidad.
 
-## Variables
+**Invariante** · la suma de los cuadrados es uno. La suma de las coordenadas no es constante.
 
-- `θ`: ángulo.
-- `sin θ`: componente vertical en la circunferencia unidad.
-- `cos θ`: componente horizontal en la circunferencia unidad.
+**Signos** · el cuadrante determina los signos de seno y coseno; los cuadrados no permiten recuperarlos por sí solos.
 
-## Lectura del simulador
+**Precisión** · una lectura decimal como 0,9999999999999999 es efecto del cálculo numérico, no una excepción matemática.
 
-El radio gris mide `1`. La base azul representa `cos θ` y la altura roja representa `sin θ`. Al mover el ángulo, ambas componentes cambian, pero la suma `sin²θ+cos²θ` permanece igual a `1`.
-
-## Limitaciones
-
-La identidad es exacta para cualquier ángulo real. En cálculo numérico pueden aparecer pequeñas desviaciones por redondeo decimal.
+**Control** · prueba 0°, 90°, 180° y 270°: una componente es cero y la otra vale ±1.

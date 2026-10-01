@@ -1,7 +1,7 @@
-# Historia
+# Herón y la medición
 
-La fórmula se atribuye a Herón de Alejandría, matemático e ingeniero del siglo I. Aparece en su obra *Métrica*, dedicada al cálculo de áreas y volúmenes.
+Herón de Alejandría, activo en el siglo I d. C., reunió métodos de medición en su obra Metrica. Su libro I presenta la fórmula del área a partir de los lados y su demostración.
 
-Su importancia práctica era enorme: permite hallar áreas triangulares sin construir alturas, algo valioso en agrimensura, construcción y geometría aplicada.
+La relación fue útil para medir superficies sin depender de construir una altura sobre el terreno. La atribución conservada permite situar la fórmula en su obra, sin afirmar que conocemos con certeza el instante de su primer descubrimiento.
 
-Aunque hoy se demuestra con álgebra y trigonometría, su espíritu es plenamente geométrico: extraer una magnitud de superficie a partir de longitudes de borde.
+La biografía y la obra están documentadas en [MacTutor: Herón](https://mathshistory.st-andrews.ac.uk/Biographies/Heron/). La expresión y sus demostraciones pueden contrastarse en [MathWorld: Heron's Formula](https://mathworld.wolfram.com/HeronsFormula.html).

@@ -1,19 +1,9 @@
-# Usos
+# Áreas, volúmenes y dependencia
 
-- Decidir si una matriz es invertible.
-- Calcular áreas orientadas en `2D` y volúmenes orientados en `3D`.
-- Resolver sistemas lineales mediante Cramer.
-- Estudiar cambios de escala producidos por transformaciones lineales.
-- Detectar dependencia lineal entre filas o columnas.
+La matriz 2×2 con filas (2,1) y (0,3) tiene determinante 6. Transforma el cuadrado unidad en un paralelogramo de área 6. La inclinación no cambia ese resultado.
 
-## Uso geométrico
+Una matriz diagonal 3×3 con entradas 2, 3 y −1 tiene determinante −6: volumen 6 y orientación invertida. Si una columna se vuelve cero, el volumen se aplasta y el determinante se anula.
 
-Si el determinante vale cero, la transformación aplasta el espacio: un área pasa a una línea o un volumen pasa a un plano. Si es negativo, además de escalar, invierte la orientación.
+En sistemas lineales, un determinante no nulo garantiza una solución única para cada lado derecho. Cero obliga a analizar compatibilidad: puede haber ninguna solución o infinitas.
 
-## Uso didáctico
-
-La comparación entre `2x2` y `3x3` ayuda a entender que el determinante no es una receta aislada, sino una medida de independencia y orientación.
-
-## Uso del simulador
-
-Conviene probar matrices con filas iguales, filas proporcionales, matrices diagonales y matrices con signos negativos. Así se ve cuándo el determinante se anula y cuándo cambia de signo.
+El juego plantea tanto cálculos como cambios de orientación. La cámara 3D permite inspeccionar el sólido desde diferentes vistas sin cambiar su determinante.

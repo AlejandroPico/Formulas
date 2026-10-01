@@ -1,7 +1,9 @@
-# Significado
+# Longitud sin importar la dirección
 
-La norma euclidea mide la longitud ordinaria de un vector. En dos dimensiones coincide con la hipotenusa del triangulo rectangulo formado por sus componentes.
+La norma euclídea de un vector es la raíz de la suma de los cuadrados de sus componentes. En 2D, (3,4) tiene norma 5. En 3D, (2,3,6) tiene norma 7.
 
-Para `x=(x1,x2)`, la norma es `sqrt(x1^2+x2^2)`. En mas dimensiones se suma el cuadrado de todas las componentes.
+Los signos indican dirección, pero no producen una longitud negativa. (−3,4) y (3,4) tienen la misma norma. Sumar directamente las componentes no sirve: (3,−3) no tiene longitud cero.
 
-Tambien puede verse como `sqrt(x dot x)`: la longitud de un vector nace del producto escalar consigo mismo. Por eso la norma conecta geometria, algebra vectorial y distancia.
+La fórmula supone ejes perpendiculares y la misma escala de medida en cada eje. El producto escalar x·x abrevia la suma de cuadrados.
+
+Si x no es cero, dividirlo por su norma produce un vector unitario u. **El vector cero tiene norma cero y no tiene una dirección que normalizar.** Navegación plantea rutas; Explorar y Dirección permiten girar la escena 3D y comparar la diagonal con el recorrido por ejes.

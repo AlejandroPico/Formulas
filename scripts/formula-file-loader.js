@@ -215,7 +215,14 @@ function buildSectionIndex(record, formula, derived = {}) {
       lazy: descriptor.type !== "formula"
     });
   }
-  customRootSections(record).forEach(section => sections.push(section));
+  const usedKeys = new Set([...STANDARD_SECTIONS.map(section => section.key), 'simulacion']);
+  customRootSections(record).forEach(section => {
+    const original = section.key;
+    let suffix = 1;
+    while (usedKeys.has(section.key)) section.key = `${original}-extra-${suffix++}`;
+    usedKeys.add(section.key);
+    sections.push(section);
+  });
   if (!sections.some(section => section.key === 'aprendizaje')) sections.push(generatedLearningSection(record, derived));
   if (!sections.some(section => section.key === 'unidades')) sections.push(generatedUnitsSection(record, formula, derived));
   if (record.files.has("simulacion/index.js")) {

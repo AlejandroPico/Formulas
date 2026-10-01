@@ -1,7 +1,15 @@
-# Derivación
+# Completar el cuadrado, paso a paso
 
-La derivación se basa en transformar la expresión original hasta convertir una parte de ella en un cuadrado perfecto.
+Parte de ax²+bx+c = 0 y divide entre a, que no puede ser cero.
 
-El procedimiento reorganiza los términos, compensa la igualdad en ambos lados y finalmente despeja la incógnita.
+x² + (b/a)x = −c/a.
 
-La aparición del signo doble refleja que una misma distancia algebraica puede tomarse en dos sentidos, dando lugar a las dos raíces posibles cuando existen soluciones reales distintas.
+Añade (b/2a)² a ambos miembros:
+
+(x+b/2a)² = b²/(4a²) − c/a = Δ/(4a²).
+
+Para Δ ≥ 0, tomar las dos raíces y reorganizar produce x = (−b±√Δ)/(2a). Aunque √(a²) = |a|, las dos ramas permiten escribir el denominador 2a y obtener el mismo conjunto de raíces también si a < 0.
+
+Para Δ < 0, usa √Δ = i√(−Δ) en los números complejos. La forma de vértice es y = a(x−xᵥ)² − Δ/(4a).
+
+No dividas entre a si vale cero: analiza primero el caso lineal o constante.

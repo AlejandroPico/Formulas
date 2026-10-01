@@ -1,33 +1,13 @@
-# Ficha
+# Determinantes pequeños
 
-## Identificación
+**Objeto** · matriz cuadrada real de tamaño 2×2 o 3×3.
 
-- Nombre: Determinantes 2x2 y 3x3.
-- Área: Álgebra lineal.
-- Nivel recomendado: Bachillerato.
-- Tipo de fórmula: cálculo de determinantes pequeños.
+**Resultado** · escalar con signo. No es una matriz ni una suma de todas las entradas.
 
-## Fórmulas principales
+**Interpretación** · escala orientada de áreas en 2D y de volúmenes en 3D.
 
-`det([[a,b],[c,d]])=ad-bc`.
+**Invertibilidad** · det ≠ 0. Un det numéricamente pequeño requiere cuidado con precisión; no equivale automáticamente a cero exacto.
 
-`det([[a,b,c],[d,e,f],[g,h,i]])=aei+bfg+cdh-ceg-afh-bdi`.
+**Operaciones** · intercambiar dos columnas cambia el signo; multiplicar una columna por k multiplica det por k; sumar a una columna un múltiplo de otra no cambia det.
 
-## Variables
-
-Las letras representan las entradas de la matriz. El determinante solo está definido para matrices cuadradas.
-
-## Lectura del simulador
-
-El simulador tiene dos modos: matriz `2x2` y matriz `3x3`. En `2x2` compara dos productos cruzados. En `3x3` usa la regla de Sarrus y separa productos positivos y negativos.
-
-## Validez
-
-La fórmula `2x2` es general para toda matriz de ese tamaño. La regla de Sarrus solo vale para `3x3`; no debe extenderse mecánicamente a matrices mayores.
-
-## Errores habituales
-
-- Cambiar el orden de la resta en `2x2`.
-- Aplicar Sarrus a matrices que no son `3x3`.
-- Olvidar signos negativos.
-- Confundir filas con columnas al copiar los datos.
+**Límite de Sarrus** · exactamente 3×3. En el laboratorio las columnas, no las filas, generan las aristas del sólido.

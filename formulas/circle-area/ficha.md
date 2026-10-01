@@ -1,21 +1,15 @@
-# Ficha
+# Área del círculo
 
-## Identificación
+**Idea central** · medir el interior de un borde circular.
 
-- Nombre: Área del círculo.
-- Área: geometría plana.
-- Fórmula: `A=πr²`.
+**Datos** · radio r o diámetro d, con d = 2r.
 
-## Variables
+**Resultado** · A = πr²; el resultado siempre es no negativo.
 
-- `A`: área encerrada.
-- `r`: radio.
-- `d`: diámetro, con `d=2r`.
+**Condiciones** · r ≥ 0 y geometría plana. r = 0 es el disco reducido a un punto, de área cero.
 
-## Lectura del simulador
+**Control rápido** · duplicar r debe multiplicar A por cuatro. Si el resultado se duplica, has usado una relación lineal.
 
-El círculo relleno representa la superficie medida. Al aumentar el radio, el área crece de forma cuadrática, no lineal.
+**Precisión** · π no es exactamente 3,14. Conserva su valor completo durante el cálculo y redondea según las medidas disponibles.
 
-## Unidades
-
-Si `r` se mide en metros, `A` se mide en metros cuadrados. Si `r` se mide en píxeles, el área queda en píxeles cuadrados.
+**Conexiones** · perímetro circular, semejanza, sectores y límites. El simulador distingue el radio físico de la escala usada para dibujarlo.

@@ -1,21 +1,13 @@
-# Ficha
+# Fórmula de Herón
 
-## Identificación
+**Entrada** · tres longitudes positivas a, b y c, en la misma unidad.
 
-- Nombre: Fórmula de Herón.
-- Área: geometría plana.
-- Fórmula: `A=√[s(s-a)(s-b)(s-c)]`.
+**Preparación** · s = (a+b+c)/2.
 
-## Variables
+**Salida** · A = √[s(s−a)(s−b)(s−c)], raíz no negativa.
 
-- `a`, `b`, `c`: lados del triángulo.
-- `s`: semiperímetro.
-- `A`: área.
+**Dominio** · el mayor lado es menor que la suma de los otros dos. La igualdad es degeneración; superar esa suma significa datos imposibles.
 
-## Lectura del simulador
+**Precisión** · un triángulo casi plano requiere atención al redondeo. El cálculo del simulador usa una factorización ordenada de los lados para reducir pérdida de precisión.
 
-La base `c` se mantiene fija y los lados `a` y `b` se modifican. El triángulo se dibuja con la ley de cosenos y el área se calcula por Herón.
-
-## Limitaciones
-
-Los lados deben cumplir la desigualdad triangular. Si el triángulo se aproxima a una configuración degenerada, el área tiende a cero.
+**Control** · (3,4,5) da 6; permutar lados conserva el área; duplicarlos multiplica el área por cuatro.

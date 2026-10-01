@@ -1,1 +1,39 @@
-{"id":"pythagorean-trig-identity","name":"Identidad pitagórica trigonométrica","author":"Trigonometría clásica","year":-300,"field":"Trigonometría","level":"ESO/Bachillerato","color":"#3b82f6","simulation":true,"formulaText":"el cuadrado del seno más el cuadrado del coseno siempre vale uno","summary":"Visualiza seno, coseno e hipotenusa en la circunferencia unidad."}
+{
+  "id": "pythagorean-trig-identity",
+  "name": "Identidad pitagórica trigonométrica",
+  "author": "Trigonometría clásica",
+  "year": -300,
+  "field": "Trigonometría",
+  "level": "ESO/Bachillerato",
+  "color": "#3b82f6",
+  "simulation": "pythagorean-trig-identity",
+  "formulaText": "el cuadrado del seno más el cuadrado del coseno siempre vale uno",
+  "summary": "Seno y coseno son coordenadas de un punto de la circunferencia unidad. Orienta una señal, conserva la longitud y observa sus ondas.",
+  "symbolGlossary": {
+    "1": "Uno: cuadrado del radio unitario, que siempre tiene longitud uno.",
+    "=": "Igualdad: ambos miembros tienen exactamente el mismo valor.",
+    "+": "Suma los términos indicados.",
+    "−": "Resta el término siguiente o cambia su signo.",
+    "(": "Abre un grupo: calcula su contenido antes de aplicar las operaciones exteriores.",
+    ")": "Cierra el grupo de términos.",
+    ",": "Separa expresiones o condiciones de una misma relación.",
+    "⋯": "Continúa el mismo patrón con los términos intermedios.",
+    "θ": "Ángulo orientado desde el eje horizontal positivo. Los controles lo muestran en grados; el cálculo lo convierte a radianes.",
+    "sin": "Seno: coordenada vertical del punto de la circunferencia unidad; puede ser negativa.",
+    "cos": "Coseno: coordenada horizontal del punto de la circunferencia unidad; puede ser negativa.",
+    "x": "Coordenada horizontal: x = cos θ.",
+    "y": "Coordenada vertical: y = sin θ.",
+    "^2": "Cuadrado del valor de la base. En sin² θ y cos² θ se eleva el valor de la función, no el ángulo.",
+    "structure:msup": "Eleva al cuadrado la componente seno, coseno, x o y. El cuadrado de seno no significa seno del ángulo al cuadrado.",
+    "√": "Raíz cuadrada: devuelve la raíz no negativa de su contenido cuando es real."
+  },
+  "formulaGlossaries": [],
+  "simulatorVersion": 2,
+  "learningPath": [
+    "Comprender las magnitudes",
+    "Comprobar las condiciones",
+    "Explorar la representación",
+    "Resolver retos",
+    "Justificar el resultado"
+  ]
+}

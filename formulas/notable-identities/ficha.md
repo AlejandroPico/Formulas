@@ -1,19 +1,13 @@
-# Ficha
+# Identidades notables
 
-## Identificación
+**Entrada** · dos números o expresiones que puedan sumarse y multiplicarse de forma conmutativa.
 
-- Nombre: Identidades notables.
-- Área: Álgebra elemental.
-- Nivel: ESO.
+**Salida** · una expansión equivalente o su factorización inversa.
 
-## Variables
+**Dominio escolar** · números reales y polinomios. No traslades sin comprobar la regla a matrices: en general ab y ba no coinciden.
 
-- `a`, `b`: cantidades algebraicas, números, longitudes o expresiones.
+**Signos** · el último término del cuadrado de una diferencia es +b². La diferencia de cuadrados termina en −b².
 
-## Lectura del simulador
+**Dibujo** · las áreas literales requieren longitudes no negativas; fuera de ese caso el laboratorio muestra una comprobación algebraica.
 
-El canvas representa el cuadrado de una suma. Los controles cambian `a` y `b`; la figura se divide en `a²`, dos rectángulos `ab` y `b²`; la lectura inferior comprueba la igualdad.
-
-## Validez
-
-Las identidades son exactas. La visualización geométrica se entiende mejor con valores positivos, aunque el razonamiento algebraico es general.
+**Control** · sustituir a = b en suma por diferencia debe dar cero.

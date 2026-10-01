@@ -81,7 +81,7 @@ export function mountFormulaTooltips(formulaBox, equation) {
 
   const formulaRect = formulaBox.getBoundingClientRect();
   const zones = [
-    ...buildStructureZones(formulaBox, formulaRect),
+    ...buildStructureZones(formulaBox, formulaRect, equation),
     ...buildSymbolZones(formulaBox, formulaRect, glossary, equation)
   ];
 
@@ -98,9 +98,12 @@ function buildSymbolZones(formulaBox, formulaRect, glossary, equation) {
     const local = equation?.formulaGlossaries?.[expressions.indexOf(expression)] || {};
     let description = local[symbol] || lookupSymbolDescription(symbol, glossary);
     const code = Number.parseInt(node.querySelector('use[data-c]')?.getAttribute('data-c') || '', 16);
-    if (code >= 0x1D400 && code <= 0x1D433) description = local[`bold:${symbol}`] || description;
-    if (symbol === '2' && node.parentElement?.dataset.mmlNode === 'msup') description = 'Al cuadrado: multiplica la base por sí misma. Para una longitud, el resultado representa un área.';
-    if (node.parentElement?.dataset.mmlNode === 'msub') description = local[`_${symbol}`] || `Subíndice ${symbol}: identifica un punto o componente; no multiplica la variable.`;
+    if (code >= 0x1D400 && code <= 0x1D433) description = local[`bold:${symbol}`] || equation?.symbolGlossary?.[`bold:${symbol}`] || description;
+    const parentType = node.parentElement?.dataset.mmlNode;
+    const baseNode = node.parentElement?.querySelector(':scope > g[data-mml-node]');
+    const base = baseNode ? extractMathSymbol(baseNode) : '';
+    if (symbol === '2' && parentType === 'msup' && baseNode !== node) description = local['^2'] || equation?.symbolGlossary?.['^2'] || 'Al cuadrado: multiplica la base por sí misma. Para una longitud, el resultado representa un área.';
+    if (parentType === 'msub' && baseNode !== node) description = local[`_${base}:${symbol}`] || local[`_${symbol}`] || equation?.symbolGlossary?.[`_${symbol}`] || `Subíndice ${symbol}: identifica un punto o componente; no multiplica la variable.`;
     if (!symbol || !description) return [];
     const rect = node.getBoundingClientRect();
     if (!isUsableRect(rect)) return [];
@@ -108,10 +111,13 @@ function buildSymbolZones(formulaBox, formulaRect, glossary, equation) {
   });
 }
 
-function buildStructureZones(formulaBox, formulaRect) {
+function buildStructureZones(formulaBox, formulaRect, equation) {
+  const expressions = [...formulaBox.querySelectorAll('.formula-stack > div')];
   const selector = Object.keys(STRUCTURE_TOOLTIPS).map(name => `svg g[data-mml-node='${name}']`).join(",");
   return [...formulaBox.querySelectorAll(selector)].flatMap((node, index) => {
-    const [symbol, description] = STRUCTURE_TOOLTIPS[node.dataset.mmlNode] || [];
+    const [symbol, fallback] = STRUCTURE_TOOLTIPS[node.dataset.mmlNode] || [];
+    const local = equation?.formulaGlossaries?.[expressions.indexOf(node.closest('.formula-stack > div'))] || {};
+    const description = local[`structure:${node.dataset.mmlNode}`] || equation?.symbolGlossary?.[`structure:${node.dataset.mmlNode}`] || fallback;
     if (!symbol || !description) return [];
     const rect = node.getBoundingClientRect();
     if (!isUsableRect(rect)) return [];
@@ -182,7 +188,7 @@ function extractVariableKeys(rawKeys) {
 
 function extractMathSymbol(node) {
   const codes = [...node.querySelectorAll(":scope use[data-c]")].map(use => use.getAttribute("data-c")).filter(Boolean);
-  if (codes.length) return codes.map(code => codePointToSymbol(code)).join("").normalize("NFKC");
+  if (codes.length) return codes.map(code => codePointToSymbol(code)).join("").normalize("NFKC").replace(/[⎛⎜⎝]+/g, '(').replace(/[⎞⎟⎠]+/g, ')');
   return (node.textContent || "").normalize("NFKC").trim();
 }
 

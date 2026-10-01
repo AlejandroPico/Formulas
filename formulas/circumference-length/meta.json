@@ -1,1 +1,45 @@
-{"id":"circumference-length","name":"Longitud de una circunferencia","author":"Geometría clásica","year":-300,"field":"Geometría plana","level":"ESO","color":"#f43f5e","simulation":true,"formulaText":"la longitud de la circunferencia es dos pi por el radio","summary":"Visualiza la circunferencia como un borde circular que se despliega en una línea de longitud 2πr."}
+{
+  "id": "circumference-length",
+  "name": "Longitud de una circunferencia",
+  "author": "Geometría clásica",
+  "year": -300,
+  "field": "Geometría plana",
+  "level": "ESO",
+  "color": "#f43f5e",
+  "simulation": "circumference-length",
+  "formulaText": "la longitud de la circunferencia es dos pi por el radio",
+  "summary": "El borde de un círculo mide 2πr. Haz rodar una rueda sin deslizar, calcula sus vueltas y aproxima el borde con polígonos.",
+  "symbolGlossary": {
+    "2": "Dos: el diámetro contiene dos radios; una vuelta abarca 2π radianes.",
+    "=": "Igualdad: ambos miembros tienen exactamente el mismo valor.",
+    "+": "Suma los términos indicados.",
+    "−": "Resta el término siguiente o cambia su signo.",
+    "(": "Abre un grupo: calcula su contenido antes de aplicar las operaciones exteriores.",
+    ")": "Cierra el grupo de términos.",
+    ",": "Separa expresiones o condiciones de una misma relación.",
+    "⋯": "Continúa el mismo patrón con los términos intermedios.",
+    "L": "Longitud total de la circunferencia: perímetro del círculo.",
+    "r": "Radio de la rueda o del círculo; distancia del centro al borde.",
+    "d": "Diámetro del círculo, igual a dos radios.",
+    "π": "Pi: cociente constante entre la longitud total y el diámetro.",
+    "ℓ": "Longitud del arco recorrido, no necesariamente una vuelta completa.",
+    "θ": "Ángulo central del arco en radianes. Para una vuelta completa vale 2π.",
+    "structure:msup": "Potencia: el exponente indica la multiplicación repetida de toda la base.",
+    "√": "Raíz cuadrada: devuelve la raíz no negativa de su contenido cuando es real."
+  },
+  "formulaGlossaries": [
+    {},
+    {},
+    {
+      "2": "Dos: una vuelta completa abarca 2π radianes."
+    }
+  ],
+  "simulatorVersion": 2,
+  "learningPath": [
+    "Comprender las magnitudes",
+    "Comprobar las condiciones",
+    "Explorar la representación",
+    "Resolver retos",
+    "Justificar el resultado"
+  ]
+}

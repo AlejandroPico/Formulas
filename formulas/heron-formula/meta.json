@@ -1,1 +1,40 @@
-{"id":"heron-formula","name":"Fórmula de Herón","author":"Herón de Alejandría","year":60,"field":"Geometría plana","level":"ESO/Bachillerato","color":"#10b981","simulation":true,"formulaText":"el área de un triángulo se obtiene a partir de sus tres lados y el semiperímetro","summary":"Calcula el área de un triángulo usando solo las longitudes de sus lados."}
+{
+  "id": "heron-formula",
+  "name": "Fórmula de Herón",
+  "author": "Herón de Alejandría",
+  "year": 60,
+  "field": "Geometría plana",
+  "level": "ESO/Bachillerato",
+  "color": "#10b981",
+  "simulation": "heron-formula",
+  "formulaText": "el área de un triángulo se obtiene a partir de sus tres lados y el semiperímetro",
+  "summary": "Calcula un área a partir de tres lados, comprueba si forman un triángulo y relaciona el semiperímetro con la altura.",
+  "symbolGlossary": {
+    "2": "Dos: convierte el perímetro en semiperímetro.",
+    "=": "Igualdad: ambos miembros tienen exactamente el mismo valor.",
+    "+": "Suma los términos indicados.",
+    "−": "Resta el término siguiente o cambia su signo.",
+    "(": "Abre un grupo: calcula su contenido antes de aplicar las operaciones exteriores.",
+    ")": "Cierra el grupo de términos.",
+    ",": "Separa expresiones o condiciones de una misma relación.",
+    "⋯": "Continúa el mismo patrón con los términos intermedios.",
+    "A": "Área no negativa del triángulo; se mide en unidades cuadradas.",
+    "s": "Semiperímetro: mitad de la suma de las tres longitudes de lado.",
+    "a": "Longitud del lado a, opuesto al primer vértice de la base en el dibujo.",
+    "b": "Longitud del lado b, opuesto al segundo vértice de la base en el dibujo.",
+    "c": "Longitud del lado elegido como base; conecta los dos vértices inferiores.",
+    "structure:msqrt": "Raíz no negativa del producto de cuatro longitudes: el resultado es el área. Solo corresponde a lados que pueden cerrar una figura.",
+    "structure:mfrac": "Semiperímetro: suma los tres lados y divide entre dos; no es la mitad del área.",
+    "structure:msup": "Potencia: el exponente indica la multiplicación repetida de toda la base.",
+    "√": "Raíz cuadrada: devuelve la raíz no negativa de su contenido cuando es real."
+  },
+  "formulaGlossaries": [],
+  "simulatorVersion": 2,
+  "learningPath": [
+    "Comprender las magnitudes",
+    "Comprobar las condiciones",
+    "Explorar la representación",
+    "Resolver retos",
+    "Justificar el resultado"
+  ]
+}

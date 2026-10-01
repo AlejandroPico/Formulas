@@ -6,9 +6,332 @@
         "revision": 1,
         "date": "2026-10-01",
         "simulatorVersion": 2,
-        "scope": ["formula", "significado", "historia", "derivacion", "usos", "ficha", "aprendizaje", "unidades", "simulacion", "simbolos"],
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos"
+        ],
         "summary": "Revisión completa: símbolos por expresión, textos específicos y juego de seis puentes con exploración y áreas.",
-        "checks": ["Identidades, inversión y escalado en 144 triángulos", "Distancia, dominio y tolerancias", "Las nueve pestañas en navegador", "Símbolos con ratón y enfoque", "Seis misiones y respuesta incorrecta", "Arrastre y teclado", "Escritorio y móvil sin solapamientos", "Limpieza al cambiar pestaña y cerrar", "Historia contrastada con Euclides y MacTutor"]
+        "checks": [
+          "Identidades, inversión y escalado en 144 triángulos",
+          "Distancia, dominio y tolerancias",
+          "Las nueve pestañas en navegador",
+          "Símbolos con ratón y enfoque",
+          "Seis misiones y respuesta incorrecta",
+          "Arrastre y teclado",
+          "Escritorio y móvil sin solapamientos",
+          "Limpieza al cambiar pestaña y cerrar",
+          "Historia contrastada con Euclides y MacTutor"
+        ]
+      }
+    ],
+    "circle-area": [
+      {
+        "revision": 1,
+        "date": "2026-10-01",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos"
+        ],
+        "summary": "Revisión completa: Jardines con cálculo directo e inverso, radio arrastrable y recomposición exacta de sectores.",
+        "checks": [
+          "Todas las pestañas, metadatos, dominios y unidades revisados",
+          "Historia contrastada con fuentes enlazadas en la ficha",
+          "Símbolos y estructuras con definiciones específicas",
+          "Cuatro misiones, respuestas incorrectas, pistas y reintentos en navegador",
+          "Tres modos visibles, controles y casos especiales en navegador",
+          "Cálculos independientes, signos y condiciones de validez",
+          "Escritorio y móvil sin desbordamiento ni solapamientos",
+          "Limpieza de eventos, observadores y animaciones al salir"
+        ]
+      }
+    ],
+    "circumference-length": [
+      {
+        "revision": 1,
+        "date": "2026-10-01",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos"
+        ],
+        "summary": "Revisión completa: Ruta con vueltas fraccionarias, rueda sin deslizamiento y cotas poligonales del borde.",
+        "checks": [
+          "Todas las pestañas, metadatos, dominios y unidades revisados",
+          "Historia contrastada con fuentes enlazadas en la ficha",
+          "Símbolos y estructuras con definiciones específicas",
+          "Cuatro misiones, respuestas incorrectas, pistas y reintentos en navegador",
+          "Tres modos visibles, controles y casos especiales en navegador",
+          "Cálculos independientes, signos y condiciones de validez",
+          "Escritorio y móvil sin desbordamiento ni solapamientos",
+          "Limpieza de eventos, observadores y animaciones al salir"
+        ]
+      }
+    ],
+    "pythagorean-trig-identity": [
+      {
+        "revision": 1,
+        "date": "2026-10-01",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos"
+        ],
+        "summary": "Revisión completa: Señales con componentes y cuadrantes, punto arrastrable y ondas conectadas a la circunferencia unidad.",
+        "checks": [
+          "Todas las pestañas, metadatos, dominios y unidades revisados",
+          "Historia contrastada con fuentes enlazadas en la ficha",
+          "Símbolos y estructuras con definiciones específicas",
+          "Cuatro misiones, respuestas incorrectas, pistas y reintentos en navegador",
+          "Tres modos visibles, controles y casos especiales en navegador",
+          "Cálculos independientes, signos y condiciones de validez",
+          "Escritorio y móvil sin desbordamiento ni solapamientos",
+          "Limpieza de eventos, observadores y animaciones al salir"
+        ]
+      }
+    ],
+    "notable-identities": [
+      {
+        "revision": 1,
+        "date": "2026-10-01",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos"
+        ],
+        "summary": "Revisión completa: Taller de las tres identidades, término cruzado, piezas geométricas y productos con signos.",
+        "checks": [
+          "Todas las pestañas, metadatos, dominios y unidades revisados",
+          "Historia contrastada con fuentes enlazadas en la ficha",
+          "Símbolos y estructuras con definiciones específicas",
+          "Cuatro misiones, respuestas incorrectas, pistas y reintentos en navegador",
+          "Tres modos visibles, controles y casos especiales en navegador",
+          "Cálculos independientes, signos y condiciones de validez",
+          "Escritorio y móvil sin desbordamiento ni solapamientos",
+          "Limpieza de eventos, observadores y animaciones al salir"
+        ]
+      }
+    ],
+    "euclidean-norm": [
+      {
+        "revision": 1,
+        "date": "2026-10-01",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos"
+        ],
+        "summary": "Revisión completa: Navegación 2D y 3D, giro de cámara, ruta por ejes, dirección unitaria y vector cero.",
+        "checks": [
+          "Todas las pestañas, metadatos, dominios y unidades revisados",
+          "Historia contrastada con fuentes enlazadas en la ficha",
+          "Símbolos y estructuras con definiciones específicas",
+          "Cuatro misiones, respuestas incorrectas, pistas y reintentos en navegador",
+          "Tres modos visibles, controles y casos especiales en navegador",
+          "Cálculos independientes, signos y condiciones de validez",
+          "Escritorio y móvil sin desbordamiento ni solapamientos",
+          "Limpieza de eventos, observadores y animaciones al salir"
+        ]
+      }
+    ],
+    "arithmetic-progression-sum": [
+      {
+        "revision": 1,
+        "date": "2026-10-01",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "derivacion-alternativa",
+          "ficha-tecnica"
+        ],
+        "summary": "Revisión completa: Gradas, términos con signo y emparejamiento de extremos; revisión de las dos pestañas adicionales.",
+        "checks": [
+          "Todas las pestañas, metadatos, dominios y unidades revisados",
+          "Historia contrastada con fuentes enlazadas en la ficha",
+          "Símbolos y estructuras con definiciones específicas",
+          "Cuatro misiones, respuestas incorrectas, pistas y reintentos en navegador",
+          "Tres modos visibles, controles y casos especiales en navegador",
+          "Cálculos independientes, signos y condiciones de validez",
+          "Escritorio y móvil sin desbordamiento ni solapamientos",
+          "Limpieza de eventos, observadores y animaciones al salir"
+        ]
+      }
+    ],
+    "geometric-progression-sum": [
+      {
+        "revision": 1,
+        "date": "2026-10-01",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos"
+        ],
+        "summary": "Revisión completa: Cosecha, acumulados y resto exacto; razones negativas, cero y uno, límite y caso trivial.",
+        "checks": [
+          "Todas las pestañas, metadatos, dominios y unidades revisados",
+          "Historia contrastada con fuentes enlazadas en la ficha",
+          "Símbolos y estructuras con definiciones específicas",
+          "Cuatro misiones, respuestas incorrectas, pistas y reintentos en navegador",
+          "Tres modos visibles, controles y casos especiales en navegador",
+          "Cálculos independientes, signos y condiciones de validez",
+          "Escritorio y móvil sin desbordamiento ni solapamientos",
+          "Limpieza de eventos, observadores y animaciones al salir"
+        ]
+      }
+    ],
+    "determinants-2x2-3x3": [
+      {
+        "revision": 1,
+        "date": "2026-10-01",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos"
+        ],
+        "summary": "Revisión completa: Taller de matrices, áreas y volúmenes 3D orientados, dependencia y productos con signo.",
+        "checks": [
+          "Todas las pestañas, metadatos, dominios y unidades revisados",
+          "Historia contrastada con fuentes enlazadas en la ficha",
+          "Símbolos y estructuras con definiciones específicas",
+          "Cuatro misiones, respuestas incorrectas, pistas y reintentos en navegador",
+          "Tres modos visibles, controles y casos especiales en navegador",
+          "Cálculos independientes, signos y condiciones de validez",
+          "Escritorio y móvil sin desbordamiento ni solapamientos",
+          "Limpieza de eventos, observadores y animaciones al salir"
+        ]
+      }
+    ],
+    "heron-formula": [
+      {
+        "revision": 1,
+        "date": "2026-10-01",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos"
+        ],
+        "summary": "Revisión completa: Parcelas, clasificación de lados, cálculo estable del área y altura con vértice arrastrable.",
+        "checks": [
+          "Todas las pestañas, metadatos, dominios y unidades revisados",
+          "Historia contrastada con fuentes enlazadas en la ficha",
+          "Símbolos y estructuras con definiciones específicas",
+          "Cuatro misiones, respuestas incorrectas, pistas y reintentos en navegador",
+          "Tres modos visibles, controles y casos especiales en navegador",
+          "Cálculos independientes, signos y condiciones de validez",
+          "Escritorio y móvil sin desbordamiento ni solapamientos",
+          "Limpieza de eventos, observadores y animaciones al salir"
+        ]
+      }
+    ],
+    "quadratic-formula": [
+      {
+        "revision": 1,
+        "date": "2026-10-01",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos"
+        ],
+        "summary": "Revisión completa: Dianas de raíces y clasificación, cálculo estable, vértice arrastrable y casos lineales y constantes.",
+        "checks": [
+          "Todas las pestañas, metadatos, dominios y unidades revisados",
+          "Historia contrastada con fuentes enlazadas en la ficha",
+          "Símbolos y estructuras con definiciones específicas",
+          "Cuatro misiones, respuestas incorrectas, pistas y reintentos en navegador",
+          "Tres modos visibles, controles y casos especiales en navegador",
+          "Cálculos independientes, signos y condiciones de validez",
+          "Escritorio y móvil sin desbordamiento ni solapamientos",
+          "Limpieza de eventos, observadores y animaciones al salir"
+        ]
       }
     ]
   }

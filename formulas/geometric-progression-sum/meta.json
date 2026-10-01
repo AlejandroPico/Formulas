@@ -1,1 +1,72 @@
-{"id":"geometric-progression-sum","name":"Suma de progresión geométrica","author":"Tradición matemática clásica","year":-300,"field":"Aritmética y álgebra","level":"ESO","color":"#06b6d4","simulation":"geometric-progression-sum","formulaText":["suma finita de términos multiplicados por una razón constante","si |r| es menor que uno, la serie infinita converge"],"summary":"Calcula sumas donde cada término se obtiene multiplicando por una razón constante.","tags":["matemáticas","progresiones","series","simulación"],"units":"Los términos comparten unidad; r es adimensional.","dimensions":"La suma tiene la misma dimensión que los términos."}
+{
+  "id": "geometric-progression-sum",
+  "name": "Suma de progresión geométrica",
+  "author": "Tradición matemática clásica",
+  "year": -300,
+  "field": "Aritmética y álgebra",
+  "level": "ESO",
+  "color": "#06b6d4",
+  "simulation": "geometric-progression-sum",
+  "formulaText": [
+    "suma finita de términos multiplicados por una razón constante",
+    "si |r| es menor que uno, la serie infinita converge"
+  ],
+  "summary": "Cada paso multiplica por la misma razón. Estudia duplicación, alternancia y convergencia sin confundir una suma finita con su límite.",
+  "tags": [
+    "matemáticas",
+    "progresiones",
+    "series",
+    "simulación"
+  ],
+  "units": "Los términos comparten unidad; r es adimensional.",
+  "dimensions": "La suma tiene la misma dimensión que los términos.",
+  "symbolGlossary": {
+    "1": "Uno: número adimensional; r = 1 mantiene todos los términos iguales.",
+    "=": "Igualdad: ambos miembros tienen exactamente el mismo valor.",
+    "+": "Suma los términos indicados.",
+    "−": "Resta el término siguiente o cambia su signo.",
+    "(": "Abre un grupo: calcula su contenido antes de aplicar las operaciones exteriores.",
+    ")": "Cierra el grupo de términos.",
+    ",": "Separa expresiones o condiciones de una misma relación.",
+    "⋯": "Continúa el mismo patrón con los términos intermedios.",
+    "a": "Término de la progresión: el subíndice identifica su posición.",
+    "S": "Suma de términos, no el término individual de una posición.",
+    "n": "Número entero positivo de términos en la suma finita.",
+    "r": "Razón constante: cada término se multiplica por r para obtener el siguiente. Es adimensional y puede ser negativa o cero.",
+    "∞": "Infinito: límite de las sumas parciales al aumentar indefinidamente el número de términos.",
+    "≠": "Distinto de: la expresión con 1−r en el denominador exige r ≠ 1.",
+    "<": "Menor que: la convergencia no trivial exige que el valor absoluto de r sea menor que uno.",
+    "|": "Valor absoluto de r: mide su tamaño sin el signo.",
+    "structure:msup": "Potencia de la razón r: cuenta las multiplicaciones repetidas. Para el término n hay n−1 pasos desde a₁.",
+    "structure:mfrac": "Suma geométrica: el denominador 1−r exige r ≠ 1. Para la suma infinita no trivial también se requiere |r| < 1.",
+    "structure:msub": "El subíndice indica una posición de término o la cantidad de términos sumados; ∞ indica un límite.",
+    "√": "Raíz cuadrada: devuelve la raíz no negativa de su contenido cuando es real."
+  },
+  "formulaGlossaries": [
+    {
+      "_1": "Primer término.",
+      "_n": "Término en posición n.",
+      "exponent:n−1": "n−1 multiplicaciones por la razón desde el primer término."
+    },
+    {
+      "_1": "Primer término.",
+      "_n": "Primeros n términos de la suma."
+    },
+    {
+      "_1": "Primer término.",
+      "_n": "Primeros n términos."
+    },
+    {
+      "_1": "Primer término.",
+      "_∞": "Límite de los acumulados, no un término de posición infinita."
+    }
+  ],
+  "simulatorVersion": 2,
+  "learningPath": [
+    "Comprender las magnitudes",
+    "Comprobar las condiciones",
+    "Explorar la representación",
+    "Resolver retos",
+    "Justificar el resultado"
+  ]
+}

@@ -1,9 +1,11 @@
-# Significado
+# Una medida de superficie
 
-El área del círculo mide cuánta superficie queda encerrada por una circunferencia de radio `r`.
+El círculo como región rellena, también llamado disco, ocupa un área **A = πr²**. La circunferencia es solo su borde; su longitud es otra magnitud.
 
-La fórmula `A=πr²` indica que el área no crece linealmente con el radio, sino con su cuadrado. Si duplicas el radio, el área se multiplica por cuatro.
+El radio r va del centro al borde. El diámetro d atraviesa todo el disco y vale 2r. Si conoces d, divide su cuadrado entre cuatro antes de multiplicar por π. Si conoces A, la raíz positiva de A/π recupera el radio.
 
-El número `π` aparece porque todos los círculos comparten la misma proporción geométrica entre radio, longitud de borde y superficie encerrada.
+## Qué cambia al crecer
 
-El simulador rellena el disco y actualiza el valor numérico al variar el radio. La clave visual es observar que pequeños aumentos de radio producen aumentos cada vez mayores de área.
+Con r = 3 m, el área es 9π m², aproximadamente 28,27 m². Con r = 6 m, resulta 36π m²: duplicar el radio cuadruplica la superficie. Un aumento del 10 % en r aumenta A un 21 %.
+
+Las fórmulas describen discos planos euclídeos. Un jardín irregular o una región sobre una esfera requiere otro modelo. En el simulador, **Jardines** propone diseños con presupuesto; **Explorar** permite arrastrar el radio; **Sectores** explica de dónde sale el cuadrado.

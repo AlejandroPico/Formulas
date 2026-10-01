@@ -46,6 +46,8 @@ Mantén **Alt** y pulsa Filtros para acceder a Inventario, Cobertura, Validador 
 
 Pitágoras tiene un juego de seis puentes, exploración mediante arrastre y comparación de áreas. Es la primera fórmula revisada en esta etapa.
 
+Las diez siguientes revisiones añaden 40 misiones, exploración libre y demostraciones: sectores del disco, rodadura y polígonos, ondas trigonométricas, piezas algebraicas, parejas aritméticas, límites geométricos, alturas y vértices. Norma euclídea y determinantes incluyen escenas 3D que se giran con ratón, tacto o teclado. Sus cálculos y las 40 misiones se comprueban con `node tools/check-learning-labs.mjs`; `node tools/check-learning-browser.mjs` revisa todas las pestañas, los modos, los casos especiales, el móvil y la limpieza.
+
 ## Probar y previsualizar
 
 ```sh

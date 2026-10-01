@@ -1,23 +1,13 @@
-# Derivación
+# Eliminar el ángulo y factorizar
 
-Se parte de la fórmula elemental del área:
+Sea C el ángulo entre a y b. A = ab·sin C/2 y, por la ley de cosenos, cos C = (a²+b²−c²)/(2ab).
 
-`A=(1/2)bc sin α`,
+Usando sin² C = 1−cos² C:
 
- donde `α` es el ángulo comprendido entre los lados `b` y `c`.
+16A² = 4a²b² − (a²+b²−c²)².
 
-Por la ley de cosenos:
+La diferencia de cuadrados factoriza como (a+b+c)(a+b−c)(a−b+c)(−a+b+c).
 
-`a²=b²+c²−2bc cos α`.
+Cada factor equivale a 2s, 2(s−c), 2(s−b) o 2(s−a). Su producto es 16s(s−a)(s−b)(s−c). Divide entre 16 y toma la raíz no negativa.
 
-De ahí se obtiene `cos α` en función de los lados. Usando `sin²α=1−cos²α`, se expresa el área solo con `a`, `b` y `c`.
-
-Al simplificar el resultado algebraico aparece:
-
-`A²=s(s-a)(s-b)(s-c)`.
-
-Tomando raíz positiva, porque el área no puede ser negativa:
-
-`A=√[s(s-a)(s-b)(s-c)]`.
-
-La condición geométrica necesaria es que los lados puedan formar un triángulo: cada lado debe ser menor que la suma de los otros dos.
+La desigualdad triangular mantiene positivos s−a, s−b y s−c. En Altura, la igualdad A = ch/2 aporta una comprobación geométrica independiente para la misma figura.

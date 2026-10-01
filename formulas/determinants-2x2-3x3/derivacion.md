@@ -1,29 +1,11 @@
-# Derivación
+# Productos con orientación
 
-Para una matriz `2x2`:
+En 2×2, las columnas son (a,c) y (b,d). La alternancia y la linealidad del área orientada llevan a ad−bc. Intercambiar columnas cambia el signo; columnas proporcionales dan cero.
 
-`[[a,b],[c,d]]`,
+En 3×3, desarrolla por la primera fila:
 
-el determinante se calcula como el producto de la diagonal principal menos el producto de la diagonal secundaria:
+det = a(ei−fh) − b(di−fg) + c(dh−eg).
 
-`det(A)=ad-bc`.
+Distribuir los tres productos da aei + bfg + cdh − ceg − afh − bdi. Esa es la organización de Sarrus: tres contribuciones se suman y tres se restan. Una contribución que se resta puede ser negativa, así que debes conservar sus signos.
 
-Esta resta refleja orientación. Si dos columnas son proporcionales, el paralelogramo queda aplastado y el determinante vale cero.
-
-Para una matriz `3x3`:
-
-`[[a,b,c],[d,e,f],[g,h,i]]`,
-
-la regla de Sarrus suma los productos de las diagonales descendentes:
-
-`aei+bfg+cdh`,
-
-y resta los productos de las diagonales ascendentes:
-
-`ceg+afh+bdi`.
-
-Por tanto:
-
-`det(A)=aei+bfg+cdh-ceg-afh-bdi`.
-
-Esta regla puede justificarse como un caso particular de la fórmula general del determinante por permutaciones.
+El modo Productos muestra cada multiplicación numérica. Para tamaños mayores usa cofactores, eliminación o métodos generales; copiar más diagonales no extiende Sarrus.

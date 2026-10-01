@@ -1,1 +1,40 @@
-{"id":"circle-area","name":"Área del círculo","author":"Geometría clásica","year":-300,"field":"Geometría plana","level":"ESO","color":"#0ea5e9","simulation":true,"formulaText":"el área del círculo es pi por el radio al cuadrado","summary":"Visualiza cómo el área crece con el cuadrado del radio."}
+{
+  "id": "circle-area",
+  "name": "Área del círculo",
+  "author": "Geometría clásica",
+  "year": -300,
+  "field": "Geometría plana",
+  "level": "ESO",
+  "color": "#0ea5e9",
+  "simulation": "circle-area",
+  "formulaText": "el área del círculo es pi por el radio al cuadrado",
+  "summary": "La superficie de un disco crece con el cuadrado del radio. Diseña jardines, compara escalas y reconstruye el área con sectores.",
+  "symbolGlossary": {
+    "4": "Cuatro: aparece porque d² = (2r)² = 4r².",
+    "=": "Igualdad: ambos miembros tienen exactamente el mismo valor.",
+    "+": "Suma los términos indicados.",
+    "−": "Resta el término siguiente o cambia su signo.",
+    "(": "Abre un grupo: calcula su contenido antes de aplicar las operaciones exteriores.",
+    ")": "Cierra el grupo de términos.",
+    ",": "Separa expresiones o condiciones de una misma relación.",
+    "⋯": "Continúa el mismo patrón con los términos intermedios.",
+    "A": "Área del disco: superficie interior, expresada en unidades cuadradas.",
+    "r": "Radio: distancia del centro al borde; es la mitad del diámetro.",
+    "d": "Diámetro: longitud de un segmento que atraviesa el centro y une dos puntos del borde.",
+    "π": "Pi: constante adimensional, aproximadamente 3,14159265; relaciona el borde circular con su diámetro.",
+    "^2": "Al cuadrado: multiplica el radio o diámetro por sí mismo. Convierte una longitud en una contribución de área.",
+    "structure:msqrt": "Raíz no negativa de A/π: recupera el radio a partir del área.",
+    "structure:mfrac": "División: en πd²/4 convierte el diámetro al radio al cuadrado; en A/π prepara la recuperación del radio.",
+    "structure:msup": "Potencia: el exponente indica la multiplicación repetida de toda la base.",
+    "√": "Raíz cuadrada: devuelve la raíz no negativa de su contenido cuando es real."
+  },
+  "formulaGlossaries": [],
+  "simulatorVersion": 2,
+  "learningPath": [
+    "Comprender las magnitudes",
+    "Comprobar las condiciones",
+    "Explorar la representación",
+    "Resolver retos",
+    "Justificar el resultado"
+  ]
+}

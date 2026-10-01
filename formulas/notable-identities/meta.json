@@ -1,1 +1,61 @@
-{"id":"notable-identities","name":"Identidades notables","author":"Álgebra clásica","year":-300,"field":"Álgebra elemental","level":"ESO","color":"#ef4444","simulation":"notable-identities","formulaText":["cuadrado de una suma = primer cuadrado + dos veces el producto + segundo cuadrado","cuadrado de una diferencia = primer cuadrado − dos veces el producto + segundo cuadrado","suma por diferencia = diferencia de cuadrados"],"summary":"Patrones algebraicos básicos para expandir, factorizar y reconocer productos de binomios.","tags":["matemáticas","álgebra","identidades","factorización","simulación"],"prerequisites":["Potencias","distributiva","productos de binomios"],"learningPath":["Reconocer el patrón","interpretarlo como área","factorizar en sentido inverso"],"units":"Sin unidad física propia; las dimensiones deben conservar el grado algebraico.","dimensions":"Identidades homogéneas: todos los términos tienen el mismo grado."}
+{
+  "id": "notable-identities",
+  "name": "Identidades notables",
+  "author": "Álgebra clásica",
+  "year": -300,
+  "field": "Álgebra elemental",
+  "level": "ESO",
+  "color": "#ef4444",
+  "simulation": "notable-identities",
+  "formulaText": [
+    "cuadrado de una suma = primer cuadrado + dos veces el producto + segundo cuadrado",
+    "cuadrado de una diferencia = primer cuadrado − dos veces el producto + segundo cuadrado",
+    "suma por diferencia = diferencia de cuadrados"
+  ],
+  "summary": "Descompón áreas, cancela productos y reconoce el término cruzado. Las tres identidades funcionan también con números negativos.",
+  "tags": [
+    "matemáticas",
+    "álgebra",
+    "identidades",
+    "factorización",
+    "simulación"
+  ],
+  "prerequisites": [
+    "Potencias",
+    "distributiva",
+    "productos de binomios"
+  ],
+  "learningPath": [
+    "Comprender las magnitudes",
+    "Comprobar las condiciones",
+    "Explorar la representación",
+    "Resolver retos",
+    "Justificar el resultado"
+  ],
+  "units": "Sin unidad física propia; las dimensiones deben conservar el grado algebraico.",
+  "dimensions": "Identidades homogéneas: todos los términos tienen el mismo grado.",
+  "symbolGlossary": {
+    "=": "Igualdad: ambos miembros tienen exactamente el mismo valor.",
+    "+": "Suma los términos indicados.",
+    "−": "Resta el término siguiente o cambia su signo.",
+    "(": "Abre un grupo: calcula su contenido antes de aplicar las operaciones exteriores.",
+    ")": "Cierra el grupo de términos.",
+    ",": "Separa expresiones o condiciones de una misma relación.",
+    "⋯": "Continúa el mismo patrón con los términos intermedios.",
+    "a": "Primer término del binomio. Puede ser un número o una expresión algebraica.",
+    "b": "Segundo término del binomio. Puede tener signo positivo, negativo o cero.",
+    "^2": "Al cuadrado: multiplica por sí misma toda la base, que puede ser a, b o un binomio entre paréntesis.",
+    "structure:msup": "Cuadrado de la base completa: si la base es a+b o a−b, incluye los productos cruzados.",
+    "√": "Raíz cuadrada: devuelve la raíz no negativa de su contenido cuando es real."
+  },
+  "formulaGlossaries": [
+    {
+      "2": "Dos: suma los dos productos cruzados ab, uno de cada orden de multiplicación."
+    },
+    {
+      "2": "Dos: los dos productos cruzados se restan en el cuadrado de una diferencia."
+    },
+    {}
+  ],
+  "simulatorVersion": 2
+}

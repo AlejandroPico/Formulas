@@ -1,7 +1,7 @@
-# Historia
+# De las cuerdas a las funciones
 
-La identidad procede de la geometría griega y del teorema de Pitágoras. Al representar los ángulos sobre una circunferencia de radio `1`, las razones trigonométricas seno y coseno pasan a ser coordenadas.
+La trigonometría se desarrolló en varias tradiciones ligadas a la astronomía. Las tablas griegas empleaban cuerdas; la tradición india desarrolló tablas de senos, y otras tradiciones ampliaron sus métodos y aplicaciones.
 
-Esta interpretación unifica geometría y trigonometría: el teorema de Pitágoras aplicado al triángulo formado por radio, proyección horizontal y proyección vertical produce directamente `sin²θ+cos²θ=1`.
+La identidad actual conecta esas razones con Pitágoras. Su escritura mediante seno y coseno de cualquier ángulo usa el lenguaje moderno de funciones y coordenadas; no corresponde a una única invención de la época griega.
 
-Con el desarrollo del análisis, la identidad se volvió esencial en ondas, rotaciones, números complejos, series de Fourier y mecánica. Es una de las igualdades básicas que permite simplificar expresiones trigonométricas y demostrar otras identidades.
+El recorrido está documentado en [MacTutor: funciones trigonométricas](https://mathshistory.st-andrews.ac.uk/HistTopics/Trigonometric_functions/). Aquí se distingue la historia de las funciones de la prueba geométrica de la igualdad.

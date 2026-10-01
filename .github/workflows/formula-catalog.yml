@@ -27,7 +27,7 @@ jobs:
       - name: Build formula catalog
         run: node tools/build-formula-catalog.mjs
 
-      - name: Check inventory and Pythagoras mathematics
+      - name: Check inventory and reviewed mathematics
         run: node tools/check-atlas.mjs
 
       - name: Commit catalog changes

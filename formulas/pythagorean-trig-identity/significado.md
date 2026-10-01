@@ -1,11 +1,9 @@
-# Significado
+# Dos coordenadas, una longitud
 
-La identidad pitagórica trigonométrica dice que, para cualquier ángulo `θ`, las componentes seno y coseno forman los catetos de un triángulo rectángulo cuya hipotenusa mide `1` en la circunferencia unidad.
+Un punto de la circunferencia de radio uno tiene coordenadas x = cos θ e y = sin θ. Su distancia al origen satisface x² + y² = 1. Por eso **sin² θ + cos² θ = 1** para todo ángulo real.
 
-Si un punto de la circunferencia unidad tiene coordenadas `(cos θ, sin θ)`, entonces cumple la ecuación del círculo unidad:
+El seno y el coseno son valores con signo, no longitudes siempre positivas. En el segundo cuadrante, x es negativo e y positivo. Al elevarlos al cuadrado, sus contribuciones a la longitud son no negativas.
 
-`cos²(θ)+sin²(θ)=1`.
+Con θ = 30°, sin θ = 1/2 y cos θ = √3/2: sus cuadrados son 1/4 y 3/4. La suma sigue siendo uno.
 
-La identidad expresa una invariancia: aunque el ángulo cambie, la distancia del punto al origen permanece fija. El seno y el coseno cambian, pero la suma de sus cuadrados conserva el valor `1`.
-
-El simulador muestra el radio como hipotenusa, el coseno como proyección horizontal y el seno como altura vertical.
+**Señales** propone apuntar y reconocer componentes; **Explorar** permite arrastrar el punto; **Ondas** conecta la vuelta con las gráficas de seno y coseno.

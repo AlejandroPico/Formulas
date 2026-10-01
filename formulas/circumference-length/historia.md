@@ -1,7 +1,7 @@
-# Historia
+# Del diámetro al número π
 
-La relación entre la longitud de una circunferencia y su diámetro fue conocida desde la Antigüedad mediante aproximaciones de `π`. Civilizaciones antiguas usaron valores aproximados para medir ruedas, terrenos, construcciones y ciclos astronómicos.
+Las culturas antiguas midieron círculos y usaron aproximaciones del cociente entre borde y diámetro. Arquímedes estudió ese cociente mediante polígonos inscritos y circunscritos, que proporcionan cotas por debajo y por encima.
 
-Arquímedes dio una de las aproximaciones clásicas de `π` usando polígonos inscritos y circunscritos. Esa técnica muestra que la circunferencia puede aproximarse por perímetros poligonales cada vez más finos.
+La proporción no depende de una rueda concreta: todos los círculos planos son semejantes. La notación L = 2πr expresa hoy esa propiedad.
 
-La fórmula `L=2πr` resume esa proporción universal: todos los círculos son semejantes, así que su perímetro escala linealmente con el radio.
+El contexto histórico se recoge en [MacTutor: Arquímedes](https://mathshistory.st-andrews.ac.uk/Biographies/Archimedes/). La relación entre diámetro, borde y arcos puede contrastarse en [MathWorld: Circle](https://mathworld.wolfram.com/Circle.html).

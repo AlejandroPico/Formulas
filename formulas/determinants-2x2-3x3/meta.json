@@ -1,1 +1,52 @@
-{"id":"determinants-2x2-3x3","name":"Determinantes 2x2 y 3x3","author":"Algebra lineal clasica","year":-200,"field":"Algebra lineal","level":"Bachillerato","color":"#3b82f6","simulation":"determinants-2x2-3x3","formulaText":["determinante 2x2 por productos cruzados","determinante 3x3 por regla de Sarrus"],"summary":"Calcula determinantes pequenos y visualiza productos positivos y negativos."}
+{
+  "id": "determinants-2x2-3x3",
+  "name": "Determinantes 2x2 y 3x3",
+  "author": "Tradición del álgebra lineal",
+  "year": 1683,
+  "field": "Álgebra lineal",
+  "level": "Bachillerato",
+  "color": "#3b82f6",
+  "simulation": "determinants-2x2-3x3",
+  "formulaText": [
+    "determinante 2x2 por productos cruzados",
+    "determinante 3x3 por regla de Sarrus"
+  ],
+  "summary": "Un determinante mide escala y orientación. Deforma áreas en 2D y volúmenes en 3D, detecta colapsos y comprueba los productos de Sarrus.",
+  "symbolGlossary": {
+    "=": "Igualdad: ambos miembros tienen exactamente el mismo valor.",
+    "+": "Suma los términos indicados.",
+    "−": "Resta el término siguiente o cambia su signo.",
+    "(": "Abre un grupo: calcula su contenido antes de aplicar las operaciones exteriores.",
+    ")": "Cierra el grupo de términos.",
+    ",": "Separa expresiones o condiciones de una misma relación.",
+    "⋯": "Continúa el mismo patrón con los términos intermedios.",
+    "det": "Determinante: factor de escala con signo de una transformación lineal. Su valor absoluto mide área o volumen.",
+    "a": "Entrada en la primera fila y primera columna.",
+    "b": "Entrada en la primera fila y segunda columna.",
+    "structure:msup": "Potencia: el exponente indica la multiplicación repetida de toda la base.",
+    "√": "Raíz cuadrada: devuelve la raíz no negativa de su contenido cuando es real."
+  },
+  "formulaGlossaries": [
+    {
+      "c": "Entrada en la segunda fila y primera columna.",
+      "d": "Entrada en la segunda fila y segunda columna."
+    },
+    {
+      "c": "Entrada en la primera fila y tercera columna.",
+      "d": "Entrada en la segunda fila y primera columna.",
+      "e": "Entrada en la segunda fila y segunda columna; no es el número de Euler.",
+      "f": "Entrada en la segunda fila y tercera columna.",
+      "g": "Entrada en la tercera fila y primera columna.",
+      "h": "Entrada en la tercera fila y segunda columna; no es una constante física.",
+      "i": "Entrada en la tercera fila y tercera columna; no es la unidad imaginaria."
+    }
+  ],
+  "simulatorVersion": 2,
+  "learningPath": [
+    "Comprender las magnitudes",
+    "Comprobar las condiciones",
+    "Explorar la representación",
+    "Resolver retos",
+    "Justificar el resultado"
+  ]
+}

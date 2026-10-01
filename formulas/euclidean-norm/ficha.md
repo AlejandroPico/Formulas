@@ -1,23 +1,15 @@
-# Ficha
+# Norma euclídea de un vector
 
-## Identificacion
+**Objeto** · un vector real con n componentes y ejes ortonormales.
 
-- Nombre: Norma euclidea.
-- Area: Geometria y algebra vectorial.
-- Nivel recomendado: ESO, Bachillerato y universidad inicial.
-- Tipo de formula: magnitud de un vector.
+**Resultado** · número no negativo; solo es cero para el vector cero.
 
-## Formula principal
+**Simetría** · ‖−x‖ = ‖x‖. El signo del vector cambia el sentido, no la longitud.
 
-`||x||_2=sqrt(x1^2+x2^2+...+xn^2)`.
+**Escalado** · ‖kx‖ = |k|‖x‖.
 
-## Interpretacion
+**Normalización** · x/‖x‖ solo existe si ‖x‖ > 0.
 
-Es la distancia desde el origen hasta el punto representado por el vector. En dos dimensiones se interpreta como una hipotenusa.
+**Simulación** · 2D y 3D muestran coordenadas reales y una proyección de pantalla. Girar la escena modifica la vista, no las componentes.
 
-## Errores habituales
-
-- Olvidar la raiz cuadrada.
-- Sumar componentes sin elevar al cuadrado.
-- Confundir norma con vector normal.
-- No distinguir entre norma euclidea y otras normas como `L1` o `Linf`.
+**Control** · para un solo componente no nulo, la norma es su valor absoluto.

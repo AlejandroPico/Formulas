@@ -1,21 +1,15 @@
-# Ficha
+# Longitud de una circunferencia
 
-## Identificación
+**Entrada** · r ≥ 0 o d ≥ 0, en una misma unidad de longitud.
 
-- Nombre: Longitud de una circunferencia.
-- Área: geometría plana.
-- Fórmula: `L=2πr`.
+**Salida** · L = 2πr = πd. Un círculo reducido a un punto tiene L = 0.
 
-## Variables
+**Arco** · ℓ = rθ si θ está en radianes. En grados, convierte θ a θπ/180 antes de multiplicar.
 
-- `L`: longitud o perímetro de la circunferencia.
-- `r`: radio.
-- `d`: diámetro.
+**Escala** · al multiplicar r por k ≥ 0, L se multiplica por k.
 
-## Lectura del simulador
+**Modelo de rueda** · avance = vueltas × L únicamente sin deslizamiento, con radio constante y sobre una recta.
 
-El círculo representa una rueda y la línea coloreada representa su borde desplegado. Al aumentar el radio, la longitud desplegada crece proporcionalmente.
+**Control mental** · el borde mide un poco más de tres diámetros. Una cifra menor que el diámetro merece una revisión.
 
-## Unidades
-
-Si el radio está en metros, la longitud también está en metros. No se usan unidades cuadradas porque se mide borde, no superficie.
+**Conexiones** · área circular, radianes y movimiento de rotación.

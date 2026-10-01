@@ -1,16 +1,15 @@
-# Ficha
+# Fórmula cuadrática
 
-## Variables
+**Entrada** · coeficientes reales a, b y c, con a ≠ 0.
 
-- a: coeficiente cuadrático, distinto de cero.
-- b: coeficiente lineal.
-- c: término independiente.
-- Delta: discriminante.
-- x: incógnita o raíz de la ecuación.
+**Discriminante** · Δ = b²−4ac; mide el tipo de raíces, no su valor por sí solo.
 
-## Datos técnicos
+**Solución** · las dos ramas de (−b±√Δ)/(2a), coincidentes si Δ = 0.
 
-- Tipo de resultado: fórmula algebraica de resolución.
-- Dominio básico: álgebra elemental.
-- Condición esencial: a debe ser distinto de cero.
-- Interpretación geométrica: cortes de una parábola con el eje horizontal.
+**Vértice** · xᵥ = −b/(2a); mínimo si a > 0, máximo si a < 0.
+
+**Cambio de tipo** · a = 0 da una ecuación lineal o constante. No se reemplaza silenciosamente por un número pequeño.
+
+**Precisión** · el algoritmo usa una forma estable para las raíces reales y evita restar números casi iguales cuando puede.
+
+**Control** · sustituir cada raíz y comprobar un residuo cercano a cero.

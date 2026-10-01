@@ -1,15 +1,9 @@
-# Derivación
+# Aplicar Pitágoras sin perder los signos
 
-En la circunferencia unidad, el punto asociado al ángulo `θ` tiene coordenadas:
+En el primer cuadrante, un radio de longitud uno forma un triángulo rectángulo con catetos cos θ y sin θ. Pitágoras da cos² θ + sin² θ = 1².
 
-`x=cos θ`, `y=sin θ`.
+En otros cuadrantes, las coordenadas pueden ser negativas. Las longitudes de los catetos son |cos θ| y |sin θ|; sus cuadrados coinciden con los cuadrados de las coordenadas. Así la misma igualdad vale en toda la vuelta.
 
-Todo punto de la circunferencia unidad cumple:
+Sustituir x = cos θ e y = sin θ en x² + y² = 1 produce la segunda lectura de la identidad.
 
-`x²+y²=1`.
-
-Sustituyendo las coordenadas trigonométricas:
-
-`cos²θ+sin²θ=1`.
-
-También puede verse como el teorema de Pitágoras aplicado al triángulo rectángulo cuyo radio es la hipotenusa. Como el radio vale `1`, la suma de los cuadrados de los catetos debe valer `1`.
+La notación sin² θ significa **(sin θ)²**, no sin(θ²). Si despejas sin θ desde su cuadrado, necesitas el cuadrante para escoger el signo.

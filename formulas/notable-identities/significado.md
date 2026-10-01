@@ -1,7 +1,9 @@
-# Significado
+# Multiplicar sin perder una pieza
 
-Las identidades notables son igualdades algebraicas que aparecen una y otra vez al multiplicar binomios. Permiten reconocer de un vistazo el cuadrado de una suma, el cuadrado de una diferencia o una suma por diferencia.
+Las tres identidades son patrones de multiplicación. El cuadrado de una suma tiene cuatro productos: a², ab, ba y b². Como ab = ba, los dos del centro se juntan en 2ab.
 
-La lectura geométrica de `(a+b)^2` es especialmente clara: un cuadrado de lado `a+b` se descompone en cuatro piezas, `a²`, `ab`, `ab` y `b²`. Por eso el término central es `2ab`.
+En el cuadrado de una diferencia, los productos cruzados son negativos, pero (−b)(−b) sigue siendo b². En suma por diferencia, −ab y +ab se cancelan y queda a² − b².
 
-El simulador usa esa idea: al variar `a` y `b`, el área total sigue coincidiendo con la suma de las piezas.
+Con a = 3 y b = 2, (a+b)² = 25, (a−b)² = 1 y (a+b)(a−b) = 5. Son **tres productos distintos**, no tres formas de calcular el mismo valor.
+
+Las igualdades valen para números reales, incluidos negativos. Las piezas geométricas usan longitudes no negativas: el dibujo con áreas no debe interpretarse como una longitud negativa.

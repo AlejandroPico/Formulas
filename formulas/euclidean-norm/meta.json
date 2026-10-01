@@ -1,1 +1,64 @@
-{"id":"euclidean-norm","name":"Norma euclidea","author":"Geometria euclidea","year":-300,"field":"Geometria y algebra vectorial","level":"ESO/Bachillerato","color":"#8b5cf6","simulation":"euclidean-norm","formulaText":["longitud de un vector mediante la raiz de la suma de cuadrados"],"summary":"Visualiza la longitud euclidea como hipotenusa de un triangulo rectangulo."}
+{
+  "id": "euclidean-norm",
+  "name": "Norma euclídea",
+  "author": "Geometria euclidea",
+  "year": -300,
+  "field": "Geometría y álgebra vectorial",
+  "level": "ESO/Bachillerato",
+  "color": "#8b5cf6",
+  "simulation": "euclidean-norm",
+  "formulaText": [
+    "longitud de un vector mediante la raiz de la suma de cuadrados"
+  ],
+  "summary": "La longitud de un vector combina direcciones perpendiculares. Navega en 2D y 3D, gira la escena y separa longitud y dirección.",
+  "symbolGlossary": {
+    "=": "Igualdad: ambos miembros tienen exactamente el mismo valor.",
+    "+": "Suma los términos indicados.",
+    "−": "Resta el término siguiente o cambia su signo.",
+    "(": "Abre un grupo: calcula su contenido antes de aplicar las operaciones exteriores.",
+    ")": "Cierra el grupo de términos.",
+    ",": "Separa expresiones o condiciones de una misma relación.",
+    "⋯": "Continúa el mismo patrón con los términos intermedios.",
+    "bold:x": "Vector x completo: sus componentes están expresadas en ejes perpendiculares.",
+    "bold:u": "Vector unitario u: conserva la dirección de x y tiene norma uno.",
+    "bold:0": "Vector cero: todas sus componentes son cero. No puede normalizarse.",
+    "x": "Componente de x; el subíndice identifica el eje.",
+    "u": "Vector unitario, que describe una dirección sin conservar la longitud original.",
+    "n": "Número de componentes del vector; entero positivo.",
+    "·": "Producto escalar de x consigo mismo: suma los cuadrados de sus componentes.",
+    "‖": "Barras de norma: calculan la longitud del vector, no su dirección.",
+    "∥": "Barras de norma: longitud euclídea del vector.",
+    "≠": "Distinto de: la normalización exige un vector no nulo.",
+    "^2": "Cuadrado de una componente del vector; el signo desaparece al multiplicarla por sí misma.",
+    "structure:msqrt": "Raíz de la suma de cuadrados: devuelve la longitud no negativa del vector.",
+    "structure:mfrac": "Normalización: divide cada componente de x por la longitud de x. Solo está definida para un vector no nulo.",
+    "structure:msub": "El índice de x identifica una componente; el 2 junto a las barras identifica el tipo de norma.",
+    "_0": "Vector cero: no tiene una dirección que normalizar.",
+    "structure:msup": "Potencia: el exponente indica la multiplicación repetida de toda la base.",
+    "√": "Raíz cuadrada: devuelve la raíz no negativa de su contenido cuando es real.",
+    "⋅": "Producto escalar de x consigo mismo: suma los cuadrados de sus componentes.",
+    "0": "Vector cero: todas sus componentes son cero; su norma es cero y no tiene dirección unitaria."
+  },
+  "formulaGlossaries": [
+    {
+      "_2": "Subíndice 2 junto a las barras: norma de tipo dos, la norma euclídea.",
+      "_1": "Primera componente del vector.",
+      "_n": "Última componente del vector.",
+      "_x:2": "Segunda componente del vector x; no es el tipo de norma."
+    },
+    {
+      "_2": "Tipo de norma: raíz de la suma de cuadrados."
+    },
+    {
+      "_2": "Tipo de norma euclídea."
+    }
+  ],
+  "simulatorVersion": 2,
+  "learningPath": [
+    "Comprender las magnitudes",
+    "Comprobar las condiciones",
+    "Explorar la representación",
+    "Resolver retos",
+    "Justificar el resultado"
+  ]
+}

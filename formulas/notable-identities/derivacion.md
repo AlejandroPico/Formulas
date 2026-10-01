@@ -1,13 +1,11 @@
-# Derivación
+# La distributiva hace todo el trabajo
 
-La derivación usa la propiedad distributiva.
+**Suma** · (a+b)(a+b) = a·a + a·b + b·a + b·b = a² + 2ab + b².
 
-`(a+b)^2=(a+b)(a+b)=a(a+b)+b(a+b)=a²+ab+ab+b²=a²+2ab+b²`.
+**Diferencia** · (a−b)(a−b) = a² − ab − ab + b² = a² − 2ab + b².
 
-Para la diferencia:
+**Conjugados** · (a+b)(a−b) = a² − ab + ab − b² = a² − b².
 
-`(a-b)^2=(a-b)(a-b)=a²-ab-ab+b²=a²-2ab+b²`.
+En Piezas, un cuadrado de lado a+b contiene dos cuadrados y dos rectángulos. Para a−b, con a ≥ b ≥ 0, quitar dos franjas de área ab quita dos veces su intersección: sumar b² la repone una vez.
 
-Para suma por diferencia:
-
-`(a+b)(a-b)=a²-ab+ab-b²=a²-b²`.
+La demostración algebraica sigue siendo válida cuando a o b son negativos, aunque esa construcción de longitudes ya no sea un dibujo literal.

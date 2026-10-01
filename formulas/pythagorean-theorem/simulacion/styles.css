@@ -5,10 +5,11 @@
   padding: 14px 22px 18px; color: var(--text); background: var(--panel-solid);
 }
 .pyth-game .pyth-heading { min-width: 0; }
-.pyth-game .pyth-heading nav { display: flex; gap: 20px; }
+.pyth-game .pyth-mode-caption { margin:0 0 6px; font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); }
+.pyth-game .pyth-heading nav { display: grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap: 0; }
 .pyth-game button { border: 0; border-radius: 0 !important; background: transparent; color: var(--text); padding: 9px 12px; font: inherit; font-size: .86rem; font-weight: 500; }
-.pyth-game .pyth-heading button { padding: 6px 0; border-bottom: 2px solid transparent; }
-.pyth-game .pyth-heading button.active { border-bottom-color: var(--text); }
+.pyth-game .pyth-heading button { min-height:40px; padding:8px 4px; border-bottom:1px solid var(--line); font-size:.9rem; }
+.pyth-game .pyth-heading button.active { border-bottom:3px solid var(--text); font-weight:700; background:color-mix(in srgb,var(--text) 5%,transparent); }
 .pyth-game .pyth-mission > span { display: block; color: var(--muted); letter-spacing: .08em; font-size: .7rem; margin-top: 12px; }
 .pyth-game h3 { margin: 4px 0; font-size: clamp(1.2rem, 2vw, 1.65rem); font-weight: 550; letter-spacing: -.025em; }
 .pyth-game .pyth-mission p { margin: 4px 0 0; font-size: .86rem; line-height: 1.6; max-width: 760px; }

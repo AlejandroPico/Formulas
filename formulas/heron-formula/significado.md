@@ -1,15 +1,9 @@
-# Significado
+# Tres lados bastan, si pueden cerrarse
 
-La fórmula de Herón permite calcular el área de un triángulo conociendo solo sus tres lados `a`, `b` y `c`.
+La fórmula de Herón calcula el área sin medir la altura ni los ángulos. Primero obtiene s = (a+b+c)/2 y después la raíz de s(s−a)(s−b)(s−c).
 
-Primero se calcula el semiperímetro:
+Los lados deben ser positivos y el mayor debe ser menor que la suma de los otros dos. Si es igual, la figura es degenerada y tiene área cero. Si es mayor, **no existe un triángulo con esos lados**: no hay un área que obtener forzando una raíz a cero.
 
-`s=(a+b+c)/2`.
+Con lados 3, 4 y 5, s = 6 y A = √(6·3·2·1) = 6. Funciona también para triángulos que no son rectángulos.
 
-Después el área se obtiene mediante:
-
-`A=√[s(s-a)(s-b)(s-c)]`.
-
-La fórmula es útil porque no exige conocer la altura ni ningún ángulo. Toda la información necesaria está codificada en los lados, siempre que cumplan la desigualdad triangular.
-
-El simulador muestra un triángulo variable con base fija y dos lados ajustables. A medida que cambian los lados, cambian el semiperímetro y el radicando de Herón.
+**Parcelas** plantea medidas y validez; **Explorar** permite cambiar los tres lados; **Altura** permite arrastrar un vértice y comparar Herón con base×altura/2.

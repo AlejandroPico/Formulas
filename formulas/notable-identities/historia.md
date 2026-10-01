@@ -1,5 +1,7 @@
-# Historia
+# Geometría y lenguaje algebraico
 
-Las identidades notables no proceden de un único autor. Nacen de la tradición algebraica y geométrica antigua, donde muchas igualdades se justificaban mediante áreas.
+El libro II de los Elementos de Euclides contiene relaciones geométricas entre cuadrados y rectángulos que hoy podemos escribir con álgebra. Eso no significa que Euclides usara letras y polinomios con el sentido moderno.
 
-Con el álgebra simbólica moderna, estos razonamientos pasaron a escribirse como reglas compactas. Hoy son una herramienta básica de ESO y Bachillerato porque conectan multiplicación, factorización, ecuaciones cuadráticas y manipulación de polinomios.
+La escritura simbólica compacta se desarrolló mucho después. La conexión entre áreas y distributividad ayuda a entender por qué las identidades son exactas y por qué no se debe omitir el término cruzado.
+
+Puede verse una de las relaciones geométricas en [Euclides, libro II, proposición 4](https://mathcs.clarku.edu/~djoyce/elements/bookII/propII4.html). No hay una fecha única de creación para las tres reglas actuales.

@@ -16,7 +16,7 @@ export default function mountPythagorean({ root, canvas, controls, readout }) {
   canvas.setAttribute('aria-label', 'Mapa del puente. Usa las flechas para ajustar la longitud y Enter para construir; también puedes usar los controles inferiores.');
   const heading = document.createElement('div');
   heading.className = 'pyth-heading';
-  heading.innerHTML = `<nav aria-label="Modos del simulador"><button data-mode="bridges">Puentes</button><button data-mode="explore">Explorar</button><button data-mode="areas">Áreas</button></nav><div class="pyth-mission"><span data-progress></span><h3 data-title></h3><p data-story></p></div>`;
+  heading.innerHTML = `<p class="pyth-mode-caption">Tres formas de jugar y aprender</p><nav aria-label="Modos del simulador"><button data-mode="bridges">Puentes</button><button data-mode="explore">Explorar</button><button data-mode="areas">Áreas</button></nav><div class="pyth-mission"><span data-progress></span><h3 data-title></h3><p data-story></p></div>`;
   root.prepend(heading);
 
   function renderControls() {

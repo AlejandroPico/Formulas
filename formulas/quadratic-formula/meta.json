@@ -6,5 +6,47 @@
   "field": "Álgebra",
   "level": "ESO",
   "color": "#7b61ff",
-  "simulation": "quadratic"
+  "simulation": "quadratic-formula",
+  "summary": "Resuelve raíces y distingue dos cortes, una raíz doble y soluciones complejas. Mueve una parábola y observa qué sucede cuando deja de ser cuadrática.",
+  "symbolGlossary": {
+    "0": "Cero: valor objetivo de la ecuación; una raíz hace que el polinomio se anule.",
+    "4": "Cuatro: factor del término 4ac en el discriminante.",
+    "=": "Igualdad: ambos miembros tienen exactamente el mismo valor.",
+    "+": "Suma los términos indicados.",
+    "−": "Resta el término siguiente o cambia su signo.",
+    "(": "Abre un grupo: calcula su contenido antes de aplicar las operaciones exteriores.",
+    ")": "Cierra el grupo de términos.",
+    ",": "Separa expresiones o condiciones de una misma relación.",
+    "⋯": "Continúa el mismo patrón con los términos intermedios.",
+    "a": "Coeficiente de x². Debe ser distinto de cero para que la ecuación sea cuadrática.",
+    "b": "Coeficiente del término lineal x.",
+    "c": "Término independiente; valor de la función en x = 0.",
+    "x": "Incógnita: las soluciones hacen que ax²+bx+c sea cero.",
+    "Δ": "Discriminante b²−4ac: su signo distingue dos raíces reales, una raíz real doble o dos raíces complejas conjugadas.",
+    "±": "Más y menos: toma las dos ramas, una con +√Δ y otra con −√Δ.",
+    "≠": "Distinto de: a = 0 produce una ecuación lineal o constante, no una cuadrática.",
+    "v": "Subíndice v: identifica la coordenada horizontal del vértice.",
+    "^2": "Cuadrado de la base: x² es el término cuadrático; b² participa en el discriminante.",
+    "structure:msqrt": "Raíz del discriminante: real si Δ ≥ 0 y compleja si Δ < 0. No se fuerza a cero cuando es negativo.",
+    "structure:mfrac": "Divide todo el numerador entre 2a. La fórmula exige a ≠ 0.",
+    "structure:msup": "Potencia: el exponente indica la multiplicación repetida de toda la base.",
+    "√": "Raíz cuadrada: devuelve la raíz no negativa de su contenido cuando es real."
+  },
+  "formulaGlossaries": [
+    {},
+    {},
+    {},
+    {
+      "x": "Coordenada horizontal del vértice de la parábola, no necesariamente una raíz.",
+      "_v": "Vértice: punto de máximo o mínimo de la parábola."
+    }
+  ],
+  "simulatorVersion": 2,
+  "learningPath": [
+    "Comprender las magnitudes",
+    "Comprobar las condiciones",
+    "Explorar la representación",
+    "Resolver retos",
+    "Justificar el resultado"
+  ]
 }
