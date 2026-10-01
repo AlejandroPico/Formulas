@@ -1,7 +1,9 @@
 # Derivación
 
-La derivación puede obtenerse proyectando un lado del triángulo sobre otro.
+Sitúa C en el origen, un extremo en (a,0) y el otro en (b cos C,b sin C). La distancia c cumple:
 
-Al descomponer un lado en una componente paralela y otra perpendicular, la distancia restante se calcula mediante una relación pitagórica sobre esas componentes.
+c² = (a−b cos C)² + (b sin C)².
 
-La componente proyectada introduce el coseno del ángulo comprendido, que es el término que diferencia esta ley del caso rectángulo.
+Desarrolla: a²−2ab cos C+b²cos²C+b²sin²C. Como cos²C+sin²C = 1, los dos últimos términos suman b². Queda c² = a²+b²−2ab cos C.
+
+La construcción sigue funcionando si cos C es negativo: la coordenada horizontal cambia de signo, pero la distancia usa su cuadrado. Si conoces los tres lados, despeja cos C = (a²+b²−c²)/(2ab) y comprueba antes que forman un triángulo.

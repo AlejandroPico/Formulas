@@ -50,6 +50,8 @@ Las diez siguientes revisiones añaden 40 misiones, exploración libre y demostr
 
 ## Probar y previsualizar
 
+La tercera tanda añade quince revisiones completas y 60 misiones de trigonometría, álgebra, cálculo y mecánica. Incluye raíces complejas, comparación del péndulo no lineal, oscilaciones con reproducción y pausa, y una placa 3D de tensión plana. Consulta [la tercera revisión](docs/tercera-revision.md). Los cálculos se comprueban con `node tools/check-discovery-labs.mjs`; las fichas y los gestos con `node tools/check-discovery-browser.mjs` y `node tools/check-discovery-inputs.mjs`.
+
 ```sh
 node tools/serve.mjs
 ```

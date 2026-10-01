@@ -1,7 +1,7 @@
 # Significado
 
-La fórmula del binomio de Newton generaliza las identidades notables. En vez de calcular cada potencia de `(a+b)` desde cero, ofrece una regla para cualquier exponente natural `n`.
+Multiplicar n copias de (a+b) equivale a elegir a o b en cada posición. Si b se elige k veces, aparece aⁿ⁻ᵏbᵏ. El número de elecciones que producen ese término es C(n,k).
 
-Cada término de la expansión tiene tres partes: un coeficiente combinatorio, una potencia decreciente de `a` y una potencia creciente de `b`. El coeficiente `binom(n,k)` cuenta cuántas veces aparece esa combinación al multiplicar los factores.
+En (2+1)⁴, los términos son 16, 32, 24, 8 y 1; suman 81. Si b es negativo, algunas contribuciones cambian de signo y pueden cancelarse. Las barras del simulador se sitúan a ambos lados del cero.
 
-El simulador representa esas contribuciones como términos de una suma.
+Para n = 0 se obtiene uno. En la evaluación de términos, una potencia de exponente cero actúa como factor uno, incluso si su base es cero: es el convenio de la identidad polinómica.

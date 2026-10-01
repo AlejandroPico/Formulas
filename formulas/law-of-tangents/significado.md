@@ -1,11 +1,7 @@
 # Significado
 
-La ley de tangentes relaciona dos lados de un triángulo con los ángulos opuestos a esos lados.
+La diferencia de dos lados se normaliza dividiéndola entre su suma. Así (a−b)/(a+b) queda entre −1 y 1. Su signo señala qué lado es mayor, y coincide con el signo de la semidiferencia angular.
 
-Su forma habitual es:
+El lado a es opuesto a A, y b a B. Cuando a = b, también A = B: la razón vale cero y la fórmula sigue funcionando. Hemos elegido esta orientación del cociente para conservar ese caso.
 
-`(a-b)/(a+b)=tan((A-B)/2)/tan((A+B)/2)`.
-
-La identidad permite comparar cuánto difieren dos lados con cuánto difieren sus ángulos opuestos. Si los lados son iguales, la razón izquierda vale cero y también lo hace la semidiferencia angular.
-
-El simulador fija un ángulo incluido y modifica los lados `a` y `b`. A partir de ellos calcula el tercer lado y los ángulos opuestos, mostrando que ambas razones coinciden.
+Con a = 5 y b = 3, la razón izquierda es 0,25. La razón de tangentes de los semiángulos devuelve lo mismo, sea cual sea el tercer ángulo válido del triángulo.

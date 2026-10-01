@@ -4,15 +4,15 @@ import { drawLab } from './learning-draw.js';
 const clamp=(x,a,b)=>Math.max(a,Math.min(b,x));
 const escape=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 
-export function mountLab(id,{root,canvas,controls,readout}) {
-  const config=LABS[id]; if(!config)throw new Error('Laboratorio desconocido.');
+export function mountLab(id,{root,canvas,controls,readout},extension={}) {
+  const config=extension.config||LABS[id],painter=extension.draw||drawLab; if(!config)throw new Error('Laboratorio desconocido.');
   root.classList.add('learning-lab','sim-wide','calc-wide');
   root.querySelector('.lab-heading')?.remove();
   const initial=()=>({...structuredClone(config.defaults),...structuredClone(config.missions[0].params)});
   const state=root.__labState ||= {id,mode:0,level:0,score:0,attempts:0,solved:false,hint:false,answer:'',feedback:'',choice:'',params:initial(),exploration:structuredClone(config.defaults),yaw:.7,pitch:.55};
   state.active=true;
   const abort=new AbortController(),on=(target,event,handler)=>target.addEventListener(event,handler,{signal:abort.signal});
-  let alive=true,frame=0,geometry={},drag=null,phase=1;
+  let alive=true,frame=0,geometry={},drag=null,phase=1,running=false,lastTime=0,lastReadout=0;
   const ctx=canvas.getContext('2d');
   canvas.tabIndex=0;canvas.setAttribute('role','img');
   canvas.setAttribute('aria-label',`${config.title}. Usa los controles para cambiar valores. En las vistas 3D también puedes girar con las flechas del teclado.`);
@@ -21,6 +21,7 @@ export function mountLab(id,{root,canvas,controls,readout}) {
   root.prepend(heading);
   const current=()=>config.missions[state.level];
   const params=()=>state.mode===0?state.params:state.exploration;
+  const effectiveParams=()=>state.mode===2&&config.demoParams?config.demoParams(params()):params();
   function render() {
     const m=current();
     heading.querySelectorAll('[data-lab-mode]').forEach(button=>{const active=+button.dataset.labMode===state.mode;button.classList.toggle('active',active);button.setAttribute('aria-pressed',String(active));});
@@ -31,7 +32,7 @@ export function mountLab(id,{root,canvas,controls,readout}) {
       const fields=m.kind==='choice'?`<fieldset class="lab-choices"><legend>Elige una respuesta</legend>${m.choices.map(([value,label])=>`<label><input type="radio" name="choice" value="${value}" ${state.choice===value?'checked':''} ${state.solved?'disabled':''} required>${escape(label)}</label>`).join('')}</fieldset>`:`<label class="lab-answer-label">${m.multiple?'Dos raíces, separadas por ;':`Tu respuesta${m.unit?' ('+m.unit+')':''}`}<input class="lab-answer" name="answer" type="text" inputmode="${m.multiple?'text':'decimal'}" value="${escape(state.answer)}" placeholder="${m.multiple?'2 ; 3':'Escribe un número'}" autocomplete="off" ${state.solved?'disabled':''} required><small>${m.multiple?'Se acepta cualquier orden.':'Puedes usar coma decimal y redondear a dos decimales.'}</small></label>`;
       controls.innerHTML=`<form class="lab-answer-form">${fields}<button class="lab-primary" type="submit" ${state.solved?'disabled':''}>Comprobar</button></form>${actions()}`;
     } else {
-      controls.innerHTML=controlMarkup()+ (state.mode===0?`<button class="lab-primary" data-lab-check ${state.solved?'disabled':''}>Comprobar diseño</button>${actions()}`:`<div class="lab-free-actions"><button data-lab-reset>Restablecer</button>${state.mode===2&&!['notable-identities','heron-formula','quadratic-formula'].includes(id)?'<button data-lab-animate>Ver el cambio</button>':''}</div>`);
+      controls.innerHTML=controlMarkup()+ (state.mode===0?`<button class="lab-primary" data-lab-check ${state.solved?'disabled':''}>Comprobar diseño</button>${actions()}`:`<div class="lab-free-actions"><button data-lab-reset>Restablecer</button>${config.timeline?'<button data-lab-play aria-pressed="false">Reproducir</button>':state.mode===2&&config.animate!==false&&!['notable-identities','heron-formula','quadratic-formula'].includes(id)?'<button data-lab-animate>Ver el cambio</button>':''}</div>`);
     }
     updateReadout();draw();
   }
@@ -54,7 +55,7 @@ export function mountLab(id,{root,canvas,controls,readout}) {
     if(state.mode===0) {
       readout.innerHTML=`<strong>${escape(state.solved?'Misión completada':state.feedback||'Piensa, prueba y comprueba tu respuesta.')}</strong>${state.solved?`<span>${escape(current().explanation)}</span>`:state.hint?`<span>${escape(current().hint)}</span>`:''}`;
     } else {
-      try {readout.textContent=config.read(params());}catch(error){readout.textContent=error.message;}
+      try {readout.textContent=(state.mode===2&&config.demoRead?config.demoRead:config.read)(effectiveParams());}catch(error){readout.textContent=error.message;}
     }
     for(const output of controls.querySelectorAll('[data-lab-output]')){const spec=specs().find(s=>s.key===output.dataset.labOutput);output.textContent=fmt(params()[output.dataset.labOutput])+(spec?.unit?' '+spec.unit:'');}
   }
@@ -73,6 +74,22 @@ export function mountLab(id,{root,canvas,controls,readout}) {
     const tick=now=>{if(!alive)return;phase=clamp((now-start)/800,0,1);draw();if(phase<1)frame=requestAnimationFrame(tick);else frame=0;};
     frame=requestAnimationFrame(tick);
   }
+  function pause() {
+    running=false;cancelAnimationFrame(frame);frame=0;
+    const button=controls.querySelector('[data-lab-play]');if(button){button.textContent='Reproducir';button.setAttribute('aria-pressed','false');}
+  }
+  function play() {
+    if(running){pause();return;}
+    cancelAnimationFrame(frame);running=true;lastTime=performance.now();lastReadout=0;
+    if(params().t>=20)params().t=0;
+    const button=controls.querySelector('[data-lab-play]');button.textContent='Pausar';button.setAttribute('aria-pressed','true');
+    const tick=now=>{
+      if(!alive||!running)return;
+      const p=params();p.t=Math.min(20,p.t+Math.min(.1,(now-lastTime)/1000));lastTime=now;
+      const timeInput=controls.querySelector('[data-lab-key="t"]');if(timeInput)timeInput.value=p.t;
+      draw();if(now-lastReadout>100){updateReadout();lastReadout=now;}if(p.t>=20){pause();updateReadout();}else frame=requestAnimationFrame(tick);
+    };frame=requestAnimationFrame(tick);
+  }
   function draw() {
     if(!alive)return;
     const box=canvas.getBoundingClientRect();if(box.width<1||box.height<1)return;
@@ -81,13 +98,13 @@ export function mountLab(id,{root,canvas,controls,readout}) {
     ctx.setTransform(dpr,0,0,dpr,0,0);
     const style=getComputedStyle(root),val=(key,fallback)=>style.getPropertyValue(key).trim()||fallback;
     try {
-      const drawing={...params()};
+      const drawing={...effectiveParams()};
       if(frame&&state.mode===2){
         if(id==='pythagorean-trig-identity')drawing.theta=(drawing.theta+360*phase)%360;
         if(id==='geometric-progression-sum')drawing.n=Math.max(1,Math.round(drawing.n*phase));
         if(id==='circumference-length')drawing.n=Math.max(6,Math.round(drawing.n*phase));
       }
-      geometry=drawLab(ctx,box.width,box.height,id,drawing,{ink:val('--text','#17232c'),muted:val('--muted','#66747e'),line:val('--line','#b4c2c9'),background:val('--panel-solid','#faf9f5'),accent:config.accent,hide:state.mode===0&&!state.solved,mode:state.mode,yaw:state.yaw+(frame&&state.mode===2?Math.PI*2*phase:0),pitch:state.pitch,phase,solved:state.solved,frozen:drag?.layout});
+      geometry=painter(ctx,box.width,box.height,id,drawing,{ink:val('--text','#17232c'),muted:val('--muted','#66747e'),line:val('--line','#b4c2c9'),background:val('--panel-solid','#faf9f5'),accent:config.accent,hide:state.mode===0&&!state.solved,mode:state.mode,yaw:state.yaw+(frame&&state.mode===2&&!config.timeline?Math.PI*2*phase:0),pitch:state.pitch,phase,solved:state.solved,frozen:drag?.layout});
     } catch(error) {geometry={};readout.textContent=error.message;}
   }
   function change(values,fromPointer=false) {
@@ -113,11 +130,12 @@ export function mountLab(id,{root,canvas,controls,readout}) {
   on(root,'submit',event=>{if(event.target.matches('.lab-answer-form')){event.preventDefault();check();}});
   on(root,'click',event=>{
     const target=event.target.closest('button');if(!target)return;
-    if(target.dataset.labMode!==undefined){state.mode=+target.dataset.labMode;phase=1;cancelAnimationFrame(frame);frame=0;render();}
+    if(target.dataset.labMode!==undefined){pause();state.mode=+target.dataset.labMode;phase=1;render();}
     else if(target.hasAttribute('data-lab-check'))check();
     else if(target.hasAttribute('data-lab-hint')){state.hint=true;updateReadout();}
     else if(target.hasAttribute('data-lab-next')&&state.solved){const next=(state.level+1)%config.missions.length;if(next===0)state.score=0;Object.assign(state,{level:next,solved:false,hint:false,answer:'',choice:'',attempts:0,feedback:'',params:{...structuredClone(config.defaults),...structuredClone(config.missions[next].params)}});render();}
-    else if(target.hasAttribute('data-lab-reset')){state.exploration=structuredClone(config.defaults);state.yaw=.7;state.pitch=.55;phase=1;render();}
+    else if(target.hasAttribute('data-lab-reset')){pause();state.exploration=structuredClone(config.defaults);state.yaw=.7;state.pitch=.55;phase=1;render();}
+    else if(target.hasAttribute('data-lab-play'))play();
     else if(target.hasAttribute('data-lab-animate'))animate();
   });
   on(canvas,'pointerdown',event=>{
@@ -137,6 +155,7 @@ export function mountLab(id,{root,canvas,controls,readout}) {
     else {const spec=specs().find(s=>!s.options&&(state.mode!==0||current().editable?.includes(s.key)));if(spec)change({[spec.key]:clamp(params()[spec.key]+sign*spec.step,spec.min,spec.max)},true);}
   });
   const resize=new ResizeObserver(draw);resize.observe(canvas);
+  on(document,'visibilitychange',()=>{if(document.hidden)pause();});
   const theme=new MutationObserver(draw);theme.observe(document.documentElement,{attributes:true,attributeFilter:['data-theme','class','style']});theme.observe(document.body,{attributes:true,attributeFilter:['data-theme','class','style']});
   render();
   return ()=>{alive=false;state.active=false;abort.abort();resize.disconnect();theme.disconnect();cancelAnimationFrame(frame);drag=null;};

@@ -1,7 +1,7 @@
 # Historia
 
-La ley de tangentes pertenece a la trigonometría clásica de los triángulos. Fue útil antes de las calculadoras porque permite resolver relaciones entre lados y ángulos mediante razones trigonométricas manejables.
+La ley de tangentes pertenece al repertorio clásico para resolver triángulos. Puede obtenerse desde la ley de senos y las identidades de suma y diferencia; no hace falta introducir una nueva regla geométrica.
 
-Aparece junto a la ley de senos y la ley de cosenos como parte del conjunto básico de herramientas para resolver triángulos. Aunque hoy se usa menos que esas dos, sigue siendo una identidad elegante para comparar pares de lados y pares de ángulos.
+La ficha pone el acento en esa conexión y en los signos. También deja visible el caso isósceles, que una versión recíproca del cociente excluiría al dividir entre la diferencia de lados.
 
-Tiene aplicaciones históricas en navegación, astronomía, agrimensura y construcción geométrica.
+Referencia matemática: [ley de tangentes, MathWorld](https://mathworld.wolfram.com/LawofTangents.html).

@@ -1,7 +1,7 @@
 # Historia
 
-La ley de los senos pertenece al desarrollo clásico de la trigonometría. Sus raíces aparecen en astronomía, geometría de cuerdas y métodos para resolver triángulos.
+La geometría de cuerdas de la astronomía antigua y el desarrollo posterior del seno prepararon la trigonometría de triángulos. La notación actual reúne esa tradición en proporciones fáciles de usar.
 
-Durante siglos fue una herramienta esencial para navegación, medición indirecta de distancias y astronomía posicional.
+La conexión con la circunferencia aporta una lectura geométrica: cada lado es una cuerda. En esta ficha esa idea acompaña a la actividad de balizas y a la comprobación del ángulo suplementario.
 
-Su forma moderna se integra de manera natural con la geometría del círculo circunscrito.
+Fuentes: [historia de las funciones trigonométricas, MacTutor](https://mathshistory.st-andrews.ac.uk/HistTopics/Trigonometric_functions/) y [ley de senos, MathWorld](https://mathworld.wolfram.com/LawofSines.html).

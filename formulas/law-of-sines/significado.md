@@ -1,7 +1,7 @@
 # Significado
 
-La ley de los senos relaciona cada lado de un triángulo con el seno del ángulo opuesto.
+Cada lado comparte una proporción con el seno de su ángulo opuesto. No se compara a con sin B: el emparejamiento correcto es a con sin A. La cantidad común es 2R, el diámetro de la circunferencia que pasa por los vértices.
 
-Su idea central es que los tres cocientes lado dividido por seno del ángulo opuesto son iguales. Esa cantidad común también se relaciona con el radio de la circunferencia circunscrita.
+Si A = 30°, B = 90° y a = 4, entonces b = 4·1/0,5 = 8. El tercer ángulo es 60° y el lado c se obtiene de la misma proporción.
 
-Es especialmente útil cuando se conocen dos ángulos y un lado, o dos lados y un ángulo no comprendido.
+Hay una dificultad importante: sin B = sin(180°−B). Con a, b y A conocidos pueden existir dos triángulos, uno o ninguno. La pestaña Dos rutas muestra las alternativas válidas, sin ocultar el caso ambiguo.

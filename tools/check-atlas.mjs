@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import { readFile, access, readdir } from 'node:fs/promises';
 import { hypotenuse, missingLeg, distance, MISSIONS, solution, accepts } from '../formulas/pythagorean-theorem/simulacion/math.js';
 import './check-learning-labs.mjs';
+import './check-discovery-labs.mjs';
 assert.equal(hypotenuse(3, 4), 5);
 assert.equal(missingLeg(13, 5), 12);
 assert.equal(distance([-2, 1], [4, 9]), 10);

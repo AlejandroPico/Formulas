@@ -1,1 +1,4 @@
-export { default } from "../../../scripts/mechanics-tensor-hooke-plane-stress-sim.js?v=20260705a";
+import {mountLab} from '../../shared/learning-lab.js';
+import {DISCOVERY_LABS} from '../../shared/discovery-configs.js';
+import {drawDiscovery} from '../../shared/discovery-draw.js';
+export default options=>mountLab('generalized-hooke-law-plane-stress',options,{config:{...DISCOVERY_LABS['generalized-hooke-law-plane-stress'],animate:false},draw:drawDiscovery});

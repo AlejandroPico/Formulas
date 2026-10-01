@@ -1,1 +1,4 @@
-export { default } from "../../../scripts/classical-mechanics-simulations.js?topic=sho";
+import {mountLab} from '../../shared/learning-lab.js';
+import {DISCOVERY_LABS} from '../../shared/discovery-configs.js';
+import {drawDiscovery} from '../../shared/discovery-draw.js';
+export default options=>mountLab('simple-harmonic-motion',options,{config:{...DISCOVERY_LABS['simple-harmonic-motion'],animate:false},draw:drawDiscovery});

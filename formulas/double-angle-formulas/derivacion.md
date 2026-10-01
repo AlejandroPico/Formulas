@@ -1,15 +1,7 @@
 # Derivación
 
-Se parte de las formulas de suma de angulos:
+En sin(α+β) = sinα cosβ+cosα sinβ toma α = β = θ. Los dos términos coinciden: sin2θ = 2sinθ cosθ.
 
-sin(alpha+beta)=sin(alpha)cos(beta)+cos(alpha)sin(beta)
+Haz lo mismo en cos(α+β) = cosα cosβ−sinα sinβ: cos2θ = cos²θ−sin²θ. Sustituye sin²θ = 1−cos²θ para obtener 2cos²θ−1; o sustituye cos²θ = 1−sin²θ para obtener 1−2sin²θ.
 
-cos(alpha+beta)=cos(alpha)cos(beta)-sin(alpha)sin(beta).
-
-Tomando alpha=theta y beta=theta:
-
-sin(2theta)=sin(theta)cos(theta)+cos(theta)sin(theta)=2sin(theta)cos(theta)
-
-cos(2theta)=cos^2(theta)-sin^2(theta).
-
-Las variantes `cos(2theta)=2cos^2(theta)-1` y `cos(2theta)=1-2sin^2(theta)` salen usando `sin^2(theta)+cos^2(theta)=1`.
+Divide seno doble entre coseno doble y, si cosθ ≠ 0, normaliza entre cos²θ. Aparece 2tanθ/(1−tan²θ). Esta división añade condiciones: no debe usarse cuando alguno de sus denominadores se anula.

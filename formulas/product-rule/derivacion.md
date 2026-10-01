@@ -1,7 +1,7 @@
 # Derivación
 
-Si el producto es `A=f·g`, al variar la variable aparecen dos bandas diferenciales principales: `f'g` y `fg'`. El término de segundo orden `f'g'` desaparece en el límite diferencial.
+Para incrementos Δf y Δg, la identidad exacta es (f+Δf)(g+Δg)−fg = gΔf+fΔg+ΔfΔg.
 
-Por eso:
+Divide entre h. Como Δf/h → f′ y Δg/h → g′, los dos primeros términos tienden a gf′ y fg′. El último es (Δf/h)Δg y tiende a cero porque Δg → 0.
 
-`(fg)'=f'g+fg'`.
+Así (fg)′ = f′g+fg′. El término descartado no es simplemente f′g′: en cambios finitos contiene dos incrementos y es de orden h². Las bandas del laboratorio muestran esa esquina adicional y cómo disminuye al reducir h.

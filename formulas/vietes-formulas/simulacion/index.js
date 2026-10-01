@@ -1,2 +1,4 @@
-const x=({canvas,controls,readout})=>{const a=document.createElement('input');a.type='range';a.min=0;a.max=16;a.value=5;controls.appendChild(a);const b=document.createElement('input');b.type='range';b.min=0;b.max=16;b.value=13;controls.appendChild(b);const g=canvas.getContext('2d');const f=()=>{const A=+a.value-8,B=+b.value-8,w=canvas.width=520,h=220;canvas.height=h;g.fillStyle='#020617';g.fillRect(0,0,w,h);let ox=w/2,oy=120,s=24;g.strokeStyle='#64748b';g.beginPath();g.moveTo(25,oy);g.lineTo(w-25,oy);g.stroke();for(let i=-8;i<=8;i++){let xx=ox+i*s;g.beginPath();g.moveTo(xx,oy-5);g.lineTo(xx,oy+5);g.stroke()}g.fillStyle='#ec4899';g.beginPath();g.arc(ox+A*s,oy,7,0,Math.PI*2);g.fill();g.fillStyle='#14b8a6';g.beginPath();g.arc(ox+B*s,oy,7,0,Math.PI*2);g.fill();readout.textContent='raices: '+A+' y '+B+' | suma='+(A+B)+' | producto='+(A*B)+' | b='+(-(A+B))+' | c='+(A*B);};a.oninput=f;b.oninput=f;f();};
-export default x;
+import {mountLab} from '../../shared/learning-lab.js';
+import {DISCOVERY_LABS} from '../../shared/discovery-configs.js';
+import {drawDiscovery} from '../../shared/discovery-draw.js';
+export default options=>mountLab('vietes-formulas',options,{config:{...DISCOVERY_LABS['vietes-formulas'],animate:false},draw:drawDiscovery});

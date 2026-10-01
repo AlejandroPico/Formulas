@@ -1,17 +1,27 @@
-# Ficha
+# Fórmulas de suma de ángulos
 
-## Identificación
+Combina giros mediante componentes con signo; entiende el origen de cada producto y las restricciones de la tangente.
 
-- Nombre: Fórmulas de suma de ángulos.
-- Área: trigonometría.
-- Fórmula principal: `sin(α+β)=sinα cosβ+cosα sinβ`.
+## Magnitudes
 
-## Variables
+| Símbolo | Lectura |
+| :-- | :-- |
+| α, β | Ángulos reales en la misma escala. |
+| α+β | Giro total, sin necesidad de limitarlo al primer cuadrante. |
+| sin, cos, tan | Razones trigonométricas del argumento indicado. |
 
-- `α`: primer ángulo.
-- `β`: segundo ángulo.
-- `α+β`: ángulo combinado.
+## Cuándo se aplica
 
-## Lectura del simulador
+Seno y coseno: todos los ángulos reales. La forma de tangente requiere cosα y cosβ distintos de cero y 1−tanαtanβ ≠ 0.
 
-El vector azul representa `α`, el arco rojo representa `β` añadido y el vector verde representa el ángulo total. La lectura compara la identidad con el cálculo directo.
+## Evita estos errores
+
+Sumar los senos directamente; cambiar el menos del coseno por más; mezclar grados y radianes; usar la tangente donde no está definida.
+
+## Laboratorio
+
+**Rumbos · Explorar · Componentes**
+
+Arrastra la dirección final para cambiar β. α marca el primer giro y α+β el resultado.
+
+Cuatro misiones con pistas y reintentos. Los controles aceptan teclado; los objetos arrastrables aceptan ratón y tacto. Los resultados se ocultan mientras resuelves un reto.

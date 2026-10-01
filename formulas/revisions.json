@@ -333,6 +333,474 @@
           "Limpieza de eventos, observadores y animaciones al salir"
         ]
       }
+    ],
+    "law-of-cosines": [
+      {
+        "revision": 1,
+        "date": "2026-10-01",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos"
+        ],
+        "summary": "Revisión completa: cuatro misiones de Rescate, exploración y Proyección. La proyección a cos C y la altura a sin C reconstruyen la distancia. También funcionan cuando la proyección es negativa.",
+        "checks": [
+          "Todas las pestañas y las adicionales revisadas con contenido propio",
+          "Símbolos y estructuras explicados con ratón y enfoque",
+          "Cuatro misiones, respuestas incorrectas, pistas y ajustes comprobados en navegador",
+          "Tres modos en escritorio y móvil, sin desbordamiento ni solapamientos",
+          "Cálculos contrastados con invariantes y resultados independientes; dominios y unidades revisados",
+          "Arrastre, teclado y giro 3D táctil donde corresponden",
+          "Reproducción, pausa y limpieza de eventos, observadores y fotogramas",
+          "Fuentes históricas y matemáticas enlazadas en la ficha",
+          "Regresión de las diez revisiones anteriores, Pitágoras y carga progresiva"
+        ]
+      }
+    ],
+    "law-of-sines": [
+      {
+        "revision": 1,
+        "date": "2026-10-01",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos"
+        ],
+        "summary": "Revisión completa: cuatro misiones de Balizas, exploración y Dos rutas. Con a, b y A conocidos puede haber cero, uno o dos triángulos. Las dos rutas se dibujan juntas cuando ambas son posibles.",
+        "checks": [
+          "Todas las pestañas y las adicionales revisadas con contenido propio",
+          "Símbolos y estructuras explicados con ratón y enfoque",
+          "Cuatro misiones, respuestas incorrectas, pistas y ajustes comprobados en navegador",
+          "Tres modos en escritorio y móvil, sin desbordamiento ni solapamientos",
+          "Cálculos contrastados con invariantes y resultados independientes; dominios y unidades revisados",
+          "Arrastre, teclado y giro 3D táctil donde corresponden",
+          "Reproducción, pausa y limpieza de eventos, observadores y fotogramas",
+          "Fuentes históricas y matemáticas enlazadas en la ficha",
+          "Regresión de las diez revisiones anteriores, Pitágoras y carga progresiva"
+        ]
+      }
+    ],
+    "law-of-tangents": [
+      {
+        "revision": 1,
+        "date": "2026-10-01",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos"
+        ],
+        "summary": "Revisión completa: cuatro misiones de Equilibrio, exploración y Semiángulos. La semisuma y la semidiferencia de A y B relacionan las dos tangentes. El caso a = b sigue siendo válido: ambas razones valen cero.",
+        "checks": [
+          "Todas las pestañas y las adicionales revisadas con contenido propio",
+          "Símbolos y estructuras explicados con ratón y enfoque",
+          "Cuatro misiones, respuestas incorrectas, pistas y ajustes comprobados en navegador",
+          "Tres modos en escritorio y móvil, sin desbordamiento ni solapamientos",
+          "Cálculos contrastados con invariantes y resultados independientes; dominios y unidades revisados",
+          "Arrastre, teclado y giro 3D táctil donde corresponden",
+          "Reproducción, pausa y limpieza de eventos, observadores y fotogramas",
+          "Fuentes históricas y matemáticas enlazadas en la ficha",
+          "Regresión de las diez revisiones anteriores, Pitágoras y carga progresiva"
+        ]
+      }
+    ],
+    "vietes-formulas": [
+      {
+        "revision": 1,
+        "date": "2026-10-01",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "aplicaciones"
+        ],
+        "summary": "Revisión completa: cuatro misiones de Cerraduras, exploración y Complejas. Explora pares conjugados r ± si. La curva puede no cortar el eje real y, aun así, Viète sigue relacionando las dos raíces complejas con b y c.",
+        "checks": [
+          "Todas las pestañas y las adicionales revisadas con contenido propio",
+          "Símbolos y estructuras explicados con ratón y enfoque",
+          "Cuatro misiones, respuestas incorrectas, pistas y ajustes comprobados en navegador",
+          "Tres modos en escritorio y móvil, sin desbordamiento ni solapamientos",
+          "Cálculos contrastados con invariantes y resultados independientes; dominios y unidades revisados",
+          "Arrastre, teclado y giro 3D táctil donde corresponden",
+          "Reproducción, pausa y limpieza de eventos, observadores y fotogramas",
+          "Fuentes históricas y matemáticas enlazadas en la ficha",
+          "Regresión de las diez revisiones anteriores, Pitágoras y carga progresiva"
+        ]
+      }
+    ],
+    "double-angle-formulas": [
+      {
+        "revision": 1,
+        "date": "2026-10-01",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos"
+        ],
+        "summary": "Revisión completa: cuatro misiones de Frecuencias, exploración y Ondas. Compara sin θ y sin 2θ en el mismo eje angular. Doblar el argumento duplica la frecuencia, conservando amplitud uno.",
+        "checks": [
+          "Todas las pestañas y las adicionales revisadas con contenido propio",
+          "Símbolos y estructuras explicados con ratón y enfoque",
+          "Cuatro misiones, respuestas incorrectas, pistas y ajustes comprobados en navegador",
+          "Tres modos en escritorio y móvil, sin desbordamiento ni solapamientos",
+          "Cálculos contrastados con invariantes y resultados independientes; dominios y unidades revisados",
+          "Arrastre, teclado y giro 3D táctil donde corresponden",
+          "Reproducción, pausa y limpieza de eventos, observadores y fotogramas",
+          "Fuentes históricas y matemáticas enlazadas en la ficha",
+          "Regresión de las diez revisiones anteriores, Pitágoras y carga progresiva"
+        ]
+      }
+    ],
+    "angle-sum-formulas": [
+      {
+        "revision": 1,
+        "date": "2026-10-01",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos"
+        ],
+        "summary": "Revisión completa: cuatro misiones de Rumbos, exploración y Componentes. Los dos segmentos de cada color muestran las contribuciones de la rotación: cos α cos β y −sin α sin β en horizontal; sin α cos β y cos α sin β en vertical.",
+        "checks": [
+          "Todas las pestañas y las adicionales revisadas con contenido propio",
+          "Símbolos y estructuras explicados con ratón y enfoque",
+          "Cuatro misiones, respuestas incorrectas, pistas y ajustes comprobados en navegador",
+          "Tres modos en escritorio y móvil, sin desbordamiento ni solapamientos",
+          "Cálculos contrastados con invariantes y resultados independientes; dominios y unidades revisados",
+          "Arrastre, teclado y giro 3D táctil donde corresponden",
+          "Reproducción, pausa y limpieza de eventos, observadores y fotogramas",
+          "Fuentes históricas y matemáticas enlazadas en la ficha",
+          "Regresión de las diez revisiones anteriores, Pitágoras y carga progresiva"
+        ]
+      }
+    ],
+    "simple-harmonic-motion": [
+      {
+        "revision": 1,
+        "date": "2026-10-01",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos"
+        ],
+        "summary": "Revisión completa: cuatro misiones de Sintonía, exploración y Energía. La energía potencial y la cinética se intercambian sin pérdidas. El punto recorre una elipse en el espacio posición–velocidad.",
+        "checks": [
+          "Todas las pestañas y las adicionales revisadas con contenido propio",
+          "Símbolos y estructuras explicados con ratón y enfoque",
+          "Cuatro misiones, respuestas incorrectas, pistas y ajustes comprobados en navegador",
+          "Tres modos en escritorio y móvil, sin desbordamiento ni solapamientos",
+          "Cálculos contrastados con invariantes y resultados independientes; dominios y unidades revisados",
+          "Arrastre, teclado y giro 3D táctil donde corresponden",
+          "Reproducción, pausa y limpieza de eventos, observadores y fotogramas",
+          "Fuentes históricas y matemáticas enlazadas en la ficha",
+          "Regresión de las diez revisiones anteriores, Pitágoras y carga progresiva"
+        ]
+      }
+    ],
+    "simple-pendulum-small-angle": [
+      {
+        "revision": 1,
+        "date": "2026-10-01",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos"
+        ],
+        "summary": "Revisión completa: cuatro misiones de Relojes, exploración y Comparar. Aumenta la amplitud para comparar el periodo pequeño con el periodo no lineal. La longitud del hilo y la gravedad son iguales en ambos.",
+        "checks": [
+          "Todas las pestañas y las adicionales revisadas con contenido propio",
+          "Símbolos y estructuras explicados con ratón y enfoque",
+          "Cuatro misiones, respuestas incorrectas, pistas y ajustes comprobados en navegador",
+          "Tres modos en escritorio y móvil, sin desbordamiento ni solapamientos",
+          "Cálculos contrastados con invariantes y resultados independientes; dominios y unidades revisados",
+          "Arrastre, teclado y giro 3D táctil donde corresponden",
+          "Reproducción, pausa y limpieza de eventos, observadores y fotogramas",
+          "Fuentes históricas y matemáticas enlazadas en la ficha",
+          "Regresión de las diez revisiones anteriores, Pitágoras y carga progresiva"
+        ]
+      }
+    ],
+    "binomial-theorem": [
+      {
+        "revision": 1,
+        "date": "2026-10-01",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos"
+        ],
+        "summary": "Revisión completa: cuatro misiones de Combinaciones, exploración y Pascal. El triángulo de Pascal construye cada coeficiente sumando los dos superiores. Selecciona n y k para resaltar una posición y contar sus elecciones.",
+        "checks": [
+          "Todas las pestañas y las adicionales revisadas con contenido propio",
+          "Símbolos y estructuras explicados con ratón y enfoque",
+          "Cuatro misiones, respuestas incorrectas, pistas y ajustes comprobados en navegador",
+          "Tres modos en escritorio y móvil, sin desbordamiento ni solapamientos",
+          "Cálculos contrastados con invariantes y resultados independientes; dominios y unidades revisados",
+          "Arrastre, teclado y giro 3D táctil donde corresponden",
+          "Reproducción, pausa y limpieza de eventos, observadores y fotogramas",
+          "Fuentes históricas y matemáticas enlazadas en la ficha",
+          "Regresión de las diez revisiones anteriores, Pitágoras y carga progresiva"
+        ]
+      }
+    ],
+    "fundamental-theorem-calculus": [
+      {
+        "revision": 1,
+        "date": "2026-10-01",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos"
+        ],
+        "summary": "Revisión completa: cuatro misiones de Depósitos, exploración y Rectángulos. Compara rectángulos de punto medio con la integral exacta. Cambia n y el incremento h para observar aproximación de área y secante de la acumulación.",
+        "checks": [
+          "Todas las pestañas y las adicionales revisadas con contenido propio",
+          "Símbolos y estructuras explicados con ratón y enfoque",
+          "Cuatro misiones, respuestas incorrectas, pistas y ajustes comprobados en navegador",
+          "Tres modos en escritorio y móvil, sin desbordamiento ni solapamientos",
+          "Cálculos contrastados con invariantes y resultados independientes; dominios y unidades revisados",
+          "Arrastre, teclado y giro 3D táctil donde corresponden",
+          "Reproducción, pausa y limpieza de eventos, observadores y fotogramas",
+          "Fuentes históricas y matemáticas enlazadas en la ficha",
+          "Regresión de las diez revisiones anteriores, Pitágoras y carga progresiva"
+        ]
+      }
+    ],
+    "chain-rule": [
+      {
+        "revision": 1,
+        "date": "2026-10-01",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos"
+        ],
+        "summary": "Revisión completa: cuatro misiones de Engranajes, exploración y Sensibilidad. La cadena x → u → y muestra dos pendientes locales. Reduce h para comparar la secante de la función compuesta con el producto exacto.",
+        "checks": [
+          "Todas las pestañas y las adicionales revisadas con contenido propio",
+          "Símbolos y estructuras explicados con ratón y enfoque",
+          "Cuatro misiones, respuestas incorrectas, pistas y ajustes comprobados en navegador",
+          "Tres modos en escritorio y móvil, sin desbordamiento ni solapamientos",
+          "Cálculos contrastados con invariantes y resultados independientes; dominios y unidades revisados",
+          "Arrastre, teclado y giro 3D táctil donde corresponden",
+          "Reproducción, pausa y limpieza de eventos, observadores y fotogramas",
+          "Fuentes históricas y matemáticas enlazadas en la ficha",
+          "Regresión de las diez revisiones anteriores, Pitágoras y carga progresiva"
+        ]
+      }
+    ],
+    "product-rule": [
+      {
+        "revision": 1,
+        "date": "2026-10-01",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos"
+        ],
+        "summary": "Revisión completa: cuatro misiones de Superficies, exploración y Dos aportes. Con factores positivos, las bandas del rectángulo muestran incrementos exactos. Con factores negativos, usa las contribuciones algebraicas y la secante: no hay un área física negativa.",
+        "checks": [
+          "Todas las pestañas y las adicionales revisadas con contenido propio",
+          "Símbolos y estructuras explicados con ratón y enfoque",
+          "Cuatro misiones, respuestas incorrectas, pistas y ajustes comprobados en navegador",
+          "Tres modos en escritorio y móvil, sin desbordamiento ni solapamientos",
+          "Cálculos contrastados con invariantes y resultados independientes; dominios y unidades revisados",
+          "Arrastre, teclado y giro 3D táctil donde corresponden",
+          "Reproducción, pausa y limpieza de eventos, observadores y fotogramas",
+          "Fuentes históricas y matemáticas enlazadas en la ficha",
+          "Regresión de las diez revisiones anteriores, Pitágoras y carga progresiva"
+        ]
+      }
+    ],
+    "quotient-rule": [
+      {
+        "revision": 1,
+        "date": "2026-10-01",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos"
+        ],
+        "summary": "Revisión completa: cuatro misiones de Razones, exploración y Dos efectos. Compara f′/g y −fg′/g². Sus signos dependen de los valores: un denominador que crece no siempre hace que la razón disminuya.",
+        "checks": [
+          "Todas las pestañas y las adicionales revisadas con contenido propio",
+          "Símbolos y estructuras explicados con ratón y enfoque",
+          "Cuatro misiones, respuestas incorrectas, pistas y ajustes comprobados en navegador",
+          "Tres modos en escritorio y móvil, sin desbordamiento ni solapamientos",
+          "Cálculos contrastados con invariantes y resultados independientes; dominios y unidades revisados",
+          "Arrastre, teclado y giro 3D táctil donde corresponden",
+          "Reproducción, pausa y limpieza de eventos, observadores y fotogramas",
+          "Fuentes históricas y matemáticas enlazadas en la ficha",
+          "Regresión de las diez revisiones anteriores, Pitágoras y carga progresiva"
+        ]
+      }
+    ],
+    "hookes-law": [
+      {
+        "revision": 1,
+        "date": "2026-10-01",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos"
+        ],
+        "summary": "Revisión completa: cuatro misiones de Calibración, exploración y Trabajo. El área bajo F externa = kx es el trabajo almacenado. El límite marcado delimita el rango de calibración: fuera de él la extrapolación lineal no está validada.",
+        "checks": [
+          "Todas las pestañas y las adicionales revisadas con contenido propio",
+          "Símbolos y estructuras explicados con ratón y enfoque",
+          "Cuatro misiones, respuestas incorrectas, pistas y ajustes comprobados en navegador",
+          "Tres modos en escritorio y móvil, sin desbordamiento ni solapamientos",
+          "Cálculos contrastados con invariantes y resultados independientes; dominios y unidades revisados",
+          "Arrastre, teclado y giro 3D táctil donde corresponden",
+          "Reproducción, pausa y limpieza de eventos, observadores y fotogramas",
+          "Fuentes históricas y matemáticas enlazadas en la ficha",
+          "Regresión de las diez revisiones anteriores, Pitágoras y carga progresiva"
+        ]
+      }
+    ],
+    "generalized-hooke-law-plane-stress": [
+      {
+        "revision": 1,
+        "date": "2026-10-01",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "interpretacion",
+          "limitaciones"
+        ],
+        "summary": "Revisión completa: cuatro misiones de Materiales, exploración y Placa 3D. Gira la placa con ratón, dedo o flechas. Las caras z están libres de tensión, pero el espesor cambia por Poisson. La amplificación visual nunca cambia los valores físicos.",
+        "checks": [
+          "Todas las pestañas y las adicionales revisadas con contenido propio",
+          "Símbolos y estructuras explicados con ratón y enfoque",
+          "Cuatro misiones, respuestas incorrectas, pistas y ajustes comprobados en navegador",
+          "Tres modos en escritorio y móvil, sin desbordamiento ni solapamientos",
+          "Cálculos contrastados con invariantes y resultados independientes; dominios y unidades revisados",
+          "Arrastre, teclado y giro 3D táctil donde corresponden",
+          "Reproducción, pausa y limpieza de eventos, observadores y fotogramas",
+          "Fuentes históricas y matemáticas enlazadas en la ficha",
+          "Regresión de las diez revisiones anteriores, Pitágoras y carga progresiva"
+        ]
+      }
     ]
   }
 }

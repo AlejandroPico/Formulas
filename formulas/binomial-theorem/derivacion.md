@@ -1,7 +1,7 @@
 # Derivación
 
-`(a+b)^n` significa multiplicar `n` factores iguales. En cada factor se elige `a` o `b`.
+En el producto de n binomios, elige k posiciones para tomar b y las demás para tomar a. Todas esas elecciones producen aⁿ⁻ᵏbᵏ porque los factores conmutan.
 
-Si se elige `b` exactamente `k` veces, aparece el término `a^{n-k}b^k`. El número de formas de elegir esas `k` posiciones es `binom(n,k)`.
+Hay n! ordenaciones de n posiciones. Las k elegidas pueden permutarse entre sí de k! formas y las n−k restantes de (n−k)! formas sin crear una elección distinta. Dividir evita contarlas de nuevo.
 
-Sumando todos los casos desde `k=0` hasta `k=n` se obtiene la fórmula.
+Suma los casos k = 0,1,…,n. La recurrencia C(n,k) = C(n−1,k−1)+C(n−1,k) separa elecciones que contienen la última posición de las que no. Es la regla con que Pascal construye cada entrada desde las dos superiores.

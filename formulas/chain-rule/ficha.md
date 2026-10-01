@@ -1,15 +1,28 @@
-# Ficha
+# Regla de la cadena
 
-## Identificación
+Explora tres composiciones y conecta la derivada total con dos sensibilidades evaluadas en sus argumentos correctos.
 
-- Nombre: Regla de la cadena.
-- Área: Cálculo diferencial.
-- Idea central: multiplicar sensibilidades encadenadas.
+## Magnitudes
 
-## Fórmula
+| Símbolo | Lectura |
+| :-- | :-- |
+| x | Entrada inicial. |
+| u = g(x) | Variable intermedia. |
+| y = f(u) | Salida final. |
+| f′(g(x)), g′(x) | Sensibilidades exterior e interior, evaluadas donde corresponde. |
 
-`(f∘g)'(x)=f'(g(x))g'(x)`.
+## Cuándo se aplica
 
-## Lectura del simulador
+g derivable en x, y f derivable en g(x). La composición debe estar definida cerca del punto. No exige que g′ sea distinto de cero.
 
-El simulador muestra una entrada `x`, una transformación interna `g(x)=x²` y una transformación externa `f(u)=sin(u)`. La derivada total es el producto entre la sensibilidad interna y la externa.
+## Evita estos errores
+
+Olvidar g′; evaluar f′ en x en vez de g(x); confundir composición con producto; tratar diferenciales como fracciones arbitrarias fuera de sus hipótesis.
+
+## Laboratorio
+
+**Engranajes · Explorar · Sensibilidad**
+
+Mueve x sobre la curva compuesta. La sensibilidad exterior se evalúa en g(x), y después se multiplica por la interior.
+
+Cuatro misiones con pistas y reintentos. Los controles aceptan teclado; los objetos arrastrables aceptan ratón y tacto. Los resultados se ocultan mientras resuelves un reto.

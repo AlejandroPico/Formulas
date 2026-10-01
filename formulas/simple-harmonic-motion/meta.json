@@ -8,13 +8,11 @@
   "formula": [
     "x(t)=A·cos(ωt)"
   ],
-  "summary": "Oscilación periódica descrita como proyección de un movimiento circular uniforme.",
+  "summary": "Sintoniza un oscilador sin rozamiento; reproduce su movimiento y observa velocidad, aceleración y conservación de energía.",
   "topic": "sho",
   "source": "files",
   "author": "",
-  "formulaText": [
-    "Oscilación periódica descrita como proyección de un movimiento circular uniforme."
-  ],
+  "formulaText": "Sintoniza un oscilador sin rozamiento; reproduce su movimiento y observa velocidad, aceleración y conservación de energía.",
   "tags": [
     "fisica",
     "mecanica",
@@ -29,9 +27,11 @@
     "cinematica"
   ],
   "learningPath": [
-    "formula",
-    "significado",
-    "simulacion"
+    "Identificar magnitudes",
+    "Comprobar el dominio",
+    "Explorar y predecir",
+    "Resolver las cuatro misiones",
+    "Explicar el resultado"
   ],
   "units": "Ver unidades.",
   "dimensions": "Ver unidades.",
@@ -39,5 +39,66 @@
   "folder": "formulas/simple-harmonic-motion",
   "legacySource": "runtime-batch-migration",
   "originalSource": "scripts/latest-formula-batch-9.js",
-  "createdAt": "2026-07-05"
+  "createdAt": "2026-07-05",
+  "symbolGlossary": {
+    "0": "Cero: cantidad nula o condición de anulación.",
+    "1": "Uno: unidad numérica o factor neutro de multiplicación.",
+    "2": "Dos: factor numérico, divisor o índice, según su posición en esta expresión.",
+    "3": "Tres: factor numérico o grado cúbico cuando aparece como exponente.",
+    "4": "Cuatro: factor numérico o grado cuarto cuando aparece como exponente.",
+    "=": "Igualdad: los dos miembros representan el mismo valor.",
+    "+": "Suma las contribuciones indicadas.",
+    "−": "Resta el término siguiente; delante de una cantidad cambia su signo.",
+    "-": "Resta o cambio de signo.",
+    "(": "Abre un grupo: su contenido es el argumento de una función o una cantidad que se calcula conjuntamente.",
+    ")": "Cierra el grupo o el argumento de la función.",
+    "[": "Abre un grupo de términos.",
+    "]": "Cierra el grupo de términos.",
+    ",": "Separa relaciones o condiciones.",
+    "/": "División: el término anterior se divide entre el posterior.",
+    "⋅": "Multiplica las cantidades vecinas.",
+    "·": "Multiplica las cantidades vecinas.",
+    "≠": "Distinto de: excluye un valor que haría inaplicable la relación.",
+    "<": "Menor que: la cantidad izquierda debe quedar por debajo de la derecha.",
+    ">": "Mayor que: la cantidad izquierda debe superar a la derecha.",
+    "≤": "Menor o igual que: incluye el valor extremo.",
+    "π": "Pi: constante adimensional, aproximadamente 3,14159265.",
+    "√": "Raíz cuadrada no negativa del contenido, cuando es real.",
+    "′": "Prima: derivada de la función respecto a su argumento; no es un exponente numérico.",
+    "^2": "Cuadrado de la magnitud: aparece en la aceleración proporcional y en los términos de energía.",
+    "structure:msup": "Potencia o marca de derivada: un exponente numérico eleva la base; una prima indica derivación.",
+    "structure:msub": "Subíndice: identifica la raíz o componente indicada; no multiplica la base.",
+    "structure:mfrac": "Fracción: divide todo el numerador entre todo el denominador; el denominador debe ser distinto de cero.",
+    "structure:msqrt": "Raíz de k/m: proporciona la frecuencia angular del resorte y masa.",
+    "structure:mover": "Marca superior: en estas expresiones, los puntos indican derivadas temporales.",
+    "structure:munder": "Índice inferior: fija el inicio de la suma o el extremo inferior de una integral.",
+    "structure:munderover": "Límites: determinan el comienzo y el final de la suma o integral.",
+    "structure:msubsup": "Índice inferior y superior: delimitan el intervalo de acumulación o el índice de una potencia.",
+    "x": "Desplazamiento con signo respecto al equilibrio.",
+    "t": "Tiempo desde el instante inicial.",
+    "A": "Amplitud no negativa: máximo valor absoluto del desplazamiento.",
+    "ω": "Frecuencia angular positiva: determina cuántos radianes de fase avanzan por segundo.",
+    "φ": "Fase inicial: fija la posición y velocidad en t = 0.",
+    "ϕ": "Fase inicial: fija dónde comienza el ciclo de oscilación.",
+    "v": "Velocidad con signo, derivada temporal de la posición.",
+    "a": "Aceleración con signo, segunda derivada temporal de la posición.",
+    "k": "Constante elástica positiva del resorte ideal.",
+    "m": "Masa positiva del cuerpo que oscila.",
+    "T": "Periodo: tiempo de una oscilación completa.",
+    "E": "Energía mecánica constante del oscilador ideal.",
+    "cos": "Coseno de la fase total; describe la posición del oscilador.",
+    "sin": "Seno de la fase total; aparece al derivar la posición."
+  },
+  "formulaGlossaries": [
+    {},
+    {
+      "a": "Aceleración temporal, no un coeficiente ni la amplitud A."
+    },
+    {},
+    {
+      "x": "Desplazamiento instantáneo desde el equilibrio.",
+      "v": "Velocidad instantánea; su cuadrado contribuye a la energía cinética."
+    }
+  ],
+  "simulatorVersion": 2
 }

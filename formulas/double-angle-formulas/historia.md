@@ -1,7 +1,7 @@
 # Historia
 
-Las identidades de angulo doble forman parte de la trigonometria elemental desarrollada para astronomia, navegacion y geometria.
+Las identidades de ángulo doble se insertan en la tradición trigonométrica de combinar arcos y direcciones. Se obtienen al sumar un ángulo consigo mismo.
 
-Se derivan de las formulas de suma de angulos al tomar los dos angulos iguales. Con el desarrollo del calculo y del analisis armonico pasaron a ser herramientas basicas para manipular ondas, oscilaciones y funciones periodicas.
+La forma actual permite enlazar geometría circular con ondas y simplificación algebraica. En esta ficha la doble frecuencia se ve junto a la identidad, para que el cambio de argumento tenga un significado visible.
 
-Hoy se usan en algebra trigonometrica, integracion, fisica de ondas, rotaciones y procesamiento de senales.
+Fuentes: [contexto histórico, MacTutor](https://mathshistory.st-andrews.ac.uk/HistTopics/Trigonometric_functions/) y [ángulo doble, MathWorld](https://mathworld.wolfram.com/Double-AngleFormulas.html).

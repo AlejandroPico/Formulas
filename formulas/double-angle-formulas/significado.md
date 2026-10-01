@@ -1,13 +1,7 @@
 # Significado
 
-Las formulas de angulo doble expresan las razones trigonometricas de 2 theta usando solo seno y coseno de theta.
+Doblar un ángulo no duplica sus componentes. Con θ = 30°, sin θ = 0,5 pero sin2θ = sin60° ≈ 0,866. La identidad reconstruye ese valor mediante 2sinθ cosθ.
 
-Las dos identidades basicas son:
+Para el coseno hay tres formas equivalentes. Puedes elegir cos²θ−sin²θ, 2cos²θ−1 o 1−2sin²θ según los datos disponibles. En θ = 60°, el coseno doble es −0,5.
 
-sin(2theta)=2 sin(theta) cos(theta)
-
-cos(2theta)=cos^2(theta)-sin^2(theta).
-
-Permiten convertir un angulo doble en productos y cuadrados de funciones de un angulo simple. Son fundamentales para simplificar expresiones, resolver ecuaciones trigonometricas e integrar funciones trigonometricas.
-
-El simulador muestra dos radios: uno para theta y otro para 2 theta. La lectura numerica verifica las identidades.
+En una onda, cambiar sinθ por sin2θ duplica las oscilaciones por vuelta y mantiene la amplitud. La tangente tiene un dominio distinto: en θ = 45°, tan2θ = tan90° no existe. El simulador lo indica explícitamente.

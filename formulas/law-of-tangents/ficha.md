@@ -1,16 +1,27 @@
-# Ficha
+# Ley de tangentes
 
-## Identificación
+Compara diferencias de lados y ángulos mediante semisumas y semidiferencias, conservando signos y el caso isósceles.
 
-- Nombre: Ley de tangentes.
-- Área: trigonometría de triángulos.
-- Fórmula: `(a-b)/(a+b)=tan((A-B)/2)/tan((A+B)/2)`.
+## Magnitudes
 
-## Variables
+| Símbolo | Lectura |
+| :-- | :-- |
+| a, b | Dos lados positivos del triángulo. |
+| A, B | Ángulos opuestos a a y b. |
+| tan | Tangente del semiángulo indicado. |
 
-- `a`, `b`: lados del triángulo.
-- `A`, `B`: ángulos opuestos a esos lados.
+## Cuándo se aplica
 
-## Lectura del simulador
+Triángulo plano no degenerado. 0 < A+B < 180° asegura una tangente de la semisuma finita y positiva. La forma elegida permite a = b; no se divide entre a−b.
 
-El triángulo se reconstruye con dos lados variables y un ángulo incluido fijo. Se calculan los ángulos opuestos y se comparan las dos razones de la ley.
+## Evita estos errores
+
+Invertir solo un cociente; perder el signo de A−B; usar los ángulos adyacentes; dividir por a−b en el caso isósceles.
+
+## Laboratorio
+
+**Equilibrio · Explorar · Semiángulos**
+
+Arrastra el vértice o cambia los lados. Compara diferencias normalizadas sin perder el signo.
+
+Cuatro misiones con pistas y reintentos. Los controles aceptan teclado; los objetos arrastrables aceptan ratón y tacto. Los resultados se ocultan mientras resuelves un reto.

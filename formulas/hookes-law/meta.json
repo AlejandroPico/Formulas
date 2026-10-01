@@ -8,13 +8,11 @@
   "formula": [
     "F=−k·Δx"
   ],
-  "summary": "La fuerza elástica de un muelle es proporcional y opuesta a su deformación.",
+  "summary": "Calibra un resorte, distingue fuerza restauradora y externa, y conecta el trabajo con energía elástica.",
   "topic": "hooke",
   "source": "files",
   "author": "",
-  "formulaText": [
-    "La fuerza elástica de un muelle es proporcional y opuesta a su deformación."
-  ],
+  "formulaText": "Calibra un resorte, distingue fuerza restauradora y externa, y conecta el trabajo con energía elástica.",
   "tags": [
     "fisica",
     "mecanica",
@@ -29,9 +27,11 @@
     "cinematica"
   ],
   "learningPath": [
-    "formula",
-    "significado",
-    "simulacion"
+    "Identificar magnitudes",
+    "Comprobar el dominio",
+    "Explorar y predecir",
+    "Resolver las cuatro misiones",
+    "Explicar el resultado"
   ],
   "units": "Ver unidades.",
   "dimensions": "Ver unidades.",
@@ -39,5 +39,50 @@
   "folder": "formulas/hookes-law",
   "legacySource": "runtime-batch-migration",
   "originalSource": "scripts/latest-formula-batch-9.js",
-  "createdAt": "2026-07-05"
+  "createdAt": "2026-07-05",
+  "symbolGlossary": {
+    "0": "Cero: cantidad nula o condición de anulación.",
+    "1": "Uno: unidad numérica o factor neutro de multiplicación.",
+    "2": "Dos: factor numérico, divisor o índice, según su posición en esta expresión.",
+    "3": "Tres: factor numérico o grado cúbico cuando aparece como exponente.",
+    "4": "Cuatro: factor numérico o grado cuarto cuando aparece como exponente.",
+    "=": "Igualdad: los dos miembros representan el mismo valor.",
+    "+": "Suma las contribuciones indicadas.",
+    "−": "Resta el término siguiente; delante de una cantidad cambia su signo.",
+    "-": "Resta o cambio de signo.",
+    "(": "Abre un grupo: su contenido es el argumento de una función o una cantidad que se calcula conjuntamente.",
+    ")": "Cierra el grupo o el argumento de la función.",
+    "[": "Abre un grupo de términos.",
+    "]": "Cierra el grupo de términos.",
+    ",": "Separa relaciones o condiciones.",
+    "/": "División: el término anterior se divide entre el posterior.",
+    "⋅": "Multiplica las cantidades vecinas.",
+    "·": "Multiplica las cantidades vecinas.",
+    "≠": "Distinto de: excluye un valor que haría inaplicable la relación.",
+    "<": "Menor que: la cantidad izquierda debe quedar por debajo de la derecha.",
+    ">": "Mayor que: la cantidad izquierda debe superar a la derecha.",
+    "≤": "Menor o igual que: incluye el valor extremo.",
+    "π": "Pi: constante adimensional, aproximadamente 3,14159265.",
+    "√": "Raíz cuadrada no negativa del contenido, cuando es real.",
+    "′": "Prima: derivada de la función respecto a su argumento; no es un exponente numérico.",
+    "^2": "Cuadrado del desplazamiento: la energía es positiva tanto al estirar como al comprimir.",
+    "structure:msup": "Potencia o marca de derivada: un exponente numérico eleva la base; una prima indica derivación.",
+    "structure:msub": "Subíndice: identifica la raíz o componente indicada; no multiplica la base.",
+    "structure:mfrac": "Fracción: divide todo el numerador entre todo el denominador; el denominador debe ser distinto de cero.",
+    "structure:msqrt": "Raíz cuadrada: recupera el valor no negativo cuyo cuadrado es el contenido.",
+    "structure:mover": "Marca superior: en estas expresiones, los puntos indican derivadas temporales.",
+    "structure:munder": "Índice inferior: fija el inicio de la suma o el extremo inferior de una integral.",
+    "structure:munderover": "Límites: determinan el comienzo y el final de la suma o integral.",
+    "structure:msubsup": "Índice inferior y superior: delimitan el intervalo de acumulación o el índice de una potencia.",
+    "F": "Fuerza axial con signo; el subíndice indica si la ejerce el resorte o el agente externo.",
+    "k": "Rigidez positiva del resorte: fuerza necesaria por unidad de desplazamiento.",
+    "x": "Desplazamiento desde la longitud de equilibrio: positivo al estirar y negativo al comprimir.",
+    "U": "Energía potencial elástica almacenada, no negativa.",
+    "res": "Subíndice res: fuerza restauradora que el resorte ejerce sobre el cuerpo.",
+    "ext": "Subíndice ext: fuerza externa de equilibrio, opuesta a la restauradora.",
+    "_res": "Subíndice res: identifica la fuerza ejercida por el resorte.",
+    "_ext": "Subíndice ext: identifica la fuerza externa para sostener el desplazamiento."
+  },
+  "formulaGlossaries": [],
+  "simulatorVersion": 2
 }
