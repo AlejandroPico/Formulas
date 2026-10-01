@@ -3,7 +3,7 @@
   "name": "Ganancia de voltaje en decibelios",
   "year": 1920,
   "field": "Electrónica / Señales",
-  "level": "Bachillerato/Universidad inicial",
+  "level": "Bachillerato y universidad inicial",
   "color": "#ea580c",
   "formula": [
     "G_{dB}=20log_{10}(V_{out}/V_{in})"
@@ -17,13 +17,12 @@
     "Expresa una relación de voltajes en escala logarítmica de decibelios."
   ],
   "tags": [
-    "electronica",
+    "electrónica",
     "electrotecnia",
     "corriente alterna",
     "semiconductores",
     "trifasica",
-    "potencia",
-    "simulacion"
+    "potencia"
   ],
   "prerequisites": [
     "ley de ohm",

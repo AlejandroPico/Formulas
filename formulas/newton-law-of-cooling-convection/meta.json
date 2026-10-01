@@ -15,10 +15,7 @@
   "source": "files",
   "formulaText": "El intercambio convectivo es proporcional a la diferencia de temperaturas; una pieza uniforme se acerca exponencialmente al ambiente.",
   "tags": [
-    "Transferencia de calor",
-    "aprendizaje",
-    "simulación",
-    "revisión completa"
+    "transferencia de calor"
   ],
   "prerequisites": [
     "Álgebra y unidades"

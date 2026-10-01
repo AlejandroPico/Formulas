@@ -1,32 +1,24 @@
-# Ficha
+# Regla de Ruffini
 
-## Identificación
+La división sintética multiplica y suma coeficientes para dividir por un binomio mónico. El último valor coincide con P(r), incluso cuando r no es una raíz.
 
-- Nombre: Regla de Ruffini.
-- Área: Álgebra y polinomios.
-- Nivel recomendado: Bachillerato.
-- Tipo de fórmula: división sintética y teorema del resto.
+## Magnitudes
 
-## Fórmula principal
+| Símbolo | Significado |
+| :-- | :-- |
+| P | Polinomio dividendo. |
+| Q | Polinomio cociente de grado una unidad menor. |
+| x | Variable formal del polinomio. |
+| r | Valor que identifica el divisor x−r. |
+| a | Coeficientes originales ordenados de mayor a menor grado. |
+| b | Coeficientes sintéticos: el último es el resto. |
+| i | Índice del coeficiente; incluir ceros para términos ausentes. |
+| ⟺ | Equivalencia: ambas afirmaciones implican la otra. |
 
-`P(x)=(x-r)Q(x)+P(r)`.
+## Alcance
 
-Si `P(r)=0`, entonces `x-r` es factor de `P(x)`.
+Divisor x−r de coeficiente principal uno. Para ax−b hace falta extraer a y ajustar cociente. Deben incluirse coeficientes cero de términos ausentes.
 
-## Variables
+## Unidades
 
-- `P(x)`: polinomio original.
-- `r`: valor asociado al divisor `x-r`.
-- `Q(x)`: cociente de la división.
-- `P(r)`: resto de la división.
-
-## Lectura del simulador
-
-El simulador muestra los coeficientes de un polinomio cúbico, las multiplicaciones sucesivas por `r`, el cociente cuadrático y el resto.
-
-## Errores habituales
-
-- Usar `r` con el signo cambiado. Si el divisor es `x-3`, entonces `r=3`; si es `x+3`, entonces `r=-3`.
-- Olvidar coeficientes nulos en grados intermedios.
-- Confundir el resto con el último coeficiente del cociente.
-- Aplicar Ruffini a divisores que no son lineales de la forma `x-r`.
+Polinomios del laboratorio con variables y coeficientes adimensionales. En modelos dimensionales, los coeficientes deben compensar las diferentes potencias de x para que todos los términos de P compartan unidad.

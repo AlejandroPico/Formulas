@@ -3,7 +3,7 @@
   "name": "Energía potencial gravitatoria",
   "year": 1687,
   "field": "Mecánica clásica",
-  "level": "ESO/Bachillerato",
+  "level": "ESO y Bachillerato",
   "color": "#22c55e",
   "formula": [
     "\\Delta U=mg\\Delta h",
@@ -16,10 +16,7 @@
   "author": "",
   "formulaText": "Cerca de la superficie y con g uniforme, elevar un cuerpo cambia su energía potencial en mgΔh.",
   "tags": [
-    "Mecánica clásica",
-    "aprendizaje",
-    "simulación",
-    "revisión completa"
+    "mecánica clásica"
   ],
   "prerequisites": [
     "Álgebra y unidades"

@@ -1,6 +1,7 @@
 import { promises as fs } from "node:fs";
 import path from "node:path";
 import { execFileSync } from "node:child_process";
+import {canonicalMetadata} from '../formulas/shared/taxonomy.js';
 
 const ROOT = process.cwd();
 const FORMULAS_DIR = path.join(ROOT, "formulas");
@@ -35,7 +36,7 @@ for (const name of await fs.readdir(FORMULAS_DIR)) {
   const metaPath = path.join(folderPath, "meta.json");
   if (!(await exists(metaPath))) continue;
 
-  const meta = await readJson(metaPath, {});
+  const meta = canonicalMetadata(await readJson(metaPath, {}));
   const previousEntry = previousById.get(meta.id || name) || {};
   const formulaPath = path.join(folderPath, "formula.tex");
   const formula = firstNonEmptyList(await readFormula(formulaPath), meta.formula, previousEntry.formula);

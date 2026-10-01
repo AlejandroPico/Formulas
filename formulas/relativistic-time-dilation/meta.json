@@ -3,7 +3,7 @@
   "name": "Dilatación temporal",
   "year": 1905,
   "field": "Relatividad especial",
-  "level": "Bachillerato/Universidad inicial",
+  "level": "Bachillerato y universidad inicial",
   "color": "#2563eb",
   "formula": [
     "Δt=γΔτ",
@@ -21,8 +21,7 @@
     "gravedad",
     "lorentz",
     "schwarzschild",
-    "espaciotiempo",
-    "simulacion"
+    "espaciotiempo"
   ],
   "prerequisites": [
     "algebra",

@@ -11,5 +11,6 @@
     "el gradiente de una pérdida respecto a un peso se calcula encadenando derivadas locales",
     "el error se propaga hacia atrás desde la salida hasta las capas anteriores"
   ],
-  "summary": "Algoritmo que calcula gradientes en redes neuronales aplicando la regla de la cadena capa por capa."
+  "summary": "Algoritmo que calcula gradientes en redes neuronales aplicando la regla de la cadena capa por capa.",
+  "tags": []
 }

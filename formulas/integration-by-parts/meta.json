@@ -4,7 +4,7 @@
   "author": "Cálculo diferencial e integral clásico",
   "year": 1700,
   "field": "Cálculo integral",
-  "level": "Bachillerato/Universidad inicial",
+  "level": "Bachillerato y universidad inicial",
   "color": "#2563eb",
   "simulation": "integration-by-parts",
   "formulaText": "La regla del producto, leída en sentido inverso, intercambia una integral por un término de borde y otra integral.",
@@ -84,10 +84,7 @@
     "Derivadas y límites"
   ],
   "tags": [
-    "Cálculo integral",
-    "aprendizaje",
-    "simulación",
-    "revisión completa"
+    "cálculo integral"
   ],
   "learningPath": [
     "Intercambios",

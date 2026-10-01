@@ -14,9 +14,8 @@
     "álgebra",
     "combinatoria",
     "binomios",
-    "Newton",
-    "Pascal",
-    "simulación"
+    "newton",
+    "pascal"
   ],
   "prerequisites": [
     "Potencias",

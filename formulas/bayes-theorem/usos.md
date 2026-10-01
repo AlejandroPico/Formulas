@@ -1,10 +1,11 @@
 # Usos
 
-- Diagnóstico médico y tests con falsos positivos.
-- Filtros de spam y clasificación probabilística.
-- Inferencia estadística bayesiana.
-- Actualización de creencias con nueva evidencia.
-- Modelos de riesgo.
-- Aprendizaje automático y redes bayesianas.
+Interpretar indicadores de calidad; razonar con información nueva; evitar la falacia de ignorar tasas base. Las frecuencias naturales hacen visible el denominador correcto. El ejemplo no es un diagnóstico médico ni presupone independencia entre A y B.
 
-Bayes es especialmente valioso cuando la evidencia debe interpretarse teniendo en cuenta una probabilidad previa.
+## Antes de aplicar
+
+P(B)>0. Las tasas condicionales se estiman en grupos diferentes. Con evidencia de probabilidad cero, la posterior no se calcula dividiendo cero.
+
+## Qué compara el laboratorio
+
+En una fábrica, un indicador detecta piezas defectuosas. Cuenta verdaderos y falsos avisos entre 1000 piezas; la tasa base cambia el significado de un aviso.

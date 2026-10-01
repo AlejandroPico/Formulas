@@ -15,11 +15,10 @@
   "formulaText": "Sintoniza un oscilador sin rozamiento; reproduce su movimiento y observa velocidad, aceleración y conservación de energía.",
   "tags": [
     "fisica",
-    "mecanica",
-    "energia",
+    "mecánica",
+    "energía",
     "momento",
-    "oscilaciones",
-    "simulacion"
+    "oscilaciones"
   ],
   "prerequisites": [
     "algebra",

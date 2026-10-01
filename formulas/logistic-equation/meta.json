@@ -11,5 +11,6 @@
     "la población crece proporcionalmente a N y se frena al acercarse a la capacidad de carga K",
     "el factor uno menos N sobre K reduce el crecimiento cuando el entorno se satura"
   ],
-  "summary": "Modelo de crecimiento limitado por recursos con saturación hacia una capacidad de carga."
+  "summary": "Modelo de crecimiento limitado por recursos con saturación hacia una capacidad de carga.",
+  "tags": []
 }

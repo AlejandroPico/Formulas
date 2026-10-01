@@ -1,31 +1,9 @@
 # Derivación
 
-La demostración clásica evita buscar una primitiva directa. Se define:
+Escribe I² como integral doble de e^(−a(x²+y²)). Su positividad permite separar las integrales. Cambia a polares: x²+y²=r² y el elemento de área es r dr dθ. La integral radial vale 1/(2a) y la angular 2π; por tanto I²=π/a. Como I>0, toma la raíz positiva. Una ventana finita contiene menos área y deja una cola calculable con erf.
 
-`I=∫₋∞∞ e^{-x²}dx`.
+## Comprueba el resultado
 
-En lugar de calcular `I` directamente, se calcula `I²`:
+Para a=1, ¿cuánto vale la integral sobre toda la recta? Prueba polar: I²=π, I positivo, así que I=√π.
 
-`I²=(∫₋∞∞ e^{-x²}dx)(∫₋∞∞ e^{-y²}dy)`.
-
-Como las variables `x` e `y` son independientes, esto se convierte en una integral doble sobre todo el plano:
-
-`I²=∫∫ e^{-(x²+y²)}dxdy`.
-
-La expresión `x²+y²` sugiere pasar a coordenadas polares, donde `x²+y²=r²` y el elemento de área se transforma como `dxdy=rdrdθ`. Entonces:
-
-`I²=∫₀^{2π}∫₀∞ e^{-r²}rdrdθ`.
-
-La integral radial se resuelve con `u=r²`, `du=2rdr`:
-
-`∫₀∞ e^{-r²}rdr=1/2`.
-
-La parte angular vale `2π`, por tanto:
-
-`I²=2π·1/2=π`.
-
-Como `I` es positiva, se concluye:
-
-`I=√π`.
-
-El simulador muestra una versión truncada `∫₋ᵇᵇ e^{-x²}dx`. Al crecer `b`, esa integral parcial se aproxima al valor total.
+a>0; integración sobre toda la recta. El área de [−b,b] no es igual al total para un b finito.

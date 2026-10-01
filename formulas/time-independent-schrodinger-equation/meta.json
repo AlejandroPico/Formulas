@@ -17,14 +17,13 @@
     "Problema de autovalores que selecciona energías físicamente permitidas."
   ],
   "tags": [
-    "mecanica cuantica",
+    "mecánica cuántica",
     "cuantica",
     "schrodinger",
     "hamiltoniano",
     "pauli",
     "bloch",
-    "oscilador",
-    "simulacion"
+    "oscilador"
   ],
   "prerequisites": [
     "algebra lineal",

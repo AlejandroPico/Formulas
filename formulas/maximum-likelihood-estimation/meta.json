@@ -17,10 +17,9 @@
     "Selecciona el parámetro que hace más probable la muestra observada."
   ],
   "tags": [
-    "estadistica",
+    "estadística",
     "inferencia",
-    "datos",
-    "simulacion"
+    "datos"
   ],
   "prerequisites": [
     "estadistica descriptiva",

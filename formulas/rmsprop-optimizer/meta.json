@@ -2,7 +2,7 @@
   "id": "rmsprop-optimizer",
   "name": "RMSProp: propagación de media cuadrática",
   "year": 2012,
-  "field": "Machine Learning",
+  "field": "Aprendizaje automático",
   "level": "Universidad intermedia",
   "color": "#0284c7",
   "formula": [
@@ -19,13 +19,12 @@
     "Adapta la tasa efectiva dividiendo el gradiente por la raíz de su energía histórica."
   ],
   "tags": [
-    "machine learning",
-    "deep learning",
-    "optimizacion",
+    "aprendizaje automático",
+    "aprendizaje profundo",
+    "optimización",
     "redes neuronales",
-    "activacion",
-    "backpropagation",
-    "simulacion"
+    "activación",
+    "backpropagation"
   ],
   "prerequisites": [
     "calculo",

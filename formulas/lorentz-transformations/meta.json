@@ -12,5 +12,6 @@
     "t prima = gamma por tiempo menos velocidad por x dividido entre c al cuadrado",
     "gamma = uno dividido entre raíz de uno menos beta al cuadrado"
   ],
-  "summary": "Relacionan las coordenadas de espacio y tiempo medidas por observadores inerciales en movimiento relativo."
+  "summary": "Relacionan las coordenadas de espacio y tiempo medidas por observadores inerciales en movimiento relativo.",
+  "tags": []
 }

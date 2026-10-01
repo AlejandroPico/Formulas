@@ -1,36 +1,24 @@
-# Ficha
+# Interpolación de Lagrange
 
-## Identificación
+Una combinación de bases cardinales atraviesa cada dato exactamente. Interpolar no es ajustar por mínimos cuadrados ni garantizar precisión lejos de los nodos.
 
-- Nombre: Interpolación de Lagrange.
-- Área: Análisis numérico.
-- Nivel recomendado: Universidad inicial.
-- Tipo de fórmula: interpolación polinómica exacta.
+## Magnitudes
 
-## Fórmula principal
+| Símbolo | Significado |
+| :-- | :-- |
+| P | Polinomio interpolador de grado como máximo n. |
+| x | Variable de evaluación; x_i son abscisas de datos distintas. |
+| y | Ordenada del dato i. |
+| L | Base cardinal de Lagrange asociada al nodo i. |
+| i | Índice del nodo cuya base se construye. |
+| j | Índice de los demás nodos. |
+| n | Grado máximo: con n+1 nodos distintos. |
+| δ | Delta de Kronecker: vale uno si i=j y cero si son diferentes. |
 
-`P(x)=sum y_i L_i(x)`.
+## Alcance
 
-`L_i(x)=prod_{j!=i}(x-x_j)/(x_i-x_j)`.
+Abscisas distintas; datos de una función. Nodos repetidos requieren otra formulación, como interpolación de Hermite con información de derivadas.
 
-## Variables
+## Unidades
 
-- `x_i`: abscisas de los nodos.
-- `y_i`: valores conocidos de la función o de los datos.
-- `L_i`: polinomio base de Lagrange.
-- `P(x)`: polinomio interpolador.
-
-## Condición
-
-Los valores `x_i` deben ser distintos. Si dos nodos tienen la misma abscisa, aparece división por cero y no hay interpolación polinómica ordinaria bien definida.
-
-## Lectura del simulador
-
-El simulador fija tres nodos en el eje `x` y permite modificar sus valores `y`. La curva resultante es el polinomio de grado como máximo dos que pasa por los tres puntos.
-
-## Errores habituales
-
-- Confundir interpolación con regresión.
-- Usar nodos repetidos.
-- Pensar que más puntos siempre producen mejor comportamiento global.
-- Olvidar que el polinomio puede oscilar fuera del intervalo de datos.
+La base L_i es adimensional porque divide diferencias de x con la misma unidad. P conserva la unidad de y. Un resultado fuera del intervalo de nodos es extrapolación y su exactitud en los tres datos no limita el error allí.

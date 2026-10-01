@@ -18,13 +18,12 @@
     "Añade inercia al descenso de gradiente para acelerar direcciones persistentes y suavizar zigzags."
   ],
   "tags": [
-    "machine learning",
-    "deep learning",
-    "optimizacion",
+    "aprendizaje automático",
+    "aprendizaje profundo",
+    "optimización",
     "redes neuronales",
-    "activacion",
-    "backpropagation",
-    "simulacion"
+    "activación",
+    "backpropagation"
   ],
   "prerequisites": [
     "calculo",

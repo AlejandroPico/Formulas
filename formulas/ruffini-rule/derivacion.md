@@ -1,24 +1,9 @@
 # Derivación
 
-Tomemos un polinomio cúbico:
+Baja el primer coeficiente. Multiplica el resultado por r y suma el siguiente coeficiente; repite hasta el término independiente. La expansión de (x−r)Q más el último valor recupera exactamente P. Sustituir x=r deja solo el resto, probando el teorema del resto. En x³−6x²+11x−6, los valores 1,2,3 son raíces.
 
-`P(x)=Ax^3+Bx^2+Cx+D`.
+## Comprueba el resultado
 
-Queremos dividirlo por `x-r`. El cociente será un polinomio cuadrático:
+Divide x³−6x²+11x−6 por x. ¿Qué resto obtienes? Teorema del resto: P(0)=−6.
 
-`Q(x)=qx^2+sx+t`.
-
-La identidad de división dice:
-
-`P(x)=(x-r)Q(x)+R`.
-
-Ruffini permite obtener `q`, `s`, `t` y `R` usando solo coeficientes. Se baja el primer coeficiente `A`. Luego se multiplica por `r` y se suma al siguiente coeficiente. El proceso se repite hasta llegar al resto.
-
-Para coeficientes `[A,B,C,D]`:
-
-- Primer coeficiente del cociente: `A`.
-- Segundo: `B+rA`.
-- Tercero: `C+r(B+rA)`.
-- Resto: `D+r(C+r(B+rA))`.
-
-Ese resto coincide con `P(r)`. Si vale cero, la división es exacta y `x-r` es factor del polinomio.
+Divisor x−r de coeficiente principal uno. Para ax−b hace falta extraer a y ajustar cociente. Deben incluirse coeficientes cero de términos ausentes.

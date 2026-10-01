@@ -17,14 +17,13 @@
     "Operadores escalera que suben o bajan niveles discretos con factores de amplitud."
   ],
   "tags": [
-    "mecanica cuantica",
+    "mecánica cuántica",
     "cuantica",
     "schrodinger",
     "hamiltoniano",
     "pauli",
     "bloch",
-    "oscilador",
-    "simulacion"
+    "oscilador"
   ],
   "prerequisites": [
     "algebra lineal",

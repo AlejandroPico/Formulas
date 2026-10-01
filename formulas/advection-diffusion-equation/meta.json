@@ -16,13 +16,12 @@
     "Combina transporte por corriente y ensanchamiento difusivo de una concentración."
   ],
   "tags": [
-    "fluidos",
+    "mecánica de fluidos",
     "transporte",
-    "edp",
+    "ecuaciones diferenciales",
     "viscosidad",
-    "adveccion",
-    "difusion",
-    "simulacion"
+    "advección",
+    "difusión"
   ],
   "prerequisites": [
     "calculo vectorial",

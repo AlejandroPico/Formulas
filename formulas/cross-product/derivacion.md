@@ -1,13 +1,9 @@
-# Derivacion
+# Derivación
 
-Para `u=(u1,u2,u3)` y `v=(v1,v2,v3)`, el producto vectorial se define como el vector perpendicular a ambos cuya magnitud es el area orientada del paralelogramo.
+Desarrolla el determinante formal con los vectores unitarios cartesianos y las filas a,b. Comprueba por productos escalares que a·(a×b)=b·(a×b)=0. La identidad |a×b|²=|a|²|b|²−(a·b)² da la magnitud. Si a y b son paralelos o uno es cero, el área y el vector normal se anulan: no hay una dirección normal única definida por el producto.
 
-La formula por componentes es:
+## Comprueba el resultado
 
-`u x v = (u2v3-u3v2, u3v1-u1v3, u1v2-u2v1)`.
+eₓ×eᵧ apunta a +z. ¿Cuánto vale su componente z? Regla de la mano derecha: eₓ×eᵧ=e_z.
 
-En el plano `xy`, si `u=(u1,u2,0)` y `v=(v1,v2,0)`, solo queda componente `z`:
-
-`u x v = (0,0,u1v2-u2v1)`.
-
-El modulo es `|u1v2-u2v1|`, que coincide con el determinante `2x2` formado por las componentes planas y representa el area del paralelogramo.
+Vectores en espacio euclídeo tridimensional con una orientación derecha fijada. No se extiende esta fórmula de tres componentes a cualquier dimensión sin definir otra operación.

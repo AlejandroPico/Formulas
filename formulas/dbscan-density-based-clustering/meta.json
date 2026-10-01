@@ -2,7 +2,7 @@
   "id": "dbscan-density-based-clustering",
   "name": "DBSCAN: agrupamiento espacial basado en densidad",
   "year": 1996,
-  "field": "Machine Learning / Clustering",
+  "field": "Aprendizaje automático / Agrupamiento",
   "level": "Universidad inicial",
   "color": "#8b5cf6",
   "formula": [
@@ -18,15 +18,14 @@
     "Agrupa puntos conectados por densidad y detecta ruido sin fijar K."
   ],
   "tags": [
-    "machine learning",
+    "aprendizaje automático",
     "clustering",
     "svm",
     "kernel",
     "pca",
     "svd",
     "pagerank",
-    "grafos",
-    "simulacion"
+    "grafos"
   ],
   "prerequisites": [
     "algebra lineal",

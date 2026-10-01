@@ -1,11 +1,11 @@
 # Significado
 
-La fórmula de Herón esférica, también conocida como fórmula de L'Huilier, calcula el exceso esférico `E` de un triángulo trazado sobre una esfera a partir de sus lados curvos `a`, `b` y `c`.
+La fórmula de L’Huilier obtiene el exceso esférico desde tres lados angulares. El área es ese exceso por R²; no se debe sustituir una distancia en metros dentro de una tangente.
 
-En geometría esférica, el área no depende solo de una base y una altura plana: está ligada al exceso angular. Para una esfera de radio `R`, el área es:
+## Del símbolo al fenómeno
 
-`A=ER²`.
+Lados a,b,c son ángulos centrales en grados en los controles y radianes en la fórmula de L’Huilier. Usa arcos menores, perímetro menor que una vuelta y desigualdades triangulares estrictas.
 
-Cuando `R=1`, el área coincide numéricamente con el exceso esférico `E`.
+## Ejemplo
 
-El simulador mantiene dos lados fijos y permite variar el lado `a`. Al cambiar los arcos, cambia el semiperímetro esférico y con él el exceso `E`.
+Un triángulo de tres ángulos rectos tiene exceso π/2. En R=1, ¿cuál es su área? Área esférica: E·R²=π/2.

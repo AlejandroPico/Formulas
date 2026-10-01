@@ -2,7 +2,7 @@
   "id": "batch-normalization",
   "name": "Batch Normalization",
   "year": 2015,
-  "field": "Deep Learning",
+  "field": "Aprendizaje profundo",
   "level": "Universidad intermedia",
   "color": "#2563eb",
   "formula": [
@@ -19,12 +19,11 @@
     "Normaliza activaciones usando estadísticas del mini-batch para estabilizar entrenamiento."
   ],
   "tags": [
-    "machine learning",
+    "aprendizaje automático",
     "nlp",
     "teoria de la informacion",
     "normalizacion",
-    "funciones de perdida",
-    "simulacion"
+    "funciones de perdida"
   ],
   "prerequisites": [
     "probabilidad",

@@ -3,7 +3,7 @@
   "name": "Relación de transformación en transformador ideal",
   "year": 1831,
   "field": "Electrotecnia / Máquinas eléctricas",
-  "level": "Bachillerato/Universidad inicial",
+  "level": "Bachillerato y universidad inicial",
   "color": "#8b5cf6",
   "formula": [
     "V_p/V_s=N_p/N_s=a",
@@ -18,13 +18,12 @@
     "Relaciona tensión, corriente y número de espiras en un transformador ideal."
   ],
   "tags": [
-    "electronica",
+    "electrónica",
     "electrotecnia",
     "corriente alterna",
     "semiconductores",
     "trifasica",
-    "potencia",
-    "simulacion"
+    "potencia"
   ],
   "prerequisites": [
     "ley de ohm",

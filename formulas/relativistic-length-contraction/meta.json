@@ -3,7 +3,7 @@
   "name": "Contracción de longitudes",
   "year": 1905,
   "field": "Relatividad especial",
-  "level": "Bachillerato/Universidad inicial",
+  "level": "Bachillerato y universidad inicial",
   "color": "#ef4444",
   "formula": [
     "L=L0√(1−v²/c²)"
@@ -20,8 +20,7 @@
     "gravedad",
     "lorentz",
     "schwarzschild",
-    "espaciotiempo",
-    "simulacion"
+    "espaciotiempo"
   ],
   "prerequisites": [
     "algebra",

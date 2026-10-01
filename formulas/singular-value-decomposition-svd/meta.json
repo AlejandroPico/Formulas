@@ -2,7 +2,7 @@
   "id": "singular-value-decomposition-svd",
   "name": "SVD: descomposición en valores singulares",
   "year": 1873,
-  "field": "Álgebra lineal / Machine Learning",
+  "field": "Álgebra lineal / Aprendizaje automático",
   "level": "Universidad intermedia",
   "color": "#ea580c",
   "formula": [
@@ -18,15 +18,14 @@
     "Factoriza una matriz en direcciones ortogonales y escalas de importancia."
   ],
   "tags": [
-    "machine learning",
+    "aprendizaje automático",
     "clustering",
     "svm",
     "kernel",
     "pca",
     "svd",
     "pagerank",
-    "grafos",
-    "simulacion"
+    "grafos"
   ],
   "prerequisites": [
     "algebra lineal",

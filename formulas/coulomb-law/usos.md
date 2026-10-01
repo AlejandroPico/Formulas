@@ -1,10 +1,11 @@
 # Usos
 
-- Electrostatica basica: estimar fuerzas entre cargas puntuales.
-- Campo electrico: definir la fuerza por unidad de carga de prueba.
-- Potencial electrico: relacionar fuerza, energia y trabajo electrico.
-- Quimica: interpretar atracciones y repulsiones entre nucleos y electrones.
-- Materiales dielectricos: estudiar como un medio modifica la interaccion.
-- Enseñanza: visualizar signo de carga, atraccion, repulsion y distancia.
+Interpretar interacciones electrostáticas, comparar fuerzas y separar signo de magnitud. La fuente queda fija; el simulador muestra una sonda y una fuerza instantánea, no integra una órbita de cargas ni radiación.
 
-La ley es una idealizacion. Funciona muy bien para cargas puntuales o distribuciones con simetria sencilla, pero los sistemas reales pueden requerir integrales de campo, condiciones de frontera y permitividad del medio.
+## Antes de aplicar
+
+Cargas puntuales en vacío o medio homogéneo con permitividad apropiada, régimen electrostático. r>0; en el origen no se suaviza artificialmente la singularidad.
+
+## Qué compara el laboratorio
+
+Carga fuente fija en el origen y carga de prueba en (x,y). El sentido de la fuerza depende de ambas cargas; el campo depende solo de la fuente.

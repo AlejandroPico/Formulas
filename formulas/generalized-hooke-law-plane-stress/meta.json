@@ -16,14 +16,13 @@
   "source": "files",
   "formulaText": "Explora una placa isotrópica con tracción, compresión y cortante; observa acoplamiento de Poisson y espesor en 3D.",
   "tags": [
-    "mecanica",
+    "mecánica",
     "hidraulica",
     "transferencia de calor",
     "fatiga",
     "elasticidad",
     "mohr",
-    "hooke",
-    "simulacion"
+    "hooke"
   ],
   "prerequisites": [
     "algebra",

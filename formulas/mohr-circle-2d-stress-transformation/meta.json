@@ -18,14 +18,13 @@
     "Obtiene tensiones principales y cortante máxima mediante una construcción geométrica."
   ],
   "tags": [
-    "mecanica",
+    "mecánica",
     "hidraulica",
     "transferencia de calor",
     "fatiga",
     "elasticidad",
     "mohr",
-    "hooke",
-    "simulacion"
+    "hooke"
   ],
   "prerequisites": [
     "algebra",

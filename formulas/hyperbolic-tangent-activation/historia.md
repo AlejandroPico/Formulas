@@ -1,3 +1,5 @@
 # Historia
 
-La tangente hiperbólica es una función clásica del análisis; en redes neuronales fue muy usada antes del dominio de ReLU.
+Las funciones hiperbólicas anteceden a las redes neuronales. Su uso como activaciones suaves y centradas en cero conecta ese análisis clásico con métodos de optimización y propagación de gradientes.
+
+[Formulación y referencia de estudio](https://dlmf.nist.gov/4.35). El año histórico no es la fecha de creación del archivo ni la revisión registrada en Inventario.

@@ -11,5 +11,6 @@
     "las presas crecen de forma natural y disminuyen por encuentros con depredadores",
     "los depredadores crecen al alimentarse de presas y mueren en ausencia de alimento"
   ],
-  "summary": "Modelo depredador-presa que genera oscilaciones acopladas entre dos poblaciones."
+  "summary": "Modelo depredador-presa que genera oscilaciones acopladas entre dos poblaciones.",
+  "tags": []
 }

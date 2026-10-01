@@ -1,9 +1,9 @@
 # Derivación
 
-La probabilidad conjunta de dos sucesos puede escribirse de dos maneras equivalentes: `P(A y B)=P(A)P(B|A)` y también `P(A y B)=P(B)P(A|B)`.
+Por definición P(A|B)=P(A∩B)/P(B). El mismo suceso conjunto vale P(B|A)P(A). Sustituye y usa probabilidad total para calcular P(B). Con 10 % de defectos, detección de 80 % y falsos avisos de 10 %, por 1000 piezas se esperan 80 avisos verdaderos y 90 falsos: posterior 80/170≈47,06 %.
 
-Al igualar ambas expresiones y despejar `P(A|B)`, aparece la forma básica del teorema de Bayes.
+## Comprueba el resultado
 
-Cuando `B` puede ocurrir tanto si `A` es verdadero como si no lo es, se usa la probabilidad total para expandir `P(B)`.
+De 1000 piezas, 100 defectuosas. Hay 80 avisos verdaderos y 90 falsos. ¿Cuántos avisos hay? Cuenta ambos grupos: 80+90=170.
 
-En un test diagnóstico, eso significa separar positivos verdaderos y falsos positivos.
+P(B)>0. Las tasas condicionales se estiman en grupos diferentes. Con evidencia de probabilidad cero, la posterior no se calcula dividiendo cero.

@@ -1,9 +1,5 @@
 # Historia
 
-La distribución normal se desarrolló en el estudio de errores de observación, astronomía y probabilidad.
+De Moivre estudió aproximaciones a conteos y Gauss y Laplace desarrollaron la distribución en teoría de errores y probabilidad. Su importancia no elimina la necesidad de comprobar si un conjunto de datos se ajusta al modelo.
 
-Laplace y Gauss la usaron para describir la acumulación de pequeños errores y para justificar métodos de estimación.
-
-Con el tiempo se convirtió en una distribución central por su relación con el teorema central del límite.
-
-Hoy es una referencia básica en estadística, inferencia, control de calidad, ciencia de datos y modelización de incertidumbre.
+[Formulación y referencia de estudio](https://ocw.mit.edu/courses/18-05-introduction-to-probability-and-statistics-spring-2022/). El año histórico no es la fecha de creación del archivo ni la revisión registrada en Inventario.

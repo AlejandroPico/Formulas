@@ -1,11 +1,11 @@
 # Significado
 
-La integral de Gauss afirma que el área total bajo la curva `e^{-x²}` en toda la recta real es exactamente `√π`:
+Una integral sin primitiva elemental puede tener un valor total exacto. Elevarla al cuadrado transforma el problema en un área de dos variables con simetría radial.
 
-`∫₋∞∞ e^{-x²}dx=√π`.
+## Del símbolo al fenómeno
 
-La identidad es sorprendente porque la función `e^{-x²}` no tiene una primitiva elemental expresable con las funciones habituales. Aun así, su área total sí tiene un valor cerrado y muy limpio. Esta separación entre “no puedo escribir una primitiva simple” y “sí puedo conocer el área total” es una de las primeras grandes lecciones del análisis.
+La integral de exp(−a x²) sobre toda la recta es √(π/a), a>0. La ventana [−b,b] omite una cola cuantificada. En 3D, la superficie exp(−a(x²+y²)) conecta el cuadrado de la integral con coordenadas polares.
 
-La curva tiene forma de campana: es positiva, simétrica respecto del eje vertical, alcanza su máximo en `x=0` y decrece muy rápido cuando `|x|` aumenta. Por eso, en el simulador, al ampliar el intervalo `[-b,b]`, el área acumulada se acerca rápidamente a `√π`.
+## Ejemplo
 
-Esta integral es el corazón matemático de la distribución normal. Al normalizar la campana se obtiene la densidad gaussiana, fundamental en estadística, errores de medida, difusión, mecánica estadística, procesamiento de señales y aprendizaje automático.
+Para a=1, ¿cuánto vale la integral sobre toda la recta? Prueba polar: I²=π, I positivo, así que I=√π.

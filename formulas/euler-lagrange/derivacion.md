@@ -1,11 +1,9 @@
 # Derivación
 
-Se parte de la acción `S`, definida como la integral temporal del lagrangiano. La trayectoria real se compara con trayectorias vecinas que tienen los mismos extremos. El principio variacional exige que el cambio de la acción sea nulo en primer orden.
+Varía q a q+εη con η=0 en los extremos. La primera variación es ∫(L_qη+L_q̇η̇)dt. Integra el segundo término por partes: el borde desaparece y queda ∫[L_q−d(L_q̇)/dt]ηdt=0. Al ser η arbitraria se obtiene Euler–Lagrange. Para L=m q̇²/2−kq²/2 resulta m q̈+kq=0. En la familia q=a sin(πt), S=a²(mπ²−k)/4; el signo puede ser positivo, cero o negativo.
 
-La variación produce dos términos: uno asociado a la coordenada generalizada y otro asociado a su velocidad. El término de velocidad se integra por partes. Como las trayectorias comparadas tienen los mismos extremos, el término de borde se cancela.
+## Comprueba el resultado
 
-Después de esa integración, toda la variación queda multiplicada por una función arbitraria. Para que el resultado sea cero para cualquier perturbación permitida, el factor que acompaña a esa perturbación debe anularse. Así aparece la ecuación:
+En q=0 y q̇=0, L=m q̇²/2−kq²/2. ¿Cuánto vale la acción? T y V se anulan en todo instante: S=0.
 
-`d/dt(parcial L respecto a qdot) - parcial L respecto a q = 0`.
-
-En sistemas con muchas coordenadas hay una ecuación por cada coordenada. En teorías de campos, la misma idea se aplica a campos definidos en el espacio-tiempo y genera ecuaciones diferenciales de campo.
+L diferenciable, variaciones con extremos fijos, sistema conservativo descrito por este L. La segunda variación y la duración afectan a la clasificación del punto estacionario.

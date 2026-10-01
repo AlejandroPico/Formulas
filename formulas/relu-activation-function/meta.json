@@ -2,7 +2,7 @@
   "id": "relu-activation-function",
   "name": "Función ReLU: Rectified Linear Unit",
   "year": 1969,
-  "field": "Deep Learning",
+  "field": "Aprendizaje profundo",
   "level": "Universidad inicial",
   "color": "#10b981",
   "formula": [
@@ -18,13 +18,12 @@
     "Activación rectificada, barata y eficaz, con riesgo de neurona muerta en la región negativa."
   ],
   "tags": [
-    "machine learning",
-    "deep learning",
-    "optimizacion",
+    "aprendizaje automático",
+    "aprendizaje profundo",
+    "optimización",
     "redes neuronales",
-    "activacion",
-    "backpropagation",
-    "simulacion"
+    "activación",
+    "backpropagation"
   ],
   "prerequisites": [
     "calculo",

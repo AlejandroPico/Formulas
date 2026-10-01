@@ -12,5 +12,6 @@
     "corriente = voltaje dividido entre resistencia",
     "potencia = voltaje por corriente"
   ],
-  "summary": "Relaciona tension, corriente y resistencia en un conductor ohmico."
+  "summary": "Relaciona tension, corriente y resistencia en un conductor ohmico.",
+  "tags": []
 }

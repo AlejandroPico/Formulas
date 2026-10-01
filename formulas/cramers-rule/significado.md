@@ -1,9 +1,11 @@
 # Significado
 
-La regla de Cramer resuelve sistemas lineales cuadrados usando determinantes. Para un sistema `Ax=b`, cada incógnita se obtiene dividiendo dos determinantes: el determinante de una matriz modificada entre el determinante de la matriz de coeficientes.
+Cada incógnita es un cociente de determinantes. Esta regla da una solución única cuando la matriz es invertible; no resuelve por división un sistema singular.
 
-En un sistema `2x2`, la matriz de coeficientes contiene los números que multiplican a `x` e `y`. El vector de términos independientes contiene los resultados de cada ecuación. Para hallar `x`, se sustituye la columna de `x` por ese vector; para hallar `y`, se sustituye la columna de `y`.
+## Del símbolo al fenómeno
 
-La condición esencial es `det(A) != 0`. Si el determinante principal es cero, el sistema no tiene una solución única. Puede ser incompatible o tener infinitas soluciones, pero Cramer no puede producir un único par ordenado.
+Las rectas a·x+y=c y b·x+y=d se cruzan si D=a−b no es cero. Comprueba qué sucede al hacerlas paralelas.
 
-El simulador muestra el caso `2x2`: calcula el determinante principal, el determinante de `x`, el determinante de `y` y los cocientes finales. También avisa cuando el sistema queda degenerado.
+## Ejemplo
+
+x+y=4 y −x+y=0. ¿Cuánto vale x? Resta las ecuaciones: 2x=4, así que x=2.

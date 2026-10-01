@@ -3,7 +3,7 @@
   "name": "Covarianza",
   "year": 1900,
   "field": "Probabilidad y estadística",
-  "level": "Bachillerato/Universidad inicial",
+  "level": "Bachillerato y universidad inicial",
   "color": "#10b981",
   "formula": [
     "σxy=(1/N)∑(xᵢ−μx)(yᵢ−μy)"
@@ -16,10 +16,9 @@
     "Mide si dos variables tienden a moverse juntas o en sentido opuesto."
   ],
   "tags": [
-    "estadistica",
+    "estadística",
     "inferencia",
-    "datos",
-    "simulacion"
+    "datos"
   ],
   "prerequisites": [
     "estadistica descriptiva",

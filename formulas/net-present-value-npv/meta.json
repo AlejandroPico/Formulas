@@ -27,8 +27,7 @@
     "npv",
     "irr",
     "duracion",
-    "convexidad",
-    "simulacion"
+    "convexidad"
   ],
   "prerequisites": [
     "algebra",

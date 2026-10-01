@@ -34,3 +34,5 @@ node tools/check-atlas.mjs
 Los niveles son ESO, Bachillerato, Universidad inicial, Universidad y Avanzado. Evita duplicados por id o nombre. Comprueba la existencia de archivos, expresión simbólica, delimitadores, pestañas, interacción del simulador y presentación en escritorio y móvil.
 
 `revisions.json` es el registro de revisiones completas. Contiene un historial por id, con revisión, fecha real, versión del simulador, alcance, resumen y comprobaciones. Conserva las entradas anteriores; no marques una fórmula como revisada por migrar sus archivos o superar comprobaciones automáticas. La fecha de creación se obtiene del historial de Git; las entradas migradas conservan `originalSource` y su fecha original.
+
+Disciplina, nivel y etiquetas se revisan con cada ficha. `shared/taxonomy.js` y `shared/tag-vocabulary.js` proporcionan nombres canónicos compartidos por el generador y el navegador. Las etiquetas describen conceptos; los niveles y el estado de revisión tienen sus propios campos. Los metadatos explícitos no se amplían con etiquetas genéricas al cargar la página. Una normalización de acentos no constituye una revisión completa.

@@ -3,7 +3,7 @@
   "name": "Ecuación de Henderson-Hasselbalch",
   "year": 1916,
   "field": "Química ácido-base",
-  "level": "Bachillerato/Universidad inicial",
+  "level": "Bachillerato y universidad inicial",
   "color": "#0284c7",
   "formula": [
     "pH=pK_a+log10([A^-]/[HA])"
@@ -17,14 +17,13 @@
     "Permite estimar el pH de un tampón a partir de pKa y la proporción base/ácido."
   ],
   "tags": [
-    "quimica",
-    "cinetica",
+    "química",
+    "cinética",
     "equilibrio quimico",
     "acido base",
     "ph",
     "beer lambert",
-    "tampon",
-    "simulacion"
+    "tampon"
   ],
   "prerequisites": [
     "quimica general",

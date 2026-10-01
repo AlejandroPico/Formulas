@@ -1,11 +1,11 @@
 # Significado
 
-La regla de Ruffini es un procedimiento abreviado para dividir un polinomio entre un binomio de la forma `x-r`. También se conoce como división sintética. En lugar de escribir toda la división polinómica, trabaja solo con los coeficientes.
+La división sintética multiplica y suma coeficientes para dividir por un binomio mónico. El último valor coincide con P(r), incluso cuando r no es una raíz.
 
-Si el polinomio es `P(x)` y se divide por `x-r`, el resultado tiene la forma:
+## Del símbolo al fenómeno
 
-`P(x)=(x-r)Q(x)+R`.
+P(x)=x³+b x²+c x+d se divide por x−r. La fila inferior contiene coeficientes del cociente y al final el resto. Un término ausente necesita coeficiente cero.
 
-El resto `R` coincide con `P(r)`. Esta relación es el teorema del resto. Si `P(r)=0`, entonces `x-r` es un factor del polinomio.
+## Ejemplo
 
-El simulador usa un polinomio cúbico `Ax^3+Bx^2+Cx+D` y un valor `r`. Muestra los pasos de la división sintética, el cociente resultante y el resto final.
+Divide x³−6x²+11x−6 por x. ¿Qué resto obtienes? Teorema del resto: P(0)=−6.

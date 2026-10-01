@@ -16,13 +16,12 @@
     "Arrastre viscoso lineal sobre una esfera pequeña en régimen laminar de Reynolds bajo."
   ],
   "tags": [
-    "fluidos",
+    "mecánica de fluidos",
     "transporte",
-    "edp",
+    "ecuaciones diferenciales",
     "viscosidad",
-    "adveccion",
-    "difusion",
-    "simulacion"
+    "advección",
+    "difusión"
   ],
   "prerequisites": [
     "calculo vectorial",

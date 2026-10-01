@@ -1,9 +1,9 @@
 # Derivación
 
-Se parte de una colección de pares observados y predichos. Para cada caso se calcula el residuo: diferencia entre el valor real y el valor estimado.
+Define e_i=y_i−ŷ_i. Acumula Σe_i² y divide entre n, el número de datos. Con errores 1,−1,2 se obtiene (1+1+4)/3=2. Para una predicción constante, derivar respecto de la constante da el promedio de y; para una recta, el mínimo satisface ecuaciones normales. El laboratorio compara rectas sobre cinco observaciones y un conjunto con dato extremo.
 
-Al elevar cada residuo al cuadrado, todos los errores se vuelven no negativos y los errores grandes pesan más.
+## Comprueba el resultado
 
-La suma de errores cuadrados se divide entre el número de observaciones para obtener un promedio.
+Errores 1,−1,2. ¿Cuál es su error cuadrático medio? Cuadrados 1,1,4: suma 6 y media 6/3=2.
 
-Cuando se usa como coste de un modelo, minimizar el MSE equivale a buscar parámetros que acerquen la curva de predicción a los datos en sentido cuadrático.
+n>0 y respuestas numéricas comparables. El MSE no es negativo; valores grandes pueden deberse a escala o a observaciones extremas, no solo a un peor algoritmo.

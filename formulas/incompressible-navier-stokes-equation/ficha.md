@@ -1,11 +1,27 @@
-# Ficha
+# Ecuación de Navier-Stokes incompresible
 
-## Identificacion
+Navier–Stokes combina inercia, presión y difusión viscosa bajo conservación de masa. La incompresibilidad significa divergencia cero; no significa inmovilidad ni ausencia de remolinos.
 
-- Nombre: Ecuación de Navier-Stokes incompresible.
-- Area: Mecánica de fluidos.
-- Tipo: ley de arrastre, ecuacion de fluido o ecuacion de transporte.
+## Magnitudes
 
-## Lectura del simulador
+| Símbolo | Significado |
+| :-- | :-- |
+| u | Velocidad vectorial en la ecuación; en la solución 2D, componente horizontal. |
+| v | Componente vertical del flujo 2D. |
+| p | Presión que mantiene el balance de aceleración. |
+| ρ | Densidad constante positiva. |
+| ν | Viscosidad cinemática: difusión del momento. |
+| μ | Viscosidad dinámica. |
+| g | Aceleración de fuerza de volumen; cero en el laboratorio. |
+| U | Amplitud inicial característica de velocidad. |
+| x | Coordenada x normalizada por la longitud característica ℓ=1 m. |
+| y | Coordenada y normalizada por ℓ. |
+| t | Tiempo en segundos. |
 
-Mueve los controles inferiores. Observa lineas de corriente, balances de fuerza, perfiles advectados o pulsos que se ensanchan por difusion. El readout muestra el calculo principal.
+## Alcance
+
+Fluido newtoniano incompresible con coeficientes constantes, campo suficientemente regular. El ejemplo tiene densidad 1 kg/m³, ℓ=1 m, contorno periódico y forzamiento cero; ν=0 recupera su límite inviscido.
+
+## Unidades
+
+Velocidad m/s; ν m²/s; μ Pa·s; presión Pa. Cada término de la ecuación dividida por densidad usa m/s². En las expresiones normalizadas, las funciones seno usan x/ℓ,y/ℓ y el exponente usa −2νt/ℓ². Vorticidad s⁻¹ y energía específica J/kg.

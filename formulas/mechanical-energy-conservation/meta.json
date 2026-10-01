@@ -18,11 +18,10 @@
   ],
   "tags": [
     "fisica",
-    "mecanica",
-    "energia",
+    "mecánica",
+    "energía",
     "momento",
-    "oscilaciones",
-    "simulacion"
+    "oscilaciones"
   ],
   "prerequisites": [
     "algebra",

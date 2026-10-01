@@ -4,7 +4,7 @@
   "author": "Cálculo diferencial clásico",
   "year": 1676,
   "field": "Cálculo diferencial",
-  "level": "Bachillerato/Universidad inicial",
+  "level": "Bachillerato y universidad inicial",
   "color": "#0284c7",
   "simulation": true,
   "formulaText": "Explora una razón con un polo, separa los dos efectos con signo y verifica el dominio antes de derivar.",
@@ -56,5 +56,6 @@
     "Explorar y predecir",
     "Resolver las cuatro misiones",
     "Explicar el resultado"
-  ]
+  ],
+  "tags": []
 }

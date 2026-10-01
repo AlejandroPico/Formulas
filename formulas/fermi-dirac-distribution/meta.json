@@ -11,5 +11,6 @@
     "ocupación media = uno dividido entre exponencial de energía menos energía de Fermi sobre k T más uno",
     "los fermiones obedecen exclusión de Pauli"
   ],
-  "summary": "Describe la ocupación de estados cuánticos por fermiones indistinguibles sujetos al principio de exclusión."
+  "summary": "Describe la ocupación de estados cuánticos por fermiones indistinguibles sujetos al principio de exclusión.",
+  "tags": []
 }

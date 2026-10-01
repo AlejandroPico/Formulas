@@ -15,10 +15,7 @@
   "author": "",
   "formulaText": "El balance real añade máquinas y disipación a las cargas de presión, velocidad y altura.",
   "tags": [
-    "Mecánica de fluidos",
-    "aprendizaje",
-    "simulación",
-    "revisión completa"
+    "mecánica de fluidos"
   ],
   "prerequisites": [
     "Álgebra y unidades"

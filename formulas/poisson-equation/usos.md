@@ -1,11 +1,11 @@
 # Usos
 
-- **Electrostática:** calcular potencial eléctrico a partir de una distribución de carga.
-- **Gravitación newtoniana:** obtener potencial gravitatorio desde una densidad de masa.
-- **Transferencia de calor:** estudiar estados estacionarios con generación interna.
-- **Mecánica de fluidos:** resolver presiones en formulaciones incomprensibles y proyecciones numéricas.
-- **Procesamiento de imágenes:** reconstrucción, mezcla de gradientes y edición de imágenes mediante Poisson.
-- **Métodos numéricos:** elementos finitos, diferencias finitas y volúmenes finitos.
-- **Simulación científica:** campos, potenciales y condiciones de frontera en dominios complejos.
+Comprender fuente, potencial y frontera; distinguir Poisson de Laplace, que tiene f=0. La vista 3D representa una función de dos coordenadas, mientras el mapa de fuente usa otro campo calculado de ella.
 
-Su utilidad práctica está en convertir una distribución de fuentes en una distribución de potencial. Es una de las ecuaciones de referencia cuando un fenómeno depende de curvatura espacial y condiciones de frontera.
+## Antes de aplicar
+
+Dominio cuadrado y condiciones de Dirichlet cero del laboratorio. Una función armónica añadida puede conservar la fuente y alterar el borde, por eso deben declararse ambos.
+
+## Qué compara el laboratorio
+
+Solución manufacturada exacta en el cuadrado [−1,1]²: φ=A(1−x²)(1−y²), con borde φ=0. La fuente f=−2A(2−x²−y²) es calculada, no constante. La altura 3D representa φ.

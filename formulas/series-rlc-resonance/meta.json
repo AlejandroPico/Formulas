@@ -20,9 +20,8 @@
     "electromagnetismo",
     "circuitos",
     "ondas",
-    "energia",
-    "impedancia",
-    "simulacion"
+    "energía",
+    "impedancia"
   ],
   "prerequisites": [
     "electromagnetismo",

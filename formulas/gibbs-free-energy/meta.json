@@ -11,5 +11,6 @@
     "variación de energía libre = variación de entalpía menos temperatura por variación de entropía",
     "si delta G es negativa, el proceso es espontáneo a presión y temperatura constantes"
   ],
-  "summary": "Determina la espontaneidad termodinámica de un proceso a temperatura y presión constantes."
+  "summary": "Determina la espontaneidad termodinámica de un proceso a temperatura y presión constantes.",
+  "tags": []
 }

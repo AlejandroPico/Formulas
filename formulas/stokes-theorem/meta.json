@@ -10,5 +10,6 @@
   "formulaText": [
     "integral de F a lo largo de la frontera = flujo del rotacional de F por la superficie"
   ],
-  "summary": "Relaciona la circulación de un campo por una curva cerrada con el rotacional acumulado sobre una superficie que la tiene como borde."
+  "summary": "Relaciona la circulación de un campo por una curva cerrada con el rotacional acumulado sobre una superficie que la tiene como borde.",
+  "tags": []
 }

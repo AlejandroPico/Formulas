@@ -3,13 +3,14 @@
   "name": "Navier-Stokes",
   "author": "Claude-Louis Navier y George Stokes",
   "year": 1845,
-  "field": "Fluidos",
-  "level": "Avanzado",
+  "field": "Mecánica de fluidos",
+  "level": "Universidad avanzada",
   "color": "#77d9ff",
   "simulation": "navier-stokes",
   "formulaText": [
     "densidad por aceleracion material = menos gradiente de presion mas viscosidad por laplaciano de velocidad mas fuerzas externas",
     "divergencia de velocidad = 0 para fluido incomprensible"
   ],
-  "summary": "Modela el movimiento de fluidos viscosos mediante conservacion de masa y cantidad de movimiento."
+  "summary": "Modela el movimiento de fluidos viscosos mediante conservacion de masa y cantidad de movimiento.",
+  "tags": []
 }

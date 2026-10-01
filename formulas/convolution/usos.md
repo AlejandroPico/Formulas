@@ -1,11 +1,11 @@
 # Usos
 
-- **Procesamiento de señales:** filtrado, suavizado, eco, reverberación y respuesta de sistemas.
-- **Procesamiento de imágenes:** desenfoque, nitidez, detección de bordes y filtros espaciales.
-- **Probabilidad:** distribución de la suma de variables independientes.
-- **Ecuaciones diferenciales:** soluciones mediante funciones de Green.
-- **Audio:** modelado de salas, respuestas impulsionales y efectos acústicos.
-- **Visión artificial:** filtros convolucionales y extracción de características.
-- **Ingeniería de control:** respuesta de sistemas lineales a entradas arbitrarias.
+Entender filtros, respuestas de sistemas y acumulación temporal. El laboratorio permite señales de amplitud negativa y muestra área firmada; el sombreado identifica el solape, no otra señal medida.
 
-La convolución es una operación de composición: muestra cómo una forma modifica a otra. Por eso aparece en cualquier disciplina donde haya señales, filtros, respuestas o acumulación de efectos desplazados.
+## Antes de aplicar
+
+Integral o suma convergente. Para interpretación como respuesta de un sistema se requiere linealidad e invariancia temporal; causalidad restringe soportes, pero no es parte de toda convolución abstracta.
+
+## Qué compara el laboratorio
+
+Dos pulsos causales rectangulares se convolucionan. El segundo aparece invertido y desplazado: g(t−τ). El área de producto es la longitud del solape por A·B.

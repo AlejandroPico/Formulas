@@ -2,8 +2,8 @@
   "id": "power-factor-triangle",
   "name": "Factor de potencia y triángulo de potencias",
   "year": 1880,
-  "field": "Electrotecnia / AC",
-  "level": "Bachillerato/Universidad inicial",
+  "field": "Electrotecnia / Corriente alterna",
+  "level": "Bachillerato y universidad inicial",
   "color": "#16a34a",
   "formula": [
     "FP=P/S=cosφ",
@@ -18,13 +18,12 @@
     "Descompone potencia aparente en activa y reactiva para medir eficiencia eléctrica."
   ],
   "tags": [
-    "electronica",
+    "electrónica",
     "electrotecnia",
     "corriente alterna",
     "semiconductores",
     "trifasica",
-    "potencia",
-    "simulacion"
+    "potencia"
   ],
   "prerequisites": [
     "ley de ohm",

@@ -18,14 +18,13 @@
     "Operadores básicos de espín que actúan como observables y generadores de rotación."
   ],
   "tags": [
-    "mecanica cuantica",
+    "mecánica cuántica",
     "cuantica",
     "schrodinger",
     "hamiltoniano",
     "pauli",
     "bloch",
-    "oscilador",
-    "simulacion"
+    "oscilador"
   ],
   "prerequisites": [
     "algebra lineal",

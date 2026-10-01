@@ -3,7 +3,7 @@
   "name": "Puente de Wheatstone",
   "year": 1843,
   "field": "Instrumentación eléctrica",
-  "level": "Bachillerato/Universidad inicial",
+  "level": "Bachillerato y universidad inicial",
   "color": "#8b5cf6",
   "formula": [
     "V_out=0 ⇒ R_x=(R_2R_3)/R_1"
@@ -17,13 +17,12 @@
     "Determina una resistencia desconocida equilibrando dos divisores de tensión."
   ],
   "tags": [
-    "mecanica",
+    "mecánica",
     "resistencia de materiales",
     "transferencia de calor",
-    "electronica",
+    "electrónica",
     "instrumentacion",
-    "mosfet",
-    "simulacion"
+    "mosfet"
   ],
   "prerequisites": [
     "algebra",

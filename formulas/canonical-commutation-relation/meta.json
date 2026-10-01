@@ -18,14 +18,13 @@
   ],
   "tags": [
     "informacion cuantica",
-    "mecanica cuantica",
+    "mecánica cuántica",
     "matriz densidad",
     "von neumann",
     "fidelidad",
     "bloch",
     "conmutador",
-    "pauli",
-    "simulacion"
+    "pauli"
   ],
   "prerequisites": [
     "algebra lineal",

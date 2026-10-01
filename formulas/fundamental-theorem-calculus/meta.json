@@ -4,7 +4,7 @@
   "author": "Newton / Leibniz",
   "year": 1668,
   "field": "Cálculo integral",
-  "level": "Bachillerato/Universidad inicial",
+  "level": "Bachillerato y universidad inicial",
   "color": "#10b981",
   "simulation": true,
   "formulaText": "Conecta tasa y acumulación con áreas de signo, límites invertidos, rectángulos y una secante que converge a la tasa.",
@@ -62,5 +62,6 @@
     "Explorar y predecir",
     "Resolver las cuatro misiones",
     "Explicar el resultado"
-  ]
+  ],
+  "tags": []
 }

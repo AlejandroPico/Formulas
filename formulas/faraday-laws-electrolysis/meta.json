@@ -3,7 +3,7 @@
   "name": "Leyes de Faraday de la electrólisis",
   "year": 1834,
   "field": "Electroquímica",
-  "level": "Bachillerato/Universidad inicial",
+  "level": "Bachillerato y universidad inicial",
   "color": "#ea580c",
   "formula": [
     "m=ItM/(zF)",
@@ -26,8 +26,7 @@
     "hidrogeno",
     "debye huckel",
     "nernst",
-    "faraday",
-    "simulacion"
+    "faraday"
   ],
   "prerequisites": [
     "quimica general",

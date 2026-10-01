@@ -3,7 +3,7 @@
   "name": "Composición relativista de velocidades",
   "year": 1905,
   "field": "Relatividad especial",
-  "level": "Bachillerato/Universidad inicial",
+  "level": "Bachillerato y universidad inicial",
   "color": "#10b981",
   "formula": [
     "u'=(v+u)/(1+vu/c²)"
@@ -20,8 +20,7 @@
     "gravedad",
     "lorentz",
     "schwarzschild",
-    "espaciotiempo",
-    "simulacion"
+    "espaciotiempo"
   ],
   "prerequisites": [
     "algebra",

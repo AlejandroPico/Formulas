@@ -1,33 +1,22 @@
-# Ficha
+# Ecuación de Euler-Lagrange
 
-## Identificación
+Una trayectoria física hace estacionaria la acción entre extremos fijados. Estacionaria significa primera variación nula, no necesariamente mínimo.
 
-- **Nombre:** Ecuación de Euler-Lagrange
-- **Autoría histórica:** Euler y Lagrange
-- **Área:** mecánica analítica, cálculo de variaciones
-- **Nivel:** universidad
-- **Tipo:** ecuación variacional de movimiento
+## Magnitudes
 
-## Variables
+| Símbolo | Significado |
+| :-- | :-- |
+| L | Lagrangiano: energía cinética menos potencial del modelo. |
+| q | Coordenada generalizada; con punto es velocidad. |
+| S | Acción: integral temporal del lagrangiano. |
+| m | Masa positiva del oscilador. |
+| k | Rigidez del potencial armónico. |
+| t | Tiempo; el laboratorio fija un intervalo de 1 s. |
 
-- `L`: lagrangiano del sistema.
-- `q`: coordenada generalizada.
-- `qdot`: velocidad generalizada.
-- `t`: tiempo.
-- `S`: acción.
-- `T`: energía cinética.
-- `V`: energía potencial.
+## Alcance
 
-## Forma habitual
+L diferenciable, variaciones con extremos fijos, sistema conservativo descrito por este L. La segunda variación y la duración afectan a la clasificación del punto estacionario.
 
-`d/dt(∂L/∂qdot)-∂L/∂q=0`
+## Unidades
 
-Si `L=T-V`, la ecuación produce la dinámica del sistema. Para un péndulo simple se obtiene una ecuación angular no lineal: `theta''+(g/l)sin(theta)=0`.
-
-## Lectura del simulador
-
-El simulador representa un péndulo y permite modificar longitud, gravedad y amortiguamiento. Se muestra cómo una misma estructura lagrangiana genera una ecuación de movimiento concreta. También se visualiza la energía cinética, potencial y total para entender el papel de `L=T-V`.
-
-## Advertencias
-
-La ecuación no es un algoritmo numérico por sí sola. Primero se formula el lagrangiano correcto, después se calculan las derivadas y finalmente se obtiene una ecuación diferencial que puede requerir integración numérica.
+L usa J; S usa J·s. q en m, q̇ en m/s, m kg y k N/m. Cada término de Euler–Lagrange para una coordenada de longitud usa N. πt en la trayectoria significa πt/(1 s), para que el seno reciba un argumento adimensional.

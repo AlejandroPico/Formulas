@@ -4,7 +4,7 @@
   "author": "Herón de Alejandría",
   "year": 60,
   "field": "Geometría plana",
-  "level": "ESO/Bachillerato",
+  "level": "ESO y Bachillerato",
   "color": "#10b981",
   "simulation": "heron-formula",
   "formulaText": "el área de un triángulo se obtiene a partir de sus tres lados y el semiperímetro",
@@ -36,5 +36,6 @@
     "Explorar la representación",
     "Resolver retos",
     "Justificar el resultado"
-  ]
+  ],
+  "tags": []
 }

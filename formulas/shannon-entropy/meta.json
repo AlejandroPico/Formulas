@@ -11,5 +11,6 @@
     "entropía = suma negativa de probabilidades por logaritmo base dos de probabilidades",
     "en una fuente binaria, la incertidumbre máxima ocurre cuando p = 0.5"
   ],
-  "summary": "Mide la incertidumbre media o información esperada de una fuente aleatoria."
+  "summary": "Mide la incertidumbre media o información esperada de una fuente aleatoria.",
+  "tags": []
 }

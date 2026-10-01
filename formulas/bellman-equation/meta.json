@@ -11,5 +11,6 @@
     "el valor de un estado es recompensa inmediata más valor futuro descontado",
     "el factor gamma controla cuánto importan recompensas lejanas"
   ],
-  "summary": "Relación recursiva que define el valor óptimo de estados o acciones en decisión secuencial."
+  "summary": "Relación recursiva que define el valor óptimo de estados o acciones en decisión secuencial.",
+  "tags": []
 }

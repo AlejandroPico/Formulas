@@ -1,26 +1,23 @@
-# Ficha
+# Ecuación de Poisson
 
-## Identificación
+Poisson relaciona curvatura espacial de un potencial con una fuente. La fuente y las condiciones de contorno juntas definen un problema; un mapa coloreado por sí solo no lo resuelve.
 
-- **Nombre:** Ecuación de Poisson
-- **Autor:** Siméon Denis Poisson
-- **Año:** 1813
-- **Área:** ecuaciones diferenciales parciales y teoría del potencial
-- **Nivel:** universidad
-- **Tipo:** ecuación elíptica de segundo orden
+## Magnitudes
 
-## Elementos
+| Símbolo | Significado |
+| :-- | :-- |
+| φ | Potencial escalar desconocido; la tercera expresión es una solución manufacturada. |
+| f | Fuente del problema general, no necesariamente constante. |
+| ρ | Densidad de carga en el caso electrostático. |
+| ε | Permitividad del vacío cuando lleva subíndice cero. |
+| A | Amplitud del potencial de prueba. |
+| x | Coordenada cartesiana normalizada por una longitud de 1 m. |
+| y | Segunda coordenada normalizada. |
 
-- `phi`: potencial.
-- `rho`: densidad de carga o fuente.
-- `epsilon0`: permitividad del vacío en electrostática.
-- `nabla²`: operador laplaciano.
-- `f`: término fuente general.
+## Alcance
 
-## Lectura del simulador
+Dominio cuadrado y condiciones de Dirichlet cero del laboratorio. Una función armónica añadida puede conservar la fuente y alterar el borde, por eso deben declararse ambos.
 
-La fuente central controla la curvatura del potencial. Las líneas dibujadas representan equipotenciales. La densidad positiva y negativa se distinguen por color y dirección del campo. Si la densidad vale cero, la lectura pasa al caso de Laplace.
+## Unidades
 
-## Advertencia
-
-La visualización usa una analogía radial bidimensional. Una resolución precisa de Poisson en geometrías arbitrarias requiere métodos numéricos y condiciones de frontera explícitas.
+Si φ usa U y las coordenadas físicas m, f usa U/m². Para electrostática U=V, ρ C/m³ y ε₀ F/m. Las coordenadas de las expresiones didácticas están normalizadas por ℓ=1 m; restaurar otra ℓ introduce 1/ℓ² en el laplaciano.

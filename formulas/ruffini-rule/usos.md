@@ -1,19 +1,11 @@
 # Usos
 
-- Dividir polinomios entre binomios de la forma `x-r`.
-- Calcular rápidamente el resto de una división.
-- Comprobar si un número es raíz de un polinomio.
-- Factorizar polinomios cuando se conocen raíces.
-- Reducir el grado de un polinomio después de encontrar un factor.
+Factorizar polinomios cuando se conocen candidatos a raíz y comprobar divisiones. El modo gráfico compara P(r) con el resto; su escala limitada no cambia el cálculo de coeficientes.
 
-## Uso didáctico
+## Antes de aplicar
 
-Ruffini ayuda a ver la relación entre raíces y factores. Si al probar `r` el resto es cero, entonces `x-r` divide exactamente al polinomio. Esto conecta cálculo, factorización y resolución de ecuaciones.
+Divisor x−r de coeficiente principal uno. Para ax−b hace falta extraer a y ajustar cociente. Deben incluirse coeficientes cero de términos ausentes.
 
-## Limitaciones
+## Qué compara el laboratorio
 
-La regla se aplica directamente a divisores de la forma `x-r`. Para divisores de grado mayor se necesita división polinómica general u otros métodos.
-
-## Uso del simulador
-
-El simulador permite cambiar los coeficientes de un cúbico y el valor `r`. La fila final muestra el cociente y el resto, que coincide con `P(r)`.
+P(x)=x³+b x²+c x+d se divide por x−r. La fila inferior contiene coeficientes del cociente y al final el resto. Un término ausente necesita coeficiente cero.

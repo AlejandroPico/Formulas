@@ -11,5 +11,6 @@
     "softmax convierte logits en probabilidades normalizadas que suman uno",
     "cada salida es exponencial del logit dividido entre la suma de exponenciales"
   ],
-  "summary": "Transforma puntuaciones reales en una distribución de probabilidad multiclase."
+  "summary": "Transforma puntuaciones reales en una distribución de probabilidad multiclase.",
+  "tags": []
 }

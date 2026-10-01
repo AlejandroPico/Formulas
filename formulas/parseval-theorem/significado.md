@@ -1,11 +1,11 @@
 # Significado
 
-El teorema de Parseval afirma que la energía total de una señal no depende del dominio en el que se mida. Puede calcularse sumando la energía de sus muestras en el tiempo o integrando la energía de su representación en frecuencia.
+Una transformación de Fourier conserva energía si se usa la normalización correcta. Esta ficha distingue la DFT finita del caso continuo: el factor depende de la convención.
 
-Para señales discretas, una forma habitual es:
+## Del símbolo al fenómeno
 
-`Σ |x[n]|² = (1/2π)∫ |X(e^{jω})|² dω`.
+32 muestras periódicas de x=offset+A cos t+B sin 2t. La DFT directa no se normaliza; cada barra muestra |X[k]|²/N. Se cuentan también las frecuencias negativas.
 
-La igualdad no dice que la señal temporal y el espectro tengan la misma forma. Dice que la cantidad global de energía se conserva al transformar la señal. El dominio temporal muestra dónde está la energía; el dominio frecuencial muestra en qué oscilaciones se reparte.
+## Ejemplo
 
-En el simulador, el pulso rectangular tiene energía temporal fácil de calcular. A la derecha se muestra la densidad espectral asociada. Al mover la amplitud, ambas energías cambian de forma coherente porque dependen de `A²`.
+32 muestras de coseno de amplitud 1, sin offset. ¿Qué energía discreta tienen? Media de cos²: 1/2; energía=32/2=16.

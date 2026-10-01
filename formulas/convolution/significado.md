@@ -1,9 +1,11 @@
 # Significado
 
-La convolución mide cómo se solapan dos funciones cuando una de ellas se desplaza. La expresión continua `f*g` se interpreta como una integral de productos: para cada valor de `t`, se toma una copia desplazada de una función y se mide cuánto coincide con la otra.
+La convolución acumula cuánto se solapan una señal y otra invertida y desplazada. Describe la salida de un sistema lineal invariante en el tiempo ante una entrada.
 
-Esta operación aparece cuando un sistema responde a una entrada. Si `f` representa una señal de entrada y `g` representa la respuesta del sistema a un impulso, la convolución produce la salida. Por eso es una herramienta fundamental en teoría de señales, electrónica, acústica, óptica, probabilidad y ecuaciones diferenciales.
+## Del símbolo al fenómeno
 
-Visualmente, la convolución tiene tres pasos: invertir o desplazar una función, multiplicarla punto a punto por la otra y sumar el área de solapamiento. Cuando el solapamiento es grande, el valor de la convolución es alto; cuando apenas coinciden, el valor es pequeño o nulo.
+Dos pulsos causales rectangulares se convolucionan. El segundo aparece invertido y desplazado: g(t−τ). El área de producto es la longitud del solape por A·B.
 
-El simulador muestra una señal rectangular fija y una señal triangular móvil. El área verde representa el producto común que se integra. La curva inferior muestra cómo cambia el resultado de la convolución al desplazar la señal móvil.
+## Ejemplo
+
+Dos pulsos unitarios de duración 2 s. En t=1 s, ¿cuánto vale la convolución? Solape [0,1], longitud 1 s; amplitudes 1·1.

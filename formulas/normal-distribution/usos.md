@@ -1,10 +1,11 @@
 # Usos
 
-- Modelización de errores de medición.
-- Inferencia estadística y pruebas de hipótesis.
-- Intervalos de confianza.
-- Control de calidad.
-- Aproximaciones mediante el teorema central del límite.
-- Ciencia de datos y aprendizaje automático.
+Estandarizar medidas, comparar dispersión y estudiar áreas. La aproximación de erf del laboratorio tiene error absoluto inferior a 1,5·10⁻⁷; el resultado se calcula sobre todo el intervalo incluso si queda fuera de la ventana dibujada.
 
-La normal es útil, pero no debe asumirse sin comprobar: muchos fenómenos tienen colas pesadas, asimetría o límites físicos que exigen otros modelos.
+## Antes de aplicar
+
+σ>0; a≤b para hablar de probabilidad de intervalo. La normal es un modelo continuo, no una ley universal para todos los datos.
+
+## Qué compara el laboratorio
+
+μ mueve el centro y σ>0 cambia la dispersión. Selecciona un intervalo [a,b] y compara área con altura. Si a>b se muestra integral firmada; no es una probabilidad de intervalo.

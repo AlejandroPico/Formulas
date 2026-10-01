@@ -1,48 +1,22 @@
-# Ficha
+# Producto vectorial
 
-## Identificación
+El producto vectorial genera una normal orientada. Su longitud es el área del paralelogramo; intercambiar los vectores invierte la dirección.
 
-- Nombre: Producto vectorial.
-- Área: Álgebra vectorial, geometría 3D y física.
-- Nivel recomendado: Bachillerato y universidad inicial.
-- Tipo de fórmula: operación vectorial orientada.
+## Magnitudes
 
-## Fórmula principal
+| Símbolo | Significado |
+| :-- | :-- |
+| a | Primer vector del paralelogramo. |
+| b | Segundo vector; su orden fija la orientación. |
+| x | Componente según el eje x. |
+| y | Componente según el eje y. |
+| z | Componente según el eje z. |
+| θ | Ángulo entre los vectores, entre 0 y π. |
 
-Para `u=(u₁,u₂,u₃)` y `v=(v₁,v₂,v₃)`:
+## Alcance
 
-`u×v=(u₂v₃-u₃v₂, u₃v₁-u₁v₃, u₁v₂-u₂v₁)`.
+Vectores en espacio euclídeo tridimensional con una orientación derecha fijada. No se extiende esta fórmula de tres componentes a cualquier dimensión sin definir otra operación.
 
-La magnitud cumple:
+## Unidades
 
-`||u×v||=||u||||v||sin(θ)`.
-
-## Interpretación geométrica
-
-El resultado no es un número: es un vector perpendicular al plano generado por `u` y `v`. Su longitud mide el área del paralelogramo formado por ambos vectores. Si los vectores son paralelos, el área es cero y el producto vectorial se anula.
-
-## Orientación
-
-El sentido del vector se decide con la regla de la mano derecha. Cambiar el orden cambia el signo:
-
-`u×v=-(v×u)`.
-
-Por eso el producto vectorial no es conmutativo.
-
-## Variables
-
-- `u`, `v`: vectores de entrada.
-- `θ`: ángulo entre los vectores.
-- `||u×v||`: área del paralelogramo.
-- `u×v`: vector normal orientado.
-
-## Lectura del simulador
-
-El simulador representa dos vectores en el plano y sombrea el paralelogramo que generan. La lectura inferior muestra la componente `z` del producto vectorial y el área asociada.
-
-## Errores habituales
-
-- Confundir producto vectorial con producto escalar.
-- Olvidar que el resultado es un vector, no un número.
-- Cambiar el orden sin cambiar el signo.
-- Aplicarlo como si tuviera la misma forma en cualquier dimensión.
+Con a,b como longitudes, componentes en u y resultado en u². En un torque r×F usa N·m; en velocidad por campo magnético la unidad corresponde al problema físico. Una flecha verde nula no debe dibujarse como una dirección finita.

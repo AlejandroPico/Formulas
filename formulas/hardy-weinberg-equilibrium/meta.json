@@ -3,7 +3,7 @@
   "name": "Ley de equilibrio de Hardy-Weinberg",
   "year": 1908,
   "field": "Genética de poblaciones",
-  "level": "Bachillerato/Universidad inicial",
+  "level": "Bachillerato y universidad inicial",
   "color": "#06b6d4",
   "formula": [
     "p+q=1",
@@ -23,8 +23,7 @@
     "neurociencia",
     "epidemiologia",
     "evolucion",
-    "genetica de poblaciones",
-    "simulacion"
+    "genetica de poblaciones"
   ],
   "prerequisites": [
     "calculo",

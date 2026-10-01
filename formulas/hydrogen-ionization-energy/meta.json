@@ -3,7 +3,7 @@
   "name": "Energía de ionización del hidrógeno",
   "year": 1913,
   "field": "Química cuántica",
-  "level": "Bachillerato/Universidad inicial",
+  "level": "Bachillerato y universidad inicial",
   "color": "#10b981",
   "formula": [
     "E_n=−13.6 eV/n^2",
@@ -26,8 +26,7 @@
     "hidrogeno",
     "debye huckel",
     "nernst",
-    "faraday",
-    "simulacion"
+    "faraday"
   ],
   "prerequisites": [
     "quimica general",

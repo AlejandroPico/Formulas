@@ -1,9 +1,11 @@
 # Significado
 
-La interpolación de Lagrange construye un polinomio que pasa exactamente por una colección de puntos dados. Si conocemos nodos `(x_i,y_i)` con abscisas distintas, existe un único polinomio de grado menor o igual que `n` que atraviesa todos esos puntos.
+Una combinación de bases cardinales atraviesa cada dato exactamente. Interpolar no es ajustar por mínimos cuadrados ni garantizar precisión lejos de los nodos.
 
-La fórmula escribe ese polinomio como suma de funciones base `L_i(x)`. Cada base vale `1` en su propio nodo y `0` en los demás. Por eso, al evaluar el polinomio en `x_i`, solo sobrevive el término asociado a `y_i`.
+## Del símbolo al fenómeno
 
-La potencia de la fórmula está en que no hay que resolver un sistema lineal para obtener los coeficientes. Se construye directamente una combinación de piezas diseñadas para activar un nodo y anular el resto.
+Los nodos x=−1,0,1 son distintos y fijos. Cambia sus alturas o arrástralos verticalmente. Cada base vale uno en su nodo y cero en los demás.
 
-El simulador fija tres valores de `x` y permite mover las alturas `y`. La curva cambia en tiempo real, pero siempre pasa por los tres puntos marcados. Así se ve la diferencia entre interpolar y aproximar: aquí el polinomio atraviesa exactamente los datos.
+## Ejemplo
+
+Datos (−1,1),(0,0),(1,1). ¿Cuánto vale P(0,5)? Estos nodos generan P(x)=x²: 0,5²=0,25.

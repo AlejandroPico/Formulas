@@ -18,12 +18,11 @@
     "Compara distribuciones de forma simétrica, suavizada y acotada."
   ],
   "tags": [
-    "machine learning",
+    "aprendizaje automático",
     "nlp",
     "teoria de la informacion",
     "normalizacion",
-    "funciones de perdida",
-    "simulacion"
+    "funciones de perdida"
   ],
   "prerequisites": [
     "probabilidad",

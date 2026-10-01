@@ -17,14 +17,13 @@
     "Estima la velocidad media de un canal abierto según rugosidad, radio hidráulico y pendiente."
   ],
   "tags": [
-    "mecanica",
+    "mecánica",
     "hidraulica",
     "transferencia de calor",
     "fatiga",
     "elasticidad",
     "mohr",
-    "hooke",
-    "simulacion"
+    "hooke"
   ],
   "prerequisites": [
     "algebra",

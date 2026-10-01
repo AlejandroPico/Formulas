@@ -11,5 +11,6 @@
     "precio de una call europea = precio del subyacente por N(d1) menos strike descontado por N(d2)",
     "la volatilidad aumenta el valor temporal de la opción"
   ],
-  "summary": "Modelo clásico para valorar opciones europeas bajo hipótesis de mercado idealizado."
+  "summary": "Modelo clásico para valorar opciones europeas bajo hipótesis de mercado idealizado.",
+  "tags": []
 }

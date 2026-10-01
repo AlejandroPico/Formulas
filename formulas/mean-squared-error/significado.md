@@ -1,9 +1,11 @@
 # Significado
 
-El error cuadrático medio mide cuánto se alejan, en promedio, las predicciones de un modelo respecto a los valores reales.
+Elevar residuos al cuadrado evita cancelación de signos y da más peso a errores grandes. La raíz recupera la unidad de la respuesta; no recupera el signo de cada error.
 
-Cada residuo `y_i - y_hat_i` se eleva al cuadrado. Esto evita cancelaciones entre errores positivos y negativos, y penaliza con fuerza los errores grandes.
+## Del símbolo al fenómeno
 
-En regresión y aprendizaje automático, el MSE se usa como función de coste: el modelo se ajusta buscando parámetros que reduzcan esa cantidad.
+Mueve la recta de predicción y mira los residuos. Los cuadrados usan unidades u². La vista Cuadrados representa cada contribución; no es una nueva observación.
 
-El simulador muestra puntos observados, una recta de predicción y los residuos verticales. Al mover la pendiente, cambia la longitud de los residuos y el valor de MSE.
+## Ejemplo
+
+Errores 1,−1,2. ¿Cuál es su error cuadrático medio? Cuadrados 1,1,4: suma 6 y media 6/3=2.

@@ -1,11 +1,11 @@
 # Usos
 
-- Calcular areas de paralelogramos y triangulos en el espacio.
-- Obtener normales a superficies.
-- Modelar torque y momento angular en fisica.
-- Describir direcciones perpendiculares en geometria 3D.
-- Trabajar con orientacion en graficos, motores 3D y computacion geometrica.
+Áreas orientadas, normales de superficies, torque y fuerza magnética. La vista 3D muestra tres componentes reales, admite giro y conserva los datos al mover la cámara.
 
-## Uso del simulador
+## Antes de aplicar
 
-El simulador muestra dos vectores planos y el paralelogramo que generan. La lectura inferior calcula la componente `z` del producto vectorial y su valor absoluto como area.
+Vectores en espacio euclídeo tridimensional con una orientación derecha fijada. No se extiende esta fórmula de tres componentes a cualquier dimensión sin definir otra operación.
+
+## Qué compara el laboratorio
+
+Dos flechas forman un paralelogramo. Su producto vectorial es perpendicular y su longitud mide área. Arrastra el espacio o usa flechas para girar la cámara.

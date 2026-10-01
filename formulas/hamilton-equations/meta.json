@@ -11,5 +11,6 @@
     "q punto = derivada parcial de H respecto a p",
     "p punto = menos derivada parcial de H respecto a q"
   ],
-  "summary": "Reescriben la dinámica como flujo en el espacio de fases, usando coordenadas y momentos conjugados."
+  "summary": "Reescriben la dinámica como flujo en el espacio de fases, usando coordenadas y momentos conjugados.",
+  "tags": []
 }

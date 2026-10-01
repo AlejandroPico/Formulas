@@ -15,11 +15,10 @@
   "formulaText": "Calibra un resorte, distingue fuerza restauradora y externa, y conecta el trabajo con energía elástica.",
   "tags": [
     "fisica",
-    "mecanica",
-    "energia",
+    "mecánica",
+    "energía",
     "momento",
-    "oscilaciones",
-    "simulacion"
+    "oscilaciones"
   ],
   "prerequisites": [
     "algebra",

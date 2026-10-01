@@ -1,26 +1,23 @@
-# Ficha
+# Ley de Coulomb
 
-## Identificacion
+El signo de q₁q₂ distingue atracción y repulsión. La magnitud varía como 1/r²; una fuerza vectorial puede apuntar hacia la fuente sin tener magnitud negativa.
 
-- **Nombre:** Ley de Coulomb
-- **Autor:** Charles-Augustin de Coulomb
-- **Año:** 1785
-- **Area:** electromagnetismo y electrostatica
-- **Nivel:** bachillerato
-- **Tipo:** ley de fuerza central
+## Magnitudes
 
-## Variables
+| Símbolo | Significado |
+| :-- | :-- |
+| 21 | Fuerza sobre 2 debida a 1. |
+| F | Fuerza sobre la carga 2 debida a la carga 1; F sin vector representa magnitud. |
+| q | Carga eléctrica; subíndices identifican fuente 1 y prueba 2. |
+| r | Separación positiva; el vector unitario apunta de la fuente hacia la prueba. |
+| k | Constante electrostática; k_e≈8,99·10⁹ N·m²/C². |
+| ε | Permitividad; ε₀ es la del vacío. |
+| e | Subíndice de k_e: constante electrostática. |
 
-- `F`: fuerza electrostatica.
-- `k_e`: constante de Coulomb.
-- `q1`, `q2`: cargas electricas.
-- `r`: distancia entre cargas.
-- `r_hat`: direccion radial entre cargas.
+## Alcance
 
-## Lectura del simulador
+Cargas puntuales en vacío o medio homogéneo con permitividad apropiada, régimen electrostático. r>0; en el origen no se suaviza artificialmente la singularidad.
 
-Las cargas se pueden arrastrar horizontalmente para cambiar la distancia. Los controles modifican signo y magnitud. Si las cargas tienen igual signo, las flechas se separan; si tienen signo opuesto, apuntan una hacia la otra.
+## Unidades
 
-## Advertencia
-
-El valor numerico mostrado usa una escala didactica para que el efecto sea visible. La ley fisica real usa unidades SI y la constante `k_e` con su valor correspondiente en el medio considerado.
+Cargas de controles en nC se convierten por 10⁻⁹ a C. Distancia m, fuerza N y lectura ampliada nN. k_e usa N·m²/C². Las flechas de fondo comprimen longitudes para ser visibles y no constituyen una escala exacta de magnitudes.

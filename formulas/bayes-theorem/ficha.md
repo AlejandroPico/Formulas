@@ -1,27 +1,20 @@
-# Ficha
+# Teorema de Bayes
 
-## Identificación
+Una señal modifica cuánto creemos una hipótesis. Bayes invierte un condicionamiento usando la tasa previa y la frecuencia total de la evidencia.
 
-- **Nombre:** Teorema de Bayes
-- **Autor asociado:** Thomas Bayes
-- **Año:** 1763
-- **Área:** probabilidad y estadística
-- **Nivel:** bachillerato y universidad inicial
-- **Tipo:** regla de actualización probabilística
+## Magnitudes
 
-## Variables
+| Símbolo | Significado |
+| :-- | :-- |
+| P | Operador de probabilidad del evento entre paréntesis. |
+| A | Evento: la pieza es defectuosa. |
+| B | Evento: el indicador da aviso. |
+| c | Complemento del evento: casos donde A no ocurre. |
 
-- `A`: hipótesis o condición.
-- `B`: evidencia observada.
-- `P(A)`: probabilidad previa.
-- `P(B|A)`: sensibilidad o verosimilitud.
-- `P(B|no A)`: tasa de falsos positivos.
-- `P(A|B)`: probabilidad posterior.
+## Alcance
 
-## Lectura del simulador
+P(B)>0. Las tasas condicionales se estiman en grupos diferentes. Con evidencia de probabilidad cero, la posterior no se calcula dividiendo cero.
 
-La población se resume en 1000 casos. La tabla separa verdaderos positivos y falsos positivos. El posterior indica qué proporción de los positivos totales pertenece realmente a la condición.
+## Unidades
 
-## Nota
-
-Una evidencia fuerte puede engañar si la tasa base es muy baja o si los falsos positivos son altos.
+Probabilidades adimensionales de 0 a 1; controles en porcentaje se dividen entre 100. Las cantidades sobre 1000 piezas son valores esperados, pueden no ser enteras y se redondean solo al dibujar.

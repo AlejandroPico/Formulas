@@ -3,7 +3,7 @@
   "name": "Potencial de hidrógeno (pH)",
   "year": 1909,
   "field": "Química ácido-base",
-  "level": "ESO/Bachillerato",
+  "level": "ESO y Bachillerato",
   "color": "#64748b",
   "formula": [
     "pH=−log10[H_3O^+]",
@@ -18,14 +18,13 @@
     "Escala logarítmica que mide la acidez mediante la concentración de hidronio."
   ],
   "tags": [
-    "quimica",
-    "cinetica",
+    "química",
+    "cinética",
     "equilibrio quimico",
     "acido base",
     "ph",
     "beer lambert",
-    "tampon",
-    "simulacion"
+    "tampon"
   ],
   "prerequisites": [
     "quimica general",

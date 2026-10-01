@@ -1,18 +1,9 @@
 # Derivación
 
-Buscamos un polinomio `P(x)` que cumpla `P(x_i)=y_i` para todos los nodos. La estrategia de Lagrange consiste en construir funciones base `L_i(x)` con dos propiedades:
+Cada factor de L_i contiene x−x_j, por lo que se anula en todos los nodos ajenos. En x_i todos los cocientes valen uno. Así P(x_j)=y_j. Si dos polinomios de grado ≤n pasan por n+1 nodos distintos, su diferencia tiene demasiadas raíces salvo ser cero: el interpolador es único. El laboratorio fija x=−1,0,1 y permite arrastrar sus alturas.
 
-- `L_i(x_i)=1`.
-- `L_i(x_j)=0` si `j` es distinto de `i`.
+## Comprueba el resultado
 
-Para lograrlo, se toma el producto:
+Datos (−1,1),(0,0),(1,1). ¿Cuánto vale P(0,5)? Estos nodos generan P(x)=x²: 0,5²=0,25.
 
-`L_i(x)=prod_{j!=i}(x-x_j)/(x_i-x_j)`.
-
-Cuando `x=x_j` con `j!=i`, uno de los factores del numerador se anula. Cuando `x=x_i`, cada factor queda dividido por sí mismo y el producto vale `1`.
-
-Entonces el polinomio interpolador es:
-
-`P(x)=sum y_i L_i(x)`.
-
-Al evaluar en un nodo concreto, todos los términos se anulan salvo uno, y queda exactamente el valor `y_i`. Esta construcción demuestra directamente que el polinomio pasa por todos los puntos dados.
+Abscisas distintas; datos de una función. Nodos repetidos requieren otra formulación, como interpolación de Hermite con información de derivadas.

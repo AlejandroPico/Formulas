@@ -2,7 +2,7 @@
   "id": "layer-normalization",
   "name": "Layer Normalization: normalización por capa",
   "year": 2016,
-  "field": "Deep Learning",
+  "field": "Aprendizaje profundo",
   "level": "Universidad intermedia",
   "color": "#8b5cf6",
   "formula": [
@@ -19,12 +19,11 @@
     "Normaliza características dentro de una misma muestra, independiente del tamaño de batch."
   ],
   "tags": [
-    "machine learning",
+    "aprendizaje automático",
     "nlp",
     "teoria de la informacion",
     "normalizacion",
-    "funciones de perdida",
-    "simulacion"
+    "funciones de perdida"
   ],
   "prerequisites": [
     "probabilidad",

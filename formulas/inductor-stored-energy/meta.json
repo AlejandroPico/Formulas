@@ -3,7 +3,7 @@
   "name": "Energía de un inductor",
   "year": 1831,
   "field": "Circuitos eléctricos",
-  "level": "Bachillerato/Universidad inicial",
+  "level": "Bachillerato y universidad inicial",
   "color": "#8b5cf6",
   "formula": [
     "U=½LI²"
@@ -19,9 +19,8 @@
     "electromagnetismo",
     "circuitos",
     "ondas",
-    "energia",
-    "impedancia",
-    "simulacion"
+    "energía",
+    "impedancia"
   ],
   "prerequisites": [
     "electromagnetismo",

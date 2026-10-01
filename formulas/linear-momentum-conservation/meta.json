@@ -16,10 +16,7 @@
   "author": "",
   "formulaText": "Un sistema sin impulso externo conserva su cantidad de movimiento, aunque un choque transforme energía cinética.",
   "tags": [
-    "Mecánica clásica",
-    "aprendizaje",
-    "simulación",
-    "revisión completa"
+    "mecánica clásica"
   ],
   "prerequisites": [
     "Álgebra y unidades"

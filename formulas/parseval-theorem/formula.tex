@@ -1,3 +1,5 @@
-\sum_{n=-\infty}^{\infty}|x[n]|^2=\frac{1}{2\pi}\int_{-\pi}^{\pi}|X(e^{j\omega})|^2\,d\omega
+X_k=\sum_{n=0}^{N-1}x_ne^{-2\pi i kn/N}
 
-\|x\|_2^2=\frac{1}{2\pi}\|X\|_2^2
+\sum_{n=0}^{N-1}|x_n|^2=\frac1N\sum_{k=0}^{N-1}|X_k|^2
+
+\int_{-\infty}^{\infty}|f(t)|^2dt=\int_{-\infty}^{\infty}|\hat f(\xi)|^2d\xi

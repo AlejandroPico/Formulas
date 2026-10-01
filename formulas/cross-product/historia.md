@@ -1,7 +1,5 @@
 # Historia
 
-El producto vectorial se consolidó dentro del desarrollo del calculo vectorial de los siglos XVIII y XIX. Sus ideas aparecen ligadas a geometria, mecanica y electromagnetismo, donde son frecuentes las magnitudes perpendiculares a un plano.
+El álgebra vectorial de finales del siglo XIX consolidó esta operación en notación usada por Gibbs y Heaviside. La orientación de mano derecha conecta su definición algebraica con geometría espacial.
 
-Su formulacion moderna se hizo especialmente importante en fisica: torque, momento angular, campo magnetico y orientacion de superficies usan productos vectoriales o ideas equivalentes.
-
-Aunque parece una operacion puramente algebraica, su raiz es geometrica: medir el area orientada que determinan dos direcciones y convertirla en un vector normal al plano.
+[Formulación y referencia de estudio](https://ocw.mit.edu/courses/18-02sc-multivariable-calculus-fall-2010/). El año histórico no es la fecha de creación del archivo ni la revisión registrada en Inventario.

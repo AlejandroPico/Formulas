@@ -1,21 +1,24 @@
-# Ficha
+# Conducción de calor de Fourier 1D estacionaria
 
-**Nombre:** Conducción de calor de Fourier 1D estacionaria
+El calor conducido viaja en sentido opuesto al gradiente térmico. Una pared estacionaria sin generación tiene perfil lineal y una resistencia térmica que convierte diferencia de temperatura en potencia.
 
-**Área:** Transferencia de calor
+## Magnitudes
 
-**Nivel:** Universidad inicial
+| Símbolo | Significado |
+| :-- | :-- |
+| q | Flujo de calor por unidad de área; las dos primas en q″ son una convención de superficie, no dos derivadas. |
+| k | Conductividad térmica positiva. |
+| T | Temperatura; T₀ y T_L son condiciones de los dos extremos. |
+| x | Distancia a través del espesor de la pared. |
+| Q | Calor transferido; punto superior indica potencia térmica. |
+| A | Área transversal constante. |
+| L | Espesor positivo de la pared. |
+| R | Resistencia térmica de la pared. |
 
-**Resumen:** Describe el flujo térmico estacionario a través de una pared plana.
+## Alcance
 
-## Lectura e interpretación
+Pared plana, k y A constantes, sin generación interna, bordes a temperaturas fijas. Se omiten resistencias de contacto y convección exterior.
 
-# Interpretación
+## Unidades
 
-Mueve los controles y observa qué domina: área resistente, signo de carga, longitud cúbica, resistencia térmica, equilibrio de puente o región MOSFET.
-
-## Validez y limitaciones
-
-# Limitaciones
-
-Supone régimen estacionario, k constante y flujo unidimensional; no incluye radiación, convección ni transitorios.
+q″ W/m², potencia Q̇ W, k W/(m·K), L m y A m². R K/W. Una diferencia de grados Celsius es igual a una diferencia de kelvin; esto no permite usar Celsius como temperatura absoluta en otras leyes.

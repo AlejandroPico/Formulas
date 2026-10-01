@@ -1,10 +1,11 @@
 # Usos
 
-- Regresión lineal y no lineal.
-- Entrenamiento de modelos predictivos.
-- Evaluación de ajuste entre datos y predicciones.
-- Funciones de pérdida en aprendizaje automático.
-- Comparación de modelos bajo errores continuos.
-- Introducción a optimización por mínimos cuadrados.
+Evaluar predicciones y explicar pérdida cuadrática. No debe confundirse MSE empírico con error esperado fuera de muestra ni con un estimador insesgado de varianza residual: este último usa otro denominador.
 
-El MSE es fácil de optimizar, pero puede reaccionar demasiado a valores extremos por la penalización cuadrática.
+## Antes de aplicar
+
+n>0 y respuestas numéricas comparables. El MSE no es negativo; valores grandes pueden deberse a escala o a observaciones extremas, no solo a un peor algoritmo.
+
+## Qué compara el laboratorio
+
+Mueve la recta de predicción y mira los residuos. Los cuadrados usan unidades u². La vista Cuadrados representa cada contribución; no es una nueva observación.

@@ -1,9 +1,5 @@
 # Historia
 
-La interpolación polinómica aparece en astronomía, tablas numéricas y cálculo científico mucho antes de la computación moderna. Cuando solo se disponía de valores tabulados, era necesario estimar valores intermedios de manera sistemática.
+Lagrange difundió esta representación de interpolación en el siglo XVIII. Su estructura separa posiciones de datos y valores, lo que ayuda a comprender unicidad, cardinalidad y superposición.
 
-Joseph-Louis Lagrange dio una forma elegante y simétrica para construir el polinomio interpolador. Su expresión evita resolver explícitamente un sistema de ecuaciones para los coeficientes y trabaja directamente con los nodos.
-
-En análisis numérico, la fórmula de Lagrange es una herramienta conceptual básica. No siempre es la forma computacional más estable para muchos puntos, pero explica con claridad la existencia y unicidad del polinomio interpolador.
-
-También conecta con diferencias divididas, interpolación de Newton, cuadratura numérica, aproximación de funciones y métodos espectrales. Es una puerta de entrada a la relación entre datos discretos y funciones continuas.
+[Formulación y referencia de estudio](https://ocw.mit.edu/courses/18-330-introduction-to-numerical-analysis-spring-2012/). El año histórico no es la fecha de creación del archivo ni la revisión registrada en Inventario.

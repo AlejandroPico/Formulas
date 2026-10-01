@@ -1,9 +1,9 @@
 {
   "id": "continuity-equation",
-  "name": "Ecuación de continuidad",
+  "name": "Ecuación de continuidad: flujo estacionario entre secciones",
   "author": "Mecánica clásica",
   "year": 1750,
-  "field": "Fluidos",
+  "field": "Mecánica de fluidos",
   "level": "Bachillerato",
   "color": "#06b6d4",
   "simulation": "continuity-equation",
@@ -83,10 +83,7 @@
     "Álgebra y unidades"
   ],
   "tags": [
-    "Fluidos",
-    "aprendizaje",
-    "simulación",
-    "revisión completa"
+    "mecánica de fluidos"
   ],
   "learningPath": [
     "Caudales",

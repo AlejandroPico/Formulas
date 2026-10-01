@@ -11,5 +11,6 @@
     "suma de corrientes que entran en un nodo = suma de corrientes que salen del nodo",
     "suma algebraica de tensiones en una malla cerrada = 0"
   ],
-  "summary": "Expresan conservación de carga en nodos y conservación de energía en mallas de un circuito."
+  "summary": "Expresan conservación de carga en nodos y conservación de energía en mallas de un circuito.",
+  "tags": []
 }

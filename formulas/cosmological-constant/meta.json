@@ -21,8 +21,7 @@
     "einstein",
     "hubble",
     "redshift",
-    "geodesica",
-    "simulacion"
+    "geodesica"
   ],
   "prerequisites": [
     "relatividad",

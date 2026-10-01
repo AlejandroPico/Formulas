@@ -18,15 +18,14 @@
     "Rota los ejes para conservar la mayor varianza posible en pocas dimensiones."
   ],
   "tags": [
-    "machine learning",
+    "aprendizaje automático",
     "clustering",
     "svm",
     "kernel",
     "pca",
     "svd",
     "pagerank",
-    "grafos",
-    "simulacion"
+    "grafos"
   ],
   "prerequisites": [
     "algebra lineal",

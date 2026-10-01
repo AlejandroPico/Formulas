@@ -54,6 +54,8 @@ La tercera tanda añade quince revisiones completas y 60 misiones de trigonometr
 
 La cuarta tanda añade veinte revisiones y 80 misiones: capitalización, límites, dinámica, fluidos, series, circuitos, ondas y vigas. Incluye órbitas keplerianas y una membrana 3D con líneas nodales, además de reproducción y balances de energía. Consulta [la cuarta revisión](docs/cuarta-revision.md). Las comprobaciones están en `tools/check-frontier-labs.mjs`, `tools/check-frontier-browser.mjs` y `tools/check-frontier-inputs.mjs`. El historial conserva las revisiones anteriores.
 
+La quinta tanda añade 27 revisiones y 108 misiones de álgebra, probabilidad, señales, electrostática y ecuaciones diferenciales. Incluye vectores y triángulos esféricos 3D, superficies de campos y soluciones exactas de difusión y Taylor–Green. Distingue las dos fichas de continuidad y añade cobertura por etiquetas. La taxonomía compartida conserva nombres y niveles precisos al generar y cargar el catálogo. Consulta [la quinta revisión](docs/quinta-revision.md) y las comprobaciones `check-horizon-labs.mjs`, `check-horizon-browser.mjs`, `check-horizon-inputs.mjs` y `check-taxonomy.mjs`.
+
 ```sh
 node tools/serve.mjs
 ```

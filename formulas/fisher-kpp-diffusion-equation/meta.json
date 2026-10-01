@@ -23,8 +23,7 @@
     "farmacologia",
     "ecologia",
     "microbiologia",
-    "epidemiologia",
-    "simulacion"
+    "epidemiologia"
   ],
   "prerequisites": [
     "calculo",

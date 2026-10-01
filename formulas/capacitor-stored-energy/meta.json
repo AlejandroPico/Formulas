@@ -3,7 +3,7 @@
   "name": "Energía almacenada en un condensador",
   "year": 1745,
   "field": "Circuitos eléctricos",
-  "level": "Bachillerato/Universidad inicial",
+  "level": "Bachillerato y universidad inicial",
   "color": "#0ea5e9",
   "formula": [
     "U=\\frac12CV^2=\\frac{Q^2}{2C}=\\frac12QV",
@@ -15,10 +15,7 @@
   "author": "",
   "formulaText": "Un condensador lineal almacena energía proporcional a su capacitancia y al cuadrado de la tensión.",
   "tags": [
-    "Circuitos eléctricos",
-    "aprendizaje",
-    "simulación",
-    "revisión completa"
+    "circuitos eléctricos"
   ],
   "prerequisites": [
     "Álgebra y unidades"

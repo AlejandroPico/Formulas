@@ -1,19 +1,9 @@
 # Derivación
 
-La derivación se entiende mejor desde la idea de ortogonalidad. En una base ortonormal, la suma de los cuadrados de las coordenadas de un vector es igual al cuadrado de su longitud total.
+Expande Σ|X_k|² y suma el núcleo sobre k. La suma geométrica vale N cuando los índices temporales coinciden y cero cuando son diferentes módulo N. Queda NΣ|x_n|², que explica el factor 1/N. En el caso continuo, la transformada usada aquí lleva 2π en el núcleo y no necesita un factor adicional en la identidad de energía.
 
-Para señales discretas, la transformada de Fourier escribe la señal como una combinación continua de exponenciales complejas `e^{jωn}`. Estas exponenciales actúan como modos ortogonales de frecuencia.
+## Comprueba el resultado
 
-Si la transformación está normalizada como:
+32 muestras de coseno de amplitud 1, sin offset. ¿Qué energía discreta tienen? Media de cos²: 1/2; energía=32/2=16.
 
-`X(e^{jω})=Σ x[n]e^{-jωn}`,
-
-entonces la energía temporal es:
-
-`Σ |x[n]|²`.
-
-La energía espectral debe dividirse por `2π` por la convención de normalización de la transformada inversa:
-
-`(1/2π)∫_{-π}^{π}|X(e^{jω})|²dω`.
-
-La igualdad final expresa que cambiar de representación no crea ni destruye energía; solo la redistribuye entre componentes de frecuencia.
+Secuencia finita para DFT; funciones de cuadrado integrable para la igualdad continua. Cambiar a frecuencia angular y núcleo e^(−iωt) introduce el correspondiente 1/(2π).

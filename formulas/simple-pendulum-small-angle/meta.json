@@ -15,11 +15,10 @@
   "formulaText": "Compara el péndulo pequeño con la ecuación no lineal y mide cómo aumenta el periodo con la amplitud.",
   "tags": [
     "fisica",
-    "fluidos",
+    "mecánica de fluidos",
     "ondas",
     "oscilaciones",
-    "hidraulica",
-    "simulacion"
+    "hidraulica"
   ],
   "prerequisites": [
     "algebra",

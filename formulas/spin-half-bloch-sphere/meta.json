@@ -16,14 +16,13 @@
     "Representa un qubit o espín 1/2 como vector sobre la esfera de Bloch."
   ],
   "tags": [
-    "mecanica cuantica",
+    "mecánica cuántica",
     "cuantica",
     "schrodinger",
     "hamiltoniano",
     "pauli",
     "bloch",
-    "oscilador",
-    "simulacion"
+    "oscilador"
   ],
   "prerequisites": [
     "algebra lineal",

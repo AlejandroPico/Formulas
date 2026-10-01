@@ -3,7 +3,7 @@
   "name": "Transformada de Fourier",
   "author": "Joseph Fourier",
   "year": 1822,
-  "field": "Analisis armonico",
+  "field": "Análisis armónico",
   "level": "Universidad",
   "color": "#8cf0c8",
   "simulation": "fourier-transform",
@@ -12,5 +12,6 @@
     "f(x) = integral de su transformada por nucleo oscilatorio positivo dxi",
     "energia de la señal en tiempo = energia de la señal en frecuencia"
   ],
-  "summary": "Descompone señales y funciones en contenido frecuencial."
+  "summary": "Descompone señales y funciones en contenido frecuencial.",
+  "tags": []
 }

@@ -2,7 +2,7 @@
   "id": "ppo-clipped-objective",
   "name": "PPO: función objetivo recortada",
   "year": 2017,
-  "field": "Reinforcement Learning",
+  "field": "Aprendizaje por refuerzo",
   "level": "Universidad intermedia",
   "color": "#dc2626",
   "formula": [
@@ -17,14 +17,13 @@
     "Limita cuánto puede mejorar artificialmente una política nueva respecto a la anterior."
   ],
   "tags": [
-    "reinforcement learning",
+    "aprendizaje por refuerzo",
     "transformers",
     "attention",
     "positional encoding",
     "ppo",
     "q-learning",
-    "sarsa",
-    "simulacion"
+    "sarsa"
   ],
   "prerequisites": [
     "probabilidad",

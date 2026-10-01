@@ -1,9 +1,9 @@
-# Derivacion
+# Derivación
 
-Una derivacion clasica combina conservacion de energia con la ley de Fourier de conduccion. La ley de Fourier afirma que el flujo de calor es proporcional al gradiente negativo de temperatura: el calor fluye desde zonas calientes hacia zonas frias.
+Combina balance de energía ρc T_t=−∂xq″ con Fourier q″=−kT_x. Con coeficientes constantes resulta T_t=αT_xx. Para extremos a T_b, usa modos seno: sus segundas derivadas son −(nπ/L)² veces el modo. Cada amplitud decae como e^(−α(nπ/L)²t). La suma de los modos 1 y 3 sigue siendo solución por linealidad y mantiene ambos bordes.
 
-Si se toma un pequeno segmento de barra, el cambio de energia interna depende de la diferencia entre el calor que entra y el calor que sale. Ese balance se expresa como una divergencia del flujo.
+## Comprueba el resultado
 
-Al sustituir la ley de Fourier en el balance de energia aparece una segunda derivada espacial de la temperatura. Tras agrupar constantes del material se obtiene la difusividad `alpha`.
+En t=0 y x=L/2: base=20, A=20, B=10. ¿Qué temperatura hay? sin(π/2)=1 y sin(3π/2)=−1: 20+20−10=30 °C.
 
-El resultado es `u_t = alpha u_xx` en una dimension. En varias dimensiones, la segunda derivada espacial se sustituye por el laplaciano.
+Barra homogénea, difusividad constante positiva, sin generación de calor ni transporte convectivo, bordes constantes. El perfil inicial se especifica mediante dos modos; no se resuelve un caso arbitrario de frontera móvil.

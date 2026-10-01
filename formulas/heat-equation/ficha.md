@@ -1,25 +1,27 @@
-# Ficha
+# Ecuación del calor
 
-## Identificacion
+La difusión térmica atenúa variaciones espaciales sin transportarlas como un bloque. Los detalles más finos decaen más deprisa porque su curvatura es mayor.
 
-- **Nombre:** Ecuacion del calor
-- **Autor asociado:** Joseph Fourier
-- **Area:** ecuaciones diferenciales y termica
-- **Nivel:** universidad inicial
-- **Tipo:** ecuacion parabolica de difusion
+## Magnitudes
 
-## Variables
+| Símbolo | Significado |
+| :-- | :-- |
+| T | Temperatura del material, función de posición y tiempo. |
+| α | Difusividad térmica positiva. |
+| x | Posición dentro de la barra de longitud L. |
+| t | Tiempo desde el perfil inicial. |
+| L | Longitud positiva de la barra. |
+| A | Amplitud inicial del primer modo seno. |
+| B | Amplitud inicial del tercer modo seno. |
+| b | Subíndice de T_b: temperatura constante de ambos bordes. |
+| k | Conductividad térmica. |
+| ρ | Densidad del material. |
+| c | Calor específico por unidad de masa. |
 
-- `u`: temperatura o magnitud difundida.
-- `t`: tiempo.
-- `x`: posicion.
-- `alpha`: difusividad termica.
-- `u_xx`: segunda derivada espacial.
+## Alcance
 
-## Lectura del simulador
+Barra homogénea, difusividad constante positiva, sin generación de calor ni transporte convectivo, bordes constantes. El perfil inicial se especifica mediante dos modos; no se resuelve un caso arbitrario de frontera móvil.
 
-La curva roja es el perfil de temperatura. La barra coloreada es el mismo perfil como mapa termico. Hacer clic o arrastrar inyecta calor. El control de difusividad modifica la velocidad con la que el pico se reparte.
+## Unidades
 
-## Nota
-
-El esquema es discreto y educativo. En calculo cientifico real se deben controlar estabilidad, condiciones de frontera, unidades y propiedades del material.
+α m²/s, x y L m, t s. T en °C y amplitudes A,B en K de diferencia. El producto α(nπ/L)²t es adimensional. El tiempo característico del modo 1 es L²/(απ²), en segundos; el del modo 3 es nueve veces menor.

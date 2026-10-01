@@ -16,12 +16,11 @@
     "Rango de valores compatibles con una estimación bajo un nivel de confianza."
   ],
   "tags": [
-    "estadistica",
+    "estadística",
     "inferencia",
     "modelos",
-    "bayes",
-    "informacion",
-    "simulacion"
+    "inferencia bayesiana",
+    "información"
   ],
   "prerequisites": [
     "probabilidad",

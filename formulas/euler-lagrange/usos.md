@@ -1,11 +1,11 @@
 # Usos
 
-- **Mecánica clásica:** péndulos, sistemas con restricciones, masas acopladas y coordenadas generalizadas.
-- **Mecánica celeste:** formulación de problemas orbitales y perturbaciones.
-- **Robótica:** modelado de brazos articulados, grados de libertad y sistemas con restricciones.
-- **Mecánica de sólidos:** vibraciones, modos normales y elasticidad.
-- **Relatividad:** formulación de acciones para partículas y campos.
-- **Teoría de campos:** obtención de ecuaciones de movimiento desde una densidad lagrangiana.
-- **Óptica y geodésicas:** problemas donde una trayectoria física se obtiene extremando una cantidad global.
+Formular movimiento en coordenadas adaptadas; estudiar osciladores y restricciones. El laboratorio compara una familia de variaciones de extremos cero con q=0; no busca un mínimo universal sobre todas las trayectorias.
 
-Su valor está en que permite elegir coordenadas naturales para el sistema. En un péndulo, por ejemplo, el ángulo es una coordenada más limpia que las componentes cartesianas de la masa. El simulador muestra esa ventaja: basta ajustar longitud y gravedad para ver cómo cambia la ecuación angular resultante.
+## Antes de aplicar
+
+L diferenciable, variaciones con extremos fijos, sistema conservativo descrito por este L. La segunda variación y la duración afectan a la clasificación del punto estacionario.
+
+## Qué compara el laboratorio
+
+Entre q(0)=q(1)=0 explora q(t)=a sin(πt), L=m·q̇²/2−k·q²/2. La trayectoria física q=0 es estacionaria; no siempre minimiza la acción.

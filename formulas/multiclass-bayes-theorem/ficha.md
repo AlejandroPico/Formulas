@@ -1,11 +1,22 @@
-# Ficha
+# Teorema de Bayes multiclase
 
-## Identificacion
+Varias hipótesis compiten por explicar una misma evidencia. Todas se normalizan con un único denominador: la probabilidad total de observarla.
 
-- Nombre: Teorema de Bayes multiclase.
-- Area: Probabilidad y estadística.
-- Tipo: inferencia, decision estadistica o informacion.
+## Magnitudes
 
-## Lectura del simulador
+| Símbolo | Significado |
+| :-- | :-- |
+| P | Probabilidad de la clase o evidencia indicada. |
+| C | Una clase de la partición; aquí una máquina de origen. |
+| B | Evidencia observada: una marca en la pieza. |
+| i | Índice de la clase cuya posterior se calcula. |
+| j | Índice que recorre todas las clases en el denominador. |
+| K | Número de clases excluyentes y exhaustivas; tres en el laboratorio. |
 
-Mueve los controles inferiores. El grafico muestra regiones criticas, barras, intervalos, posterioris o densidades, y el readout resume la magnitud calculada.
+## Alcance
+
+Clases mutuamente excluyentes y exhaustivas, previas normalizadas y evidencia positiva. Pesos previos todos cero o verosimilitudes todos cero hacen el cálculo indefinido.
+
+## Unidades
+
+Probabilidades sin unidad. Los controles de previa son pesos relativos no negativos; se dividen entre su suma. Verosimilitudes en porcentaje se convierten a tanto por uno. Las barras usan escala relativa y los porcentajes exactos se leen en el resultado.

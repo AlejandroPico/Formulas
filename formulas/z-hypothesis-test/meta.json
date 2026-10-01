@@ -16,12 +16,11 @@
     "Contraste de media cuando la desviación poblacional es conocida."
   ],
   "tags": [
-    "estadistica",
+    "estadística",
     "inferencia",
     "modelos",
-    "bayes",
-    "informacion",
-    "simulacion"
+    "inferencia bayesiana",
+    "información"
   ],
   "prerequisites": [
     "probabilidad",

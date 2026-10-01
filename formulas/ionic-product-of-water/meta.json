@@ -3,7 +3,7 @@
   "name": "Producto iónico del agua",
   "year": 1909,
   "field": "Química ácido-base",
-  "level": "Bachillerato/Universidad inicial",
+  "level": "Bachillerato y universidad inicial",
   "color": "#10b981",
   "formula": [
     "K_w=[H_3O^+][OH^-]",
@@ -18,14 +18,13 @@
     "Relaciona las concentraciones de hidronio e hidróxido en agua y fija la escala ácido-base."
   ],
   "tags": [
-    "quimica",
-    "cinetica",
+    "química",
+    "cinética",
     "equilibrio quimico",
     "acido base",
     "ph",
     "beer lambert",
-    "tampon",
-    "simulacion"
+    "tampon"
   ],
   "prerequisites": [
     "quimica general",

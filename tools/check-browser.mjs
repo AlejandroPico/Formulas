@@ -90,6 +90,16 @@ try {
   await page.locator('#sortSelect').selectOption(previousSort);
   await page.locator('[data-admin-action="inventory"]').click();
   assert.equal(await page.locator('#catalogIntroducedOrder').count(), 0);
+  const sourceMetadata=JSON.parse(await (await import('node:fs/promises')).readFile('formulas/catalog-index.json','utf8')).map(({id,field,level,tags})=>({id,field,level,tags})).sort((a,b)=>a.id.localeCompare(b.id));
+  const loadedMetadata=await page.evaluate(()=>window.FormulasAtlas.equations.map(({id,field,level,tags})=>({id,field,level,tags})).sort((a,b)=>a.id.localeCompare(b.id)));
+  assert.deepEqual(loadedMetadata,sourceMetadata,'The browser must preserve canonical authored labels and levels');
+  await page.locator('[data-catalog-tab="coverage"]').click();
+  assert((await page.locator('[data-view="coverage"]').innerText()).includes('Cobertura por etiquetas'));
+  const coverageHeaders=await page.locator('[data-view="coverage"] h3').evaluateAll(nodes=>nodes.map(n=>n.getBoundingClientRect().top));
+  assert.equal(new Set(coverageHeaders).size,1,'All three coverage categories should be visible together on desktop');
+  await page.screenshot({path:'artifacts/coverage-desktop.png'});
+  await page.locator('[data-view="coverage"] details').first().locator('summary').click();
+  assert(await page.locator('[data-view="coverage"] details').first().getAttribute('open')!==null);
   await page.locator('[data-catalog-tab="reviews"]').click();
   await page.locator('[data-view="reviews"].active').waitFor();
   assert.equal(await page.locator('[data-view="reviews"] .review-done').count(), reviewCount);

@@ -18,14 +18,13 @@
     "Añade una firma posicional multi-frecuencia a embeddings sin recurrencia ni convolución."
   ],
   "tags": [
-    "reinforcement learning",
+    "aprendizaje por refuerzo",
     "transformers",
     "attention",
     "positional encoding",
     "ppo",
     "q-learning",
-    "sarsa",
-    "simulacion"
+    "sarsa"
   ],
   "prerequisites": [
     "probabilidad",

@@ -19,13 +19,12 @@
     "Modela regiones de corte, tríodo y saturación de un MOSFET ideal de canal largo."
   ],
   "tags": [
-    "mecanica",
+    "mecánica",
     "resistencia de materiales",
     "transferencia de calor",
-    "electronica",
+    "electrónica",
     "instrumentacion",
-    "mosfet",
-    "simulacion"
+    "mosfet"
   ],
   "prerequisites": [
     "algebra",

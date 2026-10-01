@@ -15,10 +15,7 @@
   "source": "files",
   "formulaText": "La rigidez EI relaciona momento y curvatura; la longitud influye con potencias altas en la flecha de una ménsula.",
   "tags": [
-    "Mecánica estructural",
-    "aprendizaje",
-    "simulación",
-    "revisión completa"
+    "mecánica estructural"
   ],
   "prerequisites": [
     "Álgebra y unidades"

@@ -1,25 +1,25 @@
-# Ficha
+# Distribución normal
 
-## Identificación
+La campana es una densidad: las probabilidades son áreas. Una altura mayor que uno es válida si la unidad y anchura cambian; un punto aislado tiene probabilidad cero.
 
-- **Nombre:** Distribución normal
-- **Autores asociados:** Gauss y Laplace
-- **Área:** probabilidad y estadística
-- **Nivel:** bachillerato y universidad inicial
-- **Tipo:** distribución continua de probabilidad
+## Magnitudes
 
-## Variables
+| Símbolo | Significado |
+| :-- | :-- |
+| f | Densidad de probabilidad de la variable normal. |
+| x | Valor de evaluación de la densidad. |
+| X | Variable aleatoria antes de observarla. |
+| μ | Media, que fija el centro. |
+| σ | Desviación estándar positiva. |
+| Z | Variable estandarizada, media cero y desviación uno. |
+| P | Probabilidad como área integrada. |
+| a | Extremo inferior del intervalo. |
+| b | Extremo superior del intervalo. |
 
-- `mu`: media.
-- `sigma`: desviación estándar.
-- `sigma²`: varianza.
-- `x`: valor de la variable.
-- `Z`: valor tipificado.
+## Alcance
 
-## Lectura del simulador
+σ>0; a≤b para hablar de probabilidad de intervalo. La normal es un modelo continuo, no una ley universal para todos los datos.
 
-La curva verde es la densidad normal. La línea central marca la media. La banda sombreada muestra el intervalo seleccionado alrededor de la media.
+## Unidades
 
-## Nota
-
-La altura de la curva es densidad, no probabilidad directa. La probabilidad se obtiene como área bajo la curva.
+μ,σ,X,x comparten unidad u; z no tiene unidad. f usa u⁻¹ para que f dx sea adimensional. La varianza usa u². Cambiar unidades cambia alturas de densidad pero no probabilidades del mismo evento.

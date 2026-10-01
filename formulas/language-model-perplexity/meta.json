@@ -18,12 +18,11 @@
     "Mide cuántas alternativas equivalentes mantiene un modelo al predecir texto."
   ],
   "tags": [
-    "machine learning",
+    "aprendizaje automático",
     "nlp",
     "teoria de la informacion",
     "normalizacion",
-    "funciones de perdida",
-    "simulacion"
+    "funciones de perdida"
   ],
   "prerequisites": [
     "probabilidad",

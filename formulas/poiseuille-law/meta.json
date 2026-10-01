@@ -17,11 +17,10 @@
   ],
   "tags": [
     "fisica",
-    "fluidos",
+    "mecánica de fluidos",
     "ondas",
     "oscilaciones",
-    "hidraulica",
-    "simulacion"
+    "hidraulica"
   ],
   "prerequisites": [
     "algebra",

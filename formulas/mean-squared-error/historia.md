@@ -1,9 +1,5 @@
 # Historia
 
-La idea de minimizar errores cuadrados está ligada al método de mínimos cuadrados, desarrollado en astronomía y geodesia para ajustar observaciones con ruido.
+La pérdida cuadrática procede de la tradición de mínimos cuadrados iniciada a comienzos del siglo XIX. Su uso en aprendizaje automático mantiene el mismo objetivo matemático, aunque el modelo tenga muchas más variables.
 
-Legendre y Gauss impulsaron esta formulación a comienzos del siglo XIX. La penalización cuadrática resultó matemáticamente cómoda y estadísticamente útil bajo supuestos de errores gaussianos.
-
-Con el tiempo, el error cuadrático medio se convirtió en una función de pérdida estándar en regresión, ajuste de modelos y aprendizaje automático.
-
-Sigue siendo muy usado por su sencillez, aunque puede ser sensible a valores atípicos.
+[Formulación y referencia de estudio](https://ocw.mit.edu/courses/18-05-introduction-to-probability-and-statistics-spring-2022/). El año histórico no es la fecha de creación del archivo ni la revisión registrada en Inventario.

@@ -2,7 +2,7 @@
   "id": "sarsa-temporal-difference-control",
   "name": "SARSA: control TD dentro de política",
   "year": 1994,
-  "field": "Reinforcement Learning",
+  "field": "Aprendizaje por refuerzo",
   "level": "Universidad inicial",
   "color": "#ea580c",
   "formula": [
@@ -17,14 +17,13 @@
     "Actualiza usando la acción siguiente que la política realmente eligió."
   ],
   "tags": [
-    "reinforcement learning",
+    "aprendizaje por refuerzo",
     "transformers",
     "attention",
     "positional encoding",
     "ppo",
     "q-learning",
-    "sarsa",
-    "simulacion"
+    "sarsa"
   ],
   "prerequisites": [
     "probabilidad",

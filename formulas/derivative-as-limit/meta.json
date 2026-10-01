@@ -4,7 +4,7 @@
   "author": "Cálculo diferencial clásico",
   "year": 1684,
   "field": "Cálculo diferencial",
-  "level": "Bachillerato/Universidad inicial",
+  "level": "Bachillerato y universidad inicial",
   "color": "#ef4444",
   "simulation": "derivative-as-limit",
   "formulaText": "La derivada es el límite de pendientes de secantes cuando sus puntos se acercan por ambos lados.",
@@ -84,10 +84,7 @@
     "Derivadas y límites"
   ],
   "tags": [
-    "Cálculo diferencial",
-    "aprendizaje",
-    "simulación",
-    "revisión completa"
+    "cálculo diferencial"
   ],
   "learningPath": [
     "Pendientes",

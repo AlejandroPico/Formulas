@@ -1,3 +1,5 @@
-y=β₀+β₁x
+\hat y_i=\beta_0+\beta_1x_i
 
-min∑eᵢ²
+\beta_1=\frac{\sum_i(x_i-\bar x)(y_i-\bar y)}{\sum_i(x_i-\bar x)^2},\qquad \beta_0=\bar y-\beta_1\bar x
+
+\min_{\beta_0,\beta_1}\sum_i(y_i-\hat y_i)^2

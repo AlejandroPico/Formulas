@@ -3,7 +3,7 @@
   "name": "Ley de Ohm en corriente alterna: impedancia",
   "year": 1880,
   "field": "Electrónica / Corriente alterna",
-  "level": "Bachillerato/Universidad inicial",
+  "level": "Bachillerato y universidad inicial",
   "color": "#2563eb",
   "formula": [
     "V=IZ",
@@ -19,13 +19,12 @@
     "Extiende Ohm a impedancia compleja con resistencia y reactancia."
   ],
   "tags": [
-    "electronica",
+    "electrónica",
     "electrotecnia",
     "corriente alterna",
     "semiconductores",
     "trifasica",
-    "potencia",
-    "simulacion"
+    "potencia"
   ],
   "prerequisites": [
     "ley de ohm",

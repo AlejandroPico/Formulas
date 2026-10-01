@@ -3,7 +3,7 @@
   "name": "Elasticidad precio de la demanda",
   "year": 1890,
   "field": "Microeconomía / Demanda",
-  "level": "Bachillerato/Universidad inicial",
+  "level": "Bachillerato y universidad inicial",
   "color": "#ec4899",
   "formula": [
     "ε_p=(dQ/dP)(P/Q)",
@@ -28,8 +28,7 @@
     "renta fija",
     "kelly",
     "var",
-    "solow",
-    "simulacion"
+    "solow"
   ],
   "prerequisites": [
     "algebra",

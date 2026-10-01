@@ -26,8 +26,7 @@
     "hidrogeno",
     "debye huckel",
     "nernst",
-    "faraday",
-    "simulacion"
+    "faraday"
   ],
   "prerequisites": [
     "quimica general",

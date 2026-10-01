@@ -2,7 +2,7 @@
   "id": "cross-attention",
   "name": "Cross-Attention: atención cruzada",
   "year": 2017,
-  "field": "Transformers / Deep Learning",
+  "field": "Transformers / Aprendizaje profundo",
   "level": "Universidad intermedia",
   "color": "#0ea5e9",
   "formula": [
@@ -17,14 +17,13 @@
     "Permite que una secuencia objetivo consulte claves y valores de otra secuencia fuente."
   ],
   "tags": [
-    "reinforcement learning",
+    "aprendizaje por refuerzo",
     "transformers",
     "attention",
     "positional encoding",
     "ppo",
     "q-learning",
-    "sarsa",
-    "simulacion"
+    "sarsa"
   ],
   "prerequisites": [
     "probabilidad",

@@ -11,5 +11,6 @@
     "derivada parcial de u respecto a x = derivada parcial de v respecto a y",
     "derivada parcial de u respecto a y = - derivada parcial de v respecto a x"
   ],
-  "summary": "Caracterizan cuándo una función compleja es diferenciable en sentido complejo mediante sus partes real e imaginaria."
+  "summary": "Caracterizan cuándo una función compleja es diferenciable en sentido complejo mediante sus partes real e imaginaria.",
+  "tags": []
 }

@@ -17,12 +17,11 @@
     "Comparan modelos penalizando la complejidad y premiando el ajuste."
   ],
   "tags": [
-    "estadistica",
+    "estadística",
     "inferencia",
     "modelos",
-    "bayes",
-    "informacion",
-    "simulacion"
+    "inferencia bayesiana",
+    "información"
   ],
   "prerequisites": [
     "probabilidad",

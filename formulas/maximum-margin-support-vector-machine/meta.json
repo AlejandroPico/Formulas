@@ -2,7 +2,7 @@
   "id": "maximum-margin-support-vector-machine",
   "name": "Máquinas de vectores de soporte: margen máximo",
   "year": 1995,
-  "field": "Machine Learning / Clasificación",
+  "field": "Aprendizaje automático / Clasificación",
   "level": "Universidad intermedia",
   "color": "#6366f1",
   "formula": [
@@ -18,15 +18,14 @@
     "Busca el hiperplano separador con mayor margen geométrico entre clases."
   ],
   "tags": [
-    "machine learning",
+    "aprendizaje automático",
     "clustering",
     "svm",
     "kernel",
     "pca",
     "svd",
     "pagerank",
-    "grafos",
-    "simulacion"
+    "grafos"
   ],
   "prerequisites": [
     "algebra lineal",

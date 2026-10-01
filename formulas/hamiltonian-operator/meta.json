@@ -17,14 +17,13 @@
     "Operador de energía total: suma de término cinético por curvatura y término potencial."
   ],
   "tags": [
-    "mecanica cuantica",
+    "mecánica cuántica",
     "cuantica",
     "schrodinger",
     "hamiltoniano",
     "pauli",
     "bloch",
-    "oscilador",
-    "simulacion"
+    "oscilador"
   ],
   "prerequisites": [
     "algebra lineal",

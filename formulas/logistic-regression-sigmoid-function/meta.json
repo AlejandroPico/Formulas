@@ -2,7 +2,7 @@
   "id": "logistic-regression-sigmoid-function",
   "name": "Regresión logística: función sigmoide",
   "year": 1845,
-  "field": "Estadística / Machine Learning",
+  "field": "Estadística y aprendizaje automático",
   "level": "Universidad inicial",
   "color": "#2563eb",
   "formula": [
@@ -19,13 +19,12 @@
     "Convierte una puntuación lineal en probabilidad calibrada para clasificación binaria."
   ],
   "tags": [
-    "machine learning",
-    "deep learning",
-    "optimizacion",
+    "aprendizaje automático",
+    "aprendizaje profundo",
+    "optimización",
     "redes neuronales",
-    "activacion",
-    "backpropagation",
-    "simulacion"
+    "activación",
+    "backpropagation"
   ],
   "prerequisites": [
     "calculo",

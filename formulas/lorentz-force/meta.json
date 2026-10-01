@@ -11,5 +11,6 @@
     "fuerza = carga por campo electrico mas carga por velocidad vectorial por campo magnetico",
     "si no hay campo electrico, la fuerza magnetica es perpendicular a velocidad y campo magnetico"
   ],
-  "summary": "Describe la fuerza sobre una carga moviendose en campos electricos y magneticos."
+  "summary": "Describe la fuerza sobre una carga moviendose en campos electricos y magneticos.",
+  "tags": []
 }

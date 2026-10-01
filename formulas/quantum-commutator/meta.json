@@ -11,5 +11,6 @@
     "conmutador de A y B = A B menos B A",
     "posición y momento no conmutan: su conmutador vale i h barra"
   ],
-  "summary": "Mide cuánto cambia el resultado al aplicar dos operadores en órdenes distintos."
+  "summary": "Mide cuánto cambia el resultado al aplicar dos operadores en órdenes distintos.",
+  "tags": []
 }

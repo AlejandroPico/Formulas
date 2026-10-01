@@ -3,7 +3,7 @@
   "name": "Energía cinética",
   "year": 1829,
   "field": "Mecánica clásica",
-  "level": "ESO/Bachillerato",
+  "level": "ESO y Bachillerato",
   "color": "#2563eb",
   "formula": [
     "Ec=½mv²"
@@ -17,11 +17,10 @@
   ],
   "tags": [
     "fisica",
-    "mecanica",
-    "energia",
+    "mecánica",
+    "energía",
     "momento",
-    "oscilaciones",
-    "simulacion"
+    "oscilaciones"
   ],
   "prerequisites": [
     "algebra",

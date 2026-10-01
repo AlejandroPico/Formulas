@@ -301,14 +301,18 @@ function reviewsTable(rows) {
 }
 
 function coverageView(rows, fields, levels) {
+  const tags = new Map();
+  rows.forEach(row => row.tags.split(',').map(tag => tag.trim()).filter(Boolean).forEach(tag => tags.set(tag, (tags.get(tag) || 0) + 1)));
   return `<div class="coverage-grid">
     <section><h3>Cobertura por disciplina</h3>${barList([...fields.entries()].sort((a, b) => b[1] - a[1]), rows.length)}</section>
-    <section><h3>Cobertura por nivel</h3>${barList([...levels.entries()].sort((a, b) => b[1] - a[1]), rows.length)}</section>
+      <section><h3>Cobertura por nivel</h3>${barList([...levels.entries()].sort((a, b) => b[1] - a[1]), rows.length)}</section>
+      <section><h3>Cobertura por etiquetas</h3><p class="catalog-note">Conceptos de las fichas. Una fórmula puede tener varias etiquetas; los totales no se suman como disciplinas. El estado de revisión se consulta en Revisiones.</p>${barList([...tags.entries()].sort((a, b) => b[1] - a[1]), rows.length)}</section>
   </div>`;
 }
 
 function barList(entries, total) {
-  return `<div class="coverage-bars">${entries.map(([label, count]) => `<div class="coverage-row"><span>${esc(label)}</span><b>${count}</b><i style="--w:${Math.max(3, Math.round((count / Math.max(total, 1)) * 100))}%"></i></div>`).join("")}</div>`;
+  const bars = values => `<div class="coverage-bars">${values.map(([label, count]) => `<div class="coverage-row"><span>${esc(label)}</span><b>${count}</b><i style="--w:${Math.max(3, Math.round((count / Math.max(total, 1)) * 100))}%"></i></div>`).join("")}</div>`;
+  return bars(entries.slice(0,8)) + (entries.length > 8 ? `<details><summary>Ver ${entries.length-8} más · ${entries.length} en total</summary>${bars(entries.slice(8))}</details>` : '');
 }
 
 function countBy(rows, key) {

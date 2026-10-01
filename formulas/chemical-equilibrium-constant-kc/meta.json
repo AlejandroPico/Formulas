@@ -3,7 +3,7 @@
   "name": "Constante de equilibrio Kc",
   "year": 1864,
   "field": "Equilibrio químico",
-  "level": "Bachillerato/Universidad inicial",
+  "level": "Bachillerato y universidad inicial",
   "color": "#8b5cf6",
   "formula": [
     "K_c=Π[productos]^ν/Π[reactivos]^ν"
@@ -17,14 +17,13 @@
     "Cuantifica la composición de una mezcla en equilibrio químico."
   ],
   "tags": [
-    "quimica",
-    "cinetica",
+    "química",
+    "cinética",
     "equilibrio quimico",
     "acido base",
     "ph",
     "beer lambert",
-    "tampon",
-    "simulacion"
+    "tampon"
   ],
   "prerequisites": [
     "quimica general",

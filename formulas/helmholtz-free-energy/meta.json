@@ -23,8 +23,7 @@
     "gibbs",
     "helmholtz",
     "carnot",
-    "primera ley",
-    "simulacion"
+    "primera ley"
   ],
   "prerequisites": [
     "energia",

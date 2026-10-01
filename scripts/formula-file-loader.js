@@ -1,13 +1,6 @@
 
 const FORMULAS_ROOT = "formulas";
-
-const LEVEL_ALIASES = [
-  [/eso|secundaria/i, "ESO"],
-  [/bachiller/i, "Bachillerato"],
-  [/universidad inicial|universitario inicial|inicial/i, "Universidad inicial"],
-  [/universidad|grado|ingenier/i, "Universidad"],
-  [/avanzado|doctorado|investig/i, "Avanzado"]
-];
+import {canonicalLevel,canonicalTags} from '../formulas/shared/taxonomy.js';
 
 const DOMAIN_PROFILES = [
   {
@@ -277,14 +270,7 @@ function customRootSections(record) {
     }));
 }
 
-function normalizeEducationalLevel(value) {
-  const text = String(value || "Sin nivel").trim();
-  for (const [pattern, normalized] of LEVEL_ALIASES) {
-    if (pattern.test(text)) return normalized;
-  }
-  if (/avanzado/i.test(text)) return "Avanzado";
-  return text || "Sin nivel";
-}
+function normalizeEducationalLevel(value) { return canonicalLevel(value); }
 
 function domainProfile(record) {
   const haystack = `${record.field || ""} ${record.name || ""} ${record.id || ""}`;
@@ -298,7 +284,8 @@ function domainProfile(record) {
 }
 
 function deriveTags(record, formula, profile) {
-  const base = [record.field, record.level, ...(record.tags || []), ...profile.tags];
+  if (Array.isArray(record.tags)) return canonicalTags(record.tags);
+  const base = [...profile.tags];
   const text = `${record.name || ""} ${record.id || ""} ${record.field || ""} ${formula.join(" ")}`.toLowerCase();
   if (/\\nabla|campo|vector|mathbf/.test(text)) base.push("campos", "vectores");
   if (/\\int|integral/.test(text)) base.push("integrales");
@@ -306,7 +293,7 @@ function deriveTags(record, formula, profile) {
   if (/\\partial|derivada|differential|ecuacion/.test(text)) base.push("ecuaciones diferenciales");
   if (/probabilidad|softmax|entropy|entrop/.test(text)) base.push("probabilidad");
   if (/simulacion|simulation/.test(record.simulation || "")) base.push("simulación");
-  return [...new Set(base.map(tag => String(tag || "").trim()).filter(Boolean))];
+  return canonicalTags(base);
 }
 
 function extractFormulaSymbols(formulas) {

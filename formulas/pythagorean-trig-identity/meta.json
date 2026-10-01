@@ -4,7 +4,7 @@
   "author": "Trigonometría clásica",
   "year": -300,
   "field": "Trigonometría",
-  "level": "ESO/Bachillerato",
+  "level": "ESO y Bachillerato",
   "color": "#3b82f6",
   "simulation": "pythagorean-trig-identity",
   "formulaText": "el cuadrado del seno más el cuadrado del coseno siempre vale uno",
@@ -35,5 +35,6 @@
     "Explorar la representación",
     "Resolver retos",
     "Justificar el resultado"
-  ]
+  ],
+  "tags": []
 }

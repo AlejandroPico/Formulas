@@ -18,13 +18,12 @@
     "Modela la corriente exponencial de una unión PN en conducción directa."
   ],
   "tags": [
-    "electronica",
+    "electrónica",
     "electrotecnia",
     "corriente alterna",
     "semiconductores",
     "trifasica",
-    "potencia",
-    "simulacion"
+    "potencia"
   ],
   "prerequisites": [
     "ley de ohm",

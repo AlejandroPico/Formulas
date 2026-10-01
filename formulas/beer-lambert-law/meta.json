@@ -3,7 +3,7 @@
   "name": "Ley de Beer-Lambert",
   "year": 1852,
   "field": "Química analítica",
-  "level": "Bachillerato/Universidad inicial",
+  "level": "Bachillerato y universidad inicial",
   "color": "#ea580c",
   "formula": [
     "A=εcl",
@@ -18,14 +18,13 @@
     "Relaciona absorbancia con concentración, camino óptico y transmitancia."
   ],
   "tags": [
-    "quimica",
-    "cinetica",
+    "química",
+    "cinética",
     "equilibrio quimico",
     "acido base",
     "ph",
     "beer lambert",
-    "tampon",
-    "simulacion"
+    "tampon"
   ],
   "prerequisites": [
     "quimica general",

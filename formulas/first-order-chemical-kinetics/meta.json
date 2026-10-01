@@ -3,7 +3,7 @@
   "name": "Cinética de primer orden",
   "year": 1850,
   "field": "Química cinética",
-  "level": "Bachillerato/Universidad inicial",
+  "level": "Bachillerato y universidad inicial",
   "color": "#2563eb",
   "formula": [
     "[A]_t=[A]_0 e^(−kt)",
@@ -19,14 +19,13 @@
     "Describe reacciones cuya velocidad es proporcional a la concentración de un único reactivo."
   ],
   "tags": [
-    "quimica",
-    "cinetica",
+    "química",
+    "cinética",
     "equilibrio quimico",
     "acido base",
     "ph",
     "beer lambert",
-    "tampon",
-    "simulacion"
+    "tampon"
   ],
   "prerequisites": [
     "quimica general",

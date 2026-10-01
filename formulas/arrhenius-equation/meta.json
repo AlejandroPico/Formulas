@@ -11,5 +11,6 @@
     "constante de velocidad = factor preexponencial por exponencial negativa de energía de activación sobre R T",
     "al aumentar la temperatura o disminuir la barrera de activación, la reacción se acelera"
   ],
-  "summary": "Relaciona la constante de velocidad de una reacción con la temperatura y la energía de activación."
+  "summary": "Relaciona la constante de velocidad de una reacción con la temperatura y la energía de activación.",
+  "tags": []
 }

@@ -3,7 +3,7 @@
   "name": "Segunda ley de la termodinámica: eficiencia de Carnot",
   "year": 1824,
   "field": "Termodinámica",
-  "level": "Bachillerato/Universidad inicial",
+  "level": "Bachillerato y universidad inicial",
   "color": "#ea580c",
   "formula": [
     "ηmax=1−TC/TH",
@@ -24,8 +24,7 @@
     "gibbs",
     "helmholtz",
     "carnot",
-    "primera ley",
-    "simulacion"
+    "primera ley"
   ],
   "prerequisites": [
     "energia",

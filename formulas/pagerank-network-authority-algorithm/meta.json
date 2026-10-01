@@ -17,15 +17,14 @@
     "Calcula autoridad de nodos como distribución estacionaria de un paseo aleatorio con teletransporte."
   ],
   "tags": [
-    "machine learning",
+    "aprendizaje automático",
     "clustering",
     "svm",
     "kernel",
     "pca",
     "svd",
     "pagerank",
-    "grafos",
-    "simulacion"
+    "grafos"
   ],
   "prerequisites": [
     "algebra lineal",

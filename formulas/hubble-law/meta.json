@@ -3,7 +3,7 @@
   "name": "Ley de Hubble",
   "year": 1929,
   "field": "Cosmología",
-  "level": "Bachillerato/Universidad inicial",
+  "level": "Bachillerato y universidad inicial",
   "color": "#2563eb",
   "formula": [
     "v=H0d"
@@ -21,8 +21,7 @@
     "einstein",
     "hubble",
     "redshift",
-    "geodesica",
-    "simulacion"
+    "geodesica"
   ],
   "prerequisites": [
     "relatividad",

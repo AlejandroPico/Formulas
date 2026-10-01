@@ -1,7 +1,11 @@
 # Significado
 
-El producto vectorial toma dos vectores de `R3` y produce un tercer vector perpendicular a ambos. Su direccion se determina con la regla de la mano derecha y su modulo coincide con el area del paralelogramo formado por los dos vectores.
+El producto vectorial genera una normal orientada. Su longitud es el área del paralelogramo; intercambiar los vectores invierte la dirección.
 
-En el caso visual del simulador se trabaja con vectores contenidos en el plano `xy`. Entonces el resultado apunta en el eje `z`, y su componente principal es `u1 v2 - u2 v1`. El signo indica orientacion y el valor absoluto indica area.
+## Del símbolo al fenómeno
 
-La idea central es que el producto vectorial mide perpendicularidad orientada. Si los vectores son paralelos, el area es cero. Si forman un angulo grande y tienen buena longitud, el area aumenta.
+Dos flechas forman un paralelogramo. Su producto vectorial es perpendicular y su longitud mide área. Arrastra el espacio o usa flechas para girar la cámara.
+
+## Ejemplo
+
+eₓ×eᵧ apunta a +z. ¿Cuánto vale su componente z? Regla de la mano derecha: eₓ×eᵧ=e_z.

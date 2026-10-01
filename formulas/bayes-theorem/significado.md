@@ -1,9 +1,11 @@
 # Significado
 
-El teorema de Bayes permite actualizar la probabilidad de una hipótesis cuando aparece una evidencia nueva.
+Una señal modifica cuánto creemos una hipótesis. Bayes invierte un condicionamiento usando la tasa previa y la frecuencia total de la evidencia.
 
-`P(A)` es la probabilidad previa de la hipótesis. `P(B|A)` mide la probabilidad de observar la evidencia si la hipótesis es verdadera. `P(A|B)` es la probabilidad posterior: lo que creemos de `A` después de conocer `B`.
+## Del símbolo al fenómeno
 
-La fórmula muestra por qué la prevalencia importa. Un test muy sensible puede producir una probabilidad posterior moderada si la condición inicial es rara y hay falsos positivos.
+En una fábrica, un indicador detecta piezas defectuosas. Cuenta verdaderos y falsos avisos entre 1000 piezas; la tasa base cambia el significado de un aviso.
 
-El simulador usa un caso tipo test diagnóstico con población de 1000 personas. Muestra verdaderos positivos, falsos positivos y el posterior calculado.
+## Ejemplo
+
+De 1000 piezas, 100 defectuosas. Hay 80 avisos verdaderos y 90 falsos. ¿Cuántos avisos hay? Cuenta ambos grupos: 80+90=170.

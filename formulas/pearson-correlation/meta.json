@@ -3,7 +3,7 @@
   "name": "Correlación de Pearson",
   "year": 1895,
   "field": "Probabilidad y estadística",
-  "level": "Bachillerato/Universidad inicial",
+  "level": "Bachillerato y universidad inicial",
   "color": "#2563eb",
   "formula": [
     "r=σxy/(σxσy)",
@@ -17,10 +17,9 @@
     "Mide la intensidad y dirección de asociación lineal entre dos variables."
   ],
   "tags": [
-    "estadistica",
+    "estadística",
     "inferencia",
-    "datos",
-    "simulacion"
+    "datos"
   ],
   "prerequisites": [
     "estadistica descriptiva",

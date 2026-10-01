@@ -17,9 +17,8 @@
     "matemáticas",
     "aritmética",
     "progresiones",
-    "Gauss",
-    "sumas",
-    "simulación"
+    "gauss",
+    "sumas"
   ],
   "prerequisites": [
     "Sucesiones",

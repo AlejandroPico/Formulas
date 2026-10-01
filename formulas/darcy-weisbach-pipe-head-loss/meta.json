@@ -17,14 +17,13 @@
     "Cuantifica la pérdida de energía por fricción en una tubería presurizada."
   ],
   "tags": [
-    "mecanica",
+    "mecánica",
     "hidraulica",
     "transferencia de calor",
     "fatiga",
     "elasticidad",
     "mohr",
-    "hooke",
-    "simulacion"
+    "hooke"
   ],
   "prerequisites": [
     "algebra",

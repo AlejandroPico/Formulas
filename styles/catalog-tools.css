@@ -34,10 +34,13 @@
 .validator-issue { display: inline-block; margin: 0 4px 4px 0; border-radius: 999px; padding: 3px 7px; font-size: .76rem; line-height: 1.25; }
 .validator-issue.is-latex { color: #b91c1c; background: color-mix(in srgb, #ef4444 12%, transparent); border: 1px solid color-mix(in srgb, #ef4444 35%, transparent); }
 .validator-issue.is-structure { color: #a16207; background: color-mix(in srgb, #f59e0b 13%, transparent); border: 1px solid color-mix(in srgb, #f59e0b 36%, transparent); }
-.coverage-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+.coverage-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
 .coverage-grid section { border: 1px solid color-mix(in srgb, var(--line) 70%, transparent); border-radius: 18px; padding: 14px; background: color-mix(in srgb, var(--panel-solid) 82%, transparent); }
 .coverage-grid h3 { margin: 0 0 12px; }
 .coverage-bars { display: grid; gap: 10px; }
+.coverage-grid details { margin-top: 14px; }
+.coverage-grid summary { cursor: pointer; padding: 8px 0; color: var(--muted); }
+.coverage-grid details[open] .coverage-bars { margin-top: 12px; }
 .coverage-row { display: grid; grid-template-columns: 1fr auto; gap: 8px; align-items: center; position: relative; padding-bottom: 10px; }
 .coverage-row i { grid-column: 1 / -1; height: 7px; border-radius: 999px; background: linear-gradient(90deg, var(--accent) var(--w), color-mix(in srgb, var(--line) 58%, transparent) var(--w)); }
 .superprompt-box { margin: 0 20px 20px; min-height: 0; width: calc(100% - 40px); height: 100%; resize: none; border: 1px solid color-mix(in srgb, var(--line) 75%, transparent); border-radius: 16px; padding: 14px; background: color-mix(in srgb, var(--panel-solid) 78%, transparent); color: var(--text); line-height: 1.5; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }

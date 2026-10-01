@@ -3,7 +3,7 @@
   "name": "Cinética de segundo orden",
   "year": 1850,
   "field": "Química cinética",
-  "level": "Bachillerato/Universidad inicial",
+  "level": "Bachillerato y universidad inicial",
   "color": "#ef4444",
   "formula": [
     "1/[A]_t=1/[A]_0+kt",
@@ -19,14 +19,13 @@
     "Describe reacciones cuya velocidad depende del cuadrado de la concentración o de dos reactivos."
   ],
   "tags": [
-    "quimica",
-    "cinetica",
+    "química",
+    "cinética",
     "equilibrio quimico",
     "acido base",
     "ph",
     "beer lambert",
-    "tampon",
-    "simulacion"
+    "tampon"
   ],
   "prerequisites": [
     "quimica general",

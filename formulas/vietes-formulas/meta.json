@@ -3,18 +3,17 @@
   "name": "Fórmulas de Viète",
   "author": "Francois Viete",
   "year": 1591,
-  "field": "Algebra",
+  "field": "Álgebra",
   "level": "Bachillerato",
   "color": "#14b8a6",
   "simulation": "vietes-formulas",
   "formulaText": "Construye cuadráticas desde raíces reales o conjugadas y relaciona suma, producto y coeficientes sin resolver de nuevo.",
   "summary": "Construye cuadráticas desde raíces reales o conjugadas y relaciona suma, producto y coeficientes sin resolver de nuevo.",
   "tags": [
-    "matematicas",
-    "algebra",
+    "matemáticas",
+    "álgebra",
     "polinomios",
-    "raices",
-    "simulacion"
+    "raices"
   ],
   "symbolGlossary": {
     "0": "Cero: cantidad nula o condición de anulación.",

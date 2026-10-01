@@ -1,9 +1,9 @@
-# Derivacion
+# Derivación
 
-Una forma de justificar la estructura de Coulomb parte de la simetria. Una carga puntual aislada no privilegia ninguna direccion del espacio, asi que su influencia debe distribuirse radialmente. A distancia `r`, esa influencia se reparte sobre una superficie esferica de area proporcional a `r^2`.
+La simetría de una fuente puntual produce campo radial. La ley experimental fija su magnitud proporcional a q/r². Multiplica por la carga de prueba para obtener F=q₂E. Para q₁q₂>0 apunta con r̂; para producto negativo apunta en sentido opuesto. La fuerza recíproca tiene igual magnitud y dirección contraria.
 
-Si la cantidad total de flujo electrico asociada a una carga se conserva al atravesar cualquier esfera centrada en ella, la intensidad del campo debe decrecer como `1/r^2`. Al multiplicar ese campo por una segunda carga de prueba se obtiene la fuerza sobre ella.
+## Comprueba el resultado
 
-La formulacion vectorial anade la direccion. El vector unitario radial indica hacia donde apunta la fuerza. El signo del producto `q1 q2` determina si la fuerza es repulsiva o atractiva.
+Dos cargas positivas se separan al doble de distancia. Si F inicial=4 nN, ¿cuál es F final? Ley inversa cuadrática: 4/2²=1 nN.
 
-En el simulador se usa una escala visual, no la constante fisica real completa, para que el cambio de fuerza sea perceptible en pantalla. La relacion cualitativa se conserva: mayor carga produce mayor fuerza y mayor distancia reduce la interaccion de forma cuadratica.
+Cargas puntuales en vacío o medio homogéneo con permitividad apropiada, régimen electrostático. r>0; en el origen no se suaviza artificialmente la singularidad.

@@ -18,14 +18,13 @@
     "Codifica posición como rotación de fase, preservando norma y favoreciendo posición relativa."
   ],
   "tags": [
-    "reinforcement learning",
+    "aprendizaje por refuerzo",
     "transformers",
     "attention",
     "positional encoding",
     "ppo",
     "q-learning",
-    "sarsa",
-    "simulacion"
+    "sarsa"
   ],
   "prerequisites": [
     "probabilidad",

@@ -1,9 +1,9 @@
 # Derivación
 
-La convolución se obtiene al describir un sistema lineal mediante su respuesta elemental. Una señal complicada puede verse como una suma de contribuciones simples desplazadas. Cada contribución genera una copia desplazada de la respuesta del sistema.
+Para pulsos de amplitudes A,B y soportes [0,a],[0,b], g(t−τ) tiene soporte [t−b,t]. La intersección es [max(0,t−b),min(a,t)]. Su longitud positiva, multiplicada por AB, da el resultado: un triángulo si las duraciones coinciden y un trapecio si difieren. Un cambio de variable muestra conmutatividad bajo hipótesis de integrabilidad.
 
-Al sumar todas esas copias desplazadas aparece la integral de convolución. El parámetro de integración recorre todas las posiciones posibles de solapamiento entre las dos funciones.
+## Comprueba el resultado
 
-En versión discreta, la integral se sustituye por una suma. Para cada posición, se multiplican valores de una señal por valores desplazados de la otra y se acumula el resultado.
+Dos pulsos unitarios de duración 2 s. En t=1 s, ¿cuánto vale la convolución? Solape [0,1], longitud 1 s; amplitudes 1·1.
 
-La interpretación geométrica es directa: el valor de la convolución es grande cuando las dos formas se solapan mucho y pequeño cuando apenas coinciden.
+Integral o suma convergente. Para interpretación como respuesta de un sistema se requiere linealidad e invariancia temporal; causalidad restringe soportes, pero no es parte de toda convolución abstracta.

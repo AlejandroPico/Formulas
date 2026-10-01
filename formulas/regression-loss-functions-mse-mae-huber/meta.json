@@ -2,7 +2,7 @@
   "id": "regression-loss-functions-mse-mae-huber",
   "name": "Pérdidas de regresión: MSE, MAE y Huber",
   "year": 1964,
-  "field": "Machine Learning / Estadística robusta",
+  "field": "Aprendizaje automático / Estadística robusta",
   "level": "Universidad inicial",
   "color": "#10b981",
   "formula": [
@@ -19,12 +19,11 @@
     "Compara sensibilidad cuadrática, robustez absoluta y transición suave Huber."
   ],
   "tags": [
-    "machine learning",
+    "aprendizaje automático",
     "nlp",
     "teoria de la informacion",
     "normalizacion",
-    "funciones de perdida",
-    "simulacion"
+    "funciones de perdida"
   ],
   "prerequisites": [
     "probabilidad",

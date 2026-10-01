@@ -1428,6 +1428,901 @@
           "Referencias de estudio y condiciones de validez"
         ]
       }
+    ],
+    "cramers-rule": [
+      {
+        "revision": 1,
+        "date": "2026-10-01",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel"
+        ],
+        "summary": "Revisión completa: Dos líneas, un encuentro. Cuatro misiones, Intersecciones / Explorar / Determinante, explicación de símbolos y metadatos específicos.",
+        "checks": [
+          "Cálculos y condiciones contrastados independientemente",
+          "Todas las pestañas descubiertas y todos los símbolos matemáticos",
+          "Cuatro misiones, respuesta incorrecta, pista, ajuste y reintentos",
+          "Controles, teclado y cámaras con ratón y tacto",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa al ocultar y limpieza al cambiar pestaña",
+          "Disciplina, nivel y etiquetas canónicas",
+          "Fecha de creación conservada"
+        ]
+      }
+    ],
+    "continuity-equation-fluid": [
+      {
+        "revision": 1,
+        "date": "2026-10-01",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel"
+        ],
+        "summary": "Revisión completa: Lo que entra, sale o se acumula. Cuatro misiones, Balance de masa / Explorar / Divergencia, explicación de símbolos y metadatos específicos.",
+        "checks": [
+          "Cálculos y condiciones contrastados independientemente",
+          "Todas las pestañas descubiertas y todos los símbolos matemáticos",
+          "Cuatro misiones, respuesta incorrecta, pista, ajuste y reintentos",
+          "Controles, teclado y cámaras con ratón y tacto",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa al ocultar y limpieza al cambiar pestaña",
+          "Disciplina, nivel y etiquetas canónicas",
+          "Fecha de creación conservada"
+        ]
+      }
+    ],
+    "euler-lagrange": [
+      {
+        "revision": 1,
+        "date": "2026-10-01",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel"
+        ],
+        "summary": "Revisión completa: Una trayectoria puede ser estacionaria. Cuatro misiones, Acción / Explorar / Curvatura de acción, explicación de símbolos y metadatos específicos.",
+        "checks": [
+          "Cálculos y condiciones contrastados independientemente",
+          "Todas las pestañas descubiertas y todos los símbolos matemáticos",
+          "Cuatro misiones, respuesta incorrecta, pista, ajuste y reintentos",
+          "Controles, teclado y cámaras con ratón y tacto",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa al ocultar y limpieza al cambiar pestaña",
+          "Disciplina, nivel y etiquetas canónicas",
+          "Fecha de creación conservada"
+        ]
+      }
+    ],
+    "euler-fluid-equation": [
+      {
+        "revision": 1,
+        "date": "2026-10-01",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel"
+        ],
+        "summary": "Revisión completa: Acelerar sin viscosidad. Cuatro misiones, Gradientes / Explorar / Aceleración material, explicación de símbolos y metadatos específicos.",
+        "checks": [
+          "Cálculos y condiciones contrastados independientemente",
+          "Todas las pestañas descubiertas y todos los símbolos matemáticos",
+          "Cuatro misiones, respuesta incorrecta, pista, ajuste y reintentos",
+          "Controles, teclado y cámaras con ratón y tacto",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa al ocultar y limpieza al cambiar pestaña",
+          "Disciplina, nivel y etiquetas canónicas",
+          "Fecha de creación conservada"
+        ]
+      }
+    ],
+    "bayes-theorem": [
+      {
+        "revision": 1,
+        "date": "2026-10-01",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel"
+        ],
+        "summary": "Revisión completa: Busca la causa entre las señales. Cuatro misiones, Detectives / Explorar / Frecuencias naturales, explicación de símbolos y metadatos específicos.",
+        "checks": [
+          "Cálculos y condiciones contrastados independientemente",
+          "Todas las pestañas descubiertas y todos los símbolos matemáticos",
+          "Cuatro misiones, respuesta incorrecta, pista, ajuste y reintentos",
+          "Controles, teclado y cámaras con ratón y tacto",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa al ocultar y limpieza al cambiar pestaña",
+          "Disciplina, nivel y etiquetas canónicas",
+          "Fecha de creación conservada"
+        ]
+      }
+    ],
+    "multiclass-bayes-theorem": [
+      {
+        "revision": 1,
+        "date": "2026-10-01",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel"
+        ],
+        "summary": "Revisión completa: Tres hipótesis compiten por una evidencia. Cuatro misiones, Clasificador / Explorar / Antes y después, explicación de símbolos y metadatos específicos.",
+        "checks": [
+          "Cálculos y condiciones contrastados independientemente",
+          "Todas las pestañas descubiertas y todos los símbolos matemáticos",
+          "Cuatro misiones, respuesta incorrecta, pista, ajuste y reintentos",
+          "Controles, teclado y cámaras con ratón y tacto",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa al ocultar y limpieza al cambiar pestaña",
+          "Disciplina, nivel y etiquetas canónicas",
+          "Fecha de creación conservada"
+        ]
+      }
+    ],
+    "cross-product": [
+      {
+        "revision": 1,
+        "date": "2026-10-01",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel"
+        ],
+        "summary": "Revisión completa: Construye una normal en el espacio. Cuatro misiones, Orientaciones / Vectores 3D / Área orientada, explicación de símbolos y metadatos específicos.",
+        "checks": [
+          "Cálculos y condiciones contrastados independientemente",
+          "Todas las pestañas descubiertas y todos los símbolos matemáticos",
+          "Cuatro misiones, respuesta incorrecta, pista, ajuste y reintentos",
+          "Controles, teclado y cámaras con ratón y tacto",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa al ocultar y limpieza al cambiar pestaña",
+          "Disciplina, nivel y etiquetas canónicas",
+          "Fecha de creación conservada"
+        ]
+      }
+    ],
+    "spherical-heron-formula": [
+      {
+        "revision": 1,
+        "date": "2026-10-01",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel"
+        ],
+        "summary": "Revisión completa: Triángulos sobre una esfera. Cuatro misiones, Navegantes / Esfera 3D / Exceso esférico, explicación de símbolos y metadatos específicos.",
+        "checks": [
+          "Cálculos y condiciones contrastados independientemente",
+          "Todas las pestañas descubiertas y todos los símbolos matemáticos",
+          "Cuatro misiones, respuesta incorrecta, pista, ajuste y reintentos",
+          "Controles, teclado y cámaras con ratón y tacto",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa al ocultar y limpieza al cambiar pestaña",
+          "Disciplina, nivel y etiquetas canónicas",
+          "Fecha de creación conservada"
+        ]
+      }
+    ],
+    "laplace-transform": [
+      {
+        "revision": 1,
+        "date": "2026-10-01",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel"
+        ],
+        "summary": "Revisión completa: Pesa el tiempo con una exponencial. Cuatro misiones, Transformaciones / Explorar / Área acumulada, explicación de símbolos y metadatos específicos.",
+        "checks": [
+          "Cálculos y condiciones contrastados independientemente",
+          "Todas las pestañas descubiertas y todos los símbolos matemáticos",
+          "Cuatro misiones, respuesta incorrecta, pista, ajuste y reintentos",
+          "Controles, teclado y cámaras con ratón y tacto",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa al ocultar y limpieza al cambiar pestaña",
+          "Disciplina, nivel y etiquetas canónicas",
+          "Fecha de creación conservada"
+        ]
+      }
+    ],
+    "coulomb-law": [
+      {
+        "revision": 1,
+        "date": "2026-10-01",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel"
+        ],
+        "summary": "Revisión completa: Empuja y atrae cargas. Cuatro misiones, Fuerzas / Explorar / Campo y fuerza, explicación de símbolos y metadatos específicos.",
+        "checks": [
+          "Cálculos y condiciones contrastados independientemente",
+          "Todas las pestañas descubiertas y todos los símbolos matemáticos",
+          "Cuatro misiones, respuesta incorrecta, pista, ajuste y reintentos",
+          "Controles, teclado y cámaras con ratón y tacto",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa al ocultar y limpieza al cambiar pestaña",
+          "Disciplina, nivel y etiquetas canónicas",
+          "Fecha de creación conservada"
+        ]
+      }
+    ],
+    "coulomb-point-charge-field": [
+      {
+        "revision": 1,
+        "date": "2026-10-01",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel"
+        ],
+        "summary": "Revisión completa: Una flecha en cada punto. Cuatro misiones, Campos / Explorar / Sondas, explicación de símbolos y metadatos específicos.",
+        "checks": [
+          "Cálculos y condiciones contrastados independientemente",
+          "Todas las pestañas descubiertas y todos los símbolos matemáticos",
+          "Cuatro misiones, respuesta incorrecta, pista, ajuste y reintentos",
+          "Controles, teclado y cámaras con ratón y tacto",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa al ocultar y limpieza al cambiar pestaña",
+          "Disciplina, nivel y etiquetas canónicas",
+          "Fecha de creación conservada"
+        ]
+      }
+    ],
+    "electric-scalar-potential": [
+      {
+        "revision": 1,
+        "date": "2026-10-01",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel"
+        ],
+        "summary": "Revisión completa: Una altura eléctrica en cada punto. Cuatro misiones, Potenciales / Explorar / Paisaje 3D, explicación de símbolos y metadatos específicos.",
+        "checks": [
+          "Cálculos y condiciones contrastados independientemente",
+          "Todas las pestañas descubiertas y todos los símbolos matemáticos",
+          "Cuatro misiones, respuesta incorrecta, pista, ajuste y reintentos",
+          "Controles, teclado y cámaras con ratón y tacto",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa al ocultar y limpieza al cambiar pestaña",
+          "Disciplina, nivel y etiquetas canónicas",
+          "Fecha de creación conservada"
+        ]
+      }
+    ],
+    "lagrange-interpolation": [
+      {
+        "revision": 1,
+        "date": "2026-10-01",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel"
+        ],
+        "summary": "Revisión completa: Una curva atraviesa tres nodos. Cuatro misiones, Nodos / Explorar / Bases, explicación de símbolos y metadatos específicos.",
+        "checks": [
+          "Cálculos y condiciones contrastados independientemente",
+          "Todas las pestañas descubiertas y todos los símbolos matemáticos",
+          "Cuatro misiones, respuesta incorrecta, pista, ajuste y reintentos",
+          "Controles, teclado y cámaras con ratón y tacto",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa al ocultar y limpieza al cambiar pestaña",
+          "Disciplina, nivel y etiquetas canónicas",
+          "Fecha de creación conservada"
+        ]
+      }
+    ],
+    "parseval-theorem": [
+      {
+        "revision": 1,
+        "date": "2026-10-01",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel"
+        ],
+        "summary": "Revisión completa: La energía cambia de representación. Cuatro misiones, Energía / Señal / Espectro, explicación de símbolos y metadatos específicos.",
+        "checks": [
+          "Cálculos y condiciones contrastados independientemente",
+          "Todas las pestañas descubiertas y todos los símbolos matemáticos",
+          "Cuatro misiones, respuesta incorrecta, pista, ajuste y reintentos",
+          "Controles, teclado y cámaras con ratón y tacto",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa al ocultar y limpieza al cambiar pestaña",
+          "Disciplina, nivel y etiquetas canónicas",
+          "Fecha de creación conservada"
+        ]
+      }
+    ],
+    "convolution": [
+      {
+        "revision": 1,
+        "date": "2026-10-01",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel"
+        ],
+        "summary": "Revisión completa: Desliza, solapa, acumula. Cuatro misiones, Solapamientos / Explorar / Señal resultante, explicación de símbolos y metadatos específicos.",
+        "checks": [
+          "Cálculos y condiciones contrastados independientemente",
+          "Todas las pestañas descubiertas y todos los símbolos matemáticos",
+          "Cuatro misiones, respuesta incorrecta, pista, ajuste y reintentos",
+          "Controles, teclado y cámaras con ratón y tacto",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa al ocultar y limpieza al cambiar pestaña",
+          "Disciplina, nivel y etiquetas canónicas",
+          "Fecha de creación conservada"
+        ]
+      }
+    ],
+    "linear-transport-advection-equation": [
+      {
+        "revision": 1,
+        "date": "2026-10-01",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel"
+        ],
+        "summary": "Revisión completa: Transporta un perfil sin deformarlo. Cuatro misiones, Transporte / Explorar / Exacta y numérica, explicación de símbolos y metadatos específicos.",
+        "checks": [
+          "Cálculos y condiciones contrastados independientemente",
+          "Todas las pestañas descubiertas y todos los símbolos matemáticos",
+          "Cuatro misiones, respuesta incorrecta, pista, ajuste y reintentos",
+          "Controles, teclado y cámaras con ratón y tacto",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa al ocultar y limpieza al cambiar pestaña",
+          "Disciplina, nivel y etiquetas canónicas",
+          "Fecha de creación conservada"
+        ]
+      }
+    ],
+    "ruffini-rule": [
+      {
+        "revision": 1,
+        "date": "2026-10-01",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel"
+        ],
+        "summary": "Revisión completa: Divide sin perder un coeficiente. Cuatro misiones, Divisiones / Explorar / Polinomio y resto, explicación de símbolos y metadatos específicos.",
+        "checks": [
+          "Cálculos y condiciones contrastados independientemente",
+          "Todas las pestañas descubiertas y todos los símbolos matemáticos",
+          "Cuatro misiones, respuesta incorrecta, pista, ajuste y reintentos",
+          "Controles, teclado y cámaras con ratón y tacto",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa al ocultar y limpieza al cambiar pestaña",
+          "Disciplina, nivel y etiquetas canónicas",
+          "Fecha de creación conservada"
+        ]
+      }
+    ],
+    "mean-squared-error": [
+      {
+        "revision": 1,
+        "date": "2026-10-01",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel"
+        ],
+        "summary": "Revisión completa: Haz visibles los errores grandes. Cuatro misiones, Residuos / Explorar / Cuadrados de error, explicación de símbolos y metadatos específicos.",
+        "checks": [
+          "Cálculos y condiciones contrastados independientemente",
+          "Todas las pestañas descubiertas y todos los símbolos matemáticos",
+          "Cuatro misiones, respuesta incorrecta, pista, ajuste y reintentos",
+          "Controles, teclado y cámaras con ratón y tacto",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa al ocultar y limpieza al cambiar pestaña",
+          "Disciplina, nivel y etiquetas canónicas",
+          "Fecha de creación conservada"
+        ]
+      }
+    ],
+    "least-squares-regression": [
+      {
+        "revision": 1,
+        "date": "2026-10-01",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel"
+        ],
+        "summary": "Revisión completa: Encuentra la recta de equilibrio. Cuatro misiones, Ajustes / Explorar / Óptimo y residuos, explicación de símbolos y metadatos específicos.",
+        "checks": [
+          "Cálculos y condiciones contrastados independientemente",
+          "Todas las pestañas descubiertas y todos los símbolos matemáticos",
+          "Cuatro misiones, respuesta incorrecta, pista, ajuste y reintentos",
+          "Controles, teclado y cámaras con ratón y tacto",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa al ocultar y limpieza al cambiar pestaña",
+          "Disciplina, nivel y etiquetas canónicas",
+          "Fecha de creación conservada"
+        ]
+      }
+    ],
+    "normal-distribution": [
+      {
+        "revision": 1,
+        "date": "2026-10-01",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel"
+        ],
+        "summary": "Revisión completa: La probabilidad vive en el área. Cuatro misiones, Intervalos / Explorar / Estandarizar, explicación de símbolos y metadatos específicos.",
+        "checks": [
+          "Cálculos y condiciones contrastados independientemente",
+          "Todas las pestañas descubiertas y todos los símbolos matemáticos",
+          "Cuatro misiones, respuesta incorrecta, pista, ajuste y reintentos",
+          "Controles, teclado y cámaras con ratón y tacto",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa al ocultar y limpieza al cambiar pestaña",
+          "Disciplina, nivel y etiquetas canónicas",
+          "Fecha de creación conservada"
+        ]
+      }
+    ],
+    "gaussian-integral": [
+      {
+        "revision": 1,
+        "date": "2026-10-01",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel"
+        ],
+        "summary": "Revisión completa: Una campana tiene área exacta. Cuatro misiones, Áreas infinitas / Explorar / Prueba en 3D, explicación de símbolos y metadatos específicos.",
+        "checks": [
+          "Cálculos y condiciones contrastados independientemente",
+          "Todas las pestañas descubiertas y todos los símbolos matemáticos",
+          "Cuatro misiones, respuesta incorrecta, pista, ajuste y reintentos",
+          "Controles, teclado y cámaras con ratón y tacto",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa al ocultar y limpieza al cambiar pestaña",
+          "Disciplina, nivel y etiquetas canónicas",
+          "Fecha de creación conservada"
+        ]
+      }
+    ],
+    "central-limit-theorem": [
+      {
+        "revision": 1,
+        "date": "2026-10-01",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel"
+        ],
+        "summary": "Revisión completa: Suma muchas variables, no solo una. Cuatro misiones, Promedios / Explorar / Aproximación normal, explicación de símbolos y metadatos específicos.",
+        "checks": [
+          "Cálculos y condiciones contrastados independientemente",
+          "Todas las pestañas descubiertas y todos los símbolos matemáticos",
+          "Cuatro misiones, respuesta incorrecta, pista, ajuste y reintentos",
+          "Controles, teclado y cámaras con ratón y tacto",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa al ocultar y limpieza al cambiar pestaña",
+          "Disciplina, nivel y etiquetas canónicas",
+          "Fecha de creación conservada"
+        ]
+      }
+    ],
+    "hyperbolic-tangent-activation": [
+      {
+        "revision": 1,
+        "date": "2026-10-01",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "interpretacion",
+          "limitaciones"
+        ],
+        "summary": "Revisión completa: Activa sin perder el signo. Cuatro misiones, Neuronas / Explorar / Gradientes, explicación de símbolos y metadatos específicos.",
+        "checks": [
+          "Cálculos y condiciones contrastados independientemente",
+          "Todas las pestañas descubiertas y todos los símbolos matemáticos",
+          "Cuatro misiones, respuesta incorrecta, pista, ajuste y reintentos",
+          "Controles, teclado y cámaras con ratón y tacto",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa al ocultar y limpieza al cambiar pestaña",
+          "Disciplina, nivel y etiquetas canónicas",
+          "Fecha de creación conservada"
+        ]
+      }
+    ],
+    "poisson-equation": [
+      {
+        "revision": 1,
+        "date": "2026-10-01",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel"
+        ],
+        "summary": "Revisión completa: La fuente curva un potencial. Cuatro misiones, Fuentes / Explorar / Superficie 3D, explicación de símbolos y metadatos específicos.",
+        "checks": [
+          "Cálculos y condiciones contrastados independientemente",
+          "Todas las pestañas descubiertas y todos los símbolos matemáticos",
+          "Cuatro misiones, respuesta incorrecta, pista, ajuste y reintentos",
+          "Controles, teclado y cámaras con ratón y tacto",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa al ocultar y limpieza al cambiar pestaña",
+          "Disciplina, nivel y etiquetas canónicas",
+          "Fecha de creación conservada"
+        ]
+      }
+    ],
+    "fourier-heat-conduction-1d-steady": [
+      {
+        "revision": 1,
+        "date": "2026-10-01",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "interpretacion",
+          "limitaciones"
+        ],
+        "summary": "Revisión completa: Haz pasar calor por una pared. Cuatro misiones, Paredes / Explorar / Resistencia térmica, explicación de símbolos y metadatos específicos.",
+        "checks": [
+          "Cálculos y condiciones contrastados independientemente",
+          "Todas las pestañas descubiertas y todos los símbolos matemáticos",
+          "Cuatro misiones, respuesta incorrecta, pista, ajuste y reintentos",
+          "Controles, teclado y cámaras con ratón y tacto",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa al ocultar y limpieza al cambiar pestaña",
+          "Disciplina, nivel y etiquetas canónicas",
+          "Fecha de creación conservada"
+        ]
+      }
+    ],
+    "incompressible-navier-stokes-equation": [
+      {
+        "revision": 1,
+        "date": "2026-10-01",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel"
+        ],
+        "summary": "Revisión completa: Vórtices que disipan energía. Cuatro misiones, Vórtices / Flujo 2D / Vorticidad 3D, explicación de símbolos y metadatos específicos.",
+        "checks": [
+          "Cálculos y condiciones contrastados independientemente",
+          "Todas las pestañas descubiertas y todos los símbolos matemáticos",
+          "Cuatro misiones, respuesta incorrecta, pista, ajuste y reintentos",
+          "Controles, teclado y cámaras con ratón y tacto",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa al ocultar y limpieza al cambiar pestaña",
+          "Disciplina, nivel y etiquetas canónicas",
+          "Fecha de creación conservada"
+        ]
+      }
+    ],
+    "heat-equation": [
+      {
+        "revision": 1,
+        "date": "2026-10-01",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel"
+        ],
+        "summary": "Revisión completa: El calor borra los detalles pequeños. Cuatro misiones, Difusión / Explorar / Historia térmica 3D, explicación de símbolos y metadatos específicos.",
+        "checks": [
+          "Cálculos y condiciones contrastados independientemente",
+          "Todas las pestañas descubiertas y todos los símbolos matemáticos",
+          "Cuatro misiones, respuesta incorrecta, pista, ajuste y reintentos",
+          "Controles, teclado y cámaras con ratón y tacto",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa al ocultar y limpieza al cambiar pestaña",
+          "Disciplina, nivel y etiquetas canónicas",
+          "Fecha de creación conservada"
+        ]
+      }
     ]
   }
 }

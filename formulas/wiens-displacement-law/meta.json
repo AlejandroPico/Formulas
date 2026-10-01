@@ -3,7 +3,7 @@
   "name": "Ley de desplazamiento de Wien",
   "year": 1893,
   "field": "Radiación térmica",
-  "level": "Bachillerato/Universidad inicial",
+  "level": "Bachillerato y universidad inicial",
   "color": "#2563eb",
   "formula": [
     "λ_max T=b"
@@ -23,8 +23,7 @@
     "cuerpo negro",
     "gas real",
     "boltzmann",
-    "einstein",
-    "simulacion"
+    "einstein"
   ],
   "prerequisites": [
     "termodinamica",

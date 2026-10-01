@@ -1,19 +1,9 @@
 # Derivación
 
-En un triángulo esférico, los lados `a`, `b` y `c` se miden como arcos en radianes sobre la esfera unidad. Se define el semiperímetro:
+Las identidades esféricas de medio ángulo permiten expresar tan(E/4) como raíz del producto de cuatro tangentes. Toma la rama positiva para el triángulo convexo de arcos menores descrito. Obtén E=4 atan(raíz) y S=ER². Un octante tiene a=b=c=π/2 y tres ángulos rectos: E=π/2, S=πR²/2. Para lados muy pequeños se recupera el comportamiento plano de Herón.
 
-`s=(a+b+c)/2`.
+## Comprueba el resultado
 
-La fórmula de L'Huilier relaciona esos lados con el exceso esférico `E`:
+Un triángulo de tres ángulos rectos tiene exceso π/2. En R=1, ¿cuál es su área? Área esférica: E·R²=π/2.
 
-`tan²(E/4)=tan(s/2)tan((s-a)/2)tan((s-b)/2)tan((s-c)/2)`.
-
-Una vez calculado el producto del miembro derecho, se toma:
-
-`E=4 arctan(√producto)`.
-
-En una esfera de radio `R`, el área del triángulo es:
-
-`A=ER²`.
-
-La fórmula es especialmente útil para triángulos esféricos pequeños porque evita calcular primero los tres ángulos internos.
+0<a,b,c<π, desigualdades triangulares estrictas y perímetro menor que 2π para la región convexa del laboratorio. Otros recorridos sobre la esfera pueden delimitar regiones diferentes y requieren escoger ramas y orientación.

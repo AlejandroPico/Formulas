@@ -3,7 +3,7 @@
   "name": "Tensión normal: tracción y compresión",
   "year": 1822,
   "field": "Resistencia de materiales",
-  "level": "Bachillerato/Universidad inicial",
+  "level": "Bachillerato y universidad inicial",
   "color": "#2563eb",
   "formula": [
     "σ=P/A",
@@ -18,13 +18,12 @@
     "Relaciona carga axial y área resistente para estimar tensión de tracción o compresión."
   ],
   "tags": [
-    "mecanica",
+    "mecánica",
     "resistencia de materiales",
     "transferencia de calor",
-    "electronica",
+    "electrónica",
     "instrumentacion",
-    "mosfet",
-    "simulacion"
+    "mosfet"
   ],
   "prerequisites": [
     "algebra",

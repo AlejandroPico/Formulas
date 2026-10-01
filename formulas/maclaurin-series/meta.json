@@ -4,7 +4,7 @@
   "author": "Colin Maclaurin",
   "year": 1742,
   "field": "Análisis matemático",
-  "level": "Bachillerato/Universidad inicial",
+  "level": "Bachillerato y universidad inicial",
   "color": "#2563eb",
   "simulation": "maclaurin-series",
   "formulaText": "Maclaurin es Taylor con centro cero: las derivadas en el origen construyen potencias de x.",
@@ -88,10 +88,7 @@
     "Derivadas y límites"
   ],
   "tags": [
-    "Análisis matemático",
-    "aprendizaje",
-    "simulación",
-    "revisión completa"
+    "análisis matemático"
   ],
   "learningPath": [
     "Potencias",

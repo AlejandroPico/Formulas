@@ -3,7 +3,7 @@
   "name": "Ley de oferta y demanda lineal",
   "year": 1890,
   "field": "Microeconomía / Mercados",
-  "level": "Bachillerato/Universidad inicial",
+  "level": "Bachillerato y universidad inicial",
   "color": "#2563eb",
   "formula": [
     "Q_d=a−bP",
@@ -30,8 +30,7 @@
     "renta fija",
     "kelly",
     "var",
-    "solow",
-    "simulacion"
+    "solow"
   ],
   "prerequisites": [
     "algebra",

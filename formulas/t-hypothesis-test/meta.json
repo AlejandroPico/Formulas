@@ -17,12 +17,11 @@
     "Contraste de media con desviación muestral y grados de libertad."
   ],
   "tags": [
-    "estadistica",
+    "estadística",
     "inferencia",
     "modelos",
-    "bayes",
-    "informacion",
-    "simulacion"
+    "inferencia bayesiana",
+    "información"
   ],
   "prerequisites": [
     "probabilidad",

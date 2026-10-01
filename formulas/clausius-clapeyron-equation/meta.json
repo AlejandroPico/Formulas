@@ -24,8 +24,7 @@
     "cuerpo negro",
     "gas real",
     "boltzmann",
-    "einstein",
-    "simulacion"
+    "einstein"
   ],
   "prerequisites": [
     "termodinamica",

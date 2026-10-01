@@ -1,24 +1,26 @@
-# Ficha
+# Convolución
 
-## Identificación
+La convolución acumula cuánto se solapan una señal y otra invertida y desplazada. Describe la salida de un sistema lineal invariante en el tiempo ante una entrada.
 
-- **Nombre:** Convolución
-- **Área:** análisis, señales y probabilidad
-- **Nivel:** universidad inicial
-- **Tipo:** operación integral o suma discreta
+## Magnitudes
 
-## Elementos
+| Símbolo | Significado |
+| :-- | :-- |
+| f | Primera señal o función continua. |
+| g | Segunda función: se invierte y desplaza dentro de la integral. |
+| t | Instante donde se evalúa la convolución. |
+| τ | Variable interna de integración. |
+| x | Secuencia discreta de entrada. |
+| h | Respuesta impulsional discreta. |
+| y | Secuencia discreta de salida. |
+| n | Índice de salida. |
+| k | Índice interno de suma. |
+| * | Convolución entre funciones o secuencias; no multiplicación punto a punto. |
 
-- `f`: primera función o señal.
-- `g`: segunda función, núcleo o respuesta impulsional.
-- `t`: desplazamiento temporal.
-- `tau`: variable de integración.
-- `f*g`: señal resultante.
+## Alcance
 
-## Lectura del simulador
+Integral o suma convergente. Para interpretación como respuesta de un sistema se requiere linealidad e invariancia temporal; causalidad restringe soportes, pero no es parte de toda convolución abstracta.
 
-La señal azul permanece fija. La señal roja se desplaza. La zona verde representa el producto común que se integra para obtener el valor de la convolución en ese instante. La curva inferior muestra el resultado completo y el punto activo indica el valor actual.
+## Unidades
 
-## Advertencia
-
-La visualización usa funciones sencillas para que el concepto sea claro. En aplicaciones reales, las señales pueden ser discretas, ruidosas, bidimensionales o de alta dimensión.
+Si f,g usan u y el tiempo segundos, la convolución continua usa u²·s. La discreta suma u²; una aproximación numérica de la integral requiere multiplicar por Δt. Omitir ese paso mezcla dos convenciones diferentes.

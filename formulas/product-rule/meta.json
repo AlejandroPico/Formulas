@@ -4,7 +4,7 @@
   "author": "Cálculo diferencial clásico",
   "year": 1676,
   "field": "Cálculo diferencial",
-  "level": "Bachillerato/Universidad inicial",
+  "level": "Bachillerato y universidad inicial",
   "color": "#eab308",
   "simulation": true,
   "formulaText": "Separa los dos aportes al cambio de un producto y compara bandas finitas, pendiente y secante.",
@@ -56,5 +56,6 @@
     "Explorar y predecir",
     "Resolver las cuatro misiones",
     "Explicar el resultado"
-  ]
+  ],
+  "tags": []
 }

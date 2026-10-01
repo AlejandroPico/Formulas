@@ -1,24 +1,28 @@
-# Ficha
+# Error cuadrático medio
 
-## Identificación
+Elevar residuos al cuadrado evita cancelación de signos y da más peso a errores grandes. La raíz recupera la unidad de la respuesta; no recupera el signo de cada error.
 
-- **Nombre:** Error cuadrático medio
-- **Área:** estadística y aprendizaje automático
-- **Nivel:** bachillerato y universidad inicial
-- **Tipo:** métrica de error y función de coste
+## Magnitudes
 
-## Variables
+| Símbolo | Significado |
+| :-- | :-- |
+| MSE | Error cuadrático medio: media de residuos al cuadrado. |
+| RMSE | Raíz del error cuadrático medio, en unidades de la respuesta. |
+| M | Parte del nombre MSE o RMSE: error cuadrático medio. |
+| S | Parte del nombre MSE: indica cuadrado. |
+| E | Parte del nombre MSE: indica error. |
+| R | Parte del nombre RMSE: indica raíz. |
+| y | Respuesta observada; con sombrero es respuesta predicha. |
+| x | Entrada de una observación. |
+| m | Pendiente de la recta de predicción. |
+| b | Ordenada en el origen. |
+| n | Número positivo de observaciones. |
+| i | Índice de observación. |
 
-- `MSE`: error cuadrático medio.
-- `n`: número de observaciones.
-- `y_i`: valor real.
-- `y_hat_i`: valor predicho.
-- `f_theta`: modelo parametrizado.
+## Alcance
 
-## Lectura del simulador
+n>0 y respuestas numéricas comparables. El MSE no es negativo; valores grandes pueden deberse a escala o a observaciones extremas, no solo a un peor algoritmo.
 
-Los puntos negros son observaciones. La línea azul es el modelo. Las líneas rojas son residuos. Al ajustar la pendiente, el MSE baja o sube según la suma de residuos cuadrados.
+## Unidades
 
-## Nota
-
-El ajuste visual usa un intercepto fijo para simplificar. En regresión real suelen optimizarse pendiente e intercepto simultáneamente.
+Si y tiene unidad u, residuo usa u, MSE u² y RMSE u. Reescalar y por a multiplica MSE por a². La gráfica de contribuciones muestra cuadrados de residuos, con alturas normalizadas para caber en pantalla.

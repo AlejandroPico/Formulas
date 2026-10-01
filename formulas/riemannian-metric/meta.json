@@ -1,1 +1,13 @@
-{"id":"riemannian-metric","name":"Métrica riemanniana","author":"Bernhard Riemann","year":1854,"field":"Geometría diferencial","level":"Universidad","color":"#0284c7","simulation":true,"formulaText":"define cómo medir longitudes e intervalos en una geometría curvada","summary":"Visualiza cómo el tensor métrico modifica la distancia local."}
+{
+  "id": "riemannian-metric",
+  "name": "Métrica riemanniana",
+  "author": "Bernhard Riemann",
+  "year": 1854,
+  "field": "Geometría diferencial",
+  "level": "Universidad",
+  "color": "#0284c7",
+  "simulation": true,
+  "formulaText": "define cómo medir longitudes e intervalos en una geometría curvada",
+  "summary": "Visualiza cómo el tensor métrico modifica la distancia local.",
+  "tags": []
+}

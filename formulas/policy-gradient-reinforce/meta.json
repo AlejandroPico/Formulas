@@ -2,7 +2,7 @@
   "id": "policy-gradient-reinforce",
   "name": "Gradiente de política: algoritmo REINFORCE",
   "year": 1992,
-  "field": "Reinforcement Learning",
+  "field": "Aprendizaje por refuerzo",
   "level": "Universidad intermedia",
   "color": "#6366f1",
   "formula": [
@@ -17,14 +17,13 @@
     "Aumenta la probabilidad de acciones que produjeron retornos altos y reduce las fallidas."
   ],
   "tags": [
-    "reinforcement learning",
+    "aprendizaje por refuerzo",
     "transformers",
     "attention",
     "positional encoding",
     "ppo",
     "q-learning",
-    "sarsa",
-    "simulacion"
+    "sarsa"
   ],
   "prerequisites": [
     "probabilidad",

@@ -3,7 +3,7 @@
   "name": "Varianza",
   "year": 1918,
   "field": "Probabilidad y estadística",
-  "level": "ESO/Bachillerato",
+  "level": "ESO y Bachillerato",
   "color": "#ea580c",
   "formula": [
     "σ²=(1/N)∑(xᵢ−μ)²"
@@ -16,10 +16,9 @@
     "Cuantifica la dispersión media cuadrática respecto a la media."
   ],
   "tags": [
-    "estadistica",
+    "estadística",
     "inferencia",
-    "datos",
-    "simulacion"
+    "datos"
   ],
   "prerequisites": [
     "estadistica descriptiva",

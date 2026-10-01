@@ -1,4 +1,4 @@
-# Ecuación de continuidad
+# Ecuación de continuidad: flujo estacionario entre secciones
 
 En un conducto estacionario sin acumulación ni ramificaciones, se conserva caudal másico; el caudal volumétrico solo coincide con densidad constante.
 

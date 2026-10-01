@@ -3,7 +3,7 @@
   "name": "Ecuación de Bernoulli",
   "author": "Daniel Bernoulli",
   "year": 1738,
-  "field": "Fluidos",
+  "field": "Mecánica de fluidos",
   "level": "Bachillerato",
   "color": "#5fa0ff",
   "simulation": "bernoulli-equation",
@@ -94,10 +94,7 @@
     "Álgebra y unidades"
   ],
   "tags": [
-    "Fluidos",
-    "aprendizaje",
-    "simulación",
-    "revisión completa"
+    "mecánica de fluidos"
   ],
   "learningPath": [
     "Conductos",

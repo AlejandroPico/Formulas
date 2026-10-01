@@ -3,7 +3,7 @@
   "name": "Interés compuesto: crecimiento exponencial del capital",
   "year": 1683,
   "field": "Finanzas / Valor temporal del dinero",
-  "level": "Bachillerato/Universidad inicial",
+  "level": "Bachillerato y universidad inicial",
   "color": "#2563eb",
   "formula": [
     "A=P\\left(1+\\frac{r}{n}\\right)^{nt}",
@@ -15,10 +15,7 @@
   "source": "files",
   "formulaText": "Los intereses reinvertidos también generan intereses; la frecuencia modifica la tasa efectiva.",
   "tags": [
-    "Finanzas / Valor temporal del dinero",
-    "aprendizaje",
-    "simulación",
-    "revisión completa"
+    "finanzas / valor temporal del dinero"
   ],
   "prerequisites": [
     "Álgebra y unidades"

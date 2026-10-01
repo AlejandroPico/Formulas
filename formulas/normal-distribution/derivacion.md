@@ -1,9 +1,9 @@
 # Derivación
 
-Una vía de motivación procede de la teoría de errores. Si un error total resulta de sumar muchos efectos pequeños e independientes, la forma límite se aproxima a una campana normal.
+El factor 1/(σ√(2π)) normaliza el área total mediante la integral gaussiana. Sustituye z=(x−μ)/σ: dx=σdz y la densidad se reduce a la normal estándar. La probabilidad entre a y b es Φ((b−μ)/σ)−Φ((a−μ)/σ). Si se invierten los límites, se obtiene una integral negativa, no una probabilidad negativa.
 
-La densidad se construye de manera que sea simétrica alrededor de la media, decrezca rápidamente al alejarse del centro y tenga área total uno.
+## Comprueba el resultado
 
-El factor `1/(sigma sqrt(2 pi))` normaliza el área bajo la curva. El término exponencial penaliza desviaciones cuadráticas respecto a la media.
+X tiene μ=0 y σ=1. Para x=1, ¿cuál es z? Estandariza: (1−0)/1=1.
 
-Al transformar `X` en `Z=(X-mu)/sigma`, cualquier normal se reduce a una normal estándar con media cero y desviación uno.
+σ>0; a≤b para hablar de probabilidad de intervalo. La normal es un modelo continuo, no una ley universal para todos los datos.

@@ -17,14 +17,13 @@
     "Relaciona amplitud de esfuerzo y número de ciclos hasta fallo por fatiga."
   ],
   "tags": [
-    "mecanica",
+    "mecánica",
     "hidraulica",
     "transferencia de calor",
     "fatiga",
     "elasticidad",
     "mohr",
-    "hooke",
-    "simulacion"
+    "hooke"
   ],
   "prerequisites": [
     "algebra",

@@ -11,5 +11,6 @@
     "entropía = constante de Boltzmann por logaritmo del número de microestados compatibles",
     "más microestados compatibles implican mayor entropía"
   ],
-  "summary": "Relaciona la entropía macroscópica con el número de microestados microscópicos compatibles."
+  "summary": "Relaciona la entropía macroscópica con el número de microestados microscópicos compatibles.",
+  "tags": []
 }

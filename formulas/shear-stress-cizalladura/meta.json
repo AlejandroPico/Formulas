@@ -3,7 +3,7 @@
   "name": "Tensión cortante o de cizalladura",
   "year": 1850,
   "field": "Resistencia de materiales",
-  "level": "Bachillerato/Universidad inicial",
+  "level": "Bachillerato y universidad inicial",
   "color": "#ec4899",
   "formula": [
     "τ=V/A",
@@ -18,13 +18,12 @@
     "Calcula la tensión media paralela a una sección sometida a fuerza cortante."
   ],
   "tags": [
-    "mecanica",
+    "mecánica",
     "resistencia de materiales",
     "transferencia de calor",
-    "electronica",
+    "electrónica",
     "instrumentacion",
-    "mosfet",
-    "simulacion"
+    "mosfet"
   ],
   "prerequisites": [
     "algebra",

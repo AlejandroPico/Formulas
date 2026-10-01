@@ -2,7 +2,7 @@
   "id": "q-learning-off-policy-td-control",
   "name": "Q-Learning: control TD fuera de política",
   "year": 1989,
-  "field": "Reinforcement Learning",
+  "field": "Aprendizaje por refuerzo",
   "level": "Universidad inicial",
   "color": "#10b981",
   "formula": [
@@ -17,14 +17,13 @@
     "Aprende el valor óptimo futuro usando el máximo, aunque el agente explore otra acción."
   ],
   "tags": [
-    "reinforcement learning",
+    "aprendizaje por refuerzo",
     "transformers",
     "attention",
     "positional encoding",
     "ppo",
     "q-learning",
-    "sarsa",
-    "simulacion"
+    "sarsa"
   ],
   "prerequisites": [
     "probabilidad",

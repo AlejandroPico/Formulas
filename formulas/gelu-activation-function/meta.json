@@ -2,7 +2,7 @@
   "id": "gelu-activation-function",
   "name": "Función GELU: Gaussian Error Linear Unit",
   "year": 2016,
-  "field": "Deep Learning",
+  "field": "Aprendizaje profundo",
   "level": "Universidad intermedia",
   "color": "#8b5cf6",
   "formula": [
@@ -18,13 +18,12 @@
     "Activación suave que deja pasar una entrada de forma probabilística según una puerta gaussiana."
   ],
   "tags": [
-    "machine learning",
-    "deep learning",
-    "optimizacion",
+    "aprendizaje automático",
+    "aprendizaje profundo",
+    "optimización",
     "redes neuronales",
-    "activacion",
-    "backpropagation",
-    "simulacion"
+    "activación",
+    "backpropagation"
   ],
   "prerequisites": [
     "calculo",

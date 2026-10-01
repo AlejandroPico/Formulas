@@ -4,7 +4,7 @@
   "author": "Brook Taylor",
   "year": 1715,
   "field": "Análisis matemático",
-  "level": "Bachillerato/Universidad inicial",
+  "level": "Bachillerato y universidad inicial",
   "color": "#dc2626",
   "simulation": "taylor-series",
   "formulaText": "Un polinomio de Taylor imita las derivadas de una función en un centro; el resto mide lo que falta.",
@@ -88,10 +88,7 @@
     "Derivadas y límites"
   ],
   "tags": [
-    "Análisis matemático",
-    "aprendizaje",
-    "simulación",
-    "revisión completa"
+    "análisis matemático"
   ],
   "learningPath": [
     "Aproximaciones",

@@ -3,7 +3,7 @@
   "name": "Primera ley de la termodinámica",
   "year": 1850,
   "field": "Termodinámica",
-  "level": "Bachillerato/Universidad inicial",
+  "level": "Bachillerato y universidad inicial",
   "color": "#10b981",
   "formula": [
     "ΔU=Q−W"
@@ -23,8 +23,7 @@
     "gibbs",
     "helmholtz",
     "carnot",
-    "primera ley",
-    "simulacion"
+    "primera ley"
   ],
   "prerequisites": [
     "energia",

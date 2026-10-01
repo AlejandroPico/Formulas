@@ -1,19 +1,11 @@
 # Usos
 
-- Resolver sistemas lineales pequenos.
-- Comprobar soluciones obtenidas por otros metodos.
-- Relacionar determinantes con independencia de ecuaciones.
-- Detectar si hay solucion unica.
-- Introducir la idea de matriz invertible.
+Comprender unicidad y dependencia entre ecuaciones; relacionar determinantes con orientación; resolver sistemas pequeños a mano. En matrices grandes son preferibles factorizaciones numéricas: Cramer no es un algoritmo eficiente ni protege contra mal condicionamiento.
 
-## Uso didactico
+## Antes de aplicar
 
-Si el determinante principal es distinto de cero, el sistema tiene una solucion unica. Si vale cero, no se puede aplicar Cramer para obtener un unico resultado.
+Matriz cuadrada y det(A)≠0. Un determinante muy pequeño puede amplificar errores aunque no sea exactamente cero.
 
-## Limitacion practica
+## Qué compara el laboratorio
 
-Para sistemas grandes no es el metodo mas eficiente. Se usa sobre todo por su claridad conceptual y por su conexion directa con los determinantes.
-
-## Uso del simulador
-
-Cambia los coeficientes y observa como se actualizan los determinantes `D`, `Dx` y `Dy`.
+Las rectas a·x+y=c y b·x+y=d se cruzan si D=a−b no es cero. Comprueba qué sucede al hacerlas paralelas.

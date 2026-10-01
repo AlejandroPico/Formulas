@@ -4,7 +4,7 @@
   "author": "Geometria euclidea",
   "year": -300,
   "field": "Geometría y álgebra vectorial",
-  "level": "ESO/Bachillerato",
+  "level": "ESO y Bachillerato",
   "color": "#8b5cf6",
   "simulation": "euclidean-norm",
   "formulaText": [
@@ -12,6 +12,7 @@
   ],
   "summary": "La longitud de un vector combina direcciones perpendiculares. Navega en 2D y 3D, gira la escena y separa longitud y dirección.",
   "symbolGlossary": {
+    "0": "Vector cero: todas sus componentes son cero; su norma es cero y no tiene dirección unitaria.",
     "=": "Igualdad: ambos miembros tienen exactamente el mismo valor.",
     "+": "Suma los términos indicados.",
     "−": "Resta el término siguiente o cambia su signo.",
@@ -36,8 +37,7 @@
     "_0": "Vector cero: no tiene una dirección que normalizar.",
     "structure:msup": "Potencia: el exponente indica la multiplicación repetida de toda la base.",
     "√": "Raíz cuadrada: devuelve la raíz no negativa de su contenido cuando es real.",
-    "⋅": "Producto escalar de x consigo mismo: suma los cuadrados de sus componentes.",
-    "0": "Vector cero: todas sus componentes son cero; su norma es cero y no tiene dirección unitaria."
+    "⋅": "Producto escalar de x consigo mismo: suma los cuadrados de sus componentes."
   },
   "formulaGlossaries": [
     {
@@ -60,5 +60,6 @@
     "Explorar la representación",
     "Resolver retos",
     "Justificar el resultado"
-  ]
+  ],
+  "tags": []
 }

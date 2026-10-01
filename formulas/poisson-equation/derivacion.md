@@ -1,9 +1,9 @@
 # Derivación
 
-La ecuación de Poisson puede entenderse como una forma local de una ley de flujo. En electrostática, la ley de Gauss dice que el flujo del campo eléctrico a través de una superficie cerrada depende de la carga encerrada. Si el campo eléctrico se escribe como gradiente negativo del potencial, esa ley se transforma en una ecuación para el potencial.
+Para φ=A(1−x²)(1−y²), deriva dos veces respecto de cada coordenada: φxx=−2A(1−y²) y φyy=−2A(1−x²). Su suma da f=−2A(2−x²−y²). En cualquier borde x=±1 o y=±1, φ=0. Esta solución manufacturada permite verificar exactamente un laplaciano sin atribuirlo a una carga constante ni a un algoritmo iterativo no implementado.
 
-Al sustituir `E=-grad phi` en la forma diferencial de Gauss, aparece el laplaciano del potencial. El resultado es una ecuación donde la curvatura de `phi` queda determinada por la densidad de carga.
+## Comprueba el resultado
 
-En contextos más generales, el mismo patrón se repite. Un flujo suele depender del gradiente de un potencial, y una ley de conservación conecta la divergencia de ese flujo con fuentes internas. Al combinar ambas ideas aparece un operador de segundo orden: el laplaciano.
+φ=(1−x²)(1−y²). ¿Cuánto vale φ(0,0)? Ambos factores valen 1 en el centro.
 
-Si la fuente desaparece, el lado derecho se anula y se obtiene la ecuación de Laplace. Por eso Poisson puede verse como la versión con fuente de una familia de problemas de potencial.
+Dominio cuadrado y condiciones de Dirichlet cero del laboratorio. Una función armónica añadida puede conservar la fuente y alterar el borde, por eso deben declararse ambos.

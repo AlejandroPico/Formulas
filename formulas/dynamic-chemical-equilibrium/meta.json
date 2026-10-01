@@ -3,7 +3,7 @@
   "name": "Equilibrio químico dinámico",
   "year": 1864,
   "field": "Equilibrio químico",
-  "level": "Bachillerato/Universidad inicial",
+  "level": "Bachillerato y universidad inicial",
   "color": "#f97316",
   "formula": [
     "A ⇌ B",
@@ -18,14 +18,13 @@
     "Explica que el equilibrio no es reposo: las velocidades directa e inversa se igualan."
   ],
   "tags": [
-    "quimica",
-    "cinetica",
+    "química",
+    "cinética",
     "equilibrio quimico",
     "acido base",
     "ph",
     "beer lambert",
-    "tampon",
-    "simulacion"
+    "tampon"
   ],
   "prerequisites": [
     "quimica general",

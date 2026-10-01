@@ -1,9 +1,11 @@
 # Significado
 
-La distribución normal es una distribución continua con forma de campana. Está determinada por dos parámetros: la media `mu`, que fija el centro, y la desviación estándar `sigma`, que fija la anchura.
+La campana es una densidad: las probabilidades son áreas. Una altura mayor que uno es válida si la unidad y anchura cambian; un punto aislado tiene probabilidad cero.
 
-Aparece en muchos contextos porque la suma de muchos efectos pequeños e independientes tiende a aproximarse a una normal bajo condiciones amplias.
+## Del símbolo al fenómeno
 
-La zona alrededor de la media concentra la mayor probabilidad. En una normal estándar, aproximadamente el 68% cae dentro de una desviación estándar, el 95% dentro de dos y el 99.7% dentro de tres.
+μ mueve el centro y σ>0 cambia la dispersión. Selecciona un intervalo [a,b] y compara área con altura. Si a>b se muestra integral firmada; no es una probabilidad de intervalo.
 
-El simulador permite desplazar la media y abrir o cerrar la campana mediante `sigma`. También permite cambiar la banda sombreada entre ±1σ, ±2σ y ±3σ.
+## Ejemplo
+
+X tiene μ=0 y σ=1. Para x=1, ¿cuál es z? Estandariza: (1−0)/1=1.

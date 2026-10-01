@@ -3,7 +3,7 @@
   "name": "Ley de Stefan-Boltzmann",
   "year": 1879,
   "field": "Radiación térmica",
-  "level": "Bachillerato/Universidad inicial",
+  "level": "Bachillerato y universidad inicial",
   "color": "#dc2626",
   "formula": [
     "j*=σT^4",
@@ -24,8 +24,7 @@
     "cuerpo negro",
     "gas real",
     "boltzmann",
-    "einstein",
-    "simulacion"
+    "einstein"
   ],
   "prerequisites": [
     "termodinamica",

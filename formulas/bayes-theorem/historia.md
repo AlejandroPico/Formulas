@@ -1,9 +1,5 @@
 # Historia
 
-El resultado asociado a Thomas Bayes fue publicado póstumamente en el siglo XVIII.
+El ensayo de Thomas Bayes fue publicado póstumamente por Richard Price en 1763. Laplace desarrolló después métodos de probabilidad inversa. La identidad se usa hoy en estadística y toma de decisiones.
 
-Pierre-Simon Laplace desarrolló después ideas muy próximas y las aplicó a problemas de inferencia y probabilidad inversa.
-
-Durante mucho tiempo, el enfoque bayesiano convivió con otras interpretaciones de la probabilidad. En el siglo XX y XXI ganó enorme relevancia con la computación, la estadística aplicada y el aprendizaje automático.
-
-Hoy Bayes se usa en diagnóstico, toma de decisiones, filtrado, modelos probabilísticos y actualización de creencias con datos.
+[Formulación y referencia de estudio](https://ocw.mit.edu/courses/18-05-introduction-to-probability-and-statistics-spring-2022/). El año histórico no es la fecha de creación del archivo ni la revisión registrada en Inventario.

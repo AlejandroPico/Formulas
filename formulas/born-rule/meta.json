@@ -11,5 +11,6 @@
     "probabilidad = valor absoluto de la función de onda al cuadrado",
     "la integral de la densidad de probabilidad sobre una región da la probabilidad de detectar allí la partícula"
   ],
-  "summary": "Conecta la función de onda con probabilidades observables de medición."
+  "summary": "Conecta la función de onda con probabilidades observables de medición.",
+  "tags": []
 }
