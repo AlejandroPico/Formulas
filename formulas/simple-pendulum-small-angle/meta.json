@@ -1,0 +1,43 @@
+{
+  "id": "simple-pendulum-small-angle",
+  "name": "Péndulo simple: aproximación de ángulos pequeños",
+  "year": 1656,
+  "field": "Mecánica clásica",
+  "level": "Bachillerato",
+  "color": "#3b82f6",
+  "formula": [
+    "T=2π√(L/g)"
+  ],
+  "summary": "Periodo aproximado de un péndulo simple para oscilaciones de pequeña amplitud.",
+  "topic": "pendulum",
+  "source": "files",
+  "author": "",
+  "formulaText": [
+    "Periodo aproximado de un péndulo simple para oscilaciones de pequeña amplitud."
+  ],
+  "tags": [
+    "fisica",
+    "fluidos",
+    "ondas",
+    "oscilaciones",
+    "hidraulica",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "algebra",
+    "calculo basico",
+    "mecanica"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "simulacion"
+  ],
+  "units": "Ver unidades.",
+  "dimensions": "Ver unidades.",
+  "symbols": [],
+  "folder": "formulas/simple-pendulum-small-angle",
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-10.js",
+  "createdAt": "2026-07-05"
+}

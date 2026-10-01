@@ -1,0 +1,44 @@
+{
+  "id": "cosmological-constant",
+  "name": "Constante cosmológica",
+  "year": 1917,
+  "field": "Relatividad general y cosmología",
+  "level": "Universidad inicial",
+  "color": "#f59e0b",
+  "formula": [
+    "Gμν+Λgμν=κTμν"
+  ],
+  "summary": "Término geométrico asociado a energía del vacío y expansión acelerada.",
+  "topic": "lambda",
+  "source": "files",
+  "author": "",
+  "formulaText": [
+    "Término geométrico asociado a energía del vacío y expansión acelerada."
+  ],
+  "tags": [
+    "cosmologia",
+    "relatividad general",
+    "einstein",
+    "hubble",
+    "redshift",
+    "geodesica",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "relatividad",
+    "calculo basico",
+    "cosmologia"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "simulacion"
+  ],
+  "units": "Ver unidades.",
+  "dimensions": "Ver unidades.",
+  "symbols": [],
+  "folder": "formulas/cosmological-constant",
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-15.js",
+  "createdAt": "2026-07-05"
+}

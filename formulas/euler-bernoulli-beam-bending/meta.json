@@ -1,0 +1,49 @@
+{
+  "id": "euler-bernoulli-beam-bending",
+  "name": "Flexión de vigas de Euler-Bernoulli",
+  "year": 1750,
+  "field": "Mecánica estructural",
+  "level": "Universidad inicial",
+  "color": "#10b981",
+  "formula": [
+    "EI·d²y/dx²=M(x)",
+    "δ_max=PL³/(3EI)"
+  ],
+  "summary": "Modela la curvatura y deflexión de una viga esbelta sometida a flexión.",
+  "sim": "scripts/mechanics-euler-bernoulli-beam-sim.js?v=20260705a",
+  "k": "beam",
+  "folder": "formulas/euler-bernoulli-beam-bending",
+  "source": "files",
+  "formulaText": [
+    "Modela la curvatura y deflexión de una viga esbelta sometida a flexión."
+  ],
+  "tags": [
+    "mecanica",
+    "resistencia de materiales",
+    "transferencia de calor",
+    "electronica",
+    "instrumentacion",
+    "mosfet",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "algebra",
+    "calculo basico",
+    "unidades",
+    "ley de ohm",
+    "mecanica de solidos"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "historia",
+    "derivacion",
+    "simulacion"
+  ],
+  "units": "Unidades didácticas normalizadas.",
+  "dimensions": "Ver ficha.",
+  "symbols": [],
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-29.js",
+  "createdAt": "2026-07-06"
+}

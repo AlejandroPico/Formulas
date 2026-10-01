@@ -1,0 +1,45 @@
+{
+  "id": "cosmological-equation-of-state",
+  "name": "Ecuación de estado cosmológica",
+  "year": 1922,
+  "field": "Cosmología",
+  "level": "Universidad inicial",
+  "color": "#ea580c",
+  "formula": [
+    "w=P/ρ",
+    "ρ(a)∝a^{-3(1+w)}"
+  ],
+  "summary": "Relaciona presión, densidad y dilución de materia, radiación o energía oscura durante la expansión.",
+  "topic": "eos",
+  "source": "files",
+  "author": "",
+  "formulaText": [
+    "Relaciona presión, densidad y dilución de materia, radiación o energía oscura durante la expansión."
+  ],
+  "tags": [
+    "cosmologia",
+    "relatividad general",
+    "einstein",
+    "hubble",
+    "redshift",
+    "geodesica",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "relatividad",
+    "calculo basico",
+    "cosmologia"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "simulacion"
+  ],
+  "units": "Ver unidades.",
+  "dimensions": "Ver unidades.",
+  "symbols": [],
+  "folder": "formulas/cosmological-equation-of-state",
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-15.js",
+  "createdAt": "2026-07-05"
+}

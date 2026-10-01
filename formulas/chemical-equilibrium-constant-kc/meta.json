@@ -1,0 +1,47 @@
+{
+  "id": "chemical-equilibrium-constant-kc",
+  "name": "Constante de equilibrio Kc",
+  "year": 1864,
+  "field": "Equilibrio químico",
+  "level": "Bachillerato/Universidad inicial",
+  "color": "#8b5cf6",
+  "formula": [
+    "K_c=Π[productos]^ν/Π[reactivos]^ν"
+  ],
+  "summary": "Cuantifica la composición de una mezcla en equilibrio químico.",
+  "topic": "kc",
+  "folder": "formulas/chemical-equilibrium-constant-kc",
+  "source": "files",
+  "author": "",
+  "formulaText": [
+    "Cuantifica la composición de una mezcla en equilibrio químico."
+  ],
+  "tags": [
+    "quimica",
+    "cinetica",
+    "equilibrio quimico",
+    "acido base",
+    "ph",
+    "beer lambert",
+    "tampon",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "quimica general",
+    "logaritmos",
+    "concentracion molar",
+    "equilibrio",
+    "funciones exponenciales"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "simulacion"
+  ],
+  "units": "Unidades didácticas normalizadas.",
+  "dimensions": "Ver ficha.",
+  "symbols": [],
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-20.js",
+  "createdAt": "2026-07-06"
+}

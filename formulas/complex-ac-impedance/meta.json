@@ -1,0 +1,43 @@
+{
+  "id": "complex-ac-impedance",
+  "name": "Impedancia compleja en circuitos de corriente alterna",
+  "year": 1893,
+  "field": "Circuitos eléctricos",
+  "level": "Universidad inicial",
+  "color": "#10b981",
+  "formula": [
+    "Z=R+j(XL−XC)"
+  ],
+  "summary": "Representación fasorial de resistencia y reactancia en corriente alterna.",
+  "topic": "impedance",
+  "source": "files",
+  "author": "",
+  "formulaText": [
+    "Representación fasorial de resistencia y reactancia en corriente alterna."
+  ],
+  "tags": [
+    "electromagnetismo",
+    "circuitos",
+    "ondas",
+    "energia",
+    "impedancia",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "electromagnetismo",
+    "fasores",
+    "calculo basico"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "simulacion"
+  ],
+  "units": "Ver unidades.",
+  "dimensions": "Ver unidades.",
+  "symbols": [],
+  "folder": "formulas/complex-ac-impedance",
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-13.js",
+  "createdAt": "2026-07-05"
+}

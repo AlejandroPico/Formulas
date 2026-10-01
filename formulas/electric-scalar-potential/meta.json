@@ -1,0 +1,43 @@
+{
+  "id": "electric-scalar-potential",
+  "name": "Potencial eléctrico escalar",
+  "year": 1785,
+  "field": "Electromagnetismo",
+  "level": "Bachillerato/Universidad inicial",
+  "color": "#eab308",
+  "formula": [
+    "V=ke Q/r"
+  ],
+  "summary": "Potencial creado por una carga puntual a una distancia radial determinada.",
+  "topic": "potential",
+  "source": "files",
+  "author": "",
+  "formulaText": [
+    "Potencial creado por una carga puntual a una distancia radial determinada."
+  ],
+  "tags": [
+    "electromagnetismo",
+    "maxwell",
+    "campo",
+    "flujo",
+    "potencial",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "vectores",
+    "calculo basico",
+    "electrostatica"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "simulacion"
+  ],
+  "units": "Ver unidades.",
+  "dimensions": "Ver unidades.",
+  "symbols": [],
+  "folder": "formulas/electric-scalar-potential",
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-12.js",
+  "createdAt": "2026-07-05"
+}

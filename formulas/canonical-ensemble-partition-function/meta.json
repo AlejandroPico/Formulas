@@ -1,0 +1,49 @@
+{
+  "id": "canonical-ensemble-partition-function",
+  "name": "Colectividad canónica y función de partición",
+  "year": 1902,
+  "field": "Mecánica estadística",
+  "level": "Universidad intermedia",
+  "color": "#2563eb",
+  "formula": [
+    "Z=Σ_i e^(−βE_i)",
+    "P_i=e^(−βE_i)/Z",
+    "β=1/(k_BT)"
+  ],
+  "summary": "Normaliza los pesos de Boltzmann y permite calcular probabilidades y observables macroscópicos.",
+  "topic": "canonical",
+  "folder": "formulas/canonical-ensemble-partition-function",
+  "source": "files",
+  "author": "",
+  "formulaText": [
+    "Normaliza los pesos de Boltzmann y permite calcular probabilidades y observables macroscópicos."
+  ],
+  "tags": [
+    "termodinamica",
+    "mecanica estadistica",
+    "radiacion termica",
+    "cuerpo negro",
+    "gas real",
+    "boltzmann",
+    "einstein",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "termodinamica",
+    "calculo basico",
+    "energia",
+    "temperatura",
+    "probabilidad"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "simulacion"
+  ],
+  "units": "Unidades didácticas normalizadas.",
+  "dimensions": "Ver ficha.",
+  "symbols": [],
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-19.js",
+  "createdAt": "2026-07-06"
+}

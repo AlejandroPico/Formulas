@@ -1,0 +1,54 @@
+{
+  "id": "solow-growth-model-steady-state",
+  "name": "Modelo de crecimiento de Solow",
+  "year": 1956,
+  "field": "Macroeconomía / Crecimiento",
+  "level": "Universidad inicial",
+  "color": "#6366f1",
+  "formula": [
+    "k*=[s/(n+g+δ)]^{1/(1−α)}",
+    "y*=k*^α"
+  ],
+  "summary": "Calcula el estado estacionario del capital y producto por trabajador en el modelo de Solow.",
+  "sim": "scripts/economics-solow-growth-sim.js?v=20260706a",
+  "k": "solow",
+  "folder": "formulas/solow-growth-model-steady-state",
+  "source": "files",
+  "formulaText": [
+    "k*=[s/(n+g+δ)]^{1/(1−α)}",
+    "y*=k*^α",
+    "Calcula el estado estacionario del capital y producto por trabajador en el modelo de Solow."
+  ],
+  "tags": [
+    "economia",
+    "microeconomia",
+    "macroeconomia",
+    "finanzas",
+    "riesgo",
+    "renta fija",
+    "kelly",
+    "var",
+    "solow",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "algebra",
+    "calculo basico",
+    "microeconomia",
+    "macroeconomia",
+    "finanzas basicas"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "historia",
+    "derivacion",
+    "simulacion"
+  ],
+  "units": "Unidades económicas y financieras normalizadas.",
+  "dimensions": "Ver ficha.",
+  "symbols": [],
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-32.js",
+  "createdAt": "2026-07-07"
+}

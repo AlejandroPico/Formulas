@@ -1,0 +1,50 @@
+{
+  "id": "nernst-equation",
+  "name": "Ecuación de Nernst",
+  "year": 1889,
+  "field": "Electroquímica",
+  "level": "Universidad inicial",
+  "color": "#2563eb",
+  "formula": [
+    "E=E^°−(RT/nF)lnQ",
+    "E=E^°−(0.05916/n)log10Q   a 25°C"
+  ],
+  "summary": "Corrige el potencial de una celda electroquímica por concentración y cociente de reacción.",
+  "topic": "nernst",
+  "folder": "formulas/nernst-equation",
+  "source": "files",
+  "author": "",
+  "formulaText": [
+    "Corrige el potencial de una celda electroquímica por concentración y cociente de reacción."
+  ],
+  "tags": [
+    "quimica fisica",
+    "electroquimica",
+    "quimica cuantica",
+    "born haber",
+    "bohr",
+    "hidrogeno",
+    "debye huckel",
+    "nernst",
+    "faraday",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "quimica general",
+    "termodinamica",
+    "electroquimica",
+    "estructura atomica",
+    "logaritmos"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "simulacion"
+  ],
+  "units": "Unidades didácticas normalizadas.",
+  "dimensions": "Ver ficha.",
+  "symbols": [],
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-21.js",
+  "createdAt": "2026-07-06"
+}

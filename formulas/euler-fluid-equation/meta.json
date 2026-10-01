@@ -1,0 +1,44 @@
+{
+  "id": "euler-fluid-equation",
+  "name": "Ecuación de Euler de fluidos",
+  "year": 1757,
+  "field": "Mecánica de fluidos",
+  "level": "Universidad inicial",
+  "color": "#0ea5e9",
+  "formula": [
+    "∂u/∂t+u∂u/∂x=−(1/ρ)∂P/∂x"
+  ],
+  "summary": "Dinámica de un fluido ideal sin viscosidad impulsado por gradientes de presión.",
+  "topic": "euler",
+  "source": "files",
+  "author": "",
+  "formulaText": [
+    "Dinámica de un fluido ideal sin viscosidad impulsado por gradientes de presión."
+  ],
+  "tags": [
+    "fluidos",
+    "transporte",
+    "edp",
+    "viscosidad",
+    "adveccion",
+    "difusion",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "calculo vectorial",
+    "mecanica de fluidos",
+    "ecuaciones diferenciales"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "simulacion"
+  ],
+  "units": "Ver unidades.",
+  "dimensions": "Ver unidades.",
+  "symbols": [],
+  "folder": "formulas/euler-fluid-equation",
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-11.js",
+  "createdAt": "2026-07-05"
+}

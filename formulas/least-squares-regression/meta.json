@@ -1,0 +1,41 @@
+{
+  "id": "least-squares-regression",
+  "name": "Regresor de mínimos cuadrados",
+  "year": 1805,
+  "field": "Probabilidad y estadística",
+  "level": "Bachillerato/Universidad inicial",
+  "color": "#dc2626",
+  "formula": [
+    "y=β₀+β₁x",
+    "min∑eᵢ²"
+  ],
+  "summary": "Ajusta una recta minimizando la suma de residuos cuadrados.",
+  "method": "ols",
+  "source": "files",
+  "author": "",
+  "formulaText": [
+    "Ajusta una recta minimizando la suma de residuos cuadrados."
+  ],
+  "tags": [
+    "estadistica",
+    "inferencia",
+    "datos",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "estadistica descriptiva",
+    "probabilidad"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "simulacion"
+  ],
+  "units": "Ver unidades.",
+  "dimensions": "Ver unidades.",
+  "symbols": [],
+  "folder": "formulas/least-squares-regression",
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-7.js",
+  "createdAt": "2026-07-04"
+}

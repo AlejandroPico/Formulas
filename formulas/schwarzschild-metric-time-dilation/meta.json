@@ -1,0 +1,42 @@
+{
+  "id": "schwarzschild-metric-time-dilation",
+  "name": "Métrica de Schwarzschild: dilatación temporal gravitatoria",
+  "year": 1916,
+  "field": "Relatividad general",
+  "level": "Universidad avanzada",
+  "color": "#e11d48",
+  "formula": [
+    "dτ/dt=√(1−rs/r)"
+  ],
+  "summary": "Ralentización del tiempo propio cerca de una masa esférica no rotante.",
+  "topic": "metric",
+  "source": "files",
+  "author": "",
+  "formulaText": [
+    "Ralentización del tiempo propio cerca de una masa esférica no rotante."
+  ],
+  "tags": [
+    "relatividad",
+    "gravedad",
+    "lorentz",
+    "schwarzschild",
+    "espaciotiempo",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "algebra",
+    "fisica clasica"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "simulacion"
+  ],
+  "units": "Ver unidades.",
+  "dimensions": "Ver unidades.",
+  "symbols": [],
+  "folder": "formulas/schwarzschild-metric-time-dilation",
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-14.js",
+  "createdAt": "2026-07-05"
+}

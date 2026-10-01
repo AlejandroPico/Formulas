@@ -1,0 +1,48 @@
+{
+  "id": "pauli-matrices",
+  "name": "Matrices de Pauli",
+  "year": 1927,
+  "field": "Mecánica cuántica",
+  "level": "Universidad inicial",
+  "color": "#3b82f6",
+  "formula": [
+    "σx=[[0,1],[1,0]]",
+    "σy=[[0,-i],[i,0]]",
+    "σz=[[1,0],[0,-1]]"
+  ],
+  "summary": "Operadores básicos de espín que actúan como observables y generadores de rotación.",
+  "topic": "pauli",
+  "source": "files",
+  "author": "",
+  "formulaText": [
+    "Operadores básicos de espín que actúan como observables y generadores de rotación."
+  ],
+  "tags": [
+    "mecanica cuantica",
+    "cuantica",
+    "schrodinger",
+    "hamiltoniano",
+    "pauli",
+    "bloch",
+    "oscilador",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "algebra lineal",
+    "numeros complejos",
+    "calculo",
+    "fisica ondulatoria"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "simulacion"
+  ],
+  "units": "Unidades normalizadas didácticas.",
+  "dimensions": "Ver ficha.",
+  "symbols": [],
+  "folder": "formulas/pauli-matrices",
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-16.js",
+  "createdAt": "2026-07-05"
+}

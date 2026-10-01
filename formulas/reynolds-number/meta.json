@@ -1,0 +1,43 @@
+{
+  "id": "reynolds-number",
+  "name": "Número de Reynolds",
+  "year": 1883,
+  "field": "Mecánica de fluidos",
+  "level": "Universidad inicial",
+  "color": "#f43f5e",
+  "formula": [
+    "Re=ρvD/μ"
+  ],
+  "summary": "Número adimensional que clasifica el régimen laminar, transicional o turbulento.",
+  "topic": "reynolds",
+  "source": "files",
+  "author": "",
+  "formulaText": [
+    "Número adimensional que clasifica el régimen laminar, transicional o turbulento."
+  ],
+  "tags": [
+    "fisica",
+    "fluidos",
+    "ondas",
+    "oscilaciones",
+    "hidraulica",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "algebra",
+    "calculo basico",
+    "mecanica"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "simulacion"
+  ],
+  "units": "Ver unidades.",
+  "dimensions": "Ver unidades.",
+  "symbols": [],
+  "folder": "formulas/reynolds-number",
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-10.js",
+  "createdAt": "2026-07-05"
+}

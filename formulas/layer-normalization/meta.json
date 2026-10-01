@@ -1,0 +1,49 @@
+{
+  "id": "layer-normalization",
+  "name": "Layer Normalization: normalización por capa",
+  "year": 2016,
+  "field": "Deep Learning",
+  "level": "Universidad intermedia",
+  "color": "#8b5cf6",
+  "formula": [
+    "μ_L=(1/H)Σ_i x_i",
+    "x̂_i=(x_i−μ_L)/√(σ_L²+ε)",
+    "y_i=γx̂_i+β"
+  ],
+  "summary": "Normaliza características dentro de una misma muestra, independiente del tamaño de batch.",
+  "sim": "scripts/ml-layernorm-sim.js?v=20260705a",
+  "k": "ln",
+  "folder": "formulas/layer-normalization",
+  "source": "files",
+  "formulaText": [
+    "Normaliza características dentro de una misma muestra, independiente del tamaño de batch."
+  ],
+  "tags": [
+    "machine learning",
+    "nlp",
+    "teoria de la informacion",
+    "normalizacion",
+    "funciones de perdida",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "probabilidad",
+    "logaritmos",
+    "estadistica",
+    "machine learning",
+    "redes neuronales"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "historia",
+    "derivacion",
+    "simulacion"
+  ],
+  "units": "Unidades didácticas normalizadas.",
+  "dimensions": "Ver ficha.",
+  "symbols": [],
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-25.js",
+  "createdAt": "2026-07-06"
+}

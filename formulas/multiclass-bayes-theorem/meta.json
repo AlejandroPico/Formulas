@@ -1,0 +1,42 @@
+{
+  "id": "multiclass-bayes-theorem",
+  "name": "Teorema de Bayes multiclase",
+  "year": 1763,
+  "field": "Probabilidad y estadística",
+  "level": "Bachillerato/Universidad inicial",
+  "color": "#3b82f6",
+  "formula": [
+    "P(Cᵢ|x)=P(x|Cᵢ)P(Cᵢ)/∑P(x|Cⱼ)P(Cⱼ)"
+  ],
+  "summary": "Actualiza probabilidades de varias clases al observar una evidencia.",
+  "concept": "bayes",
+  "source": "files",
+  "author": "",
+  "formulaText": [
+    "Actualiza probabilidades de varias clases al observar una evidencia."
+  ],
+  "tags": [
+    "estadistica",
+    "inferencia",
+    "modelos",
+    "bayes",
+    "informacion",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "probabilidad",
+    "estadistica descriptiva"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "simulacion"
+  ],
+  "units": "Ver unidades.",
+  "dimensions": "Ver unidades.",
+  "symbols": [],
+  "folder": "formulas/multiclass-bayes-theorem",
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-8.js",
+  "createdAt": "2026-07-05"
+}

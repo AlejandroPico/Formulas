@@ -1,0 +1,56 @@
+{
+  "id": "compound-interest-exponential-capital-growth",
+  "name": "Interés compuesto: crecimiento exponencial del capital",
+  "year": 1683,
+  "field": "Finanzas / Valor temporal del dinero",
+  "level": "Bachillerato/Universidad inicial",
+  "color": "#2563eb",
+  "formula": [
+    "A=P(1+r/n)^{nt}",
+    "A=P(1+r)^t si capitaliza anualmente"
+  ],
+  "summary": "Modela la acumulación de capital cuando los intereses generan nuevos intereses.",
+  "sim": "scripts/finance-compound-interest-sim.js?v=20260705a",
+  "k": "compound",
+  "folder": "formulas/compound-interest-exponential-capital-growth",
+  "source": "files",
+  "formulaText": [
+    "A=P(1+r/n)^{nt}",
+    "A=P(1+r)^t si capitaliza anualmente",
+    "Modela la acumulación de capital cuando los intereses generan nuevos intereses."
+  ],
+  "tags": [
+    "finanzas",
+    "valor temporal del dinero",
+    "derivados",
+    "renta fija",
+    "capm",
+    "sharpe",
+    "npv",
+    "irr",
+    "duracion",
+    "convexidad",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "algebra",
+    "logaritmos",
+    "probabilidad",
+    "estadistica",
+    "finanzas basicas",
+    "renta fija"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "historia",
+    "derivacion",
+    "simulacion"
+  ],
+  "units": "Unidades financieras normalizadas.",
+  "dimensions": "Ver ficha.",
+  "symbols": [],
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-31.js",
+  "createdAt": "2026-07-07"
+}

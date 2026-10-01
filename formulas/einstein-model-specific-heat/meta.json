@@ -1,0 +1,48 @@
+{
+  "id": "einstein-model-specific-heat",
+  "name": "Calor específico: modelo cuántico de Einstein",
+  "year": 1907,
+  "field": "Termodinámica estadística",
+  "level": "Universidad intermedia",
+  "color": "#ea580c",
+  "formula": [
+    "C_V=3R x^2 e^x/(e^x−1)^2",
+    "x=θ_E/T"
+  ],
+  "summary": "Explica la caída del calor específico de sólidos a baja temperatura mediante osciladores cuantizados.",
+  "topic": "einsteinCv",
+  "folder": "formulas/einstein-model-specific-heat",
+  "source": "files",
+  "author": "",
+  "formulaText": [
+    "Explica la caída del calor específico de sólidos a baja temperatura mediante osciladores cuantizados."
+  ],
+  "tags": [
+    "termodinamica",
+    "mecanica estadistica",
+    "radiacion termica",
+    "cuerpo negro",
+    "gas real",
+    "boltzmann",
+    "einstein",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "termodinamica",
+    "calculo basico",
+    "energia",
+    "temperatura",
+    "probabilidad"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "simulacion"
+  ],
+  "units": "Unidades didácticas normalizadas.",
+  "dimensions": "Ver ficha.",
+  "symbols": [],
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-19.js",
+  "createdAt": "2026-07-06"
+}

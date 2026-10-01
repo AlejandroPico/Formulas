@@ -1,10 +1,30 @@
 {
-  "id": "pythagorean-theorem",
-  "name": "Teorema de Pitágoras",
-  "author": "Tradición pitagórica",
-  "year": -500,
-  "field": "Geometría",
-  "level": "ESO",
-  "color": "#5d5af6",
-  "simulation": "pythagorean"
+  "id": "pythagorean-theorem", "name": "Teorema de Pitágoras", "author": "Tradición pitagórica", "year": -500, "field": "Geometría", "level": "ESO", "color": "#5d5af6", "simulation": "pythagorean",
+  "summary": "En un triángulo rectángulo, las áreas de los cuadrados de los catetos suman el área del cuadrado de la hipotenusa. También permite calcular distancias y longitudes de vectores.",
+  "formulaText": ["cateto a² + cateto b² = hipotenusa c²", "distancia = √(diferencia horizontal² + diferencia vertical²)", "longitud del vector = √(suma de componentes²)"],
+  "tags": ["triángulo rectángulo", "cateto", "hipotenusa", "distancia", "norma euclídea", "área", "puentes"],
+  "prerequisites": ["Multiplicación y cuadrados", "Raíz cuadrada", "Ángulo recto", "Coordenadas cartesianas"],
+  "learningPath": ["Identificar el ángulo recto", "Sumar áreas", "Despejar un lado", "Calcular distancias", "Construir puentes"],
+  "units": "Lados en la misma unidad de longitud; cuadrados en unidades de área.", "dimensions": "L² + L² = L²; la raíz recupera una longitud L.",
+  "formulaGlossaries": [
+    { "=": "Igualdad de áreas: los cuadrados de los catetos suman el cuadrado de la hipotenusa." },
+    { "x": "Coordenada horizontal de un punto. El subíndice indica si es el primer o el segundo punto.", "y": "Coordenada vertical de un punto. El subíndice identifica el punto.", "_1": "Subíndice 1: identifica el primer punto del plano.", "_2": "Subíndice 2: identifica el segundo punto del plano." },
+    { "bold:x": "Vector x completo: objeto con n componentes. Las barras de norma calculan su longitud.", "x": "Componente del vector en una dirección perpendicular a las demás; su subíndice identifica la dirección.", "_1": "Subíndice 1: primera componente del vector.", "_2": "Subíndice 2: segunda componente del vector.", "_n": "Subíndice n: última componente de un vector de dimensión n." }
+  ],
+  "symbolGlossary": {
+    "a": "Cateto a: uno de los dos lados que forman el ángulo recto; se mide en unidades de longitud.",
+    "b": "Cateto b: el otro lado que forma el ángulo recto, perpendicular al cateto a.",
+    "c": "Hipotenusa: lado opuesto al ángulo recto y el más largo del triángulo.",
+    "d": "Distancia euclídea entre los dos puntos del plano; siempre es no negativa.",
+    "x": "Coordenada horizontal en la fórmula de distancia; componente del vector en la fórmula de norma.",
+    "y": "Coordenada vertical de un punto del plano.",
+    "n": "Número de componentes del vector; entero positivo que indica la dimensión del espacio.",
+    "=": "Igualdad: las expresiones de ambos lados tienen exactamente el mismo valor.",
+    "+": "Suma las áreas o las contribuciones cuadráticas de las direcciones perpendiculares.",
+    "−": "Resta coordenadas para obtener el desplazamiento entre dos puntos en una dirección.",
+    "(": "Abre un grupo: la diferencia de coordenadas se calcula antes de elevarla al cuadrado.",
+    ")": "Cierra el grupo: el exponente afecta a toda la diferencia de coordenadas.",
+    "‖": "Norma euclídea: longitud del vector, no valor absoluto de cada componente por separado.",
+    "⋯": "Continúa la suma de cuadrados hasta el componente n."
+  }
 }

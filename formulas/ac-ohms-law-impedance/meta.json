@@ -1,0 +1,50 @@
+{
+  "id": "ac-ohms-law-impedance",
+  "name": "Ley de Ohm en corriente alterna: impedancia",
+  "year": 1880,
+  "field": "Electrónica / Corriente alterna",
+  "level": "Bachillerato/Universidad inicial",
+  "color": "#2563eb",
+  "formula": [
+    "V=IZ",
+    "|Z|=√(R²+X²)",
+    "θ=atan2(X,R)"
+  ],
+  "summary": "Extiende Ohm a impedancia compleja con resistencia y reactancia.",
+  "sim": "scripts/electronics-ac-ohm-impedance-sim.js?v=20260705a",
+  "k": "acohm",
+  "folder": "formulas/ac-ohms-law-impedance",
+  "source": "files",
+  "formulaText": [
+    "Extiende Ohm a impedancia compleja con resistencia y reactancia."
+  ],
+  "tags": [
+    "electronica",
+    "electrotecnia",
+    "corriente alterna",
+    "semiconductores",
+    "trifasica",
+    "potencia",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "ley de ohm",
+    "logaritmos",
+    "exponenciales",
+    "fasores",
+    "corriente alterna"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "historia",
+    "derivacion",
+    "simulacion"
+  ],
+  "units": "Unidades didácticas normalizadas.",
+  "dimensions": "Ver ficha.",
+  "symbols": [],
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-28.js",
+  "createdAt": "2026-07-06"
+}

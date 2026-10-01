@@ -1,0 +1,50 @@
+{
+  "id": "cross-attention",
+  "name": "Cross-Attention: atención cruzada",
+  "year": 2017,
+  "field": "Transformers / Deep Learning",
+  "level": "Universidad intermedia",
+  "color": "#0ea5e9",
+  "formula": [
+    "Attention(Q_t,K_s,V_s)=softmax(Q_tK_s^T/√d_k)V_s"
+  ],
+  "summary": "Permite que una secuencia objetivo consulte claves y valores de otra secuencia fuente.",
+  "sim": "scripts/transformer-cross-attention-sim.js?v=20260705a",
+  "k": "cross",
+  "folder": "formulas/cross-attention",
+  "source": "files",
+  "formulaText": [
+    "Permite que una secuencia objetivo consulte claves y valores de otra secuencia fuente."
+  ],
+  "tags": [
+    "reinforcement learning",
+    "transformers",
+    "attention",
+    "positional encoding",
+    "ppo",
+    "q-learning",
+    "sarsa",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "probabilidad",
+    "gradiente",
+    "bellman",
+    "algebra lineal",
+    "softmax",
+    "redes neuronales"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "historia",
+    "derivacion",
+    "simulacion"
+  ],
+  "units": "Unidades didácticas normalizadas.",
+  "dimensions": "Ver ficha.",
+  "symbols": [],
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-27.js",
+  "createdAt": "2026-07-06"
+}

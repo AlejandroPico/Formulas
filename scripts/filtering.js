@@ -7,6 +7,7 @@ const levelOrder = {
   "Universidad": 3,
   "Avanzado": 4
 };
+const searchCache = new WeakMap();
 
 const GREEK_ALIASES = {
   alpha: "α",
@@ -148,6 +149,8 @@ function scoreTerm(term, index) {
 }
 
 function buildSearchIndex(eq) {
+  const cached = searchCache.get(eq);
+  if (cached && cached.source === eq.searchText) return cached.index;
   const formulas = Array.isArray(eq.formula) ? eq.formula : [eq.formula];
   const formulaWords = Array.isArray(eq.formulaText) ? eq.formulaText : [eq.formulaText || eq.formula_text || eq.explainedFormula || ""];
   const uses = [
@@ -180,7 +183,8 @@ function buildSearchIndex(eq) {
     formulaWords: normalizeQuery(formulaWords.join(" ")),
     formulaCompact: normalizeFormulaSearch(formulas.join(" "))
   };
-  fields.full = Object.values(fields).join(" ");
+  fields.full = Object.values(fields).join(" ") + ' ' + normalizeQuery(eq.searchText);
+  searchCache.set(eq, { source: eq.searchText, index: fields });
   return fields;
 }
 

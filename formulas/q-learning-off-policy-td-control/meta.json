@@ -1,0 +1,50 @@
+{
+  "id": "q-learning-off-policy-td-control",
+  "name": "Q-Learning: control TD fuera de política",
+  "year": 1989,
+  "field": "Reinforcement Learning",
+  "level": "Universidad inicial",
+  "color": "#10b981",
+  "formula": [
+    "Q(s,a)←Q(s,a)+α[r+γmax_a Q(s′,a)−Q(s,a)]"
+  ],
+  "summary": "Aprende el valor óptimo futuro usando el máximo, aunque el agente explore otra acción.",
+  "sim": "scripts/rl-q-learning-sim.js?v=20260705a",
+  "k": "ql",
+  "folder": "formulas/q-learning-off-policy-td-control",
+  "source": "files",
+  "formulaText": [
+    "Aprende el valor óptimo futuro usando el máximo, aunque el agente explore otra acción."
+  ],
+  "tags": [
+    "reinforcement learning",
+    "transformers",
+    "attention",
+    "positional encoding",
+    "ppo",
+    "q-learning",
+    "sarsa",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "probabilidad",
+    "gradiente",
+    "bellman",
+    "algebra lineal",
+    "softmax",
+    "redes neuronales"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "historia",
+    "derivacion",
+    "simulacion"
+  ],
+  "units": "Unidades didácticas normalizadas.",
+  "dimensions": "Ver ficha.",
+  "symbols": [],
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-27.js",
+  "createdAt": "2026-07-06"
+}

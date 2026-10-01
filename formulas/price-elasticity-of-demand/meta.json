@@ -1,0 +1,54 @@
+{
+  "id": "price-elasticity-of-demand",
+  "name": "Elasticidad precio de la demanda",
+  "year": 1890,
+  "field": "Microeconomía / Demanda",
+  "level": "Bachillerato/Universidad inicial",
+  "color": "#ec4899",
+  "formula": [
+    "ε_p=(dQ/dP)(P/Q)",
+    "Q=a−P ⇒ ε_p=−P/(a−P)"
+  ],
+  "summary": "Mide la sensibilidad porcentual de la cantidad demandada ante cambios porcentuales del precio.",
+  "sim": "scripts/economics-price-elasticity-demand-sim.js?v=20260706a",
+  "k": "elasticity",
+  "folder": "formulas/price-elasticity-of-demand",
+  "source": "files",
+  "formulaText": [
+    "ε_p=(dQ/dP)(P/Q)",
+    "Q=a−P ⇒ ε_p=−P/(a−P)",
+    "Mide la sensibilidad porcentual de la cantidad demandada ante cambios porcentuales del precio."
+  ],
+  "tags": [
+    "economia",
+    "microeconomia",
+    "macroeconomia",
+    "finanzas",
+    "riesgo",
+    "renta fija",
+    "kelly",
+    "var",
+    "solow",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "algebra",
+    "calculo basico",
+    "microeconomia",
+    "macroeconomia",
+    "finanzas basicas"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "historia",
+    "derivacion",
+    "simulacion"
+  ],
+  "units": "Unidades económicas y financieras normalizadas.",
+  "dimensions": "Ver ficha.",
+  "symbols": [],
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-32.js",
+  "createdAt": "2026-07-07"
+}

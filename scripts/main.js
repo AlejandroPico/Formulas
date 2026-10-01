@@ -1,4 +1,4 @@
-import { loadFormulaFiles } from "./formula-file-loader-fast.js?v=20260715a";
+import { loadFormulaFiles } from "./formula-file-loader.js";
 import { state, setState } from "./state.js";
 import { $, unique } from "./utils.js?v=20260715a";
 import { filterEquations } from "./filtering.js";
@@ -15,6 +15,16 @@ let renderTimer = 0;
 let runtimeRefreshTimer = 0;
 let lastRenderedTotal = 0;
 let loadingHidden = false;
+let catalogFailed = false;
+let searchIndexPromise;
+function ensureSearchIndex() {
+  return searchIndexPromise ||= fetch('formulas/search-index.json').then(response => {
+    if (!response.ok) throw new Error('Índice de contenido no disponible');
+    return response.json();
+  }).then(index => equations.forEach(eq => { eq.searchText = index[eq.id] || ''; })).catch(error => {
+    console.warn(error.message); searchIndexPromise = null;
+  });
+}
 
 async function boot() {
   showLoading("Preparando atlas", 2);
@@ -23,6 +33,7 @@ async function boot() {
   } catch (error) {
     console.error("No se pudo cargar la estructura dinámica de fórmulas.", error);
     equations = [];
+    catalogFailed = true;
     updateLoading({ message: "No se pudo escanear formulas", value: 12 });
   }
 
@@ -98,9 +109,10 @@ function bindEvents() {
     if (open) searchInput.focus();
   });
 
-  searchInput.addEventListener("input", event => {
+  searchInput.addEventListener("input", async event => {
     setState({ query: event.target.value });
     searchControl.classList.toggle("has-query", Boolean(event.target.value.trim()));
+    if (state.query.trim()) await ensureSearchIndex();
     scheduleRender();
   });
 
@@ -189,6 +201,11 @@ function renderAll() {
   syncDynamicCatalog(false);
   const visible = filterEquations(equations, state);
   renderEquationGrid(visible, openEquationModal, state);
+  if (catalogFailed) {
+    const grid = document.querySelector('#equationGrid');
+    grid.innerHTML = '<div class="empty-state" role="alert"><p>No se pudo cargar el catálogo de fórmulas.</p><button type="button" data-retry-catalog>Volver a intentar</button></div>';
+    grid.querySelector('[data-retry-catalog]').addEventListener('click', () => window.location.reload());
+  }
   updateVisibleCount(visible.length, equations.length);
   lastRenderedTotal = equations.length;
 }

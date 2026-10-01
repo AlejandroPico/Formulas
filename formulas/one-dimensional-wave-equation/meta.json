@@ -1,0 +1,43 @@
+{
+  "id": "one-dimensional-wave-equation",
+  "name": "Ecuación de ondas unidimensional",
+  "year": 1746,
+  "field": "Ondas y vibraciones",
+  "level": "Universidad inicial",
+  "color": "#ec4899",
+  "formula": [
+    "∂²u/∂t²=v²∂²u/∂x²"
+  ],
+  "summary": "Ecuación que relaciona aceleración temporal y curvatura espacial de una onda.",
+  "topic": "wave",
+  "source": "files",
+  "author": "",
+  "formulaText": [
+    "Ecuación que relaciona aceleración temporal y curvatura espacial de una onda."
+  ],
+  "tags": [
+    "fisica",
+    "fluidos",
+    "ondas",
+    "oscilaciones",
+    "hidraulica",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "algebra",
+    "calculo basico",
+    "mecanica"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "simulacion"
+  ],
+  "units": "Ver unidades.",
+  "dimensions": "Ver unidades.",
+  "symbols": [],
+  "folder": "formulas/one-dimensional-wave-equation",
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-10.js",
+  "createdAt": "2026-07-05"
+}

@@ -1,0 +1,47 @@
+{
+  "id": "quantum-harmonic-oscillator",
+  "name": "Oscilador armónico cuántico",
+  "year": 1925,
+  "field": "Mecánica cuántica",
+  "level": "Universidad inicial",
+  "color": "#8b5cf6",
+  "formula": [
+    "En=ℏω(n+1/2)",
+    "V(x)=1/2 mω²x²"
+  ],
+  "summary": "Sistema cuántico con niveles igualmente espaciados y energía de punto cero.",
+  "topic": "qho",
+  "source": "files",
+  "author": "",
+  "formulaText": [
+    "Sistema cuántico con niveles igualmente espaciados y energía de punto cero."
+  ],
+  "tags": [
+    "mecanica cuantica",
+    "cuantica",
+    "schrodinger",
+    "hamiltoniano",
+    "pauli",
+    "bloch",
+    "oscilador",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "algebra lineal",
+    "numeros complejos",
+    "calculo",
+    "fisica ondulatoria"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "simulacion"
+  ],
+  "units": "Unidades normalizadas didácticas.",
+  "dimensions": "Ver ficha.",
+  "symbols": [],
+  "folder": "formulas/quantum-harmonic-oscillator",
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-16.js",
+  "createdAt": "2026-07-05"
+}

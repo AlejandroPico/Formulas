@@ -1,0 +1,47 @@
+{
+  "id": "time-independent-schrodinger-equation",
+  "name": "Ecuación de Schrödinger independiente del tiempo",
+  "year": 1926,
+  "field": "Mecánica cuántica",
+  "level": "Universidad inicial",
+  "color": "#e11d48",
+  "formula": [
+    "Hψ=Eψ",
+    "[-ℏ²/(2m)d²/dx²+V(x)]ψ=Eψ"
+  ],
+  "summary": "Problema de autovalores que selecciona energías físicamente permitidas.",
+  "topic": "sch",
+  "source": "files",
+  "author": "",
+  "formulaText": [
+    "Problema de autovalores que selecciona energías físicamente permitidas."
+  ],
+  "tags": [
+    "mecanica cuantica",
+    "cuantica",
+    "schrodinger",
+    "hamiltoniano",
+    "pauli",
+    "bloch",
+    "oscilador",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "algebra lineal",
+    "numeros complejos",
+    "calculo",
+    "fisica ondulatoria"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "simulacion"
+  ],
+  "units": "Unidades normalizadas didácticas.",
+  "dimensions": "Ver ficha.",
+  "symbols": [],
+  "folder": "formulas/time-independent-schrodinger-equation",
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-16.js",
+  "createdAt": "2026-07-05"
+}

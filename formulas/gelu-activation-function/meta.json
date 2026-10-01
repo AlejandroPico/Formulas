@@ -1,0 +1,49 @@
+{
+  "id": "gelu-activation-function",
+  "name": "Función GELU: Gaussian Error Linear Unit",
+  "year": 2016,
+  "field": "Deep Learning",
+  "level": "Universidad intermedia",
+  "color": "#8b5cf6",
+  "formula": [
+    "GELU(x)=xΦ(x)",
+    "GELU(x)≈0.5x[1+tanh(√(2/π)(x+0.044715x^3))]"
+  ],
+  "summary": "Activación suave que deja pasar una entrada de forma probabilística según una puerta gaussiana.",
+  "sim": "scripts/ml-gelu-sim.js?v=20260705b",
+  "k": "gelu",
+  "folder": "formulas/gelu-activation-function",
+  "source": "files",
+  "formulaText": [
+    "Activación suave que deja pasar una entrada de forma probabilística según una puerta gaussiana."
+  ],
+  "tags": [
+    "machine learning",
+    "deep learning",
+    "optimizacion",
+    "redes neuronales",
+    "activacion",
+    "backpropagation",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "calculo",
+    "gradiente",
+    "derivadas",
+    "probabilidad",
+    "algebra lineal"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "historia",
+    "derivacion",
+    "simulacion"
+  ],
+  "units": "Unidades didácticas normalizadas.",
+  "dimensions": "Ver ficha.",
+  "symbols": [],
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-24.js",
+  "createdAt": "2026-07-06"
+}

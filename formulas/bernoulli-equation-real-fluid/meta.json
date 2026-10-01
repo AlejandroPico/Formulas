@@ -1,0 +1,43 @@
+{
+  "id": "bernoulli-equation-real-fluid",
+  "name": "Ecuación de Bernoulli general: fluido real",
+  "year": 1738,
+  "field": "Mecánica de fluidos",
+  "level": "Universidad inicial",
+  "color": "#10b981",
+  "formula": [
+    "P₁+½ρv₁²=P₂+½ρv₂²+hL"
+  ],
+  "summary": "Balance de energía mecánica del fluido incluyendo pérdidas de carga.",
+  "topic": "bernoulli",
+  "source": "files",
+  "author": "",
+  "formulaText": [
+    "Balance de energía mecánica del fluido incluyendo pérdidas de carga."
+  ],
+  "tags": [
+    "fisica",
+    "fluidos",
+    "ondas",
+    "oscilaciones",
+    "hidraulica",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "algebra",
+    "calculo basico",
+    "mecanica"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "simulacion"
+  ],
+  "units": "Ver unidades.",
+  "dimensions": "Ver unidades.",
+  "symbols": [],
+  "folder": "formulas/bernoulli-equation-real-fluid",
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-10.js",
+  "createdAt": "2026-07-05"
+}

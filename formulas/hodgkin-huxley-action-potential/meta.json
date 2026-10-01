@@ -1,0 +1,46 @@
+{
+  "id": "hodgkin-huxley-action-potential",
+  "name": "Biofísica de Hodgkin-Huxley: potencial de acción",
+  "year": 1952,
+  "field": "Neurociencia computacional",
+  "level": "Universidad intermedia",
+  "color": "#ea580c",
+  "formula": [
+    "C_m dV_m/dt=I_ext−I_Na−I_K−I_L"
+  ],
+  "summary": "Modelo biofísico de excitabilidad neuronal basado en capacitancia de membrana y corrientes iónicas.",
+  "topic": "hodgkin",
+  "folder": "formulas/hodgkin-huxley-action-potential",
+  "source": "files",
+  "author": "",
+  "formulaText": [
+    "Modelo biofísico de excitabilidad neuronal basado en capacitancia de membrana y corrientes iónicas."
+  ],
+  "tags": [
+    "biologia matematica",
+    "biofisica",
+    "neurociencia",
+    "epidemiologia",
+    "evolucion",
+    "genetica de poblaciones",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "calculo",
+    "ecuaciones diferenciales",
+    "biologia general",
+    "probabilidad",
+    "logaritmos"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "simulacion"
+  ],
+  "units": "Unidades didácticas normalizadas.",
+  "dimensions": "Ver ficha.",
+  "symbols": [],
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-22.js",
+  "createdAt": "2026-07-06"
+}

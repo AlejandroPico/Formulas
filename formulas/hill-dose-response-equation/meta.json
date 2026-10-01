@@ -1,0 +1,46 @@
+{
+  "id": "hill-dose-response-equation",
+  "name": "Ecuación de dosis-respuesta de Hill",
+  "year": 1910,
+  "field": "Farmacología matemática",
+  "level": "Universidad inicial",
+  "color": "#10b981",
+  "formula": [
+    "E=E_max A^n/(EC_50^n+A^n)"
+  ],
+  "summary": "Modelo de saturación y cooperatividad en unión ligando-receptor o respuesta farmacológica.",
+  "sim": "scripts/bio-hill-dose-response-sim.js?v=20260705a",
+  "folder": "formulas/hill-dose-response-equation",
+  "source": "files",
+  "author": "",
+  "formulaText": [
+    "Modelo de saturación y cooperatividad en unión ligando-receptor o respuesta farmacológica."
+  ],
+  "tags": [
+    "biologia matematica",
+    "biofisica",
+    "farmacologia",
+    "ecologia",
+    "microbiologia",
+    "epidemiologia",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "calculo",
+    "ecuaciones diferenciales",
+    "logaritmos",
+    "biologia general",
+    "quimica fisica"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "simulacion"
+  ],
+  "units": "Unidades didácticas normalizadas.",
+  "dimensions": "Ver ficha.",
+  "symbols": [],
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-23.js",
+  "createdAt": "2026-07-06"
+}

@@ -1,0 +1,51 @@
+{
+  "id": "dbscan-density-based-clustering",
+  "name": "DBSCAN: agrupamiento espacial basado en densidad",
+  "year": 1996,
+  "field": "Machine Learning / Clustering",
+  "level": "Universidad inicial",
+  "color": "#8b5cf6",
+  "formula": [
+    "N_ε(p)={q∈D ∣ d(p,q)≤ε}",
+    "núcleo si |N_ε(p)|≥MinPts"
+  ],
+  "summary": "Agrupa puntos conectados por densidad y detecta ruido sin fijar K.",
+  "sim": "scripts/ml-dbscan-sim.js?v=20260705a",
+  "k": "dbscan",
+  "folder": "formulas/dbscan-density-based-clustering",
+  "source": "files",
+  "formulaText": [
+    "Agrupa puntos conectados por densidad y detecta ruido sin fijar K."
+  ],
+  "tags": [
+    "machine learning",
+    "clustering",
+    "svm",
+    "kernel",
+    "pca",
+    "svd",
+    "pagerank",
+    "grafos",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "algebra lineal",
+    "distancias",
+    "optimizacion",
+    "probabilidad",
+    "estadistica"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "historia",
+    "derivacion",
+    "simulacion"
+  ],
+  "units": "Unidades didácticas normalizadas.",
+  "dimensions": "Ver ficha.",
+  "symbols": [],
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-26.js",
+  "createdAt": "2026-07-06"
+}

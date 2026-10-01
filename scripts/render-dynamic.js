@@ -1,7 +1,43 @@
 import { requestMathTypeset } from "./utils.js";
 import { state } from "./state.js";
+import { mountFormulaTooltips } from './formula-tooltips.js';
 
 let closeCleanup = null;
+let modalVersion = 0;
+let activationVersion = 0;
+let tooltipFrame = 0;
+const modalElement = document.querySelector('#equationModal');
+modalElement?.addEventListener('close', () => {
+  modalVersion++;
+  if (closeCleanup) closeCleanup();
+  closeCleanup = null;
+});
+function refreshTooltips() {
+  cancelAnimationFrame(tooltipFrame);
+  tooltipFrame = requestAnimationFrame(() => {
+    const content = document.querySelector('#modalContent');
+    if (!modalElement?.open) return;
+    content.querySelectorAll('.formula-view.active .modal-formula').forEach(box => {
+      fitFormula(box);
+      mountFormulaTooltips(box, content.__equation);
+    });
+  });
+}
+window.addEventListener('formulas:math-typeset', refreshTooltips);
+window.addEventListener('resize', refreshTooltips);
+function fitFormula(box) {
+  let layer = box.querySelector(':scope > .modal-formula-fit');
+  if (!layer) {
+    layer = document.createElement('div'); layer.className = 'modal-formula-fit';
+    [...box.childNodes].filter(node => !node.classList?.contains('formula-tooltip-layer')).forEach(node => layer.appendChild(node));
+    box.prepend(layer);
+  }
+  box.style.setProperty('--modal-formula-scale', '1');
+  const rect = box.getBoundingClientRect(), fit = layer.getBoundingClientRect();
+  if (!fit.width || !fit.height || !rect.height) return;
+  const scale = Math.min(1, Math.max(1, rect.width - 42) / fit.width, Math.max(1, rect.height - 36) / fit.height);
+  box.style.setProperty('--modal-formula-scale', String(Math.max(.05, scale * .985)));
+}
 
 const VARIABLE_LABELS = {
   "newton-second-law": {
@@ -120,6 +156,9 @@ export function openEquationModal(eq) {
   const content = document.querySelector("#modalContent");
   if (closeCleanup) closeCleanup();
   closeCleanup = null;
+  modalVersion++;
+  content.__equation = eq;
+  window.MathJax?.typesetClear?.([content]);
   const sections = sectionsFor(eq);
   const firstKey = sections[0]?.key || "ficha";
   content.innerHTML = `
@@ -135,9 +174,8 @@ export function openEquationModal(eq) {
   content.querySelectorAll(".detail-tabs button").forEach(button => {
     button.addEventListener("click", () => activate(content, button.dataset.target));
   });
-  modal.showModal();
+  if (!modal.open) modal.showModal();
   activate(content, firstKey);
-  requestMathTypeset();
 }
 
 export function closeEquationModal() {
@@ -147,6 +185,9 @@ export function closeEquationModal() {
 }
 
 function activate(root, key) {
+  activationVersion++;
+  if (closeCleanup) { closeCleanup(); closeCleanup = null; }
+  root.querySelectorAll('[data-kind="simulation"]').forEach(panel => { panel.dataset.mounted = 'false'; });
   root.querySelectorAll(".detail-tabs button").forEach(button => button.classList.toggle("active", button.dataset.target === key));
   root.querySelectorAll(".detail-panel").forEach(panel => {
     const active = panel.dataset.panel === key;
@@ -155,9 +196,9 @@ function activate(root, key) {
   });
   const panel = root.querySelector(`.detail-panel[data-panel="${cssEscape(key)}"]`);
   if (!panel) return;
-  if (panel.dataset.kind === "markdown" && panel.dataset.loaded !== "true") loadMarkdown(panel);
+  if (panel.dataset.kind === "markdown" && !['true', 'loading'].includes(panel.dataset.loaded)) loadMarkdown(panel);
   if (panel.dataset.kind === "simulation") mountDynamicSimulation(panel);
-  if (panel.dataset.kind === "formula") requestMathTypeset();
+  if (panel.dataset.kind === "formula") requestMathTypeset(panel);
   if (panel.dataset.kind === "solver") mountBasicSolver(panel);
 }
 
@@ -165,11 +206,14 @@ async function mountDynamicSimulation(panel) {
   const modulePath = panel.dataset.module;
   if (!modulePath || panel.dataset.mounted === "true") return;
   panel.dataset.mounted = "true";
+  const version = modalVersion;
+  const activation = activationVersion;
   const host = panel.querySelector(".formula-plugin-host");
   const stylePath = panel.dataset.style;
   if (stylePath) loadStyle(stylePath);
   try {
     const module = await import(new URL(`../${modulePath}`, import.meta.url).href);
+    if (!panel.isConnected || panel.hidden || version !== modalVersion || activation !== activationVersion || !modalElement.open) { return; }
     const mount = module.default || module.mountSimulation || Object.values(module).find(value => typeof value === "function");
     if (!mount) throw new Error("El módulo no exporta una función de montaje.");
     const cleanup = mount({
@@ -178,7 +222,7 @@ async function mountDynamicSimulation(panel) {
       controls: host.querySelector(".formula-plugin-controls"),
       readout: host.querySelector(".formula-plugin-readout")
     });
-    closeCleanup = cleanup;
+    closeCleanup = typeof cleanup === 'function' ? cleanup : null;
   } catch (error) {
     host.innerHTML = `<div class="formula-plugin-error"><strong>No se pudo cargar la simulación.</strong><span>${escapeHtml(error.message || String(error))}</span></div>`;
   }
@@ -193,6 +237,7 @@ async function loadMarkdown(panel) {
     const text = await response.text();
     box.innerHTML = renderMarkdown(text);
     panel.dataset.loaded = "true";
+    requestMathTypeset(box);
   } catch {
     box.innerHTML = '<p class="section-loading">No se pudo cargar esta sección.</p>';
     panel.dataset.loaded = "error";
@@ -414,7 +459,8 @@ function renderMarkdown(markdown) {
 }
 
 function inline(text) {
-  return escapeHtml(text).replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>").replace(/`([^`]+)`/g, "<code>$1</code>");
+  return escapeHtml(text).replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>").replace(/`([^`]+)`/g, "<code>$1</code>")
+    .replace(/\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g, '<a href="$2" target="_blank" rel="noreferrer">$1</a>');
 }
 
 function cardTitle(eq, mode) {

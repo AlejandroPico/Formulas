@@ -1,0 +1,41 @@
+{
+  "id": "pearson-correlation",
+  "name": "Correlación de Pearson",
+  "year": 1895,
+  "field": "Probabilidad y estadística",
+  "level": "Bachillerato/Universidad inicial",
+  "color": "#2563eb",
+  "formula": [
+    "r=σxy/(σxσy)",
+    "r∈[−1,1]"
+  ],
+  "summary": "Mide la intensidad y dirección de asociación lineal entre dos variables.",
+  "method": "pearson",
+  "source": "files",
+  "author": "",
+  "formulaText": [
+    "Mide la intensidad y dirección de asociación lineal entre dos variables."
+  ],
+  "tags": [
+    "estadistica",
+    "inferencia",
+    "datos",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "estadistica descriptiva",
+    "probabilidad"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "simulacion"
+  ],
+  "units": "Ver unidades.",
+  "dimensions": "Ver unidades.",
+  "symbols": [],
+  "folder": "formulas/pearson-correlation",
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-7.js",
+  "createdAt": "2026-07-04"
+}

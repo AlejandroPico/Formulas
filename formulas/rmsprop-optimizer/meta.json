@@ -1,0 +1,50 @@
+{
+  "id": "rmsprop-optimizer",
+  "name": "RMSProp: propagación de media cuadrática",
+  "year": 2012,
+  "field": "Machine Learning",
+  "level": "Universidad intermedia",
+  "color": "#0284c7",
+  "formula": [
+    "v_t=βv_{t−1}+(1−β)g_t^2",
+    "η_eff=η/(√v_t+ε)",
+    "Δθ=−η_eff g_t"
+  ],
+  "summary": "Adapta la tasa efectiva dividiendo el gradiente por la raíz de su energía histórica.",
+  "sim": "scripts/ml-rmsprop-sim.js?v=20260705b",
+  "k": "rms",
+  "folder": "formulas/rmsprop-optimizer",
+  "source": "files",
+  "formulaText": [
+    "Adapta la tasa efectiva dividiendo el gradiente por la raíz de su energía histórica."
+  ],
+  "tags": [
+    "machine learning",
+    "deep learning",
+    "optimizacion",
+    "redes neuronales",
+    "activacion",
+    "backpropagation",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "calculo",
+    "gradiente",
+    "derivadas",
+    "probabilidad",
+    "algebra lineal"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "historia",
+    "derivacion",
+    "simulacion"
+  ],
+  "units": "Unidades didácticas normalizadas.",
+  "dimensions": "Ver ficha.",
+  "symbols": [],
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-24.js",
+  "createdAt": "2026-07-06"
+}

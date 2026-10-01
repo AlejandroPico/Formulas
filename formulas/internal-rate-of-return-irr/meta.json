@@ -1,0 +1,54 @@
+{
+  "id": "internal-rate-of-return-irr",
+  "name": "Tasa Interna de Retorno: TIR / IRR",
+  "year": 1950,
+  "field": "Finanzas corporativas",
+  "level": "Universidad inicial",
+  "color": "#0284c7",
+  "formula": [
+    "0=-I_0+Σ CF_t/(1+TIR)^t"
+  ],
+  "summary": "Encuentra la tasa de descuento que hace cero el VAN de un proyecto.",
+  "sim": "scripts/finance-irr-sim.js?v=20260705a",
+  "k": "irr",
+  "folder": "formulas/internal-rate-of-return-irr",
+  "source": "files",
+  "formulaText": [
+    "0=-I_0+Σ CF_t/(1+TIR)^t",
+    "Encuentra la tasa de descuento que hace cero el VAN de un proyecto."
+  ],
+  "tags": [
+    "finanzas",
+    "valor temporal del dinero",
+    "derivados",
+    "renta fija",
+    "capm",
+    "sharpe",
+    "npv",
+    "irr",
+    "duracion",
+    "convexidad",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "algebra",
+    "logaritmos",
+    "probabilidad",
+    "estadistica",
+    "finanzas basicas",
+    "renta fija"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "historia",
+    "derivacion",
+    "simulacion"
+  ],
+  "units": "Unidades financieras normalizadas.",
+  "dimensions": "Ver ficha.",
+  "symbols": [],
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-31.js",
+  "createdAt": "2026-07-07"
+}

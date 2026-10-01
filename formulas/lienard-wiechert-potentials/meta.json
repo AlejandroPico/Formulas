@@ -1,0 +1,43 @@
+{
+  "id": "lienard-wiechert-potentials",
+  "name": "Potenciales de Liénard-Wiechert",
+  "year": 1898,
+  "field": "Electromagnetismo",
+  "level": "Universidad avanzada",
+  "color": "#e11d48",
+  "formula": [
+    "V=q/[4πε0(R−R·β)]"
+  ],
+  "summary": "Potenciales retardados generados por una carga en movimiento relativista.",
+  "topic": "lienard",
+  "source": "files",
+  "author": "",
+  "formulaText": [
+    "Potenciales retardados generados por una carga en movimiento relativista."
+  ],
+  "tags": [
+    "electromagnetismo",
+    "circuitos",
+    "ondas",
+    "energia",
+    "impedancia",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "electromagnetismo",
+    "fasores",
+    "calculo basico"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "simulacion"
+  ],
+  "units": "Ver unidades.",
+  "dimensions": "Ver unidades.",
+  "symbols": [],
+  "folder": "formulas/lienard-wiechert-potentials",
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-13.js",
+  "createdAt": "2026-07-05"
+}

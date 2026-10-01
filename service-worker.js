@@ -1,10 +1,10 @@
 const CACHE_PREFIX = 'formulas-pwa-';
-const CACHE_NAME = `${CACHE_PREFIX}1`;
+const CACHE_NAME = `${CACHE_PREFIX}2`;
 const APP_SHELL = [
   './', './index.html', './favicon.svg', './manifest.webmanifest',
   './icons/icon-192.png', './icons/icon-512.png', './icons/icon-maskable-512.png',
   './styles/tokens.css', './styles/tool-controls.css', './styles/mobile-menu.css',
-  './scripts/main.js', './scripts/mobile-menu.js'
+  './scripts/main.js', './scripts/mobile-menu.js', './vendor/mathjax/tex-svg.js'
 ];
 
 self.addEventListener('install', event => {

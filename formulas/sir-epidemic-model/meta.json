@@ -1,0 +1,49 @@
+{
+  "id": "sir-epidemic-model",
+  "name": "Modelo SIR: dinámica de epidemias",
+  "year": 1927,
+  "field": "Epidemiología matemática",
+  "level": "Universidad inicial",
+  "color": "#dc2626",
+  "formula": [
+    "dS/dt=−βSI",
+    "dI/dt=βSI−γI",
+    "dR/dt=γI",
+    "R_0=β/γ"
+  ],
+  "summary": "Modelo compartimental clásico de susceptibles, infectados y recuperados.",
+  "topic": "sir",
+  "folder": "formulas/sir-epidemic-model",
+  "source": "files",
+  "author": "",
+  "formulaText": [
+    "Modelo compartimental clásico de susceptibles, infectados y recuperados."
+  ],
+  "tags": [
+    "biologia matematica",
+    "biofisica",
+    "neurociencia",
+    "epidemiologia",
+    "evolucion",
+    "genetica de poblaciones",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "calculo",
+    "ecuaciones diferenciales",
+    "biologia general",
+    "probabilidad",
+    "logaritmos"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "simulacion"
+  ],
+  "units": "Unidades didácticas normalizadas.",
+  "dimensions": "Ver ficha.",
+  "symbols": [],
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-22.js",
+  "createdAt": "2026-07-06"
+}

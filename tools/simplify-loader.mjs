@@ -1,0 +1,13 @@
+import { readFile, writeFile } from 'node:fs/promises';
+let source = await readFile('scripts/formula-file-loader.js', 'utf8');
+source = source.replace(/^import \{ formulaManifest \}[^\n]*\n/, '');
+source = source.replace(/^const (?!FORMULAS_ROOT)[A-Z_]+CATALOG_PATH[^\n]*\n/gm, '').replace(/^const CATALOG_PATH[^\n]*\n/gm, '');
+source = source.replace(/const CATALOG_NAME_ALIASES = new Map\(\[[\s\S]*?\]\);\s*/, '');
+const start = source.indexOf('async function loadCatalog()');
+const end = source.indexOf('async function loadJsonArray(', start);
+source = source.slice(0, start) + "async function loadCatalog() {\n  return loadJsonArray('formulas/catalog-index.json');\n}\n\n" + source.slice(end);
+const optional = source.indexOf('async function loadOptionalJsonArray(');
+if (optional >= 0) source = source.slice(0, optional) + source.slice(source.indexOf('function recordsFromCatalog(', optional));
+const manifest = source.indexOf('function recordsFromManifest(');
+if (manifest >= 0) source = source.slice(0, manifest) + source.slice(source.indexOf('function buildFormulaEntry(', manifest));
+await writeFile('scripts/formula-file-loader.js', source);

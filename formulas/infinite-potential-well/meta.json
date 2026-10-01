@@ -1,0 +1,47 @@
+{
+  "id": "infinite-potential-well",
+  "name": "Pozo de potencial infinito: partícula en una caja",
+  "year": 1926,
+  "field": "Mecánica cuántica",
+  "level": "Universidad inicial",
+  "color": "#2563eb",
+  "formula": [
+    "ψn=√(2/L)sin(nπx/L)",
+    "En∝n²/L²"
+  ],
+  "summary": "Modelo de confinamiento en el que solo caben ondas estacionarias discretas.",
+  "topic": "well",
+  "source": "files",
+  "author": "",
+  "formulaText": [
+    "Modelo de confinamiento en el que solo caben ondas estacionarias discretas."
+  ],
+  "tags": [
+    "mecanica cuantica",
+    "cuantica",
+    "schrodinger",
+    "hamiltoniano",
+    "pauli",
+    "bloch",
+    "oscilador",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "algebra lineal",
+    "numeros complejos",
+    "calculo",
+    "fisica ondulatoria"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "simulacion"
+  ],
+  "units": "Unidades normalizadas didácticas.",
+  "dimensions": "Ver ficha.",
+  "symbols": [],
+  "folder": "formulas/infinite-potential-well",
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-16.js",
+  "createdAt": "2026-07-05"
+}

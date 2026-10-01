@@ -1,0 +1,42 @@
+{
+  "id": "relativistic-length-contraction",
+  "name": "Contracción de longitudes",
+  "year": 1905,
+  "field": "Relatividad especial",
+  "level": "Bachillerato/Universidad inicial",
+  "color": "#ef4444",
+  "formula": [
+    "L=L0√(1−v²/c²)"
+  ],
+  "summary": "Reducción de la longitud medida en la dirección del movimiento relativo.",
+  "topic": "length",
+  "source": "files",
+  "author": "",
+  "formulaText": [
+    "Reducción de la longitud medida en la dirección del movimiento relativo."
+  ],
+  "tags": [
+    "relatividad",
+    "gravedad",
+    "lorentz",
+    "schwarzschild",
+    "espaciotiempo",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "algebra",
+    "fisica clasica"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "simulacion"
+  ],
+  "units": "Ver unidades.",
+  "dimensions": "Ver unidades.",
+  "symbols": [],
+  "folder": "formulas/relativistic-length-contraction",
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-14.js",
+  "createdAt": "2026-07-05"
+}

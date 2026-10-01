@@ -1,0 +1,44 @@
+{
+  "id": "linear-momentum-conservation",
+  "name": "Conservación del momento lineal",
+  "year": 1687,
+  "field": "Mecánica clásica",
+  "level": "Bachillerato",
+  "color": "#8b5cf6",
+  "formula": [
+    "ptotal=m₁v₁+m₂v₂",
+    "ptotal=constante"
+  ],
+  "summary": "En ausencia de fuerzas externas, el momento total del sistema se conserva.",
+  "topic": "momentum",
+  "source": "files",
+  "author": "",
+  "formulaText": [
+    "En ausencia de fuerzas externas, el momento total del sistema se conserva."
+  ],
+  "tags": [
+    "fisica",
+    "mecanica",
+    "energia",
+    "momento",
+    "oscilaciones",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "algebra",
+    "vectores basicos",
+    "cinematica"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "simulacion"
+  ],
+  "units": "Ver unidades.",
+  "dimensions": "Ver unidades.",
+  "symbols": [],
+  "folder": "formulas/linear-momentum-conservation",
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-9.js",
+  "createdAt": "2026-07-05"
+}

@@ -1,0 +1,49 @@
+{
+  "id": "power-factor-triangle",
+  "name": "Factor de potencia y triángulo de potencias",
+  "year": 1880,
+  "field": "Electrotecnia / AC",
+  "level": "Bachillerato/Universidad inicial",
+  "color": "#16a34a",
+  "formula": [
+    "FP=P/S=cosφ",
+    "S²=P²+Q²"
+  ],
+  "summary": "Descompone potencia aparente en activa y reactiva para medir eficiencia eléctrica.",
+  "sim": "scripts/electronics-power-factor-sim.js?v=20260705a",
+  "k": "pf",
+  "folder": "formulas/power-factor-triangle",
+  "source": "files",
+  "formulaText": [
+    "Descompone potencia aparente en activa y reactiva para medir eficiencia eléctrica."
+  ],
+  "tags": [
+    "electronica",
+    "electrotecnia",
+    "corriente alterna",
+    "semiconductores",
+    "trifasica",
+    "potencia",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "ley de ohm",
+    "logaritmos",
+    "exponenciales",
+    "fasores",
+    "corriente alterna"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "historia",
+    "derivacion",
+    "simulacion"
+  ],
+  "units": "Unidades didácticas normalizadas.",
+  "dimensions": "Ver ficha.",
+  "symbols": [],
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-28.js",
+  "createdAt": "2026-07-06"
+}

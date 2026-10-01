@@ -1,0 +1,51 @@
+{
+  "id": "maximum-margin-support-vector-machine",
+  "name": "Máquinas de vectores de soporte: margen máximo",
+  "year": 1995,
+  "field": "Machine Learning / Clasificación",
+  "level": "Universidad intermedia",
+  "color": "#6366f1",
+  "formula": [
+    "margen=2/||w||",
+    "y_i(w·x_i+b)≥1"
+  ],
+  "summary": "Busca el hiperplano separador con mayor margen geométrico entre clases.",
+  "sim": "scripts/ml-svm-margin-sim.js?v=20260705a",
+  "k": "svm",
+  "folder": "formulas/maximum-margin-support-vector-machine",
+  "source": "files",
+  "formulaText": [
+    "Busca el hiperplano separador con mayor margen geométrico entre clases."
+  ],
+  "tags": [
+    "machine learning",
+    "clustering",
+    "svm",
+    "kernel",
+    "pca",
+    "svd",
+    "pagerank",
+    "grafos",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "algebra lineal",
+    "distancias",
+    "optimizacion",
+    "probabilidad",
+    "estadistica"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "historia",
+    "derivacion",
+    "simulacion"
+  ],
+  "units": "Unidades didácticas normalizadas.",
+  "dimensions": "Ver ficha.",
+  "symbols": [],
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-26.js",
+  "createdAt": "2026-07-06"
+}

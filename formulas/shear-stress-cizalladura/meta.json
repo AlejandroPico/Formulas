@@ -1,0 +1,49 @@
+{
+  "id": "shear-stress-cizalladura",
+  "name": "Tensión cortante o de cizalladura",
+  "year": 1850,
+  "field": "Resistencia de materiales",
+  "level": "Bachillerato/Universidad inicial",
+  "color": "#ec4899",
+  "formula": [
+    "τ=V/A",
+    "τ_lim≈0.577σ_y"
+  ],
+  "summary": "Calcula la tensión media paralela a una sección sometida a fuerza cortante.",
+  "sim": "scripts/mechanics-shear-stress-sim.js?v=20260705a",
+  "k": "shear",
+  "folder": "formulas/shear-stress-cizalladura",
+  "source": "files",
+  "formulaText": [
+    "Calcula la tensión media paralela a una sección sometida a fuerza cortante."
+  ],
+  "tags": [
+    "mecanica",
+    "resistencia de materiales",
+    "transferencia de calor",
+    "electronica",
+    "instrumentacion",
+    "mosfet",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "algebra",
+    "calculo basico",
+    "unidades",
+    "ley de ohm",
+    "mecanica de solidos"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "historia",
+    "derivacion",
+    "simulacion"
+  ],
+  "units": "Unidades didácticas normalizadas.",
+  "dimensions": "Ver ficha.",
+  "symbols": [],
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-29.js",
+  "createdAt": "2026-07-06"
+}

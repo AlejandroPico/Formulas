@@ -1,0 +1,49 @@
+{
+  "id": "darcy-weisbach-pipe-head-loss",
+  "name": "Ecuación de Darcy-Weisbach: pérdidas de carga en tuberías",
+  "year": 1857,
+  "field": "Hidráulica / Tuberías",
+  "level": "Universidad inicial",
+  "color": "#0284c7",
+  "formula": [
+    "h_f=f(L/D)(v²/2g)"
+  ],
+  "summary": "Cuantifica la pérdida de energía por fricción en una tubería presurizada.",
+  "sim": "scripts/hydraulics-darcy-weisbach-sim.js?v=20260705a",
+  "k": "darcy",
+  "folder": "formulas/darcy-weisbach-pipe-head-loss",
+  "source": "files",
+  "formulaText": [
+    "Cuantifica la pérdida de energía por fricción en una tubería presurizada."
+  ],
+  "tags": [
+    "mecanica",
+    "hidraulica",
+    "transferencia de calor",
+    "fatiga",
+    "elasticidad",
+    "mohr",
+    "hooke",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "algebra",
+    "calculo basico",
+    "mecanica de fluidos",
+    "mecanica de solidos",
+    "transferencia de calor"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "historia",
+    "derivacion",
+    "simulacion"
+  ],
+  "units": "Unidades didácticas normalizadas.",
+  "dimensions": "Ver ficha.",
+  "symbols": [],
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-30.js",
+  "createdAt": "2026-07-06"
+}

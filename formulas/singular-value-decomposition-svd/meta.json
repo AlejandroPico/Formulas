@@ -1,0 +1,51 @@
+{
+  "id": "singular-value-decomposition-svd",
+  "name": "SVD: descomposición en valores singulares",
+  "year": 1873,
+  "field": "Álgebra lineal / Machine Learning",
+  "level": "Universidad intermedia",
+  "color": "#ea580c",
+  "formula": [
+    "A=UΣV^T",
+    "A_k=Σ_{i=1}^k σ_i u_i v_i^T"
+  ],
+  "summary": "Factoriza una matriz en direcciones ortogonales y escalas de importancia.",
+  "sim": "scripts/ml-svd-sim.js?v=20260705a",
+  "k": "svd",
+  "folder": "formulas/singular-value-decomposition-svd",
+  "source": "files",
+  "formulaText": [
+    "Factoriza una matriz en direcciones ortogonales y escalas de importancia."
+  ],
+  "tags": [
+    "machine learning",
+    "clustering",
+    "svm",
+    "kernel",
+    "pca",
+    "svd",
+    "pagerank",
+    "grafos",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "algebra lineal",
+    "distancias",
+    "optimizacion",
+    "probabilidad",
+    "estadistica"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "historia",
+    "derivacion",
+    "simulacion"
+  ],
+  "units": "Unidades didácticas normalizadas.",
+  "dimensions": "Ver ficha.",
+  "symbols": [],
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-26.js",
+  "createdAt": "2026-07-06"
+}

@@ -1,0 +1,47 @@
+{
+  "id": "competitive-lotka-volterra-model",
+  "name": "Modelo de Lotka-Volterra competitivo",
+  "year": 1926,
+  "field": "Ecología matemática",
+  "level": "Universidad inicial",
+  "color": "#2563eb",
+  "formula": [
+    "dN_1/dt=r_1N_1(1−(N_1+α_12N_2)/K_1)",
+    "dN_2/dt=r_2N_2(1−(N_2+α_21N_1)/K_2)"
+  ],
+  "summary": "Modelo de competencia interespecífica con coeficientes de inhibición entre poblaciones.",
+  "sim": "scripts/bio-lotka-competitive-sim.js?v=20260705a",
+  "folder": "formulas/competitive-lotka-volterra-model",
+  "source": "files",
+  "author": "",
+  "formulaText": [
+    "Modelo de competencia interespecífica con coeficientes de inhibición entre poblaciones."
+  ],
+  "tags": [
+    "biologia matematica",
+    "biofisica",
+    "farmacologia",
+    "ecologia",
+    "microbiologia",
+    "epidemiologia",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "calculo",
+    "ecuaciones diferenciales",
+    "logaritmos",
+    "biologia general",
+    "quimica fisica"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "simulacion"
+  ],
+  "units": "Unidades didácticas normalizadas.",
+  "dimensions": "Ver ficha.",
+  "symbols": [],
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-23.js",
+  "createdAt": "2026-07-06"
+}

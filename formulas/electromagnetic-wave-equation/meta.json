@@ -1,0 +1,44 @@
+{
+  "id": "electromagnetic-wave-equation",
+  "name": "Ecuación de onda electromagnética",
+  "year": 1865,
+  "field": "Electromagnetismo",
+  "level": "Universidad inicial",
+  "color": "#ef4444",
+  "formula": [
+    "∇²E=μ0ε0 ∂²E/∂t²",
+    "v=1/√(μ0ε0)=c"
+  ],
+  "summary": "La luz aparece como onda electromagnética autosostenida que se propaga a velocidad c.",
+  "topic": "emwave",
+  "source": "files",
+  "author": "",
+  "formulaText": [
+    "La luz aparece como onda electromagnética autosostenida que se propaga a velocidad c."
+  ],
+  "tags": [
+    "electromagnetismo",
+    "circuitos",
+    "ondas",
+    "energia",
+    "impedancia",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "electromagnetismo",
+    "fasores",
+    "calculo basico"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "simulacion"
+  ],
+  "units": "Ver unidades.",
+  "dimensions": "Ver unidades.",
+  "symbols": [],
+  "folder": "formulas/electromagnetic-wave-equation",
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-13.js",
+  "createdAt": "2026-07-05"
+}

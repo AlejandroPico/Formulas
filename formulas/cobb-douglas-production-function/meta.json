@@ -1,0 +1,54 @@
+{
+  "id": "cobb-douglas-production-function",
+  "name": "Función de producción Cobb-Douglas",
+  "year": 1928,
+  "field": "Microeconomía / Producción",
+  "level": "Universidad inicial",
+  "color": "#0ea5e9",
+  "formula": [
+    "Y=A·K^α·L^β",
+    "MPK=αY/K, MPL=βY/L"
+  ],
+  "summary": "Modela producción agregada con capital, trabajo y rendimientos a escala controlados por exponentes.",
+  "sim": "scripts/economics-cobb-douglas-production-sim.js?v=20260706a",
+  "k": "cobb",
+  "folder": "formulas/cobb-douglas-production-function",
+  "source": "files",
+  "formulaText": [
+    "Y=A·K^α·L^β",
+    "MPK=αY/K, MPL=βY/L",
+    "Modela producción agregada con capital, trabajo y rendimientos a escala controlados por exponentes."
+  ],
+  "tags": [
+    "economia",
+    "microeconomia",
+    "macroeconomia",
+    "finanzas",
+    "riesgo",
+    "renta fija",
+    "kelly",
+    "var",
+    "solow",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "algebra",
+    "calculo basico",
+    "microeconomia",
+    "macroeconomia",
+    "finanzas basicas"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "historia",
+    "derivacion",
+    "simulacion"
+  ],
+  "units": "Unidades económicas y financieras normalizadas.",
+  "dimensions": "Ver ficha.",
+  "symbols": [],
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-32.js",
+  "createdAt": "2026-07-07"
+}

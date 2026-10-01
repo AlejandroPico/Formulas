@@ -1,0 +1,48 @@
+{
+  "id": "first-law-thermodynamics",
+  "name": "Primera ley de la termodinámica",
+  "year": 1850,
+  "field": "Termodinámica",
+  "level": "Bachillerato/Universidad inicial",
+  "color": "#10b981",
+  "formula": [
+    "ΔU=Q−W"
+  ],
+  "summary": "Expresa conservación de energía: calor que entra menos trabajo que sale cambia la energía interna.",
+  "topic": "firstLaw",
+  "source": "files",
+  "author": "",
+  "formulaText": [
+    "Expresa conservación de energía: calor que entra menos trabajo que sale cambia la energía interna."
+  ],
+  "tags": [
+    "termodinamica",
+    "energia libre",
+    "maxwell",
+    "boltzmann",
+    "gibbs",
+    "helmholtz",
+    "carnot",
+    "primera ley",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "energia",
+    "calor",
+    "trabajo",
+    "calculo basico",
+    "fisica general"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "simulacion"
+  ],
+  "units": "Unidades didácticas normalizadas.",
+  "dimensions": "Ver ficha.",
+  "symbols": [],
+  "folder": "formulas/first-law-thermodynamics",
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-18.js",
+  "createdAt": "2026-07-05"
+}

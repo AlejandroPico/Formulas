@@ -1,0 +1,43 @@
+{
+  "id": "continuity-equation-fluid",
+  "name": "Ecuación de continuidad",
+  "year": 1755,
+  "field": "Mecánica de fluidos",
+  "level": "Bachillerato/Universidad inicial",
+  "color": "#0ea5e9",
+  "formula": [
+    "Q=A₁v₁=A₂v₂"
+  ],
+  "summary": "Conservación del caudal en un flujo incompresible a través de secciones variables.",
+  "topic": "continuity",
+  "source": "files",
+  "author": "",
+  "formulaText": [
+    "Conservación del caudal en un flujo incompresible a través de secciones variables."
+  ],
+  "tags": [
+    "fisica",
+    "fluidos",
+    "ondas",
+    "oscilaciones",
+    "hidraulica",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "algebra",
+    "calculo basico",
+    "mecanica"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "simulacion"
+  ],
+  "units": "Ver unidades.",
+  "dimensions": "Ver unidades.",
+  "symbols": [],
+  "folder": "formulas/continuity-equation-fluid",
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-10.js",
+  "createdAt": "2026-07-05"
+}

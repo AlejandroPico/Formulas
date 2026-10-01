@@ -1,0 +1,50 @@
+{
+  "id": "policy-gradient-reinforce",
+  "name": "Gradiente de política: algoritmo REINFORCE",
+  "year": 1992,
+  "field": "Reinforcement Learning",
+  "level": "Universidad intermedia",
+  "color": "#6366f1",
+  "formula": [
+    "∇J(θ)=E[∇logπ_θ(a|s)G_t]"
+  ],
+  "summary": "Aumenta la probabilidad de acciones que produjeron retornos altos y reduce las fallidas.",
+  "sim": "scripts/rl-policy-gradient-sim.js?v=20260705a",
+  "k": "pg",
+  "folder": "formulas/policy-gradient-reinforce",
+  "source": "files",
+  "formulaText": [
+    "Aumenta la probabilidad de acciones que produjeron retornos altos y reduce las fallidas."
+  ],
+  "tags": [
+    "reinforcement learning",
+    "transformers",
+    "attention",
+    "positional encoding",
+    "ppo",
+    "q-learning",
+    "sarsa",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "probabilidad",
+    "gradiente",
+    "bellman",
+    "algebra lineal",
+    "softmax",
+    "redes neuronales"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "historia",
+    "derivacion",
+    "simulacion"
+  ],
+  "units": "Unidades didácticas normalizadas.",
+  "dimensions": "Ver ficha.",
+  "symbols": [],
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-27.js",
+  "createdAt": "2026-07-06"
+}

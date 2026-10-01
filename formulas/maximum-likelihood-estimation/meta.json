@@ -1,0 +1,41 @@
+{
+  "id": "maximum-likelihood-estimation",
+  "name": "Estimación por máxima verosimilitud",
+  "year": 1922,
+  "field": "Probabilidad y estadística",
+  "level": "Universidad inicial",
+  "color": "#10b981",
+  "formula": [
+    "L(θ)=∏f(xᵢ;θ)",
+    "θ̂=argmaxθ log L(θ)"
+  ],
+  "summary": "Selecciona el parámetro que hace más probable la muestra observada.",
+  "method": "mle",
+  "source": "files",
+  "author": "",
+  "formulaText": [
+    "Selecciona el parámetro que hace más probable la muestra observada."
+  ],
+  "tags": [
+    "estadistica",
+    "inferencia",
+    "datos",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "estadistica descriptiva",
+    "probabilidad"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "simulacion"
+  ],
+  "units": "Ver unidades.",
+  "dimensions": "Ver unidades.",
+  "symbols": [],
+  "folder": "formulas/maximum-likelihood-estimation",
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-7.js",
+  "createdAt": "2026-07-04"
+}

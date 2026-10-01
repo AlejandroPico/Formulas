@@ -1,0 +1,48 @@
+{
+  "id": "potential-of-hydrogen-ph",
+  "name": "Potencial de hidrógeno (pH)",
+  "year": 1909,
+  "field": "Química ácido-base",
+  "level": "ESO/Bachillerato",
+  "color": "#64748b",
+  "formula": [
+    "pH=−log10[H_3O^+]",
+    "[H_3O^+]=10^(−pH)"
+  ],
+  "summary": "Escala logarítmica que mide la acidez mediante la concentración de hidronio.",
+  "topic": "ph",
+  "folder": "formulas/potential-of-hydrogen-ph",
+  "source": "files",
+  "author": "",
+  "formulaText": [
+    "Escala logarítmica que mide la acidez mediante la concentración de hidronio."
+  ],
+  "tags": [
+    "quimica",
+    "cinetica",
+    "equilibrio quimico",
+    "acido base",
+    "ph",
+    "beer lambert",
+    "tampon",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "quimica general",
+    "logaritmos",
+    "concentracion molar",
+    "equilibrio",
+    "funciones exponenciales"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "simulacion"
+  ],
+  "units": "Unidades didácticas normalizadas.",
+  "dimensions": "Ver ficha.",
+  "symbols": [],
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-20.js",
+  "createdAt": "2026-07-06"
+}

@@ -1,0 +1,44 @@
+{
+  "id": "critical-density-parameter",
+  "name": "Parámetro de densidad crítica",
+  "year": 1922,
+  "field": "Cosmología",
+  "level": "Universidad inicial",
+  "color": "#8b5cf6",
+  "formula": [
+    "Ω=ρ/ρc"
+  ],
+  "summary": "Compara la densidad real del universo con la densidad crítica y sugiere la geometría global.",
+  "topic": "critical",
+  "source": "files",
+  "author": "",
+  "formulaText": [
+    "Compara la densidad real del universo con la densidad crítica y sugiere la geometría global."
+  ],
+  "tags": [
+    "cosmologia",
+    "relatividad general",
+    "einstein",
+    "hubble",
+    "redshift",
+    "geodesica",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "relatividad",
+    "calculo basico",
+    "cosmologia"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "simulacion"
+  ],
+  "units": "Ver unidades.",
+  "dimensions": "Ver unidades.",
+  "symbols": [],
+  "folder": "formulas/critical-density-parameter",
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-15.js",
+  "createdAt": "2026-07-05"
+}

@@ -1,0 +1,47 @@
+{
+  "id": "hardy-weinberg-equilibrium",
+  "name": "Ley de equilibrio de Hardy-Weinberg",
+  "year": 1908,
+  "field": "Genética de poblaciones",
+  "level": "Bachillerato/Universidad inicial",
+  "color": "#06b6d4",
+  "formula": [
+    "p+q=1",
+    "p^2+2pq+q^2=1"
+  ],
+  "summary": "Predice frecuencias genotípicas bajo apareamiento aleatorio y ausencia de fuerzas evolutivas.",
+  "topic": "hardy",
+  "folder": "formulas/hardy-weinberg-equilibrium",
+  "source": "files",
+  "author": "",
+  "formulaText": [
+    "Predice frecuencias genotípicas bajo apareamiento aleatorio y ausencia de fuerzas evolutivas."
+  ],
+  "tags": [
+    "biologia matematica",
+    "biofisica",
+    "neurociencia",
+    "epidemiologia",
+    "evolucion",
+    "genetica de poblaciones",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "calculo",
+    "ecuaciones diferenciales",
+    "biologia general",
+    "probabilidad",
+    "logaritmos"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "simulacion"
+  ],
+  "units": "Unidades didácticas normalizadas.",
+  "dimensions": "Ver ficha.",
+  "symbols": [],
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-22.js",
+  "createdAt": "2026-07-06"
+}

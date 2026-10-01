@@ -1,0 +1,49 @@
+{
+  "id": "first-order-chemical-kinetics",
+  "name": "Cinética de primer orden",
+  "year": 1850,
+  "field": "Química cinética",
+  "level": "Bachillerato/Universidad inicial",
+  "color": "#2563eb",
+  "formula": [
+    "[A]_t=[A]_0 e^(−kt)",
+    "v=k[A]",
+    "t_(1/2)=ln(2)/k"
+  ],
+  "summary": "Describe reacciones cuya velocidad es proporcional a la concentración de un único reactivo.",
+  "topic": "firstOrder",
+  "folder": "formulas/first-order-chemical-kinetics",
+  "source": "files",
+  "author": "",
+  "formulaText": [
+    "Describe reacciones cuya velocidad es proporcional a la concentración de un único reactivo."
+  ],
+  "tags": [
+    "quimica",
+    "cinetica",
+    "equilibrio quimico",
+    "acido base",
+    "ph",
+    "beer lambert",
+    "tampon",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "quimica general",
+    "logaritmos",
+    "concentracion molar",
+    "equilibrio",
+    "funciones exponenciales"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "simulacion"
+  ],
+  "units": "Unidades didácticas normalizadas.",
+  "dimensions": "Ver ficha.",
+  "symbols": [],
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-20.js",
+  "createdAt": "2026-07-06"
+}

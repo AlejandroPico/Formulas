@@ -1,0 +1,51 @@
+{
+  "id": "principal-component-analysis-pca",
+  "name": "PCA: análisis de componentes principales",
+  "year": 1901,
+  "field": "Estadística / Reducción dimensional",
+  "level": "Universidad inicial",
+  "color": "#10b981",
+  "formula": [
+    "Z=XW",
+    "w_1=arg max Var(Xw), ||w||=1"
+  ],
+  "summary": "Rota los ejes para conservar la mayor varianza posible en pocas dimensiones.",
+  "sim": "scripts/ml-pca-sim.js?v=20260705a",
+  "k": "pca",
+  "folder": "formulas/principal-component-analysis-pca",
+  "source": "files",
+  "formulaText": [
+    "Rota los ejes para conservar la mayor varianza posible en pocas dimensiones."
+  ],
+  "tags": [
+    "machine learning",
+    "clustering",
+    "svm",
+    "kernel",
+    "pca",
+    "svd",
+    "pagerank",
+    "grafos",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "algebra lineal",
+    "distancias",
+    "optimizacion",
+    "probabilidad",
+    "estadistica"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "historia",
+    "derivacion",
+    "simulacion"
+  ],
+  "units": "Unidades didácticas normalizadas.",
+  "dimensions": "Ver ficha.",
+  "symbols": [],
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-26.js",
+  "createdAt": "2026-07-06"
+}

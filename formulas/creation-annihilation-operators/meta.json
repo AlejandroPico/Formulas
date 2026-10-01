@@ -1,0 +1,47 @@
+{
+  "id": "creation-annihilation-operators",
+  "name": "Operadores de creación y destrucción",
+  "year": 1925,
+  "field": "Mecánica cuántica",
+  "level": "Universidad intermedia",
+  "color": "#10b981",
+  "formula": [
+    "a†|n⟩=√(n+1)|n+1⟩",
+    "a|n⟩=√n|n−1⟩"
+  ],
+  "summary": "Operadores escalera que suben o bajan niveles discretos con factores de amplitud.",
+  "topic": "ladder",
+  "source": "files",
+  "author": "",
+  "formulaText": [
+    "Operadores escalera que suben o bajan niveles discretos con factores de amplitud."
+  ],
+  "tags": [
+    "mecanica cuantica",
+    "cuantica",
+    "schrodinger",
+    "hamiltoniano",
+    "pauli",
+    "bloch",
+    "oscilador",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "algebra lineal",
+    "numeros complejos",
+    "calculo",
+    "fisica ondulatoria"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "simulacion"
+  ],
+  "units": "Unidades normalizadas didácticas.",
+  "dimensions": "Ver ficha.",
+  "symbols": [],
+  "folder": "formulas/creation-annihilation-operators",
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-16.js",
+  "createdAt": "2026-07-05"
+}

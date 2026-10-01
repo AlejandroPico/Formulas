@@ -1,0 +1,43 @@
+{
+  "id": "t-hypothesis-test",
+  "name": "Contraste de hipótesis: test t",
+  "year": 1908,
+  "field": "Probabilidad y estadística",
+  "level": "Universidad inicial",
+  "color": "#eab308",
+  "formula": [
+    "t=(x̄−μ₀)/(s/√n)",
+    "ν=n−1"
+  ],
+  "summary": "Contraste de media con desviación muestral y grados de libertad.",
+  "concept": "ttest",
+  "source": "files",
+  "author": "",
+  "formulaText": [
+    "Contraste de media con desviación muestral y grados de libertad."
+  ],
+  "tags": [
+    "estadistica",
+    "inferencia",
+    "modelos",
+    "bayes",
+    "informacion",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "probabilidad",
+    "estadistica descriptiva"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "simulacion"
+  ],
+  "units": "Ver unidades.",
+  "dimensions": "Ver unidades.",
+  "symbols": [],
+  "folder": "formulas/t-hypothesis-test",
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-8.js",
+  "createdAt": "2026-07-05"
+}

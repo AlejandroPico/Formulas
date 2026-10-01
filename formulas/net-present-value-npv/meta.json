@@ -1,0 +1,54 @@
+{
+  "id": "net-present-value-npv",
+  "name": "Valor Actual Neto: VAN / NPV",
+  "year": 1950,
+  "field": "Finanzas corporativas",
+  "level": "Universidad inicial",
+  "color": "#10b981",
+  "formula": [
+    "VAN=-I_0+Σ CF_t/(1+r)^t"
+  ],
+  "summary": "Mide el valor creado hoy por una inversión descontando sus flujos futuros.",
+  "sim": "scripts/finance-npv-sim.js?v=20260705a",
+  "k": "npv",
+  "folder": "formulas/net-present-value-npv",
+  "source": "files",
+  "formulaText": [
+    "VAN=-I_0+Σ CF_t/(1+r)^t",
+    "Mide el valor creado hoy por una inversión descontando sus flujos futuros."
+  ],
+  "tags": [
+    "finanzas",
+    "valor temporal del dinero",
+    "derivados",
+    "renta fija",
+    "capm",
+    "sharpe",
+    "npv",
+    "irr",
+    "duracion",
+    "convexidad",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "algebra",
+    "logaritmos",
+    "probabilidad",
+    "estadistica",
+    "finanzas basicas",
+    "renta fija"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "historia",
+    "derivacion",
+    "simulacion"
+  ],
+  "units": "Unidades financieras normalizadas.",
+  "dimensions": "Ver ficha.",
+  "symbols": [],
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-31.js",
+  "createdAt": "2026-07-07"
+}

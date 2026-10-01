@@ -1,0 +1,47 @@
+{
+  "id": "gompertz-growth-model",
+  "name": "Modelo de crecimiento de Gompertz",
+  "year": 1825,
+  "field": "Biología matemática",
+  "level": "Universidad inicial",
+  "color": "#8b5cf6",
+  "formula": [
+    "dN/dt=rNln(K/N)",
+    "N(t)=K exp(ln(N_0/K)e^(−rt))"
+  ],
+  "summary": "Modelo sigmoide asimétrico usado para crecimiento tumoral, poblacional y biológico.",
+  "topic": "gompertz",
+  "folder": "formulas/gompertz-growth-model",
+  "source": "files",
+  "author": "",
+  "formulaText": [
+    "Modelo sigmoide asimétrico usado para crecimiento tumoral, poblacional y biológico."
+  ],
+  "tags": [
+    "biologia matematica",
+    "biofisica",
+    "neurociencia",
+    "epidemiologia",
+    "evolucion",
+    "genetica de poblaciones",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "calculo",
+    "ecuaciones diferenciales",
+    "biologia general",
+    "probabilidad",
+    "logaritmos"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "simulacion"
+  ],
+  "units": "Unidades didácticas normalizadas.",
+  "dimensions": "Ver ficha.",
+  "symbols": [],
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-22.js",
+  "createdAt": "2026-07-06"
+}

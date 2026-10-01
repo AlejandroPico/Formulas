@@ -1,0 +1,47 @@
+{
+  "id": "hamiltonian-operator",
+  "name": "Operador Hamiltoniano",
+  "year": 1834,
+  "field": "Mecánica cuántica",
+  "level": "Universidad inicial",
+  "color": "#10b981",
+  "formula": [
+    "H=T+V",
+    "H=−ℏ²/(2m)∂²/∂x²+V(x)"
+  ],
+  "summary": "Operador de energía total: suma de término cinético por curvatura y término potencial.",
+  "topic": "ham",
+  "source": "files",
+  "author": "",
+  "formulaText": [
+    "Operador de energía total: suma de término cinético por curvatura y término potencial."
+  ],
+  "tags": [
+    "mecanica cuantica",
+    "cuantica",
+    "schrodinger",
+    "hamiltoniano",
+    "pauli",
+    "bloch",
+    "oscilador",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "algebra lineal",
+    "numeros complejos",
+    "calculo",
+    "fisica ondulatoria"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "simulacion"
+  ],
+  "units": "Unidades normalizadas didácticas.",
+  "dimensions": "Ver ficha.",
+  "symbols": [],
+  "folder": "formulas/hamiltonian-operator",
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-16.js",
+  "createdAt": "2026-07-05"
+}

@@ -1,0 +1,49 @@
+{
+  "id": "hydrogen-radial-probability-density",
+  "name": "Átomo de hidrógeno: densidad de probabilidad radial",
+  "year": 1926,
+  "field": "Química cuántica",
+  "level": "Universidad inicial",
+  "color": "#e11d48",
+  "formula": [
+    "P_nl(r)=r^2|R_nl(r)|^2"
+  ],
+  "summary": "Distribución radial que indica dónde es más probable encontrar el electrón en un orbital hidrogenoide.",
+  "topic": "hydrogenRadial",
+  "folder": "formulas/hydrogen-radial-probability-density",
+  "source": "files",
+  "author": "",
+  "formulaText": [
+    "Distribución radial que indica dónde es más probable encontrar el electrón en un orbital hidrogenoide."
+  ],
+  "tags": [
+    "quimica fisica",
+    "electroquimica",
+    "quimica cuantica",
+    "born haber",
+    "bohr",
+    "hidrogeno",
+    "debye huckel",
+    "nernst",
+    "faraday",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "quimica general",
+    "termodinamica",
+    "electroquimica",
+    "estructura atomica",
+    "logaritmos"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "simulacion"
+  ],
+  "units": "Unidades didácticas normalizadas.",
+  "dimensions": "Ver ficha.",
+  "symbols": [],
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-21.js",
+  "createdAt": "2026-07-06"
+}

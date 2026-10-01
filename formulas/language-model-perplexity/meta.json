@@ -1,0 +1,48 @@
+{
+  "id": "language-model-perplexity",
+  "name": "Perplejidad de un modelo de lenguaje",
+  "year": 1948,
+  "field": "NLP / Modelos de lenguaje",
+  "level": "Universidad inicial",
+  "color": "#ea580c",
+  "formula": [
+    "PPL=2^H",
+    "H=−(1/N)Σ log₂ p(x_i)"
+  ],
+  "summary": "Mide cuántas alternativas equivalentes mantiene un modelo al predecir texto.",
+  "sim": "scripts/ml-perplexity-sim.js?v=20260705a",
+  "k": "ppl",
+  "folder": "formulas/language-model-perplexity",
+  "source": "files",
+  "formulaText": [
+    "Mide cuántas alternativas equivalentes mantiene un modelo al predecir texto."
+  ],
+  "tags": [
+    "machine learning",
+    "nlp",
+    "teoria de la informacion",
+    "normalizacion",
+    "funciones de perdida",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "probabilidad",
+    "logaritmos",
+    "estadistica",
+    "machine learning",
+    "redes neuronales"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "historia",
+    "derivacion",
+    "simulacion"
+  ],
+  "units": "Unidades didácticas normalizadas.",
+  "dimensions": "Ver ficha.",
+  "symbols": [],
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-25.js",
+  "createdAt": "2026-07-06"
+}

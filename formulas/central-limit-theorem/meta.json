@@ -1,0 +1,40 @@
+{
+  "id": "central-limit-theorem",
+  "name": "Teorema central del límite",
+  "year": 1810,
+  "field": "Probabilidad y estadística",
+  "level": "Universidad inicial",
+  "color": "#8b5cf6",
+  "formula": [
+    "Z=(x̄−μ)/(σ/√n)→N(0,1)"
+  ],
+  "summary": "Explica por qué las medias muestrales tienden a una normal al crecer n.",
+  "method": "clt",
+  "source": "files",
+  "author": "",
+  "formulaText": [
+    "Explica por qué las medias muestrales tienden a una normal al crecer n."
+  ],
+  "tags": [
+    "estadistica",
+    "inferencia",
+    "datos",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "estadistica descriptiva",
+    "probabilidad"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "simulacion"
+  ],
+  "units": "Ver unidades.",
+  "dimensions": "Ver unidades.",
+  "symbols": [],
+  "folder": "formulas/central-limit-theorem",
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-7.js",
+  "createdAt": "2026-07-04"
+}

@@ -1,0 +1,54 @@
+{
+  "id": "sharpe-ratio-risk-adjusted-return",
+  "name": "Ratio de Sharpe: rendimiento ajustado por riesgo",
+  "year": 1966,
+  "field": "Finanzas / Gestión de carteras",
+  "level": "Universidad inicial",
+  "color": "#ea580c",
+  "formula": [
+    "Sharpe=(R_p-R_f)/σ_p"
+  ],
+  "summary": "Compara el exceso de retorno de una cartera por unidad de volatilidad.",
+  "sim": "scripts/finance-sharpe-ratio-sim.js?v=20260705a",
+  "k": "sharpe",
+  "folder": "formulas/sharpe-ratio-risk-adjusted-return",
+  "source": "files",
+  "formulaText": [
+    "Sharpe=(R_p-R_f)/σ_p",
+    "Compara el exceso de retorno de una cartera por unidad de volatilidad."
+  ],
+  "tags": [
+    "finanzas",
+    "valor temporal del dinero",
+    "derivados",
+    "renta fija",
+    "capm",
+    "sharpe",
+    "npv",
+    "irr",
+    "duracion",
+    "convexidad",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "algebra",
+    "logaritmos",
+    "probabilidad",
+    "estadistica",
+    "finanzas basicas",
+    "renta fija"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "historia",
+    "derivacion",
+    "simulacion"
+  ],
+  "units": "Unidades financieras normalizadas.",
+  "dimensions": "Ver ficha.",
+  "symbols": [],
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-31.js",
+  "createdAt": "2026-07-07"
+}

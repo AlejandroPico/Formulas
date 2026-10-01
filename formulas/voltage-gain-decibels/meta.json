@@ -1,0 +1,48 @@
+{
+  "id": "voltage-gain-decibels",
+  "name": "Ganancia de voltaje en decibelios",
+  "year": 1920,
+  "field": "Electrónica / Señales",
+  "level": "Bachillerato/Universidad inicial",
+  "color": "#ea580c",
+  "formula": [
+    "G_{dB}=20log_{10}(V_{out}/V_{in})"
+  ],
+  "summary": "Expresa una relación de voltajes en escala logarítmica de decibelios.",
+  "sim": "scripts/electronics-decibel-gain-sim.js?v=20260705a",
+  "k": "db",
+  "folder": "formulas/voltage-gain-decibels",
+  "source": "files",
+  "formulaText": [
+    "Expresa una relación de voltajes en escala logarítmica de decibelios."
+  ],
+  "tags": [
+    "electronica",
+    "electrotecnia",
+    "corriente alterna",
+    "semiconductores",
+    "trifasica",
+    "potencia",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "ley de ohm",
+    "logaritmos",
+    "exponenciales",
+    "fasores",
+    "corriente alterna"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "historia",
+    "derivacion",
+    "simulacion"
+  ],
+  "units": "Unidades didácticas normalizadas.",
+  "dimensions": "Ver ficha.",
+  "symbols": [],
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-28.js",
+  "createdAt": "2026-07-06"
+}

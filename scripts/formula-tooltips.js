@@ -82,22 +82,29 @@ export function mountFormulaTooltips(formulaBox, equation) {
   const formulaRect = formulaBox.getBoundingClientRect();
   const zones = [
     ...buildStructureZones(formulaBox, formulaRect),
-    ...buildSymbolZones(formulaBox, formulaRect, glossary)
+    ...buildSymbolZones(formulaBox, formulaRect, glossary, equation)
   ];
 
   zones.forEach(zone => layer.appendChild(createZone(zone)));
   formulaBox.dataset.tooltipZones = String(zones.length);
 }
 
-function buildSymbolZones(formulaBox, formulaRect, glossary) {
+function buildSymbolZones(formulaBox, formulaRect, glossary, equation) {
+  const expressions = [...formulaBox.querySelectorAll('.formula-stack > div')];
   const nodes = [...formulaBox.querySelectorAll("svg g[data-mml-node='mi'], svg g[data-mml-node='mo'], svg g[data-mml-node='mn']")];
   return nodes.flatMap((node, index) => {
     const symbol = extractMathSymbol(node);
-    const description = lookupSymbolDescription(symbol, glossary);
+    const expression = node.closest('.formula-stack > div');
+    const local = equation?.formulaGlossaries?.[expressions.indexOf(expression)] || {};
+    let description = local[symbol] || lookupSymbolDescription(symbol, glossary);
+    const code = Number.parseInt(node.querySelector('use[data-c]')?.getAttribute('data-c') || '', 16);
+    if (code >= 0x1D400 && code <= 0x1D433) description = local[`bold:${symbol}`] || description;
+    if (symbol === '2' && node.parentElement?.dataset.mmlNode === 'msup') description = 'Al cuadrado: multiplica la base por sí misma. Para una longitud, el resultado representa un área.';
+    if (node.parentElement?.dataset.mmlNode === 'msub') description = local[`_${symbol}`] || `Subíndice ${symbol}: identifica un punto o componente; no multiplica la variable.`;
     if (!symbol || !description) return [];
     const rect = node.getBoundingClientRect();
     if (!isUsableRect(rect)) return [];
-    return [{ kind: "symbol", symbol, description, rect: toLocalRect(rect, formulaRect, formulaBox), order: index }];
+    return [{ kind: "symbol", symbol, description, rect: toLocalRect(rect, formulaRect, formulaBox, 1), order: index }];
   });
 }
 
@@ -151,6 +158,7 @@ function getOverlayLayer(formulaBox) {
 
 function buildGlossary(eq) {
   const glossary = new Map(FALLBACK_SYMBOLS);
+  Object.entries(eq?.symbolGlossary || {}).forEach(([symbol, description]) => glossary.set(normalizeSymbolKey(symbol), description));
   eq?.variables?.forEach(entry => {
     const separator = String(entry).indexOf(":");
     if (separator < 0) return;
@@ -187,15 +195,14 @@ function codePointToSymbol(hex) {
 function lookupSymbolDescription(symbol, glossary) {
   const key = normalizeSymbolKey(symbol);
   if (!key) return "";
-  return glossary.get(key) || FALLBACK_SYMBOLS.get(key) || "";
+  return glossary.get(key) || (/^\d+$/.test(key) ? `Número ${key}: valor numérico de la expresión.` : /^[()[\]{}]$/.test(key) ? 'Delimitador: agrupa los términos e indica el orden de las operaciones.' : key === '‖' || key === '∥' ? 'Norma euclídea: longitud del vector, calculada como raíz de la suma de los cuadrados de sus componentes.' : key === '…' || key === '⋯' ? 'Puntos suspensivos: continúa el mismo patrón para los componentes intermedios.' : `Símbolo ${symbol}. Su significado específico está pendiente de revisión en esta ficha.`);
 }
 
 function normalizeSymbolKey(value) {
   return String(value ?? "")
     .normalize("NFKC")
     .replace(/[\u0300-\u036f]/g, "")
-    .replace(/[₀₁₂₃₄₅₆₇₈₉⁰¹²³⁴⁵⁶⁷⁸⁹0-9]/g, "")
-    .replace(/[{}()[\]^_\\]/g, "")
+    .replace(/\\/g, "")
     .replace(/\s+/g, "")
     .trim();
 }

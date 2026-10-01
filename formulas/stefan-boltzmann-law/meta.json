@@ -1,0 +1,48 @@
+{
+  "id": "stefan-boltzmann-law",
+  "name": "Ley de Stefan-Boltzmann",
+  "year": 1879,
+  "field": "Radiación térmica",
+  "level": "Bachillerato/Universidad inicial",
+  "color": "#dc2626",
+  "formula": [
+    "j*=σT^4",
+    "P=AσT^4"
+  ],
+  "summary": "La potencia radiada por un cuerpo negro crece con la cuarta potencia de la temperatura.",
+  "topic": "stefan",
+  "folder": "formulas/stefan-boltzmann-law",
+  "source": "files",
+  "author": "",
+  "formulaText": [
+    "La potencia radiada por un cuerpo negro crece con la cuarta potencia de la temperatura."
+  ],
+  "tags": [
+    "termodinamica",
+    "mecanica estadistica",
+    "radiacion termica",
+    "cuerpo negro",
+    "gas real",
+    "boltzmann",
+    "einstein",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "termodinamica",
+    "calculo basico",
+    "energia",
+    "temperatura",
+    "probabilidad"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "simulacion"
+  ],
+  "units": "Unidades didácticas normalizadas.",
+  "dimensions": "Ver ficha.",
+  "symbols": [],
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-19.js",
+  "createdAt": "2026-07-06"
+}

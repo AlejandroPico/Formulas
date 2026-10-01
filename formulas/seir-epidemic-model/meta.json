@@ -1,0 +1,49 @@
+{
+  "id": "seir-epidemic-model",
+  "name": "Modelo SEIR: período de incubación",
+  "year": 1927,
+  "field": "Epidemiología matemática",
+  "level": "Universidad inicial",
+  "color": "#f59e0b",
+  "formula": [
+    "dS/dt=−βSI",
+    "dE/dt=βSI−σE",
+    "dI/dt=σE−γI",
+    "dR/dt=γI"
+  ],
+  "summary": "Extiende SIR añadiendo una fase expuesta o latente antes de la fase infecciosa.",
+  "topic": "seir",
+  "folder": "formulas/seir-epidemic-model",
+  "source": "files",
+  "author": "",
+  "formulaText": [
+    "Extiende SIR añadiendo una fase expuesta o latente antes de la fase infecciosa."
+  ],
+  "tags": [
+    "biologia matematica",
+    "biofisica",
+    "neurociencia",
+    "epidemiologia",
+    "evolucion",
+    "genetica de poblaciones",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "calculo",
+    "ecuaciones diferenciales",
+    "biologia general",
+    "probabilidad",
+    "logaritmos"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "simulacion"
+  ],
+  "units": "Unidades didácticas normalizadas.",
+  "dimensions": "Ver ficha.",
+  "symbols": [],
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-22.js",
+  "createdAt": "2026-07-06"
+}

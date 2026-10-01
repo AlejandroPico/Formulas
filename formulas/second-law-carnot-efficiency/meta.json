@@ -1,0 +1,49 @@
+{
+  "id": "second-law-carnot-efficiency",
+  "name": "Segunda ley de la termodinámica: eficiencia de Carnot",
+  "year": 1824,
+  "field": "Termodinámica",
+  "level": "Bachillerato/Universidad inicial",
+  "color": "#ea580c",
+  "formula": [
+    "ηmax=1−TC/TH",
+    "ΔSuniverso≥0"
+  ],
+  "summary": "Establece el límite máximo de eficiencia de un motor térmico reversible.",
+  "topic": "carnot",
+  "source": "files",
+  "author": "",
+  "formulaText": [
+    "Establece el límite máximo de eficiencia de un motor térmico reversible."
+  ],
+  "tags": [
+    "termodinamica",
+    "energia libre",
+    "maxwell",
+    "boltzmann",
+    "gibbs",
+    "helmholtz",
+    "carnot",
+    "primera ley",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "energia",
+    "calor",
+    "trabajo",
+    "calculo basico",
+    "fisica general"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "simulacion"
+  ],
+  "units": "Unidades didácticas normalizadas.",
+  "dimensions": "Ver ficha.",
+  "symbols": [],
+  "folder": "formulas/second-law-carnot-efficiency",
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-18.js",
+  "createdAt": "2026-07-05"
+}

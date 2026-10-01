@@ -1,0 +1,51 @@
+{
+  "id": "rotary-position-embedding-rope",
+  "name": "RoPE: Rotary Position Embedding",
+  "year": 2021,
+  "field": "Transformers / Posición",
+  "level": "Universidad intermedia",
+  "color": "#8b5cf6",
+  "formula": [
+    "R_{θ,m}v = rotación por mθ",
+    "q_m^T k_n depende de m−n"
+  ],
+  "summary": "Codifica posición como rotación de fase, preservando norma y favoreciendo posición relativa.",
+  "sim": "scripts/transformer-rope-sim.js?v=20260705a",
+  "k": "rope",
+  "folder": "formulas/rotary-position-embedding-rope",
+  "source": "files",
+  "formulaText": [
+    "Codifica posición como rotación de fase, preservando norma y favoreciendo posición relativa."
+  ],
+  "tags": [
+    "reinforcement learning",
+    "transformers",
+    "attention",
+    "positional encoding",
+    "ppo",
+    "q-learning",
+    "sarsa",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "probabilidad",
+    "gradiente",
+    "bellman",
+    "algebra lineal",
+    "softmax",
+    "redes neuronales"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "historia",
+    "derivacion",
+    "simulacion"
+  ],
+  "units": "Unidades didácticas normalizadas.",
+  "dimensions": "Ver ficha.",
+  "symbols": [],
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-27.js",
+  "createdAt": "2026-07-06"
+}

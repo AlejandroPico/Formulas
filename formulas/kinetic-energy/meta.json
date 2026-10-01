@@ -1,0 +1,43 @@
+{
+  "id": "kinetic-energy",
+  "name": "Energía cinética",
+  "year": 1829,
+  "field": "Mecánica clásica",
+  "level": "ESO/Bachillerato",
+  "color": "#2563eb",
+  "formula": [
+    "Ec=½mv²"
+  ],
+  "summary": "Energía asociada al movimiento de un cuerpo con masa y velocidad.",
+  "topic": "kinetic",
+  "source": "files",
+  "author": "",
+  "formulaText": [
+    "Energía asociada al movimiento de un cuerpo con masa y velocidad."
+  ],
+  "tags": [
+    "fisica",
+    "mecanica",
+    "energia",
+    "momento",
+    "oscilaciones",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "algebra",
+    "vectores basicos",
+    "cinematica"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "simulacion"
+  ],
+  "units": "Ver unidades.",
+  "dimensions": "Ver unidades.",
+  "symbols": [],
+  "folder": "formulas/kinetic-energy",
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-9.js",
+  "createdAt": "2026-07-05"
+}

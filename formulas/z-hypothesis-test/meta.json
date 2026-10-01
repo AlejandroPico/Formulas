@@ -1,0 +1,42 @@
+{
+  "id": "z-hypothesis-test",
+  "name": "Contraste de hipótesis: test z",
+  "year": 1900,
+  "field": "Probabilidad y estadística",
+  "level": "Universidad inicial",
+  "color": "#2563eb",
+  "formula": [
+    "z=(x̄−μ₀)/(σ/√n)"
+  ],
+  "summary": "Contraste de media cuando la desviación poblacional es conocida.",
+  "concept": "ztest",
+  "source": "files",
+  "author": "",
+  "formulaText": [
+    "Contraste de media cuando la desviación poblacional es conocida."
+  ],
+  "tags": [
+    "estadistica",
+    "inferencia",
+    "modelos",
+    "bayes",
+    "informacion",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "probabilidad",
+    "estadistica descriptiva"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "simulacion"
+  ],
+  "units": "Ver unidades.",
+  "dimensions": "Ver unidades.",
+  "symbols": [],
+  "folder": "formulas/z-hypothesis-test",
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-8.js",
+  "createdAt": "2026-07-05"
+}

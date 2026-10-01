@@ -1,0 +1,50 @@
+{
+  "id": "rbf-kernel-radial-basis-function",
+  "name": "Kernel RBF: función de base radial",
+  "year": 1992,
+  "field": "Machine Learning / Kernels",
+  "level": "Universidad intermedia",
+  "color": "#ec4899",
+  "formula": [
+    "K(x,x′)=exp(−γ||x−x′||²)"
+  ],
+  "summary": "Mide similitud local mediante una campana gaussiana centrada en un punto de soporte.",
+  "sim": "scripts/ml-rbf-kernel-sim.js?v=20260705a",
+  "k": "rbf",
+  "folder": "formulas/rbf-kernel-radial-basis-function",
+  "source": "files",
+  "formulaText": [
+    "Mide similitud local mediante una campana gaussiana centrada en un punto de soporte."
+  ],
+  "tags": [
+    "machine learning",
+    "clustering",
+    "svm",
+    "kernel",
+    "pca",
+    "svd",
+    "pagerank",
+    "grafos",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "algebra lineal",
+    "distancias",
+    "optimizacion",
+    "probabilidad",
+    "estadistica"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "historia",
+    "derivacion",
+    "simulacion"
+  ],
+  "units": "Unidades didácticas normalizadas.",
+  "dimensions": "Ver ficha.",
+  "symbols": [],
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-26.js",
+  "createdAt": "2026-07-06"
+}

@@ -1,0 +1,44 @@
+{
+  "id": "linear-transport-advection-equation",
+  "name": "Ecuación de transporte lineal: advección pura",
+  "year": 1800,
+  "field": "EDP y transporte",
+  "level": "Universidad inicial",
+  "color": "#10b981",
+  "formula": [
+    "∂φ/∂t+c∂φ/∂x=0"
+  ],
+  "summary": "Modelo hiperbólico en el que un perfil se desplaza sin deformarse.",
+  "topic": "transport",
+  "source": "files",
+  "author": "",
+  "formulaText": [
+    "Modelo hiperbólico en el que un perfil se desplaza sin deformarse."
+  ],
+  "tags": [
+    "fluidos",
+    "transporte",
+    "edp",
+    "viscosidad",
+    "adveccion",
+    "difusion",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "calculo vectorial",
+    "mecanica de fluidos",
+    "ecuaciones diferenciales"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "simulacion"
+  ],
+  "units": "Ver unidades.",
+  "dimensions": "Ver unidades.",
+  "symbols": [],
+  "folder": "formulas/linear-transport-advection-equation",
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-11.js",
+  "createdAt": "2026-07-05"
+}

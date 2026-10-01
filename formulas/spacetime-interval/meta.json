@@ -1,0 +1,42 @@
+{
+  "id": "spacetime-interval",
+  "name": "Intervalo espaciotemporal",
+  "year": 1908,
+  "field": "Relatividad especial",
+  "level": "Universidad inicial",
+  "color": "#38bdf8",
+  "formula": [
+    "ds²=−(cΔt)²+Δx²"
+  ],
+  "summary": "Invariante que clasifica separaciones tipo tiempo, luz o espacio.",
+  "topic": "interval",
+  "source": "files",
+  "author": "",
+  "formulaText": [
+    "Invariante que clasifica separaciones tipo tiempo, luz o espacio."
+  ],
+  "tags": [
+    "relatividad",
+    "gravedad",
+    "lorentz",
+    "schwarzschild",
+    "espaciotiempo",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "algebra",
+    "fisica clasica"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "simulacion"
+  ],
+  "units": "Ver unidades.",
+  "dimensions": "Ver unidades.",
+  "symbols": [],
+  "folder": "formulas/spacetime-interval",
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-14.js",
+  "createdAt": "2026-07-05"
+}

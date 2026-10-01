@@ -1,0 +1,51 @@
+{
+  "id": "thermodynamic-maxwell-relations",
+  "name": "Relaciones de Maxwell termodinámicas",
+  "year": 1871,
+  "field": "Termodinámica",
+  "level": "Universidad intermedia",
+  "color": "#a855f7",
+  "formula": [
+    "(∂T/∂V)_S = −(∂P/∂S)_V",
+    "(∂T/∂P)_S = (∂V/∂S)_P",
+    "(∂S/∂V)_T = (∂P/∂T)_V",
+    "(∂S/∂P)_T = −(∂V/∂T)_P"
+  ],
+  "summary": "Conectan derivadas termodinámicas distintas a partir de potenciales y diferenciales exactas.",
+  "topic": "maxwellRelations",
+  "source": "files",
+  "author": "",
+  "formulaText": [
+    "Conectan derivadas termodinámicas distintas a partir de potenciales y diferenciales exactas."
+  ],
+  "tags": [
+    "termodinamica",
+    "energia libre",
+    "maxwell",
+    "boltzmann",
+    "gibbs",
+    "helmholtz",
+    "carnot",
+    "primera ley",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "energia",
+    "calor",
+    "trabajo",
+    "calculo basico",
+    "fisica general"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "simulacion"
+  ],
+  "units": "Unidades didácticas normalizadas.",
+  "dimensions": "Ver ficha.",
+  "symbols": [],
+  "folder": "formulas/thermodynamic-maxwell-relations",
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-18.js",
+  "createdAt": "2026-07-05"
+}

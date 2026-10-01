@@ -1,0 +1,51 @@
+{
+  "id": "multi-head-attention",
+  "name": "Multi-Head Attention: atención multi-cabeza",
+  "year": 2017,
+  "field": "Transformers / Atención",
+  "level": "Universidad intermedia",
+  "color": "#2563eb",
+  "formula": [
+    "head_i=Attention(QW_i^Q,KW_i^K,VW_i^V)",
+    "MHA=Concat(head_i)W^O"
+  ],
+  "summary": "Ejecuta varias atenciones en paralelo para capturar relaciones distintas entre tokens.",
+  "sim": "scripts/transformer-mha-sim.js?v=20260705a",
+  "k": "mha",
+  "folder": "formulas/multi-head-attention",
+  "source": "files",
+  "formulaText": [
+    "Ejecuta varias atenciones en paralelo para capturar relaciones distintas entre tokens."
+  ],
+  "tags": [
+    "reinforcement learning",
+    "transformers",
+    "attention",
+    "positional encoding",
+    "ppo",
+    "q-learning",
+    "sarsa",
+    "simulacion"
+  ],
+  "prerequisites": [
+    "probabilidad",
+    "gradiente",
+    "bellman",
+    "algebra lineal",
+    "softmax",
+    "redes neuronales"
+  ],
+  "learningPath": [
+    "formula",
+    "significado",
+    "historia",
+    "derivacion",
+    "simulacion"
+  ],
+  "units": "Unidades didácticas normalizadas.",
+  "dimensions": "Ver ficha.",
+  "symbols": [],
+  "legacySource": "runtime-batch-migration",
+  "originalSource": "scripts/latest-formula-batch-27.js",
+  "createdAt": "2026-07-06"
+}
