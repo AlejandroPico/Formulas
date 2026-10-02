@@ -1,23 +1,23 @@
-# Ficha
+# Teorema de la divergencia
 
-## Identificación
+La divergencia es la densidad local de flujo exterior. Al integrarla sobre un volumen, el efecto interior se reúne exactamente en lo que cruza su frontera cerrada. Esta ficha se centra en conectar escala local y global.
 
-- Nombre: Teorema de la divergencia.
-- Área: cálculo vectorial y física matemática.
-- Idea central: flujo por una frontera cerrada igual a divergencia acumulada en el interior.
+## Magnitudes
 
-## Variables
+| Símbolo | Significado |
+| :-- | :-- |
+| F | Campo vectorial tridimensional de clase C1 alrededor del volumen. |
+| n | Vector normal unitario exterior a la superficie cerrada. |
+| V | Volumen encerrado; dV es su elemento de volumen. |
+| S | Superficie; dS es su elemento de área. |
+| x | Coordenada cartesiana y subíndice de componente horizontal. |
+| y | Coordenada cartesiana y subíndice de segunda componente. |
+| z | Coordenada cartesiana y subíndice de tercera componente. |
 
-- `V`: volumen o región encerrada.
-- `∂V`: frontera cerrada.
-- `F`: campo vectorial.
-- `n`: normal exterior.
-- `div(F)`: divergencia local del campo.
+## Alcance
 
-## Lectura del simulador
+Campo C1 y volumen con frontera cerrada regular por partes; normal exterior. Singularidades requieren excluirlas o usar una formulación apropiada. No se sustituye una superficie abierta por una frontera cerrada sin completar sus caras.
 
-La circunferencia representa la frontera cerrada. Las flechas violetas representan flujo saliente. El control cambia la intensidad de la fuente `k`. Al aumentar `k`, aumenta la divergencia local y también el flujo total por la frontera.
+## Unidades
 
-## Limitaciones
-
-La visualización es bidimensional para facilitar la comprensión. El teorema general se formula en tres dimensiones con superficies cerradas y volúmenes. También exige regularidad suficiente del campo y de la frontera.
+El ejemplo usa F como velocidad en m/s, ℓ en m, divF en s⁻¹ y flujo en m³/s. El teorema también se aplica a otros campos con unidades distintas; no es por sí solo una ley eléctrica ni identifica F con E.

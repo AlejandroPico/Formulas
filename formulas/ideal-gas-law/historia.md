@@ -1,9 +1,7 @@
 # Historia
 
-La ley de los gases ideales reúne relaciones experimentales previas como las leyes de Boyle, Charles, Gay-Lussac y Avogadro.
+La ecuación reúne relaciones experimentales entre presión, volumen y temperatura, con una constante proporcional a la cantidad de gas. La teoría cinética explicó luego el modelo mediante partículas, mostrando tanto su utilidad como los supuestos que dejan fuera el comportamiento de gases reales.
 
-En el siglo XIX, Clapeyron formuló una ecuación compacta que relacionaba presión, volumen, temperatura y cantidad de gas.
+[Referencia de estudio](https://openstax.org/details/books/university-physics-volume-2).
 
-El modelo se volvió una herramienta fundamental de la termodinámica porque ofrece una primera aproximación sencilla al comportamiento de gases diluidos.
-
-Aunque los gases reales se desvían del modelo ideal a alta presión o baja temperatura, la ley sigue siendo una referencia básica en física, química e ingeniería.
+La fecha de creación del archivo se conserva en Inventario; la fecha de revisión registra esta actualización, no la fecha histórica del resultado.

@@ -1,9 +1,11 @@
 # Derivación
 
-Las ecuaciones de Hamilton se obtienen a partir de la formulación lagrangiana mediante una transformada de Legendre. Se parte de un lagrangiano `L(q, qdot, t)` y se define el momento conjugado como la derivada parcial de `L` respecto a la velocidad generalizada.
+Desde p=∂L/∂q̇, define H=pq̇−L y elimina q̇ a favor de p cuando la transformación es regular. El diferencial permite identificar H_p=q̇ y H_q=−ṗ. Para L=mq̇²/2−kq²/2, H=p²/(2m)+kq²/2. Así q̇=p/m y ṗ=−kq, cuya solución armónica es exacta con ω=√(k/m).
 
-Después se construye el hamiltoniano `H` como combinación de momentos, velocidades y lagrangiano. Cuando la transformación puede invertirse, las velocidades se expresan en función de coordenadas y momentos. Así el sistema deja de estar descrito por `q` y `qdot` y pasa a estar descrito por `q` y `p`.
+## Comprueba el resultado
 
-Al variar la acción en estas nuevas variables aparecen dos ecuaciones de primer orden. Una indica cómo cambia la coordenada y otra cómo cambia el momento. En conjunto sustituyen a una ecuación de segundo orden por un sistema de primer orden en el espacio de fases.
+m=k=1, q=1 y p=0. Calcula H en J. H=0+1·1²/2=0,5 J.
 
-Para el oscilador armónico, el hamiltoniano toma la forma de una suma de energía cinética y potencial. Las ecuaciones resultantes son `qdot=p/m` y `pdot=-kq`. El simulador usa exactamente ese caso porque muestra de forma limpia la conservación de energía y la órbita cerrada en el plano `q,p`.
+## Condiciones necesarias
+
+Coordenadas canónicas y transformación regular del lagrangiano. El laboratorio usa un oscilador conservativo de un grado de libertad, k,m>0, sin rozamiento ni fuerzas externas variables.

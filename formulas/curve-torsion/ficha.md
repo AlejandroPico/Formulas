@@ -1,22 +1,24 @@
-# Ficha
+# Torsión de una curva
 
-## Identificacion
+La torsión distingue una curva que sale de su plano osculador de una curva plana. La hélice puede doblarse con curvatura constante y a la vez girar ese plano con torsión constante firmada.
 
-- Nombre: Torsion de una curva.
-- Area: geometria diferencial.
-- Formula: tau=((r' x r'') dot r''')/||r' x r''||^2.
+## Magnitudes
 
-## Variables
+| Símbolo | Significado |
+| :-- | :-- |
+| τ | Torsión firmada, giro del plano osculador por unidad de longitud de arco. |
+| r | Curva espacial parametrizada; primas son derivadas respecto al parámetro t. |
+| R | Radio positivo de la hélice. |
+| b | Avance axial por radián; su signo determina el sentido helicoidal. |
+| t | Parámetro angular de la curva, no necesariamente tiempo físico. |
+| T | Tangente unitaria a la curva. |
+| N | Normal principal unitaria, dirección de variación de la tangente. |
+| B | Binormal unitaria, normal al plano osculador T,N. |
 
-- tau: torsion.
-- r(t): curva espacial parametrizada.
-- b: paso vertical de la helice del simulador.
-- R: radio de la helice.
+## Alcance
 
-## Lectura del simulador
+Curva C3 regular y r′×r″ no nulo. En puntos de curvatura cero el triedro de Frenet y esta fórmula de torsión pueden no estar definidos. El laboratorio fija R>0 y no simula ese caso degenerado.
 
-La curva gris es una helice proyectada en perspectiva. Al modificar b cambia el paso vertical. El valor tau muestra la torsion intrinseca de esa helice.
+## Unidades
 
-## Limitaciones
-
-La visualizacion es una proyeccion 2D de una curva 3D. Sirve para intuicion geometrica, no como motor CAD de precision.
+R y b en m, t en radianes adimensionales, τ y κ en m⁻¹. El avance de una vuelta es 2πb en m. Los vectores unitarios T,N,B no tienen dimensión y se dibujan con longitudes visuales iguales.

@@ -1,9 +1,11 @@
-# Derivacion
+# Derivación
 
-La derivacion parte de un balance de cantidad de movimiento sobre un volumen pequeno de fluido. La aceleracion de esa porcion debe igualar la suma de fuerzas que actuan sobre ella.
+Para u=(u(y),0,0), estacionario y uniforme en x,z, la aceleración local y convectiva se anulan y divu=0. Con f=0 y G=−px constante, queda μu″=−G. Integra e impón u(0)=0,u(H)=U: u(y)=Uy/H+Gy(H−y)/(2μ). Su media es U/2+GH²/(12μ); la tensión cortante es μU/H+G(H−2y)/2. Esta solución exacta no caracteriza todos los flujos.
 
-La aceleracion material se escribe como una derivada temporal mas un termino convectivo. Ese segundo termino aparece porque el fluido se mueve a traves de un campo de velocidades que puede cambiar de un punto a otro.
+## Comprueba el resultado
 
-Las fuerzas de superficie se separan en presion y esfuerzos viscosos. La presion produce el termino `-grad p`. Para un fluido newtoniano con viscosidad constante, los esfuerzos viscosos conducen al termino `mu nabla^2 u`.
+G=2 Pa/m, H=1 m, μ=1 Pa·s y paredes quietas. Calcula u(H/2). u=G H²/(8μ)=0,25 m/s.
 
-Si se asume fluido incomprensible, la densidad permanece constante y la conservacion de masa se reduce a `div u = 0`. Junto con la ecuacion de momento, se obtiene la forma clasica incomprensible de Navier-Stokes.
+## Condiciones necesarias
+
+Fluido newtoniano incompresible de viscosidad constante. Canal ideal entre paredes planas infinitas, flujo estacionario plenamente desarrollado y no deslizamiento. La vista 3D extruye un perfil independiente de z, no calcula turbulencia tridimensional.

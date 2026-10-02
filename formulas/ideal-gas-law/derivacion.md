@@ -1,9 +1,11 @@
 # Derivación
 
-Desde la teoría cinética, la presión aparece como resultado de choques de moléculas contra las paredes del recipiente.
+El modelo microscópico de partículas sin interacciones salvo choques elásticos relaciona presión con energía cinética media; en equilibrio se obtiene PV=NkBT. Usa N=nNA y R=NAkB para escribir PV=nRT. Con n fijo entre dos estados, PV/T es constante. La segunda relación no permite cambiar n sin corregirla.
 
-La energía cinética media de las partículas es proporcional a la temperatura absoluta. Si hay más partículas, mayor temperatura o menor volumen, aumenta la frecuencia e intensidad de los choques contra las paredes.
+## Comprueba el resultado
 
-Al combinar esa imagen microscópica con la cantidad de sustancia expresada en moles se obtiene `PV = nRT`.
+n=1 mol, T=300 K, V=10 L. Calcula P en kPa. P=nRT/V≈249,43 kPa.
 
-La misma relación permite deducir formas particulares como la ley de Boyle a temperatura constante o la ley de Charles a presión constante.
+## Condiciones necesarias
+
+Gas ideal en equilibrio, presión absoluta y temperatura absoluta; n,V,T positivos. Las partículas del dibujo son una ilustración, no una simulación molecular ni una estimación de fluctuaciones.

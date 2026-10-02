@@ -1,9 +1,11 @@
 # Significado
 
-La ley de los gases ideales relaciona cuatro magnitudes macroscópicas: presión, volumen, temperatura y cantidad de sustancia. Resume el comportamiento aproximado de un gas cuando sus partículas se tratan como puntos sin interacción apreciable salvo choques elásticos.
+La ley relaciona presión, volumen, cantidad y temperatura de un gas ideal en equilibrio. Cambiar una variable exige indicar cuáles se mantienen: una isoterma mantiene T y n, no todas las condiciones a la vez.
 
-Si la cantidad de gas se mantiene fija, comprimir el volumen aumenta la presión. Si se calienta el gas, las partículas se mueven más rápido y la presión aumenta si el volumen no compensa ese cambio.
+## Del símbolo al fenómeno
 
-La constante `R` actúa como factor de proporcionalidad entre energía térmica y cantidad de sustancia. La temperatura debe expresarse en kelvin.
+n moles de gas ideal a T kelvin ocupan V litros. La presión se muestra en kPa porque 1 kPa·L=1 J. Las partículas dibujadas ilustran el gas; no son una dinámica molecular calculada.
 
-El simulador muestra un pistón con partículas. El volumen controla la altura del recipiente y la temperatura controla la velocidad media. La lectura calcula una presión visual proporcional a `nRT/V`.
+## Un ejemplo comprobable
+
+n=1 mol, T=300 K, V=10 L. Calcula P en kPa. P=nRT/V≈249,43 kPa.

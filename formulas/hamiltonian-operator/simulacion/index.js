@@ -1,1 +1,4 @@
-export { default } from "../../../scripts/quantum-foundations-simulations.js?topic=ham&v=20260705a";
+import {mountLab} from '../../shared/learning-lab.js';
+import {CONTINUUM_LABS} from '../../shared/continuum-configs.js';
+import {drawContinuum} from '../../shared/continuum-draw.js';
+export default options=>mountLab('hamiltonian-operator',options,{config:CONTINUUM_LABS['hamiltonian-operator'],draw:drawContinuum});

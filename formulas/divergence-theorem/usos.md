@@ -1,8 +1,11 @@
 # Usos
 
-- Calcular flujos a través de superficies cerradas.
-- Formular la ley de Gauss en electromagnetismo.
-- Analizar fuentes y sumideros en fluidos.
-- Relacionar leyes locales con balances globales.
-- Simplificar integrales de superficie complicadas convirtiéndolas en integrales de volumen.
-- Comprender conservación de masa, carga, energía o cantidad transportada por un campo.
+Auditar balances, transformar integrales volumétricas en flujos superficiales y comprender fuentes y sumideros. En el cubo centrado, cada cara perpendicular al eje i aporta aiℓ³/2; las caras opuestas no se cancelan necesariamente porque también cambia el campo.
+
+## Antes de aplicar
+
+Campo C1 y volumen con frontera cerrada regular por partes; normal exterior. Singularidades requieren excluirlas o usar una formulación apropiada. No se sustituye una superficie abierta por una frontera cerrada sin completar sus caras.
+
+## Qué explora el simulador
+
+F=(ax·x, ay·y, az·z) dentro de un cubo centrado de lado ℓ. Compara expansión local y flujo total: son la misma conservación a dos escalas.

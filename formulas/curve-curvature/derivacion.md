@@ -1,17 +1,11 @@
 # Derivación
 
-La curvatura puede definirse como la variación de la dirección tangente respecto a la longitud de arco:
+Define la tangente unitaria T=r′/|r′| y κ=|dT/ds| con ds/dt=|r′|. Separar la aceleración tangencial y normal lleva a |r′×r″|/|r′|³. En una gráfica r=(x,f(x),0), se obtiene |f″|/(1+f′²)^(3/2). Para la hélice, |r′|=√(R²+b²) y |r′×r″|=R√(R²+b²), por lo que κ=R/(R²+b²).
 
-`κ=|dT/ds|`.
+## Comprueba el resultado
 
-Para una curva escrita como gráfica `y=f(x)`, la pendiente es `f'(x)` y el cambio de pendiente depende de `f''(x)`.
+R=1 y b=0,5. Calcula κ. κ=1/(1+0,25)=0,8 m⁻¹.
 
-Al convertir el cambio respecto de `x` en cambio respecto de longitud de arco aparece el factor:
+## Condiciones necesarias
 
-`ds/dx=sqrt(1+(f'(x))^2)`.
-
-Combinando ambos efectos se obtiene:
-
-`κ=|f''(x)|/(1+(f'(x))²)^(3/2)`.
-
-El radio del círculo osculador es el inverso de la curvatura: `R=1/κ`.
+Curva C2 regular, r′ no nulo. El radio 1/κ requiere κ>0; una recta tiene κ=0 y no un círculo osculador de radio finito. En el laboratorio R>0 asegura una hélice de curvatura positiva.

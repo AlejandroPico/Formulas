@@ -1,10 +1,11 @@
 # Usos
 
-- Analisis de circuitos con varias ramas.
-- Calculo de corrientes en nodos y derivaciones.
-- Calculo de caidas de tension en mallas.
-- Resolucion de redes resistivas con varias fuentes.
-- Base para metodos nodales y de mallas.
-- Electronica educativa y diagnostico basico de circuitos.
+Resolver redes, comprobar resultados y detectar incoherencias de signos. El balance de este simulador calcula ambos lazos y el nudo de una red resistiva concreta; no es una solución automática de cualquier circuito con campos variables.
 
-Son reglas de conservacion. Su potencia aparece cuando se combinan con modelos de componentes: resistencias, fuentes, condensadores, bobinas o impedancias en corriente alterna.
+## Antes de aplicar
+
+Modelo de elementos concentrados y continua estacionaria, resistencias positivas. En un lazo con flujo magnético externo variable debe incorporarse la fem inducida; no se impone suma de caídas electrostáticas cero ignorando Faraday.
+
+## Qué explora el simulador
+
+Una fuente alimenta Rs en serie y dos ramas R1,R2 en paralelo. Comprueba conservación de carga en el nudo y de energía en ambos lazos. Resistencias positivas, circuito de continua estacionaria.

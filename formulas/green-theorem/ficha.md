@@ -1,22 +1,25 @@
-# Ficha
+# Teorema de Green
 
-## Identificación
+Green convierte la circulación por el borde en acumulación de giro en el interior. Orientación y regularidad importan: un campo con una singularidad dentro de la región no cumple automáticamente las hipótesis del teorema.
 
-- Nombre: Teorema de Green.
-- Área: cálculo vectorial en dos dimensiones.
-- Idea central: circulación de frontera igual a rotacional acumulado en la región.
+## Magnitudes
 
-## Variables
+| Símbolo | Significado |
+| :-- | :-- |
+| P | Componente x del campo vectorial plano F. |
+| Q | Componente y del campo vectorial plano F. |
+| x | Coordenada cartesiana horizontal. |
+| y | Coordenada cartesiana vertical. |
+| C | Borde cerrado de la región D, orientado antihorario. |
+| D | Región plana cuya frontera es C. |
+| A | Área; dA es un elemento infinitesimal de área. |
+| F | Campo vectorial regular definido alrededor de la región. |
+| ω | Rotacional escalar constante del campo del laboratorio. |
 
-- `C`: curva cerrada orientada positivamente.
-- `D`: región encerrada por `C`.
-- `P,Q`: componentes del campo vectorial plano.
-- `dA`: elemento de área.
+## Alcance
 
-## Lectura del simulador
+Campo de clase C1 en un entorno de la región y borde cerrado por tramos suave. La orientación positiva deja el interior a la izquierda. Si existen agujeros, sus bordes interiores llevan orientación opuesta.
 
-La circunferencia roja es la frontera `C`. La región verde es el dominio `D`. El campo elegido gira de forma uniforme, así que el rotacional interior es constante. Al aumentar el radio, aumenta el área y también la circulación total.
+## Unidades
 
-## Limitaciones
-
-El ejemplo usa un disco y un campo muy simple. En regiones con agujeros, fronteras no suaves o campos con singularidades, hay que cuidar orientación, regularidad y dominio de integración.
+Campo del experimento en m/s, x,y en m y ω en s⁻¹. La circulación ∮F·dr usa m²/s y la integral de rotacional por área la misma unidad. Circulación no es caudal volumétrico.

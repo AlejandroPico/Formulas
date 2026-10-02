@@ -1,9 +1,7 @@
 # Historia
 
-La curva logística procede del estudio de crecimiento limitado, especialmente desde los trabajos de Verhulst.
+La curva logística surge en distintas formulaciones de crecimiento y posteriormente en estadística y aprendizaje automático. En esta ficha se estudia su función elemental y sus derivadas, conservando un alcance separado del modelo de clasificación y de la ecuación poblacional.
 
-Su forma sigmoidal se adaptó después a estadística y aprendizaje automático para modelar probabilidades binarias.
+[Referencia de estudio](https://developers.google.com/machine-learning/crash-course/logistic-regression/sigmoid-function).
 
-En redes neuronales clásicas fue una activación muy utilizada porque es suave, diferenciable y acotada.
-
-Aunque hoy ReLU y variantes dominan muchas arquitecturas profundas, la sigmoide sigue siendo esencial en salidas binarias y modelos probabilísticos.
+La fecha de creación del archivo se conserva en Inventario; la fecha de revisión registra esta actualización, no la fecha histórica del resultado.

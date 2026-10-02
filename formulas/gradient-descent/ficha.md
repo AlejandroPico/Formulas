@@ -1,26 +1,25 @@
-# Ficha
+# Descenso del gradiente
 
-## Identificación
+Descender por el gradiente propone un movimiento contrario a la mayor subida local. Un paso demasiado grande puede aumentar la función u oscilar, incluso en una cuadrática convexa sencilla.
 
-- **Nombre:** Descenso del gradiente
-- **Autor asociado:** Augustin-Louis Cauchy
-- **Año:** 1847
-- **Área:** optimización y aprendizaje automático
-- **Nivel:** universidad inicial
-- **Tipo:** algoritmo iterativo de minimización
+## Magnitudes
 
-## Variables
+| Símbolo | Significado |
+| :-- | :-- |
+| w | Vector de parámetros optimizados; el subíndice indica número de iteración. |
+| k | Índice entero de iteración, no tiempo físico. |
+| η | Tamaño de paso positivo del algoritmo. |
+| J | Función objetivo diferenciable; cuadrática convexa en el laboratorio. |
+| x | Primera coordenada optimizada. |
+| y | Segunda coordenada optimizada. |
+| a | Curvatura positiva de la función en la dirección x. |
+| b | Curvatura positiva en la dirección y. |
+| max | El mayor de los argumentos, que controla la dirección más rígida. |
 
-- `w`: parámetro o peso.
-- `theta`: vector de parámetros.
-- `eta`: tasa de aprendizaje.
-- `L`, `J`: función de pérdida o coste.
-- `nabla L`: gradiente de la pérdida.
+## Alcance
 
-## Lectura del simulador
+a,b>0, paso constante y gradiente exacto. La cota escrita es para esta cuadrática; en funciones generales exige condiciones adicionales. Los valores fuera de la ventana gráfica se conservan en el cálculo, no se recortan para fingir estabilidad.
 
-La curva es `L(w)=w²`. El punto rojo es el peso actual. Los puntos azules muestran pasos anteriores. Si `eta` es razonable, converge al mínimo; si es excesiva, puede divergir.
+## Unidades
 
-## Nota
-
-La simulación usa una función convexa muy simple. Las funciones reales de aprendizaje profundo pueden tener valles, mesetas, ruido estocástico y geometría de alta dimensión.
+El experimento usa coordenadas y función adimensionales. En general η debe convertir la unidad del gradiente en la unidad del parámetro. k cuenta pasos; no se etiqueta una iteración como segundo físico. Altura de superficie dibujada J/6, explícitamente escalada.

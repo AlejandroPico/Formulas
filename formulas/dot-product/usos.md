@@ -1,11 +1,11 @@
 # Usos
 
-- Medir angulos entre vectores.
-- Comprobar ortogonalidad.
-- Calcular proyecciones.
-- Definir trabajo mecanico en fisica.
-- Medir similitud en algebra de datos y aprendizaje automatico.
+Ángulos, ortogonalidad, proyecciones y trabajo de una fuerza W=F·d. El laboratorio usa vectores geométricos en una unidad común; interpretar sus componentes como fuerza y distancia cambiaría las unidades del resultado a J.
 
-## Uso del simulador
+## Antes de aplicar
 
-El simulador usa dos vectores unitarios. Al cambiar sus angulos, el producto escalar pasa de positivo a cero o negativo segun la relacion angular.
+Producto euclídeo en base cartesiana ortonormal. Ángulo requiere ambos vectores no nulos; proyección sobre a requiere a≠0. En coordenadas no ortonormales se debe incluir la métrica correspondiente.
+
+## Qué explora el simulador
+
+Gira los vectores sin modificar sus componentes. El producto escalar es firmado; el ángulo solo existe si ambos vectores son no nulos.

@@ -1,26 +1,23 @@
-# Ficha
+# Leyes de Kirchhoff
 
-## Identificacion
+La ley de nudos conserva carga, y la ley de lazos organiza las diferencias de potencial con sus signos. Un circuito no necesita corrientes iguales en todas sus ramas; necesita que entradas y salidas se compensen.
 
-- **Nombre:** Leyes de Kirchhoff
-- **Autor:** Gustav Kirchhoff
-- **Año:** 1845
-- **Area:** circuitos electricos
-- **Nivel:** bachillerato y universidad inicial
-- **Tipo:** leyes de conservacion para redes electricas
+## Magnitudes
 
-## Variables
+| Símbolo | Significado |
+| :-- | :-- |
+| 1 | Subíndice de primera rama paralela. |
+| 2 | Subíndice de segunda rama paralela. |
+| I | Corriente firmada; I es la corriente de la rama serie y I_1,I_2 las ramas salientes. |
+| V | Diferencia de potencial firmada al recorrer un lazo; V sin índice es la fuente. |
+| R | Resistencia positiva de la rama identificada. |
+| k | Índice que recorre ramas de un nudo o elementos de un lazo. |
+| s | Subíndice de la resistencia en serie. |
 
-- `I`: corriente electrica.
-- `V`: tension electrica.
-- `R1`, `R2`: resistencias de rama.
-- `Itotal`: corriente que entra en el nodo.
-- `I1`, `I2`: corrientes de salida por cada rama.
+## Alcance
 
-## Lectura del simulador
+Modelo de elementos concentrados y continua estacionaria, resistencias positivas. En un lazo con flujo magnético externo variable debe incorporarse la fem inducida; no se impone suma de caídas electrostáticas cero ignorando Faraday.
 
-El circuito tiene dos ramas en paralelo. El nodo reparte la corriente total. Al reducir una resistencia, esa rama conduce mas corriente. La lectura muestra que `Itotal = I1 + I2` y que la tension de cada rama coincide con la fuente.
+## Unidades
 
-## Advertencia
-
-El simulador usa un modelo ideal de corriente continua. En circuitos reales pueden aparecer resistencias internas, tolerancias, temperatura y efectos transitorios.
+Corrientes A, tensiones V y resistencias Ω. La suma de nudo contiene solo A; la suma de lazo solo V. V−RsI−RiIi=0 en cada lazo, usando caída positiva en el sentido de corriente.

@@ -1,11 +1,11 @@
 # Usos
 
-- Aerodinamica de alas, vehiculos y perfiles.
-- Hidrodinamica de canales, tuberias y rios.
-- Meteorologia y dinamica atmosferica.
-- Oceanografia y corrientes marinas.
-- Flujo sanguineo y biofluidos.
-- Simulacion industrial de mezclas, chorros y ventilacion.
-- Efectos visuales y simulacion de fluidos por ordenador.
+Comparar arrastre de pared y gradiente de presión, entender viscosidad y comprobar conservación en un caso exacto. El canal puede mostrar regiones de velocidad con signos distintos; una velocidad central nula no implica caudal total nulo ni fluido inmóvil.
 
-Las ecuaciones son muy generales, pero resolverlas suele requerir simplificaciones, condiciones de frontera, discretizacion numerica y modelos especificos para regimenes complejos.
+## Antes de aplicar
+
+Fluido newtoniano incompresible de viscosidad constante. Canal ideal entre paredes planas infinitas, flujo estacionario plenamente desarrollado y no deslizamiento. La vista 3D extruye un perfil independiente de z, no calcula turbulencia tridimensional.
+
+## Qué explora el simulador
+
+Solución estacionaria exacta Couette–Poiseuille: u(y)=U·y/H+G·y(H−y)/(2μ), v=w=0. G=−∂p/∂x. Compara presión, viscosidad y arrastre de la pared; no es una búsqueda de singularidades 3D.

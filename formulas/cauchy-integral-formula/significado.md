@@ -1,9 +1,11 @@
 # Significado
 
-La Fórmula Integral de Cauchy es uno de los resultados más sorprendentes del análisis complejo. Afirma que, si una función es holomorfa dentro de un contorno cerrado y sobre él, entonces el valor de la función en un punto interior puede recuperarse usando solo los valores de la función sobre la frontera.
+Para una función holomorfa, los valores en un contorno determinan sus valores y derivadas en el interior. La integral incorpora la orientación del camino; el denominador sitúa la información en el punto z0.
 
-La fórmula tiene una interpretación potente: en análisis complejo, la información del interior queda codificada en el borde. Esto no ocurre en el cálculo real ordinario con la misma fuerza. Una función holomorfa no puede comportarse de manera arbitraria dentro de una región si ya se conocen sus valores alrededor.
+## Del símbolo al fenómeno
 
-El denominador `z-z0` introduce un polo simple en el punto que se quiere evaluar. Si `z0` está dentro del contorno, la integral detecta ese punto y devuelve `f(z0)`. Si `z0` queda fuera, el integrando es holomorfo en el interior y la integral se anula.
+Para f(z)=z²+c, integra f(z)/(z−z0) sobre el círculo |z|=R antihorario. Mueve z0: dentro se obtiene 2πi f(z0); fuera, cero. En el borde aparece una singularidad.
 
-El simulador muestra exactamente esa diferencia: al arrastrar el punto dentro del contorno, la integral normalizada reproduce el valor de la función elegida. Al moverlo fuera, deja de haber singularidad encerrada y el resultado cae a cero.
+## Un ejemplo comprobable
+
+f(z)=z²+1 y z0=1 dentro del círculo. ¿Cuánto vale f(z0)? f(1)=1²+1=2.

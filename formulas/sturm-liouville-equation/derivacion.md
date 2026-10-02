@@ -1,27 +1,11 @@
 # Derivación
 
-El ejemplo más sencillo toma:
+En el caso p=w=1,q=0, resuelve −y″=λy con y(0)=y(L)=0. λ≤0 solo admite la solución nula bajo estas condiciones. Para λ>0, y=A sin(√λ x) tras imponer y(0)=0. La condición final exige √λ L=nπ. Normalizar el cuadrado sobre [0,L] da A=√(2/L). Los productos de senos de índices distintos integran cero.
 
-`-y''=λy`, con `y(0)=0` y `y(1)=0`.
+## Comprueba el resultado
 
-Si `λ>0`, escribimos `λ=μ²`. La ecuación queda:
+n=1, L=2. Calcula λ1. λ1=(π/2)²≈2,47.
 
-`y''+μ²y=0`.
+## Condiciones necesarias
 
-La solución general es:
-
-`y(x)=A sin(μx)+B cos(μx)`.
-
-La condición `y(0)=0` obliga a `B=0`. La condición `y(1)=0` exige:
-
-`A sin(μ)=0`.
-
-Para una solución no trivial, `A≠0`, por lo que `sin(μ)=0`. Entonces `μ=nπ`, con `n=1,2,3,...`.
-
-Así se obtienen las autofunciones y autovalores:
-
-`y_n(x)=sin(nπx)`
-
-`λ_n=n²π²`.
-
-Cada modo tiene una frecuencia espacial mayor que el anterior y añade nodos internos. Esta estructura discreta aparece porque las condiciones de contorno solo permiten ciertas formas compatibles.
+Problema regular en intervalo finito con p,w positivos, coeficientes suficientemente suaves y condiciones autoadjuntas. El experimento usa Dirichlet homogéneas y n≥1; n=0 daría la función nula, no un estado normalizado.

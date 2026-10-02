@@ -1,10 +1,11 @@
 # Usos
 
-- **Electromagnetismo:** relacionar flujo eléctrico con carga encerrada.
-- **Gravitación:** conectar el campo gravitatorio con masa encerrada en simetrías adecuadas.
-- **Mecánica de fluidos:** interpretar fuentes, sumideros, expansión y compresibilidad.
-- **Transferencia de calor:** pasar entre formulaciones locales e integrales de conservación.
-- **Métodos numéricos:** construir esquemas de volúmenes finitos basados en balances de flujo.
-- **Geometría y cálculo vectorial:** traducir integrales de superficie en integrales de volumen.
+Auditar balances, transformar integrales volumétricas en flujos superficiales y comprender fuentes y sumideros. En el cubo centrado, cada cara perpendicular al eje i aporta aiℓ³/2; las caras opuestas no se cancelan necesariamente porque también cambia el campo.
 
-El teorema es especialmente útil cuando la simetría de la superficie hace que el flujo sea fácil de calcular. En esos casos, una integral aparentemente complicada se reduce a una cantidad encerrada.
+## Antes de aplicar
+
+Campo C1 y volumen con frontera cerrada regular por partes; normal exterior. Singularidades requieren excluirlas o usar una formulación apropiada. No se sustituye una superficie abierta por una frontera cerrada sin completar sus caras.
+
+## Qué explora el simulador
+
+El mismo teorema de la divergencia, ahora aplicado cara por cara. La normal exterior cambia de sentido entre caras opuestas; el campo lineal cambia también, por lo que sus flujos pueden sumar.

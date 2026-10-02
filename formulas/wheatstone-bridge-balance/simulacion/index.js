@@ -1,1 +1,4 @@
-export { default } from "../../../scripts/electronics-wheatstone-bridge-sim.js?v=20260705a";
+import {mountLab} from '../../shared/learning-lab.js';
+import {CONTINUUM_LABS} from '../../shared/continuum-configs.js';
+import {drawContinuum} from '../../shared/continuum-draw.js';
+export default options=>mountLab('wheatstone-bridge-balance',options,{config:CONTINUUM_LABS['wheatstone-bridge-balance'],draw:drawContinuum});

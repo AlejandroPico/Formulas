@@ -1,7 +1,7 @@
 # Historia
 
-La torsion aparece en el desarrollo de la geometria diferencial de curvas espaciales durante el siglo XIX. Junto con la curvatura, permite describir localmente la forma de una trayectoria en el espacio.
+Frenet y Serret organizaron en el siglo XIX la geometría local de curvas mediante tangente, normal y binormal. Curvatura y torsión expresan cómo cambia ese marco respecto a longitud de arco, separando doblamiento y salida del plano osculador.
 
-El concepto se formaliza en el marco de Frenet y Serret, donde el triedro movil formado por tangente, normal y binormal evoluciona a lo largo de la curva.
+[Referencia de estudio](https://mathworld.wolfram.com/Torsion.html).
 
-Hoy se usa en geometria diferencial, robotica, modelado de trayectorias, graficos 3D, mecanica de filamentos y analisis de curvas espaciales.
+La fecha de creación del archivo se conserva en Inventario; la fecha de revisión registra esta actualización, no la fecha histórica del resultado.

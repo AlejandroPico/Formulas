@@ -1,9 +1,7 @@
 # Historia
 
-Pierre François Verhulst propuso el modelo logístico en el siglo XIX para corregir el crecimiento exponencial ilimitado de Malthus.
+Verhulst introdujo la ecuación logística en el siglo XIX como modificación del crecimiento exponencial con capacidad limitada. La forma sigmoide resultante se volvió útil en modelos diversos; aplicar la misma curva a otros contextos requiere justificar parámetros y datos.
 
-La idea central era introducir una restricción ambiental que limitara la población máxima sostenible.
+[Referencia de estudio](https://ocw.mit.edu/courses/18-03-differential-equations-spring-2010/).
 
-La ecuación se convirtió en un ejemplo clásico de crecimiento con saturación y aparece en biología, demografía, difusión de innovaciones y sistemas dinámicos.
-
-Su curva en S también sirve como puente conceptual hacia la función sigmoide usada en aprendizaje automático.
+La fecha de creación del archivo se conserva en Inventario; la fecha de revisión registra esta actualización, no la fecha histórica del resultado.

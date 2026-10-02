@@ -1,10 +1,11 @@
 # Usos
 
-- **Análisis complejo:** demostrar propiedades profundas de funciones holomorfas.
-- **Cálculo de integrales:** evaluar integrales reales y complejas mediante contornos.
-- **Teoría de residuos:** base conceptual para calcular contribuciones de polos.
-- **Ecuaciones diferenciales:** métodos de frontera y reconstrucción de soluciones.
-- **Física matemática:** potenciales, campos bidimensionales y funciones analíticas.
-- **Procesamiento y métodos numéricos:** ideas de reconstrucción a partir de valores de frontera.
+Evaluar integrales complejas y derivadas sin recorrer una primitiva. Para f(z)=z²+c, el laboratorio aplica la integral f(z)/(z−z0): da 2πif(z0) si z0 está dentro, cero si está fuera, y no un valor ordinario si está exactamente en el camino.
 
-Su valor está en mostrar que el borde de una región puede determinar completamente el valor interior de una función holomorfa. El simulador convierte esa afirmación en una experiencia visual: dentro del contorno hay recuperación; fuera del contorno, la integral no captura el punto.
+## Antes de aplicar
+
+f holomorfa sobre un entorno del dominio cerrado, contorno simple por tramos suave y z0 estrictamente interior para la fórmula escrita. La integral singular en el borde requeriría otra noción y no se calcula como este caso.
+
+## Qué explora el simulador
+
+Para f(z)=z²+c, integra f(z)/(z−z0) sobre el círculo |z|=R antihorario. Mueve z0: dentro se obtiene 2πi f(z0); fuera, cero. En el borde aparece una singularidad.

@@ -1,9 +1,11 @@
-# Derivacion
+# Derivación
 
-La Ley de Ohm puede entenderse desde una relacion de proporcionalidad. En un conductor ohmico, la corriente que circula es proporcional a la diferencia de potencial aplicada. La constante que convierte una magnitud en la otra es la conductancia; su inversa es la resistencia.
+La relación constitutiva V=RI permite despejar I para R>0. Con la convención pasiva, la potencia absorbida es VI. Sustituye V=RI o I=V/R para obtener I²R y V²/R. Estas formas equivalentes permiten comprobar el signo y las unidades del resultado.
 
-Si `I` es proporcional a `V`, se puede escribir `I = V/R`. Al reorganizar aparece la forma habitual `V = I R`.
+## Comprueba el resultado
 
-Desde una perspectiva microscopica, el campo electrico acelera portadores de carga, pero las colisiones con la red del material limitan el movimiento promedio. Esa velocidad media de arrastre da lugar a una corriente estable. En el rango ohmico, el resultado macroscopico es una relacion lineal.
+12 V sobre 6 Ω. ¿Cuánta corriente circula en A? I=12/6=2 A.
 
-La potencia se obtiene multiplicando tension por corriente. Al combinar `P = V I` con la Ley de Ohm aparecen las formas `P = I^2 R` y `P = V^2/R`, utiles para estimar calentamiento y consumo.
+## Condiciones necesarias
+
+R>0 y comportamiento óhmico con condiciones físicas aproximadamente constantes. Fuente ideal en continua; el laboratorio no modela calentamiento que cambie R ni límites de potencia admisible.

@@ -1,9 +1,11 @@
 # Significado
 
-La función sigmoide logística transforma cualquier número real en un valor entre cero y uno.
+La sigmoide transforma una entrada real en una respuesta suave entre cero y uno. Sus propiedades son matemáticas; por sí sola no ha aprendido parámetros ni demuestra que su valor sea una probabilidad bien calibrada.
 
-Para valores muy negativos la salida se acerca a cero. Para valores muy positivos se acerca a uno. En `x=0`, la salida es `0.5`.
+## Del símbolo al fenómeno
 
-Por esa forma se usa como función de activación, como modelo de probabilidad binaria y como enlace en regresión logística.
+Estudia σ(x) como función matemática. La curva está entre cero y uno, es simétrica alrededor de (0,1/2) y su pendiente máxima es 1/4. No es por sí sola un modelo entrenado.
 
-El simulador muestra la curva completa y un marcador interactivo. Al mover `x`, se ve cómo la salida puede interpretarse como una probabilidad.
+## Un ejemplo comprobable
+
+Calcula σ(0). e⁰=1; σ(0)=1/(1+1)=0,5.

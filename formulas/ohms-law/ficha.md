@@ -1,25 +1,20 @@
-# Ficha
+# Ley de Ohm
 
-## Identificacion
+En un resistor óhmico la corriente es proporcional a la tensión. Cambiar su signo invierte la corriente; no convierte la resistencia en una fuente de energía, porque su potencia sigue siendo V²/R.
 
-- **Nombre:** Ley de Ohm
-- **Autor:** Georg Simon Ohm
-- **Año:** 1827
-- **Area:** electricidad y circuitos
-- **Nivel:** ESO y bachillerato
-- **Tipo:** relacion lineal de circuito
+## Magnitudes
 
-## Variables
+| Símbolo | Significado |
+| :-- | :-- |
+| V | Diferencia de potencial firmada según la referencia del resistor. |
+| I | Corriente firmada entrando por el terminal de referencia positiva. |
+| R | Resistencia eléctrica positiva y constante del componente óhmico. |
+| P | Potencia disipada en el resistor, siempre no negativa en este modelo. |
 
-- `V`: tension o voltaje, en voltios.
-- `I`: corriente, en amperios.
-- `R`: resistencia, en ohmios.
-- `P`: potencia electrica, en vatios.
+## Alcance
 
-## Lectura del simulador
+R>0 y comportamiento óhmico con condiciones físicas aproximadamente constantes. Fuente ideal en continua; el laboratorio no modela calentamiento que cambie R ni límites de potencia admisible.
 
-La fuente proporciona voltaje. La resistencia limita la corriente. Las particulas visuales se mueven mas rapido cuando la corriente aumenta. El brillo de la resistencia representa la potencia disipada.
+## Unidades
 
-## Advertencia
-
-El simulador es conceptual. En un circuito real tambien importan tolerancias, temperatura, potencia nominal y propiedades concretas del componente.
+V en voltios, I amperios, R ohmios. Ω=V/A y W=V·A. A igual R, duplicar V cuadruplica la potencia; el signo de I se interpreta usando su flecha de referencia.

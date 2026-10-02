@@ -1,9 +1,11 @@
 # Derivación
 
-Se parte del crecimiento exponencial `dN/dt = rN`, donde la tasa de crecimiento es proporcional a la población actual.
+Separa dN/[N(1−N/K)]=r dt para N distinto de los equilibrios. Integra mediante fracciones parciales y fija la constante con N(0)=N0. Resulta N=K/[1+(K/N0−1)e^(−rt)]. El caso N0=0 se resuelve aparte, evitando división por cero. La velocidad es una parábola en N y alcanza el máximo positivo en K/2.
 
-Para introducir recursos limitados se multiplica por un factor de freno `1 - N/K`.
+## Comprueba el resultado
 
-Cuando `N` es muy pequeña respecto a `K`, el modelo se parece al crecimiento exponencial. Cuando `N` se acerca a `K`, el crecimiento neto se anula.
+r=0,2, N=10 y K=100. Calcula N′. 0,2·10·(1−0,1)=1,8 por día.
 
-La solución cerrada tiene forma sigmoidal y depende de la población inicial mediante una constante `A`.
+## Condiciones necesarias
+
+K>0, r≥0 y N0≥0. Cantidad continua, parámetros constantes y sin migración. Con N0>K el denominador se mantiene positivo para t≥0; la población se acerca a K desde arriba.

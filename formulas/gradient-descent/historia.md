@@ -1,9 +1,7 @@
 # Historia
 
-El método de descenso más pronunciado se asocia históricamente a Cauchy en el siglo XIX.
+Los métodos de descenso tienen una larga historia en optimización numérica y aparecen en numerosos modelos de aprendizaje. Su rendimiento depende tanto de escala y curvatura del problema como de la regla de actualización; una animación descendente no sustituye un análisis de convergencia.
 
-La idea se volvió una herramienta general de optimización: usar información local de la derivada para mejorar una solución paso a paso.
+[Referencia de estudio](https://developers.google.com/machine-learning/crash-course/linear-regression/gradient-descent).
 
-En el siglo XX y XXI, variantes como descenso estocástico del gradiente, momentum, RMSProp y Adam se volvieron esenciales para entrenar modelos de aprendizaje automático.
-
-Hoy el descenso del gradiente es uno de los conceptos centrales para entender cómo aprenden las redes neuronales.
+La fecha de creación del archivo se conserva en Inventario; la fecha de revisión registra esta actualización, no la fecha histórica del resultado.

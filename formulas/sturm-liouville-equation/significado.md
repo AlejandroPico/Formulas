@@ -1,13 +1,11 @@
 # Significado
 
-Un problema de Sturm-Liouville es un problema de autovalores para una ecuación diferencial. En vez de buscar un único número, se buscan valores especiales `λ` para los que existe una función no trivial `y(x)` que satisface la ecuación y las condiciones de contorno.
+Las condiciones de frontera seleccionan valores permitidos de λ y funciones propias. El peso w define la ortogonalidad. La ficha usa la convención de operador −(py′)′+qy, y no mezcla ese signo con otra convención de q.
 
-La forma general es:
+## Del símbolo al fenómeno
 
-`d/dx[p(x)y′]+q(x)y+λw(x)y=0`.
+Caso regular −y″=λy en [0,L] con y(0)=y(L)=0, p=w=1 y q=0. El número entero n fija los nodos y el autovalor; no se resuelve aquí cualquier problema de Sturm–Liouville.
 
-Los valores permitidos de `λ` son autovalores, y las soluciones asociadas son autofunciones. En el caso clásico de una cuerda fija en ambos extremos, las autofunciones son senos y los autovalores determinan los modos de vibración.
+## Un ejemplo comprobable
 
-El simulador muestra el caso `-y''=λy` con condiciones `y(0)=y(1)=0`. Cada modo `n` tiene `n-1` nodos internos y autovalor `λ_n=n²π²`.
-
-La idea fundamental es que muchas funciones pueden descomponerse como combinación de modos propios, del mismo modo que un vector se descompone en direcciones propias.
+n=1, L=2. Calcula λ1. λ1=(π/2)²≈2,47.

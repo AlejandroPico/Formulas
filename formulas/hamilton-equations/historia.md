@@ -1,9 +1,7 @@
 # Historia
 
-William Rowan Hamilton desarrolló su formulación de la mecánica en el siglo XIX. Partía de la tradición de Euler y Lagrange, pero reorganizó la dinámica usando una función central, el hamiltoniano, y dos familias de variables: coordenadas y momentos.
+William Rowan Hamilton desarrolló en el siglo XIX una formulación que organiza la dinámica en espacio de fases. Esa estructura influyó después en mecánica estadística y cuántica, pero el Hamiltoniano clásico de esta ficha no es el operador que actúa sobre funciones de onda.
 
-La formulación hamiltoniana cambió la manera de mirar el movimiento. Una trayectoria ya no se entiende solo como una posición que cambia en el espacio ordinario, sino como una curva en el espacio de fases. En ese espacio ampliado, cada punto contiene la información necesaria para continuar la evolución.
+[Referencia de estudio](https://ocw.mit.edu/courses/8-09-classical-mechanics-iii-fall-2014/).
 
-Durante el siglo XIX esta formulación fue muy útil para problemas de mecánica celeste, perturbaciones y sistemas conservativos. Más tarde se convirtió en una base conceptual para la mecánica estadística, la teoría de sistemas dinámicos y la física matemática.
-
-En el siglo XX, su importancia creció todavía más por su relación con la mecánica cuántica. Muchas estructuras cuánticas conservan la huella de la mecánica hamiltoniana clásica: observables, energía, momentos conjugados y evolución temporal.
+La fecha de creación del archivo se conserva en Inventario; la fecha de revisión registra esta actualización, no la fecha histórica del resultado.

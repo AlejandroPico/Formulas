@@ -1,9 +1,11 @@
-# Derivacion
+# Derivación
 
-Para una curva parametrizada r(t), la velocidad r' fija la tangente y la aceleracion r'' permite construir el plano osculador.
+Para r=(Rcos t,Rsin t,bt), calcula r′=(−Rsin t,Rcos t,b), r″=(−Rcos t,−Rsin t,0), r‴=(Rsin t,−Rcos t,0). El producto mixto del numerador vale bR² y la norma al cuadrado del vectorial es R²(R²+b²). Divide para obtener τ=b/(R²+b²). Con T=r′/|r′|, N=(−cos t,−sin t,0), B=T×N se obtiene la tríada ortonormal.
 
-El vector r' x r'' es perpendicular a ese plano. Si la tercera derivada r''' tiene componente en esa direccion, la curva empieza a retorcerse fuera del plano osculador.
+## Comprueba el resultado
 
-Por eso la torsion se escribe como el producto mixto de r', r'' y r''' dividido por el cuadrado de la norma de r' x r''.
+R=1 y b=0,5. Calcula la torsión. τ=b/(R²+b²)=0,5/1,25=0,4 m⁻¹.
 
-Para una helice r(t)=(R cos t, R sin t, b t), el resultado se simplifica a tau=b/(R^2+b^2).
+## Condiciones necesarias
+
+Curva C3 regular y r′×r″ no nulo. En puntos de curvatura cero el triedro de Frenet y esta fórmula de torsión pueden no estar definidos. El laboratorio fija R>0 y no simula ese caso degenerado.

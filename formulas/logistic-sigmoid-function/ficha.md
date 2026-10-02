@@ -1,22 +1,19 @@
-# Ficha
+# Función sigmoide logística
 
-## Identificación
+La sigmoide transforma una entrada real en una respuesta suave entre cero y uno. Sus propiedades son matemáticas; por sí sola no ha aprendido parámetros ni demuestra que su valor sea una probabilidad bien calibrada.
 
-- **Nombre:** Función sigmoide logística
-- **Área:** aprendizaje automático y análisis matemático
-- **Nivel:** bachillerato y universidad inicial
-- **Tipo:** función de activación y enlace probabilístico
+## Magnitudes
 
-## Variables
+| Símbolo | Significado |
+| :-- | :-- |
+| σ | Función sigmoide logística; aquí no representa tensión mecánica ni desviación típica. |
+| x | Entrada real adimensional de la función. |
+| e | Base de la exponencial y del logaritmo natural. |
 
-- `x`: entrada real.
-- `sigma(x)`: salida entre cero y uno.
-- `e`: base exponencial.
+## Alcance
 
-## Lectura del simulador
+x real finito; entrada adimensional. El cálculo usa una rama estable para x negativo evitando exp(−x) excesivamente grande. La saturación numérica en valores extremos no convierte los límites asintóticos en nuevos estados exactos de la función matemática.
 
-La curva rosa muestra la sigmoide. El marcador indica el valor actual de `x` y su salida `sigma(x)`. En `x=0`, la salida es 50%.
+## Unidades
 
-## Nota
-
-En los extremos la curva se aplana; esa saturación reduce la magnitud del gradiente.
+Entrada, salida y derivada respecto a x sin dimensión. Si x es el resultado de una combinación física, sus coeficientes deben hacer el argumento adimensional. El logit inverso ln(p/(1−p)) exige 0<p<1.

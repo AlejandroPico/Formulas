@@ -1,9 +1,7 @@
 # Historia
 
-George Green publicó en 1828 su trabajo sobre el análisis matemático aplicado a electricidad y magnetismo. Sus ideas anticiparon buena parte del lenguaje moderno de potenciales, campos e integrales de contorno.
+George Green publicó en 1828 métodos que relacionaban dominios y fronteras en potenciales. El teorema plano forma parte de la familia de resultados de Stokes y expresa una cancelación de contribuciones internas con una orientación consistente.
 
-El teorema que lleva su nombre se convirtió en una pieza central del cálculo vectorial en el plano. Puede verse como un puente entre la geometría de una curva cerrada y la acumulación de una cantidad diferencial en su interior.
+[Referencia de estudio](https://ocw.mit.edu/courses/18-02sc-multivariable-calculus-fall-2010/).
 
-Con el tiempo, Green quedó conectado con otros grandes resultados: Stokes en superficies tridimensionales y el teorema de la divergencia en flujos. Todos pertenecen a la misma familia conceptual: una integral sobre una frontera se relaciona con una integral sobre el dominio encerrado.
-
-En física e ingeniería aparece en circulación de fluidos, electromagnetismo, teoría de potenciales, métodos numéricos y formulaciones integrales de problemas de campo.
+La fecha de creación del archivo se conserva en Inventario; la fecha de revisión registra esta actualización, no la fecha histórica del resultado.

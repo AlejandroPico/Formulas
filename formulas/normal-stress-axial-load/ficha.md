@@ -1,21 +1,22 @@
-# Ficha
+# Tensión normal: tracción y compresión
 
-**Nombre:** Tensión normal: tracción y compresión
+La misma fuerza produce mayor tensión si actúa sobre menos área. σ=F/A es una tensión media; solo bajo carga axial centrada y lejos de extremos representa una distribución aproximadamente uniforme.
 
-**Área:** Resistencia de materiales
+## Magnitudes
 
-**Nivel:** Bachillerato/Universidad inicial
+| Símbolo | Significado |
+| :-- | :-- |
+| σ | Tensión normal media sobre la sección: positiva en tracción y negativa en compresión. |
+| F | Fuerza axial firmada, transmitida por la sección transversal. |
+| A | Área de la sección perpendicular a la carga. |
+| d | Diámetro de una sección circular maciza. |
+| ε | Deformación longitudinal relativa: cambio de longitud dividido por longitud inicial. |
+| E | Módulo de Young del material en régimen elástico lineal. |
 
-**Resumen:** Relaciona carga axial y área resistente para estimar tensión de tracción o compresión.
+## Alcance
 
-## Lectura e interpretación
+Carga centrada axial, sección maciza uniforme; no se simulan plastificación, concentración de tensiones, pandeo ni criterio resistente.
 
-# Interpretación
+## Unidades
 
-Mueve los controles y observa qué domina: área resistente, signo de carga, longitud cúbica, resistencia térmica, equilibrio de puente o región MOSFET.
-
-## Validez y limitaciones
-
-# Limitaciones
-
-No cubre pandeo, plastificación, concentración de tensiones ni materiales no lineales.
+F en N, A en mm² da σ en N/mm²=MPa. El control usa kN, que se multiplica por 1000. E en GPa se multiplica por 1000 para comparar con MPa; ε no tiene dimensión.

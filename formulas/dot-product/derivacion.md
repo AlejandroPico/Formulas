@@ -1,15 +1,11 @@
-# Derivacion
+# Derivación
 
-Para vectores `u=(u1,u2,...,un)` y `v=(v1,v2,...,vn)`, el producto escalar se define por componentes:
+En una base ortonormal, expande ambos vectores: los productos entre bases distintas son cero y los de la misma base uno, dejando Σaibi. La identidad |a−b|²=|a|²+|b|²−2a·b, comparada con ley de cosenos, da |a||b|cosθ. Para proyección sobre a no nulo, busca ca con (b−ca)·a=0 y despeja c=(a·b)/|a|².
 
-`u dot v = u1v1+u2v2+...+unvn`.
+## Comprueba el resultado
 
-La relacion geometrica se obtiene comparando con la ley del coseno. La distancia entre `u` y `v` cumple:
+a=(1,0,0), b=(1,1,0). Calcula a·b. 1·1+0·1+0·0=1.
 
-`||u-v||^2=||u||^2+||v||^2-2||u||||v||cos(theta)`.
+## Condiciones necesarias
 
-Al expandir `||u-v||^2=(u-v) dot (u-v)`, aparece:
-
-`u dot v = ||u||||v||cos(theta)`.
-
-Esto conecta la formula algebraica con la medida del angulo.
+Producto euclídeo en base cartesiana ortonormal. Ángulo requiere ambos vectores no nulos; proyección sobre a requiere a≠0. En coordenadas no ortonormales se debe incluir la métrica correspondiente.

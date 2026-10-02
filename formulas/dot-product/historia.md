@@ -1,7 +1,7 @@
 # Historia
 
-El producto escalar se consolidó con el desarrollo del calculo vectorial y la geometria analitica. Su uso permite traducir relaciones geometricas, como angulos y perpendicularidad, a operaciones algebraicas con coordenadas.
+El álgebra vectorial organiza magnitudes geométricas mediante productos con distintos resultados. El escalar produce un número y el vectorial una normal orientada en 3D. Su interpretación de proyección unifica fórmulas de geometría, mecánica y análisis de datos.
 
-En fisica y matematicas aparece de forma constante: trabajo mecanico, proyecciones, ortogonalidad, normas, espacios euclideos y metodos de optimizacion dependen de esta operacion.
+[Referencia de estudio](https://ocw.mit.edu/courses/18-02sc-multivariable-calculus-fall-2010/).
 
-Su importancia moderna crece todavia mas en estadistica, aprendizaje automatico y algebra computacional, donde medir similitud entre vectores es una operacion fundamental.
+La fecha de creación del archivo se conserva en Inventario; la fecha de revisión registra esta actualización, no la fecha histórica del resultado.

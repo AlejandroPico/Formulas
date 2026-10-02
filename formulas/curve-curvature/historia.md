@@ -1,7 +1,7 @@
 # Historia
 
-La curvatura nace del estudio geométrico de curvas y superficies. Con el desarrollo del cálculo diferencial, se volvió posible medir no solo posición y pendiente, sino también cómo cambia la dirección de una trayectoria.
+La geometría diferencial de curvas organiza cómo cambian dirección y plano local. Frenet y Serret desarrollaron relaciones del marco móvil durante el siglo XIX. Esta ficha enfatiza doblamiento y círculo osculador; la de torsión estudia el giro del mismo plano en el espacio.
 
-En geometría diferencial, el círculo osculador formaliza una idea intuitiva: cerca de un punto, una curva suave puede aproximarse por el círculo que comparte posición, tangente y curvatura.
+[Referencia de estudio](https://mathworld.wolfram.com/Curvature.html).
 
-La curvatura es esencial en mecánica, diseño de carreteras, gráficos por ordenador, robótica, óptica, relatividad y modelado de superficies.
+La fecha de creación del archivo se conserva en Inventario; la fecha de revisión registra esta actualización, no la fecha histórica del resultado.

@@ -1,11 +1,11 @@
 # Significado
 
-La curvatura mide cuánto se dobla una curva en un punto. Si la curva cambia de dirección muy deprisa, la curvatura es grande; si se parece localmente a una recta, la curvatura es pequeña.
+La curvatura mide cuánto se dobla una curva por cada unidad recorrida. El círculo osculador comparte posición, tangente y curvatura en un punto; no es necesariamente la trayectoria completa ni está en un plano fijo para una curva espacial.
 
-Para una gráfica `y=f(x)`, la curvatura se calcula con:
+## Del símbolo al fenómeno
 
-`κ=|f''(x)|/[1+(f'(x))²]^(3/2)`.
+La hélice r(t)=(R cos t,R sin t,b t) tiene curvatura R/(R²+b²). En el punto elegido se dibuja el círculo osculador de radio 1/κ, en el plano generado por T y N.
 
-El radio de curvatura es `R=1/κ`. Ese radio pertenece al círculo osculador: el círculo que mejor se ajusta a la curva en ese punto.
+## Un ejemplo comprobable
 
-El simulador usa una parábola suave. Al mover el punto de evaluación, se ve cómo cambia el círculo que toca la curva con la misma dirección local.
+R=1 y b=0,5. Calcula κ. κ=1/(1+0,25)=0,8 m⁻¹.

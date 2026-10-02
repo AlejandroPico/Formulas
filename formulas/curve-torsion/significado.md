@@ -1,7 +1,11 @@
 # Significado
 
-La torsion mide cuanto se retuerce una curva espacial fuera de su plano osculador. Una curva plana tiene torsion cero; una helice mantiene una torsion constante.
+La torsión distingue una curva que sale de su plano osculador de una curva plana. La hélice puede doblarse con curvatura constante y a la vez girar ese plano con torsión constante firmada.
 
-La formula compara las tres primeras derivadas de la parametrizacion. El producto vectorial r' x r'' describe el plano osculador y el producto con r''' detecta si la curva empieza a abandonar ese plano.
+## Del símbolo al fenómeno
 
-En el simulador se usa una helice. Al aumentar el paso vertical b, la curva deja de ser plana y la torsion se vuelve visible.
+r(t)=(R cos t,R sin t,b t). La torsión mide el giro del plano osculador respecto a longitud de arco. T,N,B se muestran en el punto seleccionado; la torsión puede ser positiva, cero o negativa.
+
+## Un ejemplo comprobable
+
+R=1 y b=0,5. Calcula la torsión. τ=b/(R²+b²)=0,5/1,25=0,4 m⁻¹.

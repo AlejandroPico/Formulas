@@ -1,13 +1,11 @@
 # Significado
 
-El teorema de Green establece una equivalencia entre una integral de línea alrededor de una curva cerrada `C` y una integral doble sobre la región `D` encerrada por esa curva.
+Green convierte la circulación por el borde en acumulación de giro en el interior. Orientación y regularidad importan: un campo con una singularidad dentro de la región no cumple automáticamente las hipótesis del teorema.
 
-La integral de línea mide circulación: cuánto acompaña el campo vectorial al recorrido por la frontera. La integral doble mide rotación interna acumulada: cuánto giro local hay repartido por toda la región.
+## Del símbolo al fenómeno
 
-La forma habitual es:
+F=(−ωy/2, ωx/2). El rectángulo se recorre antihorario; su circulación es ω por su área. La vista final separa las cuatro contribuciones del borde.
 
-`∮(Pdx+Qdy)=∬(∂Q/∂x−∂P/∂y)dA`.
+## Un ejemplo comprobable
 
-En el simulador se usa el campo `F=(-y,x)`. Ese campo gira alrededor del origen y tiene rotacional constante igual a `2`. Por eso, para un disco de radio `R`, la circulación de la frontera coincide con `2` multiplicado por el área interior.
-
-La idea profunda es que el comportamiento global de una frontera puede reconstruirse sumando el comportamiento local del interior.
+Rotacional 2 y rectángulo de área 2. Calcula la circulación. La integral interior vale 2·2=4 m²/s.

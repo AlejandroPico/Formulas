@@ -2323,6 +2323,1169 @@
           "Fecha de creación conservada"
         ]
       }
+    ],
+    "normal-stress-axial-load": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "aprendizaje",
+          "derivacion",
+          "ficha",
+          "formula",
+          "historia",
+          "interpretacion",
+          "limitaciones",
+          "significado",
+          "unidades",
+          "usos",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "prerrequisitos"
+        ],
+        "summary": "Revisión completa: Una barra, dos formas de cargar. Cuatro misiones; Resiste / Explorar / Tensión y deformación. Contenido, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Cálculos contrastados independientemente y límites del modelo explícitos",
+          "Todas las pestañas y notaciones revisadas",
+          "Cuatro misiones, errores, pistas, ajustes y reintentos",
+          "Controles, teclado, arrastre de ratón y tacto; cámaras 3D cuando corresponden",
+          "Escritorio y móvil sin solapamientos; contraste y capturas revisados",
+          "Pausa y limpieza al ocultar, cambiar pestaña y cerrar",
+          "Prueba general sin conexión, incluidos nuevos módulos",
+          "Disciplina, nivel, etiquetas y prerrequisitos concretos",
+          "Fecha de creación conservada; fecha histórica diferenciada de la revisión"
+        ]
+      }
+    ],
+    "fourier-transform": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "aprendizaje",
+          "derivacion",
+          "ficha",
+          "formula",
+          "historia",
+          "significado",
+          "unidades",
+          "usos",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "prerrequisitos"
+        ],
+        "summary": "Revisión completa: Descubre las frecuencias de una señal. Cuatro misiones; Mezclador / Señal / Espectro y fase. Contenido, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Cálculos contrastados independientemente y límites del modelo explícitos",
+          "Todas las pestañas y notaciones revisadas",
+          "Cuatro misiones, errores, pistas, ajustes y reintentos",
+          "Controles, teclado, arrastre de ratón y tacto; cámaras 3D cuando corresponden",
+          "Escritorio y móvil sin solapamientos; contraste y capturas revisados",
+          "Pausa y limpieza al ocultar, cambiar pestaña y cerrar",
+          "Prueba general sin conexión, incluidos nuevos módulos",
+          "Disciplina, nivel, etiquetas y prerrequisitos concretos",
+          "Fecha de creación conservada; fecha histórica diferenciada de la revisión"
+        ]
+      }
+    ],
+    "second-law-carnot-efficiency": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "aprendizaje",
+          "derivacion",
+          "ficha",
+          "formula",
+          "historia",
+          "significado",
+          "unidades",
+          "usos",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "prerrequisitos"
+        ],
+        "summary": "Revisión completa: Trabajo entre dos temperaturas. Cuatro misiones; Motor térmico / Explorar / Balance de calor. Contenido, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Cálculos contrastados independientemente y límites del modelo explícitos",
+          "Todas las pestañas y notaciones revisadas",
+          "Cuatro misiones, errores, pistas, ajustes y reintentos",
+          "Controles, teclado, arrastre de ratón y tacto; cámaras 3D cuando corresponden",
+          "Escritorio y móvil sin solapamientos; contraste y capturas revisados",
+          "Pausa y limpieza al ocultar, cambiar pestaña y cerrar",
+          "Prueba general sin conexión, incluidos nuevos módulos",
+          "Disciplina, nivel, etiquetas y prerrequisitos concretos",
+          "Fecha de creación conservada; fecha histórica diferenciada de la revisión"
+        ]
+      }
+    ],
+    "gompertz-growth-model": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "aprendizaje",
+          "derivacion",
+          "ficha",
+          "formula",
+          "historia",
+          "significado",
+          "unidades",
+          "usos",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "prerrequisitos"
+        ],
+        "summary": "Revisión completa: Crecer y desacelerar. Cuatro misiones; Cultivo / Explorar / Velocidad de crecimiento. Contenido, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Cálculos contrastados independientemente y límites del modelo explícitos",
+          "Todas las pestañas y notaciones revisadas",
+          "Cuatro misiones, errores, pistas, ajustes y reintentos",
+          "Controles, teclado, arrastre de ratón y tacto; cámaras 3D cuando corresponden",
+          "Escritorio y móvil sin solapamientos; contraste y capturas revisados",
+          "Pausa y limpieza al ocultar, cambiar pestaña y cerrar",
+          "Prueba general sin conexión, incluidos nuevos módulos",
+          "Disciplina, nivel, etiquetas y prerrequisitos concretos",
+          "Fecha de creación conservada; fecha histórica diferenciada de la revisión"
+        ]
+      }
+    ],
+    "ohms-law": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "aprendizaje",
+          "derivacion",
+          "ficha",
+          "formula",
+          "historia",
+          "significado",
+          "unidades",
+          "usos",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "prerrequisitos"
+        ],
+        "summary": "Revisión completa: Enciende un circuito con criterio. Cuatro misiones; Circuito / Explorar / Potencia. Contenido, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Cálculos contrastados independientemente y límites del modelo explícitos",
+          "Todas las pestañas y notaciones revisadas",
+          "Cuatro misiones, errores, pistas, ajustes y reintentos",
+          "Controles, teclado, arrastre de ratón y tacto; cámaras 3D cuando corresponden",
+          "Escritorio y móvil sin solapamientos; contraste y capturas revisados",
+          "Pausa y limpieza al ocultar, cambiar pestaña y cerrar",
+          "Prueba general sin conexión, incluidos nuevos módulos",
+          "Disciplina, nivel, etiquetas y prerrequisitos concretos",
+          "Fecha de creación conservada; fecha histórica diferenciada de la revisión"
+        ]
+      }
+    ],
+    "green-theorem": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "aprendizaje",
+          "derivacion",
+          "ficha",
+          "formula",
+          "historia",
+          "significado",
+          "unidades",
+          "usos",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "prerrequisitos"
+        ],
+        "summary": "Revisión completa: Recorre un borde y cuenta el giro. Cuatro misiones; Circulación / Campo plano / Borde e interior. Contenido, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Cálculos contrastados independientemente y límites del modelo explícitos",
+          "Todas las pestañas y notaciones revisadas",
+          "Cuatro misiones, errores, pistas, ajustes y reintentos",
+          "Controles, teclado, arrastre de ratón y tacto; cámaras 3D cuando corresponden",
+          "Escritorio y móvil sin solapamientos; contraste y capturas revisados",
+          "Pausa y limpieza al ocultar, cambiar pestaña y cerrar",
+          "Prueba general sin conexión, incluidos nuevos módulos",
+          "Disciplina, nivel, etiquetas y prerrequisitos concretos",
+          "Fecha de creación conservada; fecha histórica diferenciada de la revisión"
+        ]
+      }
+    ],
+    "kinetic-energy": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "aprendizaje",
+          "derivacion",
+          "ficha",
+          "formula",
+          "historia",
+          "significado",
+          "unidades",
+          "usos",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "prerrequisitos"
+        ],
+        "summary": "Revisión completa: Una pista para comparar velocidades. Cuatro misiones; Pista / Explorar / La velocidad al cuadrado. Contenido, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Cálculos contrastados independientemente y límites del modelo explícitos",
+          "Todas las pestañas y notaciones revisadas",
+          "Cuatro misiones, errores, pistas, ajustes y reintentos",
+          "Controles, teclado, arrastre de ratón y tacto; cámaras 3D cuando corresponden",
+          "Escritorio y móvil sin solapamientos; contraste y capturas revisados",
+          "Pausa y limpieza al ocultar, cambiar pestaña y cerrar",
+          "Prueba general sin conexión, incluidos nuevos módulos",
+          "Disciplina, nivel, etiquetas y prerrequisitos concretos",
+          "Fecha de creación conservada; fecha histórica diferenciada de la revisión"
+        ]
+      }
+    ],
+    "inductor-stored-energy": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "aprendizaje",
+          "derivacion",
+          "ficha",
+          "formula",
+          "historia",
+          "significado",
+          "unidades",
+          "usos",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "prerrequisitos"
+        ],
+        "summary": "Revisión completa: Guarda energía en un campo magnético. Cuatro misiones; Bobina / Carga RL / Descarga RL. Contenido, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Cálculos contrastados independientemente y límites del modelo explícitos",
+          "Todas las pestañas y notaciones revisadas",
+          "Cuatro misiones, errores, pistas, ajustes y reintentos",
+          "Controles, teclado, arrastre de ratón y tacto; cámaras 3D cuando corresponden",
+          "Escritorio y móvil sin solapamientos; contraste y capturas revisados",
+          "Pausa y limpieza al ocultar, cambiar pestaña y cerrar",
+          "Prueba general sin conexión, incluidos nuevos módulos",
+          "Disciplina, nivel, etiquetas y prerrequisitos concretos",
+          "Fecha de creación conservada; fecha histórica diferenciada de la revisión"
+        ]
+      }
+    ],
+    "cauchy-integral-formula": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "aprendizaje",
+          "derivacion",
+          "ficha",
+          "formula",
+          "historia",
+          "significado",
+          "unidades",
+          "usos",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "prerrequisitos"
+        ],
+        "summary": "Revisión completa: Un contorno busca lo que encierra. Cuatro misiones; Contornos / Plano complejo / Integrando sobre el borde. Contenido, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Cálculos contrastados independientemente y límites del modelo explícitos",
+          "Todas las pestañas y notaciones revisadas",
+          "Cuatro misiones, errores, pistas, ajustes y reintentos",
+          "Controles, teclado, arrastre de ratón y tacto; cámaras 3D cuando corresponden",
+          "Escritorio y móvil sin solapamientos; contraste y capturas revisados",
+          "Pausa y limpieza al ocultar, cambiar pestaña y cerrar",
+          "Prueba general sin conexión, incluidos nuevos módulos",
+          "Disciplina, nivel, etiquetas y prerrequisitos concretos",
+          "Fecha de creación conservada; fecha histórica diferenciada de la revisión"
+        ]
+      }
+    ],
+    "faraday-induction-law": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "aprendizaje",
+          "derivacion",
+          "ficha",
+          "formula",
+          "historia",
+          "significado",
+          "unidades",
+          "usos",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "prerrequisitos"
+        ],
+        "summary": "Revisión completa: Haz girar una espira dentro del campo. Cuatro misiones; Generador / Espira 3D / Flujo y fem. Contenido, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Cálculos contrastados independientemente y límites del modelo explícitos",
+          "Todas las pestañas y notaciones revisadas",
+          "Cuatro misiones, errores, pistas, ajustes y reintentos",
+          "Controles, teclado, arrastre de ratón y tacto; cámaras 3D cuando corresponden",
+          "Escritorio y móvil sin solapamientos; contraste y capturas revisados",
+          "Pausa y limpieza al ocultar, cambiar pestaña y cerrar",
+          "Prueba general sin conexión, incluidos nuevos módulos",
+          "Disciplina, nivel, etiquetas y prerrequisitos concretos",
+          "Fecha de creación conservada; fecha histórica diferenciada de la revisión"
+        ]
+      }
+    ],
+    "ideal-transformer-ratio": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "aprendizaje",
+          "derivacion",
+          "ficha",
+          "formula",
+          "historia",
+          "interpretacion",
+          "limitaciones",
+          "significado",
+          "unidades",
+          "usos",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "prerrequisitos"
+        ],
+        "summary": "Revisión completa: Cambia tensión sin crear potencia. Cuatro misiones; Transformador / Explorar / Señales alternas. Contenido, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Cálculos contrastados independientemente y límites del modelo explícitos",
+          "Todas las pestañas y notaciones revisadas",
+          "Cuatro misiones, errores, pistas, ajustes y reintentos",
+          "Controles, teclado, arrastre de ratón y tacto; cámaras 3D cuando corresponden",
+          "Escritorio y móvil sin solapamientos; contraste y capturas revisados",
+          "Pausa y limpieza al ocultar, cambiar pestaña y cerrar",
+          "Prueba general sin conexión, incluidos nuevos módulos",
+          "Disciplina, nivel, etiquetas y prerrequisitos concretos",
+          "Fecha de creación conservada; fecha histórica diferenciada de la revisión"
+        ]
+      }
+    ],
+    "divergence-theorem": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "aprendizaje",
+          "derivacion",
+          "ficha",
+          "formula",
+          "historia",
+          "significado",
+          "unidades",
+          "usos",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "prerrequisitos"
+        ],
+        "summary": "Revisión completa: Fuentes locales, flujo global. Cuatro misiones; Balance de volumen / Volumen 3D / Divergencia local. Contenido, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Cálculos contrastados independientemente y límites del modelo explícitos",
+          "Todas las pestañas y notaciones revisadas",
+          "Cuatro misiones, errores, pistas, ajustes y reintentos",
+          "Controles, teclado, arrastre de ratón y tacto; cámaras 3D cuando corresponden",
+          "Escritorio y móvil sin solapamientos; contraste y capturas revisados",
+          "Pausa y limpieza al ocultar, cambiar pestaña y cerrar",
+          "Prueba general sin conexión, incluidos nuevos módulos",
+          "Disciplina, nivel, etiquetas y prerrequisitos concretos",
+          "Fecha de creación conservada; fecha histórica diferenciada de la revisión"
+        ]
+      }
+    ],
+    "hamilton-equations": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "aprendizaje",
+          "derivacion",
+          "ficha",
+          "formula",
+          "historia",
+          "significado",
+          "unidades",
+          "usos",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "prerrequisitos"
+        ],
+        "summary": "Revisión completa: Recorre el espacio de fases. Cuatro misiones; Órbitas / Explorar / Retrato de fase. Contenido, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Cálculos contrastados independientemente y límites del modelo explícitos",
+          "Todas las pestañas y notaciones revisadas",
+          "Cuatro misiones, errores, pistas, ajustes y reintentos",
+          "Controles, teclado, arrastre de ratón y tacto; cámaras 3D cuando corresponden",
+          "Escritorio y móvil sin solapamientos; contraste y capturas revisados",
+          "Pausa y limpieza al ocultar, cambiar pestaña y cerrar",
+          "Prueba general sin conexión, incluidos nuevos módulos",
+          "Disciplina, nivel, etiquetas y prerrequisitos concretos",
+          "Fecha de creación conservada; fecha histórica diferenciada de la revisión"
+        ]
+      }
+    ],
+    "ideal-gas-law": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "aprendizaje",
+          "derivacion",
+          "ficha",
+          "formula",
+          "historia",
+          "significado",
+          "unidades",
+          "usos",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "prerrequisitos"
+        ],
+        "summary": "Revisión completa: Un pistón entre presión y volumen. Cuatro misiones; Pistón / Explorar / Isotermas. Contenido, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Cálculos contrastados independientemente y límites del modelo explícitos",
+          "Todas las pestañas y notaciones revisadas",
+          "Cuatro misiones, errores, pistas, ajustes y reintentos",
+          "Controles, teclado, arrastre de ratón y tacto; cámaras 3D cuando corresponden",
+          "Escritorio y móvil sin solapamientos; contraste y capturas revisados",
+          "Pausa y limpieza al ocultar, cambiar pestaña y cerrar",
+          "Prueba general sin conexión, incluidos nuevos módulos",
+          "Disciplina, nivel, etiquetas y prerrequisitos concretos",
+          "Fecha de creación conservada; fecha histórica diferenciada de la revisión"
+        ]
+      }
+    ],
+    "faraday-laws-electrolysis": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "aprendizaje",
+          "derivacion",
+          "ficha",
+          "formula",
+          "historia",
+          "significado",
+          "unidades",
+          "usos",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "prerrequisitos"
+        ],
+        "summary": "Revisión completa: Convierte carga en masa depositada. Cuatro misiones; Electrólisis / Explorar / Carga y rendimiento. Contenido, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Cálculos contrastados independientemente y límites del modelo explícitos",
+          "Todas las pestañas y notaciones revisadas",
+          "Cuatro misiones, errores, pistas, ajustes y reintentos",
+          "Controles, teclado, arrastre de ratón y tacto; cámaras 3D cuando corresponden",
+          "Escritorio y móvil sin solapamientos; contraste y capturas revisados",
+          "Pausa y limpieza al ocultar, cambiar pestaña y cerrar",
+          "Prueba general sin conexión, incluidos nuevos módulos",
+          "Disciplina, nivel, etiquetas y prerrequisitos concretos",
+          "Fecha de creación conservada; fecha histórica diferenciada de la revisión"
+        ]
+      }
+    ],
+    "hamiltonian-operator": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "aprendizaje",
+          "derivacion",
+          "ficha",
+          "formula",
+          "historia",
+          "significado",
+          "unidades",
+          "usos",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "prerrequisitos"
+        ],
+        "summary": "Revisión completa: Construye un estado cuántico. Cuatro misiones; Niveles / Pozo infinito / Superposición. Contenido, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Cálculos contrastados independientemente y límites del modelo explícitos",
+          "Todas las pestañas y notaciones revisadas",
+          "Cuatro misiones, errores, pistas, ajustes y reintentos",
+          "Controles, teclado, arrastre de ratón y tacto; cámaras 3D cuando corresponden",
+          "Escritorio y móvil sin solapamientos; contraste y capturas revisados",
+          "Pausa y limpieza al ocultar, cambiar pestaña y cerrar",
+          "Prueba general sin conexión, incluidos nuevos módulos",
+          "Disciplina, nivel, etiquetas y prerrequisitos concretos",
+          "Fecha de creación conservada; fecha histórica diferenciada de la revisión"
+        ]
+      }
+    ],
+    "electric-gauss-law": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "aprendizaje",
+          "derivacion",
+          "ficha",
+          "formula",
+          "historia",
+          "significado",
+          "unidades",
+          "usos",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "prerrequisitos"
+        ],
+        "summary": "Revisión completa: Carga encerrada, flujo eléctrico. Cuatro misiones; Detecta la carga / Esfera 3D / Campo y flujo. Contenido, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Cálculos contrastados independientemente y límites del modelo explícitos",
+          "Todas las pestañas y notaciones revisadas",
+          "Cuatro misiones, errores, pistas, ajustes y reintentos",
+          "Controles, teclado, arrastre de ratón y tacto; cámaras 3D cuando corresponden",
+          "Escritorio y móvil sin solapamientos; contraste y capturas revisados",
+          "Pausa y limpieza al ocultar, cambiar pestaña y cerrar",
+          "Prueba general sin conexión, incluidos nuevos módulos",
+          "Disciplina, nivel, etiquetas y prerrequisitos concretos",
+          "Fecha de creación conservada; fecha histórica diferenciada de la revisión"
+        ]
+      }
+    ],
+    "gauss-theorem": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "aprendizaje",
+          "derivacion",
+          "ficha",
+          "formula",
+          "historia",
+          "significado",
+          "unidades",
+          "usos",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "prerrequisitos"
+        ],
+        "summary": "Revisión completa: Cuenta lo que cruza cada cara. Cuatro misiones; Seis caras / Cubo 3D / Flujos por cara. Contenido, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Cálculos contrastados independientemente y límites del modelo explícitos",
+          "Todas las pestañas y notaciones revisadas",
+          "Cuatro misiones, errores, pistas, ajustes y reintentos",
+          "Controles, teclado, arrastre de ratón y tacto; cámaras 3D cuando corresponden",
+          "Escritorio y móvil sin solapamientos; contraste y capturas revisados",
+          "Pausa y limpieza al ocultar, cambiar pestaña y cerrar",
+          "Prueba general sin conexión, incluidos nuevos módulos",
+          "Disciplina, nivel, etiquetas y prerrequisitos concretos",
+          "Fecha de creación conservada; fecha histórica diferenciada de la revisión"
+        ]
+      }
+    ],
+    "sturm-liouville-equation": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "aprendizaje",
+          "derivacion",
+          "ficha",
+          "formula",
+          "historia",
+          "significado",
+          "unidades",
+          "usos",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "prerrequisitos"
+        ],
+        "summary": "Revisión completa: Encuentra los modos permitidos. Cuatro misiones; Resonancias / Modos / Espectro. Contenido, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Cálculos contrastados independientemente y límites del modelo explícitos",
+          "Todas las pestañas y notaciones revisadas",
+          "Cuatro misiones, errores, pistas, ajustes y reintentos",
+          "Controles, teclado, arrastre de ratón y tacto; cámaras 3D cuando corresponden",
+          "Escritorio y móvil sin solapamientos; contraste y capturas revisados",
+          "Pausa y limpieza al ocultar, cambiar pestaña y cerrar",
+          "Prueba general sin conexión, incluidos nuevos módulos",
+          "Disciplina, nivel, etiquetas y prerrequisitos concretos",
+          "Fecha de creación conservada; fecha histórica diferenciada de la revisión"
+        ]
+      }
+    ],
+    "logistic-equation": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "aprendizaje",
+          "derivacion",
+          "ficha",
+          "formula",
+          "historia",
+          "significado",
+          "unidades",
+          "usos",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "prerrequisitos"
+        ],
+        "summary": "Revisión completa: Un ecosistema se acerca a su capacidad. Cuatro misiones; Ecosistema / Explorar / Crecimiento frente a población. Contenido, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Cálculos contrastados independientemente y límites del modelo explícitos",
+          "Todas las pestañas y notaciones revisadas",
+          "Cuatro misiones, errores, pistas, ajustes y reintentos",
+          "Controles, teclado, arrastre de ratón y tacto; cámaras 3D cuando corresponden",
+          "Escritorio y móvil sin solapamientos; contraste y capturas revisados",
+          "Pausa y limpieza al ocultar, cambiar pestaña y cerrar",
+          "Prueba general sin conexión, incluidos nuevos módulos",
+          "Disciplina, nivel, etiquetas y prerrequisitos concretos",
+          "Fecha de creación conservada; fecha histórica diferenciada de la revisión"
+        ]
+      }
+    ],
+    "poiseuille-law": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "aprendizaje",
+          "derivacion",
+          "ficha",
+          "formula",
+          "historia",
+          "significado",
+          "unidades",
+          "usos",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "prerrequisitos"
+        ],
+        "summary": "Revisión completa: Un radio pequeño cambia todo el caudal. Cuatro misiones; Tubería / Perfil / Tubo 3D. Contenido, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Cálculos contrastados independientemente y límites del modelo explícitos",
+          "Todas las pestañas y notaciones revisadas",
+          "Cuatro misiones, errores, pistas, ajustes y reintentos",
+          "Controles, teclado, arrastre de ratón y tacto; cámaras 3D cuando corresponden",
+          "Escritorio y móvil sin solapamientos; contraste y capturas revisados",
+          "Pausa y limpieza al ocultar, cambiar pestaña y cerrar",
+          "Prueba general sin conexión, incluidos nuevos módulos",
+          "Disciplina, nivel, etiquetas y prerrequisitos concretos",
+          "Fecha de creación conservada; fecha histórica diferenciada de la revisión"
+        ]
+      }
+    ],
+    "dot-product": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "aprendizaje",
+          "derivacion",
+          "ficha",
+          "formula",
+          "historia",
+          "significado",
+          "unidades",
+          "usos",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "prerrequisitos"
+        ],
+        "summary": "Revisión completa: Dos vectores, una proyección. Cuatro misiones; Proyecciones / Vectores 3D / Producto y ángulo. Contenido, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Cálculos contrastados independientemente y límites del modelo explícitos",
+          "Todas las pestañas y notaciones revisadas",
+          "Cuatro misiones, errores, pistas, ajustes y reintentos",
+          "Controles, teclado, arrastre de ratón y tacto; cámaras 3D cuando corresponden",
+          "Escritorio y móvil sin solapamientos; contraste y capturas revisados",
+          "Pausa y limpieza al ocultar, cambiar pestaña y cerrar",
+          "Prueba general sin conexión, incluidos nuevos módulos",
+          "Disciplina, nivel, etiquetas y prerrequisitos concretos",
+          "Fecha de creación conservada; fecha histórica diferenciada de la revisión"
+        ]
+      }
+    ],
+    "wheatstone-bridge-balance": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "aprendizaje",
+          "derivacion",
+          "ficha",
+          "formula",
+          "historia",
+          "interpretacion",
+          "limitaciones",
+          "significado",
+          "unidades",
+          "usos",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "prerrequisitos"
+        ],
+        "summary": "Revisión completa: Equilibra un puente de medida. Cuatro misiones; Puente / Explorar / Diferencia de potencial. Contenido, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Cálculos contrastados independientemente y límites del modelo explícitos",
+          "Todas las pestañas y notaciones revisadas",
+          "Cuatro misiones, errores, pistas, ajustes y reintentos",
+          "Controles, teclado, arrastre de ratón y tacto; cámaras 3D cuando corresponden",
+          "Escritorio y móvil sin solapamientos; contraste y capturas revisados",
+          "Pausa y limpieza al ocultar, cambiar pestaña y cerrar",
+          "Prueba general sin conexión, incluidos nuevos módulos",
+          "Disciplina, nivel, etiquetas y prerrequisitos concretos",
+          "Fecha de creación conservada; fecha histórica diferenciada de la revisión"
+        ]
+      }
+    ],
+    "logistic-sigmoid-function": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "aprendizaje",
+          "derivacion",
+          "ficha",
+          "formula",
+          "historia",
+          "significado",
+          "unidades",
+          "usos",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "prerrequisitos"
+        ],
+        "summary": "Revisión completa: De una recta a una respuesta suave. Cuatro misiones; Activación / Explorar / Pendiente y simetría. Contenido, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Cálculos contrastados independientemente y límites del modelo explícitos",
+          "Todas las pestañas y notaciones revisadas",
+          "Cuatro misiones, errores, pistas, ajustes y reintentos",
+          "Controles, teclado, arrastre de ratón y tacto; cámaras 3D cuando corresponden",
+          "Escritorio y móvil sin solapamientos; contraste y capturas revisados",
+          "Pausa y limpieza al ocultar, cambiar pestaña y cerrar",
+          "Prueba general sin conexión, incluidos nuevos módulos",
+          "Disciplina, nivel, etiquetas y prerrequisitos concretos",
+          "Fecha de creación conservada; fecha histórica diferenciada de la revisión"
+        ]
+      }
+    ],
+    "kirchhoff-laws": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "aprendizaje",
+          "derivacion",
+          "ficha",
+          "formula",
+          "historia",
+          "significado",
+          "unidades",
+          "usos",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "prerrequisitos"
+        ],
+        "summary": "Revisión completa: Sigue las corrientes por un nudo. Cuatro misiones; Red eléctrica / Explorar / Balance en nudo y lazo. Contenido, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Cálculos contrastados independientemente y límites del modelo explícitos",
+          "Todas las pestañas y notaciones revisadas",
+          "Cuatro misiones, errores, pistas, ajustes y reintentos",
+          "Controles, teclado, arrastre de ratón y tacto; cámaras 3D cuando corresponden",
+          "Escritorio y móvil sin solapamientos; contraste y capturas revisados",
+          "Pausa y limpieza al ocultar, cambiar pestaña y cerrar",
+          "Prueba general sin conexión, incluidos nuevos módulos",
+          "Disciplina, nivel, etiquetas y prerrequisitos concretos",
+          "Fecha de creación conservada; fecha histórica diferenciada de la revisión"
+        ]
+      }
+    ],
+    "navier-stokes": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "aprendizaje",
+          "derivacion",
+          "ficha",
+          "formula",
+          "historia",
+          "significado",
+          "unidades",
+          "usos",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "prerrequisitos"
+        ],
+        "summary": "Revisión completa: Presión y viscosidad entre dos paredes. Cuatro misiones; Canal / Perfil / Canal 3D. Contenido, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Cálculos contrastados independientemente y límites del modelo explícitos",
+          "Todas las pestañas y notaciones revisadas",
+          "Cuatro misiones, errores, pistas, ajustes y reintentos",
+          "Controles, teclado, arrastre de ratón y tacto; cámaras 3D cuando corresponden",
+          "Escritorio y móvil sin solapamientos; contraste y capturas revisados",
+          "Pausa y limpieza al ocultar, cambiar pestaña y cerrar",
+          "Prueba general sin conexión, incluidos nuevos módulos",
+          "Disciplina, nivel, etiquetas y prerrequisitos concretos",
+          "Fecha de creación conservada; fecha histórica diferenciada de la revisión"
+        ]
+      }
+    ],
+    "logistic-regression-sigmoid-function": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "aprendizaje",
+          "derivacion",
+          "ficha",
+          "formula",
+          "historia",
+          "interpretacion",
+          "limitaciones",
+          "significado",
+          "unidades",
+          "usos",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "prerrequisitos"
+        ],
+        "summary": "Revisión completa: Clasifica con probabilidades, no certezas. Cuatro misiones; Clasificador / Explorar / Pérdida y decisión. Contenido, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Cálculos contrastados independientemente y límites del modelo explícitos",
+          "Todas las pestañas y notaciones revisadas",
+          "Cuatro misiones, errores, pistas, ajustes y reintentos",
+          "Controles, teclado, arrastre de ratón y tacto; cámaras 3D cuando corresponden",
+          "Escritorio y móvil sin solapamientos; contraste y capturas revisados",
+          "Pausa y limpieza al ocultar, cambiar pestaña y cerrar",
+          "Prueba general sin conexión, incluidos nuevos módulos",
+          "Disciplina, nivel, etiquetas y prerrequisitos concretos",
+          "Fecha de creación conservada; fecha histórica diferenciada de la revisión"
+        ]
+      }
+    ],
+    "mechanical-energy-conservation": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "aprendizaje",
+          "derivacion",
+          "ficha",
+          "formula",
+          "historia",
+          "significado",
+          "unidades",
+          "usos",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "prerrequisitos"
+        ],
+        "summary": "Revisión completa: ¿Alcanza la energía para subir?. Cuatro misiones; Salta la colina / Explorar / Presupuesto de energía. Contenido, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Cálculos contrastados independientemente y límites del modelo explícitos",
+          "Todas las pestañas y notaciones revisadas",
+          "Cuatro misiones, errores, pistas, ajustes y reintentos",
+          "Controles, teclado, arrastre de ratón y tacto; cámaras 3D cuando corresponden",
+          "Escritorio y móvil sin solapamientos; contraste y capturas revisados",
+          "Pausa y limpieza al ocultar, cambiar pestaña y cerrar",
+          "Prueba general sin conexión, incluidos nuevos módulos",
+          "Disciplina, nivel, etiquetas y prerrequisitos concretos",
+          "Fecha de creación conservada; fecha histórica diferenciada de la revisión"
+        ]
+      }
+    ],
+    "gradient-descent": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "aprendizaje",
+          "derivacion",
+          "ficha",
+          "formula",
+          "historia",
+          "significado",
+          "unidades",
+          "usos",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "prerrequisitos"
+        ],
+        "summary": "Revisión completa: Elige un paso que no te lance fuera. Cuatro misiones; Optimiza / Contornos / Superficie 3D. Contenido, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Cálculos contrastados independientemente y límites del modelo explícitos",
+          "Todas las pestañas y notaciones revisadas",
+          "Cuatro misiones, errores, pistas, ajustes y reintentos",
+          "Controles, teclado, arrastre de ratón y tacto; cámaras 3D cuando corresponden",
+          "Escritorio y móvil sin solapamientos; contraste y capturas revisados",
+          "Pausa y limpieza al ocultar, cambiar pestaña y cerrar",
+          "Prueba general sin conexión, incluidos nuevos módulos",
+          "Disciplina, nivel, etiquetas y prerrequisitos concretos",
+          "Fecha de creación conservada; fecha histórica diferenciada de la revisión"
+        ]
+      }
+    ],
+    "curve-torsion": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "aprendizaje",
+          "derivacion",
+          "ficha",
+          "formula",
+          "historia",
+          "significado",
+          "unidades",
+          "usos",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "prerrequisitos"
+        ],
+        "summary": "Revisión completa: Sigue cómo gira el plano osculador. Cuatro misiones; Hélice / Curva 3D / Tríada de Frenet. Contenido, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Cálculos contrastados independientemente y límites del modelo explícitos",
+          "Todas las pestañas y notaciones revisadas",
+          "Cuatro misiones, errores, pistas, ajustes y reintentos",
+          "Controles, teclado, arrastre de ratón y tacto; cámaras 3D cuando corresponden",
+          "Escritorio y móvil sin solapamientos; contraste y capturas revisados",
+          "Pausa y limpieza al ocultar, cambiar pestaña y cerrar",
+          "Prueba general sin conexión, incluidos nuevos módulos",
+          "Disciplina, nivel, etiquetas y prerrequisitos concretos",
+          "Fecha de creación conservada; fecha histórica diferenciada de la revisión"
+        ]
+      }
+    ],
+    "first-order-chemical-kinetics": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "aprendizaje",
+          "derivacion",
+          "ficha",
+          "formula",
+          "historia",
+          "significado",
+          "unidades",
+          "usos",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "prerrequisitos"
+        ],
+        "summary": "Revisión completa: La misma fracción desaparece por intervalo. Cuatro misiones; Reacción / Explorar / Recta semilogarítmica. Contenido, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Cálculos contrastados independientemente y límites del modelo explícitos",
+          "Todas las pestañas y notaciones revisadas",
+          "Cuatro misiones, errores, pistas, ajustes y reintentos",
+          "Controles, teclado, arrastre de ratón y tacto; cámaras 3D cuando corresponden",
+          "Escritorio y móvil sin solapamientos; contraste y capturas revisados",
+          "Pausa y limpieza al ocultar, cambiar pestaña y cerrar",
+          "Prueba general sin conexión, incluidos nuevos módulos",
+          "Disciplina, nivel, etiquetas y prerrequisitos concretos",
+          "Fecha de creación conservada; fecha histórica diferenciada de la revisión"
+        ]
+      }
+    ],
+    "second-order-chemical-kinetics": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "aprendizaje",
+          "derivacion",
+          "ficha",
+          "formula",
+          "historia",
+          "significado",
+          "unidades",
+          "usos",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "prerrequisitos"
+        ],
+        "summary": "Revisión completa: La concentración cambia la vida media. Cuatro misiones; Reacción / Explorar / Recta de concentración inversa. Contenido, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Cálculos contrastados independientemente y límites del modelo explícitos",
+          "Todas las pestañas y notaciones revisadas",
+          "Cuatro misiones, errores, pistas, ajustes y reintentos",
+          "Controles, teclado, arrastre de ratón y tacto; cámaras 3D cuando corresponden",
+          "Escritorio y móvil sin solapamientos; contraste y capturas revisados",
+          "Pausa y limpieza al ocultar, cambiar pestaña y cerrar",
+          "Prueba general sin conexión, incluidos nuevos módulos",
+          "Disciplina, nivel, etiquetas y prerrequisitos concretos",
+          "Fecha de creación conservada; fecha histórica diferenciada de la revisión"
+        ]
+      }
+    ],
+    "curve-curvature": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "aprendizaje",
+          "derivacion",
+          "ficha",
+          "formula",
+          "historia",
+          "significado",
+          "unidades",
+          "usos",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "prerrequisitos"
+        ],
+        "summary": "Revisión completa: Mide cuánto se dobla la trayectoria. Cuatro misiones; Curvatura / Curva 3D / Círculo osculador. Contenido, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Cálculos contrastados independientemente y límites del modelo explícitos",
+          "Todas las pestañas y notaciones revisadas",
+          "Cuatro misiones, errores, pistas, ajustes y reintentos",
+          "Controles, teclado, arrastre de ratón y tacto; cámaras 3D cuando corresponden",
+          "Escritorio y móvil sin solapamientos; contraste y capturas revisados",
+          "Pausa y limpieza al ocultar, cambiar pestaña y cerrar",
+          "Prueba general sin conexión, incluidos nuevos módulos",
+          "Disciplina, nivel, etiquetas y prerrequisitos concretos",
+          "Fecha de creación conservada; fecha histórica diferenciada de la revisión"
+        ]
+      }
     ]
   }
 }

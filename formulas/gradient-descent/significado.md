@@ -1,9 +1,11 @@
 # Significado
 
-El descenso del gradiente es un método para minimizar una función de pérdida. En cada paso calcula la pendiente local y se mueve en sentido contrario.
+Descender por el gradiente propone un movimiento contrario a la mayor subida local. Un paso demasiado grande puede aumentar la función u oscilar, incluso en una cuadrática convexa sencilla.
 
-La tasa de aprendizaje `eta` controla el tamaño de cada salto. Si es demasiado pequeña, el avance es lento. Si es demasiado grande, el algoritmo puede oscilar o divergir.
+## Del símbolo al fenómeno
 
-En aprendizaje automático, el mismo principio se aplica a muchos parámetros a la vez: pesos, sesgos y matrices completas.
+Minimiza J=(ax²+by²)/2 con iteraciones exactas de gradiente. La estabilidad requiere 0<η<2/max(a,b). Un paso excesivo puede oscilar o divergir; el gráfico avisa si la trayectoria sale de su ventana.
 
-El simulador muestra una parábola `L(w)=w²`. El punto rojo representa el peso actual. Al pulsar optimizar, el punto desciende hacia el mínimo global; con una tasa demasiado alta puede rebotar y salir de la zona estable.
+## Un ejemplo comprobable
+
+J=x²/2 y x=2. ¿Cuánto vale ∂J/∂x? El gradiente es x=2.

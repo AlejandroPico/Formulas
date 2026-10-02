@@ -1,31 +1,23 @@
-# Ficha
+# Ecuaciones de Hamilton
 
-## Identificación
+Hamilton describe el movimiento mediante coordenadas y momentos en espacio de fases. En el oscilador las órbitas son elipses de energía constante; no es un algoritmo que busque el mínimo de H.
 
-- **Nombre:** Ecuaciones de Hamilton
-- **Autor:** William Rowan Hamilton
-- **Año:** 1834
-- **Área:** mecánica analítica y sistemas dinámicos
-- **Nivel:** universidad
-- **Tipo:** sistema de ecuaciones diferenciales de primer orden
+## Magnitudes
 
-## Variables
+| Símbolo | Significado |
+| :-- | :-- |
+| q | Coordenada generalizada canónica; en el oscilador es posición. |
+| p | Momento canónico conjugado a q; en este modelo p=m q̇. |
+| H | Hamiltoniano clásico, obtenido por transformación de Legendre. |
+| L | Lagrangiano clásico, aquí energía cinética menos potencial. |
+| i | Índice de grado de libertad. |
+| m | Masa positiva del oscilador. |
+| k | Rigidez positiva del resorte; no índice en esta expresión. |
 
-- `q_i`: coordenada generalizada.
-- `p_i`: momento conjugado.
-- `H`: hamiltoniano.
-- `L`: lagrangiano.
-- `m`: masa del oscilador.
-- `k`: constante del muelle.
+## Alcance
 
-## Caso del oscilador
+Coordenadas canónicas y transformación regular del lagrangiano. El laboratorio usa un oscilador conservativo de un grado de libertad, k,m>0, sin rozamiento ni fuerzas externas variables.
 
-Para un oscilador masa-muelle, el hamiltoniano suma energía cinética y energía potencial. El resultado son dos ecuaciones: una para la posición y otra para el momento.
+## Unidades
 
-## Lectura del simulador
-
-La vista izquierda muestra el sistema masa-muelle. La vista derecha muestra la trayectoria en el plano formado por posición y momento. Si el sistema es conservativo, la curva se mantiene cerrada y la energía total se conserva aproximadamente.
-
-## Advertencia numérica
-
-Una integración simple puede introducir una pequeña deriva de energía. Para cálculos científicos exigentes se usan integradores simplécticos.
+q m, p kg·m/s, m kg, k N/m y H J. ∂H/∂p usa m/s; −∂H/∂q usa N. Los ejes del retrato son posición y momento, no dos coordenadas espaciales.

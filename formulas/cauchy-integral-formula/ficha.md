@@ -1,28 +1,23 @@
-# Ficha
+# Fórmula Integral de Cauchy
 
-## Identificación
+Para una función holomorfa, los valores en un contorno determinan sus valores y derivadas en el interior. La integral incorpora la orientación del camino; el denominador sitúa la información en el punto z0.
 
-- **Nombre:** Fórmula Integral de Cauchy
-- **Autor:** Augustin-Louis Cauchy
-- **Área:** análisis complejo
-- **Nivel:** universidad
-- **Tipo:** fórmula integral de reconstrucción
+## Magnitudes
 
-## Elementos
+| Símbolo | Significado |
+| :-- | :-- |
+| 0 | Subíndice del punto de evaluación, no un factor cero. |
+| f | Función holomorfa en un entorno del contorno y su interior. |
+| z | Variable compleja del recorrido; z_0 es el punto interior de evaluación. |
+| i | Unidad imaginaria, i²=−1. |
+| γ | Contorno simple cerrado positivamente orientado, antihorario en el ejemplo. |
+| n | Orden entero no negativo de la derivada de f. |
+| π | Número pi; el factor 2πi corresponde a una vuelta positiva. |
 
-- `gamma`: contorno cerrado orientado.
-- `z0`: punto de evaluación.
-- `f(z)`: función holomorfa en la región considerada.
-- `i`: unidad imaginaria.
+## Alcance
 
-## Interpretación
+f holomorfa sobre un entorno del dominio cerrado, contorno simple por tramos suave y z0 estrictamente interior para la fórmula escrita. La integral singular en el borde requeriría otra noción y no se calcula como este caso.
 
-Si `z0` está dentro del contorno, la integral normalizada devuelve `f(z0)`. Si `z0` está fuera, no hay polo encerrado y la contribución asociada a ese punto es cero.
+## Unidades
 
-## Lectura del simulador
-
-El usuario arrastra el punto `z0`. El contorno circular indica la frontera de integración. El panel inferior indica si el punto está dentro o fuera y muestra el valor que devuelve la integral normalizada.
-
-## Consecuencia
-
-La fórmula implica que las funciones holomorfas son extremadamente rígidas: los valores de frontera determinan los valores interiores y también las derivadas.
+z y z0 se usan adimensionales en el plano complejo del laboratorio. dz/(z−z0) no tiene dimensión; la integral tiene la misma unidad que f. Las partes real e imaginaria se muestran separadas para no confundir módulo y valor complejo.

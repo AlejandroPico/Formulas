@@ -1,26 +1,21 @@
-# Ficha
+# Ecuación logística
 
-## Identificación
+La logística combina crecimiento proporcional a N y una limitación lineal de la tasa relativa. N=0 y N=K son equilibrios. El modelo permite empezar por encima de K y entonces disminuir; no impone N≤K a todos los estados.
 
-- **Nombre:** Ecuación logística
-- **Autor:** Pierre François Verhulst
-- **Año:** 1838
-- **Área:** sistemas dinámicos y biología matemática
-- **Nivel:** bachillerato y universidad inicial
-- **Tipo:** ecuación diferencial de crecimiento limitado
+## Magnitudes
 
-## Variables
+| Símbolo | Significado |
+| :-- | :-- |
+| 0 | Subíndice inicial de la población. |
+| N | Población continua; N_0 es el valor inicial. |
+| r | Tasa intrínseca no negativa de crecimiento, inversa de tiempo. |
+| K | Capacidad positiva del modelo. |
+| t | Tiempo en días en el laboratorio. |
 
-- `N`: población.
-- `t`: tiempo.
-- `r`: tasa intrínseca de crecimiento.
-- `K`: capacidad de carga.
-- `A`: constante determinada por la condición inicial.
+## Alcance
 
-## Lectura del simulador
+K>0, r≥0 y N0≥0. Cantidad continua, parámetros constantes y sin migración. Con N0>K el denominador se mantiene positivo para t≥0; la población se acerca a K desde arriba.
 
-La curva verde muestra el crecimiento de la población. La línea roja discontinua marca `K`, el techo ambiental. Al subir `r`, la curva llega antes a la saturación.
+## Unidades
 
-## Nota de corrección
-
-La fórmula está escrita sin `left` ni `right` dinámicos para evitar errores de MathJax con delimitadores no reconocidos.
+N,N0,K usan una unidad común de cantidad; r día⁻¹ y t días. N/K y rt son adimensionales. N′ usa cantidad por día. Los individuos del dibujo no se usan como conteo entero en el cálculo.

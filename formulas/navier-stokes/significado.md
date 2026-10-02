@@ -1,9 +1,11 @@
 # Significado
 
-Las ecuaciones de Navier-Stokes describen como se mueve un fluido viscoso. Son, en esencia, la segunda ley de Newton aplicada a una pequena porcion de fluido: la masa por aceleracion se equilibra con fuerzas de presion, viscosidad y fuerzas externas.
+Navier–Stokes equilibra inercia, presión, viscosidad y fuerza de volumen en un fluido newtoniano. La condición incompresible y la conservación general de masa completan alcances distintos. Esta ficha usa un canal estacionario, mientras la anterior ficha incompresible estudia decaimiento de vórtices.
 
-El termino de aceleracion material combina dos efectos. Uno es el cambio local de velocidad con el tiempo. El otro es la conveccion: una particula de fluido puede entrar en una zona donde la velocidad del campo es distinta. Ese termino no lineal es una de las razones por las que el comportamiento de los fluidos puede ser tan complejo.
+## Del símbolo al fenómeno
 
-La presion empuja el fluido desde regiones de alta presion hacia regiones de baja presion. La viscosidad suaviza diferencias de velocidad entre capas vecinas. Las fuerzas externas pueden representar gravedad, empuje, campos o cualquier accion distribuida sobre el fluido.
+Solución estacionaria exacta Couette–Poiseuille: u(y)=U·y/H+G·y(H−y)/(2μ), v=w=0. G=−∂p/∂x. Compara presión, viscosidad y arrastre de la pared; no es una búsqueda de singularidades 3D.
 
-El simulador no resuelve Navier-Stokes con precision numerica completa. Es una visualizacion educativa de flujo alrededor de un obstaculo cilindrico. La viscosidad y la velocidad modifican la estela, los trazadores y un numero de Reynolds visual que ayuda a interpretar si el flujo parece mas ordenado o mas inestable.
+## Un ejemplo comprobable
+
+G=2 Pa/m, H=1 m, μ=1 Pa·s y paredes quietas. Calcula u(H/2). u=G H²/(8μ)=0,25 m/s.

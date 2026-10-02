@@ -1,9 +1,9 @@
 # Historia
 
-Claude-Louis Navier y George Gabriel Stokes desarrollaron en el siglo XIX las ecuaciones que hoy llevan sus nombres. Navier introdujo ideas ligadas a la viscosidad y Stokes contribuyo a la formulacion continua que se usa en mecanica de fluidos.
+Navier y Stokes incorporaron efectos viscosos al balance de momento en el siglo XIX. Actualización comprobada el 2 de octubre de 2026: OpenAI publicó el 8 de septiembre un anuncio de prueba para las alternativas forzadas C y D del problema del milenio; la ficha oficial de Clay seguía mostrando estado «Active». El anuncio y el reconocimiento oficial son hechos distintos. No cambia la ecuación usada aquí ni convierte este canal particular en una demostración general.
 
-Estas ecuaciones extendieron la mecanica newtoniana al movimiento de medios continuos. En lugar de seguir particulas aisladas, se estudia un campo de velocidades, presiones y densidades definido en cada punto del espacio.
+[Referencia de estudio](https://www.claymath.org/millennium/Navier-Stokes-Equation/).
 
-Navier-Stokes se convirtio en una herramienta central para hidrodinamica, aerodinamica, oceanografia, meteorologia e ingenieria. Tambien se hizo famosa por la dificultad matematica de entender sus soluciones en tres dimensiones.
+[Anuncio y documentación de la prueba, 8 de septiembre de 2026](https://openai.com/index/navier-stokes-solution/).
 
-El problema de existencia y suavidad para Navier-Stokes incomprensible en tres dimensiones es uno de los grandes problemas matematicos abiertos. En aplicaciones, sin embargo, se usan aproximaciones, metodos numericos y modelos de turbulencia para resolver problemas reales.
+La fecha de creación del archivo se conserva en Inventario; la fecha de revisión registra esta actualización, no la fecha histórica del resultado.

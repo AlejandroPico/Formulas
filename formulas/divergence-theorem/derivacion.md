@@ -1,17 +1,11 @@
 # Derivación
 
-La intuición de la demostración se obtiene dividiendo un volumen en muchas celdas pequeñas. En cada celda, la divergencia mide el flujo neto que sale de esa celda por unidad de volumen.
+En un cubo pequeño, compara las componentes de F en las caras opuestas y multiplica por sus áreas. El teorema fundamental del cálculo convierte cada diferencia en una integral de derivada parcial. Sumando las tres direcciones se obtiene ∫V divF dV. Una partición de un volumen hace que las caras internas se cancelen por normales opuestas. Para F=(ax x,ay y,az z) y lado ℓ, divF=ax+ay+az y el flujo total es (ax+ay+az)ℓ³.
 
-Cuando se suman todas las celdas, los flujos a través de caras internas se cancelan: lo que sale de una celda entra en la vecina. Tras esa cancelación, solo queda el flujo a través de la frontera exterior.
+## Comprueba el resultado
 
-Por eso:
+F=(x,y,z) y cubo de lado 2. Calcula el flujo exterior. Divergencia 3 por volumen 8 da 24 m³/s.
 
-`flujo exterior total = suma de fuentes internas`.
+## Condiciones necesarias
 
-En el ejemplo del simulador, el campo es `F=(kx,ky)`. Su divergencia es:
-
-`∂(kx)/∂x + ∂(ky)/∂y = k+k=2k`.
-
-Como la divergencia es constante, la integral sobre la región se reduce a multiplicar `2k` por el área o volumen considerado. El flujo que cruza la frontera crece en la misma proporción.
-
-La versión tridimensional usa una superficie cerrada real y un volumen; el simulador representa una sección bidimensional para facilitar la lectura visual.
+Campo C1 y volumen con frontera cerrada regular por partes; normal exterior. Singularidades requieren excluirlas o usar una formulación apropiada. No se sustituye una superficie abierta por una frontera cerrada sin completar sus caras.

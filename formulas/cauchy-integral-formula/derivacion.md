@@ -1,9 +1,11 @@
 # Derivación
 
-La derivación parte del teorema integral de Cauchy. Si una función es holomorfa en una región, su integral sobre un contorno cerrado se anula. Para recuperar el valor en un punto `z0`, se estudia el integrando `f(z)/(z-z0)`.
+Sustrae f(z0) de f(z) en el numerador. El cociente [f(z)−f(z0)]/(z−z0) tiene una singularidad removible y su integral cerrada es cero. La parte restante usa ∮dz/(z−z0)=2πi cuando el punto es interior y la orientación positiva. Derivar n veces respecto a z0 produce n!/(z−z0)^(n+1), con las condiciones que justifican esa derivación.
 
-Ese integrando tiene un polo simple en `z0`. Si el punto está dentro del contorno, se separa `f(z)` como `f(z0)` más una diferencia que se anula al acercarse a `z0`. La parte constante produce exactamente el factor `2 pi i`, y el resto queda controlado por holomorfía.
+## Comprueba el resultado
 
-Al despejar, aparece la fórmula que expresa `f(z0)` como una integral sobre el contorno. La versión para derivadas se obtiene aplicando la misma idea a potencias superiores del denominador.
+f(z)=z²+1 y z0=1 dentro del círculo. ¿Cuánto vale f(z0)? f(1)=1²+1=2.
 
-La consecuencia es fuerte: una función holomorfa no solo es diferenciable una vez, sino infinitamente diferenciable, y todas sus derivadas pueden recuperarse mediante integrales de frontera.
+## Condiciones necesarias
+
+f holomorfa sobre un entorno del dominio cerrado, contorno simple por tramos suave y z0 estrictamente interior para la fórmula escrita. La integral singular en el borde requeriría otra noción y no se calcula como este caso.

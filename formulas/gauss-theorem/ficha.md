@@ -1,24 +1,23 @@
-# Ficha
+# Teorema de Gauss
 
-## Identificación
+Gauss y teorema de la divergencia son dos nombres del mismo resultado. Esta ficha se centra en sumar los seis flujos de un cubo con normales exteriores, sin perder signos.
 
-- **Nombre:** Teorema de Gauss
-- **Área:** cálculo vectorial
-- **Nivel:** universidad
-- **Tipo:** teorema integral de campo vectorial
+## Magnitudes
 
-## Elementos
+| Símbolo | Significado |
+| :-- | :-- |
+| F | Campo vectorial tridimensional de clase C1 alrededor del volumen. |
+| n | Vector normal unitario exterior a la superficie cerrada. |
+| V | Volumen encerrado; dV es su elemento de volumen. |
+| S | Superficie; dS es su elemento de área. |
+| x | Coordenada cartesiana y subíndice de componente horizontal. |
+| y | Coordenada cartesiana y subíndice de segunda componente. |
+| z | Coordenada cartesiana y subíndice de tercera componente. |
 
-- `F`: campo vectorial.
-- `V`: volumen encerrado.
-- `partial V`: frontera cerrada del volumen.
-- `n`: normal exterior.
-- `div F`: divergencia del campo.
+## Alcance
 
-## Lectura física
+Campo C1 y volumen con frontera cerrada regular por partes; normal exterior. Singularidades requieren excluirlas o usar una formulación apropiada. No se sustituye una superficie abierta por una frontera cerrada sin completar sus caras.
 
-La integral de superficie mide el flujo neto que atraviesa una frontera cerrada. La integral de volumen mide la suma de fuentes y sumideros internos. Si el flujo neto sale, la región contiene fuente neta; si entra, contiene sumidero neto.
+## Unidades
 
-## Lectura del simulador
-
-La circunferencia representa una superficie cerrada en una analogía bidimensional. El radio determina cuánta región con divergencia queda encerrada. La intensidad modifica la fuerza de la fuente. El flujo calculado crece con el área encerrada y con la divergencia interna.
+El ejemplo usa F como velocidad en m/s, ℓ en m, divF en s⁻¹ y flujo en m³/s. El teorema también se aplica a otros campos con unidades distintas; no es por sí solo una ley eléctrica ni identifica F con E.

@@ -1,23 +1,24 @@
-# Ficha
+# Ecuación de Sturm-Liouville
 
-## Identificación
+Las condiciones de frontera seleccionan valores permitidos de λ y funciones propias. El peso w define la ortogonalidad. La ficha usa la convención de operador −(py′)′+qy, y no mezcla ese signo con otra convención de q.
 
-- Nombre: Ecuación de Sturm-Liouville.
-- Área: ecuaciones diferenciales, análisis espectral y problemas de contorno.
-- Idea central: ciertos operadores diferenciales solo admiten soluciones no triviales para valores especiales de `λ`.
+## Magnitudes
 
-## Variables
+| Símbolo | Significado |
+| :-- | :-- |
+| p | Coeficiente positivo del término derivativo en el problema regular. |
+| q | Coeficiente de potencial de la ecuación; cero en el caso del laboratorio. |
+| w | Peso positivo que define el producto interno del problema. |
+| y | Función propia sujeta a condiciones de frontera. |
+| x | Variable espacial del intervalo. |
+| λ | Autovalor que permite una solución no nula con las condiciones de frontera. |
+| L | Longitud positiva del intervalo. |
+| n | Índice entero positivo del modo. |
 
-- `p(x)`: coeficiente principal del operador.
-- `q(x)`: potencial o término de orden cero.
-- `w(x)`: peso.
-- `λ`: autovalor.
-- `y(x)`: autofunción.
+## Alcance
 
-## Lectura del simulador
+Problema regular en intervalo finito con p,w positivos, coeficientes suficientemente suaves y condiciones autoadjuntas. El experimento usa Dirichlet homogéneas y n≥1; n=0 daría la función nula, no un estado normalizado.
 
-El control selecciona el modo `n`. La curva representa `sin(nπx)` con extremos fijos. Al aumentar `n`, aparecen más nodos internos y el autovalor `λ_n=n²π²` crece.
+## Unidades
 
-## Limitaciones
-
-El simulador muestra el caso más simple con `p=1`, `q=0`, `w=1` y condiciones de Dirichlet. Problemas generales pueden tener pesos variables, intervalos distintos y condiciones de contorno mixtas.
+En el ejemplo con x longitud, λ tiene unidad longitud⁻². La normalización elegida hace y de dimensión longitud⁻¹/². En el problema general las unidades de p,q,w deben fijarse conjuntamente; no todas son automáticamente iguales a uno.
