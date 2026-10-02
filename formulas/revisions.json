@@ -5330,6 +5330,1016 @@
           "Fecha de creación conservada y fuentes de estudio enlazadas"
         ]
       }
+    ],
+    "eigenvalues-eigenvectors": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "aprendizaje",
+          "derivacion",
+          "ficha",
+          "formula",
+          "historia",
+          "significado",
+          "unidades",
+          "usos",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "prerrequisitos"
+        ],
+        "summary": "Revisión completa: Encuentra direcciones que sobreviven a una matriz. Cuatro misiones; Direcciones propias / Explorar / Potencias de A. Modelos específicos, hipótesis, unidades, contenido y símbolos revisados.",
+        "checks": [
+          "3.919 contrastes matemáticos independientes del lote; autovalores, covarianza, boosts, termodinámica, Student, cinética y geodésicas",
+          "Todas las pestañas y símbolos específicos, incluidos índices tensoriales cuando corresponden",
+          "112 misiones del lote: predicción, respuesta incorrecta, pistas, ajuste y explicación",
+          "Teclado, ratón y tacto; cámaras 3D en seis laboratorios",
+          "Escritorio y móvil sin desbordamiento; capturas y contraste en Cuaderno, Colegio y Noche",
+          "Reproducción, pausa, ocultación y limpieza al salir",
+          "Recarga y nuevos simuladores comprobados sin conexión",
+          "LaTeX comprobado sin errores visibles en las 282 fórmulas del atlas",
+          "Disciplina, nivel, etiquetas y prerrequisitos canónicos; fechas de creación conservadas",
+          "Fuentes científicas de OpenStax, NIST, MIT, IUPAC y textos de relatividad enlazadas"
+        ]
+      }
+    ],
+    "principal-component-analysis-pca": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "aprendizaje",
+          "derivacion",
+          "ficha",
+          "formula",
+          "historia",
+          "interpretacion",
+          "limitaciones",
+          "significado",
+          "unidades",
+          "usos",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "prerrequisitos"
+        ],
+        "summary": "Revisión completa: Comprime una nube espacial conservando variación. Cuatro misiones; Nube 3D / Proyección 3D / Varianza retenida. Modelos específicos, hipótesis, unidades, contenido y símbolos revisados.",
+        "checks": [
+          "3.919 contrastes matemáticos independientes del lote; autovalores, covarianza, boosts, termodinámica, Student, cinética y geodésicas",
+          "Todas las pestañas y símbolos específicos, incluidos índices tensoriales cuando corresponden",
+          "112 misiones del lote: predicción, respuesta incorrecta, pistas, ajuste y explicación",
+          "Teclado, ratón y tacto; cámaras 3D en seis laboratorios",
+          "Escritorio y móvil sin desbordamiento; capturas y contraste en Cuaderno, Colegio y Noche",
+          "Reproducción, pausa, ocultación y limpieza al salir",
+          "Recarga y nuevos simuladores comprobados sin conexión",
+          "LaTeX comprobado sin errores visibles en las 282 fórmulas del atlas",
+          "Disciplina, nivel, etiquetas y prerrequisitos canónicos; fechas de creación conservadas",
+          "Fuentes científicas de OpenStax, NIST, MIT, IUPAC y textos de relatividad enlazadas"
+        ]
+      }
+    ],
+    "canonical-ensemble-partition-function": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "aprendizaje",
+          "derivacion",
+          "ficha",
+          "formula",
+          "historia",
+          "significado",
+          "unidades",
+          "usos",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "prerrequisitos"
+        ],
+        "summary": "Revisión completa: Reparte probabilidades entre niveles de energía. Cuatro misiones; Niveles / Explorar / Fluctuaciones. Modelos específicos, hipótesis, unidades, contenido y símbolos revisados.",
+        "checks": [
+          "3.919 contrastes matemáticos independientes del lote; autovalores, covarianza, boosts, termodinámica, Student, cinética y geodésicas",
+          "Todas las pestañas y símbolos específicos, incluidos índices tensoriales cuando corresponden",
+          "112 misiones del lote: predicción, respuesta incorrecta, pistas, ajuste y explicación",
+          "Teclado, ratón y tacto; cámaras 3D en seis laboratorios",
+          "Escritorio y móvil sin desbordamiento; capturas y contraste en Cuaderno, Colegio y Noche",
+          "Reproducción, pausa, ocultación y limpieza al salir",
+          "Recarga y nuevos simuladores comprobados sin conexión",
+          "LaTeX comprobado sin errores visibles en las 282 fórmulas del atlas",
+          "Disciplina, nivel, etiquetas y prerrequisitos canónicos; fechas de creación conservadas",
+          "Fuentes científicas de OpenStax, NIST, MIT, IUPAC y textos de relatividad enlazadas"
+        ]
+      }
+    ],
+    "lorentz-transformations": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "aprendizaje",
+          "derivacion",
+          "ficha",
+          "formula",
+          "historia",
+          "significado",
+          "unidades",
+          "usos",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "prerrequisitos"
+        ],
+        "summary": "Revisión completa: Transforma el mismo evento entre dos observadores. Cuatro misiones; Evento / Explorar / Ejes de Minkowski. Modelos específicos, hipótesis, unidades, contenido y símbolos revisados.",
+        "checks": [
+          "3.919 contrastes matemáticos independientes del lote; autovalores, covarianza, boosts, termodinámica, Student, cinética y geodésicas",
+          "Todas las pestañas y símbolos específicos, incluidos índices tensoriales cuando corresponden",
+          "112 misiones del lote: predicción, respuesta incorrecta, pistas, ajuste y explicación",
+          "Teclado, ratón y tacto; cámaras 3D en seis laboratorios",
+          "Escritorio y móvil sin desbordamiento; capturas y contraste en Cuaderno, Colegio y Noche",
+          "Reproducción, pausa, ocultación y limpieza al salir",
+          "Recarga y nuevos simuladores comprobados sin conexión",
+          "LaTeX comprobado sin errores visibles en las 282 fórmulas del atlas",
+          "Disciplina, nivel, etiquetas y prerrequisitos canónicos; fechas de creación conservadas",
+          "Fuentes científicas de OpenStax, NIST, MIT, IUPAC y textos de relatividad enlazadas"
+        ]
+      }
+    ],
+    "relativistic-velocity-addition": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "aprendizaje",
+          "derivacion",
+          "ficha",
+          "formula",
+          "historia",
+          "significado",
+          "unidades",
+          "usos",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "prerrequisitos"
+        ],
+        "summary": "Revisión completa: Lanza una señal desde una nave que se mueve. Cuatro misiones; Dos sistemas / Explorar / Frontera de la luz. Modelos específicos, hipótesis, unidades, contenido y símbolos revisados.",
+        "checks": [
+          "3.919 contrastes matemáticos independientes del lote; autovalores, covarianza, boosts, termodinámica, Student, cinética y geodésicas",
+          "Todas las pestañas y símbolos específicos, incluidos índices tensoriales cuando corresponden",
+          "112 misiones del lote: predicción, respuesta incorrecta, pistas, ajuste y explicación",
+          "Teclado, ratón y tacto; cámaras 3D en seis laboratorios",
+          "Escritorio y móvil sin desbordamiento; capturas y contraste en Cuaderno, Colegio y Noche",
+          "Reproducción, pausa, ocultación y limpieza al salir",
+          "Recarga y nuevos simuladores comprobados sin conexión",
+          "LaTeX comprobado sin errores visibles en las 282 fórmulas del atlas",
+          "Disciplina, nivel, etiquetas y prerrequisitos canónicos; fechas de creación conservadas",
+          "Fuentes científicas de OpenStax, NIST, MIT, IUPAC y textos de relatividad enlazadas"
+        ]
+      }
+    ],
+    "relativistic-length-contraction": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "aprendizaje",
+          "derivacion",
+          "ficha",
+          "formula",
+          "historia",
+          "significado",
+          "unidades",
+          "usos",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "prerrequisitos"
+        ],
+        "summary": "Revisión completa: Mide una barra con dos marcas simultáneas. Cuatro misiones; Regla móvil / Explorar / Simultaneidad. Modelos específicos, hipótesis, unidades, contenido y símbolos revisados.",
+        "checks": [
+          "3.919 contrastes matemáticos independientes del lote; autovalores, covarianza, boosts, termodinámica, Student, cinética y geodésicas",
+          "Todas las pestañas y símbolos específicos, incluidos índices tensoriales cuando corresponden",
+          "112 misiones del lote: predicción, respuesta incorrecta, pistas, ajuste y explicación",
+          "Teclado, ratón y tacto; cámaras 3D en seis laboratorios",
+          "Escritorio y móvil sin desbordamiento; capturas y contraste en Cuaderno, Colegio y Noche",
+          "Reproducción, pausa, ocultación y limpieza al salir",
+          "Recarga y nuevos simuladores comprobados sin conexión",
+          "LaTeX comprobado sin errores visibles en las 282 fórmulas del atlas",
+          "Disciplina, nivel, etiquetas y prerrequisitos canónicos; fechas de creación conservadas",
+          "Fuentes científicas de OpenStax, NIST, MIT, IUPAC y textos de relatividad enlazadas"
+        ]
+      }
+    ],
+    "relativistic-time-dilation": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "aprendizaje",
+          "derivacion",
+          "ficha",
+          "formula",
+          "historia",
+          "significado",
+          "unidades",
+          "usos",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "prerrequisitos"
+        ],
+        "summary": "Revisión completa: Compara un reloj de luz y un reloj del laboratorio. Cuatro misiones; Reloj de luz / Explorar / Línea de universo. Modelos específicos, hipótesis, unidades, contenido y símbolos revisados.",
+        "checks": [
+          "3.919 contrastes matemáticos independientes del lote; autovalores, covarianza, boosts, termodinámica, Student, cinética y geodésicas",
+          "Todas las pestañas y símbolos específicos, incluidos índices tensoriales cuando corresponden",
+          "112 misiones del lote: predicción, respuesta incorrecta, pistas, ajuste y explicación",
+          "Teclado, ratón y tacto; cámaras 3D en seis laboratorios",
+          "Escritorio y móvil sin desbordamiento; capturas y contraste en Cuaderno, Colegio y Noche",
+          "Reproducción, pausa, ocultación y limpieza al salir",
+          "Recarga y nuevos simuladores comprobados sin conexión",
+          "LaTeX comprobado sin errores visibles en las 282 fórmulas del atlas",
+          "Disciplina, nivel, etiquetas y prerrequisitos canónicos; fechas de creación conservadas",
+          "Fuentes científicas de OpenStax, NIST, MIT, IUPAC y textos de relatividad enlazadas"
+        ]
+      }
+    ],
+    "mass-energy-equivalence": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "aprendizaje",
+          "derivacion",
+          "ficha",
+          "formula",
+          "historia",
+          "significado",
+          "unidades",
+          "usos",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "prerrequisitos"
+        ],
+        "summary": "Revisión completa: Convierte una pequeña masa de reposo en escala energética. Cuatro misiones; Balance / Explorar / Escala de energía. Modelos específicos, hipótesis, unidades, contenido y símbolos revisados.",
+        "checks": [
+          "3.919 contrastes matemáticos independientes del lote; autovalores, covarianza, boosts, termodinámica, Student, cinética y geodésicas",
+          "Todas las pestañas y símbolos específicos, incluidos índices tensoriales cuando corresponden",
+          "112 misiones del lote: predicción, respuesta incorrecta, pistas, ajuste y explicación",
+          "Teclado, ratón y tacto; cámaras 3D en seis laboratorios",
+          "Escritorio y móvil sin desbordamiento; capturas y contraste en Cuaderno, Colegio y Noche",
+          "Reproducción, pausa, ocultación y limpieza al salir",
+          "Recarga y nuevos simuladores comprobados sin conexión",
+          "LaTeX comprobado sin errores visibles en las 282 fórmulas del atlas",
+          "Disciplina, nivel, etiquetas y prerrequisitos canónicos; fechas de creación conservadas",
+          "Fuentes científicas de OpenStax, NIST, MIT, IUPAC y textos de relatividad enlazadas"
+        ]
+      }
+    ],
+    "energy-momentum-relation": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "aprendizaje",
+          "derivacion",
+          "ficha",
+          "formula",
+          "historia",
+          "significado",
+          "unidades",
+          "usos",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "prerrequisitos"
+        ],
+        "summary": "Revisión completa: Explora la curva de energía de partículas. Cuatro misiones; Dispersión / Explorar / Límite sin masa. Modelos específicos, hipótesis, unidades, contenido y símbolos revisados.",
+        "checks": [
+          "3.919 contrastes matemáticos independientes del lote; autovalores, covarianza, boosts, termodinámica, Student, cinética y geodésicas",
+          "Todas las pestañas y símbolos específicos, incluidos índices tensoriales cuando corresponden",
+          "112 misiones del lote: predicción, respuesta incorrecta, pistas, ajuste y explicación",
+          "Teclado, ratón y tacto; cámaras 3D en seis laboratorios",
+          "Escritorio y móvil sin desbordamiento; capturas y contraste en Cuaderno, Colegio y Noche",
+          "Reproducción, pausa, ocultación y limpieza al salir",
+          "Recarga y nuevos simuladores comprobados sin conexión",
+          "LaTeX comprobado sin errores visibles en las 282 fórmulas del atlas",
+          "Disciplina, nivel, etiquetas y prerrequisitos canónicos; fechas de creación conservadas",
+          "Fuentes científicas de OpenStax, NIST, MIT, IUPAC y textos de relatividad enlazadas"
+        ]
+      }
+    ],
+    "relativistic-energy-momentum-relation": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "aprendizaje",
+          "derivacion",
+          "ficha",
+          "formula",
+          "historia",
+          "significado",
+          "unidades",
+          "usos",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "prerrequisitos"
+        ],
+        "summary": "Revisión completa: Cambia de observador sin cambiar la masa. Cuatro misiones; Cuadrimomento / Explorar / Boost de energía. Modelos específicos, hipótesis, unidades, contenido y símbolos revisados.",
+        "checks": [
+          "3.919 contrastes matemáticos independientes del lote; autovalores, covarianza, boosts, termodinámica, Student, cinética y geodésicas",
+          "Todas las pestañas y símbolos específicos, incluidos índices tensoriales cuando corresponden",
+          "112 misiones del lote: predicción, respuesta incorrecta, pistas, ajuste y explicación",
+          "Teclado, ratón y tacto; cámaras 3D en seis laboratorios",
+          "Escritorio y móvil sin desbordamiento; capturas y contraste en Cuaderno, Colegio y Noche",
+          "Reproducción, pausa, ocultación y limpieza al salir",
+          "Recarga y nuevos simuladores comprobados sin conexión",
+          "LaTeX comprobado sin errores visibles en las 282 fórmulas del atlas",
+          "Disciplina, nivel, etiquetas y prerrequisitos canónicos; fechas de creación conservadas",
+          "Fuentes científicas de OpenStax, NIST, MIT, IUPAC y textos de relatividad enlazadas"
+        ]
+      }
+    ],
+    "einstein-model-specific-heat": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "aprendizaje",
+          "derivacion",
+          "ficha",
+          "formula",
+          "historia",
+          "significado",
+          "unidades",
+          "usos",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "prerrequisitos"
+        ],
+        "summary": "Revisión completa: Descongela grados de libertad cuánticos. Cuatro misiones; Osciladores / Explorar / Límite clásico. Modelos específicos, hipótesis, unidades, contenido y símbolos revisados.",
+        "checks": [
+          "3.919 contrastes matemáticos independientes del lote; autovalores, covarianza, boosts, termodinámica, Student, cinética y geodésicas",
+          "Todas las pestañas y símbolos específicos, incluidos índices tensoriales cuando corresponden",
+          "112 misiones del lote: predicción, respuesta incorrecta, pistas, ajuste y explicación",
+          "Teclado, ratón y tacto; cámaras 3D en seis laboratorios",
+          "Escritorio y móvil sin desbordamiento; capturas y contraste en Cuaderno, Colegio y Noche",
+          "Reproducción, pausa, ocultación y limpieza al salir",
+          "Recarga y nuevos simuladores comprobados sin conexión",
+          "LaTeX comprobado sin errores visibles en las 282 fórmulas del atlas",
+          "Disciplina, nivel, etiquetas y prerrequisitos canónicos; fechas de creación conservadas",
+          "Fuentes científicas de OpenStax, NIST, MIT, IUPAC y textos de relatividad enlazadas"
+        ]
+      }
+    ],
+    "t-hypothesis-test": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "aprendizaje",
+          "derivacion",
+          "ficha",
+          "formula",
+          "historia",
+          "significado",
+          "unidades",
+          "usos",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "prerrequisitos"
+        ],
+        "summary": "Revisión completa: Distingue efecto, ruido y tamaño de muestra. Cuatro misiones; Evidencia / Explorar / Región crítica. Modelos específicos, hipótesis, unidades, contenido y símbolos revisados.",
+        "checks": [
+          "3.919 contrastes matemáticos independientes del lote; autovalores, covarianza, boosts, termodinámica, Student, cinética y geodésicas",
+          "Todas las pestañas y símbolos específicos, incluidos índices tensoriales cuando corresponden",
+          "112 misiones del lote: predicción, respuesta incorrecta, pistas, ajuste y explicación",
+          "Teclado, ratón y tacto; cámaras 3D en seis laboratorios",
+          "Escritorio y móvil sin desbordamiento; capturas y contraste en Cuaderno, Colegio y Noche",
+          "Reproducción, pausa, ocultación y limpieza al salir",
+          "Recarga y nuevos simuladores comprobados sin conexión",
+          "LaTeX comprobado sin errores visibles en las 282 fórmulas del atlas",
+          "Disciplina, nivel, etiquetas y prerrequisitos canónicos; fechas de creación conservadas",
+          "Fuentes científicas de OpenStax, NIST, MIT, IUPAC y textos de relatividad enlazadas"
+        ]
+      }
+    ],
+    "spacetime-interval": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "aprendizaje",
+          "derivacion",
+          "ficha",
+          "formula",
+          "historia",
+          "significado",
+          "unidades",
+          "usos",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "prerrequisitos"
+        ],
+        "summary": "Revisión completa: Clasifica eventos antes de cambiar de observador. Cuatro misiones; Cono causal / Explorar / Intervalo invariante. Modelos específicos, hipótesis, unidades, contenido y símbolos revisados.",
+        "checks": [
+          "3.919 contrastes matemáticos independientes del lote; autovalores, covarianza, boosts, termodinámica, Student, cinética y geodésicas",
+          "Todas las pestañas y símbolos específicos, incluidos índices tensoriales cuando corresponden",
+          "112 misiones del lote: predicción, respuesta incorrecta, pistas, ajuste y explicación",
+          "Teclado, ratón y tacto; cámaras 3D en seis laboratorios",
+          "Escritorio y móvil sin desbordamiento; capturas y contraste en Cuaderno, Colegio y Noche",
+          "Reproducción, pausa, ocultación y limpieza al salir",
+          "Recarga y nuevos simuladores comprobados sin conexión",
+          "LaTeX comprobado sin errores visibles en las 282 fórmulas del atlas",
+          "Disciplina, nivel, etiquetas y prerrequisitos canónicos; fechas de creación conservadas",
+          "Fuentes científicas de OpenStax, NIST, MIT, IUPAC y textos de relatividad enlazadas"
+        ]
+      }
+    ],
+    "hardy-weinberg-equilibrium": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "aprendizaje",
+          "derivacion",
+          "ficha",
+          "formula",
+          "historia",
+          "significado",
+          "unidades",
+          "usos",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "prerrequisitos"
+        ],
+        "summary": "Revisión completa: Reparte alelos y predice genotipos. Cuatro misiones; Cruces / Explorar / Frecuencias esperadas. Modelos específicos, hipótesis, unidades, contenido y símbolos revisados.",
+        "checks": [
+          "3.919 contrastes matemáticos independientes del lote; autovalores, covarianza, boosts, termodinámica, Student, cinética y geodésicas",
+          "Todas las pestañas y símbolos específicos, incluidos índices tensoriales cuando corresponden",
+          "112 misiones del lote: predicción, respuesta incorrecta, pistas, ajuste y explicación",
+          "Teclado, ratón y tacto; cámaras 3D en seis laboratorios",
+          "Escritorio y móvil sin desbordamiento; capturas y contraste en Cuaderno, Colegio y Noche",
+          "Reproducción, pausa, ocultación y limpieza al salir",
+          "Recarga y nuevos simuladores comprobados sin conexión",
+          "LaTeX comprobado sin errores visibles en las 282 fórmulas del atlas",
+          "Disciplina, nivel, etiquetas y prerrequisitos canónicos; fechas de creación conservadas",
+          "Fuentes científicas de OpenStax, NIST, MIT, IUPAC y textos de relatividad enlazadas"
+        ]
+      }
+    ],
+    "potential-of-hydrogen-ph": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "aprendizaje",
+          "derivacion",
+          "ficha",
+          "formula",
+          "historia",
+          "significado",
+          "unidades",
+          "usos",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "prerrequisitos"
+        ],
+        "summary": "Revisión completa: Explora una escala que comprime factores de diez. Cuatro misiones; Actividad / Explorar / Escala logarítmica. Modelos específicos, hipótesis, unidades, contenido y símbolos revisados.",
+        "checks": [
+          "3.919 contrastes matemáticos independientes del lote; autovalores, covarianza, boosts, termodinámica, Student, cinética y geodésicas",
+          "Todas las pestañas y símbolos específicos, incluidos índices tensoriales cuando corresponden",
+          "112 misiones del lote: predicción, respuesta incorrecta, pistas, ajuste y explicación",
+          "Teclado, ratón y tacto; cámaras 3D en seis laboratorios",
+          "Escritorio y móvil sin desbordamiento; capturas y contraste en Cuaderno, Colegio y Noche",
+          "Reproducción, pausa, ocultación y limpieza al salir",
+          "Recarga y nuevos simuladores comprobados sin conexión",
+          "LaTeX comprobado sin errores visibles en las 282 fórmulas del atlas",
+          "Disciplina, nivel, etiquetas y prerrequisitos canónicos; fechas de creación conservadas",
+          "Fuentes científicas de OpenStax, NIST, MIT, IUPAC y textos de relatividad enlazadas"
+        ]
+      }
+    ],
+    "ionic-product-of-water": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "aprendizaje",
+          "derivacion",
+          "ficha",
+          "formula",
+          "historia",
+          "significado",
+          "unidades",
+          "usos",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "prerrequisitos"
+        ],
+        "summary": "Revisión completa: Mueve acidez y basicidad sin perder el producto. Cuatro misiones; Dos iones / Explorar / Neutralidad. Modelos específicos, hipótesis, unidades, contenido y símbolos revisados.",
+        "checks": [
+          "3.919 contrastes matemáticos independientes del lote; autovalores, covarianza, boosts, termodinámica, Student, cinética y geodésicas",
+          "Todas las pestañas y símbolos específicos, incluidos índices tensoriales cuando corresponden",
+          "112 misiones del lote: predicción, respuesta incorrecta, pistas, ajuste y explicación",
+          "Teclado, ratón y tacto; cámaras 3D en seis laboratorios",
+          "Escritorio y móvil sin desbordamiento; capturas y contraste en Cuaderno, Colegio y Noche",
+          "Reproducción, pausa, ocultación y limpieza al salir",
+          "Recarga y nuevos simuladores comprobados sin conexión",
+          "LaTeX comprobado sin errores visibles en las 282 fórmulas del atlas",
+          "Disciplina, nivel, etiquetas y prerrequisitos canónicos; fechas de creación conservadas",
+          "Fuentes científicas de OpenStax, NIST, MIT, IUPAC y textos de relatividad enlazadas"
+        ]
+      }
+    ],
+    "hill-dose-response-equation": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "aprendizaje",
+          "derivacion",
+          "ficha",
+          "formula",
+          "historia",
+          "significado",
+          "unidades",
+          "usos",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "prerrequisitos"
+        ],
+        "summary": "Revisión completa: Ajusta una curva de respuesta cooperativa. Cuatro misiones; Respuesta / Explorar / Concentración logarítmica. Modelos específicos, hipótesis, unidades, contenido y símbolos revisados.",
+        "checks": [
+          "3.919 contrastes matemáticos independientes del lote; autovalores, covarianza, boosts, termodinámica, Student, cinética y geodésicas",
+          "Todas las pestañas y símbolos específicos, incluidos índices tensoriales cuando corresponden",
+          "112 misiones del lote: predicción, respuesta incorrecta, pistas, ajuste y explicación",
+          "Teclado, ratón y tacto; cámaras 3D en seis laboratorios",
+          "Escritorio y móvil sin desbordamiento; capturas y contraste en Cuaderno, Colegio y Noche",
+          "Reproducción, pausa, ocultación y limpieza al salir",
+          "Recarga y nuevos simuladores comprobados sin conexión",
+          "LaTeX comprobado sin errores visibles en las 282 fórmulas del atlas",
+          "Disciplina, nivel, etiquetas y prerrequisitos canónicos; fechas de creación conservadas",
+          "Fuentes científicas de OpenStax, NIST, MIT, IUPAC y textos de relatividad enlazadas"
+        ]
+      }
+    ],
+    "michaelis-menten-kinetics": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "aprendizaje",
+          "derivacion",
+          "ficha",
+          "formula",
+          "historia",
+          "significado",
+          "unidades",
+          "usos",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "prerrequisitos"
+        ],
+        "summary": "Revisión completa: Satura enzimas y sigue el agotamiento de sustrato. Cuatro misiones; Velocidad inicial / Explorar / Producto acumulado. Modelos específicos, hipótesis, unidades, contenido y símbolos revisados.",
+        "checks": [
+          "3.919 contrastes matemáticos independientes del lote; autovalores, covarianza, boosts, termodinámica, Student, cinética y geodésicas",
+          "Todas las pestañas y símbolos específicos, incluidos índices tensoriales cuando corresponden",
+          "112 misiones del lote: predicción, respuesta incorrecta, pistas, ajuste y explicación",
+          "Teclado, ratón y tacto; cámaras 3D en seis laboratorios",
+          "Escritorio y móvil sin desbordamiento; capturas y contraste en Cuaderno, Colegio y Noche",
+          "Reproducción, pausa, ocultación y limpieza al salir",
+          "Recarga y nuevos simuladores comprobados sin conexión",
+          "LaTeX comprobado sin errores visibles en las 282 fórmulas del atlas",
+          "Disciplina, nivel, etiquetas y prerrequisitos canónicos; fechas de creación conservadas",
+          "Fuentes científicas de OpenStax, NIST, MIT, IUPAC y textos de relatividad enlazadas"
+        ]
+      }
+    ],
+    "hydrogen-ionization-energy": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "aprendizaje",
+          "derivacion",
+          "ficha",
+          "formula",
+          "historia",
+          "significado",
+          "unidades",
+          "usos",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "prerrequisitos"
+        ],
+        "summary": "Revisión completa: Supera el umbral de un electrón ligado. Cuatro misiones; Niveles / Explorar / Fotoionización. Modelos específicos, hipótesis, unidades, contenido y símbolos revisados.",
+        "checks": [
+          "3.919 contrastes matemáticos independientes del lote; autovalores, covarianza, boosts, termodinámica, Student, cinética y geodésicas",
+          "Todas las pestañas y símbolos específicos, incluidos índices tensoriales cuando corresponden",
+          "112 misiones del lote: predicción, respuesta incorrecta, pistas, ajuste y explicación",
+          "Teclado, ratón y tacto; cámaras 3D en seis laboratorios",
+          "Escritorio y móvil sin desbordamiento; capturas y contraste en Cuaderno, Colegio y Noche",
+          "Reproducción, pausa, ocultación y limpieza al salir",
+          "Recarga y nuevos simuladores comprobados sin conexión",
+          "LaTeX comprobado sin errores visibles en las 282 fórmulas del atlas",
+          "Disciplina, nivel, etiquetas y prerrequisitos canónicos; fechas de creación conservadas",
+          "Fuentes científicas de OpenStax, NIST, MIT, IUPAC y textos de relatividad enlazadas"
+        ]
+      }
+    ],
+    "bohr-radius": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "aprendizaje",
+          "derivacion",
+          "ficha",
+          "formula",
+          "historia",
+          "significado",
+          "unidades",
+          "usos",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "prerrequisitos"
+        ],
+        "summary": "Revisión completa: Relaciona tamaño atómico y distribución radial. Cuatro misiones; Escala atómica / Nube radial 3D / Distribución radial. Modelos específicos, hipótesis, unidades, contenido y símbolos revisados.",
+        "checks": [
+          "3.919 contrastes matemáticos independientes del lote; autovalores, covarianza, boosts, termodinámica, Student, cinética y geodésicas",
+          "Todas las pestañas y símbolos específicos, incluidos índices tensoriales cuando corresponden",
+          "112 misiones del lote: predicción, respuesta incorrecta, pistas, ajuste y explicación",
+          "Teclado, ratón y tacto; cámaras 3D en seis laboratorios",
+          "Escritorio y móvil sin desbordamiento; capturas y contraste en Cuaderno, Colegio y Noche",
+          "Reproducción, pausa, ocultación y limpieza al salir",
+          "Recarga y nuevos simuladores comprobados sin conexión",
+          "LaTeX comprobado sin errores visibles en las 282 fórmulas del atlas",
+          "Disciplina, nivel, etiquetas y prerrequisitos canónicos; fechas de creación conservadas",
+          "Fuentes científicas de OpenStax, NIST, MIT, IUPAC y textos de relatividad enlazadas"
+        ]
+      }
+    ],
+    "geodesic-equation-gr": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "aprendizaje",
+          "derivacion",
+          "ficha",
+          "formula",
+          "historia",
+          "significado",
+          "unidades",
+          "usos",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "prerrequisitos"
+        ],
+        "summary": "Revisión completa: Compara una órbita relativista con su límite newtoniano. Cuatro misiones; Órbita / Geometría espacial 3D / Precesión. Modelos específicos, hipótesis, unidades, contenido y símbolos revisados.",
+        "checks": [
+          "3.919 contrastes matemáticos independientes del lote; autovalores, covarianza, boosts, termodinámica, Student, cinética y geodésicas",
+          "Todas las pestañas y símbolos específicos, incluidos índices tensoriales cuando corresponden",
+          "112 misiones del lote: predicción, respuesta incorrecta, pistas, ajuste y explicación",
+          "Teclado, ratón y tacto; cámaras 3D en seis laboratorios",
+          "Escritorio y móvil sin desbordamiento; capturas y contraste en Cuaderno, Colegio y Noche",
+          "Reproducción, pausa, ocultación y limpieza al salir",
+          "Recarga y nuevos simuladores comprobados sin conexión",
+          "LaTeX comprobado sin errores visibles en las 282 fórmulas del atlas",
+          "Disciplina, nivel, etiquetas y prerrequisitos canónicos; fechas de creación conservadas",
+          "Fuentes científicas de OpenStax, NIST, MIT, IUPAC y textos de relatividad enlazadas"
+        ]
+      }
+    ],
+    "general-relativity": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "aprendizaje",
+          "derivacion",
+          "ficha",
+          "formula",
+          "historia",
+          "significado",
+          "unidades",
+          "usos",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "prerrequisitos"
+        ],
+        "summary": "Revisión completa: Relaciona expansión y densidad en una solución de Einstein. Cuatro misiones; Universo de polvo / Expansión 3D / Geometría y materia. Modelos específicos, hipótesis, unidades, contenido y símbolos revisados.",
+        "checks": [
+          "3.919 contrastes matemáticos independientes del lote; autovalores, covarianza, boosts, termodinámica, Student, cinética y geodésicas",
+          "Todas las pestañas y símbolos específicos, incluidos índices tensoriales cuando corresponden",
+          "112 misiones del lote: predicción, respuesta incorrecta, pistas, ajuste y explicación",
+          "Teclado, ratón y tacto; cámaras 3D en seis laboratorios",
+          "Escritorio y móvil sin desbordamiento; capturas y contraste en Cuaderno, Colegio y Noche",
+          "Reproducción, pausa, ocultación y limpieza al salir",
+          "Recarga y nuevos simuladores comprobados sin conexión",
+          "LaTeX comprobado sin errores visibles en las 282 fórmulas del atlas",
+          "Disciplina, nivel, etiquetas y prerrequisitos canónicos; fechas de creación conservadas",
+          "Fuentes científicas de OpenStax, NIST, MIT, IUPAC y textos de relatividad enlazadas"
+        ]
+      }
+    ],
+    "einstein-tensor": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "aprendizaje",
+          "derivacion",
+          "ficha",
+          "formula",
+          "historia",
+          "significado",
+          "unidades",
+          "usos",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "prerrequisitos"
+        ],
+        "summary": "Revisión completa: Compara curvatura y energía componente a componente. Cuatro misiones; Tensor / Explorar / Traza y curvatura. Modelos específicos, hipótesis, unidades, contenido y símbolos revisados.",
+        "checks": [
+          "3.919 contrastes matemáticos independientes del lote; autovalores, covarianza, boosts, termodinámica, Student, cinética y geodésicas",
+          "Todas las pestañas y símbolos específicos, incluidos índices tensoriales cuando corresponden",
+          "112 misiones del lote: predicción, respuesta incorrecta, pistas, ajuste y explicación",
+          "Teclado, ratón y tacto; cámaras 3D en seis laboratorios",
+          "Escritorio y móvil sin desbordamiento; capturas y contraste en Cuaderno, Colegio y Noche",
+          "Reproducción, pausa, ocultación y limpieza al salir",
+          "Recarga y nuevos simuladores comprobados sin conexión",
+          "LaTeX comprobado sin errores visibles en las 282 fórmulas del atlas",
+          "Disciplina, nivel, etiquetas y prerrequisitos canónicos; fechas de creación conservadas",
+          "Fuentes científicas de OpenStax, NIST, MIT, IUPAC y textos de relatividad enlazadas"
+        ]
+      }
+    ],
+    "henderson-hasselbalch-equation": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "aprendizaje",
+          "derivacion",
+          "ficha",
+          "formula",
+          "historia",
+          "significado",
+          "unidades",
+          "usos",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "prerrequisitos"
+        ],
+        "summary": "Revisión completa: Ajusta la proporción de un tampón ideal. Cuatro misiones; Par conjugado / Explorar / Relación logarítmica. Modelos específicos, hipótesis, unidades, contenido y símbolos revisados.",
+        "checks": [
+          "3.919 contrastes matemáticos independientes del lote; autovalores, covarianza, boosts, termodinámica, Student, cinética y geodésicas",
+          "Todas las pestañas y símbolos específicos, incluidos índices tensoriales cuando corresponden",
+          "112 misiones del lote: predicción, respuesta incorrecta, pistas, ajuste y explicación",
+          "Teclado, ratón y tacto; cámaras 3D en seis laboratorios",
+          "Escritorio y móvil sin desbordamiento; capturas y contraste en Cuaderno, Colegio y Noche",
+          "Reproducción, pausa, ocultación y limpieza al salir",
+          "Recarga y nuevos simuladores comprobados sin conexión",
+          "LaTeX comprobado sin errores visibles en las 282 fórmulas del atlas",
+          "Disciplina, nivel, etiquetas y prerrequisitos canónicos; fechas de creación conservadas",
+          "Fuentes científicas de OpenStax, NIST, MIT, IUPAC y textos de relatividad enlazadas"
+        ]
+      }
+    ],
+    "schwarzschild-metric-time-dilation": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "aprendizaje",
+          "derivacion",
+          "ficha",
+          "formula",
+          "historia",
+          "significado",
+          "unidades",
+          "usos",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "prerrequisitos"
+        ],
+        "summary": "Revisión completa: Compara relojes sostenidos a distintas alturas. Cuatro misiones; Relojes / Explorar / Redshift. Modelos específicos, hipótesis, unidades, contenido y símbolos revisados.",
+        "checks": [
+          "3.919 contrastes matemáticos independientes del lote; autovalores, covarianza, boosts, termodinámica, Student, cinética y geodésicas",
+          "Todas las pestañas y símbolos específicos, incluidos índices tensoriales cuando corresponden",
+          "112 misiones del lote: predicción, respuesta incorrecta, pistas, ajuste y explicación",
+          "Teclado, ratón y tacto; cámaras 3D en seis laboratorios",
+          "Escritorio y móvil sin desbordamiento; capturas y contraste en Cuaderno, Colegio y Noche",
+          "Reproducción, pausa, ocultación y limpieza al salir",
+          "Recarga y nuevos simuladores comprobados sin conexión",
+          "LaTeX comprobado sin errores visibles en las 282 fórmulas del atlas",
+          "Disciplina, nivel, etiquetas y prerrequisitos canónicos; fechas de creación conservadas",
+          "Fuentes científicas de OpenStax, NIST, MIT, IUPAC y textos de relatividad enlazadas"
+        ]
+      }
+    ],
+    "schwarzschild-radius": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "aprendizaje",
+          "derivacion",
+          "ficha",
+          "formula",
+          "historia",
+          "significado",
+          "unidades",
+          "usos",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "prerrequisitos"
+        ],
+        "summary": "Revisión completa: Compara un tamaño con el horizonte de una masa. Cuatro misiones; Umbral / Explorar 3D / Escala de masa. Modelos específicos, hipótesis, unidades, contenido y símbolos revisados.",
+        "checks": [
+          "3.919 contrastes matemáticos independientes del lote; autovalores, covarianza, boosts, termodinámica, Student, cinética y geodésicas",
+          "Todas las pestañas y símbolos específicos, incluidos índices tensoriales cuando corresponden",
+          "112 misiones del lote: predicción, respuesta incorrecta, pistas, ajuste y explicación",
+          "Teclado, ratón y tacto; cámaras 3D en seis laboratorios",
+          "Escritorio y móvil sin desbordamiento; capturas y contraste en Cuaderno, Colegio y Noche",
+          "Reproducción, pausa, ocultación y limpieza al salir",
+          "Recarga y nuevos simuladores comprobados sin conexión",
+          "LaTeX comprobado sin errores visibles en las 282 fórmulas del atlas",
+          "Disciplina, nivel, etiquetas y prerrequisitos canónicos; fechas de creación conservadas",
+          "Fuentes científicas de OpenStax, NIST, MIT, IUPAC y textos de relatividad enlazadas"
+        ]
+      }
+    ],
+    "cosmological-constant": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "aprendizaje",
+          "derivacion",
+          "ficha",
+          "formula",
+          "historia",
+          "significado",
+          "unidades",
+          "usos",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "prerrequisitos"
+        ],
+        "summary": "Revisión completa: Explora expansión acelerada en vacío de de Sitter. Cuatro misiones; Vacío activo / Expansión 3D / Horizonte cosmológico. Modelos específicos, hipótesis, unidades, contenido y símbolos revisados.",
+        "checks": [
+          "3.919 contrastes matemáticos independientes del lote; autovalores, covarianza, boosts, termodinámica, Student, cinética y geodésicas",
+          "Todas las pestañas y símbolos específicos, incluidos índices tensoriales cuando corresponden",
+          "112 misiones del lote: predicción, respuesta incorrecta, pistas, ajuste y explicación",
+          "Teclado, ratón y tacto; cámaras 3D en seis laboratorios",
+          "Escritorio y móvil sin desbordamiento; capturas y contraste en Cuaderno, Colegio y Noche",
+          "Reproducción, pausa, ocultación y limpieza al salir",
+          "Recarga y nuevos simuladores comprobados sin conexión",
+          "LaTeX comprobado sin errores visibles en las 282 fórmulas del atlas",
+          "Disciplina, nivel, etiquetas y prerrequisitos canónicos; fechas de creación conservadas",
+          "Fuentes científicas de OpenStax, NIST, MIT, IUPAC y textos de relatividad enlazadas"
+        ]
+      }
+    ],
+    "variance": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "aprendizaje",
+          "derivacion",
+          "ficha",
+          "formula",
+          "historia",
+          "significado",
+          "unidades",
+          "usos",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "prerrequisitos"
+        ],
+        "summary": "Revisión completa: Construye dispersión a partir de distancias a la media. Cuatro misiones; Desviaciones / Explorar / Áreas cuadráticas. Modelos específicos, hipótesis, unidades, contenido y símbolos revisados.",
+        "checks": [
+          "3.919 contrastes matemáticos independientes del lote; autovalores, covarianza, boosts, termodinámica, Student, cinética y geodésicas",
+          "Todas las pestañas y símbolos específicos, incluidos índices tensoriales cuando corresponden",
+          "112 misiones del lote: predicción, respuesta incorrecta, pistas, ajuste y explicación",
+          "Teclado, ratón y tacto; cámaras 3D en seis laboratorios",
+          "Escritorio y móvil sin desbordamiento; capturas y contraste en Cuaderno, Colegio y Noche",
+          "Reproducción, pausa, ocultación y limpieza al salir",
+          "Recarga y nuevos simuladores comprobados sin conexión",
+          "LaTeX comprobado sin errores visibles en las 282 fórmulas del atlas",
+          "Disciplina, nivel, etiquetas y prerrequisitos canónicos; fechas de creación conservadas",
+          "Fuentes científicas de OpenStax, NIST, MIT, IUPAC y textos de relatividad enlazadas"
+        ]
+      }
     ]
   }
 }

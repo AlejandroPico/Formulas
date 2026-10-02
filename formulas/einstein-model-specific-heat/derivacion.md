@@ -1,3 +1,11 @@
 # Derivación
 
-Las fórmulas proceden de correcciones al gas ideal, equilibrio de fases, extremización del espectro de Planck, integración de la radiancia de cuerpo negro, cuantización de osciladores y distribución de Boltzmann en el ensamble canónico.
+Un oscilador cuántico de frecuencia ω tiene ocupación media n̄=1/(exp(ℏω/kBT)−1). Tres osciladores por átomo y un mol de átomos dan U térmica=3RθE/(exp(θE/T)−1). Diferenciar respecto de T da CV=3R x² exp(x)/(exp(x)−1)². Para x pequeño, exp(x)−1≈x y CV→3R; para x grande la capacidad cae exponencialmente. La energía de punto cero es constante con T en este modelo y no contribuye a CV.
+
+## Hipótesis necesarias
+
+Sólido armónico ideal con una frecuencia común y θE constante. Captura congelación cuántica y límite clásico, pero no la ley T³ de baja temperatura que requiere un espectro de Debye. CV aquí es molar por mol de átomos, no calor específico por kilogramo.
+
+## Comprueba con números
+
+Un mol de átomos con tres osciladores por átomo y una frecuencia única. A baja T cuesta excitar niveles; a alta T Cv tiende a 3R. Calcula capacidad molar cv con los datos iniciales, en J/(mol·K). Capacidad molar Cv=22,9647 J/(mol·K). Usa x=θE/T y Cv=3R x²e⁻ˣ/(1−e⁻ˣ)²; el cero energético no cambia la derivada.

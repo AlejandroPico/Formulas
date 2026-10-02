@@ -1,29 +1,23 @@
-# Ficha
+# Valores propios y vectores propios
 
-## Identificacion
+Compara un vector con su imagen. Una dirección propia conserva su eje, aunque cambie longitud o sentido; una matriz real puede carecer de ejes propios reales.
 
-- Nombre: Valores propios y vectores propios.
-- Area: Algebra lineal.
-- Nivel recomendado: Universidad inicial.
-- Tipo de formula: relacion espectral de una transformacion lineal.
+## Magnitudes y notación
 
-## Formula principal
+| Símbolo | Interpretación |
+| :-- | :-- |
+| A | Matriz de una transformación lineal. |
+| v | Vector propio no nulo; su imagen permanece en el mismo eje. |
+| λ | Valor propio: factor firmado de escala del vector propio. |
+| I | Matriz identidad del mismo tamaño que A. |
+| R | Conjunto de los números reales en ℝ. |
+| det | Determinante: es cero cuando A−λI tiene núcleo no trivial. |
+| tr | Traza: suma de elementos diagonales de A. |
 
-`Av=lambda v`.
+## Condiciones
 
-## Variables
+El experimento usa matrices reales 2×2 generales, no solo simétricas. El vector cero no define una dirección propia. No presupone diagonalización, valores reales ni una base ortogonal.
 
-- `A`: matriz o transformacion lineal.
-- `v`: vector propio no nulo.
-- `lambda`: valor propio asociado.
+## Unidades
 
-## Interpretacion
-
-Un vector propio conserva su direccion. El valor propio indica por cuanto se escala.
-
-## Errores habituales
-
-- Permitir `v=0`, que no cuenta como vector propio.
-- Pensar que todo vector es propio.
-- Confundir valor propio con componente del vector.
-- Olvidar que puede haber valores propios complejos.
+Entradas, vectores y valores propios adimensionales en el laboratorio. En un operador físico λ hereda la unidad correspondiente a imagen/vector. El exponente k cuenta aplicaciones enteras de A.

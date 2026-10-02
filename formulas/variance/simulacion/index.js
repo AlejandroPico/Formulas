@@ -1,1 +1,4 @@
-export { default } from "../../../scripts/statistical-method-simulations.js?method=variance";
+import {mountLab} from '../../shared/learning-lab.js';
+import {INSIGHT_LABS} from '../../shared/insight-configs.js';
+import {drawInsight} from '../../shared/insight-draw.js';
+export default options=>{options.root.classList.add('insight-lab');return mountLab('variance',options,{config:INSIGHT_LABS['variance'],draw:drawInsight});};

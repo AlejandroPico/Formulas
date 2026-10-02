@@ -1,3 +1,11 @@
 # Significado
 
-El simulador acopla pH, pOH y pKw. Permite ver que al aumentar [H3O+] necesariamente baja [OH−], y que la temperatura desplaza el producto iónico.
+Kw fija el producto de actividades de H y OH. La neutralidad ocurre en pH=pKw/2; el valor de pKw depende de temperatura y del estándar.
+
+## Qué conserva y qué cambia
+
+La autoionización del agua conecta H+ y OH−. Con actividad del agua tomada como uno, el producto de actividades de ambos iones es Kw. El logaritmo negativo del producto se convierte en suma: pKw=pH+pOH. En la aproximación ideal, neutralidad significa iguales concentraciones y actividades comparables; por eso pH=pOH=pKw/2. Cambiar pKw desplaza el valor neutro. El laboratorio permite elegir pKw y no inventa una relación exacta temperatura–Kw. Para soluciones no ideales, considera coeficientes y el estándar del agua.
+
+## Primera predicción
+
+Kw fija el producto de actividades de H y OH. La neutralidad ocurre en pH=pKw/2; el valor de pKw depende de temperatura y del estándar. Calcula poh con los datos iniciales, en unidades adimensionales. pOH=7 . pOH=pKw−pH; [H] y [OH] iguales implica pH=pOH=pKw/2 bajo idealidad.

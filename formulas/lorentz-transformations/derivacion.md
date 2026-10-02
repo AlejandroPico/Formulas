@@ -1,9 +1,11 @@
 # Derivación
 
-Una derivación elemental parte de exigir que la velocidad de la luz sea la misma para dos observadores inerciales. Si un pulso luminoso satisface `x² - c²t² = 0` en un sistema, debe satisfacer la misma condición en el sistema que se mueve con velocidad `v`.
+Para un boost colineal, linealidad y conservación de la velocidad de la luz relacionan coordenadas con una transformación hiperbólica. Escribe x′=γ(x−βct) y ct′=γ(ct−βx). Expandir x′²−ct′² cancela términos cruzados y deja γ²(1−β²)(x²−ct²)=x²−ct². El inverso usa −β. Un evento es el mismo punto físico en ambos sistemas; dibujar ejes primados sobre el diagrama de S no significa desplazar el evento. Eventos con igual t y distinto x adquieren tiempos t′ diferentes si β≠0.
 
-Se buscan transformaciones lineales porque el movimiento relativo es uniforme y el espacio-tiempo se considera homogéneo. Al imponer que el intervalo espacio-temporal se conserve, aparece el factor `gamma`.
+## Hipótesis necesarias
 
-El resultado es `x' = gamma(x - vt)` y `t' = gamma(t - vx/c²)`. La segunda ecuación muestra la mezcla entre tiempo y posición: el tiempo medido en un sistema depende también de dónde ocurre el evento en el otro sistema.
+Sistemas inerciales en espacio-tiempo plano, boost en x y |β|<1. Orígenes coincidentes en t=t′=0. Una transformación de coordenadas no describe aceleración ni contracción mecánica.
 
-De estas transformaciones se deducen contracción de longitudes, dilatación temporal y relatividad de la simultaneidad. No son efectos ópticos aparentes, sino consecuencias de cómo se relacionan las mediciones entre observadores inerciales.
+## Comprueba con números
+
+Las coordenadas de un evento cambian entre sistemas inerciales. La separación espaciotemporal se conserva; el tiempo transformado incluye simultaneidad relativa. Calcula posición x′ con los datos iniciales, en L. Posición x′=-0,25 L. Usa x′=γ(x−βct); S′ viaja a +βc respecto de S.

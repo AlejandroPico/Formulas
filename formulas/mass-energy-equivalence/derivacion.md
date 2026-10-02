@@ -1,9 +1,11 @@
 # Derivación
 
-Una forma moderna de entender la relación parte de la energía relativista total. Para una partícula libre, energía, momento y masa en reposo satisfacen la relación `E² = (pc)² + (mc²)²`.
+La relación energía–momento de un sistema aislado es E²−p²c²=m²c⁴. En su sistema de reposo p=0 y la energía positiva es E0=mc². Por eso añadir energía interna a un sistema aumenta su masa invariante: Δm=ΔE0/c². Para una partícula móvil E=γmc², y K=(γ−1)mc². No se identifica energía de reposo con energía cinética ni se deduce de la ecuación cuánta masa puede transformarse en una reacción concreta.
 
-Si la partícula está en reposo, su momento `p` es cero. Entonces queda `E = mc²`. Esa energía no depende del movimiento externo: es energía asociada a la propia masa en reposo.
+## Hipótesis necesarias
 
-Cuando un sistema cambia de estado, puede cambiar su masa total invariante. Si la masa final es menor que la inicial, la diferencia aparece como energía liberada. Por eso se escribe `Delta E = Delta m c²` para procesos donde hay defecto de masa.
+m es masa invariante del sistema completo. La energía disponible depende de estados inicial y final y leyes de conservación. Se usa c en vacío; el simulador solo convierte escalas de energía de reposo.
 
-La constante `c²` actúa como factor de conversión entre unidades de masa y unidades de energía. Como la velocidad de la luz es muy grande, su cuadrado hace que incluso una masa pequeña equivalga a una energía enorme.
+## Comprueba con números
+
+Calcula energía de reposo con masa en microgramos. Una variación de masa de un sistema cerrado corresponde a variación de energía; no fija la fracción liberable de una reacción. Calcula energía de reposo con los datos iniciales, en MJ. Energía de reposo=89,8755 MJ. Convierte µg a kg multiplicando por 10⁻⁹ y aplica E0=mc².

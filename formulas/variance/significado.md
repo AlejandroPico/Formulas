@@ -1,3 +1,11 @@
 # Significado
 
-La varianza mide dispersion usando cuadrados de desviaciones respecto a la media. El simulador muestra el efecto directo de modificar el parametro principal del modelo.
+Cinco observaciones tratadas como población completa. Suma cuadrados de desviaciones y compara el divisor poblacional con el estimador de una muestra.
+
+## Qué conserva y qué cambia
+
+Resta la media de cada dato y eleva al cuadrado para no cancelar desviaciones opuestas. Promediar sobre los N elementos define varianza poblacional. Si se estima una varianza de una población a partir de una muestra independiente usando su propia media, el divisor n−1 corrige el sesgo. Para transformar aX+b, su media cambia a aμ+b y cada desviación es a(X−μ); al cuadrar sale a² y b desaparece. En los cinco datos del laboratorio las desviaciones son −2s,−s,0,s,2s y la varianza poblacional es 2s², mientras el estimador con divisor cuatro da 2,5s².
+
+## Primera predicción
+
+Cinco observaciones tratadas como población completa. Suma cuadrados de desviaciones y compara el divisor poblacional con el estimador de una muestra. Calcula varianza poblacional con los datos iniciales, en unidades adimensionales. Varianza poblacional=2 . Las desviaciones son −2s,−s,0,s,2s: suma 10s²; dividir entre cinco da 2s².

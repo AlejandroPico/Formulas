@@ -1,11 +1,11 @@
 # Usos
 
-- Diagonalizar matrices cuando es posible.
-- Analizar estabilidad de sistemas dinamicos.
-- Estudiar modos de vibracion.
-- Resolver sistemas de ecuaciones diferenciales lineales.
-- Aplicar PCA y tecnicas espectrales en datos.
+Estudiar estabilidad de iteraciones, modos de vibración y direcciones invariantes. Compara una matriz triangular, una rotación y una matriz defectiva: tienen comportamientos diferentes aunque compartan entradas reales.
 
-## Uso del simulador
+## Del experimento al contexto
 
-El simulador compara `v` y `Av`. Cuando ambas flechas quedan en la misma recta, el vector elegido se comporta como vector propio.
+Compara un vector con su imagen. Una dirección propia conserva su eje, aunque cambie longitud o sentido; una matriz real puede carecer de ejes propios reales.
+
+## Condiciones antes de aplicar
+
+El experimento usa matrices reales 2×2 generales, no solo simétricas. El vector cero no define una dirección propia. No presupone diagonalización, valores reales ni una base ortogonal.

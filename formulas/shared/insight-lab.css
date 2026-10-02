@@ -1,0 +1,9 @@
+@import url('./learning-lab.css');
+.formula-plugin-host.insight-lab {
+  grid-template-rows:max-content minmax(280px,1fr) max-content max-content !important;
+}
+@media(max-width:650px){
+  .formula-plugin-host.insight-lab {
+    grid-template-rows:max-content minmax(240px,1fr) max-content max-content !important;
+  }
+}

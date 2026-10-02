@@ -1,3 +1,11 @@
-# Derivacion
+# Derivación
 
-La expresion se obtiene al formalizar una regla de decision o una medida de incertidumbre. En los contrastes aparece una estandarizacion; en los criterios de informacion aparece una penalizacion; en Bayes aparece una normalizacion por la evidencia; en la entropia aparece una integral ponderada por la densidad.
+Si las observaciones son independientes y normales, (x̄−μ0)/(σ/√n) es normal estándar. La estimación independiente (n−1)s²/σ² sigue χ² con n−1 grados de libertad. Dividir ambas cantidades produce Student t. La probabilidad bilateral acumula las dos colas más allá de |t observado|. El intervalo x̄±tcrítico s/√n excluye μ0 exactamente cuando el contraste bilateral rechaza al mismo nivel α. En datos no normales, la validez depende del muestreo, tamaño y colas; no basta decir que toda media es automáticamente normal.
+
+## Hipótesis necesarias
+
+Contraste de una media con σ poblacional desconocida, s>0 y muestra independiente. Normalidad hace exacto el contraste; para otros datos evalúa robustez y diseño. No se confunde con el test z ni con un test pareado o de dos grupos.
+
+## Comprueba con números
+
+Contraste bilateral de una media con desviación poblacional desconocida. La muestra estima s, y sus grados de libertad determinan colas e intervalo de confianza. Calcula estadístico t con los datos iniciales, en unidades adimensionales. Estadístico t=2 . Divide x̄−μ0 entre s/√n; usa ν=n−1, no la tabla normal con σ conocida.

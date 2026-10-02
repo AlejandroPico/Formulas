@@ -1,9 +1,11 @@
 # Derivación
 
-Una derivación completa exige geometría diferencial, pero la estructura general puede entenderse por principios. La teoría debe ser covariante, reducirse a la gravedad de Newton en el límite débil y conservar localmente energía-momento.
+La ecuación de Einstein vincula geometría y energía-momento; no asigna una curva única a una masa sin condiciones y simetrías. Para una métrica FLRW espacialmente plana, polvo sin presión y Λ=0, su componente temporal se reduce a H²=8πGρ/3. La conservación covariante produce ρa³=ρ0 con a(0)=1. Sustituye H=ȧ/a e integra ȧ=H0a^(−1/2): a=[1+3H0t/2]^(2/3). Este es el caso exacto calculado por el laboratorio; su reloj empieza en una época regular, no en el Big Bang. G00 en una base ortonormal es 3H²/c² y coincide con κρc².
 
-La geometría del espacio-tiempo se describe mediante una métrica. A partir de ella se construyen objetos de curvatura: tensor de Riemann, tensor de Ricci y curvatura escalar. Una combinación especial de esos objetos produce el tensor de Einstein, cuya divergencia covariante se anula.
+## Hipótesis necesarias
 
-Esa propiedad encaja con la conservación local del tensor energía-momento. Por eso la ecuación relaciona el tensor de Einstein con `T_mu nu`, multiplicado por una constante de acoplamiento fijada al recuperar el límite newtoniano.
+Teoría general: deben especificarse fuente, coordenadas y condiciones. Experimento: FLRW plano, homogéneo e isótropo, polvo p=0, Λ=0, solución en expansión. No modela agujeros negros ni galaxias individuales; una nube de puntos comóviles visualiza separación física.
 
-La constante cosmológica puede añadirse de forma compatible con la covariancia y la conservación. En cosmología moderna se interpreta como una contribución de energía del vacío o energía oscura efectiva.
+## Comprueba con números
+
+Caso exacto FLRW plano con polvo y Λ=0. La expansión diluye materia y H cambia; no es un solucionador de cualquier distribución gravitatoria. Calcula factor de escala a con los datos iniciales, en unidades adimensionales. Factor de escala a=1,5712 . H0²=8πGρ0/3 y a=[1+3H0 t/2]^(2/3), con a(0)=1 y t en segundos físicos.

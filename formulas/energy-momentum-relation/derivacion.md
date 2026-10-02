@@ -1,9 +1,11 @@
 # Derivación
 
-Una derivación compacta parte del cuadrivector energía-momento. Sus componentes combinan la energía total y el momento espacial de una partícula. La norma relativista de ese cuadrivector debe ser la misma para todos los observadores inerciales.
+El cuadrimomento tiene norma invariante −m²c² con firma −+++. Separar energía y momento da E²=p²c²+m²c⁴. Toma la rama de energía positiva. Para p=0, E=mc²; para m=0 y p≠0, E=|pc| y |v|=c. Para una partícula masiva, E=γmc² y p=γmv, así que pc/E=v/c. El punto m=p=0 tiene energía nula y no define la velocidad de una partícula.
 
-Esa norma invariante se escribe como `E²/c² - p² = m0²c²`, dependiendo de la convención de signos. Al multiplicar por `c²` y reorganizar, se obtiene `E² = p²c² + m0²c⁴`.
+## Hipótesis necesarias
 
-Si el momento es cero, queda `E = m0c²`, la energía en reposo. Si la masa en reposo es cero, queda `E = pc`, que describe partículas sin masa como el fotón.
+Relación relativista de partícula libre o cuadrimomento total. Laboratorio colineal, m≥0 y momento firmado. El triángulo de cantidades energéticas no es una figura espacial de una trayectoria.
 
-La forma geométrica del simulador no es literal en el espacio físico ordinario, sino una analogía: los dos términos positivos de la ecuación se representan como catetos y la energía total como hipotenusa.
+## Comprueba con números
+
+La masa se introduce como energía de reposo mc² y el momento como pc. La curva contiene energía de reposo, energía cinética y el límite E=|pc|. Calcula energía total con los datos iniciales, en MeV. Energía total=3,6056 MeV. E=√[(pc)²+(mc²)²]; el momento puede ser negativo, E física es no negativa.

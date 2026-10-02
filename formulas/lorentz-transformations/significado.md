@@ -1,9 +1,11 @@
 # Significado
 
-Las transformaciones de Lorentz indican cómo cambian las coordenadas de espacio y tiempo entre dos observadores inerciales que se mueven uno respecto al otro con velocidad constante. Sustituyen a las transformaciones de Galileo cuando las velocidades son comparables con la velocidad de la luz.
+Las coordenadas de un evento cambian entre sistemas inerciales. La separación espaciotemporal se conserva; el tiempo transformado incluye simultaneidad relativa.
 
-La idea central es que el tiempo y el espacio no son absolutos por separado. Dos observadores pueden discrepar en la duración de un proceso, la longitud de un objeto o la simultaneidad de dos sucesos. Lo que permanece invariante es la estructura espacio-temporal relativista.
+## Qué conserva y qué cambia
 
-El factor `gamma` controla la intensidad de los efectos. Si `v` es pequeña respecto a `c`, `gamma` se aproxima a 1 y las transformaciones recuperan casi la intuición clásica. Cuando `v` se acerca a `c`, `gamma` crece rápidamente y aparecen contracción de longitudes y dilatación temporal apreciables.
+Para un boost colineal, linealidad y conservación de la velocidad de la luz relacionan coordenadas con una transformación hiperbólica. Escribe x′=γ(x−βct) y ct′=γ(ct−βx). Expandir x′²−ct′² cancela términos cruzados y deja γ²(1−β²)(x²−ct²)=x²−ct². El inverso usa −β. Un evento es el mismo punto físico en ambos sistemas; dibujar ejes primados sobre el diagrama de S no significa desplazar el evento. Eventos con igual t y distinto x adquieren tiempos t′ diferentes si β≠0.
 
-El simulador muestra un tren relativista que pasa por una plataforma. Al aumentar la velocidad, el tren se contrae en la dirección del movimiento y su reloj avanza más despacio visto desde la plataforma. También se visualiza un evento luminoso para recordar que la simultaneidad depende del observador.
+## Primera predicción
+
+Las coordenadas de un evento cambian entre sistemas inerciales. La separación espaciotemporal se conserva; el tiempo transformado incluye simultaneidad relativa. Calcula posición x′ con los datos iniciales, en L. Posición x′=-0,25 L. Usa x′=γ(x−βct); S′ viaja a +βc respecto de S.

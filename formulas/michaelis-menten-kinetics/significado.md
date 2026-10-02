@@ -1,9 +1,11 @@
 # Significado
 
-La cinética de Michaelis-Menten describe cómo cambia la velocidad inicial de una reacción enzimática al variar la concentración de sustrato.
+Una enzima, un sustrato y producto inicialmente nulo. Compara velocidad inicial con evolución integrada cuasiestacionaria, en la que el sustrato disminuye y el producto crece.
 
-A bajas concentraciones de sustrato, la velocidad aumenta casi linealmente: hay muchas enzimas libres y cada sustrato adicional puede encontrar un sitio activo. A concentraciones altas, la enzima se satura y la velocidad se aproxima a `Vmax`.
+## Qué conserva y qué cambia
 
-`Km` es la concentración de sustrato a la que la velocidad alcanza la mitad de `Vmax`. Es un parámetro útil para caracterizar la afinidad aparente entre enzima y sustrato bajo las hipótesis del modelo.
+Para E+S⇌ES→E+P, el estado cuasiestacionario satisface 0≈k1[E][S]−(k−1+kcat)[ES]. Con enzima total [E]tot=[E]+[ES], resuelve [ES]=[E]tot[S]/(Km+[S]) y v=kcat[ES]. Así Km=(k−1+kcat)/k1; solo bajo equilibrio rápido y kcat pequeño se aproxima a una constante de disociación. Para agotamiento irreversible y parámetros constantes, integra dS/dt=−Vmax S/(Km+S): Vmax t=S0−S+Km ln(S0/S). El código invierte esta ecuación monótona y conserva S+P=S0.
 
-El simulador combina dos vistas: partículas de enzima y sustrato que forman complejos `ES`, y una curva de saturación `v([S])`. Al inyectar más sustrato se observa cómo crece el número de complejos y cómo la velocidad se acerca a una meseta.
+## Primera predicción
+
+Una enzima, un sustrato y producto inicialmente nulo. Compara velocidad inicial con evolución integrada cuasiestacionaria, en la que el sustrato disminuye y el producto crece. Calcula velocidad inicial con los datos iniciales, en mM/min. Velocidad inicial=5 mM/min. v0=Vmax S0/(Km+S0); durante el proceso Vmax t=S0−S+Km ln(S0/S).

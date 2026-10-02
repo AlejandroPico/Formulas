@@ -1,5 +1,5 @@
 const CACHE_PREFIX = 'formulas-pwa-';
-const CACHE_NAME = `${CACHE_PREFIX}8`;
+const CACHE_NAME = `${CACHE_PREFIX}9`;
 const APP_SHELL = [
   './', './index.html', './favicon.svg', './manifest.webmanifest',
   './icons/icon-192.png', './icons/icon-512.png', './icons/icon-maskable-512.png',

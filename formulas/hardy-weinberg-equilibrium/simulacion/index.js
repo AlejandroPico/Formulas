@@ -1,1 +1,4 @@
-export { default } from "../../../scripts/biology-biophysics-population-simulations.js?topic=hardy&v=20260705p";
+import {mountLab} from '../../shared/learning-lab.js';
+import {INSIGHT_LABS} from '../../shared/insight-configs.js';
+import {drawInsight} from '../../shared/insight-draw.js';
+export default options=>{options.root.classList.add('insight-lab');return mountLab('hardy-weinberg-equilibrium',options,{config:INSIGHT_LABS['hardy-weinberg-equilibrium'],draw:drawInsight});};

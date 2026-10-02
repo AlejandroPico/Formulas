@@ -1,9 +1,11 @@
 # Historia
 
-Einstein presentó la relatividad general en 1915 tras varios años intentando extender la relatividad especial a sistemas acelerados y a la gravitación. El principio de equivalencia fue una pista central: localmente, un campo gravitatorio uniforme puede parecer equivalente a una aceleración.
+Einstein presentó sus ecuaciones de campo en 1915. Friedmann desarrolló soluciones cosmológicas dinámicas en 1922; esa aplicación concreta muestra cómo una misma ley general produce distintos escenarios según materia y simetrías.
 
-La teoría sustituyó la imagen newtoniana de una fuerza gravitatoria instantánea por una geometría dinámica. La métrica del espacio-tiempo se convierte en el objeto que determina distancias, tiempos y trayectorias.
+## Referencia y alcance
 
-Una confirmación histórica célebre fue la desviación de la luz de estrellas durante el eclipse solar de 1919, compatible con la predicción relativista. Desde entonces, la teoría ha sido puesta a prueba en precesión del perihelio de Mercurio, lentes gravitacionales, relojes atómicos, ondas gravitacionales y agujeros negros.
+[Material de estudio](https://preposterousuniverse.com/grnotes/).
 
-Hoy la relatividad general es el marco de referencia para cosmología, astrofísica relativista, agujeros negros, estrellas de neutrones y navegación por satélite con correcciones gravitatorias.
+Teoría general: deben especificarse fuente, coordenadas y condiciones. Experimento: FLRW plano, homogéneo e isótropo, polvo p=0, Λ=0, solución en expansión. No modela agujeros negros ni galaxias individuales; una nube de puntos comóviles visualiza separación física.
+
+La fecha de creación del catálogo procede del archivo original; el año científico y la fecha de revisión tienen funciones diferentes.

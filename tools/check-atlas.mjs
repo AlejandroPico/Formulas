@@ -7,6 +7,7 @@ import './check-frontier-labs.mjs';
 import './check-horizon-labs.mjs';
 import './check-continuum-labs.mjs';
 import './check-spectrum-labs.mjs';
+import './check-insight-labs.mjs';
 import './check-taxonomy.mjs';
 assert.equal(hypotenuse(3, 4), 5);
 assert.equal(missingLeg(13, 5), 12);

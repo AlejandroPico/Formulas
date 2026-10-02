@@ -1,10 +1,11 @@
 # Usos
 
-- Física de partículas: calcular energía total, energía de reposo y momento relativista.
-- Aceleradores: relacionar energía de haz, masa y momento.
-- Fotones y partículas sin masa: usar el caso `E = pc`.
-- Cosmología temprana: estudiar partículas ultrarrelativistas.
-- Decaimientos y colisiones: aplicar conservación relativista de energía-momento.
-- Enseñanza: conectar `E = mc²` con la relación completa para movimiento.
+Interpretar dispersiones de partículas, límites sin masa y diferencias entre reposo y movimiento. Dibuja la hipérbola y compara la energía cinética con la aproximación clásica a momento pequeño.
 
-La ecuación es especialmente útil cuando las velocidades son cercanas a la de la luz o cuando la energía disponible puede producir nuevas partículas.
+## Del experimento al contexto
+
+La masa se introduce como energía de reposo mc² y el momento como pc. La curva contiene energía de reposo, energía cinética y el límite E=|pc|.
+
+## Condiciones antes de aplicar
+
+Relación relativista de partícula libre o cuadrimomento total. Laboratorio colineal, m≥0 y momento firmado. El triángulo de cantidades energéticas no es una figura espacial de una trayectoria.

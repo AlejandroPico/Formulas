@@ -1,19 +1,11 @@
-# Derivacion
+# Derivación
 
-Partimos de la condicion de vector propio:
+Para que Av=λv exista con v≠0, reordena (A−λI)v=0. Una matriz cuadrada singular tiene determinante cero. En 2×2, expandir (a−λ)(d−λ)−bc da λ²−(a+d)λ+ad−bc. El discriminante puede ser negativo: entonces aparecen valores complejos y ningún eje propio real. Si las dos raíces coinciden, comprueba la dimensión del núcleo; una matriz de Jordan puede tener una única dirección propia independiente. Aplicar A repetidamente amplifica o atenúa según |λ| en un eje propio.
 
-`Av=lambda v`.
+## Hipótesis necesarias
 
-Llevando todo al mismo lado:
+El experimento usa matrices reales 2×2 generales, no solo simétricas. El vector cero no define una dirección propia. No presupone diagonalización, valores reales ni una base ortogonal.
 
-`Av-lambda v=0`.
+## Comprueba con números
 
-Como `lambda v=lambda I v`, se escribe:
-
-`(A-lambda I)v=0`.
-
-Para que exista un vector no nulo `v`, la matriz `A-lambda I` no puede ser invertible. Por tanto:
-
-`det(A-lambda I)=0`.
-
-Esta ecuacion se llama ecuacion caracteristica. Sus soluciones son los valores propios. Una vez hallado `lambda`, los vectores propios se obtienen resolviendo `(A-lambda I)v=0`.
+Compara un vector con su imagen. Una dirección propia conserva su eje, aunque cambie longitud o sentido; una matriz real puede carecer de ejes propios reales. Calcula valor propio mayor inicial con los datos iniciales, en unidades adimensionales. Valor propio mayor inicial=3 . Resuelve λ²−tr(A)λ+det(A)=0 y comprueba Av=λv con v≠0.

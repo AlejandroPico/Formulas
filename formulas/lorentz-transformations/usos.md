@@ -1,11 +1,11 @@
 # Usos
 
-- Cinemática relativista entre observadores inerciales.
-- Cálculo de dilatación temporal y contracción de longitudes.
-- Relatividad de la simultaneidad.
-- Física de partículas y aceleradores.
-- Transformación de energía, momento y campos electromagnéticos.
-- Interpretación geométrica del espacio-tiempo de Minkowski.
-- Enseñanza de relatividad especial.
+Transformar eventos, estudiar simultaneidad y comprobar invariantes antes de interpretar tiempos y posiciones. Realiza un boost y su inverso para recuperar el evento inicial.
 
-Son imprescindibles cuando las velocidades se acercan a la de la luz o cuando la precisión experimental requiere correcciones relativistas.
+## Del experimento al contexto
+
+Las coordenadas de un evento cambian entre sistemas inerciales. La separación espaciotemporal se conserva; el tiempo transformado incluye simultaneidad relativa.
+
+## Condiciones antes de aplicar
+
+Sistemas inerciales en espacio-tiempo plano, boost en x y |β|<1. Orígenes coincidentes en t=t′=0. Una transformación de coordenadas no describe aceleración ni contracción mecánica.

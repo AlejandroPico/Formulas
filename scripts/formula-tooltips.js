@@ -102,6 +102,9 @@ function buildSymbolZones(formulaBox, formulaRect, glossary, equation) {
     const parentType = node.parentElement?.dataset.mmlNode;
     const baseNode = node.parentElement?.querySelector(':scope > g[data-mml-node]');
     const base = baseNode ? extractMathSymbol(baseNode) : '';
+    if (baseNode === node && ['msub', 'msubsup'].includes(parentType)) {
+      description = local[`indexed:${symbol}`] || equation?.symbolGlossary?.[`indexed:${symbol}`] || description;
+    }
     if (symbol === '2' && parentType === 'msup' && baseNode !== node) description = local['^2'] || equation?.symbolGlossary?.['^2'] || 'Al cuadrado: multiplica la base por sí misma. Para una longitud, el resultado representa un área.';
     if (parentType === 'msub' && baseNode !== node) description = local[`_${base}:${symbol}`] || local[`_${symbol}`] || equation?.symbolGlossary?.[`_${symbol}`] || `Subíndice ${symbol}: identifica un punto o componente; no multiplica la variable.`;
     if (!symbol || !description) return [];

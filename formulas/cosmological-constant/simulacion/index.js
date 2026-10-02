@@ -1,1 +1,4 @@
-export { default } from "../../../scripts/cosmology-gr-simulations.js?topic=lambda";
+import {mountLab} from '../../shared/learning-lab.js';
+import {INSIGHT_LABS} from '../../shared/insight-configs.js';
+import {drawInsight} from '../../shared/insight-draw.js';
+export default options=>{options.root.classList.add('insight-lab');return mountLab('cosmological-constant',options,{config:INSIGHT_LABS['cosmological-constant'],draw:drawInsight});};

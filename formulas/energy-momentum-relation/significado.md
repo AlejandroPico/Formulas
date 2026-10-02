@@ -1,9 +1,11 @@
 # Significado
 
-La relación energía-momento es una de las formas centrales de la relatividad especial. Generaliza `E = mc²` para partículas que pueden estar en movimiento. La energía total no depende solo de la masa en reposo, sino también del momento lineal.
+La masa se introduce como energía de reposo mc² y el momento como pc. La curva contiene energía de reposo, energía cinética y el límite E=|pc|.
 
-La expresión `E² = (pc)² + (m0c²)²` tiene una estructura parecida al teorema de Pitágoras. Un cateto representa la energía asociada al momento, `pc`. El otro representa la energía de reposo, `m0c²`. La hipotenusa representa la energía total `E`.
+## Qué conserva y qué cambia
 
-Cuando el momento es cero, la partícula está en reposo y se recupera `E = m0c²`. Cuando la masa en reposo es cero, como en el caso ideal del fotón, queda `E = pc`. Por eso esta ecuación unifica partículas masivas y partículas sin masa en una misma estructura.
+El cuadrimomento tiene norma invariante −m²c² con firma −+++. Separar energía y momento da E²=p²c²+m²c⁴. Toma la rama de energía positiva. Para p=0, E=mc²; para m=0 y p≠0, E=|pc| y |v|=c. Para una partícula masiva, E=γmc² y p=γmv, así que pc/E=v/c. El punto m=p=0 tiene energía nula y no define la velocidad de una partícula.
 
-El simulador muestra ese triángulo relativista. Al modificar `m0c²` y `pc`, se ve cómo cambia la energía total. También se resaltan los dos casos límite: reposo puro y partícula sin masa.
+## Primera predicción
+
+La masa se introduce como energía de reposo mc² y el momento como pc. La curva contiene energía de reposo, energía cinética y el límite E=|pc|. Calcula energía total con los datos iniciales, en MeV. Energía total=3,6056 MeV. E=√[(pc)²+(mc²)²]; el momento puede ser negativo, E física es no negativa.

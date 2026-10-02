@@ -1,10 +1,11 @@
 # Usos
 
-- Física nuclear: estimar energía liberada por defecto de masa en fisión y fusión.
-- Física de partículas: interpretar aniquilación, creación de pares y energía de reposo.
-- Astrofísica: comprender producción de energía en estrellas.
-- Medicina nuclear: base conceptual de emisión de radiación y procesos de decaimiento.
-- Ingeniería energética: comparar escalas entre energía química y nuclear.
-- Enseñanza de relatividad especial: introducir masa invariante y energía en reposo.
+Interpretar defectos de masa, energía de enlaces y cambios de energía interna de sistemas cerrados. Antes de una reacción, usa masas del sistema completo y determina la diferencia entre estados.
 
-La relación es exacta para energía de reposo. En sistemas en movimiento se usa la relación relativista completa entre energía, momento y masa.
+## Del experimento al contexto
+
+Calcula energía de reposo con masa en microgramos. Una variación de masa de un sistema cerrado corresponde a variación de energía; no fija la fracción liberable de una reacción.
+
+## Condiciones antes de aplicar
+
+m es masa invariante del sistema completo. La energía disponible depende de estados inicial y final y leyes de conservación. Se usa c en vacío; el simulador solo convierte escalas de energía de reposo.

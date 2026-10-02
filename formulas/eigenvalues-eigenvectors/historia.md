@@ -1,7 +1,11 @@
 # Historia
 
-Los valores propios surgieron en el estudio de sistemas lineales, formas cuadraticas, vibraciones y ecuaciones diferenciales. La idea de una direccion privilegiada que se conserva bajo una transformacion se volvio central en algebra lineal.
+La teoría de valores propios se consolidó al estudiar ecuaciones lineales, formas cuadráticas y vibraciones. Su uso moderno distingue el espectro de una matriz de la existencia de suficientes vectores para diagonalizarla.
 
-En fisica aparecen en modos normales, mecanica cuantica y estabilidad de sistemas. En matematicas y computacion aparecen en diagonalizacion, analisis espectral, PCA, grafos y algoritmos numericos.
+## Referencia y alcance
 
-Su importancia se debe a que reducen una transformacion compleja a direcciones fundamentales donde la accion de la matriz es solo una escala.
+[Material de estudio](https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/).
+
+El experimento usa matrices reales 2×2 generales, no solo simétricas. El vector cero no define una dirección propia. No presupone diagonalización, valores reales ni una base ortogonal.
+
+La fecha de creación del catálogo procede del archivo original; el año científico y la fecha de revisión tienen funciones diferentes.

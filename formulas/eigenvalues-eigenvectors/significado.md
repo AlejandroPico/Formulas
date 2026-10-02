@@ -1,7 +1,11 @@
 # Significado
 
-Un vector propio de una matriz es un vector cuya direccion no cambia al aplicar la transformacion lineal. Puede alargarse, acortarse o cambiar de sentido, pero permanece en la misma recta.
+Compara un vector con su imagen. Una dirección propia conserva su eje, aunque cambie longitud o sentido; una matriz real puede carecer de ejes propios reales.
 
-La ecuacion `Av=lambda v` expresa exactamente eso. La matriz `A` transforma `v` y el resultado equivale a multiplicar el mismo vector por un numero `lambda`, llamado valor propio.
+## Qué conserva y qué cambia
 
-El simulador usa una matriz diagonal sencilla para mostrar la idea: algunos vectores cambian de direccion, pero los alineados con los ejes permanecen paralelos a si mismos.
+Para que Av=λv exista con v≠0, reordena (A−λI)v=0. Una matriz cuadrada singular tiene determinante cero. En 2×2, expandir (a−λ)(d−λ)−bc da λ²−(a+d)λ+ad−bc. El discriminante puede ser negativo: entonces aparecen valores complejos y ningún eje propio real. Si las dos raíces coinciden, comprueba la dimensión del núcleo; una matriz de Jordan puede tener una única dirección propia independiente. Aplicar A repetidamente amplifica o atenúa según |λ| en un eje propio.
+
+## Primera predicción
+
+Compara un vector con su imagen. Una dirección propia conserva su eje, aunque cambie longitud o sentido; una matriz real puede carecer de ejes propios reales. Calcula valor propio mayor inicial con los datos iniciales, en unidades adimensionales. Valor propio mayor inicial=3 . Resuelve λ²−tr(A)λ+det(A)=0 y comprueba Av=λv con v≠0.

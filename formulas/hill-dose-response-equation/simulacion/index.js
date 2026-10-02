@@ -1,1 +1,4 @@
-export { default } from "../../../scripts/bio-hill-dose-response-sim.js?v=20260705a";
+import {mountLab} from '../../shared/learning-lab.js';
+import {INSIGHT_LABS} from '../../shared/insight-configs.js';
+import {drawInsight} from '../../shared/insight-draw.js';
+export default options=>{options.root.classList.add('insight-lab');return mountLab('hill-dose-response-equation',options,{config:INSIGHT_LABS['hill-dose-response-equation'],draw:drawInsight});};

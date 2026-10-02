@@ -1,26 +1,25 @@
-# Ficha
+# Transformaciones de Lorentz
 
-## Identificación
+Las coordenadas de un evento cambian entre sistemas inerciales. La separación espaciotemporal se conserva; el tiempo transformado incluye simultaneidad relativa.
 
-- **Nombre:** Transformaciones de Lorentz
-- **Autor asociado:** Hendrik Lorentz
-- **Año:** 1904; reinterpretación relativista en 1905
-- **Área:** relatividad especial
-- **Nivel:** universidad inicial
-- **Tipo:** transformación entre sistemas inerciales
+## Magnitudes y notación
 
-## Variables
+| Símbolo | Interpretación |
+| :-- | :-- |
+| c | Velocidad de la luz en vacío, 299 792 458 m/s. |
+| β | Velocidad firmada del sistema móvil dividida por c. |
+| γ | Factor de Lorentz 1/√(1−β²), siempre al menos uno. |
+| x | Coordenada espacial del evento en el eje de movimiento. |
+| t | Tiempo coordinado del evento en el sistema indicado. |
+| v | Velocidad firmada del sistema S′ respecto de S. |
+| τ | Tiempo propio acumulado por un reloj en su línea de universo. |
+| Δ | Diferencia entre valores de dos eventos. |
+| L | Longitud de la barra medida en el sistema donde se mueve. |
 
-- `x`, `t`: coordenadas en el sistema de referencia de la plataforma.
-- `x'`, `t'`: coordenadas en el sistema móvil.
-- `v`: velocidad relativa.
-- `c`: velocidad de la luz.
-- `gamma`: factor de Lorentz.
+## Condiciones
 
-## Lectura del simulador
+Sistemas inerciales en espacio-tiempo plano, boost en x y |β|<1. Orígenes coincidentes en t=t′=0. Una transformación de coordenadas no describe aceleración ni contracción mecánica.
 
-El tren representa un objeto en movimiento. Al aumentar `v`, su longitud observada disminuye y el reloj a bordo avanza más lentamente respecto al reloj de la plataforma. El botón de pausa permite congelar la escena para comparar valores.
+## Unidades
 
-## Nota
-
-El dibujo es una analogía visual. La contracción de longitud y la dilatación temporal se refieren a mediciones entre sistemas inerciales, no a una deformación mecánica ordinaria del objeto.
+x y ct en una unidad de longitud L; t físico se recupera dividiendo ct entre c. β,γ adimensionales; intervalo en L². El diagrama usa la misma escala en ambos ejes.
