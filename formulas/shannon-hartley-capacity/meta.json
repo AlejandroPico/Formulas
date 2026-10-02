@@ -8,9 +8,75 @@
   "color": "#3b82f6",
   "simulation": "shannon-hartley-capacity",
   "formulaText": [
-    "capacidad = ancho de banda por logaritmo base dos de uno más relación señal ruido",
-    "más ancho de banda y mejor SNR aumentan la tasa máxima teórica"
+    "Canal ideal de banda limitada con ruido gaussiano blanco aditivo y razón señal/ruido total S/N. El resultado es una capacidad teórica, no una velocidad garantizada de un módem."
   ],
-  "summary": "Da el límite teórico de transmisión fiable de un canal con ruido gaussiano.",
-  "tags": []
+  "summary": "Canal ideal de banda limitada con ruido gaussiano blanco aditivo y razón señal/ruido total S/N. El resultado es una capacidad teórica, no una velocidad garantizada de un módem.",
+  "tags": [
+    "capacidad de canal",
+    "ruido gaussiano",
+    "ancho de banda",
+    "decibelios"
+  ],
+  "formula": [
+    "C=B\\log_2\\left(1+\\frac SN\\right),\\qquad \\frac SN=10^{G_{dB}/10}"
+  ],
+  "simulatorVersion": 2,
+  "symbolGlossary": {
+    "1": "Uno: unidad numérica en la relación.",
+    "2": "Dos: factor numérico; como exponente significa el cuadrado.",
+    "10": "Diez: base del logaritmo decimal o exponencial decimal.",
+    "=": "Igualdad: ambos lados tienen el mismo valor matemático.",
+    "+": "Suma de los términos indicados.",
+    ",": "Separación de expresiones o condiciones.",
+    "(": "Abre un grupo de términos que se opera como una sola base.",
+    ")": "Cierra el grupo de términos.",
+    "log": "Logaritmo decimal cuando su base está escrita como 10.",
+    "^2": "Al cuadrado: multiplica toda la base por sí misma.",
+    "_1": "Índice 1: primera componente, primer paso o primer valor ordenado.",
+    "_2": "Índice 2: segunda componente o nivel escrito.",
+    "structure:msqrt": "Raíz cuadrada no negativa: recupera la magnitud cuyo cuadrado es el argumento. Respeta el dominio real de esta ficha.",
+    "structure:mfrac": "Cociente: divide el numerador entre el denominador completo; sus unidades deben ser compatibles con la magnitud resultante.",
+    "structure:msup": "Exponente: una potencia actúa sobre toda la base. Una marca de derivada, adjunto o etiqueta conserva el significado propio definido en esta ficha.",
+    "structure:msub": "Índice inferior: identifica componente, nivel, condición o estado de la base, sin multiplicarla.",
+    "structure:msubsup": "La base lleva índice inferior y marca superior; cada uno se interpreta con la notación de esta ficha.",
+    "structure:mover": "Barra sobre x: media de datos; sobre un vector indica su vector de medias. La marca de flecha identifica vector.",
+    "structure:munder": "Límite inferior o condición del sumatorio escrito.",
+    "structure:munderover": "Límites del sumatorio: especifican qué valores toma su índice.",
+    "C": "Capacidad teórica de transmisión por tiempo.",
+    "B": "Ancho de banda del canal.",
+    "S": "Potencia total de la señal.",
+    "N": "Potencia total de ruido en la misma banda.",
+    "G": "Razón señal/ruido expresada en dB de potencia.",
+    "d": "Parte de dB: unidad decibelio.",
+    "bold:C": "Capacidad teórica de transmisión por tiempo.",
+    "_C": "Índice C: Capacidad teórica de transmisión por tiempo.",
+    "bold:B": "Ancho de banda del canal.",
+    "_B": "Índice B: Ancho de banda del canal.",
+    "bold:S": "Potencia total de la señal.",
+    "_S": "Índice S: Potencia total de la señal.",
+    "bold:N": "Potencia total de ruido en la misma banda.",
+    "_N": "Índice N: Potencia total de ruido en la misma banda.",
+    "bold:G": "Razón señal/ruido expresada en dB de potencia.",
+    "_G": "Índice G: Razón señal/ruido expresada en dB de potencia.",
+    "bold:d": "Parte de dB: unidad decibelio.",
+    "_d": "Índice d: Parte de dB: unidad decibelio."
+  },
+  "formulaGlossaries": [
+    {}
+  ],
+  "prerequisites": [
+    "probabilidad",
+    "logaritmos",
+    "distribuciones"
+  ],
+  "units": "B en MHz da C en Mbit/s porque MHz=10⁶ Hz. S/N adimensional y GdB en dB de potencia. C/B en bit/s/Hz. La base dos define información en bits, no en nats. Los logaritmos requieren un argumento positivo adimensional.",
+  "dimensions": "B en MHz da C en Mbit/s porque MHz=10⁶ Hz. S/N adimensional y GdB en dB de potencia. C/B en bit/s/Hz. La base dos define información en bits, no en nats. Los logaritmos requieren un argumento positivo adimensional.",
+  "applications": "Comparar predicciones con sus unidades, su base de logaritmo y el conjunto de datos de referencia. Los cuatro retos separan cálculo, ajuste, interpretación y comprobación; las tres vistas permiten identificar qué cambia y qué permanece.",
+  "learningPath": [
+    "Identificar magnitudes",
+    "Comprobar hipótesis",
+    "Predicción",
+    "Exploración",
+    "Explicación del resultado"
+  ]
 }

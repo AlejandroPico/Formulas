@@ -1,21 +1,24 @@
-# Ficha
+# SARSA: control TD dentro de política
 
-**Nombre:** SARSA: control TD dentro de política
+Una transición observada con dos valores siguientes. Se modifica una estimación Q; no se presenta una transición aislada como entrenamiento completo.
 
-**Área:** Reinforcement Learning
+## Magnitudes y notación
 
-**Nivel:** Universidad inicial
+| Símbolo | Interpretación |
+| :-- | :-- |
+| Q | Valor estimado de un par estado y acción. |
+| s | Estado actual; s′ siguiente. |
+| a | Acción actual; a′ siguiente en SARSA. |
+| r | Recompensa observada. |
+| γ | Descuento de continuación. |
+| α | Tamaño de actualización entre cero y uno. |
+| ′ | Prima: estado o acción siguientes. |
+| ← | Asignación: reemplaza el valor anterior. |
 
-**Resumen:** Actualiza usando la acción siguiente que la política realmente eligió.
+## Condiciones
 
-## Lectura e interpretación
+Es una sola transición educativa; no certifica convergencia. Una tarea terminal no hace bootstrap. Los resultados generales de convergencia exigen exploración, condiciones de pasos y otras hipótesis. En SARSA la política de comportamiento determina el objetivo; Q-learning es fuera de política.
 
-# Interpretación
+## Unidades
 
-Mueve los controles y observa qué cambia: target TD, política, recorte PPO, alineación, fase posicional o especialización por cabeza.
-
-## Validez y limitaciones
-
-# Limitaciones
-
-Puede ser conservador y depende mucho de la política exploratoria.
+Q y recompensas comparten unidad de retorno; α y γ son adimensionales. Un terminal aporta continuación cero.

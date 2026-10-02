@@ -6,42 +6,94 @@
   "level": "Universidad inicial",
   "color": "#10b981",
   "formula": [
-    "I(X;Y)=H(X)+H(Y)−H(X,Y)",
-    "I(X;Y)=Σp(x,y)log(p(x,y)/(p(x)p(y)))"
+    "I(X;Y)=\\sum_{x,y}p(x,y)\\log_2\\frac{p(x,y)}{p(x)p(y)}",
+    "I(X;Y)=H(Y)-H(Y\\mid X)\\ge0"
   ],
-  "summary": "Cuantifica cuánto reduce una variable la incertidumbre sobre otra.",
-  "sim": "scripts/ml-mutual-information-sim.js?v=20260705a",
-  "k": "mi",
+  "summary": "Canal binario simétrico con entrada Bernoulli p y probabilidad independiente ε de invertir cada bit. La información mutua compara incertidumbre de salida y ruido condicional.",
   "folder": "formulas/mutual-information",
   "source": "files",
   "formulaText": [
-    "Cuantifica cuánto reduce una variable la incertidumbre sobre otra."
+    "Canal binario simétrico con entrada Bernoulli p y probabilidad independiente ε de invertir cada bit. La información mutua compara incertidumbre de salida y ruido condicional."
   ],
   "tags": [
-    "aprendizaje automático",
-    "nlp",
-    "teoria de la informacion",
-    "normalizacion",
-    "funciones de perdida"
+    "información mutua",
+    "canal binario",
+    "distribución conjunta",
+    "independencia"
   ],
   "prerequisites": [
     "probabilidad",
     "logaritmos",
-    "estadistica",
-    "machine learning",
-    "redes neuronales"
+    "distribuciones"
   ],
   "learningPath": [
-    "formula",
-    "significado",
-    "historia",
-    "derivacion",
-    "simulacion"
+    "Identificar magnitudes",
+    "Comprobar hipótesis",
+    "Predicción",
+    "Exploración",
+    "Explicación del resultado"
   ],
-  "units": "Unidades didácticas normalizadas.",
-  "dimensions": "Ver ficha.",
+  "units": "Probabilidades adimensionales y logaritmos base dos, por tanto I en bits por uso de canal. Las cuatro probabilidades conjuntas suman uno; cada marginal suma uno. La información condicional puede interpretarse como incertidumbre restante, sin atribuir unidades de energía a los bits.",
+  "dimensions": "Probabilidades adimensionales y logaritmos base dos, por tanto I en bits por uso de canal. Las cuatro probabilidades conjuntas suman uno; cada marginal suma uno. La información condicional puede interpretarse como incertidumbre restante, sin atribuir unidades de energía a los bits.",
   "symbols": [],
   "legacySource": "runtime-batch-migration",
   "originalSource": "scripts/latest-formula-batch-25.js",
-  "createdAt": "2026-07-06"
+  "createdAt": "2026-07-06",
+  "simulation": "mutual-information",
+  "simulatorVersion": 2,
+  "symbolGlossary": {
+    "0": "Cero: valor nulo o referencia indicada.",
+    "2": "Dos: factor numérico; como exponente significa el cuadrado.",
+    "=": "Igualdad: ambos lados tienen el mismo valor matemático.",
+    "−": "Resta o signo negativo del término siguiente.",
+    ",": "Separación de expresiones o condiciones.",
+    "(": "Abre un grupo de términos que se opera como una sola base.",
+    ")": "Cierra el grupo de términos.",
+    "∑": "Sumatorio: acumula los términos del índice indicado.",
+    "≥": "Mayor o igual: incluye el valor límite.",
+    "log": "Logaritmo decimal cuando su base está escrita como 10.",
+    "^2": "Al cuadrado: multiplica toda la base por sí misma.",
+    "_0": "Índice 0: valor de reposo, inicial o de referencia según la magnitud.",
+    "_2": "Índice 2: segunda componente o nivel escrito.",
+    "structure:msqrt": "Raíz cuadrada no negativa: recupera la magnitud cuyo cuadrado es el argumento. Respeta el dominio real de esta ficha.",
+    "structure:mfrac": "Cociente: divide el numerador entre el denominador completo; sus unidades deben ser compatibles con la magnitud resultante.",
+    "structure:msup": "Exponente: una potencia actúa sobre toda la base. Una marca de derivada, adjunto o etiqueta conserva el significado propio definido en esta ficha.",
+    "structure:msub": "Índice inferior: identifica componente, nivel, condición o estado de la base, sin multiplicarla.",
+    "structure:msubsup": "La base lleva índice inferior y marca superior; cada uno se interpreta con la notación de esta ficha.",
+    "structure:mover": "Barra sobre x: media de datos; sobre un vector indica su vector de medias. La marca de flecha identifica vector.",
+    "structure:munder": "Límite inferior o condición del sumatorio escrito.",
+    "structure:munderover": "Límites del sumatorio: especifican qué valores toma su índice.",
+    ";": "Separa las dos variables de información mutua.",
+    "I": "Información mutua entre X e Y.",
+    "X": "Variable de entrada del canal.",
+    "Y": "Variable de salida observada.",
+    "x": "Valor de entrada en la suma.",
+    "y": "Valor de salida en la suma.",
+    "p": "Probabilidad conjunta o marginal según sus argumentos.",
+    "H": "Entropía de la variable indicada.",
+    "∣": "Condicionado a la entrada X.",
+    "bold:I": "Información mutua entre X e Y.",
+    "_I": "Índice I: Información mutua entre X e Y.",
+    "bold:X": "Variable de entrada del canal.",
+    "_X": "Índice X: Variable de entrada del canal.",
+    "bold:Y": "Variable de salida observada.",
+    "_Y": "Índice Y: Variable de salida observada.",
+    "bold:x": "Valor de entrada en la suma.",
+    "_x": "Índice x: Valor de entrada en la suma.",
+    "bold:y": "Valor de salida en la suma.",
+    "_y": "Índice y: Valor de salida en la suma.",
+    "bold:p": "Probabilidad conjunta o marginal según sus argumentos.",
+    "_p": "Índice p: Probabilidad conjunta o marginal según sus argumentos.",
+    "bold:H": "Entropía de la variable indicada.",
+    "_H": "Índice H: Entropía de la variable indicada.",
+    "bold:∣": "Condicionado a la entrada X.",
+    "_∣": "Índice ∣: Condicionado a la entrada X.",
+    "bold:;": "Separa las dos variables de información mutua.",
+    "_;": "Índice ;: Separa las dos variables de información mutua."
+  },
+  "formulaGlossaries": [
+    {},
+    {}
+  ],
+  "applications": "Comparar predicciones con sus unidades, su base de logaritmo y el conjunto de datos de referencia. Los cuatro retos separan cálculo, ajuste, interpretación y comprobación; las tres vistas permiten identificar qué cambia y qué permanece."
 }

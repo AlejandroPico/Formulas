@@ -4,13 +4,88 @@
   "author": "Solomon Kullback y Richard Leibler",
   "year": 1951,
   "field": "Teoría de la información y estadística",
-  "level": "Universidad",
+  "level": "Universidad inicial",
   "color": "#ef4444",
   "simulation": "kullback-leibler-divergence",
   "formulaText": [
-    "divergencia KL = esperanza bajo P del logaritmo de P dividido entre Q",
-    "mide pérdida de información al aproximar P mediante Q"
+    "Divergencia KL entre dos Bernoulli, en nats. Penaliza usar q para una fuente p; no es una distancia simétrica."
   ],
-  "summary": "Cuantifica cuánto se pierde al usar una distribución aproximada Q en lugar de una distribución P.",
-  "tags": []
+  "summary": "Divergencia KL entre dos Bernoulli, en nats. Penaliza usar q para una fuente p; no es una distancia simétrica.",
+  "tags": [
+    "divergencia kl",
+    "información relativa",
+    "asimetría",
+    "soporte probabilístico"
+  ],
+  "formula": [
+    "D_{KL}(p\\Vert q)=\\sum_i p_i\\ln\\frac{p_i}{q_i}",
+    "D_{KL}(p\\Vert q)\\ge0,\\qquad D_{KL}(p\\Vert q)\\ne D_{KL}(q\\Vert p)\\ \\mathrm{en\\ general}"
+  ],
+  "simulatorVersion": 2,
+  "symbolGlossary": {
+    "0": "Cero: valor nulo o referencia indicada.",
+    "=": "Igualdad: ambos lados tienen el mismo valor matemático.",
+    ",": "Separación de expresiones o condiciones.",
+    "(": "Abre un grupo de términos que se opera como una sola base.",
+    ")": "Cierra el grupo de términos.",
+    "‖": "Separa distribuciones en KL dirigida.",
+    "∑": "Sumatorio: acumula los términos del índice indicado.",
+    "≠": "Desigualdad: los dos valores deben ser distintos.",
+    "≥": "Mayor o igual: incluye el valor límite.",
+    "ln": "Logaritmo natural, base e; su argumento debe ser positivo y adimensional.",
+    "_0": "Índice 0: valor de reposo, inicial o de referencia según la magnitud.",
+    "structure:msqrt": "Raíz cuadrada no negativa: recupera la magnitud cuyo cuadrado es el argumento. Respeta el dominio real de esta ficha.",
+    "structure:mfrac": "Cociente: divide el numerador entre el denominador completo; sus unidades deben ser compatibles con la magnitud resultante.",
+    "structure:msup": "Exponente: una potencia actúa sobre toda la base. Una marca de derivada, adjunto o etiqueta conserva el significado propio definido en esta ficha.",
+    "structure:msub": "Índice inferior: identifica componente, nivel, condición o estado de la base, sin multiplicarla.",
+    "structure:msubsup": "La base lleva índice inferior y marca superior; cada uno se interpreta con la notación de esta ficha.",
+    "structure:mover": "Barra sobre x: media de datos; sobre un vector indica su vector de medias. La marca de flecha identifica vector.",
+    "structure:munder": "Límite inferior o condición del sumatorio escrito.",
+    "structure:munderover": "Límites del sumatorio: especifican qué valores toma su índice.",
+    "D": "Divergencia dirigida de fuente p respecto a propuesta q.",
+    "K": "Parte de KL: Kullback.",
+    "L": "Parte de KL: Leibler.",
+    "p": "Distribución fuente que pondera términos.",
+    "q": "Distribución propuesta cuyo coste se compara.",
+    "i": "Índice de categoría.",
+    "en": "La desigualdad de órdenes no se afirma para cada par: es en general.",
+    "general": "Señala que hay pares particulares con valores coincidentes.",
+    "bold:D": "Divergencia dirigida de fuente p respecto a propuesta q.",
+    "_D": "Índice D: Divergencia dirigida de fuente p respecto a propuesta q.",
+    "bold:K": "Parte de KL: Kullback.",
+    "_K": "Índice K: Parte de KL: Kullback.",
+    "bold:L": "Parte de KL: Leibler.",
+    "_L": "Índice L: Parte de KL: Leibler.",
+    "bold:p": "Distribución fuente que pondera términos.",
+    "_p": "Índice p: Distribución fuente que pondera términos.",
+    "bold:q": "Distribución propuesta cuyo coste se compara.",
+    "_q": "Índice q: Distribución propuesta cuyo coste se compara.",
+    "bold:i": "Índice de categoría.",
+    "_i": "Índice i: Índice de categoría.",
+    "bold:‖": "Separa distribuciones en KL dirigida.",
+    "_‖": "Índice ‖: Separa distribuciones en KL dirigida.",
+    "bold:en": "La desigualdad de órdenes no se afirma para cada par: es en general.",
+    "_en": "Índice en: La desigualdad de órdenes no se afirma para cada par: es en general.",
+    "bold:general": "Señala que hay pares particulares con valores coincidentes.",
+    "_general": "Índice general: Señala que hay pares particulares con valores coincidentes."
+  },
+  "formulaGlossaries": [
+    {},
+    {}
+  ],
+  "prerequisites": [
+    "probabilidad",
+    "logaritmos",
+    "distribuciones"
+  ],
+  "units": "Logaritmos naturales: divergencia en nats, adimensional. Dividir por ln2 convierte a bits. En el ejemplo Bernoulli, las probabilidades son p,1−p y q,1−q, de modo que ambas distribuciones están normalizadas; no se suman pesos arbitrarios.",
+  "dimensions": "Logaritmos naturales: divergencia en nats, adimensional. Dividir por ln2 convierte a bits. En el ejemplo Bernoulli, las probabilidades son p,1−p y q,1−q, de modo que ambas distribuciones están normalizadas; no se suman pesos arbitrarios.",
+  "applications": "Comparar predicciones con sus unidades, su base de logaritmo y el conjunto de datos de referencia. Los cuatro retos separan cálculo, ajuste, interpretación y comprobación; las tres vistas permiten identificar qué cambia y qué permanece.",
+  "learningPath": [
+    "Identificar magnitudes",
+    "Comprobar hipótesis",
+    "Predicción",
+    "Exploración",
+    "Explicación del resultado"
+  ]
 }

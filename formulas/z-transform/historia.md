@@ -1,9 +1,11 @@
 # Historia
 
-La transformada Z se consolidó con el desarrollo del procesamiento digital de señales, la teoría de sistemas discretos y el análisis de filtros digitales. Es la contraparte discreta de la transformada de Laplace: donde Laplace estudia señales continuas en el tiempo, la transformada Z estudia sucesiones indexadas por enteros.
+La transformada Z adapta el análisis de sistemas a señales discretas y ecuaciones en diferencias. Su uso requiere señalar convergencia, causalidad y estabilidad. Los polos aportan información importante, pero no sustituyen la región que determina la secuencia inversa apropiada.
 
-Su importancia creció durante el siglo XX con la electrónica digital, la teoría de control discreto, las comunicaciones y los computadores. En filtros digitales, por ejemplo, los polos y ceros en el plano Z determinan estabilidad, resonancia, atenuación y respuesta en frecuencia.
+## Referencia y alcance
 
-El círculo unitario ocupa un lugar central porque evaluar la transformada Z sobre `z=e^{jω}` conecta directamente con la transformada de Fourier discreta en frecuencia. Así, el plano Z permite ver en una sola geometría la convergencia, la estabilidad y el comportamiento frecuencial.
+[Material de estudio](https://ocw.mit.edu/courses/mas-160-signals-systems-and-information-for-media-technology-fall-2007/resources/1121_zx1/).
 
-Históricamente, su valor está en convertir ecuaciones en diferencias y convoluciones discretas en expresiones algebraicas manipulables.
+Ejemplo causal con a real y |a|≤0,9. Los controles de evaluación pueden salir de |z|>|a|: entonces la pantalla identifica continuación racional y no afirma convergencia de la suma. El polo exacto es singular; los ángulos del control evitan evaluarlo directamente. a=0 produce impulso unitario, incluyendo x[0]=1.
+
+La fecha de creación del catálogo procede del archivo original; el año científico y la fecha de revisión tienen funciones diferentes.

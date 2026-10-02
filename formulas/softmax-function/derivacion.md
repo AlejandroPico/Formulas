@@ -1,9 +1,11 @@
 # Derivación
 
-Se parte de logits `z_i`, que pueden ser cualquier número real. Para convertirlos en cantidades positivas se aplica una exponencial.
+Normalizar exponenciales positivas da probabilidades que suman uno. Para estabilidad se resta el máximo logit antes de exponenciar: el factor común se cancela. Si T disminuye, aumentan contrastes; si los logits empatan, mantienen igual probabilidad. El laboratorio grafica las tres curvas frente a temperatura y admite logits negativos.
 
-Después se divide cada exponencial por la suma total de exponenciales. Esa normalización hace que todas las salidas sean positivas y sumen uno.
+## Hipótesis necesarias
 
-Para estabilidad numérica se suele restar una constante `c`, normalmente el máximo logit. Esta operación no cambia el resultado porque multiplica numerador y denominador por el mismo factor.
+Logits no son probabilidades ni evidencias calibradas. T debe ser positiva. La salida normalizada no garantiza buena calibración, ni elimina incertidumbre o sesgo de datos. El límite de temperatura cero necesita tratar empates.
 
-Softmax no decide por sí sola la clase correcta; produce una distribución que después puede compararse con etiquetas mediante entropía cruzada.
+## Comprueba con números
+
+Tres logits y temperatura positiva. Se resta el máximo antes de exponenciar para estabilidad; sumar la misma constante a todos no cambia probabilidades. Calcula probabilidad de a en porcentaje con los datos iniciales. Probabilidad de A en porcentaje=66,5241 . pi=exp(zi/T)/Σexp(zj/T); T>0.

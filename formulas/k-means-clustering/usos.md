@@ -1,3 +1,11 @@
 # Usos
 
-Segmentación, compresión, inicialización, análisis exploratorio y prototipos rápidos.
+Con centros fijos, asignar cada punto al centro más cercano minimiza su término cuadrático. Con asignaciones fijas, derivar la suma respecto al centro da la media del grupo. Alternar estos dos pasos no aumenta J. El laboratorio parte de dos centros a la izquierda, muestra asignaciones y desplaza las medias; la curva de coste conserva todos los barridos, incluido el inicial. En el laboratorio contrasta una predicción, construye el objetivo y explica qué supuesto permite el resultado.
+
+## Del experimento al contexto
+
+Lloyd sobre seis puntos, asignación al centro más próximo y actualización por media. Los empates se resuelven por orden de centro y un centro vacío se conserva.
+
+## Condiciones antes de aplicar
+
+K debe elegirse y la solución depende de los centros iniciales. Un grupo vacío conserva su centro en esta demostración. Empates se resuelven por índice; no se promete óptimo global ni detección de formas no convexas.

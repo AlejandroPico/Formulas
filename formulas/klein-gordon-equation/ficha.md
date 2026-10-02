@@ -1,27 +1,26 @@
-# Ficha
+# Ecuación de Klein-Gordon
 
-## Identificación
+Dos modos exactos de frecuencia positiva de un campo libre 1D. La forma real del campo no es una densidad de probabilidad; su dispersión respeta relatividad.
 
-- **Nombre:** Ecuación de Klein-Gordon
-- **Autores asociados:** Oskar Klein y Walter Gordon
-- **Año:** 1926
-- **Área:** mecánica cuántica relativista
-- **Nivel:** avanzado
-- **Tipo:** ecuación relativista de campo escalar
+## Magnitudes y notación
 
-## Variables
+| Símbolo | Interpretación |
+| :-- | :-- |
+| ħ | Constante de Planck reducida h/(2π). |
+| t | Tiempo físico o tiempo reducido según las unidades del laboratorio. |
+| m | Masa de la partícula. |
+| φ | Campo escalar libre; aquí se dibuja su parte real. |
+| ω | Frecuencia angular firmada del Hamiltoniano o positiva del modo indicado. |
+| k | Número de onda del modo. |
+| c | Velocidad de la luz en vacío. |
+| v | Velocidad de grupo con índice g. |
+| ∂ | Derivada parcial respecto a la coordenada del índice. |
+| ∇ | Gradiente espacial; ∇² es el laplaciano. |
 
-- `phi`: campo escalar.
-- `Box`: operador de onda relativista.
-- `m`: masa.
-- `c`: velocidad de la luz.
-- `hbar`: constante reducida de Planck.
-- `E`, `p`: energía y momento.
+## Condiciones
 
-## Lectura del simulador
+Campo escalar libre en 1+1 para el experimento, masa no negativa y modos de frecuencia positiva. La parte real dibujada no es una densidad de probabilidad. Una interpretación de partícula y antipartícula pertenece al tratamiento cuántico del campo; no se obtiene tomando φ² sin más.
 
-La curva representa un campo escalar oscilante. La masa modifica la frecuencia y la dispersión. El número de onda controla cuántas oscilaciones caben en el dominio visual.
+## Unidades
 
-## Nota
-
-El simulador usa unidades visuales. La ecuación real debe tratarse con unidades coherentes, condiciones de frontera y, en teoría de campos, operadores de campo.
+En la fórmula SI, k m⁻¹, ω s⁻¹ y m kg. El laboratorio usa ħ=c=1: impulso y masa en Eref, longitud ħc/Eref y tiempo ħ/Eref. La velocidad se expresa dividida por c.

@@ -6,40 +6,87 @@
   "level": "Universidad inicial",
   "color": "#0284c7",
   "formula": [
-    "μ=μ_max S/(K_s+S)"
+    "\\mu(S)=\\mu_{\\max}\\frac{S}{K_S+S}",
+    "\\frac{dX}{dt}=\\mu X,\\qquad X(t)=X_0e^{\\mu t}\\quad(S=\\mathrm{constante})"
   ],
-  "summary": "Relaciona la tasa específica de crecimiento microbiano con la concentración de sustrato limitante.",
-  "sim": "scripts/bio-monod-sim.js?v=20260705a",
+  "summary": "Tasa específica de crecimiento de Monod con sustrato mantenido constante. El cultivo hipotético crece exponencialmente a esa tasa; no integra agotamiento ni muerte.",
   "folder": "formulas/monod-microbial-growth-model",
   "source": "files",
   "author": "",
   "formulaText": [
-    "Relaciona la tasa específica de crecimiento microbiano con la concentración de sustrato limitante."
+    "Tasa específica de crecimiento de Monod con sustrato mantenido constante. El cultivo hipotético crece exponencialmente a esa tasa; no integra agotamiento ni muerte."
   ],
   "tags": [
-    "biologia matematica",
-    "biofisica",
-    "farmacologia",
-    "ecologia",
-    "microbiologia",
-    "epidemiologia"
+    "crecimiento microbiano",
+    "saturación",
+    "sustrato",
+    "cinética"
   ],
   "prerequisites": [
-    "calculo",
-    "ecuaciones diferenciales",
-    "logaritmos",
-    "biologia general",
-    "quimica fisica"
+    "interpretar tasas",
+    "balance de magnitudes",
+    "funciones y unidades"
   ],
   "learningPath": [
-    "formula",
-    "significado",
-    "simulacion"
+    "Identificar magnitudes",
+    "Comprobar hipótesis",
+    "Predicción",
+    "Exploración",
+    "Explicación del resultado"
   ],
-  "units": "Unidades didácticas normalizadas.",
-  "dimensions": "Ver ficha.",
+  "units": "S y KS en g/L, μ y μmax en h⁻¹; X/X0 es adimensional. El tiempo de duplicación ln2/μ es indefinido si S=0 y μ=0. El exponente μt no tiene unidades. KS tiene unidades de concentración, no de crecimiento.",
+  "dimensions": "S y KS en g/L, μ y μmax en h⁻¹; X/X0 es adimensional. El tiempo de duplicación ln2/μ es indefinido si S=0 y μ=0. El exponente μt no tiene unidades. KS tiene unidades de concentración, no de crecimiento.",
   "symbols": [],
   "legacySource": "runtime-batch-migration",
   "originalSource": "scripts/latest-formula-batch-23.js",
-  "createdAt": "2026-07-06"
+  "createdAt": "2026-07-06",
+  "simulation": "monod-microbial-growth-model",
+  "simulatorVersion": 2,
+  "symbolGlossary": {
+    "0": "Cero: valor nulo o referencia indicada.",
+    "=": "Igualdad: ambos lados tienen el mismo valor matemático.",
+    "+": "Suma de los términos indicados.",
+    ",": "Separación de expresiones o condiciones.",
+    "(": "Abre un grupo de términos que se opera como una sola base.",
+    ")": "Cierra el grupo de términos.",
+    "e": "Número de Euler, base de la exponencial natural.",
+    "_0": "Índice 0: biomasa inicial.",
+    "structure:msqrt": "Raíz cuadrada no negativa: recupera la magnitud cuyo cuadrado es el argumento. Respeta el dominio real de esta ficha.",
+    "structure:mfrac": "Cociente: divide el numerador entre el denominador completo; sus unidades deben ser compatibles con la magnitud resultante.",
+    "structure:msup": "Exponente: una potencia actúa sobre toda la base. Una marca de derivada, adjunto o etiqueta conserva el significado propio definido en esta ficha.",
+    "structure:msub": "Índice inferior: identifica componente, nivel, condición o estado de la base, sin multiplicarla.",
+    "structure:msubsup": "La base lleva índice inferior y marca superior; cada uno se interpreta con la notación de esta ficha.",
+    "structure:mover": "Barra sobre x: media de datos; sobre un vector indica su vector de medias. La marca de flecha identifica vector.",
+    "structure:munder": "Límite inferior o condición del sumatorio escrito.",
+    "structure:munderover": "Límites del sumatorio: especifican qué valores toma su índice.",
+    "μ": "Tasa específica de crecimiento de biomasa.",
+    "S": "Concentración del sustrato limitante.",
+    "K": "Constante KS: concentración con mitad de tasa máxima.",
+    "X": "Biomasa del cultivo.",
+    "t": "Tiempo físico en horas.",
+    "d": "Diferencial en la tasa de biomasa.",
+    "max": "Índice max: límite superior de la tasa específica.",
+    "constante": "Sustrato mantenido externamente constante en la solución exponencial.",
+    "bold:μ": "Tasa específica de crecimiento de biomasa.",
+    "_μ": "Índice μ: Tasa específica de crecimiento de biomasa.",
+    "bold:S": "Concentración del sustrato limitante.",
+    "_S": "Índice S: Concentración del sustrato limitante.",
+    "bold:K": "Constante KS: concentración con mitad de tasa máxima.",
+    "_K": "Índice K: Constante KS: concentración con mitad de tasa máxima.",
+    "bold:X": "Biomasa del cultivo.",
+    "_X": "Índice X: Biomasa del cultivo.",
+    "bold:t": "Tiempo físico en horas.",
+    "_t": "Índice t: Tiempo físico en horas.",
+    "bold:d": "Diferencial en la tasa de biomasa.",
+    "_d": "Índice d: Diferencial en la tasa de biomasa.",
+    "bold:max": "Índice max: límite superior de la tasa específica.",
+    "_max": "Índice max: Índice max: límite superior de la tasa específica.",
+    "bold:constante": "Sustrato mantenido externamente constante en la solución exponencial.",
+    "_constante": "Índice constante: Sustrato mantenido externamente constante en la solución exponencial."
+  },
+  "formulaGlossaries": [
+    {},
+    {}
+  ],
+  "applications": "Comparar el resultado con sus hipótesis y explicar qué parámetro domina el cambio. El laboratorio incluye predicción, ajuste de un objetivo, interpretación del modelo y una nueva comprobación numérica."
 }

@@ -364,8 +364,8 @@ function renderFormulaDisplay(display) {
   if (display.mode === "explained") {
     return `<div class="formula-words-stack">${display.formulas.map(line => `<div class="formula-words-row">${escapeHtml(line)}</div>`).join("")}</div>`;
   }
-  if (display.formulas.length === 1) return `\\(${display.formulas[0]}\\)`;
-  return `<div class="formula-stack">${display.formulas.map(line => `<div>\\(${line}\\)</div>`).join("")}</div>`;
+  if (display.formulas.length === 1) return `\\(${escapeHtml(display.formulas[0])}\\)`;
+  return `<div class="formula-stack">${display.formulas.map(line => `<div>\\(${escapeHtml(line)}\\)</div>`).join("")}</div>`;
 }
 
 function normalizeExplainedFormula(value) {

@@ -3,48 +3,90 @@
   "name": "RoPE: Rotary Position Embedding",
   "year": 2021,
   "field": "Transformers / Posición",
-  "level": "Universidad intermedia",
+  "level": "Universidad inicial",
   "color": "#8b5cf6",
   "formula": [
-    "R_{θ,m}v = rotación por mθ",
-    "q_m^T k_n depende de m−n"
+    "R(\\varphi)=\\begin{pmatrix}\\cos\\varphi&-\\sin\\varphi\\\\\\sin\\varphi&\\cos\\varphi\\end{pmatrix}",
+    "q_m=R(m\\theta)q,\\quad k_n=R(n\\theta)k,\\quad q_m\\cdot k_n=q\\cdot R((n-m)\\theta)k"
   ],
-  "summary": "Codifica posición como rotación de fase, preservando norma y favoreciendo posición relativa.",
-  "sim": "scripts/transformer-rope-sim.js?v=20260705a",
-  "k": "rope",
+  "summary": "RoPE reducido a un par 2D: q=(1,0), k=(0,6,0,8), posiciones m,n y frecuencia θ. Las rotaciones conservan norma y el producto depende de n−m.",
   "folder": "formulas/rotary-position-embedding-rope",
   "source": "files",
   "formulaText": [
-    "Codifica posición como rotación de fase, preservando norma y favoreciendo posición relativa."
+    "RoPE reducido a un par 2D: q=(1,0), k=(0,6,0,8), posiciones m,n y frecuencia θ. Las rotaciones conservan norma y el producto depende de n−m."
   ],
   "tags": [
-    "aprendizaje por refuerzo",
+    "rope",
+    "codificación posicional",
     "transformers",
-    "attention",
-    "positional encoding",
-    "ppo",
-    "q-learning",
-    "sarsa"
+    "rotaciones"
   ],
   "prerequisites": [
-    "probabilidad",
-    "gradiente",
-    "bellman",
-    "algebra lineal",
-    "softmax",
-    "redes neuronales"
+    "álgebra lineal",
+    "derivadas",
+    "probabilidad"
   ],
   "learningPath": [
-    "formula",
-    "significado",
-    "historia",
-    "derivacion",
-    "simulacion"
+    "Identificar magnitudes",
+    "Comprobar hipótesis",
+    "Predicción",
+    "Exploración",
+    "Explicación del resultado"
   ],
-  "units": "Unidades didácticas normalizadas.",
-  "dimensions": "Ver ficha.",
+  "units": "Las coordenadas y parámetros usan escala numérica de referencia. Probabilidades, razones, fases en radianes y pesos de atención son adimensionales. Las dimensiones de matrices deben permitir todos los productos; el laboratorio declara cada vector reducido.",
+  "dimensions": "Las coordenadas y parámetros usan escala numérica de referencia. Probabilidades, razones, fases en radianes y pesos de atención son adimensionales. Las dimensiones de matrices deben permitir todos los productos; el laboratorio declara cada vector reducido.",
   "symbols": [],
   "legacySource": "runtime-batch-migration",
   "originalSource": "scripts/latest-formula-batch-27.js",
-  "createdAt": "2026-07-06"
+  "createdAt": "2026-07-06",
+  "simulation": "rotary-position-embedding-rope",
+  "simulatorVersion": 2,
+  "symbolGlossary": {
+    "=": "Igualdad: ambos lados tienen el mismo valor matemático.",
+    "−": "Resta o signo negativo del término siguiente.",
+    ",": "Separación de expresiones o condiciones.",
+    "(": "Abre un grupo de términos que se opera como una sola base.",
+    ")": "Cierra el grupo de términos.",
+    "structure:msqrt": "Raíz cuadrada no negativa: recupera la magnitud cuyo cuadrado es el argumento. Respeta el dominio real de esta ficha.",
+    "structure:mfrac": "Cociente: divide el numerador entre el denominador completo; sus unidades deben ser compatibles con la magnitud resultante.",
+    "structure:msup": "Exponente: una potencia actúa sobre toda la base. Una marca de derivada, adjunto o etiqueta conserva el significado propio definido en esta ficha.",
+    "structure:msub": "Índice inferior: identifica componente, nivel, condición o estado de la base, sin multiplicarla.",
+    "structure:msubsup": "La base lleva índice inferior y marca superior; cada uno se interpreta con la notación de esta ficha.",
+    "structure:mover": "Barra sobre x: media de datos; sobre un vector indica su vector de medias. La marca de flecha identifica vector.",
+    "structure:munder": "Límite inferior o condición del sumatorio escrito.",
+    "structure:munderover": "Límites del sumatorio: especifican qué valores toma su índice.",
+    "⋅": "Producto de los factores; entre vectores representa el producto escalar.",
+    "R": "Matriz ortogonal de rotación plana.",
+    "φ": "Ángulo de una rotación.",
+    "θ": "Frecuencia angular por posición.",
+    "q": "Consulta antes de rotar; qm tras posición m.",
+    "k": "Clave antes de rotar; kn tras posición n.",
+    "m": "Posición de consulta.",
+    "n": "Posición de clave.",
+    "sin": "Seno del ángulo en radianes.",
+    "cos": "Coseno del ángulo en radianes.",
+    "bold:R": "Matriz ortogonal de rotación plana.",
+    "_R": "Índice R: Matriz ortogonal de rotación plana.",
+    "bold:φ": "Ángulo de una rotación.",
+    "_φ": "Índice φ: Ángulo de una rotación.",
+    "bold:θ": "Frecuencia angular por posición.",
+    "_θ": "Índice θ: Frecuencia angular por posición.",
+    "bold:q": "Consulta antes de rotar; qm tras posición m.",
+    "_q": "Índice q: Consulta antes de rotar; qm tras posición m.",
+    "bold:k": "Clave antes de rotar; kn tras posición n.",
+    "_k": "Índice k: Clave antes de rotar; kn tras posición n.",
+    "bold:m": "Posición de consulta.",
+    "_m": "Índice m: Posición de consulta.",
+    "bold:n": "Posición de clave.",
+    "_n": "Índice n: Posición de clave.",
+    "bold:sin": "Seno del ángulo en radianes.",
+    "_sin": "Índice sin: Seno del ángulo en radianes.",
+    "bold:cos": "Coseno del ángulo en radianes.",
+    "_cos": "Índice cos: Coseno del ángulo en radianes."
+  },
+  "formulaGlossaries": [
+    {},
+    {}
+  ],
+  "applications": "Una rotación por par 2D preserva norma. Usar ángulos mθ y nθ en consulta y clave da R(mθ)ᵀR(nθ)=R((n−m)θ); por eso el producto depende de la distancia relativa. El laboratorio usa q=(1,0), k=(0,6,0,8), ambos unitarios, y muestra coordenadas y producto. Trasladar ambas posiciones igual conserva la compatibilidad aunque los vectores roten. En aplicaciones, verifica dimensión, máscara y procedencia de datos antes de trasladar el ejemplo a un modelo real."
 }

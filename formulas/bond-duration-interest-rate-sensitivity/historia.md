@@ -1,3 +1,11 @@
 # Historia
 
-Frederick Macaulay introdujo en 1938 la duración como plazo medio ponderado de los flujos de un bono. La idea se volvió esencial porque dos bonos con la misma fecha de vencimiento pueden tener sensibilidades muy distintas: un cupón alto devuelve dinero antes y, por tanto, suele tener menor duración que un cupón bajo o un bono cupón cero. La duración modificada reformula esa intuición como sensibilidad directa del precio ante cambios del rendimiento.
+Macaulay propuso una medida de tiempo ponderado que se relaciona con sensibilidad de precios de renta fija. La duración modificada traduce esa estructura a una derivada de rendimiento bajo su convención. Los bonos con opciones o curvas de tipos requieren medidas adicionales y no heredan automáticamente esta ley.
+
+## Referencia y alcance
+
+[Material de estudio](https://ocw.mit.edu/courses/15-401-finance-theory-i-fall-2008/resources/lecture-notes/).
+
+Bono fijo sin opciones ni impago, cupón anual, nominal 100 y tasa efectiva anual compatible. No mezclar fórmula con pagos semestrales y rendimiento nominal sin modificar períodos. El shock paralelo cambia y en puntos porcentuales y se convierte a fracción. Vencimiento coincide con Macaulay solo para cupón cero en este ejemplo.
+
+La fecha de creación del catálogo procede del archivo original; el año científico y la fecha de revisión tienen funciones diferentes.

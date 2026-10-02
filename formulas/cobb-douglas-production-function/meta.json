@@ -6,48 +6,88 @@
   "level": "Universidad inicial",
   "color": "#0ea5e9",
   "formula": [
-    "Y=A·K^α·L^β",
-    "MPK=αY/K, MPL=βY/L"
+    "Y=AK^\\alpha L^\\beta",
+    "\\beta=1-\\alpha,\\quad0<\\alpha<1,\\qquad Y(\\lambda K,\\lambda L)=\\lambda Y(K,L)",
+    "\\frac{\\partial Y}{\\partial K}=\\alpha\\frac YK,\\qquad\\frac{\\partial Y}{\\partial L}=(1-\\alpha)\\frac YL"
   ],
-  "summary": "Modela producción agregada con capital, trabajo y rendimientos a escala controlados por exponentes.",
-  "sim": "scripts/economics-cobb-douglas-production-sim.js?v=20260706a",
-  "k": "cobb",
+  "summary": "Producción Cobb-Douglas con A>0, capital y trabajo positivos y exponentes α,1−α. Se estudia la variante de rendimientos constantes a escala, no cualquier exponente general.",
   "folder": "formulas/cobb-douglas-production-function",
   "source": "files",
   "formulaText": [
-    "Y=A·K^α·L^β",
-    "MPK=αY/K, MPL=βY/L",
-    "Modela producción agregada con capital, trabajo y rendimientos a escala controlados por exponentes."
+    "Producción Cobb-Douglas con A>0, capital y trabajo positivos y exponentes α,1−α. Se estudia la variante de rendimientos constantes a escala, no cualquier exponente general."
   ],
   "tags": [
-    "economia",
-    "microeconomia",
-    "macroeconomia",
-    "finanzas",
-    "riesgo",
-    "renta fija",
-    "kelly",
-    "var",
-    "solow"
+    "producción",
+    "cobb douglas",
+    "elasticidad",
+    "rendimientos a escala"
   ],
   "prerequisites": [
-    "algebra",
-    "calculo basico",
-    "microeconomia",
-    "macroeconomia",
-    "finanzas basicas"
+    "potencias",
+    "tasas y períodos",
+    "derivadas"
   ],
   "learningPath": [
-    "formula",
-    "significado",
-    "historia",
-    "derivacion",
-    "simulacion"
+    "Identificar magnitudes",
+    "Comprobar hipótesis",
+    "Predicción",
+    "Exploración",
+    "Explicación del resultado"
   ],
-  "units": "Unidades económicas y financieras normalizadas.",
-  "dimensions": "Ver ficha.",
+  "units": "K,L,Y se expresan en unidades de referencia; A absorbe las dimensiones para mantener coherencia. α,β y elasticidades son adimensionales. Los productos marginales tienen unidad de producción por unidad del factor. La superficie escala Y por 10A, mientras K y L recorren 1 a 10.",
+  "dimensions": "K,L,Y se expresan en unidades de referencia; A absorbe las dimensiones para mantener coherencia. α,β y elasticidades son adimensionales. Los productos marginales tienen unidad de producción por unidad del factor. La superficie escala Y por 10A, mientras K y L recorren 1 a 10.",
   "symbols": [],
   "legacySource": "runtime-batch-migration",
   "originalSource": "scripts/latest-formula-batch-32.js",
-  "createdAt": "2026-07-07"
+  "createdAt": "2026-07-07",
+  "simulation": "cobb-douglas-production-function",
+  "simulatorVersion": 2,
+  "symbolGlossary": {
+    "0": "Cero: valor nulo o referencia indicada.",
+    "1": "Uno: unidad numérica en la relación.",
+    "=": "Igualdad: ambos lados tienen el mismo valor matemático.",
+    "−": "Resta o signo negativo del término siguiente.",
+    ",": "Separación de expresiones o condiciones.",
+    "(": "Abre un grupo de términos que se opera como una sola base.",
+    ")": "Cierra el grupo de términos.",
+    "<": "Menor: desigualdad estricta.",
+    "∂": "Derivada parcial respecto de la variable indicada.",
+    "_0": "Índice 0: valor de reposo, inicial o de referencia según la magnitud.",
+    "_1": "Índice 1: primera componente, primer paso o primer valor ordenado.",
+    "structure:msqrt": "Raíz cuadrada no negativa: recupera la magnitud cuyo cuadrado es el argumento. Respeta el dominio real de esta ficha.",
+    "structure:mfrac": "Cociente: divide el numerador entre el denominador completo; sus unidades deben ser compatibles con la magnitud resultante.",
+    "structure:msup": "Exponente: una potencia actúa sobre toda la base. Una marca de derivada, adjunto o etiqueta conserva el significado propio definido en esta ficha.",
+    "structure:msub": "Índice inferior: identifica componente, nivel, condición o estado de la base, sin multiplicarla.",
+    "structure:msubsup": "La base lleva índice inferior y marca superior; cada uno se interpreta con la notación de esta ficha.",
+    "structure:mover": "Barra sobre x: media de datos; sobre un vector indica su vector de medias. La marca de flecha identifica vector.",
+    "structure:munder": "Límite inferior o condición del sumatorio escrito.",
+    "structure:munderover": "Límites del sumatorio: especifican qué valores toma su índice.",
+    "Y": "Producción bajo tecnología A.",
+    "A": "Factor de productividad y escala dimensional.",
+    "K": "Capital productivo en la unidad de referencia.",
+    "L": "Trabajo en la unidad de referencia.",
+    "α": "Elasticidad de producción respecto a capital.",
+    "β": "Elasticidad respecto a trabajo; en el laboratorio 1−α.",
+    "λ": "Factor positivo que escala ambos recursos.",
+    "bold:Y": "Producción bajo tecnología A.",
+    "_Y": "Índice Y: Producción bajo tecnología A.",
+    "bold:A": "Factor de productividad y escala dimensional.",
+    "_A": "Índice A: Factor de productividad y escala dimensional.",
+    "bold:K": "Capital productivo en la unidad de referencia.",
+    "_K": "Índice K: Capital productivo en la unidad de referencia.",
+    "bold:L": "Trabajo en la unidad de referencia.",
+    "_L": "Índice L: Trabajo en la unidad de referencia.",
+    "bold:α": "Elasticidad de producción respecto a capital.",
+    "_α": "Índice α: Elasticidad de producción respecto a capital.",
+    "bold:β": "Elasticidad respecto a trabajo; en el laboratorio 1−α.",
+    "_β": "Índice β: Elasticidad respecto a trabajo; en el laboratorio 1−α.",
+    "bold:λ": "Factor positivo que escala ambos recursos.",
+    "_λ": "Índice λ: Factor positivo que escala ambos recursos."
+  },
+  "formulaGlossaries": [
+    {},
+    {},
+    {}
+  ],
+  "applications": "Comparar escenarios hipotéticos bajo las mismas convenciones y explicar sensibilidad y límites. Las cifras son educativas: el simulador no estima datos de mercado actuales ni decide inversiones, producción o consumo reales."
 }

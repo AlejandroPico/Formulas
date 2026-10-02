@@ -1,9 +1,11 @@
 # Significado
 
-El principio de incertidumbre afirma que no es posible preparar un estado cuántico con posición y momento ambos arbitrariamente definidos. Cuanto más estrecha es la distribución espacial, más amplia debe ser la distribución de momentos, y viceversa.
+Paquete gaussiano normalizado con anchura σ y fase cuadrática b. En ħ=1, chirp produce covarianza x,p y eleva el producto sobre 1/2.
 
-No se trata de una limitación de los instrumentos ni de torpeza experimental. Es una propiedad estructural de la teoría cuántica. Posición y momento están representados por operadores que no conmutan, y esa no conmutatividad impone una desigualdad de dispersión.
+## Qué conserva y qué cambia
 
-La cantidad `Delta x` mide la anchura estadística de la posición. La cantidad `Delta p` mide la anchura estadística del momento. Su producto no puede caer por debajo de un valor del orden de `hbar`.
+La gaussiana tiene varianza espacial σ². Aplicar p=−iħ∂x a la función con fase cuadrática produce varianza de impulso ħ²(1+4b²)/(4σ²). La covarianza simetrizada es bħ. El producto simple crece con |b|, pero al restar la covarianza al cuadrado se recupera ħ²/4: el estado sigue siendo mínimo en la desigualdad completa de Robertson–Schrödinger.
 
-El simulador representa una región de localización espacial y un abanico de posibles momentos. Al reducir `Delta x`, los vectores de momento se hacen más largos y dispersos. Al aumentar `Delta x`, la incertidumbre en momento disminuye.
+## Primera predicción
+
+Paquete gaussiano normalizado con anchura σ y fase cuadrática b. En ħ=1, chirp produce covarianza x,p y eleva el producto sobre 1/2. Calcula desviación de impulso δp con los datos iniciales. Desviación de impulso Δp=0,5 . Δp=√(1+4b²)/(2σ); ΔxΔp≥1/2.

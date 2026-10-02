@@ -1,0 +1,21 @@
+import assert from 'node:assert/strict';
+import {createRequire} from 'node:module';
+import {writeFile,mkdir} from 'node:fs/promises';
+import {createServer} from './serve.mjs';
+const groups=['quantum','cosmos','life','information','economy','machine','network'],ids=[];
+for(const group of groups){const m=await import(`../formulas/shared/${group}-configs.js`);ids.push(...Object.keys(m[group.toUpperCase()+'_LABS']));}
+assert.equal(ids.length,96);assert.equal(new Set(ids).size,96);
+const {chromium}=createRequire(import.meta.url)('playwright'),server=createServer();await new Promise(r=>server.listen(0,'127.0.0.1',r));const browser=await chromium.launch({channel:'msedge',headless:true}),inventory={},errors=[];
+try{const page=await browser.newPage({viewport:{width:1440,height:1000},serviceWorkers:'block'});page.on('pageerror',e=>errors.push(e.message));await page.addInitScript(()=>localStorage.setItem('formula-theme-mode','notebook'));await page.goto(`http://127.0.0.1:${server.address().port}/Formulas/`);await page.waitForFunction(()=>window.FormulasAtlas?.equations?.length===282);
+for(const id of ids){console.log(id);await page.evaluate(async id=>{const {openEquationModal}=await import('./scripts/render-dynamic.js');openEquationModal(window.FormulasAtlas.equations.find(e=>e.id===id));},id);await page.waitForFunction(()=>document.querySelectorAll('.formula-tooltip-zone').length>0);
+const symbols=await page.locator('.formula-tooltip-zone.is-symbol').evaluateAll(z=>z.map(q=>({symbol:q.dataset.symbol,description:q.dataset.description})));inventory[id]=symbols;
+assert.equal(await page.locator('.formula-box g[data-mml-node="merror"]').count(),0,`${id}: LaTeX error`);
+if(['language-model-perplexity','ideal-mosfet-quadratic-model'].includes(id)){const equation=await page.evaluate(id=>window.FormulasAtlas.equations.find(e=>e.id===id).formula,id);const sources=await page.locator('[data-panel="formula"] .formula-box').evaluate(el=>Array.from(MathJax.startup.document.getMathItemsWithin(el)).map(item=>item.math));assert.deepEqual(sources,equation,`${id}: source escaped incorrectly`);if(id==='language-model-perplexity')assert(symbols.some(s=>s.symbol==='H'),'Perplexity final exponential lost');else assert(symbols.some(s=>s.symbol==='≥'),'MOSFET third branch lost');assert.equal(await page.locator('.formula-box v_').count(),0);}
+if(id==='canonical-commutation-relation'){for(const symbol of ['[','x',',','p',']','=']){const zone=page.locator(`.formula-tooltip-zone.is-symbol[data-symbol="${symbol}"]`).first();await zone.hover();const actual=await page.locator('.formula-symbol-popover.visible').innerText();assert(actual.includes(await zone.getAttribute('data-description')),`Hover ${symbol}: overlapping hit targets`);}}
+await page.keyboard.press('Escape');}
+await writeFile('artifacts/studio-symbol-inventory.json',JSON.stringify(inventory,null,2));
+const missing=Object.entries(inventory).flatMap(([id,symbols])=>symbols.filter(s=>/pendiente de revisión|según el contexto|escala, área, energía/.test(s.description)).map(s=>({id,...s})));assert.deepEqual(missing,[]);
+await mkdir('artifacts/studio-themes',{recursive:true});
+for(const [theme,id]of [['notebook','spin-half-bloch-sphere'],['chalkboard','hodgkin-huxley-action-potential'],['night','multi-head-attention']]){await page.evaluate(theme=>{document.documentElement.dataset.theme=theme;document.body.dataset.theme=theme;},theme);await page.evaluate(async id=>{const {openEquationModal}=await import('./scripts/render-dynamic.js');openEquationModal(window.FormulasAtlas.equations.find(e=>e.id===id));},id);await page.locator('[data-target="simulacion"]').click();await page.locator('.learning-lab').waitFor();await page.locator('[data-lab-mode="1"]').click();await page.screenshot({path:`artifacts/studio-themes/${theme}-desktop.png`});await page.setViewportSize({width:390,height:844});await page.screenshot({path:`artifacts/studio-themes/${theme}-mobile.png`});await page.keyboard.press('Escape');await page.setViewportSize({width:1440,height:1000});}
+assert.deepEqual(errors,[]);console.log(JSON.stringify({formulas:ids.length,symbols:Object.values(inventory).reduce((n,s)=>n+s.length,0),htmlRegression:true,hover:true,themes:true}));
+}finally{await browser.close();server.close();}

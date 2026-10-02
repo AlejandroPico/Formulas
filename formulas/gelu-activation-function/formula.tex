@@ -1,3 +1,3 @@
-GELU(x)=xΦ(x)
+\operatorname{GELU}(x)=x\Phi(x),\qquad\Phi(x)=\frac1{\sqrt{2\pi}}\int_{-\infty}^xe^{-t^2/2}\,dt
 
-GELU(x)≈0.5x[1+tanh(√(2/π)(x+0.044715x^3))]
+\operatorname{GELU}'(x)=\Phi(x)+x\frac{e^{-x^2/2}}{\sqrt{2\pi}}

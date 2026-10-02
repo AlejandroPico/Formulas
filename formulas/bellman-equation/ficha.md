@@ -1,26 +1,26 @@
-# Ficha
+# Ecuación de Bellman
 
-## Identificación
+Cadena de tres estados y una meta terminal. Quedarse cuesta 0,5; intentar avanzar cuesta 1 y llegar a meta recompensa 5. Avance probabilístico y descuento γ<1.
 
-- **Nombre:** Ecuación de Bellman
-- **Autor:** Richard Bellman
-- **Año:** 1957
-- **Área:** aprendizaje por refuerzo y programación dinámica
-- **Nivel:** universidad
-- **Tipo:** ecuación recursiva de valor
+## Magnitudes y notación
 
-## Variables
+| Símbolo | Interpretación |
+| :-- | :-- |
+| V | Valor esperado de retorno descontado desde un estado. |
+| s | Estado actual; s′ es el siguiente. |
+| a | Acción candidata. |
+| P | Probabilidad de transición condicionada. |
+| r | Recompensa inmediata de una transición. |
+| γ | Factor de descuento entre cero y uno. |
+| ∗ | Indica valor óptimo, no producto. |
+| ′ | Prima: estado siguiente. |
+| max | Máximo entre acciones disponibles. |
+| ∣ | Condicionado a: la distribución usa el estado y la acción indicados. |
 
-- `V(s)`: valor del estado.
-- `R(s)`: recompensa inmediata.
-- `gamma`: factor de descuento.
-- `P(s'|s,a)`: probabilidad de transición.
-- `Q(s,a)`: valor de acción.
+## Condiciones
 
-## Lectura del simulador
+Supone estados y transiciones markovianos y recompensas acotadas; γ<1 en esta versión continua de tareas. No mezcla actualización de todos los valores con aprendizaje de una muestra. El intento fallido conserva estado pero paga su coste.
 
-La meta tiene recompensa 100. Los estados anteriores reciben ese valor descontado por `gamma`. A mayor `gamma`, más se propaga la recompensa futura.
+## Unidades
 
-## Nota de corrección
-
-La fórmula está escrita sin `left` ni `right` dinámicos para evitar errores de MathJax con delimitadores no reconocidos.
+Variables numéricas en unidades de referencia; los índices y probabilidades son adimensionales. Una distancia conserva la escala de las características; su cuadrado tiene escala cuadrática.

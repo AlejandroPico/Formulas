@@ -1,9 +1,11 @@
 # Significado
 
-La divergencia de Kullback-Leibler mide cuánto se pierde al representar una distribución real `P` mediante una distribución aproximada `Q`.
+Divergencia KL entre dos Bernoulli, en nats. Penaliza usar q para una fuente p; no es una distancia simétrica.
 
-No es una distancia simétrica: cambiar el orden de `P` y `Q` puede dar otro valor. Por eso se escribe `D_KL(P||Q)` y no debe interpretarse como una distancia euclídea.
+## Qué conserva y qué cambia
 
-Si `P` y `Q` coinciden, la divergencia es cero. Si se separan, aumenta la penalización informativa.
+Añadir y restar la entropía de p al coste de usar q deja el exceso medio Σpi ln(pi/qi). La desigualdad de Gibbs garantiza no negatividad y igualdad para distribuciones idénticas. El orden importa: p pondera los términos y q aparece como propuesta. Intercambiar ambos cambia los costes en general; no se satisface una desigualdad triangular como la de una distancia métrica.
 
-El simulador compara dos campanas: `P` queda fija y `Q` se desplaza. La lectura muestra cómo la divergencia crece al separar la aproximación de la distribución objetivo.
+## Primera predicción
+
+Divergencia KL entre dos Bernoulli, en nats. Penaliza usar q para una fuente p; no es una distancia simétrica. Calcula divergencia kl con los datos iniciales en nats. Divergencia KL=0,1927 nats. DKL=p ln(p/q)+(1−p)ln[(1−p)/(1−q)].

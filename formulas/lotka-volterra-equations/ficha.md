@@ -1,26 +1,23 @@
-# Ficha
+# Ecuaciones de Lotka-Volterra
 
-## Identificación
+Sistema ideal presa-depredador con interacción bilineal y sin capacidad de carga. Integra las ecuaciones y compara ciclos con sus nulclinas.
 
-- **Nombre:** Ecuaciones de Lotka-Volterra
-- **Autores:** Alfred Lotka y Vito Volterra
-- **Área:** sistemas dinámicos y biología matemática
-- **Nivel:** universidad inicial
-- **Tipo:** sistema de ecuaciones diferenciales acopladas
+## Magnitudes y notación
 
-## Variables
+| Símbolo | Interpretación |
+| :-- | :-- |
+| x | Población escalada de presas, no posición espacial. |
+| y | Población escalada de depredadores. |
+| a | Crecimiento per cápita de la presa en ausencia de depredador. |
+| b | Coeficiente de pérdida de presa por encuentros. |
+| c | Mortalidad per cápita del depredador. |
+| d | Conversión de encuentros en crecimiento del depredador. |
+| constante | Valor conservado del primer integral para una misma trayectoria. |
 
-- `x`: población de presas.
-- `y`: población de depredadores.
-- `alpha`: tasa de reproducción de presas.
-- `beta`: eficacia de caza.
-- `gamma`: mortalidad de depredadores.
-- `delta`: conversión de presas en crecimiento depredador.
+## Condiciones
 
-## Lectura del simulador
+Poblaciones continuas positivas, medio homogéneo, tasas constantes, sin recursos finitos, inmigración ni fluctuaciones. El primer integral solo se escribe para x,y>0. La integración RK4 usa paso 0,01 de tiempo reducido y no introduce amortiguación física. Los números son poblaciones escaladas, no una especie concreta.
 
-La curva azul representa presas y la roja depredadores. El desfase entre ambas muestra que el crecimiento de depredadores depende del aumento previo de presas.
+## Unidades
 
-## Nota
-
-El modelo es idealizado; los ecosistemas reales suelen exigir términos adicionales.
+a,c tienen tiempo⁻¹ y b,d tienen población⁻¹·tiempo⁻¹, con escalas compatibles para las dos poblaciones. El laboratorio usa unidades reducidas. Los logaritmos se entienden de poblaciones divididas por su escala de referencia; constantes añadidas no cambian el primer integral.

@@ -1,9 +1,11 @@
 # Significado
 
-La relación de de Broglie afirma que toda partícula con momento `p` tiene asociada una longitud de onda `lambda = h/p`. Esta idea extiende a la materia una propiedad que ya se conocía para la luz: comportamiento ondulatorio y corpuscular en una misma entidad física.
+Electrón no relativista con energía cinética en eV. Cambia energía y compara p y λ; la onda dibujada representa fase, no una trayectoria.
 
-La longitud de onda disminuye cuando el momento aumenta. Una partícula lenta o con poco momento tiene una longitud de onda más grande; una partícula rápida o masiva tiene una longitud de onda extremadamente pequeña y por eso su comportamiento ondulatorio suele ser imperceptible a escala macroscópica.
+## Qué conserva y qué cambia
 
-La relación explica fenómenos como la difracción de electrones. Si los electrones tienen longitud de onda, pueden producir patrones de interferencia al atravesar redes cristalinas o rendijas, de forma análoga a las ondas clásicas.
+La fase de una onda plana es kx−ωt. Identificar impulso p=ħk y usar λ=2π/k conduce a λ=h/p. En el laboratorio, K=p²/(2me) permite calcular el impulso de un electrón. Se convierte eV a J antes de tomar la raíz, y metros a nm al final. Cuadruplicar K duplica p y divide λ por dos; esta relación energética deja de ser adecuada en el régimen relativista.
 
-El simulador muestra una onda de materia asociada a una partícula. Al aumentar el momento, la longitud de onda se acorta y aparecen más oscilaciones en el mismo espacio. Al reducir el momento, la onda se alarga.
+## Primera predicción
+
+Electrón no relativista con energía cinética en eV. Cambia energía y compara p y λ; la onda dibujada representa fase, no una trayectoria. Calcula longitud de onda con los datos iniciales en nm. Longitud de onda=0,1226 nm. p=√(2meK), con K en J; λ=h/p.

@@ -1,9 +1,11 @@
 # Historia
 
-Alexander Friedmann obtuvo en 1922 soluciones dinámicas de las ecuaciones de Einstein aplicadas a un universo homogéneo e isótropo. Su resultado fue radical: el universo no tenía por qué ser estático; podía expandirse o contraerse.
+Friedmann publicó soluciones dinámicas de las ecuaciones gravitatorias; Lemaître enlazó modelos de expansión con observaciones de galaxias. Las ecuaciones no fijan por sí solas los parámetros: es preciso especificar componentes, condiciones iniciales y datos. Aquí se estudia su coherencia matemática.
 
-Einstein había introducido la constante cosmológica en parte para permitir un universo estático, pero las soluciones de Friedmann mostraban que la relatividad general admitía cosmologías evolutivas de manera natural.
+## Referencia y alcance
 
-Más tarde, las observaciones de galaxias alejándose, asociadas a Hubble y otros trabajos astronómicos, dieron soporte a la idea de expansión cósmica. Las ecuaciones de Friedmann se convirtieron en la columna vertebral matemática de la cosmología relativista.
+[Material de estudio](https://preposterousuniverse.com/wp-content/uploads/grnotes-eight.pdf).
 
-Hoy se usan dentro del modelo cosmológico estándar para describir la evolución del universo desde fases tempranas calientes hasta la expansión acelerada actual dominada por energía oscura.
+La primera expresión escribe Λ por separado: ρ y p excluyen esa contribución, para no contarla dos veces. Modelo futuro de materia, curvatura y Λ no negativa, sin radiación. Se sigue la rama expansiva; un retorno detiene el reloj calculado y no se prolonga como expansión ficticia. No es reconstrucción de la historia temprana.
+
+La fecha de creación del catálogo procede del archivo original; el año científico y la fecha de revisión tienen funciones diferentes.

@@ -1,3 +1,11 @@
 # Derivación
 
-Se aproxima el cambio de precio con una expansión de Taylor: primer orden duración y segundo orden 0.5·C·(Delta y)^2.
+La segunda derivada de cada término CFt(1+y)⁻ᵗ aporta t(t+1)CFt/(1+y)^(t+2). Normalizar su suma por P da convexidad. Taylor alrededor del rendimiento inicial combina P′ y P″: la tangente de duración se corrige con mitad de convexidad por Δy². Comparar los dos desarrollos con precio exacto permite observar error local y límites de truncación.
+
+## Hipótesis necesarias
+
+Flujos fijos no negativos, cupón anual y rendimiento efectivo anual; sin opciones ni riesgo de impago. La convexidad escrita es P″/P respecto a la tasa elegida, no una convención continua diferente. Una corrección de segundo orden no garantiza precisión arbitraria ante shocks grandes, y curvas no paralelas necesitan más información.
+
+## Comprueba con números
+
+Mismo bono anual hipotético, sin opciones ni riesgo de impago. La convexidad usa la segunda derivada del precio respecto al rendimiento anual efectivo. Calcula convexidad con los datos iniciales en años². Convexidad=23,936 años². Conv=Σt(t+1)CFt/(1+y)^(t+2)/P; ΔP/P≈−DmodΔy+Conv(Δy)²/2.

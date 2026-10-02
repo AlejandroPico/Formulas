@@ -4,13 +4,92 @@
   "author": "Mecánica cuántica",
   "year": 1925,
   "field": "Mecánica cuántica",
-  "level": "Universidad inicial",
+  "level": "Universidad intermedia",
   "color": "#38bdf8",
   "simulation": "quantum-commutator",
   "formulaText": [
-    "conmutador de A y B = A B menos B A",
-    "posición y momento no conmutan: su conmutador vale i h barra"
+    "A=σx y B=cosθ σx+sinθ σy. Multiplicar en distinto orden genera una diferencia puramente imaginaria proporcional a σz."
   ],
-  "summary": "Mide cuánto cambia el resultado al aplicar dos operadores en órdenes distintos.",
-  "tags": []
+  "summary": "A=σx y B=cosθ σx+sinθ σy. Multiplicar en distinto orden genera una diferencia puramente imaginaria proporcional a σz.",
+  "tags": [
+    "operadores",
+    "matrices de pauli",
+    "no conmutatividad"
+  ],
+  "formula": [
+    "[A,B]=AB-BA",
+    "A=\\sigma_x,\\quad B=\\cos\\theta\\,\\sigma_x+\\sin\\theta\\,\\sigma_y",
+    "[A,B]=2i\\sin\\theta\\,\\sigma_z"
+  ],
+  "simulatorVersion": 2,
+  "symbolGlossary": {
+    "2": "Dos: factor numérico; como exponente significa el cuadrado.",
+    "=": "Igualdad: ambos lados tienen el mismo valor matemático.",
+    "+": "Suma de los términos indicados.",
+    "−": "Resta o signo negativo del término siguiente.",
+    ",": "Separación de expresiones o condiciones.",
+    "[": "Abre el conmutador: se resta el producto de orden inverso.",
+    "]": "Cierra el par de operadores del conmutador.",
+    "^2": "Al cuadrado: multiplica toda la base por sí misma.",
+    "_2": "Índice 2: segunda componente o nivel escrito.",
+    "structure:msqrt": "Raíz cuadrada no negativa: recupera la magnitud cuyo cuadrado es el argumento. Respeta el dominio real de esta ficha.",
+    "structure:mfrac": "Cociente: divide el numerador entre el denominador completo; sus unidades deben ser compatibles con la magnitud resultante.",
+    "structure:msup": "Exponente: una potencia actúa sobre toda la base. Una marca de derivada, adjunto o etiqueta conserva el significado propio definido en esta ficha.",
+    "structure:msub": "Índice inferior: identifica componente, nivel, condición o estado de la base, sin multiplicarla.",
+    "structure:msubsup": "La base lleva índice inferior y marca superior; cada uno se interpreta con la notación de esta ficha.",
+    "structure:mover": "La marca superior se interpreta con el símbolo: flecha vectorial, barra de promedio o punto de derivada temporal.",
+    "structure:munder": "Límite inferior o condición del sumatorio escrito.",
+    "structure:munderover": "Límites del sumatorio: especifican qué valores toma su índice.",
+    "i": "Unidad imaginaria: i²=−1.",
+    "x": "Coordenada espacial; en la caja pertenece al intervalo entre paredes.",
+    "σ": "Matriz de Pauli con el índice de eje indicado; σ como anchura se especifica en la ficha.",
+    "θ": "Ángulo entre los dos observables en el plano xy.",
+    "A": "Primer observable hermítico σx.",
+    "B": "Segundo observable hermítico en el plano xy.",
+    "cos": "Coseno del ángulo entre observables.",
+    "sin": "Seno del ángulo entre observables.",
+    "_σ:x": "Índice x: matriz de Pauli del eje cartesiano x.",
+    "_σ:y": "Índice y: matriz de Pauli del eje cartesiano y.",
+    "_σ:z": "Índice z: matriz de Pauli del eje cartesiano z.",
+    "bold:i": "Unidad imaginaria: i²=−1.",
+    "_i": "Índice i: Unidad imaginaria: i²=−1.",
+    "bold:x": "Coordenada espacial; en la caja pertenece al intervalo entre paredes.",
+    "_x": "Índice x: Coordenada espacial; en la caja pertenece al intervalo entre paredes.",
+    "bold:σ": "Matriz de Pauli con el índice de eje indicado; σ como anchura se especifica en la ficha.",
+    "_σ": "Índice σ: Matriz de Pauli con el índice de eje indicado; σ como anchura se especifica en la ficha.",
+    "bold:θ": "Ángulo entre los dos observables en el plano xy.",
+    "_θ": "Índice θ: Ángulo entre los dos observables en el plano xy.",
+    "bold:A": "Primer observable hermítico σx.",
+    "_A": "Índice A: Primer observable hermítico σx.",
+    "bold:B": "Segundo observable hermítico en el plano xy.",
+    "_B": "Índice B: Segundo observable hermítico en el plano xy.",
+    "bold:[": "Abre el conmutador: se resta el producto de orden inverso.",
+    "_[": "Índice [: Abre el conmutador: se resta el producto de orden inverso.",
+    "bold:]": "Cierra el par de operadores del conmutador.",
+    "_]": "Índice ]: Cierra el par de operadores del conmutador.",
+    "bold:cos": "Coseno del ángulo entre observables.",
+    "_cos": "Índice cos: Coseno del ángulo entre observables.",
+    "bold:sin": "Seno del ángulo entre observables.",
+    "_sin": "Índice sin: Seno del ángulo entre observables."
+  },
+  "formulaGlossaries": [
+    {},
+    {},
+    {}
+  ],
+  "prerequisites": [
+    "álgebra compleja",
+    "probabilidad",
+    "estados y operadores"
+  ],
+  "units": "σi,A,B e I adimensionales. El coeficiente 2 sinθ es adimensional; los controles usan grados, convertidos internamente a radianes. Para observables dimensionales, AB tiene producto de unidades.",
+  "dimensions": "σi,A,B e I adimensionales. El coeficiente 2 sinθ es adimensional; los controles usan grados, convertidos internamente a radianes. Para observables dimensionales, AB tiene producto de unidades.",
+  "applications": "Anticipar el resultado, cambiar una hipótesis cada vez y comprobarlo en las tres vistas del laboratorio. Separar las magnitudes que se conservan de las que cambian, y verificar el dominio antes de interpretar una figura.",
+  "learningPath": [
+    "Identificar magnitudes",
+    "Comprobar hipótesis",
+    "Predicción",
+    "Exploración",
+    "Explicación del resultado"
+  ]
 }

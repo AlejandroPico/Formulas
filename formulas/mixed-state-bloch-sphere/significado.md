@@ -1,3 +1,11 @@
 # Significado
 
-El simulador no muestra solo una esfera: compara superficie, interior y centro. El radio |r| controla pureza; los autovalores de ρ y Tr(ρ²) explican cuándo el estado es puro, mixto o ruido máximo.
+Un qubit general tiene ρ=(I+r·σ)/2 y |r|≤1. La longitud distingue mezcla de pureza; la dirección determina las coherencias.
+
+## Qué conserva y qué cambia
+
+Toda matriz hermítica 2×2 de traza uno se expande en identidad y matrices de Pauli. El cuadrado de r·σ es |r|²I, por lo que sus autovalores son ±|r| y los de ρ son (1±|r|)/2. Exigir ambos no negativos equivale a |r|≤1. La traza de ρ² da (1+|r|²)/2, que distingue centro maximamente mixto y superficie pura.
+
+## Primera predicción
+
+Un qubit general tiene ρ=(I+r·σ)/2 y |r|≤1. La longitud distingue mezcla de pureza; la dirección determina las coherencias. Calcula pureza tr(ρ²) con los datos iniciales. Pureza Tr(ρ²)=0,68 . Autovalores (1±|r|)/2; pureza=(1+|r|²)/2.

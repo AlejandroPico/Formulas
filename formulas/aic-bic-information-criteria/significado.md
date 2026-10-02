@@ -1,3 +1,11 @@
 # Significado
 
-AIC y BIC equilibran ajuste y complejidad. Un modelo con mas parametros puede ajustar mejor, pero debe pagar una penalizacion. El simulador permite modificar los parametros principales y observar el resultado numerico y visual.
+Criterios calculados sobre log-verosimilitud máxima, cantidad de parámetros y tamaño muestral. Comparar modelos exige los mismos datos, respuesta y convenciones de verosimilitud.
+
+## Qué conserva y qué cambia
+
+Ambos criterios combinan ajuste resumido por −2lnL̂ con una penalización por k parámetros estimados. AIC usa 2k y BIC klnn, de modo que sus costes de complejidad difieren con tamaño muestral. La L debe evaluarse en el máximo de cada modelo. Mantener fija log-verosimilitud mientras aumenta k permite aislar la penalización, aunque en un ajuste real ambos pueden cambiar conjuntamente.
+
+## Primera predicción
+
+Criterios calculados sobre log-verosimilitud máxima, cantidad de parámetros y tamaño muestral. Comparar modelos exige los mismos datos, respuesta y convenciones de verosimilitud. Calcula bic con los datos iniciales. BIC=53,8155 . AIC=2k−2ln L̂; BIC=k lnn−2ln L̂.

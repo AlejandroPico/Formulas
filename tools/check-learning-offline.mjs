@@ -5,6 +5,7 @@ const {chromium}=createRequire(import.meta.url)('playwright');
 const server=createServer();await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));
 const base=`http://127.0.0.1:${server.address().port}/Formulas/`;
 const browser=await chromium.launch({channel:'msedge',headless:true});
+const studioIds=['spin-half-bloch-sphere','hubble-law','hodgkin-huxley-action-potential','language-model-perplexity','cobb-douglas-production-function','adam-optimizer-adaptive-moment-estimation','multi-head-attention'];
 try{
  const context=await browser.newContext({serviceWorkers:'allow',viewport:{width:1280,height:900}}),page=await context.newPage();
  await page.goto(base);await page.waitForFunction(()=>navigator.serviceWorker.controller!==null);
@@ -13,7 +14,8 @@ try{
  for(const id of ['simple-pendulum-small-angle','generalized-hooke-law-plane-stress','wave-equation','bayes-theorem','poisson-equation','incompressible-navier-stokes-equation','hamiltonian-operator','curve-curvature','frenet-serret-formulas','nernst-equation','principal-component-analysis-pca','geodesic-equation-gr','t-hypothesis-test','michaelis-menten-kinetics']){await open(id);await page.locator('[data-target="simulacion"]').click();await page.locator('.lab-answer').waitFor();await page.locator('[data-lab-mode="2"]').click();await page.keyboard.press('Escape');}
  await open();await page.locator('[data-target="simulacion"]').click();await page.locator('.lab-answer').waitFor();
  await page.locator('[data-lab-mode="2"]').click();await page.waitForTimeout(300);
- assert((await page.evaluate(()=>caches.keys())).includes('formulas-pwa-9'));
+ for(const id of studioIds){await page.keyboard.press('Escape');await open(id);await page.locator('[data-target="simulacion"]').click();await page.locator('.lab-answer').waitFor();await page.locator('[data-lab-mode="2"]').click();await page.keyboard.press('Escape');}await open();await page.locator('[data-target="simulacion"]').click();await page.locator('.lab-answer').waitFor();
+ assert((await page.evaluate(()=>caches.keys())).includes('formulas-pwa-10'));
  await context.setOffline(true);await page.keyboard.press('Escape');await page.reload();
  await page.waitForFunction(()=>window.FormulasAtlas?.equations?.length===282);await open();await page.locator('[data-target="simulacion"]').click();await page.locator('.lab-answer').waitFor();
  await page.locator('.lab-answer').fill('28,27');await page.locator('.lab-answer-form button').click();
@@ -30,5 +32,6 @@ try{
  await page.keyboard.press('Escape');await open('frenet-serret-formulas');await page.locator('[data-target="simulacion"]').click();await page.locator('[data-lab-mode="2"]').click();const frYaw=await page.locator('.learning-lab').evaluate(r=>r.__labState.yaw);await page.locator('.learning-lab canvas').focus();await page.keyboard.press('ArrowRight');assert.notEqual(await page.locator('.learning-lab').evaluate(r=>r.__labState.yaw),frYaw);
  await page.keyboard.press('Escape');await open('nernst-equation');await page.locator('[data-target="simulacion"]').click();await page.locator('.lab-answer').fill('1.1');await page.locator('.lab-answer-form button').click();assert(await page.locator('.learning-lab').evaluate(r=>r.__labState.solved));
  for(const id of ['principal-component-analysis-pca','geodesic-equation-gr','t-hypothesis-test','michaelis-menten-kinetics']){await page.keyboard.press('Escape');await open(id);await page.locator('[data-target="simulacion"]').click();await page.locator('.lab-answer').waitFor();await page.locator('[data-lab-mode="1"]').click();if(id==='principal-component-analysis-pca'||id==='geodesic-equation-gr'){const yaw=await page.locator('.learning-lab').evaluate(r=>r.__labState.yaw);await page.locator('.learning-lab canvas').focus();await page.keyboard.press('ArrowRight');assert.notEqual(await page.locator('.learning-lab').evaluate(r=>r.__labState.yaw),yaw);}else assert((await page.locator('.formula-plugin-readout').innerText()).length>100);}
- console.log(JSON.stringify({offlineReload:true,offlineMission:true,offlineDemo:true,offlinePhysics:true,offline3D:true,offlineMembrane:true,offlineBayes:true,offlinePoisson:true,offlineVortex:true,offlineQuantum:true,offlineCurve:true,offlineFrenet:true,offlineNernst:true,cacheVersion:9}));
+ for(const id of studioIds){await page.keyboard.press('Escape');await open(id);await page.locator('[data-target="simulacion"]').click();await page.locator('.lab-answer').waitFor();await page.locator('[data-lab-mode="1"]').click();assert((await page.locator('.formula-plugin-readout').innerText()).length>100,`${id}: offline readout`);await page.locator('[data-lab-mode="2"]').click();assert(await page.locator('.learning-lab').evaluate(r=>r.__labState.active));}
+ console.log(JSON.stringify({offlineReload:true,offlineMission:true,offlineDemo:true,offlinePhysics:true,offline3D:true,offlineMembrane:true,offlineBayes:true,offlinePoisson:true,offlineVortex:true,offlineQuantum:true,offlineCurve:true,offlineFrenet:true,offlineNernst:true,offlineStudioGroups:studioIds.length,cacheVersion:10}));
 }finally{await browser.close();server.close();}

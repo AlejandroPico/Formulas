@@ -6,43 +6,88 @@
   "level": "Universidad inicial",
   "color": "#f59e0b",
   "formula": [
-    "dS/dt=−βSI",
-    "dE/dt=βSI−σE",
-    "dI/dt=σE−γI",
-    "dR/dt=γI"
+    "\\dot S=-\\beta\\frac{SI}{N},\\quad\\dot E=\\beta\\frac{SI}{N}-\\sigma E,\\quad\\dot I=\\sigma E-\\gamma I,\\quad\\dot R=\\gamma I",
+    "S+E+I+R=N,\\qquad R_0=\\frac\\beta\\gamma,\\quad R_e=R_0\\frac SN"
   ],
-  "summary": "Extiende SIR añadiendo una fase expuesta o latente antes de la fase infecciosa.",
+  "summary": "Población cerrada SEIR con latencia exponencial no infecciosa. Parámetros ficticios, mezcla homogénea y ausencia de nacimientos.",
   "topic": "seir",
   "folder": "formulas/seir-epidemic-model",
   "source": "files",
   "author": "",
   "formulaText": [
-    "Extiende SIR añadiendo una fase expuesta o latente antes de la fase infecciosa."
+    "Población cerrada SEIR con latencia exponencial no infecciosa. Parámetros ficticios, mezcla homogénea y ausencia de nacimientos."
   ],
   "tags": [
-    "biologia matematica",
-    "biofisica",
-    "neurociencia",
-    "epidemiologia",
-    "evolucion",
-    "genetica de poblaciones"
+    "epidemiología matemática",
+    "compartimentos",
+    "conservación de población",
+    "latencia"
   ],
   "prerequisites": [
-    "calculo",
-    "ecuaciones diferenciales",
-    "biologia general",
-    "probabilidad",
-    "logaritmos"
+    "interpretar tasas",
+    "balance de magnitudes",
+    "funciones y unidades"
   ],
   "learningPath": [
-    "formula",
-    "significado",
-    "simulacion"
+    "Identificar magnitudes",
+    "Comprobar hipótesis",
+    "Predicción",
+    "Exploración",
+    "Explicación del resultado"
   ],
-  "units": "Unidades didácticas normalizadas.",
-  "dimensions": "Ver ficha.",
+  "units": "β,γ y σ cuando aparece tienen día⁻¹. S,E,I,R son personas en las ecuaciones, pero las curvas muestran fracciones divididas por N. R0 y Re son adimensionales. El reloj visual se convierte: 20 unidades corresponden a 100 días. Paso de integración 0,05 días.",
+  "dimensions": "β,γ y σ cuando aparece tienen día⁻¹. S,E,I,R son personas en las ecuaciones, pero las curvas muestran fracciones divididas por N. R0 y Re son adimensionales. El reloj visual se convierte: 20 unidades corresponden a 100 días. Paso de integración 0,05 días.",
   "symbols": [],
   "legacySource": "runtime-batch-migration",
   "originalSource": "scripts/latest-formula-batch-22.js",
-  "createdAt": "2026-07-06"
+  "createdAt": "2026-07-06",
+  "simulation": "seir-epidemic-model",
+  "simulatorVersion": 2,
+  "symbolGlossary": {
+    "0": "Cero: valor nulo o referencia indicada.",
+    "=": "Igualdad: ambos lados tienen el mismo valor matemático.",
+    "+": "Suma de los términos indicados.",
+    "−": "Resta o signo negativo del término siguiente.",
+    ",": "Separación de expresiones o condiciones.",
+    "e": "Número de Euler, base de la exponencial natural.",
+    "_0": "Índice 0: número básico reproductivo en población susceptible.",
+    "structure:msqrt": "Raíz cuadrada no negativa: recupera la magnitud cuyo cuadrado es el argumento. Respeta el dominio real de esta ficha.",
+    "structure:mfrac": "Cociente: divide el numerador entre el denominador completo; sus unidades deben ser compatibles con la magnitud resultante.",
+    "structure:msup": "Exponente: una potencia actúa sobre toda la base. Una marca de derivada, adjunto o etiqueta conserva el significado propio definido en esta ficha.",
+    "structure:msub": "Índice inferior: identifica componente, nivel, condición o estado de la base, sin multiplicarla.",
+    "structure:msubsup": "La base lleva índice inferior y marca superior; cada uno se interpreta con la notación de esta ficha.",
+    "structure:mover": "Barra sobre x: media de datos; sobre un vector indica su vector de medias. La marca de flecha identifica vector.",
+    "structure:munder": "Límite inferior o condición del sumatorio escrito.",
+    "structure:munderover": "Límites del sumatorio: especifican qué valores toma su índice.",
+    "S": "Número susceptible; el gráfico representa S/N.",
+    "E": "Número expuesto latente y no infeccioso en SEIR.",
+    "I": "Número infeccioso; el gráfico representa I/N.",
+    "R": "Número recuperado o retirado de la transmisión.",
+    "N": "Tamaño total constante de población.",
+    "β": "Transmisión por tiempo bajo mezcla homogénea y fracciones normalizadas.",
+    "γ": "Tasa de recuperación, inversa del tiempo medio infeccioso.",
+    "σ": "Tasa de salida de latencia, inversa del tiempo medio latente.",
+    "_e": "Índice e: número efectivo reproductivo en el estado actual.",
+    "bold:S": "Número susceptible; el gráfico representa S/N.",
+    "_S": "Índice S: Número susceptible; el gráfico representa S/N.",
+    "bold:E": "Número expuesto latente y no infeccioso en SEIR.",
+    "_E": "Índice E: Número expuesto latente y no infeccioso en SEIR.",
+    "bold:I": "Número infeccioso; el gráfico representa I/N.",
+    "_I": "Índice I: Número infeccioso; el gráfico representa I/N.",
+    "bold:R": "Número recuperado o retirado de la transmisión.",
+    "_R": "Índice R: Número recuperado o retirado de la transmisión.",
+    "bold:N": "Tamaño total constante de población.",
+    "_N": "Índice N: Tamaño total constante de población.",
+    "bold:β": "Transmisión por tiempo bajo mezcla homogénea y fracciones normalizadas.",
+    "_β": "Índice β: Transmisión por tiempo bajo mezcla homogénea y fracciones normalizadas.",
+    "bold:γ": "Tasa de recuperación, inversa del tiempo medio infeccioso.",
+    "_γ": "Índice γ: Tasa de recuperación, inversa del tiempo medio infeccioso.",
+    "bold:σ": "Tasa de salida de latencia, inversa del tiempo medio latente.",
+    "_σ": "Índice σ: Tasa de salida de latencia, inversa del tiempo medio latente."
+  },
+  "formulaGlossaries": [
+    {},
+    {}
+  ],
+  "applications": "Comparar el resultado con sus hipótesis y explicar qué parámetro domina el cambio. El laboratorio incluye predicción, ajuste de un objetivo, interpretación del modelo y una nueva comprobación numérica."
 }

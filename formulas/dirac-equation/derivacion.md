@@ -1,9 +1,11 @@
 # Derivación
 
-Dirac partió de la relación relativista `E² = p²c² + m²c⁴`, pero buscó una ecuación lineal en derivadas temporales y espaciales. La linealidad era importante para conservar una evolución temporal de tipo cuántico y evitar problemas interpretativos.
+En la reducción 1+1, H²=(p²+m²)I porque las matrices σx y σz anticonmutan. Los dos autovalores son ±√(p²+m²). El autovector positivo tiene componentes √[(E+m)/2E] y sgn(p)√[(E−m)/2E], normalizadas. Su vector de Bloch es (p/E,0,m/E), y la velocidad de grupo de la rama positiva es p/E en c=1. Esta estructura espinorial distingue la ecuación del campo escalar de Klein–Gordon.
 
-Para factorizar la relación cuadrática, introdujo objetos algebraicos que no podían ser simples números: matrices que satisfacen relaciones de anticonmutación. Esas matrices son las matrices gamma.
+## Hipótesis necesarias
 
-Al sustituir energía y momento por operadores diferenciales se obtiene una ecuación para un espinor. La estructura de cuatro componentes aparece como consecuencia de la compatibilidad entre linealidad, relatividad y la relación energía-momento.
+Campo libre relativista. La figura resuelve una reducción 1+1 de dos componentes, no el espinor completo 3+1. No simula creación de pares, campos externos ni un proceso de antipartículas. Masa del control positiva para evitar el punto E=0 degenerado.
 
-La ecuación resultante contiene espín de forma natural y admite soluciones asociadas a partículas y antipartículas.
+## Comprueba con números
+
+Reducción libre 1+1 con H=pσx+mσz y ħ=c=1. Compara energía positiva, estado espinorial y velocidad de grupo; no modela creación de pares. Calcula energía positiva con los datos iniciales. Energía positiva=1,4142 . E=√(p²+m²); el espinor es el autovector positivo de H.

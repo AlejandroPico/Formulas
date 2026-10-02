@@ -6,44 +6,88 @@
   "level": "Universidad inicial",
   "color": "#10b981",
   "formula": [
-    "Q(s,a)←Q(s,a)+α[r+γmax_a Q(s′,a)−Q(s,a)]"
+    "Q(s,a)\\leftarrow Q(s,a)+\\alpha\\bigl[r+\\gamma\\max_bQ(s',b)-Q(s,a)\\bigr]"
   ],
-  "summary": "Aprende el valor óptimo futuro usando el máximo, aunque el agente explore otra acción.",
-  "sim": "scripts/rl-q-learning-sim.js?v=20260705a",
-  "k": "ql",
+  "summary": "Una transición observada con dos valores siguientes. Se modifica una estimación Q; no se presenta una transición aislada como entrenamiento completo.",
   "folder": "formulas/q-learning-off-policy-td-control",
   "source": "files",
   "formulaText": [
-    "Aprende el valor óptimo futuro usando el máximo, aunque el agente explore otra acción."
+    "Una transición observada con dos valores siguientes. Se modifica una estimación Q; no se presenta una transición aislada como entrenamiento completo."
   ],
   "tags": [
     "aprendizaje por refuerzo",
-    "transformers",
-    "attention",
-    "positional encoding",
-    "ppo",
-    "q-learning",
-    "sarsa"
+    "diferencias temporales",
+    "q learning"
   ],
   "prerequisites": [
-    "probabilidad",
-    "gradiente",
-    "bellman",
-    "algebra lineal",
-    "softmax",
-    "redes neuronales"
+    "álgebra lineal",
+    "derivadas",
+    "probabilidad"
   ],
   "learningPath": [
-    "formula",
-    "significado",
-    "historia",
-    "derivacion",
-    "simulacion"
+    "Identificar magnitudes",
+    "Comprobar hipótesis",
+    "Predicción",
+    "Exploración",
+    "Explicación del resultado"
   ],
-  "units": "Unidades didácticas normalizadas.",
-  "dimensions": "Ver ficha.",
+  "units": "Q y recompensas comparten unidad de retorno; α y γ son adimensionales. Un terminal aporta continuación cero.",
+  "dimensions": "Q y recompensas comparten unidad de retorno; α y γ son adimensionales. Un terminal aporta continuación cero.",
   "symbols": [],
   "legacySource": "runtime-batch-migration",
   "originalSource": "scripts/latest-formula-batch-27.js",
-  "createdAt": "2026-07-06"
+  "createdAt": "2026-07-06",
+  "simulation": "q-learning-off-policy-td-control",
+  "simulatorVersion": 2,
+  "symbolGlossary": {
+    "+": "Suma de los términos indicados.",
+    "−": "Resta o signo negativo del término siguiente.",
+    ",": "Separación de expresiones o condiciones.",
+    "(": "Abre un grupo de términos que se opera como una sola base.",
+    ")": "Cierra el grupo de términos.",
+    "[": "Abre un grupo; en química indica concentración de la especie.",
+    "]": "Cierra un grupo; en química cierra la especie cuya concentración se usa.",
+    "′": "Prima: estado o acción siguientes.",
+    "structure:msqrt": "Raíz cuadrada no negativa: recupera la magnitud cuyo cuadrado es el argumento. Respeta el dominio real de esta ficha.",
+    "structure:mfrac": "Cociente: divide el numerador entre el denominador completo; sus unidades deben ser compatibles con la magnitud resultante.",
+    "structure:msup": "Exponente: una potencia actúa sobre toda la base. Una marca de derivada, adjunto o etiqueta conserva el significado propio definido en esta ficha.",
+    "structure:msub": "Índice inferior: identifica componente, nivel, condición o estado de la base, sin multiplicarla.",
+    "structure:msubsup": "La base lleva índice inferior y marca superior; cada uno se interpreta con la notación de esta ficha.",
+    "structure:mover": "Barra sobre x: media de datos; sobre un vector indica su vector de medias. La marca de flecha identifica vector.",
+    "structure:munder": "Límite inferior o condición del sumatorio escrito.",
+    "structure:munderover": "Límites del sumatorio: especifican qué valores toma su índice.",
+    "Q": "Valor estimado de un par estado y acción.",
+    "s": "Estado actual; s′ siguiente.",
+    "a": "Acción actual; a′ siguiente en SARSA.",
+    "b": "Acción candidata del máximo en Q-learning.",
+    "r": "Recompensa observada.",
+    "γ": "Descuento de continuación.",
+    "α": "Tamaño de actualización entre cero y uno.",
+    "←": "Asignación: reemplaza el valor anterior.",
+    "max": "Selecciona el mayor valor de las acciones siguientes.",
+    "bold:Q": "Valor estimado de un par estado y acción.",
+    "_Q": "Índice Q: Valor estimado de un par estado y acción.",
+    "bold:s": "Estado actual; s′ siguiente.",
+    "_s": "Índice s: Estado actual; s′ siguiente.",
+    "bold:a": "Acción actual; a′ siguiente en SARSA.",
+    "_a": "Índice a: Acción actual; a′ siguiente en SARSA.",
+    "bold:b": "Acción candidata del máximo en Q-learning.",
+    "_b": "Índice b: Acción candidata del máximo en Q-learning.",
+    "bold:r": "Recompensa observada.",
+    "_r": "Índice r: Recompensa observada.",
+    "bold:γ": "Descuento de continuación.",
+    "_γ": "Índice γ: Descuento de continuación.",
+    "bold:α": "Tamaño de actualización entre cero y uno.",
+    "_α": "Índice α: Tamaño de actualización entre cero y uno.",
+    "bold:′": "Prima: estado o acción siguientes.",
+    "_′": "Índice ′: Prima: estado o acción siguientes.",
+    "bold:←": "Asignación: reemplaza el valor anterior.",
+    "_←": "Índice ←: Asignación: reemplaza el valor anterior.",
+    "bold:max": "Selecciona el mayor valor de las acciones siguientes.",
+    "_max": "Índice max: Selecciona el mayor valor de las acciones siguientes."
+  },
+  "formulaGlossaries": [
+    {}
+  ],
+  "applications": "La diferencia entre objetivo y Q anterior es el error temporal; multiplicar por α y sumar produce el nuevo Q. Q-learning usa el mayor valor siguiente independientemente de la acción exploratoria ejecutada. La pestaña comparativa calcula los dos objetivos con los mismos números; activar terminal elimina todo término futuro. En el laboratorio contrasta una predicción, construye el objetivo y explica qué supuesto permite el resultado."
 }

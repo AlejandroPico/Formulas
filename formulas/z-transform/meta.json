@@ -6,8 +6,88 @@
   "field": "Señales y sistemas discretos",
   "level": "Universidad inicial",
   "color": "#0ea5e9",
-  "simulation": true,
-  "formulaText": "transforma una señal discreta x[n] en una función X(z) del plano complejo",
-  "summary": "Visualiza polos, región de convergencia y estabilidad en el plano Z.",
-  "tags": []
+  "simulation": "z-transform",
+  "formulaText": [
+    "Secuencia causal x[n]=a^n u[n], X(z)=1/(1−a/z), con región |z|>|a|. El cociente racional fuera de la región es continuación algebraica, no la suma convergente."
+  ],
+  "summary": "Secuencia causal x[n]=a^n u[n], X(z)=1/(1−a/z), con región |z|>|a|. El cociente racional fuera de la región es continuación algebraica, no la suma convergente.",
+  "tags": [
+    "transformada z",
+    "señales discretas",
+    "región de convergencia",
+    "polos"
+  ],
+  "formula": [
+    "X(z)=\\sum_{n=-\\infty}^{\\infty}x[n]z^{-n}",
+    "x[n]=a^nu[n],\\qquad X(z)=\\frac1{1-a/z},\\qquad |z|>|a|"
+  ],
+  "simulatorVersion": 2,
+  "symbolGlossary": {
+    "1": "Uno: unidad numérica en la relación.",
+    "=": "Igualdad: ambos lados tienen el mismo valor matemático.",
+    "−": "Resta o signo negativo del término siguiente.",
+    ",": "Separación de expresiones o condiciones.",
+    "(": "Abre un grupo de términos que se opera como una sola base.",
+    ")": "Cierra el grupo de términos.",
+    "[": "Abre el índice de una muestra discreta.",
+    "]": "Cierra el índice de muestra.",
+    "|": "Módulo del número complejo z o del coeficiente a.",
+    "∑": "Sumatorio: acumula los términos del índice indicado.",
+    ">": "Mayor: desigualdad estricta.",
+    "_1": "Índice 1: primera componente, primer paso o primer valor ordenado.",
+    "structure:msqrt": "Raíz cuadrada no negativa: recupera la magnitud cuyo cuadrado es el argumento. Respeta el dominio real de esta ficha.",
+    "structure:mfrac": "Cociente: divide el numerador entre el denominador completo; sus unidades deben ser compatibles con la magnitud resultante.",
+    "structure:msup": "Exponente: una potencia actúa sobre toda la base. Una marca de derivada, adjunto o etiqueta conserva el significado propio definido en esta ficha.",
+    "structure:msub": "Índice inferior: identifica componente, nivel, condición o estado de la base, sin multiplicarla.",
+    "structure:msubsup": "La base lleva índice inferior y marca superior; cada uno se interpreta con la notación de esta ficha.",
+    "structure:mover": "Barra sobre x: media de datos; sobre un vector indica su vector de medias. La marca de flecha identifica vector.",
+    "structure:munder": "Límite inferior o condición del sumatorio escrito.",
+    "structure:munderover": "Límites del sumatorio: especifican qué valores toma su índice.",
+    "X": "Transformada Z de la secuencia x.",
+    "x": "Amplitud de la secuencia discreta en la muestra n.",
+    "n": "Índice entero de muestra, no tiempo continuo.",
+    "z": "Variable compleja de transformada.",
+    "a": "Coeficiente real y polo de la secuencia geométrica.",
+    "u": "Escalón unitario discreto: uno para n≥0 y cero para n<0.",
+    "∞": "Límite infinito de la suma bilateral.",
+    "bold:X": "Transformada Z de la secuencia x.",
+    "_X": "Índice X: Transformada Z de la secuencia x.",
+    "bold:x": "Amplitud de la secuencia discreta en la muestra n.",
+    "_x": "Índice x: Amplitud de la secuencia discreta en la muestra n.",
+    "bold:n": "Índice entero de muestra, no tiempo continuo.",
+    "_n": "Índice n: Índice entero de muestra, no tiempo continuo.",
+    "bold:z": "Variable compleja de transformada.",
+    "_z": "Índice z: Variable compleja de transformada.",
+    "bold:a": "Coeficiente real y polo de la secuencia geométrica.",
+    "_a": "Índice a: Coeficiente real y polo de la secuencia geométrica.",
+    "bold:u": "Escalón unitario discreto: uno para n≥0 y cero para n<0.",
+    "_u": "Índice u: Escalón unitario discreto: uno para n≥0 y cero para n<0.",
+    "bold:∞": "Límite infinito de la suma bilateral.",
+    "_∞": "Índice ∞: Límite infinito de la suma bilateral.",
+    "bold:[": "Abre el índice de una muestra discreta.",
+    "_[": "Índice [: Abre el índice de una muestra discreta.",
+    "bold:]": "Cierra el índice de muestra.",
+    "_]": "Índice ]: Cierra el índice de muestra.",
+    "bold:|": "Módulo del número complejo z o del coeficiente a.",
+    "_|": "Índice |: Módulo del número complejo z o del coeficiente a."
+  },
+  "formulaGlossaries": [
+    {},
+    {}
+  ],
+  "prerequisites": [
+    "probabilidad",
+    "logaritmos",
+    "distribuciones"
+  ],
+  "units": "n cuenta muestras discretas; z y a son adimensionales. X tiene la unidad de amplitud de x, fijada a uno en este experimento. El ángulo z se introduce en grados y se convierte a radianes. El círculo unidad permite relacionar la transformada con frecuencia discreta cuando pertenece a ROC.",
+  "dimensions": "n cuenta muestras discretas; z y a son adimensionales. X tiene la unidad de amplitud de x, fijada a uno en este experimento. El ángulo z se introduce en grados y se convierte a radianes. El círculo unidad permite relacionar la transformada con frecuencia discreta cuando pertenece a ROC.",
+  "applications": "Comparar predicciones con sus unidades, su base de logaritmo y el conjunto de datos de referencia. Los cuatro retos separan cálculo, ajuste, interpretación y comprobación; las tres vistas permiten identificar qué cambia y qué permanece.",
+  "learningPath": [
+    "Identificar magnitudes",
+    "Comprobar hipótesis",
+    "Predicción",
+    "Exploración",
+    "Explicación del resultado"
+  ]
 }

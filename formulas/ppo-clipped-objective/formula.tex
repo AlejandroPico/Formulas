@@ -1,1 +1,3 @@
-L^CLIP=E[min(r_tÂ_t,clip(r_t,1−ε,1+ε)Â_t)]
+r_t(\theta)=\frac{\pi_\theta(a_t\mid s_t)}{\pi_{\theta_{\mathrm{old}}}(a_t\mid s_t)}
+
+L^{\mathrm{CLIP}}(\theta)=\mathbb E_t\!\left[\min\!\left(r_t\widehat A_t,\operatorname{clip}(r_t,1-\varepsilon,1+\varepsilon)\widehat A_t\right)\right]

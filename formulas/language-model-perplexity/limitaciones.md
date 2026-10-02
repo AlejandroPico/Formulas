@@ -1,3 +1,7 @@
 # Limitaciones
 
-Menor PPL no siempre implica mejor utilidad conversacional, factualidad o alineamiento.
+Probabilidades condicionales positivas, mismo conjunto de evaluación y tokenización para comparar modelos. No equivale necesariamente a número de palabras posibles ni calidad semántica. Una probabilidad cero de un token observado da perplejidad infinita; controles positivos evitan esa singularidad. La cadena omite factores de inicio ya incorporados en cada contexto.
+
+La regla de la cadena multiplica probabilidades condicionales del token observado en cada contexto. El logaritmo negativo por token promedia sorpresa de la secuencia. Exponenciar da el inverso de su media geométrica de probabilidades. En el ejemplo de cuatro tokens, se promedian cuatro logaritmos, aunque las cuatro probabilidades no sumen uno porque pertenecen a contextos distintos. Base dos y natural dan la misma PPL con conversión correcta.
+
+Probabilidades y perplejidad adimensionales. NLL media en nats/token; H2 en bits/token. PPL≥1 para probabilidades en (0,1], con igualdad si cada token observado tiene probabilidad uno. Se informa pérdida por token, no por carácter o palabra mezclados.

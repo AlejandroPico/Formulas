@@ -6,41 +6,79 @@
   "level": "Universidad intermedia",
   "color": "#10b981",
   "formula": [
-    "a†|n⟩=√(n+1)|n+1⟩",
-    "a|n⟩=√n|n−1⟩"
+    "a|n\\rangle=\\sqrt n\\,|n-1\\rangle,\\qquad a^\\dagger|n\\rangle=\\sqrt{n+1}\\,|n+1\\rangle",
+    "a^\\dagger a|n\\rangle=n|n\\rangle,\\qquad a|0\\rangle=0"
   ],
-  "summary": "Operadores escalera que suben o bajan niveles discretos con factores de amplitud.",
+  "summary": "Actúa sobre un estado número del oscilador. Separa coeficiente de amplitud del nuevo estado normalizado; destruir el vacío produce el vector cero.",
   "topic": "ladder",
   "source": "files",
   "author": "",
   "formulaText": [
-    "Operadores escalera que suben o bajan niveles discretos con factores de amplitud."
+    "Actúa sobre un estado número del oscilador. Separa coeficiente de amplitud del nuevo estado normalizado; destruir el vacío produce el vector cero."
   ],
   "tags": [
-    "mecánica cuántica",
-    "cuantica",
-    "schrodinger",
-    "hamiltoniano",
-    "pauli",
-    "bloch",
-    "oscilador"
+    "operadores escalera",
+    "estados de fock",
+    "oscilador cuántico"
   ],
   "prerequisites": [
-    "algebra lineal",
-    "numeros complejos",
-    "calculo",
-    "fisica ondulatoria"
+    "álgebra compleja",
+    "probabilidad",
+    "estados y operadores"
   ],
   "learningPath": [
-    "formula",
-    "significado",
-    "simulacion"
+    "Identificar magnitudes",
+    "Comprobar hipótesis",
+    "Predicción",
+    "Exploración",
+    "Explicación del resultado"
   ],
-  "units": "Unidades normalizadas didácticas.",
-  "dimensions": "Ver ficha.",
+  "units": "a,a† y n adimensionales. La coordenada ξ=x√(mω/ħ) es adimensional, y la densidad mostrada es por intervalo dξ. El coeficiente √n es norma de un vector no normalizado.",
+  "dimensions": "a,a† y n adimensionales. La coordenada ξ=x√(mω/ħ) es adimensional, y la densidad mostrada es por intervalo dξ. El coeficiente √n es norma de un vector no normalizado.",
   "symbols": [],
   "folder": "formulas/creation-annihilation-operators",
   "legacySource": "runtime-batch-migration",
   "originalSource": "scripts/latest-formula-batch-16.js",
-  "createdAt": "2026-07-05"
+  "createdAt": "2026-07-05",
+  "simulation": "creation-annihilation-operators",
+  "simulatorVersion": 2,
+  "symbolGlossary": {
+    "0": "Cero: valor nulo o referencia indicada.",
+    "1": "Uno: unidad numérica en la relación.",
+    "=": "Igualdad: ambos lados tienen el mismo valor matemático.",
+    "+": "Suma de los términos indicados.",
+    "−": "Resta o signo negativo del término siguiente.",
+    ",": "Separación de expresiones o condiciones.",
+    "|": "Inicio de un ket: vector de estado cuántico.",
+    "_0": "Índice 0: valor de reposo, inicial o de referencia según la magnitud.",
+    "_1": "Índice 1: primera componente, primer paso o primer valor ordenado.",
+    "structure:msqrt": "Raíz cuadrada no negativa: recupera la magnitud cuyo cuadrado es el argumento. Respeta el dominio real de esta ficha.",
+    "structure:mfrac": "Cociente: divide el numerador entre el denominador completo; sus unidades deben ser compatibles con la magnitud resultante.",
+    "structure:msup": "Exponente: una potencia actúa sobre toda la base. Una marca de derivada, adjunto o etiqueta conserva el significado propio definido en esta ficha.",
+    "structure:msub": "Índice inferior: identifica componente, nivel, condición o estado de la base, sin multiplicarla.",
+    "structure:msubsup": "La base lleva índice inferior y marca superior; cada uno se interpreta con la notación de esta ficha.",
+    "structure:mover": "La marca superior se interpreta con el símbolo: flecha vectorial, barra de promedio o punto de derivada temporal.",
+    "structure:munder": "Límite inferior o condición del sumatorio escrito.",
+    "structure:munderover": "Límites del sumatorio: especifican qué valores toma su índice.",
+    "√": "Raíz cuadrada: devuelve la magnitud no negativa cuyo cuadrado es el argumento.",
+    "n": "Número cuántico entero que identifica el nivel.",
+    "a": "Operador de destrucción del oscilador.",
+    "†": "Adjunto hermítico: intercambia crear y destruir.",
+    "⟩": "Cierre del ket que contiene la etiqueta del estado.",
+    "bold:n": "Número cuántico entero que identifica el nivel.",
+    "_n": "Índice n: Número cuántico entero que identifica el nivel.",
+    "bold:a": "Operador de destrucción del oscilador.",
+    "_a": "Índice a: Operador de destrucción del oscilador.",
+    "bold:†": "Adjunto hermítico: intercambia crear y destruir.",
+    "_†": "Índice †: Adjunto hermítico: intercambia crear y destruir.",
+    "bold:|": "Inicio de un ket: vector de estado cuántico.",
+    "_|": "Índice |: Inicio de un ket: vector de estado cuántico.",
+    "bold:⟩": "Cierre del ket que contiene la etiqueta del estado.",
+    "_⟩": "Índice ⟩: Cierre del ket que contiene la etiqueta del estado."
+  },
+  "formulaGlossaries": [
+    {},
+    {}
+  ],
+  "applications": "Anticipar el resultado, cambiar una hipótesis cada vez y comprobarlo en las tres vistas del laboratorio. Separar las magnitudes que se conservan de las que cambian, y verificar el dominio antes de interpretar una figura."
 }

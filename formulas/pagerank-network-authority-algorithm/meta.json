@@ -6,44 +6,76 @@
   "level": "Universidad inicial",
   "color": "#2563eb",
   "formula": [
-    "PR(A)=(1−d)/N+dΣ_{M∈In(A)}PR(M)/L(M)"
+    "r=(1-d)\\frac{\\mathbf1}{N}+dPr,\\qquad\\sum_ir_i=1"
   ],
-  "summary": "Calcula autoridad de nodos como distribución estacionaria de un paseo aleatorio con teletransporte.",
-  "sim": "scripts/ml-pagerank-sim.js?v=20260705a",
-  "k": "pr",
+  "summary": "Cuatro páginas con enlaces dirigidos; la página sin enlaces reparte uniformemente. Teleportación uniforme y d<1 producen un paseo aleatorio bien definido.",
   "folder": "formulas/pagerank-network-authority-algorithm",
   "source": "files",
   "formulaText": [
-    "Calcula autoridad de nodos como distribución estacionaria de un paseo aleatorio con teletransporte."
+    "Cuatro páginas con enlaces dirigidos; la página sin enlaces reparte uniformemente. Teleportación uniforme y d<1 producen un paseo aleatorio bien definido."
   ],
   "tags": [
-    "aprendizaje automático",
-    "clustering",
-    "svm",
-    "kernel",
-    "pca",
-    "svd",
     "pagerank",
-    "grafos"
+    "grafos",
+    "probabilidades"
   ],
   "prerequisites": [
-    "algebra lineal",
-    "distancias",
-    "optimizacion",
-    "probabilidad",
-    "estadistica"
+    "álgebra lineal",
+    "derivadas",
+    "probabilidad"
   ],
   "learningPath": [
-    "formula",
-    "significado",
-    "historia",
-    "derivacion",
-    "simulacion"
+    "Identificar magnitudes",
+    "Comprobar hipótesis",
+    "Predicción",
+    "Exploración",
+    "Explicación del resultado"
   ],
-  "units": "Unidades didácticas normalizadas.",
-  "dimensions": "Ver ficha.",
+  "units": "Variables numéricas en unidades de referencia; los índices y probabilidades son adimensionales. Una distancia conserva la escala de las características; su cuadrado tiene escala cuadrática.",
+  "dimensions": "Variables numéricas en unidades de referencia; los índices y probabilidades son adimensionales. Una distancia conserva la escala de las características; su cuadrado tiene escala cuadrática.",
   "symbols": [],
   "legacySource": "runtime-batch-migration",
   "originalSource": "scripts/latest-formula-batch-26.js",
-  "createdAt": "2026-07-06"
+  "createdAt": "2026-07-06",
+  "simulation": "pagerank-network-authority-algorithm",
+  "simulatorVersion": 2,
+  "symbolGlossary": {
+    "1": "Uno: unidad numérica en la relación.",
+    "=": "Igualdad: ambos lados tienen el mismo valor matemático.",
+    "+": "Suma de los términos indicados.",
+    "−": "Resta o signo negativo del término siguiente.",
+    ",": "Separación de expresiones o condiciones.",
+    "(": "Abre un grupo de términos que se opera como una sola base.",
+    ")": "Cierra el grupo de términos.",
+    "∑": "Sumatorio: acumula los términos del índice indicado.",
+    "_1": "Índice 1: primera componente, primer paso o primer valor ordenado.",
+    "structure:msqrt": "Raíz cuadrada no negativa: recupera la magnitud cuyo cuadrado es el argumento. Respeta el dominio real de esta ficha.",
+    "structure:mfrac": "Cociente: divide el numerador entre el denominador completo; sus unidades deben ser compatibles con la magnitud resultante.",
+    "structure:msup": "Exponente: una potencia actúa sobre toda la base. Una marca de derivada, adjunto o etiqueta conserva el significado propio definido en esta ficha.",
+    "structure:msub": "Índice inferior: identifica componente, nivel, condición o estado de la base, sin multiplicarla.",
+    "structure:msubsup": "La base lleva índice inferior y marca superior; cada uno se interpreta con la notación de esta ficha.",
+    "structure:mover": "Barra sobre x: media de datos; sobre un vector indica su vector de medias. La marca de flecha identifica vector.",
+    "structure:munder": "Límite inferior o condición del sumatorio escrito.",
+    "structure:munderover": "Límites del sumatorio: especifican qué valores toma su índice.",
+    "r": "Vector normalizado de autoridad.",
+    "d": "Probabilidad de seguir enlaces, menor que uno.",
+    "P": "Matriz de transición por columnas.",
+    "N": "Número de páginas.",
+    "i": "Índice de página.",
+    "bold:1": "Vector de unos, una componente por página.",
+    "bold:r": "Vector normalizado de autoridad.",
+    "_r": "Índice r: Vector normalizado de autoridad.",
+    "bold:d": "Probabilidad de seguir enlaces, menor que uno.",
+    "_d": "Índice d: Probabilidad de seguir enlaces, menor que uno.",
+    "bold:P": "Matriz de transición por columnas.",
+    "_P": "Índice P: Matriz de transición por columnas.",
+    "bold:N": "Número de páginas.",
+    "_N": "Índice N: Número de páginas.",
+    "bold:i": "Índice de página.",
+    "_i": "Índice i: Índice de página."
+  },
+  "formulaGlossaries": [
+    {}
+  ],
+  "applications": "Cada columna de P reparte el peso de una página entre sus enlaces salientes. Una página sin salidas reparte uniformemente entre todas. La teleportación uniforme conserva masa y evita atraparse en componentes; d<1 permite un punto fijo único. El laboratorio itera desde distribución uniforme y muestra convergencia de cada página. En el laboratorio contrasta una predicción, construye el objetivo y explica qué supuesto permite el resultado."
 }

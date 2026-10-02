@@ -1,9 +1,11 @@
 # Historia
 
-La regla de la cadena es clásica, pero su aplicación eficiente a redes neuronales multicapa se consolidó en la segunda mitad del siglo XX.
+La regla de la cadena es antigua; el modo inverso de diferenciación automática permite compartir cálculos en grafos. Su difusión en redes neuronales popularizó retropropagación como procedimiento eficiente para todos los pesos.
 
-El artículo de Rumelhart, Hinton y Williams de 1986 popularizó la retropropagación como método práctico para entrenar redes multicapa.
+## Referencia y alcance
 
-El algoritmo permitió ajustar redes con capas ocultas de forma sistemática, una pieza clave para el desarrollo posterior del aprendizaje profundo.
+[Material de estudio](https://cs229.stanford.edu/main_notes.pdf).
 
-Hoy sigue siendo el mecanismo central de cálculo de gradientes en redes neuronales modernas, aunque se implemente automáticamente mediante diferenciación automática.
+Red educativa escalar y diferenciable; no pretende entrenar un gran modelo. Calcular gradientes y actualizar pesos son operaciones distintas. Tanh puede saturar y disminuir gradientes; el gradiente tiene unidad de pérdida por unidad del parámetro.
+
+La fecha de creación del catálogo procede del archivo original; el año científico y la fecha de revisión tienen funciones diferentes.

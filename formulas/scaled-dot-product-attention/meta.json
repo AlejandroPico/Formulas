@@ -4,13 +4,81 @@
   "author": "Vaswani et al.",
   "year": 2017,
   "field": "Aprendizaje automático y transformers",
-  "level": "Universidad",
+  "level": "Universidad inicial",
   "color": "#3b82f6",
   "simulation": "scaled-dot-product-attention",
   "formulaText": [
-    "atención = softmax de Q por K transpuesta dividido entre raíz de d_k, multiplicado por V",
-    "el escalado evita saturar softmax cuando las dimensiones son grandes"
+    "Una consulta 2D y tres claves fijas, valores escalares. Atención escalada por √2; una máscara opcional excluye la tercera clave antes de normalizar."
   ],
-  "summary": "Mecanismo central de los transformers para ponderar valores según similitud entre consultas y claves.",
-  "tags": []
+  "summary": "Una consulta 2D y tres claves fijas, valores escalares. Atención escalada por √2; una máscara opcional excluye la tercera clave antes de normalizar.",
+  "tags": [
+    "atención",
+    "atención escalada",
+    "transformers"
+  ],
+  "formula": [
+    "\\operatorname{Attention}(Q,K,V)=\\operatorname{softmax}\\!\\left(\\frac{QK^\\top}{\\sqrt{d_k}}+M\\right)V"
+  ],
+  "simulatorVersion": 2,
+  "symbolGlossary": {
+    "=": "Igualdad: ambos lados tienen el mismo valor matemático.",
+    "+": "Suma de los términos indicados.",
+    ",": "Separación de expresiones o condiciones.",
+    "(": "Abre un grupo de términos que se opera como una sola base.",
+    ")": "Cierra el grupo de términos.",
+    "structure:msqrt": "Raíz cuadrada no negativa: recupera la magnitud cuyo cuadrado es el argumento. Respeta el dominio real de esta ficha.",
+    "structure:mfrac": "Cociente: divide el numerador entre el denominador completo; sus unidades deben ser compatibles con la magnitud resultante.",
+    "structure:msup": "Exponente: una potencia actúa sobre toda la base. Una marca de derivada, adjunto o etiqueta conserva el significado propio definido en esta ficha.",
+    "structure:msub": "Índice inferior: identifica componente, nivel, condición o estado de la base, sin multiplicarla.",
+    "structure:msubsup": "La base lleva índice inferior y marca superior; cada uno se interpreta con la notación de esta ficha.",
+    "structure:mover": "Barra sobre x: media de datos; sobre un vector indica su vector de medias. La marca de flecha identifica vector.",
+    "structure:munder": "Límite inferior o condición del sumatorio escrito.",
+    "structure:munderover": "Límites del sumatorio: especifican qué valores toma su índice.",
+    "√": "Raíz cuadrada: devuelve la magnitud no negativa cuyo cuadrado es el argumento.",
+    "Attention": "Mezcla de valores con compatibilidades normalizadas.",
+    "Q": "Matriz de consultas.",
+    "K": "Matriz de claves.",
+    "V": "Matriz de valores a mezclar.",
+    "d": "Dimensión de consulta y clave.",
+    "k": "Índice que distingue dimensión de claves.",
+    "M": "Máscara aditiva: cero permitido, −∞ prohibido.",
+    "softmax": "Normalización exponencial por fila de claves.",
+    "⊤": "Transposición: intercambia filas y columnas de K.",
+    "bold:Attention": "Mezcla de valores con compatibilidades normalizadas.",
+    "_Attention": "Índice Attention: Mezcla de valores con compatibilidades normalizadas.",
+    "bold:Q": "Matriz de consultas.",
+    "_Q": "Índice Q: Matriz de consultas.",
+    "bold:K": "Matriz de claves.",
+    "_K": "Índice K: Matriz de claves.",
+    "bold:V": "Matriz de valores a mezclar.",
+    "_V": "Índice V: Matriz de valores a mezclar.",
+    "bold:d": "Dimensión de consulta y clave.",
+    "_d": "Índice d: Dimensión de consulta y clave.",
+    "bold:k": "Índice que distingue dimensión de claves.",
+    "_k": "Índice k: Índice que distingue dimensión de claves.",
+    "bold:M": "Máscara aditiva: cero permitido, −∞ prohibido.",
+    "_M": "Índice M: Máscara aditiva: cero permitido, −∞ prohibido.",
+    "bold:softmax": "Normalización exponencial por fila de claves.",
+    "_softmax": "Índice softmax: Normalización exponencial por fila de claves.",
+    "bold:⊤": "Transposición: intercambia filas y columnas de K.",
+    "_⊤": "Índice ⊤: Transposición: intercambia filas y columnas de K."
+  },
+  "formulaGlossaries": [
+    {}
+  ],
+  "prerequisites": [
+    "álgebra lineal",
+    "derivadas",
+    "probabilidad"
+  ],
+  "units": "Las coordenadas y parámetros usan escala numérica de referencia. Probabilidades, razones, fases en radianes y pesos de atención son adimensionales. Las dimensiones de matrices deben permitir todos los productos; el laboratorio declara cada vector reducido.",
+  "dimensions": "Las coordenadas y parámetros usan escala numérica de referencia. Probabilidades, razones, fases en radianes y pesos de atención son adimensionales. Las dimensiones de matrices deben permitir todos los productos; el laboratorio declara cada vector reducido.",
+  "applications": "Cada fila de QKᵀ mide compatibilidades de una consulta con claves. Divide por √dk para moderar la escala; una máscara aditiva M pone −∞ en claves prohibidas. Softmax por fila asigna pesos normalizados; multiplicar por V mezcla valores. El ejemplo utiliza una consulta 2D, tres claves [(1,0),(0,1),(−1,0)] y valores escalares [2,−1,1]. La visualización separa vector de consulta, claves, scores y pesos. En aplicaciones, verifica dimensión, máscara y procedencia de datos antes de trasladar el ejemplo a un modelo real.",
+  "learningPath": [
+    "Identificar magnitudes",
+    "Comprobar hipótesis",
+    "Predicción",
+    "Exploración",
+    "Explicación del resultado"
+  ]
 }

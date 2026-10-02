@@ -6,43 +6,83 @@
   "level": "Universidad inicial",
   "color": "#10b981",
   "formula": [
-    "MSE=mean(e²)",
-    "MAE=mean(|e|)",
-    "Huberδ(e)=½e² si |e|≤δ; δ(|e|−½δ) si |e|>δ"
+    "e=\\widehat y-y,\\quad L_2=e^2,\\quad L_1=|e|",
+    "L_\\delta(e)=\\begin{cases}e^2/2,&|e|\\le\\delta\\\\\\delta(|e|-\\delta/2),&|e|>\\delta\\end{cases}"
   ],
-  "summary": "Compara sensibilidad cuadrática, robustez absoluta y transición suave Huber.",
-  "sim": "scripts/ml-regression-losses-sim.js?v=20260705a",
-  "k": "loss",
+  "summary": "Error e=predicción−objetivo. Se comparan e², |e| y Huber con umbral δ>0, sin confundir suma de muestras y pérdida de una muestra.",
   "folder": "formulas/regression-loss-functions-mse-mae-huber",
   "source": "files",
   "formulaText": [
-    "Compara sensibilidad cuadrática, robustez absoluta y transición suave Huber."
+    "Error e=predicción−objetivo. Se comparan e², |e| y Huber con umbral δ>0, sin confundir suma de muestras y pérdida de una muestra."
   ],
   "tags": [
-    "aprendizaje automático",
-    "nlp",
-    "teoria de la informacion",
-    "normalizacion",
-    "funciones de perdida"
+    "pérdidas",
+    "regresión",
+    "estadística robusta"
   ],
   "prerequisites": [
-    "probabilidad",
-    "logaritmos",
-    "estadistica",
-    "machine learning",
-    "redes neuronales"
+    "álgebra lineal",
+    "derivadas",
+    "probabilidad"
   ],
   "learningPath": [
-    "formula",
-    "significado",
-    "historia",
-    "derivacion",
-    "simulacion"
+    "Identificar magnitudes",
+    "Comprobar hipótesis",
+    "Predicción",
+    "Exploración",
+    "Explicación del resultado"
   ],
-  "units": "Unidades didácticas normalizadas.",
-  "dimensions": "Ver ficha.",
+  "units": "e,y,δ tienen unidad de respuesta; MSE y Huber tienen unidad cuadrática, MAE unidad de respuesta.",
+  "dimensions": "e,y,δ tienen unidad de respuesta; MSE y Huber tienen unidad cuadrática, MAE unidad de respuesta.",
   "symbols": [],
   "legacySource": "runtime-batch-migration",
   "originalSource": "scripts/latest-formula-batch-25.js",
-  "createdAt": "2026-07-06"
+  "createdAt": "2026-07-06",
+  "simulation": "regression-loss-functions-mse-mae-huber",
+  "simulatorVersion": 2,
+  "symbolGlossary": {
+    "1": "Uno: unidad numérica en la relación.",
+    "2": "Dos: factor numérico; como exponente significa el cuadrado.",
+    "=": "Igualdad: ambos lados tienen el mismo valor matemático.",
+    "−": "Resta o signo negativo del término siguiente.",
+    ",": "Separación de expresiones o condiciones.",
+    "(": "Abre un grupo de términos que se opera como una sola base.",
+    ")": "Cierra el grupo de términos.",
+    "|": "Valor absoluto del error.",
+    ">": "Mayor: desigualdad estricta.",
+    "≤": "Menor o igual: incluye el límite.",
+    "e": "Error firmado: predicción menos objetivo.",
+    "^2": "Al cuadrado: multiplica toda la base por sí misma.",
+    "_1": "Índice 1: primera componente, primer paso o primer valor ordenado.",
+    "_2": "Índice 2: segunda componente o nivel escrito.",
+    "structure:msqrt": "Raíz cuadrada no negativa: recupera la magnitud cuyo cuadrado es el argumento. Respeta el dominio real de esta ficha.",
+    "structure:mfrac": "Cociente: divide el numerador entre el denominador completo; sus unidades deben ser compatibles con la magnitud resultante.",
+    "structure:msup": "Exponente: una potencia actúa sobre toda la base. Una marca de derivada, adjunto o etiqueta conserva el significado propio definido en esta ficha.",
+    "structure:msub": "Índice inferior: identifica componente, nivel, condición o estado de la base, sin multiplicarla.",
+    "structure:msubsup": "La base lleva índice inferior y marca superior; cada uno se interpreta con la notación de esta ficha.",
+    "structure:mover": "Barra sobre x: media de datos; sobre un vector indica su vector de medias. La marca de flecha identifica vector.",
+    "structure:munder": "Límite inferior o condición del sumatorio escrito.",
+    "structure:munderover": "Límites del sumatorio: especifican qué valores toma su índice.",
+    "y": "Objetivo observado; ŷ es predicción.",
+    "L": "Pérdida de una muestra; índice distingue familia.",
+    "δ": "Umbral positivo, en unidades del error.",
+    "ˆ": "Marca la predicción, no el objetivo.",
+    "bold:e": "Error firmado: predicción menos objetivo.",
+    "_e": "Índice e: Error firmado: predicción menos objetivo.",
+    "bold:y": "Objetivo observado; ŷ es predicción.",
+    "_y": "Índice y: Objetivo observado; ŷ es predicción.",
+    "bold:L": "Pérdida de una muestra; índice distingue familia.",
+    "_L": "Índice L: Pérdida de una muestra; índice distingue familia.",
+    "bold:δ": "Umbral positivo, en unidades del error.",
+    "_δ": "Índice δ: Umbral positivo, en unidades del error.",
+    "bold:ˆ": "Marca la predicción, no el objetivo.",
+    "_ˆ": "Índice ˆ: Marca la predicción, no el objetivo.",
+    "bold:|": "Valor absoluto del error.",
+    "_|": "Índice |: Valor absoluto del error."
+  },
+  "formulaGlossaries": [
+    {},
+    {}
+  ],
+  "applications": "La pérdida cuadrática crece con el cuadrado del error; la absoluta crece linealmente. Huber une una zona e²/2 con una zona lineal, de modo que valor y pendiente coinciden en ±δ. Su derivada es e dentro y δ·sign(e) fuera. El gráfico compara pérdidas y pendientes; promediar sobre n muestras produce MSE, MAE o Huber media. En el laboratorio contrasta una predicción, construye el objetivo y explica qué supuesto permite el resultado."
 }

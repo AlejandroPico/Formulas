@@ -1,9 +1,11 @@
 # Derivación
 
-La derivación parte de modelar el precio del activo como un movimiento geométrico browniano.
+Bajo el modelo de difusión lognormal con volatilidad constante, replicación continua y mercado ideal, la valoración neutral al riesgo descuenta el pago europeo. Integrar bajo la ley lognormal produce términos de normal acumulada con d1 y d2. El dividendo continuo descuenta la parte de subyacente por e⁻ᑫᵀ. La fórmula de put y call respeta paridad. En T=0 se usa pago final; para σ=0 se usa el límite determinista descontado, evitando divisiones por cero.
 
-Mediante una cartera replicante formada por activo y bono libre de riesgo se elimina el componente aleatorio instantáneo. Esa cobertura conduce a una ecuación diferencial parcial para el precio de la opción.
+## Hipótesis necesarias
 
-La ecuación se transforma en una forma equivalente a la ecuación del calor y se resuelve para la condición terminal de una call europea.
+Opciones europeas, S,K positivos, σ constante no negativa, r,q constantes y T≥0; sin costes, restricciones ni saltos. El retorno esperado físico del activo no aparece como un parámetro de valoración. El gráfico no calcula opciones americanas. En el kink del límite determinista, la delta puede ser indefinida y se informa así; no se inventa una sensibilidad suave.
 
-El resultado final introduce `d1` y `d2`, que se evalúan con la distribución normal acumulada `N`.
+## Comprueba con números
+
+Black–Scholes–Merton europeo con volatilidad, tipos y dividendo continuo constantes. Se tratan T=0 y σ=0 mediante límites correctos; no se afirma que el mercado real siga este modelo. Calcula prima call con los datos iniciales en u.m.. Prima call=10,4506 u.m.. d1=[ln(S/K)+(r−q+σ²/2)T]/(σ√T), d2=d1−σ√T; descuentos continuos.

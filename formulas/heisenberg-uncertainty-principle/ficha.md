@@ -1,25 +1,26 @@
-# Ficha
+# Principio de incertidumbre de Heisenberg
 
-## Identificación
+Paquete gaussiano normalizado con anchura σ y fase cuadrática b. En ħ=1, chirp produce covarianza x,p y eleva el producto sobre 1/2.
 
-- **Nombre:** Principio de incertidumbre de Heisenberg
-- **Autor:** Werner Heisenberg
-- **Año:** 1927
-- **Área:** mecánica cuántica
-- **Nivel:** universidad inicial
-- **Tipo:** desigualdad entre observables conjugados
+## Magnitudes y notación
 
-## Variables
+| Símbolo | Interpretación |
+| :-- | :-- |
+| ψ | Función de onda compleja normalizada; su módulo al cuadrado da densidad de probabilidad. |
+| ħ | Constante de Planck reducida h/(2π). |
+| i | Unidad imaginaria: i²=−1. |
+| x | Coordenada espacial; en la caja pertenece al intervalo entre paredes. |
+| p | Impulso lineal del observable o partícula indicado. |
+| σ | Desviación típica espacial positiva de la gaussiana. |
+| b | Chirp adimensional de la fase cuadrática. |
+| Δ | Dispersión o desviación típica del observable que sigue. |
+| cov | Covarianza simetrizada entre x y p. |
+| π | Pi en la normalización gaussiana. |
 
-- `Delta x`: incertidumbre de posición.
-- `Delta p`: incertidumbre de momento.
-- `hbar`: constante reducida de Planck.
-- `[x,p]`: conmutador posición-momento.
+## Condiciones
 
-## Lectura del simulador
+Dispersión estadística de un estado normalizado, no error de un instrumento ni simple perturbación de medida. La figura elíptica es un contorno de Wigner de esta gaussiana, no una trayectoria o valores simultáneos de x y p.
 
-La caja roja representa la región espacial probable. Los vectores verdes representan la dispersión de momentos. Al estrechar la caja, los vectores se alargan y se abren; al ampliar la región, el momento queda más definido.
+## Unidades
 
-## Nota
-
-La simulación usa unidades visuales. La desigualdad real se expresa en unidades físicas y con desviaciones estándar de distribuciones cuánticas.
+Δx m, Δp kg·m/s, producto y covarianza J·s. El laboratorio usa ħ=1 y unidades recíprocas de x y p; b adimensional. Las densidades de posición e impulso se normalizan en sus variables respectivas.

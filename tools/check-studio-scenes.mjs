@@ -1,0 +1,6 @@
+import assert from 'node:assert/strict';
+const groups=['quantum','cosmos','life','information','economy','machine','network'];let scenes=0;
+for(const group of groups){const configs=await import(`../formulas/shared/${group}-configs.js`),draws=await import(`../formulas/shared/${group}-draw.js`),draw=draws['draw'+group[0].toUpperCase()+group.slice(1)];
+for(const[id,c]of Object.entries(configs[group.toUpperCase()+'_LABS'])){const cases=[c.defaults,...c.controls.flatMap(s=>[s.min,s.max].map(value=>({...c.defaults,[s.key]:value})))];
+for(const p of cases)for(const mode of [0,1,2])for(const [w,h]of [[1000,340],[290,280]]){const ctx=new Proxy({measureText:x=>({width:String(x).length*6})},{get:(o,k)=>k in o?o[k]:(...args)=>{if(k==='fillText')assert(!/undefined|NaN/.test(String(args[0])),`${id}: invalid label ${args[0]}`);if(['moveTo','lineTo','arc','fillRect'].includes(k))assert(args.slice(0,k==='arc'?3:4).every(Number.isFinite),`${id}: invalid geometry`);}});const geometry=draw(ctx,w,h,id,p,{background:mode===2?'#191b23':'#fffdf5',ink:'#222222',muted:'#666666',line:'#cccccc',accent:'#397d91',yaw:.7,pitch:.55,mode,hide:false,phase:1});assert(geometry&&typeof geometry==='object',`${id}: no keyboard geometry`);scenes++;}}
+}console.log(JSON.stringify({studioSceneCases:scenes,finiteGeometry:true,labels:true,keyboardGeometry:true}));

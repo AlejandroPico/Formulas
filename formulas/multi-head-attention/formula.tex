@@ -1,3 +1,3 @@
-head_i=Attention(QW_i^Q,KW_i^K,VW_i^V)
+h_i=\operatorname{Attention}(QW_i^Q,KW_i^K,VW_i^V)
 
-MHA=Concat(head_i)W^O
+\operatorname{MultiHead}(Q,K,V)=\operatorname{Concat}(h_1,\ldots,h_H)W^O

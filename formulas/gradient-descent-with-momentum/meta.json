@@ -6,43 +6,75 @@
   "level": "Universidad inicial",
   "color": "#ea580c",
   "formula": [
-    "v_t=γv_{t−1}+η∇J(θ)",
-    "θ←θ−v_t"
+    "v_t=\\beta v_{t-1}+g_t,\\qquad\\theta_t=\\theta_{t-1}-\\eta v_t"
   ],
-  "summary": "Añade inercia al descenso de gradiente para acelerar direcciones persistentes y suavizar zigzags.",
-  "sim": "scripts/ml-momentum-sim.js?v=20260705b",
-  "k": "mom",
+  "summary": "Optimización de F=(x²+κy²)/2, con gradientes exactos y memoria inicial cero. Los pasos son iteraciones reales del algoritmo seleccionado.",
   "folder": "formulas/gradient-descent-with-momentum",
   "source": "files",
   "formulaText": [
-    "Añade inercia al descenso de gradiente para acelerar direcciones persistentes y suavizar zigzags."
+    "Optimización de F=(x²+κy²)/2, con gradientes exactos y memoria inicial cero. Los pasos son iteraciones reales del algoritmo seleccionado."
   ],
   "tags": [
-    "aprendizaje automático",
-    "aprendizaje profundo",
     "optimización",
-    "redes neuronales",
-    "activación",
-    "backpropagation"
+    "gradiente",
+    "momento"
   ],
   "prerequisites": [
-    "calculo",
-    "gradiente",
+    "álgebra lineal",
     "derivadas",
-    "probabilidad",
-    "algebra lineal"
+    "probabilidad"
   ],
   "learningPath": [
-    "formula",
-    "significado",
-    "historia",
-    "derivacion",
-    "simulacion"
+    "Identificar magnitudes",
+    "Comprobar hipótesis",
+    "Predicción",
+    "Exploración",
+    "Explicación del resultado"
   ],
-  "units": "Unidades didácticas normalizadas.",
-  "dimensions": "Ver ficha.",
+  "units": "Variables numéricas en unidades de referencia; los índices y probabilidades son adimensionales. Una distancia conserva la escala de las características; su cuadrado tiene escala cuadrática.",
+  "dimensions": "Variables numéricas en unidades de referencia; los índices y probabilidades son adimensionales. Una distancia conserva la escala de las características; su cuadrado tiene escala cuadrática.",
   "symbols": [],
   "legacySource": "runtime-batch-migration",
   "originalSource": "scripts/latest-formula-batch-24.js",
-  "createdAt": "2026-07-06"
+  "createdAt": "2026-07-06",
+  "simulation": "gradient-descent-with-momentum",
+  "simulatorVersion": 2,
+  "symbolGlossary": {
+    "1": "Uno: unidad numérica en la relación.",
+    "=": "Igualdad: ambos lados tienen el mismo valor matemático.",
+    "+": "Suma de los términos indicados.",
+    "−": "Resta o signo negativo del término siguiente.",
+    ",": "Separación de expresiones o condiciones.",
+    "_1": "Índice 1: primera componente, primer paso o primer valor ordenado.",
+    "structure:msqrt": "Raíz cuadrada no negativa: recupera la magnitud cuyo cuadrado es el argumento. Respeta el dominio real de esta ficha.",
+    "structure:mfrac": "Cociente: divide el numerador entre el denominador completo; sus unidades deben ser compatibles con la magnitud resultante.",
+    "structure:msup": "Exponente: una potencia actúa sobre toda la base. Una marca de derivada, adjunto o etiqueta conserva el significado propio definido en esta ficha.",
+    "structure:msub": "Índice inferior: identifica componente, nivel, condición o estado de la base, sin multiplicarla.",
+    "structure:msubsup": "La base lleva índice inferior y marca superior; cada uno se interpreta con la notación de esta ficha.",
+    "structure:mover": "Barra sobre x: media de datos; sobre un vector indica su vector de medias. La marca de flecha identifica vector.",
+    "structure:munder": "Límite inferior o condición del sumatorio escrito.",
+    "structure:munderover": "Límites del sumatorio: especifican qué valores toma su índice.",
+    "v": "Velocidad: acumulación de gradientes.",
+    "g": "Gradiente calculado en los parámetros anteriores.",
+    "θ": "Vector de parámetros.",
+    "t": "Número de iteración, comenzando en uno.",
+    "β": "Coeficiente de memoria; sus índices distinguen primer y segundo momento.",
+    "η": "Tamaño de paso.",
+    "bold:v": "Velocidad: acumulación de gradientes.",
+    "_v": "Índice v: Velocidad: acumulación de gradientes.",
+    "bold:g": "Gradiente calculado en los parámetros anteriores.",
+    "_g": "Índice g: Gradiente calculado en los parámetros anteriores.",
+    "bold:θ": "Vector de parámetros.",
+    "_θ": "Índice θ: Vector de parámetros.",
+    "bold:t": "Número de iteración, comenzando en uno.",
+    "_t": "Índice t: Número de iteración, comenzando en uno.",
+    "bold:β": "Coeficiente de memoria; sus índices distinguen primer y segundo momento.",
+    "_β": "Índice β: Coeficiente de memoria; sus índices distinguen primer y segundo momento.",
+    "bold:η": "Tamaño de paso.",
+    "_η": "Índice η: Tamaño de paso."
+  },
+  "formulaGlossaries": [
+    {}
+  ],
+  "applications": "El laboratorio deriva F=(x²+κy²)/2 exactamente: g=(x,κy). La memoria acumula gradientes con v=βv+g; es la convención no normalizada de velocidad, y el paso resta ηv. El recorrido contiene iteraciones reales, no una interpolación animada; las curvas muestran el paisaje y las barras el último gradiente y paso. En el laboratorio contrasta una predicción, construye el objetivo y explica qué supuesto permite el resultado."
 }

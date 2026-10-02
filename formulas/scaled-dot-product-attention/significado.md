@@ -1,9 +1,11 @@
 # Significado
 
-La atención escalada calcula cuánto debe atender un token a otros tokens comparando consultas `Q` con claves `K`.
+Una consulta 2D y tres claves fijas, valores escalares. Atención escalada por √2; una máscara opcional excluye la tercera clave antes de normalizar.
 
-El producto `QK^T` mide similitudes. Dividir por `sqrt(d_k)` evita que esos productos crezcan demasiado cuando la dimensión es alta.
+## Qué conserva y qué cambia
 
-Después se aplica softmax para convertir las similitudes en pesos que suman uno, y esos pesos se usan para combinar los valores `V`.
+Cada fila de QKᵀ mide compatibilidades de una consulta con claves. Divide por √dk para moderar la escala; una máscara aditiva M pone −∞ en claves prohibidas. Softmax por fila asigna pesos normalizados; multiplicar por V mezcla valores. El ejemplo utiliza una consulta 2D, tres claves [(1,0),(0,1),(−1,0)] y valores escalares [2,−1,1]. La visualización separa vector de consulta, claves, scores y pesos.
 
-El simulador muestra tres tokens compitiendo por atención. Al activar el escalado, los pesos se distribuyen con más suavidad; sin escalado, softmax puede saturarse.
+## Primera predicción
+
+Una consulta 2D y tres claves fijas, valores escalares. Atención escalada por √2; una máscara opcional excluye la tercera clave antes de normalizar. Calcula valor mezclado de salida con los datos iniciales. Valor mezclado de salida=1,008 . scores=q·ki/√2; pesos=softmax(scores); salida=Σpeso·valor.

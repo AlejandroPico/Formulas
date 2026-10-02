@@ -1,9 +1,11 @@
 # Historia
 
-La estadística de Bose-Einstein nació en 1924 a partir del trabajo de Satyendra Nath Bose sobre la radiación. Einstein extendió la idea a gases de partículas materiales.
+Bose estudió el conteo de cuantos de luz; Einstein extendió la estadística a partículas materiales indistinguibles. El rasgo decisivo es permitir múltiples ocupaciones de un mismo estado. El material enlazado desarrolla partículas idénticas y las hipótesis del conteo cuántico.
 
-La diferencia clave respecto a la estadística clásica es la indistinguibilidad cuántica. Las partículas no se cuentan como objetos etiquetados, y eso cambia la distribución de ocupaciones.
+## Referencia y alcance
 
-La predicción de condensación a baja temperatura fue una consecuencia notable. Décadas después, los condensados de Bose-Einstein se observaron experimentalmente en gases atómicos ultrafríos.
+[Material de estudio](https://www.ocw.mit.edu/courses/8-06-quantum-physics-iii-spring-2016/resources/mit8_06s16_chap4/).
 
-Hoy esta estadística aparece en fotones, fonones, gases bosónicos, superfluidez y física de muchos cuerpos.
+Bosones ideales en equilibrio gran canónico, T>0 y μ por debajo de la energía del estado fundamental para esta representación finita. La divergencia al acercarse ε a μ exige tratar el estado fundamental y el número total; esta gráfica no representa por sí sola condensación.
+
+La fecha de creación del catálogo procede del archivo original; el año científico y la fecha de revisión tienen funciones diferentes.

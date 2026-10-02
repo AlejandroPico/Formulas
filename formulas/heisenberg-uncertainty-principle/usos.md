@@ -1,10 +1,11 @@
 # Usos
 
-- Comprender límites de medición conjunta en mecánica cuántica.
-- Interpretar paquetes de onda y distribuciones de momento.
-- Explicar estabilidad atómica de forma cualitativa.
-- Analizar anchura espectral y duración de pulsos.
-- Relacionar mecánica cuántica con transformadas de Fourier.
-- Introducir pares conjugados y operadores no conmutativos.
+Anticipar el resultado, cambiar una hipótesis cada vez y comprobarlo en las tres vistas del laboratorio. Separar las magnitudes que se conservan de las que cambian, y verificar el dominio antes de interpretar una figura.
 
-El principio de incertidumbre es una guía conceptual y matemática para entender por qué el mundo cuántico no puede describirse como una colección de trayectorias clásicas perfectamente definidas.
+## Del experimento al contexto
+
+Paquete gaussiano normalizado con anchura σ y fase cuadrática b. En ħ=1, chirp produce covarianza x,p y eleva el producto sobre 1/2.
+
+## Condiciones antes de aplicar
+
+Dispersión estadística de un estado normalizado, no error de un instrumento ni simple perturbación de medida. La figura elíptica es un contorno de Wigner de esta gaussiana, no una trayectoria o valores simultáneos de x y p.

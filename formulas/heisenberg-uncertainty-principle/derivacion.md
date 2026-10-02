@@ -1,9 +1,11 @@
 # Derivación
 
-La desigualdad de incertidumbre puede derivarse de una propiedad general de operadores en espacios de Hilbert. Para dos observables representados por operadores `A` y `B`, sus dispersiones satisfacen una desigualdad ligada al conmutador `[A,B]`.
+La gaussiana tiene varianza espacial σ². Aplicar p=−iħ∂x a la función con fase cuadrática produce varianza de impulso ħ²(1+4b²)/(4σ²). La covarianza simetrizada es bħ. El producto simple crece con |b|, pero al restar la covarianza al cuadrado se recupera ħ²/4: el estado sigue siendo mínimo en la desigualdad completa de Robertson–Schrödinger.
 
-En el caso de posición y momento, el conmutador fundamental es `[x,p] = i hbar`. Al sustituirlo en la desigualdad general se obtiene `Delta x Delta p >= hbar/2`.
+## Hipótesis necesarias
 
-Otra forma intuitiva procede del análisis de Fourier. Un paquete de onda muy localizado requiere superponer muchas longitudes de onda distintas. Como la longitud de onda está relacionada con el momento, estrechar la posición ensancha la distribución de momentos.
+Dispersión estadística de un estado normalizado, no error de un instrumento ni simple perturbación de medida. La figura elíptica es un contorno de Wigner de esta gaussiana, no una trayectoria o valores simultáneos de x y p.
 
-Por tanto, la incertidumbre no es ruido añadido, sino una consecuencia de representar estados mediante amplitudes ondulatorias y observables no conmutativos.
+## Comprueba con números
+
+Paquete gaussiano normalizado con anchura σ y fase cuadrática b. En ħ=1, chirp produce covarianza x,p y eleva el producto sobre 1/2. Calcula desviación de impulso δp con los datos iniciales. Desviación de impulso Δp=0,5 . Δp=√(1+4b²)/(2σ); ΔxΔp≥1/2.

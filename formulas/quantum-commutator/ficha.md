@@ -1,24 +1,26 @@
-# Ficha
+# Conmutador cuántico
 
-## Identificación
+A=σx y B=cosθ σx+sinθ σy. Multiplicar en distinto orden genera una diferencia puramente imaginaria proporcional a σz.
 
-- **Nombre:** Conmutador cuántico
-- **Área:** mecánica cuántica
-- **Nivel:** universidad inicial
-- **Tipo:** operación algebraica sobre operadores
+## Magnitudes y notación
 
-## Variables
+| Símbolo | Interpretación |
+| :-- | :-- |
+| i | Unidad imaginaria: i²=−1. |
+| x | Coordenada espacial; en la caja pertenece al intervalo entre paredes. |
+| σ | Matriz de Pauli con el índice de eje indicado; σ como anchura se especifica en la ficha. |
+| θ | Ángulo entre los dos observables en el plano xy. |
+| A | Primer observable hermítico σx. |
+| B | Segundo observable hermítico en el plano xy. |
+| [ | Abre el conmutador: se resta el producto de orden inverso. |
+| ] | Cierra el par de operadores del conmutador. |
+| cos | Coseno del ángulo entre observables. |
+| sin | Seno del ángulo entre observables. |
 
-- `A`, `B`: operadores.
-- `[A,B]`: conmutador.
-- `x`: operador posición.
-- `p`: operador momento.
-- `hbar`: constante reducida de Planck.
+## Condiciones
 
-## Lectura del simulador
+Se usan observables adimensionales de un qubit. Conmutar no significa que los resultados individuales sean iguales, y un conmutador no nulo no se interpreta como una probabilidad. El signo cambia al invertir el orden.
 
-La curva azul representa el orden `P(X psi)`. La curva roja representa el orden `X(P psi)`. El modo comparación superpone ambas para mostrar que el orden modifica el resultado.
+## Unidades
 
-## Nota
-
-El dibujo es una analogía visual. El valor exacto del conmutador se obtiene aplicando operadores a funciones de estado, no comparando curvas dibujadas a escala.
+σi,A,B e I adimensionales. El coeficiente 2 sinθ es adimensional; los controles usan grados, convertidos internamente a radianes. Para observables dimensionales, AB tiene producto de unidades.

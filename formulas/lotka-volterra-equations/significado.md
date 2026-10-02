@@ -1,9 +1,11 @@
 # Significado
 
-Las ecuaciones de Lotka-Volterra modelan la interacción entre una población de presas `x` y una población de depredadores `y`.
+Sistema ideal presa-depredador con interacción bilineal y sin capacidad de carga. Integra las ecuaciones y compara ciclos con sus nulclinas.
 
-Las presas crecen por reproducción natural, pero disminuyen cuando se encuentran con depredadores. Los depredadores, por su parte, aumentan cuando hay encuentros con presas y disminuyen por mortalidad natural.
+## Qué conserva y qué cambia
 
-El producto `xy` representa encuentros entre ambas especies. Por eso aparece con signo negativo en la ecuación de presas y con signo positivo en la ecuación de depredadores.
+La presa aumenta a tasa per cápita a y pierde población por encuentros bxy. El depredador gana dxy y muere a tasa per cápita c. Anular ambas derivadas con x,y positivos da x*=c/d e y*=a/b. Diferenciar dx−clnx+by−alny a lo largo de la solución cancela todos los términos: es un primer integral del sistema ideal. Las trayectorias cercanas al equilibrio son ciclos neutrales, no un atractor amortiguado.
 
-El simulador integra numéricamente las ecuaciones y muestra las oscilaciones temporales de ambas poblaciones. Al aumentar `beta`, los depredadores cazan con más eficacia y modifican la amplitud y el desfase del ciclo.
+## Primera predicción
+
+Sistema ideal presa-depredador con interacción bilineal y sin capacidad de carga. Integra las ecuaciones y compara ciclos con sus nulclinas. Calcula presa en coexistencia con los datos iniciales. Presa en coexistencia=2 . Equilibrio interior: x*=c/d, y*=a/b.

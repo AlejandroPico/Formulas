@@ -1,26 +1,35 @@
-# Ficha
+# Integral de camino de Feynman
 
-## Identificación
+Ilustración paraxial de dos caminos de un propagador libre. Suma amplitudes complejas y observa franjas; no evalúa la integral funcional completa.
 
-- **Nombre:** Integral de camino de Feynman
-- **Autor asociado:** Richard Feynman
-- **Año:** 1948
-- **Área:** mecánica cuántica y teoría de campos
-- **Nivel:** avanzado
-- **Tipo:** formulación por suma de historias
+## Magnitudes y notación
 
-## Variables
+| Símbolo | Interpretación |
+| :-- | :-- |
+| ħ | Constante de Planck reducida h/(2π). |
+| i | Unidad imaginaria: i²=−1. |
+| t | Tiempo físico o tiempo reducido según las unidades del laboratorio. |
+| x | Coordenada espacial; en la caja pertenece al intervalo entre paredes. |
+| m | Masa de la partícula. |
+| I | Intensidad relativa del laboratorio. |
+| r | Razón de amplitud del segundo camino, no coordenada radial. |
+| S | Acción del camino, integral del lagrangiano. |
+| K | Propagador: amplitud de transición entre extremos espacio-temporales. |
+| D | Distancia a pantalla; 𝓓 en la integral es medida funcional. |
+| 𝓓 | Medida funcional sobre caminos compatibles con los extremos. |
+| f | Índice final del extremo del propagador. |
+| A | Amplitud compleja total de las dos contribuciones. |
+| V | Potencial energético del lagrangiano. |
+| ∣ | Módulo de la amplitud compleja antes de elevar al cuadrado. |
+| [ | Camino como argumento del funcional de acción o de la medida. |
+| ] | Cierre del argumento funcional. |
+| d | Diferencial: intervalo infinitesimal de integración, aquí del tiempo t. |
+| l | Parte de la etiqueta rel: intensidad relativa respecto al máximo de amplitudes. |
 
-- `K`: amplitud de transición.
-- `A`, `B`: estado inicial y final.
-- `Dx`: medida formal sobre caminos.
-- `S`: acción.
-- `hbar`: constante reducida de Planck.
+## Condiciones
 
-## Lectura del simulador
+Ilustración de dos caminos coherentes en aproximación paraxial, no evaluación de la integral funcional sobre todas las trayectorias. La intensidad relativa no está normalizada como probabilidad integrada sobre toda la pantalla. El control x es una posición de pantalla, no un camino completo.
 
-Los puntos A y B fijan inicio y final. Las curvas violetas son historias alternativas. La línea verde es la trayectoria clásica idealizada. Más caminos y mayor `hbar` visual producen una nube más amplia.
+## Unidades
 
-## Nota
-
-La integral de camino real es una construcción matemática delicada. La visualización es una metáfora de interferencia de historias, no un cálculo numérico de amplitudes.
+La acción S tiene J·s y S/ħ es adimensional. λ,d,D,x usan una misma unidad de longitud arbitraria; r es razón de amplitudes. K es un propagador cuya unidad depende de la representación espacial.

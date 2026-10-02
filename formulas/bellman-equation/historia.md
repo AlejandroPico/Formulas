@@ -1,9 +1,11 @@
 # Historia
 
-Richard Bellman desarrolló la programación dinámica en la década de 1950 para resolver problemas de decisión secuencial.
+Bellman desarrolló programación dinámica mediante una relación entre decisiones presentes y valor futuro. En control y aprendizaje por refuerzo, la relación de optimalidad permite distinguir evaluar una política de optimizarla.
 
-La ecuación que lleva su nombre formaliza el principio de optimalidad: una política óptima contiene subdecisiones óptimas desde cada estado posterior.
+## Referencia y alcance
 
-Más tarde se convirtió en una pieza central del aprendizaje por refuerzo, especialmente en métodos de valor como Q-learning y value iteration.
+[Material de estudio](http://incompleteideas.net/book/the-book-2nd.html).
 
-Hoy aparece en control óptimo, robótica, planificación, juegos y agentes inteligentes.
+Supone estados y transiciones markovianos y recompensas acotadas; γ<1 en esta versión continua de tareas. No mezcla actualización de todos los valores con aprendizaje de una muestra. El intento fallido conserva estado pero paga su coste.
+
+La fecha de creación del catálogo procede del archivo original; el año científico y la fecha de revisión tienen funciones diferentes.

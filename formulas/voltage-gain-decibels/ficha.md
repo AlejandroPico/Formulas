@@ -1,21 +1,27 @@
-# Ficha
+# Ganancia de voltaje en decibelios
 
-**Nombre:** Ganancia de voltaje en decibelios
+Ganancia de amplitud de voltaje usando valores RMS positivos. La razón de potencia solo coincide con el cuadrado de la de voltaje cuando las impedancias resistivas son iguales.
 
-**Área:** Electrónica / Señales
+## Magnitudes y notación
 
-**Nivel:** Bachillerato/Universidad inicial
+| Símbolo | Interpretación |
+| :-- | :-- |
+| G | Ganancia logarítmica de la magnitud indicada. |
+| V | Voltaje RMS de entrada o salida. |
+| P | Potencia media de entrada o salida. |
+| d | Parte de dB: unidad decibelio. |
+| B | Parte de dB: bel en su décima parte. |
+| o | Parte de out: salida. |
+| u | Parte de out: salida. |
+| t | Parte de out: salida. |
+| i | Parte de in: entrada. |
+| n | Parte de in: entrada. |
+| ∣ | Módulo de la razón de amplitudes de voltaje. |
 
-**Resumen:** Expresa una relación de voltajes en escala logarítmica de decibelios.
+## Condiciones
 
-## Lectura e interpretación
+Razón de voltajes no nula y valores RMS positivos en los controles. Los decibelios de voltaje comparan amplitudes y no contienen fase. La equivalencia con potencia requiere impedancias adecuadas; dB no equivale a dBV, dBm ni a un voltaje absoluto. Las ondas son una representación ilustrativa en fase.
 
-# Interpretación
+## Unidades
 
-Mueve los controles y observa qué domina: exponencial del diodo, escala logarítmica, relación de espiras, reactiva, equilibrio trifásico o ángulo de impedancia.
-
-## Validez y limitaciones
-
-# Limitaciones
-
-Comparar voltajes en dB exige misma impedancia o contexto claro; dBV/dBu/dBm no son lo mismo.
+Vin,Vout en V RMS; el argumento del logaritmo es adimensional. La unidad dB expresa una razón logarítmica. Para las ondas sinusoidales dibujadas, valor pico=√2 veces RMS. La frecuencia no se calibra; el eje horizontal representa ciclos.

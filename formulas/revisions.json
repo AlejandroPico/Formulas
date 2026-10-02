@@ -6340,6 +6340,3174 @@
           "Fuentes científicas de OpenStax, NIST, MIT, IUPAC y textos de relatividad enlazadas"
         ]
       }
+    ],
+    "bose-einstein-distribution": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos"
+        ],
+        "summary": "Revisión completa: Reparte bosones entre estados accesibles. Cuatro misiones; Ocupación / Explorar / Límite clásico. Contenido, hipótesis, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Contrastes numéricos independientes: check-quantum-labs.mjs",
+          "Todas las pestañas con contenido específico",
+          "Cuatro misiones, rechazo de respuesta incorrecta y pistas",
+          "Tres vistas, controles y teclado; cámara con ratón y tacto cuando corresponde",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa y limpieza al cambiar pestaña y cerrar",
+          "Símbolos, estructuras y condiciones HTML comprobados",
+          "Disciplina, nivel y etiquetas canónicos; creación original preservada",
+          "Recarga y ejemplo de la familia sin conexión, caché v10",
+          "Escenas finitas en valores extremos; referencias científicas enlazadas"
+        ]
+      }
+    ],
+    "fermi-dirac-distribution": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos"
+        ],
+        "summary": "Revisión completa: Llena estados respetando exclusión. Cuatro misiones; Ocupación / Explorar / Borde de Fermi. Contenido, hipótesis, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Contrastes numéricos independientes: check-quantum-labs.mjs",
+          "Todas las pestañas con contenido específico",
+          "Cuatro misiones, rechazo de respuesta incorrecta y pistas",
+          "Tres vistas, controles y teclado; cámara con ratón y tacto cuando corresponde",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa y limpieza al cambiar pestaña y cerrar",
+          "Símbolos, estructuras y condiciones HTML comprobados",
+          "Disciplina, nivel y etiquetas canónicos; creación original preservada",
+          "Recarga y ejemplo de la familia sin conexión, caché v10",
+          "Escenas finitas en valores extremos; referencias científicas enlazadas"
+        ]
+      }
+    ],
+    "de-broglie-relation": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos"
+        ],
+        "summary": "Revisión completa: Conecta impulso electrónico y longitud de onda. Cuatro misiones; Onda de materia / Explorar / Energía y escala. Contenido, hipótesis, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Contrastes numéricos independientes: check-quantum-labs.mjs",
+          "Todas las pestañas con contenido específico",
+          "Cuatro misiones, rechazo de respuesta incorrecta y pistas",
+          "Tres vistas, controles y teclado; cámara con ratón y tacto cuando corresponde",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa y limpieza al cambiar pestaña y cerrar",
+          "Símbolos, estructuras y condiciones HTML comprobados",
+          "Disciplina, nivel y etiquetas canónicos; creación original preservada",
+          "Recarga y ejemplo de la familia sin conexión, caché v10",
+          "Escenas finitas en valores extremos; referencias científicas enlazadas"
+        ]
+      }
+    ],
+    "quantum-commutator": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos"
+        ],
+        "summary": "Revisión completa: Cambia el orden de dos operadores de espín. Cuatro misiones; Orden de operadores / Explorar / Parte imaginaria. Contenido, hipótesis, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Contrastes numéricos independientes: check-quantum-labs.mjs",
+          "Todas las pestañas con contenido específico",
+          "Cuatro misiones, rechazo de respuesta incorrecta y pistas",
+          "Tres vistas, controles y teclado; cámara con ratón y tacto cuando corresponde",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa y limpieza al cambiar pestaña y cerrar",
+          "Símbolos, estructuras y condiciones HTML comprobados",
+          "Disciplina, nivel y etiquetas canónicos; creación original preservada",
+          "Recarga y ejemplo de la familia sin conexión, caché v10",
+          "Escenas finitas en valores extremos; referencias científicas enlazadas"
+        ]
+      }
+    ],
+    "creation-annihilation-operators": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos"
+        ],
+        "summary": "Revisión completa: Sube y baja una escalera cuántica. Cuatro misiones; Escalera / Explorar / Estado resultante. Contenido, hipótesis, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Contrastes numéricos independientes: check-quantum-labs.mjs",
+          "Todas las pestañas con contenido específico",
+          "Cuatro misiones, rechazo de respuesta incorrecta y pistas",
+          "Tres vistas, controles y teclado; cámara con ratón y tacto cuando corresponde",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa y limpieza al cambiar pestaña y cerrar",
+          "Símbolos, estructuras y condiciones HTML comprobados",
+          "Disciplina, nivel y etiquetas canónicos; creación original preservada",
+          "Recarga y ejemplo de la familia sin conexión, caché v10",
+          "Escenas finitas en valores extremos; referencias científicas enlazadas"
+        ]
+      }
+    ],
+    "quantum-harmonic-oscillator": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos"
+        ],
+        "summary": "Revisión completa: Encuentra nodos y energía de un oscilador. Cuatro misiones; Niveles / Densidad / Puntos de retorno. Contenido, hipótesis, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Contrastes numéricos independientes: check-quantum-labs.mjs",
+          "Todas las pestañas con contenido específico",
+          "Cuatro misiones, rechazo de respuesta incorrecta y pistas",
+          "Tres vistas, controles y teclado; cámara con ratón y tacto cuando corresponde",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa y limpieza al cambiar pestaña y cerrar",
+          "Símbolos, estructuras y condiciones HTML comprobados",
+          "Disciplina, nivel y etiquetas canónicos; creación original preservada",
+          "Recarga y ejemplo de la familia sin conexión, caché v10",
+          "Escenas finitas en valores extremos; referencias científicas enlazadas"
+        ]
+      }
+    ],
+    "canonical-commutation-relation": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos"
+        ],
+        "summary": "Revisión completa: Descubre el límite de una matriz truncada. Cuatro misiones; Conmutador / Explorar / Borde del corte. Contenido, hipótesis, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Contrastes numéricos independientes: check-quantum-labs.mjs",
+          "Todas las pestañas con contenido específico",
+          "Cuatro misiones, rechazo de respuesta incorrecta y pistas",
+          "Tres vistas, controles y teclado; cámara con ratón y tacto cuando corresponde",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa y limpieza al cambiar pestaña y cerrar",
+          "Símbolos, estructuras y condiciones HTML comprobados",
+          "Disciplina, nivel y etiquetas canónicos; creación original preservada",
+          "Recarga y ejemplo de la familia sin conexión, caché v10",
+          "Escenas finitas en valores extremos; referencias científicas enlazadas"
+        ]
+      }
+    ],
+    "hydrogen-radial-probability-density": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos"
+        ],
+        "summary": "Revisión completa: Busca capas y nodos de probabilidad atómica. Cuatro misiones; Distribución radial / Explorar / Capas 3D. Contenido, hipótesis, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Contrastes numéricos independientes: check-quantum-labs.mjs",
+          "Todas las pestañas con contenido específico",
+          "Cuatro misiones, rechazo de respuesta incorrecta y pistas",
+          "Tres vistas, controles y teclado; cámara con ratón y tacto cuando corresponde",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa y limpieza al cambiar pestaña y cerrar",
+          "Símbolos, estructuras y condiciones HTML comprobados",
+          "Disciplina, nivel y etiquetas canónicos; creación original preservada",
+          "Recarga y ejemplo de la familia sin conexión, caché v10",
+          "Escenas finitas en valores extremos; referencias científicas enlazadas"
+        ]
+      }
+    ],
+    "klein-gordon-equation": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos"
+        ],
+        "summary": "Revisión completa: Separa fase y transporte en una onda relativista. Cuatro misiones; Dos modos / Explorar / Dispersión. Contenido, hipótesis, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Contrastes numéricos independientes: check-quantum-labs.mjs",
+          "Todas las pestañas con contenido específico",
+          "Cuatro misiones, rechazo de respuesta incorrecta y pistas",
+          "Tres vistas, controles y teclado; cámara con ratón y tacto cuando corresponde",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa y limpieza al cambiar pestaña y cerrar",
+          "Símbolos, estructuras y condiciones HTML comprobados",
+          "Disciplina, nivel y etiquetas canónicos; creación original preservada",
+          "Recarga y ejemplo de la familia sin conexión, caché v10",
+          "Escenas finitas en valores extremos; referencias científicas enlazadas"
+        ]
+      }
+    ],
+    "schrodinger-equation": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos"
+        ],
+        "summary": "Revisión completa: Haz interferir dos modos que evolucionan. Cuatro misiones; Densidad / Fase compleja / Energías. Contenido, hipótesis, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Contrastes numéricos independientes: check-quantum-labs.mjs",
+          "Todas las pestañas con contenido específico",
+          "Cuatro misiones, rechazo de respuesta incorrecta y pistas",
+          "Tres vistas, controles y teclado; cámara con ratón y tacto cuando corresponde",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa y limpieza al cambiar pestaña y cerrar",
+          "Símbolos, estructuras y condiciones HTML comprobados",
+          "Disciplina, nivel y etiquetas canónicos; creación original preservada",
+          "Recarga y ejemplo de la familia sin conexión, caché v10",
+          "Escenas finitas en valores extremos; referencias científicas enlazadas"
+        ]
+      }
+    ],
+    "time-independent-schrodinger-equation": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos"
+        ],
+        "summary": "Revisión completa: Encuentra un estado que encaja en sus paredes. Cuatro misiones; Autofunción / Explorar / Nodos y energía. Contenido, hipótesis, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Contrastes numéricos independientes: check-quantum-labs.mjs",
+          "Todas las pestañas con contenido específico",
+          "Cuatro misiones, rechazo de respuesta incorrecta y pistas",
+          "Tres vistas, controles y teclado; cámara con ratón y tacto cuando corresponde",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa y limpieza al cambiar pestaña y cerrar",
+          "Símbolos, estructuras y condiciones HTML comprobados",
+          "Disciplina, nivel y etiquetas canónicos; creación original preservada",
+          "Recarga y ejemplo de la familia sin conexión, caché v10",
+          "Escenas finitas en valores extremos; referencias científicas enlazadas"
+        ]
+      }
+    ],
+    "infinite-potential-well": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos"
+        ],
+        "summary": "Revisión completa: Construye interferencia entre niveles de una caja. Cuatro misiones; Caja / Explorar / Superposición. Contenido, hipótesis, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Contrastes numéricos independientes: check-quantum-labs.mjs",
+          "Todas las pestañas con contenido específico",
+          "Cuatro misiones, rechazo de respuesta incorrecta y pistas",
+          "Tres vistas, controles y teclado; cámara con ratón y tacto cuando corresponde",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa y limpieza al cambiar pestaña y cerrar",
+          "Símbolos, estructuras y condiciones HTML comprobados",
+          "Disciplina, nivel y etiquetas canónicos; creación original preservada",
+          "Recarga y ejemplo de la familia sin conexión, caché v10",
+          "Escenas finitas en valores extremos; referencias científicas enlazadas"
+        ]
+      }
+    ],
+    "born-rule": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos"
+        ],
+        "summary": "Revisión completa: Orienta un detector antes de medir. Cuatro misiones; Detector 3D / Explorar / Probabilidades. Contenido, hipótesis, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Contrastes numéricos independientes: check-quantum-labs.mjs",
+          "Todas las pestañas con contenido específico",
+          "Cuatro misiones, rechazo de respuesta incorrecta y pistas",
+          "Tres vistas, controles y teclado; cámara con ratón y tacto cuando corresponde",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa y limpieza al cambiar pestaña y cerrar",
+          "Símbolos, estructuras y condiciones HTML comprobados",
+          "Disciplina, nivel y etiquetas canónicos; creación original preservada",
+          "Recarga y ejemplo de la familia sin conexión, caché v10",
+          "Escenas finitas en valores extremos; referencias científicas enlazadas"
+        ]
+      }
+    ],
+    "pauli-equation": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos"
+        ],
+        "summary": "Revisión completa: Haz precesar un espín en un campo uniforme. Cuatro misiones; Precesión 3D / Explorar / Energía y medición. Contenido, hipótesis, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Contrastes numéricos independientes: check-quantum-labs.mjs",
+          "Todas las pestañas con contenido específico",
+          "Cuatro misiones, rechazo de respuesta incorrecta y pistas",
+          "Tres vistas, controles y teclado; cámara con ratón y tacto cuando corresponde",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa y limpieza al cambiar pestaña y cerrar",
+          "Símbolos, estructuras y condiciones HTML comprobados",
+          "Disciplina, nivel y etiquetas canónicos; creación original preservada",
+          "Recarga y ejemplo de la familia sin conexión, caché v10",
+          "Escenas finitas en valores extremos; referencias científicas enlazadas"
+        ]
+      }
+    ],
+    "von-neumann-equation": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos"
+        ],
+        "summary": "Revisión completa: Evoluciona un estado mixto sin borrar su pureza. Cuatro misiones; Evolución 3D / Explorar / Autovalores. Contenido, hipótesis, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Contrastes numéricos independientes: check-quantum-labs.mjs",
+          "Todas las pestañas con contenido específico",
+          "Cuatro misiones, rechazo de respuesta incorrecta y pistas",
+          "Tres vistas, controles y teclado; cámara con ratón y tacto cuando corresponde",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa y limpieza al cambiar pestaña y cerrar",
+          "Símbolos, estructuras y condiciones HTML comprobados",
+          "Disciplina, nivel y etiquetas canónicos; creación original preservada",
+          "Recarga y ejemplo de la familia sin conexión, caché v10",
+          "Escenas finitas en valores extremos; referencias científicas enlazadas"
+        ]
+      }
+    ],
+    "pauli-matrices": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos"
+        ],
+        "summary": "Revisión completa: Mide componentes de un espín en distintas bases. Cuatro misiones; Ejes 3D / Explorar / Componentes. Contenido, hipótesis, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Contrastes numéricos independientes: check-quantum-labs.mjs",
+          "Todas las pestañas con contenido específico",
+          "Cuatro misiones, rechazo de respuesta incorrecta y pistas",
+          "Tres vistas, controles y teclado; cámara con ratón y tacto cuando corresponde",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa y limpieza al cambiar pestaña y cerrar",
+          "Símbolos, estructuras y condiciones HTML comprobados",
+          "Disciplina, nivel y etiquetas canónicos; creación original preservada",
+          "Recarga y ejemplo de la familia sin conexión, caché v10",
+          "Escenas finitas en valores extremos; referencias científicas enlazadas"
+        ]
+      }
+    ],
+    "density-matrix": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos"
+        ],
+        "summary": "Revisión completa: Construye mezclas y coherencias positivas. Cuatro misiones; Matriz / Esfera 3D / Autovalores. Contenido, hipótesis, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Contrastes numéricos independientes: check-quantum-labs.mjs",
+          "Todas las pestañas con contenido específico",
+          "Cuatro misiones, rechazo de respuesta incorrecta y pistas",
+          "Tres vistas, controles y teclado; cámara con ratón y tacto cuando corresponde",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa y limpieza al cambiar pestaña y cerrar",
+          "Símbolos, estructuras y condiciones HTML comprobados",
+          "Disciplina, nivel y etiquetas canónicos; creación original preservada",
+          "Recarga y ejemplo de la familia sin conexión, caché v10",
+          "Escenas finitas en valores extremos; referencias científicas enlazadas"
+        ]
+      }
+    ],
+    "heisenberg-uncertainty-principle": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos"
+        ],
+        "summary": "Revisión completa: Compara anchura espacial y anchura de impulso. Cuatro misiones; Gaussiana / Explorar / Correlación. Contenido, hipótesis, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Contrastes numéricos independientes: check-quantum-labs.mjs",
+          "Todas las pestañas con contenido específico",
+          "Cuatro misiones, rechazo de respuesta incorrecta y pistas",
+          "Tres vistas, controles y teclado; cámara con ratón y tacto cuando corresponde",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa y limpieza al cambiar pestaña y cerrar",
+          "Símbolos, estructuras y condiciones HTML comprobados",
+          "Disciplina, nivel y etiquetas canónicos; creación original preservada",
+          "Recarga y ejemplo de la familia sin conexión, caché v10",
+          "Escenas finitas en valores extremos; referencias científicas enlazadas"
+        ]
+      }
+    ],
+    "dirac-equation": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos"
+        ],
+        "summary": "Revisión completa: Resuelve un espinor libre en una dimensión. Cuatro misiones; Bandas / Espinor 3D / Velocidad. Contenido, hipótesis, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Contrastes numéricos independientes: check-quantum-labs.mjs",
+          "Todas las pestañas con contenido específico",
+          "Cuatro misiones, rechazo de respuesta incorrecta y pistas",
+          "Tres vistas, controles y teclado; cámara con ratón y tacto cuando corresponde",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa y limpieza al cambiar pestaña y cerrar",
+          "Símbolos, estructuras y condiciones HTML comprobados",
+          "Disciplina, nivel y etiquetas canónicos; creación original preservada",
+          "Recarga y ejemplo de la familia sin conexión, caché v10",
+          "Escenas finitas en valores extremos; referencias científicas enlazadas"
+        ]
+      }
+    ],
+    "von-neumann-entanglement-entropy": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos"
+        ],
+        "summary": "Revisión completa: Entrelaza dos qubits y compara estado total y reducido. Cuatro misiones; Pares correlacionados / Explorar / Estado reducido. Contenido, hipótesis, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Contrastes numéricos independientes: check-quantum-labs.mjs",
+          "Todas las pestañas con contenido específico",
+          "Cuatro misiones, rechazo de respuesta incorrecta y pistas",
+          "Tres vistas, controles y teclado; cámara con ratón y tacto cuando corresponde",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa y limpieza al cambiar pestaña y cerrar",
+          "Símbolos, estructuras y condiciones HTML comprobados",
+          "Disciplina, nivel y etiquetas canónicos; creación original preservada",
+          "Recarga y ejemplo de la familia sin conexión, caché v10",
+          "Escenas finitas en valores extremos; referencias científicas enlazadas"
+        ]
+      }
+    ],
+    "spin-half-bloch-sphere": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos"
+        ],
+        "summary": "Revisión completa: Orienta un estado puro y su eje de medida. Cuatro misiones; Esfera 3D / Explorar / Medición. Contenido, hipótesis, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Contrastes numéricos independientes: check-quantum-labs.mjs",
+          "Todas las pestañas con contenido específico",
+          "Cuatro misiones, rechazo de respuesta incorrecta y pistas",
+          "Tres vistas, controles y teclado; cámara con ratón y tacto cuando corresponde",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa y limpieza al cambiar pestaña y cerrar",
+          "Símbolos, estructuras y condiciones HTML comprobados",
+          "Disciplina, nivel y etiquetas canónicos; creación original preservada",
+          "Recarga y ejemplo de la familia sin conexión, caché v10",
+          "Escenas finitas en valores extremos; referencias científicas enlazadas"
+        ]
+      }
+    ],
+    "mixed-state-bloch-sphere": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos"
+        ],
+        "summary": "Revisión completa: Entra en el interior de la esfera de estados. Cuatro misiones; Interior 3D / Explorar / Mezcla y entropía. Contenido, hipótesis, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Contrastes numéricos independientes: check-quantum-labs.mjs",
+          "Todas las pestañas con contenido específico",
+          "Cuatro misiones, rechazo de respuesta incorrecta y pistas",
+          "Tres vistas, controles y teclado; cámara con ratón y tacto cuando corresponde",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa y limpieza al cambiar pestaña y cerrar",
+          "Símbolos, estructuras y condiciones HTML comprobados",
+          "Disciplina, nivel y etiquetas canónicos; creación original preservada",
+          "Recarga y ejemplo de la familia sin conexión, caché v10",
+          "Escenas finitas en valores extremos; referencias científicas enlazadas"
+        ]
+      }
+    ],
+    "quantum-fidelity": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos"
+        ],
+        "summary": "Revisión completa: Acerca estados sin confundirlos con vectores clásicos. Cuatro misiones; Dos estados 3D / Explorar / Superposición. Contenido, hipótesis, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Contrastes numéricos independientes: check-quantum-labs.mjs",
+          "Todas las pestañas con contenido específico",
+          "Cuatro misiones, rechazo de respuesta incorrecta y pistas",
+          "Tres vistas, controles y teclado; cámara con ratón y tacto cuando corresponde",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa y limpieza al cambiar pestaña y cerrar",
+          "Símbolos, estructuras y condiciones HTML comprobados",
+          "Disciplina, nivel y etiquetas canónicos; creación original preservada",
+          "Recarga y ejemplo de la familia sin conexión, caché v10",
+          "Escenas finitas en valores extremos; referencias científicas enlazadas"
+        ]
+      }
+    ],
+    "path-integral": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos"
+        ],
+        "summary": "Revisión completa: Suma amplitudes de dos caminos coherentes. Cuatro misiones; Dos rendijas / Explorar / Fasores. Contenido, hipótesis, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Contrastes numéricos independientes: check-quantum-labs.mjs",
+          "Todas las pestañas con contenido específico",
+          "Cuatro misiones, rechazo de respuesta incorrecta y pistas",
+          "Tres vistas, controles y teclado; cámara con ratón y tacto cuando corresponde",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa y limpieza al cambiar pestaña y cerrar",
+          "Símbolos, estructuras y condiciones HTML comprobados",
+          "Disciplina, nivel y etiquetas canónicos; creación original preservada",
+          "Recarga y ejemplo de la familia sin conexión, caché v10",
+          "Escenas finitas en valores extremos; referencias científicas enlazadas"
+        ]
+      }
+    ],
+    "cosmological-equation-of-state": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos"
+        ],
+        "summary": "Revisión completa: Cambia el contenido de un universo. Cuatro misiones; Dilución / Explorar / Presión y aceleración. Contenido, hipótesis, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Contrastes numéricos independientes: check-cosmos-labs.mjs",
+          "Todas las pestañas con contenido específico",
+          "Cuatro misiones, rechazo de respuesta incorrecta y pistas",
+          "Tres vistas, controles y teclado; cámara con ratón y tacto cuando corresponde",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa y limpieza al cambiar pestaña y cerrar",
+          "Símbolos, estructuras y condiciones HTML comprobados",
+          "Disciplina, nivel y etiquetas canónicos; creación original preservada",
+          "Recarga y ejemplo de la familia sin conexión, caché v10",
+          "Escenas finitas en valores extremos; referencias científicas enlazadas"
+        ]
+      }
+    ],
+    "friedmann-equations": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos"
+        ],
+        "summary": "Revisión completa: Explora materia, curvatura y vacío. Cuatro misiones; Historia futura / Explorar / Componentes. Contenido, hipótesis, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Contrastes numéricos independientes: check-cosmos-labs.mjs",
+          "Todas las pestañas con contenido específico",
+          "Cuatro misiones, rechazo de respuesta incorrecta y pistas",
+          "Tres vistas, controles y teclado; cámara con ratón y tacto cuando corresponde",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa y limpieza al cambiar pestaña y cerrar",
+          "Símbolos, estructuras y condiciones HTML comprobados",
+          "Disciplina, nivel y etiquetas canónicos; creación original preservada",
+          "Recarga y ejemplo de la familia sin conexión, caché v10",
+          "Escenas finitas en valores extremos; referencias científicas enlazadas"
+        ]
+      }
+    ],
+    "critical-density-parameter": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos"
+        ],
+        "summary": "Revisión completa: Compara densidad con una referencia dinámica. Cuatro misiones; Densidad crítica / Explorar / Ω. Contenido, hipótesis, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Contrastes numéricos independientes: check-cosmos-labs.mjs",
+          "Todas las pestañas con contenido específico",
+          "Cuatro misiones, rechazo de respuesta incorrecta y pistas",
+          "Tres vistas, controles y teclado; cámara con ratón y tacto cuando corresponde",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa y limpieza al cambiar pestaña y cerrar",
+          "Símbolos, estructuras y condiciones HTML comprobados",
+          "Disciplina, nivel y etiquetas canónicos; creación original preservada",
+          "Recarga y ejemplo de la familia sin conexión, caché v10",
+          "Escenas finitas en valores extremos; referencias científicas enlazadas"
+        ]
+      }
+    ],
+    "cosmological-redshift": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos"
+        ],
+        "summary": "Revisión completa: Estira una onda con el espacio. Cuatro misiones; Onda estirada / Explorar / Escalas. Contenido, hipótesis, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Contrastes numéricos independientes: check-cosmos-labs.mjs",
+          "Todas las pestañas con contenido específico",
+          "Cuatro misiones, rechazo de respuesta incorrecta y pistas",
+          "Tres vistas, controles y teclado; cámara con ratón y tacto cuando corresponde",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa y limpieza al cambiar pestaña y cerrar",
+          "Símbolos, estructuras y condiciones HTML comprobados",
+          "Disciplina, nivel y etiquetas canónicos; creación original preservada",
+          "Recarga y ejemplo de la familia sin conexión, caché v10",
+          "Escenas finitas en valores extremos; referencias científicas enlazadas"
+        ]
+      }
+    ],
+    "hubble-law": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos"
+        ],
+        "summary": "Revisión completa: Separa distancia y velocidad de recesión. Cuatro misiones; Red de galaxias 3D / Explorar / Ley lineal. Contenido, hipótesis, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Contrastes numéricos independientes: check-cosmos-labs.mjs",
+          "Todas las pestañas con contenido específico",
+          "Cuatro misiones, rechazo de respuesta incorrecta y pistas",
+          "Tres vistas, controles y teclado; cámara con ratón y tacto cuando corresponde",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa y limpieza al cambiar pestaña y cerrar",
+          "Símbolos, estructuras y condiciones HTML comprobados",
+          "Disciplina, nivel y etiquetas canónicos; creación original preservada",
+          "Recarga y ejemplo de la familia sin conexión, caché v10",
+          "Escenas finitas en valores extremos; referencias científicas enlazadas"
+        ]
+      }
+    ],
+    "born-haber-cycle": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos"
+        ],
+        "summary": "Revisión completa: Cierra un ciclo de energía sin perder los signos. Cuatro misiones; Ciclo energético / Explorar / Balance. Contenido, hipótesis, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Contrastes numéricos independientes: check-life-labs.mjs",
+          "Todas las pestañas con contenido específico",
+          "Cuatro misiones, rechazo de respuesta incorrecta y pistas",
+          "Tres vistas, controles y teclado; cámara con ratón y tacto cuando corresponde",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa y limpieza al cambiar pestaña y cerrar",
+          "Símbolos, estructuras y condiciones HTML comprobados",
+          "Disciplina, nivel y etiquetas canónicos; creación original preservada",
+          "Recarga y ejemplo de la familia sin conexión, caché v10",
+          "Escenas finitas en valores extremos; referencias científicas enlazadas"
+        ]
+      }
+    ],
+    "debye-huckel-limiting-law": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos"
+        ],
+        "summary": "Revisión completa: Detecta cuándo un ion deja de ser ideal. Cuatro misiones; Actividad / Explorar / Carga del ion. Contenido, hipótesis, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Contrastes numéricos independientes: check-life-labs.mjs",
+          "Todas las pestañas con contenido específico",
+          "Cuatro misiones, rechazo de respuesta incorrecta y pistas",
+          "Tres vistas, controles y teclado; cámara con ratón y tacto cuando corresponde",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa y limpieza al cambiar pestaña y cerrar",
+          "Símbolos, estructuras y condiciones HTML comprobados",
+          "Disciplina, nivel y etiquetas canónicos; creación original preservada",
+          "Recarga y ejemplo de la familia sin conexión, caché v10",
+          "Escenas finitas en valores extremos; referencias científicas enlazadas"
+        ]
+      }
+    ],
+    "lotka-volterra-equations": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos"
+        ],
+        "summary": "Revisión completa: Conserva un equilibrio entre presa y depredador. Cuatro misiones; Poblaciones / Explorar / Plano de fase. Contenido, hipótesis, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Contrastes numéricos independientes: check-life-labs.mjs",
+          "Todas las pestañas con contenido específico",
+          "Cuatro misiones, rechazo de respuesta incorrecta y pistas",
+          "Tres vistas, controles y teclado; cámara con ratón y tacto cuando corresponde",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa y limpieza al cambiar pestaña y cerrar",
+          "Símbolos, estructuras y condiciones HTML comprobados",
+          "Disciplina, nivel y etiquetas canónicos; creación original preservada",
+          "Recarga y ejemplo de la familia sin conexión, caché v10",
+          "Escenas finitas en valores extremos; referencias científicas enlazadas"
+        ]
+      }
+    ],
+    "competitive-lotka-volterra-model": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos"
+        ],
+        "summary": "Revisión completa: Distingue coexistencia de exclusión competitiva. Cuatro misiones; Competencia / Explorar / Plano de fase. Contenido, hipótesis, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Contrastes numéricos independientes: check-life-labs.mjs",
+          "Todas las pestañas con contenido específico",
+          "Cuatro misiones, rechazo de respuesta incorrecta y pistas",
+          "Tres vistas, controles y teclado; cámara con ratón y tacto cuando corresponde",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa y limpieza al cambiar pestaña y cerrar",
+          "Símbolos, estructuras y condiciones HTML comprobados",
+          "Disciplina, nivel y etiquetas canónicos; creación original preservada",
+          "Recarga y ejemplo de la familia sin conexión, caché v10",
+          "Escenas finitas en valores extremos; referencias científicas enlazadas"
+        ]
+      }
+    ],
+    "sir-epidemic-model": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos"
+        ],
+        "summary": "Revisión completa: Sigue una epidemia de ejemplo sin perder población. Cuatro misiones; Compartimentos / Explorar / Flujos. Contenido, hipótesis, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Contrastes numéricos independientes: check-life-labs.mjs",
+          "Todas las pestañas con contenido específico",
+          "Cuatro misiones, rechazo de respuesta incorrecta y pistas",
+          "Tres vistas, controles y teclado; cámara con ratón y tacto cuando corresponde",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa y limpieza al cambiar pestaña y cerrar",
+          "Símbolos, estructuras y condiciones HTML comprobados",
+          "Disciplina, nivel y etiquetas canónicos; creación original preservada",
+          "Recarga y ejemplo de la familia sin conexión, caché v10",
+          "Escenas finitas en valores extremos; referencias científicas enlazadas"
+        ]
+      }
+    ],
+    "seir-epidemic-model": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos"
+        ],
+        "summary": "Revisión completa: Retrasa la infección con una fase latente. Cuatro misiones; Compartimentos / Explorar / Flujos. Contenido, hipótesis, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Contrastes numéricos independientes: check-life-labs.mjs",
+          "Todas las pestañas con contenido específico",
+          "Cuatro misiones, rechazo de respuesta incorrecta y pistas",
+          "Tres vistas, controles y teclado; cámara con ratón y tacto cuando corresponde",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa y limpieza al cambiar pestaña y cerrar",
+          "Símbolos, estructuras y condiciones HTML comprobados",
+          "Disciplina, nivel y etiquetas canónicos; creación original preservada",
+          "Recarga y ejemplo de la familia sin conexión, caché v10",
+          "Escenas finitas en valores extremos; referencias científicas enlazadas"
+        ]
+      }
+    ],
+    "fisher-kpp-diffusion-equation": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos"
+        ],
+        "summary": "Revisión completa: Propaga un frente con difusión y crecimiento. Cuatro misiones; Frente / Explorar / Velocidad. Contenido, hipótesis, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Contrastes numéricos independientes: check-life-labs.mjs",
+          "Todas las pestañas con contenido específico",
+          "Cuatro misiones, rechazo de respuesta incorrecta y pistas",
+          "Tres vistas, controles y teclado; cámara con ratón y tacto cuando corresponde",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa y limpieza al cambiar pestaña y cerrar",
+          "Símbolos, estructuras y condiciones HTML comprobados",
+          "Disciplina, nivel y etiquetas canónicos; creación original preservada",
+          "Recarga y ejemplo de la familia sin conexión, caché v10",
+          "Escenas finitas en valores extremos; referencias científicas enlazadas"
+        ]
+      }
+    ],
+    "one-compartment-pharmacokinetics": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos"
+        ],
+        "summary": "Revisión completa: Sigue una eliminación de primer orden. Cuatro misiones; Concentración / Explorar / Semivida y área. Contenido, hipótesis, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Contrastes numéricos independientes: check-life-labs.mjs",
+          "Todas las pestañas con contenido específico",
+          "Cuatro misiones, rechazo de respuesta incorrecta y pistas",
+          "Tres vistas, controles y teclado; cámara con ratón y tacto cuando corresponde",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa y limpieza al cambiar pestaña y cerrar",
+          "Símbolos, estructuras y condiciones HTML comprobados",
+          "Disciplina, nivel y etiquetas canónicos; creación original preservada",
+          "Recarga y ejemplo de la familia sin conexión, caché v10",
+          "Escenas finitas en valores extremos; referencias científicas enlazadas"
+        ]
+      }
+    ],
+    "goldman-hodgkin-katz-equation": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos"
+        ],
+        "summary": "Revisión completa: Equilibra permeabilidades sin invertir el cloruro. Cuatro misiones; Membrana / Explorar / Permeabilidades. Contenido, hipótesis, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Contrastes numéricos independientes: check-life-labs.mjs",
+          "Todas las pestañas con contenido específico",
+          "Cuatro misiones, rechazo de respuesta incorrecta y pistas",
+          "Tres vistas, controles y teclado; cámara con ratón y tacto cuando corresponde",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa y limpieza al cambiar pestaña y cerrar",
+          "Símbolos, estructuras y condiciones HTML comprobados",
+          "Disciplina, nivel y etiquetas canónicos; creación original preservada",
+          "Recarga y ejemplo de la familia sin conexión, caché v10",
+          "Escenas finitas en valores extremos; referencias científicas enlazadas"
+        ]
+      }
+    ],
+    "monod-microbial-growth-model": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos"
+        ],
+        "summary": "Revisión completa: Limita crecimiento por sustrato disponible. Cuatro misiones; Crecimiento / Explorar / Saturación. Contenido, hipótesis, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Contrastes numéricos independientes: check-life-labs.mjs",
+          "Todas las pestañas con contenido específico",
+          "Cuatro misiones, rechazo de respuesta incorrecta y pistas",
+          "Tres vistas, controles y teclado; cámara con ratón y tacto cuando corresponde",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa y limpieza al cambiar pestaña y cerrar",
+          "Símbolos, estructuras y condiciones HTML comprobados",
+          "Disciplina, nivel y etiquetas canónicos; creación original preservada",
+          "Recarga y ejemplo de la familia sin conexión, caché v10",
+          "Escenas finitas en valores extremos; referencias científicas enlazadas"
+        ]
+      }
+    ],
+    "hodgkin-huxley-action-potential": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos"
+        ],
+        "summary": "Revisión completa: Dispara un axón y observa sus compuertas. Cuatro misiones; Potencial de acción / Explorar / Compuertas. Contenido, hipótesis, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Contrastes numéricos independientes: check-life-labs.mjs",
+          "Todas las pestañas con contenido específico",
+          "Cuatro misiones, rechazo de respuesta incorrecta y pistas",
+          "Tres vistas, controles y teclado; cámara con ratón y tacto cuando corresponde",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa y limpieza al cambiar pestaña y cerrar",
+          "Símbolos, estructuras y condiciones HTML comprobados",
+          "Disciplina, nivel y etiquetas canónicos; creación original preservada",
+          "Recarga y ejemplo de la familia sin conexión, caché v10",
+          "Escenas finitas en valores extremos; referencias científicas enlazadas"
+        ]
+      }
+    ],
+    "replicator-equation-evolutionary-game-theory": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos"
+        ],
+        "summary": "Revisión completa: Selecciona estrategias según su ventaja relativa. Cuatro misiones; Frecuencias / Explorar / Ventaja. Contenido, hipótesis, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Contrastes numéricos independientes: check-life-labs.mjs",
+          "Todas las pestañas con contenido específico",
+          "Cuatro misiones, rechazo de respuesta incorrecta y pistas",
+          "Tres vistas, controles y teclado; cámara con ratón y tacto cuando corresponde",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa y limpieza al cambiar pestaña y cerrar",
+          "Símbolos, estructuras y condiciones HTML comprobados",
+          "Disciplina, nivel y etiquetas canónicos; creación original preservada",
+          "Recarga y ejemplo de la familia sin conexión, caché v10",
+          "Escenas finitas en valores extremos; referencias científicas enlazadas"
+        ]
+      }
+    ],
+    "voltage-gain-decibels": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos"
+        ],
+        "summary": "Revisión completa: Compara amplitudes en una escala logarítmica. Cuatro misiones; Ondas / Explorar / Decibelios. Contenido, hipótesis, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Contrastes numéricos independientes: check-life-labs.mjs",
+          "Todas las pestañas con contenido específico",
+          "Cuatro misiones, rechazo de respuesta incorrecta y pistas",
+          "Tres vistas, controles y teclado; cámara con ratón y tacto cuando corresponde",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa y limpieza al cambiar pestaña y cerrar",
+          "Símbolos, estructuras y condiciones HTML comprobados",
+          "Disciplina, nivel y etiquetas canónicos; creación original preservada",
+          "Recarga y ejemplo de la familia sin conexión, caché v10",
+          "Escenas finitas en valores extremos; referencias científicas enlazadas"
+        ]
+      }
+    ],
+    "shockley-diode-equation": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos"
+        ],
+        "summary": "Revisión completa: Explora exponencial y polarización inversa. Cuatro misiones; Curva del diodo / Explorar / Temperatura. Contenido, hipótesis, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Contrastes numéricos independientes: check-life-labs.mjs",
+          "Todas las pestañas con contenido específico",
+          "Cuatro misiones, rechazo de respuesta incorrecta y pistas",
+          "Tres vistas, controles y teclado; cámara con ratón y tacto cuando corresponde",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa y limpieza al cambiar pestaña y cerrar",
+          "Símbolos, estructuras y condiciones HTML comprobados",
+          "Disciplina, nivel y etiquetas canónicos; creación original preservada",
+          "Recarga y ejemplo de la familia sin conexión, caché v10",
+          "Escenas finitas en valores extremos; referencias científicas enlazadas"
+        ]
+      }
+    ],
+    "ideal-mosfet-quadratic-model": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos"
+        ],
+        "summary": "Revisión completa: Localiza corte, triodo y saturación. Cuatro misiones; Características / Explorar / Regiones. Contenido, hipótesis, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Contrastes numéricos independientes: check-life-labs.mjs",
+          "Todas las pestañas con contenido específico",
+          "Cuatro misiones, rechazo de respuesta incorrecta y pistas",
+          "Tres vistas, controles y teclado; cámara con ratón y tacto cuando corresponde",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa y limpieza al cambiar pestaña y cerrar",
+          "Símbolos, estructuras y condiciones HTML comprobados",
+          "Disciplina, nivel y etiquetas canónicos; creación original preservada",
+          "Recarga y ejemplo de la familia sin conexión, caché v10",
+          "Escenas finitas en valores extremos; referencias científicas enlazadas"
+        ]
+      }
+    ],
+    "maximum-likelihood-estimation": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos"
+        ],
+        "summary": "Revisión completa: Encuentra la probabilidad que explica los datos. Cuatro misiones; Verosimilitud / Explorar / Datos y máximo. Contenido, hipótesis, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Contrastes numéricos independientes: check-information-labs.mjs",
+          "Todas las pestañas con contenido específico",
+          "Cuatro misiones, rechazo de respuesta incorrecta y pistas",
+          "Tres vistas, controles y teclado; cámara con ratón y tacto cuando corresponde",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa y limpieza al cambiar pestaña y cerrar",
+          "Símbolos, estructuras y condiciones HTML comprobados",
+          "Disciplina, nivel y etiquetas canónicos; creación original preservada",
+          "Recarga y ejemplo de la familia sin conexión, caché v10",
+          "Escenas finitas en valores extremos; referencias científicas enlazadas"
+        ]
+      }
+    ],
+    "confidence-interval": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos"
+        ],
+        "summary": "Revisión completa: Compara precisión y cobertura en muestras repetidas. Cuatro misiones; Intervalo / Explorar / Cobertura. Contenido, hipótesis, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Contrastes numéricos independientes: check-information-labs.mjs",
+          "Todas las pestañas con contenido específico",
+          "Cuatro misiones, rechazo de respuesta incorrecta y pistas",
+          "Tres vistas, controles y teclado; cámara con ratón y tacto cuando corresponde",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa y limpieza al cambiar pestaña y cerrar",
+          "Símbolos, estructuras y condiciones HTML comprobados",
+          "Disciplina, nivel y etiquetas canónicos; creación original preservada",
+          "Recarga y ejemplo de la familia sin conexión, caché v10",
+          "Escenas finitas en valores extremos; referencias científicas enlazadas"
+        ]
+      }
+    ],
+    "z-transform": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos"
+        ],
+        "summary": "Revisión completa: Busca polos y respeta la convergencia. Cuatro misiones; Plano z / Explorar / Secuencia. Contenido, hipótesis, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Contrastes numéricos independientes: check-information-labs.mjs",
+          "Todas las pestañas con contenido específico",
+          "Cuatro misiones, rechazo de respuesta incorrecta y pistas",
+          "Tres vistas, controles y teclado; cámara con ratón y tacto cuando corresponde",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa y limpieza al cambiar pestaña y cerrar",
+          "Símbolos, estructuras y condiciones HTML comprobados",
+          "Disciplina, nivel y etiquetas canónicos; creación original preservada",
+          "Recarga y ejemplo de la familia sin conexión, caché v10",
+          "Escenas finitas en valores extremos; referencias científicas enlazadas"
+        ]
+      }
+    ],
+    "shannon-hartley-capacity": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos"
+        ],
+        "summary": "Revisión completa: Reparte banda y señal sin confundir decibelios. Cuatro misiones; Capacidad / Explorar / Rendimiento espectral. Contenido, hipótesis, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Contrastes numéricos independientes: check-information-labs.mjs",
+          "Todas las pestañas con contenido específico",
+          "Cuatro misiones, rechazo de respuesta incorrecta y pistas",
+          "Tres vistas, controles y teclado; cámara con ratón y tacto cuando corresponde",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa y limpieza al cambiar pestaña y cerrar",
+          "Símbolos, estructuras y condiciones HTML comprobados",
+          "Disciplina, nivel y etiquetas canónicos; creación original preservada",
+          "Recarga y ejemplo de la familia sin conexión, caché v10",
+          "Escenas finitas en valores extremos; referencias científicas enlazadas"
+        ]
+      }
+    ],
+    "cross-entropy-loss": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos"
+        ],
+        "summary": "Revisión completa: Penaliza una predicción demasiado segura. Cuatro misiones; Pérdida / Explorar / Entropía y exceso. Contenido, hipótesis, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Contrastes numéricos independientes: check-information-labs.mjs",
+          "Todas las pestañas con contenido específico",
+          "Cuatro misiones, rechazo de respuesta incorrecta y pistas",
+          "Tres vistas, controles y teclado; cámara con ratón y tacto cuando corresponde",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa y limpieza al cambiar pestaña y cerrar",
+          "Símbolos, estructuras y condiciones HTML comprobados",
+          "Disciplina, nivel y etiquetas canónicos; creación original preservada",
+          "Recarga y ejemplo de la familia sin conexión, caché v10",
+          "Escenas finitas en valores extremos; referencias científicas enlazadas"
+        ]
+      }
+    ],
+    "shannon-entropy": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos"
+        ],
+        "summary": "Revisión completa: Construye una fuente más o menos impredecible. Cuatro misiones; Fuente binaria / Explorar / Sorpresa. Contenido, hipótesis, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Contrastes numéricos independientes: check-information-labs.mjs",
+          "Todas las pestañas con contenido específico",
+          "Cuatro misiones, rechazo de respuesta incorrecta y pistas",
+          "Tres vistas, controles y teclado; cámara con ratón y tacto cuando corresponde",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa y limpieza al cambiar pestaña y cerrar",
+          "Símbolos, estructuras y condiciones HTML comprobados",
+          "Disciplina, nivel y etiquetas canónicos; creación original preservada",
+          "Recarga y ejemplo de la familia sin conexión, caché v10",
+          "Escenas finitas en valores extremos; referencias científicas enlazadas"
+        ]
+      }
+    ],
+    "differential-entropy": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos"
+        ],
+        "summary": "Revisión completa: Cambia la escala de una densidad continua. Cuatro misiones; Densidad / Explorar / Cambio de escala. Contenido, hipótesis, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Contrastes numéricos independientes: check-information-labs.mjs",
+          "Todas las pestañas con contenido específico",
+          "Cuatro misiones, rechazo de respuesta incorrecta y pistas",
+          "Tres vistas, controles y teclado; cámara con ratón y tacto cuando corresponde",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa y limpieza al cambiar pestaña y cerrar",
+          "Símbolos, estructuras y condiciones HTML comprobados",
+          "Disciplina, nivel y etiquetas canónicos; creación original preservada",
+          "Recarga y ejemplo de la familia sin conexión, caché v10",
+          "Escenas finitas en valores extremos; referencias científicas enlazadas"
+        ]
+      }
+    ],
+    "mutual-information": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos"
+        ],
+        "summary": "Revisión completa: Reconstruye qué conserva un canal ruidoso. Cuatro misiones; Canal binario / Explorar / Distribución conjunta. Contenido, hipótesis, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Contrastes numéricos independientes: check-information-labs.mjs",
+          "Todas las pestañas con contenido específico",
+          "Cuatro misiones, rechazo de respuesta incorrecta y pistas",
+          "Tres vistas, controles y teclado; cámara con ratón y tacto cuando corresponde",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa y limpieza al cambiar pestaña y cerrar",
+          "Símbolos, estructuras y condiciones HTML comprobados",
+          "Disciplina, nivel y etiquetas canónicos; creación original preservada",
+          "Recarga y ejemplo de la familia sin conexión, caché v10",
+          "Escenas finitas en valores extremos; referencias científicas enlazadas"
+        ]
+      }
+    ],
+    "language-model-perplexity": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos"
+        ],
+        "summary": "Revisión completa: Evalúa probabilidades de una secuencia observada. Cuatro misiones; Tokens / Explorar / Media geométrica. Contenido, hipótesis, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Contrastes numéricos independientes: check-information-labs.mjs",
+          "Todas las pestañas con contenido específico",
+          "Cuatro misiones, rechazo de respuesta incorrecta y pistas",
+          "Tres vistas, controles y teclado; cámara con ratón y tacto cuando corresponde",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa y limpieza al cambiar pestaña y cerrar",
+          "Símbolos, estructuras y condiciones HTML comprobados",
+          "Disciplina, nivel y etiquetas canónicos; creación original preservada",
+          "Recarga y ejemplo de la familia sin conexión, caché v10",
+          "Escenas finitas en valores extremos; referencias científicas enlazadas"
+        ]
+      }
+    ],
+    "kullback-leibler-divergence": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos"
+        ],
+        "summary": "Revisión completa: Compara distribuciones en el orden correcto. Cuatro misiones; Distribuciones / Explorar / Asimetría. Contenido, hipótesis, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Contrastes numéricos independientes: check-information-labs.mjs",
+          "Todas las pestañas con contenido específico",
+          "Cuatro misiones, rechazo de respuesta incorrecta y pistas",
+          "Tres vistas, controles y teclado; cámara con ratón y tacto cuando corresponde",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa y limpieza al cambiar pestaña y cerrar",
+          "Símbolos, estructuras y condiciones HTML comprobados",
+          "Disciplina, nivel y etiquetas canónicos; creación original preservada",
+          "Recarga y ejemplo de la familia sin conexión, caché v10",
+          "Escenas finitas en valores extremos; referencias científicas enlazadas"
+        ]
+      }
+    ],
+    "jensen-shannon-divergence": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos"
+        ],
+        "summary": "Revisión completa: Simetriza diferencias mediante una mezcla. Cuatro misiones; Dos fuentes / Explorar / Mezcla y distancia. Contenido, hipótesis, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Contrastes numéricos independientes: check-information-labs.mjs",
+          "Todas las pestañas con contenido específico",
+          "Cuatro misiones, rechazo de respuesta incorrecta y pistas",
+          "Tres vistas, controles y teclado; cámara con ratón y tacto cuando corresponde",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa y limpieza al cambiar pestaña y cerrar",
+          "Símbolos, estructuras y condiciones HTML comprobados",
+          "Disciplina, nivel y etiquetas canónicos; creación original preservada",
+          "Recarga y ejemplo de la familia sin conexión, caché v10",
+          "Escenas finitas en valores extremos; referencias científicas enlazadas"
+        ]
+      }
+    ],
+    "aic-bic-information-criteria": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos"
+        ],
+        "summary": "Revisión completa: Equilibra ajuste y complejidad de un modelo. Cuatro misiones; Ajuste y penalización / Explorar / AIC frente a BIC. Contenido, hipótesis, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Contrastes numéricos independientes: check-information-labs.mjs",
+          "Todas las pestañas con contenido específico",
+          "Cuatro misiones, rechazo de respuesta incorrecta y pistas",
+          "Tres vistas, controles y teclado; cámara con ratón y tacto cuando corresponde",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa y limpieza al cambiar pestaña y cerrar",
+          "Símbolos, estructuras y condiciones HTML comprobados",
+          "Disciplina, nivel y etiquetas canónicos; creación original preservada",
+          "Recarga y ejemplo de la familia sin conexión, caché v10",
+          "Escenas finitas en valores extremos; referencias científicas enlazadas"
+        ]
+      }
+    ],
+    "tf-idf-term-frequency-inverse-document-frequency": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos"
+        ],
+        "summary": "Revisión completa: Distingue frecuencia local de rareza en el corpus. Cuatro misiones; Término y corpus / Explorar / Peso. Contenido, hipótesis, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Contrastes numéricos independientes: check-information-labs.mjs",
+          "Todas las pestañas con contenido específico",
+          "Cuatro misiones, rechazo de respuesta incorrecta y pistas",
+          "Tres vistas, controles y teclado; cámara con ratón y tacto cuando corresponde",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa y limpieza al cambiar pestaña y cerrar",
+          "Símbolos, estructuras y condiciones HTML comprobados",
+          "Disciplina, nivel y etiquetas canónicos; creación original preservada",
+          "Recarga y ejemplo de la familia sin conexión, caché v10",
+          "Escenas finitas en valores extremos; referencias científicas enlazadas"
+        ]
+      }
+    ],
+    "cobb-douglas-production-function": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos"
+        ],
+        "summary": "Revisión completa: Combina recursos sin confundir rendimientos. Cuatro misiones; Producción / Explorar / Superficie 3D. Contenido, hipótesis, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Contrastes numéricos independientes: check-economy-labs.mjs",
+          "Todas las pestañas con contenido específico",
+          "Cuatro misiones, rechazo de respuesta incorrecta y pistas",
+          "Tres vistas, controles y teclado; cámara con ratón y tacto cuando corresponde",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa y limpieza al cambiar pestaña y cerrar",
+          "Símbolos, estructuras y condiciones HTML comprobados",
+          "Disciplina, nivel y etiquetas canónicos; creación original preservada",
+          "Recarga y ejemplo de la familia sin conexión, caché v10",
+          "Escenas finitas en valores extremos; referencias científicas enlazadas"
+        ]
+      }
+    ],
+    "consumer-lagrangian-constrained-optimization": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos"
+        ],
+        "summary": "Revisión completa: Reparte un presupuesto con preferencias explícitas. Cuatro misiones; Presupuesto / Explorar / Óptimo. Contenido, hipótesis, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Contrastes numéricos independientes: check-economy-labs.mjs",
+          "Todas las pestañas con contenido específico",
+          "Cuatro misiones, rechazo de respuesta incorrecta y pistas",
+          "Tres vistas, controles y teclado; cámara con ratón y tacto cuando corresponde",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa y limpieza al cambiar pestaña y cerrar",
+          "Símbolos, estructuras y condiciones HTML comprobados",
+          "Disciplina, nivel y etiquetas canónicos; creación original preservada",
+          "Recarga y ejemplo de la familia sin conexión, caché v10",
+          "Escenas finitas en valores extremos; referencias científicas enlazadas"
+        ]
+      }
+    ],
+    "bond-duration-interest-rate-sensitivity": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos"
+        ],
+        "summary": "Revisión completa: Separa vencimiento y sensibilidad de precio. Cuatro misiones; Precio y tangente / Explorar / Flujos. Contenido, hipótesis, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Contrastes numéricos independientes: check-economy-labs.mjs",
+          "Todas las pestañas con contenido específico",
+          "Cuatro misiones, rechazo de respuesta incorrecta y pistas",
+          "Tres vistas, controles y teclado; cámara con ratón y tacto cuando corresponde",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa y limpieza al cambiar pestaña y cerrar",
+          "Símbolos, estructuras y condiciones HTML comprobados",
+          "Disciplina, nivel y etiquetas canónicos; creación original preservada",
+          "Recarga y ejemplo de la familia sin conexión, caché v10",
+          "Escenas finitas en valores extremos; referencias científicas enlazadas"
+        ]
+      }
+    ],
+    "bond-convexity-second-order-duration": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos"
+        ],
+        "summary": "Revisión completa: Corrige una tangente con curvatura de precio. Cuatro misiones; Precio y aproximaciones / Explorar / Convexidad. Contenido, hipótesis, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Contrastes numéricos independientes: check-economy-labs.mjs",
+          "Todas las pestañas con contenido específico",
+          "Cuatro misiones, rechazo de respuesta incorrecta y pistas",
+          "Tres vistas, controles y teclado; cámara con ratón y tacto cuando corresponde",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa y limpieza al cambiar pestaña y cerrar",
+          "Símbolos, estructuras y condiciones HTML comprobados",
+          "Disciplina, nivel y etiquetas canónicos; creación original preservada",
+          "Recarga y ejemplo de la familia sin conexión, caché v10",
+          "Escenas finitas en valores extremos; referencias científicas enlazadas"
+        ]
+      }
+    ],
+    "net-present-value-npv": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos"
+        ],
+        "summary": "Revisión completa: Descuenta cada flujo en su fecha. Cuatro misiones; Flujos y valor / Explorar / Perfil de VAN. Contenido, hipótesis, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Contrastes numéricos independientes: check-economy-labs.mjs",
+          "Todas las pestañas con contenido específico",
+          "Cuatro misiones, rechazo de respuesta incorrecta y pistas",
+          "Tres vistas, controles y teclado; cámara con ratón y tacto cuando corresponde",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa y limpieza al cambiar pestaña y cerrar",
+          "Símbolos, estructuras y condiciones HTML comprobados",
+          "Disciplina, nivel y etiquetas canónicos; creación original preservada",
+          "Recarga y ejemplo de la familia sin conexión, caché v10",
+          "Escenas finitas en valores extremos; referencias científicas enlazadas"
+        ]
+      }
+    ],
+    "internal-rate-of-return-irr": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos"
+        ],
+        "summary": "Revisión completa: Encuentra la tasa que anula un proyecto hipotético. Cuatro misiones; Flujos y valor / Explorar / Raíces múltiples. Contenido, hipótesis, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Contrastes numéricos independientes: check-economy-labs.mjs",
+          "Todas las pestañas con contenido específico",
+          "Cuatro misiones, rechazo de respuesta incorrecta y pistas",
+          "Tres vistas, controles y teclado; cámara con ratón y tacto cuando corresponde",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa y limpieza al cambiar pestaña y cerrar",
+          "Símbolos, estructuras y condiciones HTML comprobados",
+          "Disciplina, nivel y etiquetas canónicos; creación original preservada",
+          "Recarga y ejemplo de la familia sin conexión, caché v10",
+          "Escenas finitas en valores extremos; referencias científicas enlazadas"
+        ]
+      }
+    ],
+    "kelly-criterion-money-management": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos"
+        ],
+        "summary": "Revisión completa: Compara crecimiento logarítmico y riesgo de fracción. Cuatro misiones; Crecimiento esperado / Explorar / Capital hipotético. Contenido, hipótesis, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Contrastes numéricos independientes: check-economy-labs.mjs",
+          "Todas las pestañas con contenido específico",
+          "Cuatro misiones, rechazo de respuesta incorrecta y pistas",
+          "Tres vistas, controles y teclado; cámara con ratón y tacto cuando corresponde",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa y limpieza al cambiar pestaña y cerrar",
+          "Símbolos, estructuras y condiciones HTML comprobados",
+          "Disciplina, nivel y etiquetas canónicos; creación original preservada",
+          "Recarga y ejemplo de la familia sin conexión, caché v10",
+          "Escenas finitas en valores extremos; referencias científicas enlazadas"
+        ]
+      }
+    ],
+    "solow-growth-model-steady-state": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos"
+        ],
+        "summary": "Revisión completa: Equilibra inversión y pérdida por trabajador efectivo. Cuatro misiones; Acumulación / Explorar / Regla de oro. Contenido, hipótesis, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Contrastes numéricos independientes: check-economy-labs.mjs",
+          "Todas las pestañas con contenido específico",
+          "Cuatro misiones, rechazo de respuesta incorrecta y pistas",
+          "Tres vistas, controles y teclado; cámara con ratón y tacto cuando corresponde",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa y limpieza al cambiar pestaña y cerrar",
+          "Símbolos, estructuras y condiciones HTML comprobados",
+          "Disciplina, nivel y etiquetas canónicos; creación original preservada",
+          "Recarga y ejemplo de la familia sin conexión, caché v10",
+          "Escenas finitas en valores extremos; referencias científicas enlazadas"
+        ]
+      }
+    ],
+    "capital-asset-pricing-model-capm": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos"
+        ],
+        "summary": "Revisión completa: Relaciona riesgo sistemático y retorno esperado. Cuatro misiones; Línea de mercado / Explorar / Prima. Contenido, hipótesis, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Contrastes numéricos independientes: check-economy-labs.mjs",
+          "Todas las pestañas con contenido específico",
+          "Cuatro misiones, rechazo de respuesta incorrecta y pistas",
+          "Tres vistas, controles y teclado; cámara con ratón y tacto cuando corresponde",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa y limpieza al cambiar pestaña y cerrar",
+          "Símbolos, estructuras y condiciones HTML comprobados",
+          "Disciplina, nivel y etiquetas canónicos; creación original preservada",
+          "Recarga y ejemplo de la familia sin conexión, caché v10",
+          "Escenas finitas en valores extremos; referencias científicas enlazadas"
+        ]
+      }
+    ],
+    "sharpe-ratio-risk-adjusted-return": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos"
+        ],
+        "summary": "Revisión completa: Compara exceso de retorno y dispersión. Cuatro misiones; Retorno y dispersión / Explorar / Ratio. Contenido, hipótesis, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Contrastes numéricos independientes: check-economy-labs.mjs",
+          "Todas las pestañas con contenido específico",
+          "Cuatro misiones, rechazo de respuesta incorrecta y pistas",
+          "Tres vistas, controles y teclado; cámara con ratón y tacto cuando corresponde",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa y limpieza al cambiar pestaña y cerrar",
+          "Símbolos, estructuras y condiciones HTML comprobados",
+          "Disciplina, nivel y etiquetas canónicos; creación original preservada",
+          "Recarga y ejemplo de la familia sin conexión, caché v10",
+          "Escenas finitas en valores extremos; referencias científicas enlazadas"
+        ]
+      }
+    ],
+    "put-call-parity-no-arbitrage": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos"
+        ],
+        "summary": "Revisión completa: Iguala dos carteras con el mismo pago final. Cuatro misiones; Carteras / Explorar / Paridad. Contenido, hipótesis, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Contrastes numéricos independientes: check-economy-labs.mjs",
+          "Todas las pestañas con contenido específico",
+          "Cuatro misiones, rechazo de respuesta incorrecta y pistas",
+          "Tres vistas, controles y teclado; cámara con ratón y tacto cuando corresponde",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa y limpieza al cambiar pestaña y cerrar",
+          "Símbolos, estructuras y condiciones HTML comprobados",
+          "Disciplina, nivel y etiquetas canónicos; creación original preservada",
+          "Recarga y ejemplo de la familia sin conexión, caché v10",
+          "Escenas finitas en valores extremos; referencias científicas enlazadas"
+        ]
+      }
+    ],
+    "black-scholes-model": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos"
+        ],
+        "summary": "Revisión completa: Valora una call europea bajo un modelo ideal. Cuatro misiones; Precio de opción / Explorar / Sensibilidad. Contenido, hipótesis, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Contrastes numéricos independientes: check-economy-labs.mjs",
+          "Todas las pestañas con contenido específico",
+          "Cuatro misiones, rechazo de respuesta incorrecta y pistas",
+          "Tres vistas, controles y teclado; cámara con ratón y tacto cuando corresponde",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa y limpieza al cambiar pestaña y cerrar",
+          "Símbolos, estructuras y condiciones HTML comprobados",
+          "Disciplina, nivel y etiquetas canónicos; creación original preservada",
+          "Recarga y ejemplo de la familia sin conexión, caché v10",
+          "Escenas finitas en valores extremos; referencias científicas enlazadas"
+        ]
+      }
+    ],
+    "black-scholes-european-put-option": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos"
+        ],
+        "summary": "Revisión completa: Valora una put europea y distingue pago y precio. Cuatro misiones; Precio de opción / Explorar / Sensibilidad. Contenido, hipótesis, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Contrastes numéricos independientes: check-economy-labs.mjs",
+          "Todas las pestañas con contenido específico",
+          "Cuatro misiones, rechazo de respuesta incorrecta y pistas",
+          "Tres vistas, controles y teclado; cámara con ratón y tacto cuando corresponde",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa y limpieza al cambiar pestaña y cerrar",
+          "Símbolos, estructuras y condiciones HTML comprobados",
+          "Disciplina, nivel y etiquetas canónicos; creación original preservada",
+          "Recarga y ejemplo de la familia sin conexión, caché v10",
+          "Escenas finitas en valores extremos; referencias científicas enlazadas"
+        ]
+      }
+    ],
+    "parametric-value-at-risk-var": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos"
+        ],
+        "summary": "Revisión completa: Distingue cuantil de pérdida y pérdida extrema. Cuatro misiones; Distribución de pérdidas / Explorar / Cola y ES. Contenido, hipótesis, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Contrastes numéricos independientes: check-economy-labs.mjs",
+          "Todas las pestañas con contenido específico",
+          "Cuatro misiones, rechazo de respuesta incorrecta y pistas",
+          "Tres vistas, controles y teclado; cámara con ratón y tacto cuando corresponde",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa y limpieza al cambiar pestaña y cerrar",
+          "Símbolos, estructuras y condiciones HTML comprobados",
+          "Disciplina, nivel y etiquetas canónicos; creación original preservada",
+          "Recarga y ejemplo de la familia sin conexión, caché v10",
+          "Escenas finitas en valores extremos; referencias científicas enlazadas"
+        ]
+      }
+    ],
+    "k-means-clustering": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos"
+        ],
+        "summary": "Revisión completa: Reubica centros y reduce distancias. Cuatro misiones; Agrupamiento / Explorar / Convergencia. Contenido, hipótesis, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Contrastes numéricos independientes: check-machine-labs.mjs",
+          "Todas las pestañas con contenido específico",
+          "Cuatro misiones, rechazo de respuesta incorrecta y pistas",
+          "Tres vistas, controles y teclado; cámara con ratón y tacto cuando corresponde",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa y limpieza al cambiar pestaña y cerrar",
+          "Símbolos, estructuras y condiciones HTML comprobados",
+          "Disciplina, nivel y etiquetas canónicos; creación original preservada",
+          "Recarga y ejemplo de la familia sin conexión, caché v10",
+          "Escenas finitas en valores extremos; referencias científicas enlazadas"
+        ]
+      }
+    ],
+    "dbscan-density-based-clustering": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos"
+        ],
+        "summary": "Revisión completa: Descubre densidad sin imponer grupos. Cuatro misiones; Vecindarios / Explorar / Núcleo y ruido. Contenido, hipótesis, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Contrastes numéricos independientes: check-machine-labs.mjs",
+          "Todas las pestañas con contenido específico",
+          "Cuatro misiones, rechazo de respuesta incorrecta y pistas",
+          "Tres vistas, controles y teclado; cámara con ratón y tacto cuando corresponde",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa y limpieza al cambiar pestaña y cerrar",
+          "Símbolos, estructuras y condiciones HTML comprobados",
+          "Disciplina, nivel y etiquetas canónicos; creación original preservada",
+          "Recarga y ejemplo de la familia sin conexión, caché v10",
+          "Escenas finitas en valores extremos; referencias científicas enlazadas"
+        ]
+      }
+    ],
+    "bellman-equation": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos"
+        ],
+        "summary": "Revisión completa: Planifica antes de avanzar. Cuatro misiones; Ruta y valores / Explorar / Iteración. Contenido, hipótesis, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Contrastes numéricos independientes: check-machine-labs.mjs",
+          "Todas las pestañas con contenido específico",
+          "Cuatro misiones, rechazo de respuesta incorrecta y pistas",
+          "Tres vistas, controles y teclado; cámara con ratón y tacto cuando corresponde",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa y limpieza al cambiar pestaña y cerrar",
+          "Símbolos, estructuras y condiciones HTML comprobados",
+          "Disciplina, nivel y etiquetas canónicos; creación original preservada",
+          "Recarga y ejemplo de la familia sin conexión, caché v10",
+          "Escenas finitas en valores extremos; referencias científicas enlazadas"
+        ]
+      }
+    ],
+    "q-learning-off-policy-td-control": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos"
+        ],
+        "summary": "Revisión completa: Aprende con un objetivo codicioso. Cuatro misiones; Actualización TD / Explorar / Objetivos comparados. Contenido, hipótesis, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Contrastes numéricos independientes: check-machine-labs.mjs",
+          "Todas las pestañas con contenido específico",
+          "Cuatro misiones, rechazo de respuesta incorrecta y pistas",
+          "Tres vistas, controles y teclado; cámara con ratón y tacto cuando corresponde",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa y limpieza al cambiar pestaña y cerrar",
+          "Símbolos, estructuras y condiciones HTML comprobados",
+          "Disciplina, nivel y etiquetas canónicos; creación original preservada",
+          "Recarga y ejemplo de la familia sin conexión, caché v10",
+          "Escenas finitas en valores extremos; referencias científicas enlazadas"
+        ]
+      }
+    ],
+    "sarsa-temporal-difference-control": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos"
+        ],
+        "summary": "Revisión completa: Aprende de la acción que realmente sigues. Cuatro misiones; Actualización TD / Explorar / Objetivos comparados. Contenido, hipótesis, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Contrastes numéricos independientes: check-machine-labs.mjs",
+          "Todas las pestañas con contenido específico",
+          "Cuatro misiones, rechazo de respuesta incorrecta y pistas",
+          "Tres vistas, controles y teclado; cámara con ratón y tacto cuando corresponde",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa y limpieza al cambiar pestaña y cerrar",
+          "Símbolos, estructuras y condiciones HTML comprobados",
+          "Disciplina, nivel y etiquetas canónicos; creación original preservada",
+          "Recarga y ejemplo de la familia sin conexión, caché v10",
+          "Escenas finitas en valores extremos; referencias científicas enlazadas"
+        ]
+      }
+    ],
+    "policy-gradient-reinforce": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos"
+        ],
+        "summary": "Revisión completa: Da crédito a una acción estocástica. Cuatro misiones; Política / Explorar / Gradiente. Contenido, hipótesis, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Contrastes numéricos independientes: check-machine-labs.mjs",
+          "Todas las pestañas con contenido específico",
+          "Cuatro misiones, rechazo de respuesta incorrecta y pistas",
+          "Tres vistas, controles y teclado; cámara con ratón y tacto cuando corresponde",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa y limpieza al cambiar pestaña y cerrar",
+          "Símbolos, estructuras y condiciones HTML comprobados",
+          "Disciplina, nivel y etiquetas canónicos; creación original preservada",
+          "Recarga y ejemplo de la familia sin conexión, caché v10",
+          "Escenas finitas en valores extremos; referencias científicas enlazadas"
+        ]
+      }
+    ],
+    "softmax-function": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos"
+        ],
+        "summary": "Revisión completa: Convierte logits en una distribución. Cuatro misiones; Probabilidades / Explorar / Temperatura. Contenido, hipótesis, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Contrastes numéricos independientes: check-machine-labs.mjs",
+          "Todas las pestañas con contenido específico",
+          "Cuatro misiones, rechazo de respuesta incorrecta y pistas",
+          "Tres vistas, controles y teclado; cámara con ratón y tacto cuando corresponde",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa y limpieza al cambiar pestaña y cerrar",
+          "Símbolos, estructuras y condiciones HTML comprobados",
+          "Disciplina, nivel y etiquetas canónicos; creación original preservada",
+          "Recarga y ejemplo de la familia sin conexión, caché v10",
+          "Escenas finitas en valores extremos; referencias científicas enlazadas"
+        ]
+      }
+    ],
+    "gradient-descent-with-momentum": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos"
+        ],
+        "summary": "Revisión completa: Sigue el recorrido de Momento. Cuatro misiones; Paisaje / Explorar / Memoria y pasos. Contenido, hipótesis, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Contrastes numéricos independientes: check-machine-labs.mjs",
+          "Todas las pestañas con contenido específico",
+          "Cuatro misiones, rechazo de respuesta incorrecta y pistas",
+          "Tres vistas, controles y teclado; cámara con ratón y tacto cuando corresponde",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa y limpieza al cambiar pestaña y cerrar",
+          "Símbolos, estructuras y condiciones HTML comprobados",
+          "Disciplina, nivel y etiquetas canónicos; creación original preservada",
+          "Recarga y ejemplo de la familia sin conexión, caché v10",
+          "Escenas finitas en valores extremos; referencias científicas enlazadas"
+        ]
+      }
+    ],
+    "rmsprop-optimizer": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos"
+        ],
+        "summary": "Revisión completa: Sigue el recorrido de RMSProp. Cuatro misiones; Paisaje / Explorar / Memoria y pasos. Contenido, hipótesis, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Contrastes numéricos independientes: check-machine-labs.mjs",
+          "Todas las pestañas con contenido específico",
+          "Cuatro misiones, rechazo de respuesta incorrecta y pistas",
+          "Tres vistas, controles y teclado; cámara con ratón y tacto cuando corresponde",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa y limpieza al cambiar pestaña y cerrar",
+          "Símbolos, estructuras y condiciones HTML comprobados",
+          "Disciplina, nivel y etiquetas canónicos; creación original preservada",
+          "Recarga y ejemplo de la familia sin conexión, caché v10",
+          "Escenas finitas en valores extremos; referencias científicas enlazadas"
+        ]
+      }
+    ],
+    "adam-optimizer-adaptive-moment-estimation": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos"
+        ],
+        "summary": "Revisión completa: Sigue el recorrido de Adam. Cuatro misiones; Paisaje / Explorar / Memoria y pasos. Contenido, hipótesis, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Contrastes numéricos independientes: check-machine-labs.mjs",
+          "Todas las pestañas con contenido específico",
+          "Cuatro misiones, rechazo de respuesta incorrecta y pistas",
+          "Tres vistas, controles y teclado; cámara con ratón y tacto cuando corresponde",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa y limpieza al cambiar pestaña y cerrar",
+          "Símbolos, estructuras y condiciones HTML comprobados",
+          "Disciplina, nivel y etiquetas canónicos; creación original preservada",
+          "Recarga y ejemplo de la familia sin conexión, caché v10",
+          "Escenas finitas en valores extremos; referencias científicas enlazadas"
+        ]
+      }
+    ],
+    "regression-loss-functions-mse-mae-huber": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos"
+        ],
+        "summary": "Revisión completa: Elige cómo penalizar errores. Cuatro misiones; Tres pérdidas / Explorar / Pendientes. Contenido, hipótesis, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Contrastes numéricos independientes: check-machine-labs.mjs",
+          "Todas las pestañas con contenido específico",
+          "Cuatro misiones, rechazo de respuesta incorrecta y pistas",
+          "Tres vistas, controles y teclado; cámara con ratón y tacto cuando corresponde",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa y limpieza al cambiar pestaña y cerrar",
+          "Símbolos, estructuras y condiciones HTML comprobados",
+          "Disciplina, nivel y etiquetas canónicos; creación original preservada",
+          "Recarga y ejemplo de la familia sin conexión, caché v10",
+          "Escenas finitas en valores extremos; referencias científicas enlazadas"
+        ]
+      }
+    ],
+    "relu-activation-function": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos"
+        ],
+        "summary": "Revisión completa: Encuentra una puerta y su esquina. Cuatro misiones; Activación / Explorar / Derivada. Contenido, hipótesis, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Contrastes numéricos independientes: check-machine-labs.mjs",
+          "Todas las pestañas con contenido específico",
+          "Cuatro misiones, rechazo de respuesta incorrecta y pistas",
+          "Tres vistas, controles y teclado; cámara con ratón y tacto cuando corresponde",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa y limpieza al cambiar pestaña y cerrar",
+          "Símbolos, estructuras y condiciones HTML comprobados",
+          "Disciplina, nivel y etiquetas canónicos; creación original preservada",
+          "Recarga y ejemplo de la familia sin conexión, caché v10",
+          "Escenas finitas en valores extremos; referencias científicas enlazadas"
+        ]
+      }
+    ],
+    "backpropagation": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos"
+        ],
+        "summary": "Revisión completa: Rastrea el crédito hasta un peso. Cuatro misiones; Red mínima / Explorar / Gradientes. Contenido, hipótesis, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Contrastes numéricos independientes: check-machine-labs.mjs",
+          "Todas las pestañas con contenido específico",
+          "Cuatro misiones, rechazo de respuesta incorrecta y pistas",
+          "Tres vistas, controles y teclado; cámara con ratón y tacto cuando corresponde",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa y limpieza al cambiar pestaña y cerrar",
+          "Símbolos, estructuras y condiciones HTML comprobados",
+          "Disciplina, nivel y etiquetas canónicos; creación original preservada",
+          "Recarga y ejemplo de la familia sin conexión, caché v10",
+          "Escenas finitas en valores extremos; referencias científicas enlazadas"
+        ]
+      }
+    ],
+    "rbf-kernel-radial-basis-function": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos"
+        ],
+        "summary": "Revisión completa: Mide similitud por distancia. Cuatro misiones; Mapa de similitud / Explorar / Perfil radial. Contenido, hipótesis, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Contrastes numéricos independientes: check-machine-labs.mjs",
+          "Todas las pestañas con contenido específico",
+          "Cuatro misiones, rechazo de respuesta incorrecta y pistas",
+          "Tres vistas, controles y teclado; cámara con ratón y tacto cuando corresponde",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa y limpieza al cambiar pestaña y cerrar",
+          "Símbolos, estructuras y condiciones HTML comprobados",
+          "Disciplina, nivel y etiquetas canónicos; creación original preservada",
+          "Recarga y ejemplo de la familia sin conexión, caché v10",
+          "Escenas finitas en valores extremos; referencias científicas enlazadas"
+        ]
+      }
+    ],
+    "maximum-margin-support-vector-machine": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos"
+        ],
+        "summary": "Revisión completa: Separa puntos y mide el margen. Cuatro misiones; Separador / Explorar / Objetivo y holguras. Contenido, hipótesis, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Contrastes numéricos independientes: check-machine-labs.mjs",
+          "Todas las pestañas con contenido específico",
+          "Cuatro misiones, rechazo de respuesta incorrecta y pistas",
+          "Tres vistas, controles y teclado; cámara con ratón y tacto cuando corresponde",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa y limpieza al cambiar pestaña y cerrar",
+          "Símbolos, estructuras y condiciones HTML comprobados",
+          "Disciplina, nivel y etiquetas canónicos; creación original preservada",
+          "Recarga y ejemplo de la familia sin conexión, caché v10",
+          "Escenas finitas en valores extremos; referencias científicas enlazadas"
+        ]
+      }
+    ],
+    "pagerank-network-authority-algorithm": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos"
+        ],
+        "summary": "Revisión completa: Reparte autoridad en una red dirigida. Cuatro misiones; Red / Explorar / Iteración. Contenido, hipótesis, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Contrastes numéricos independientes: check-machine-labs.mjs",
+          "Todas las pestañas con contenido específico",
+          "Cuatro misiones, rechazo de respuesta incorrecta y pistas",
+          "Tres vistas, controles y teclado; cámara con ratón y tacto cuando corresponde",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa y limpieza al cambiar pestaña y cerrar",
+          "Símbolos, estructuras y condiciones HTML comprobados",
+          "Disciplina, nivel y etiquetas canónicos; creación original preservada",
+          "Recarga y ejemplo de la familia sin conexión, caché v10",
+          "Escenas finitas en valores extremos; referencias científicas enlazadas"
+        ]
+      }
+    ],
+    "batch-normalization": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos"
+        ],
+        "summary": "Revisión completa: Distingue lote y estadísticas de inferencia. Cuatro misiones; Lote / Explorar / Estadísticas. Contenido, hipótesis, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Contrastes numéricos independientes: check-network-labs.mjs",
+          "Todas las pestañas con contenido específico",
+          "Cuatro misiones, rechazo de respuesta incorrecta y pistas",
+          "Tres vistas, controles y teclado; cámara con ratón y tacto cuando corresponde",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa y limpieza al cambiar pestaña y cerrar",
+          "Símbolos, estructuras y condiciones HTML comprobados",
+          "Disciplina, nivel y etiquetas canónicos; creación original preservada",
+          "Recarga y ejemplo de la familia sin conexión, caché v10",
+          "Escenas finitas en valores extremos; referencias científicas enlazadas"
+        ]
+      }
+    ],
+    "layer-normalization": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos"
+        ],
+        "summary": "Revisión completa: Normaliza dentro de cada muestra. Cuatro misiones; Características / Explorar / Invariancias. Contenido, hipótesis, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Contrastes numéricos independientes: check-network-labs.mjs",
+          "Todas las pestañas con contenido específico",
+          "Cuatro misiones, rechazo de respuesta incorrecta y pistas",
+          "Tres vistas, controles y teclado; cámara con ratón y tacto cuando corresponde",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa y limpieza al cambiar pestaña y cerrar",
+          "Símbolos, estructuras y condiciones HTML comprobados",
+          "Disciplina, nivel y etiquetas canónicos; creación original preservada",
+          "Recarga y ejemplo de la familia sin conexión, caché v10",
+          "Escenas finitas en valores extremos; referencias científicas enlazadas"
+        ]
+      }
+    ],
+    "gelu-activation-function": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos"
+        ],
+        "summary": "Revisión completa: Explora una puerta suave y no monótona. Cuatro misiones; Activación / Explorar / Pendiente. Contenido, hipótesis, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Contrastes numéricos independientes: check-network-labs.mjs",
+          "Todas las pestañas con contenido específico",
+          "Cuatro misiones, rechazo de respuesta incorrecta y pistas",
+          "Tres vistas, controles y teclado; cámara con ratón y tacto cuando corresponde",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa y limpieza al cambiar pestaña y cerrar",
+          "Símbolos, estructuras y condiciones HTML comprobados",
+          "Disciplina, nivel y etiquetas canónicos; creación original preservada",
+          "Recarga y ejemplo de la familia sin conexión, caché v10",
+          "Escenas finitas en valores extremos; referencias científicas enlazadas"
+        ]
+      }
+    ],
+    "scaled-dot-product-attention": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos"
+        ],
+        "summary": "Revisión completa: Pasa de compatibilidad a mezcla. Cuatro misiones; Consulta y memoria / Explorar / Scores y pesos. Contenido, hipótesis, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Contrastes numéricos independientes: check-network-labs.mjs",
+          "Todas las pestañas con contenido específico",
+          "Cuatro misiones, rechazo de respuesta incorrecta y pistas",
+          "Tres vistas, controles y teclado; cámara con ratón y tacto cuando corresponde",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa y limpieza al cambiar pestaña y cerrar",
+          "Símbolos, estructuras y condiciones HTML comprobados",
+          "Disciplina, nivel y etiquetas canónicos; creación original preservada",
+          "Recarga y ejemplo de la familia sin conexión, caché v10",
+          "Escenas finitas en valores extremos; referencias científicas enlazadas"
+        ]
+      }
+    ],
+    "cross-attention": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos"
+        ],
+        "summary": "Revisión completa: Consulta una memoria de otra secuencia. Cuatro misiones; Consulta y memoria / Explorar / Scores y pesos. Contenido, hipótesis, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Contrastes numéricos independientes: check-network-labs.mjs",
+          "Todas las pestañas con contenido específico",
+          "Cuatro misiones, rechazo de respuesta incorrecta y pistas",
+          "Tres vistas, controles y teclado; cámara con ratón y tacto cuando corresponde",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa y limpieza al cambiar pestaña y cerrar",
+          "Símbolos, estructuras y condiciones HTML comprobados",
+          "Disciplina, nivel y etiquetas canónicos; creación original preservada",
+          "Recarga y ejemplo de la familia sin conexión, caché v10",
+          "Escenas finitas en valores extremos; referencias científicas enlazadas"
+        ]
+      }
+    ],
+    "multi-head-attention": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos"
+        ],
+        "summary": "Revisión completa: Combina dos perspectivas proyectadas. Cuatro misiones; Cabezas / Explorar / Concatenar y proyectar. Contenido, hipótesis, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Contrastes numéricos independientes: check-network-labs.mjs",
+          "Todas las pestañas con contenido específico",
+          "Cuatro misiones, rechazo de respuesta incorrecta y pistas",
+          "Tres vistas, controles y teclado; cámara con ratón y tacto cuando corresponde",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa y limpieza al cambiar pestaña y cerrar",
+          "Símbolos, estructuras y condiciones HTML comprobados",
+          "Disciplina, nivel y etiquetas canónicos; creación original preservada",
+          "Recarga y ejemplo de la familia sin conexión, caché v10",
+          "Escenas finitas en valores extremos; referencias científicas enlazadas"
+        ]
+      }
+    ],
+    "sinusoidal-positional-encoding": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos"
+        ],
+        "summary": "Revisión completa: Distingue posición y frecuencia. Cuatro misiones; Ondas de posición / Explorar / Pares de fase. Contenido, hipótesis, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Contrastes numéricos independientes: check-network-labs.mjs",
+          "Todas las pestañas con contenido específico",
+          "Cuatro misiones, rechazo de respuesta incorrecta y pistas",
+          "Tres vistas, controles y teclado; cámara con ratón y tacto cuando corresponde",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa y limpieza al cambiar pestaña y cerrar",
+          "Símbolos, estructuras y condiciones HTML comprobados",
+          "Disciplina, nivel y etiquetas canónicos; creación original preservada",
+          "Recarga y ejemplo de la familia sin conexión, caché v10",
+          "Escenas finitas en valores extremos; referencias científicas enlazadas"
+        ]
+      }
+    ],
+    "rotary-position-embedding-rope": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos"
+        ],
+        "summary": "Revisión completa: Rota sin alterar la norma. Cuatro misiones; Vectores y fase / Explorar / Distancia relativa. Contenido, hipótesis, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Contrastes numéricos independientes: check-network-labs.mjs",
+          "Todas las pestañas con contenido específico",
+          "Cuatro misiones, rechazo de respuesta incorrecta y pistas",
+          "Tres vistas, controles y teclado; cámara con ratón y tacto cuando corresponde",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa y limpieza al cambiar pestaña y cerrar",
+          "Símbolos, estructuras y condiciones HTML comprobados",
+          "Disciplina, nivel y etiquetas canónicos; creación original preservada",
+          "Recarga y ejemplo de la familia sin conexión, caché v10",
+          "Escenas finitas en valores extremos; referencias científicas enlazadas"
+        ]
+      }
+    ],
+    "ppo-clipped-objective": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "formula",
+          "significado",
+          "historia",
+          "derivacion",
+          "usos",
+          "ficha",
+          "aprendizaje",
+          "unidades",
+          "simulacion",
+          "simbolos",
+          "metadatos"
+        ],
+        "summary": "Revisión completa: Comprueba qué lado queda recortado. Cuatro misiones; Objetivo sustituto / Explorar / Ventaja firmada. Contenido, hipótesis, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Contrastes numéricos independientes: check-network-labs.mjs",
+          "Todas las pestañas con contenido específico",
+          "Cuatro misiones, rechazo de respuesta incorrecta y pistas",
+          "Tres vistas, controles y teclado; cámara con ratón y tacto cuando corresponde",
+          "Escritorio y móvil sin solapamientos",
+          "Pausa y limpieza al cambiar pestaña y cerrar",
+          "Símbolos, estructuras y condiciones HTML comprobados",
+          "Disciplina, nivel y etiquetas canónicos; creación original preservada",
+          "Recarga y ejemplo de la familia sin conexión, caché v10",
+          "Escenas finitas en valores extremos; referencias científicas enlazadas"
+        ]
+      }
     ]
   }
 }

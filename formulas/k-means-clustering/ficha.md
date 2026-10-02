@@ -1,21 +1,26 @@
-# Ficha
+# Agrupamiento K-means: K-medias
 
-**Nombre:** Agrupamiento K-means: K-medias
+Lloyd sobre seis puntos, asignación al centro más próximo y actualización por media. Los empates se resuelven por orden de centro y un centro vacío se conserva.
 
-**Área:** Machine Learning / Clustering
+## Magnitudes y notación
 
-**Nivel:** Universidad inicial
+| Símbolo | Interpretación |
+| :-- | :-- |
+| J | Suma de distancias euclídeas al cuadrado. |
+| n | Número de puntos. |
+| x | Punto o vector de características. |
+| μ | Centroide del grupo. |
+| c | Índice del centro asignado. |
+| i | Índice de punto. |
+| j | Índice de centro. |
+| C | Conjunto de puntos asignados a un centro. |
+| argmin | Índice que minimiza la distancia. |
+| ∣ | Cardinalidad del conjunto C en el denominador, no norma de vector. |
 
-**Resumen:** Particiona datos en K grupos minimizando la suma de distancias cuadráticas a centroides.
+## Condiciones
 
-## Lectura e interpretación
+K debe elegirse y la solución depende de los centros iniciales. Un grupo vacío conserva su centro en esta demostración. Empates se resuelven por índice; no se promete óptimo global ni detección de formas no convexas.
 
-# Interpretación
+## Unidades
 
-Mueve los controles y observa qué domina: anchura del kernel, margen, densidad, inercia, varianza proyectada, rango efectivo o teletransporte.
-
-## Validez y limitaciones
-
-# Limitaciones
-
-Requiere K, asume clústeres aproximadamente esféricos y depende de inicialización.
+Variables numéricas en unidades de referencia; los índices y probabilidades son adimensionales. Una distancia conserva la escala de las características; su cuadrado tiene escala cuadrática.

@@ -1,9 +1,11 @@
 # Historia
 
-Erwin Schrödinger formuló su ecuación de ondas en 1926, en los primeros años de la mecánica cuántica moderna. Su propuesta ofrecía una alternativa ondulatoria a la mecánica matricial de Heisenberg, aunque pronto se comprendió que ambas formulaciones eran equivalentes.
+Schrödinger introdujo una dinámica ondulatoria para estados cuánticos no relativistas. La evolución unitaria conserva la norma y, para Hamiltonianos constantes, la energía media. Dos modos permiten ver esas conservaciones a la vez que cambia la interferencia.
 
-La ecuación permitió calcular niveles de energía, estados estacionarios y evolución temporal de sistemas microscópicos. Fue especialmente importante para comprender el átomo de hidrógeno, la estructura de orbitales y la cuantización de la energía.
+## Referencia y alcance
 
-La interpretación probabilística de la función de onda se consolidó con Max Born. En vez de describir una onda material clásica literal, `Psi` pasó a entenderse como una amplitud de probabilidad.
+[Material de estudio](https://ocw.mit.edu/courses/5-73-quantum-mechanics-i-fall-2018/pages/lecture-notes/).
 
-Desde entonces, la ecuación de Schrödinger es una herramienta central en física atómica, química cuántica, materia condensada, nanotecnología y teoría cuántica elemental.
+Partícula libre no relativista en un anillo periódico, con Hamiltoniano independiente del tiempo. Las gráficas de partes real e imaginaria no son densidades. El experimento no resuelve cualquier potencial ni representa colapso de medida.
+
+La fecha de creación del catálogo procede del archivo original; el año científico y la fecha de revisión tienen funciones diferentes.

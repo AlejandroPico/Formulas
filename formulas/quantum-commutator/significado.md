@@ -1,9 +1,11 @@
 # Significado
 
-El conmutador mide si dos operaciones pueden intercambiarse sin cambiar el resultado. Para dos operadores `A` y `B`, el conmutador se define como `AB - BA`. Si vale cero, el orden no importa. Si no vale cero, el orden de aplicación cambia el estado final.
+A=σx y B=cosθ σx+sinθ σy. Multiplicar en distinto orden genera una diferencia puramente imaginaria proporcional a σz.
 
-En mecánica cuántica, los observables se representan mediante operadores. Que dos observables no conmuten significa que no pueden tratarse como magnitudes clásicas independientes con valores simultáneamente definidos de forma arbitraria.
+## Qué conserva y qué cambia
 
-El caso más importante es el conmutador entre posición y momento: `[x,p]=i hbar`. Esta relación está en la base del principio de incertidumbre y de la estructura algebraica de la teoría cuántica.
+Multiplica las matrices en orden escrito. Las identidades σxσy=iσz y σyσx=−iσz producen términos opuestos. El producto común cosθ I se cancela al restar AB−BA y queda 2i sinθ σz. Si θ=0, ambos observables coinciden y conmutan; a θ=90° la diferencia tiene norma espectral dos. Para A,B hermíticos, el conmutador es antihermítico.
 
-El simulador compara dos órdenes: aplicar primero posición y luego momento, o aplicar primero momento y luego posición. La diferencia visual entre las curvas representa el residuo algebraico del conmutador.
+## Primera predicción
+
+A=σx y B=cosθ σx+sinθ σy. Multiplicar en distinto orden genera una diferencia puramente imaginaria proporcional a σz. Calcula coeficiente de iσz con los datos iniciales. Coeficiente de iσz=1 . [A,B]=AB−BA=2i sinθ σz.

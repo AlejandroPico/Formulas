@@ -6,41 +6,94 @@
   "level": "Universidad intermedia",
   "color": "#a855f7",
   "formula": [
-    "∂u/∂t=D∂²u/∂x²+ru(1−u)",
-    "v_min=2√(Dr)"
+    "\\partial_tu=D\\partial_x^2u+ru(1-u)",
+    "u(x,t)=\\left[1+e^{\\sqrt{r/(6D)}(x-ct)}\\right]^{-2},\\quad c=5\\sqrt{\\frac{Dr}{6}}",
+    "c_{\\min}=2\\sqrt{Dr}"
   ],
-  "summary": "Modelo de frente viajero que combina difusión espacial y crecimiento logístico local.",
-  "sim": "scripts/bio-fisher-kpp-sim.js?v=20260705a",
+  "summary": "Solución viajera exacta particular de Fisher-KPP en dominio infinito: u=[1+exp(√(r/6D)(x−ct))]⁻², c=5√(Dr/6). No representa todos los frentes ni la velocidad mínima.",
   "folder": "formulas/fisher-kpp-diffusion-equation",
   "source": "files",
   "author": "",
   "formulaText": [
-    "Modelo de frente viajero que combina difusión espacial y crecimiento logístico local."
+    "Solución viajera exacta particular de Fisher-KPP en dominio infinito: u=[1+exp(√(r/6D)(x−ct))]⁻², c=5√(Dr/6). No representa todos los frentes ni la velocidad mínima."
   ],
   "tags": [
-    "biologia matematica",
-    "biofisica",
-    "farmacologia",
-    "ecologia",
-    "microbiologia",
-    "epidemiologia"
+    "reacción difusión",
+    "frentes viajeros",
+    "crecimiento logístico",
+    "ecuaciones diferenciales"
   ],
   "prerequisites": [
-    "calculo",
-    "ecuaciones diferenciales",
-    "logaritmos",
-    "biologia general",
-    "quimica fisica"
+    "interpretar tasas",
+    "balance de magnitudes",
+    "funciones y unidades"
   ],
   "learningPath": [
-    "formula",
-    "significado",
-    "simulacion"
+    "Identificar magnitudes",
+    "Comprobar hipótesis",
+    "Predicción",
+    "Exploración",
+    "Explicación del resultado"
   ],
-  "units": "Unidades didácticas normalizadas.",
-  "dimensions": "Ver ficha.",
+  "units": "u es fracción de capacidad. D tiene longitud²/tiempo, r tiempo⁻¹ y c longitud/tiempo. El exponente a(x−ct) es adimensional. Los controles usan unidades reducidas; no se atribuye una difusión real a una especie determinada.",
+  "dimensions": "u es fracción de capacidad. D tiene longitud²/tiempo, r tiempo⁻¹ y c longitud/tiempo. El exponente a(x−ct) es adimensional. Los controles usan unidades reducidas; no se atribuye una difusión real a una especie determinada.",
   "symbols": [],
   "legacySource": "runtime-batch-migration",
   "originalSource": "scripts/latest-formula-batch-23.js",
-  "createdAt": "2026-07-06"
+  "createdAt": "2026-07-06",
+  "simulation": "fisher-kpp-diffusion-equation",
+  "simulatorVersion": 2,
+  "symbolGlossary": {
+    "1": "Uno: unidad numérica en la relación.",
+    "2": "Dos: factor numérico; como exponente significa el cuadrado.",
+    "=": "Igualdad: ambos lados tienen el mismo valor matemático.",
+    "+": "Suma de los términos indicados.",
+    "−": "Resta o signo negativo del término siguiente.",
+    ",": "Separación de expresiones o condiciones.",
+    "(": "Abre un grupo de términos que se opera como una sola base.",
+    ")": "Cierra el grupo de términos.",
+    "[": "Abre un grupo; en química indica concentración de la especie.",
+    "]": "Cierra un grupo; en química cierra la especie cuya concentración se usa.",
+    "e": "Número de Euler, base de la exponencial natural.",
+    "∂": "Derivada parcial respecto de la variable indicada.",
+    "^2": "Al cuadrado: multiplica toda la base por sí misma.",
+    "_1": "Índice 1: primera componente, primer paso o primer valor ordenado.",
+    "_2": "Índice 2: segunda componente o nivel escrito.",
+    "structure:msqrt": "Raíz cuadrada no negativa: recupera la magnitud cuyo cuadrado es el argumento. Respeta el dominio real de esta ficha.",
+    "structure:mfrac": "Cociente: divide el numerador entre el denominador completo; sus unidades deben ser compatibles con la magnitud resultante.",
+    "structure:msup": "Exponente: una potencia actúa sobre toda la base. Una marca de derivada, adjunto o etiqueta conserva el significado propio definido en esta ficha.",
+    "structure:msub": "Índice inferior: identifica componente, nivel, condición o estado de la base, sin multiplicarla.",
+    "structure:msubsup": "La base lleva índice inferior y marca superior; cada uno se interpreta con la notación de esta ficha.",
+    "structure:mover": "Barra sobre x: media de datos; sobre un vector indica su vector de medias. La marca de flecha identifica vector.",
+    "structure:munder": "Límite inferior o condición del sumatorio escrito.",
+    "structure:munderover": "Límites del sumatorio: especifican qué valores toma su índice.",
+    "√": "Raíz cuadrada: devuelve la magnitud no negativa cuyo cuadrado es el argumento.",
+    "u": "Densidad relativa normalizada por capacidad de carga.",
+    "D": "Coeficiente de difusión positivo.",
+    "r": "Tasa de crecimiento local positiva.",
+    "x": "Coordenada espacial original.",
+    "t": "Tiempo reducido del frente.",
+    "c": "Velocidad de propagación de esta familia.",
+    "min": "Índice min: velocidad mínima KPP bajo sus hipótesis.",
+    "bold:u": "Densidad relativa normalizada por capacidad de carga.",
+    "_u": "Índice u: Densidad relativa normalizada por capacidad de carga.",
+    "bold:D": "Coeficiente de difusión positivo.",
+    "_D": "Índice D: Coeficiente de difusión positivo.",
+    "bold:r": "Tasa de crecimiento local positiva.",
+    "_r": "Índice r: Tasa de crecimiento local positiva.",
+    "bold:x": "Coordenada espacial original.",
+    "_x": "Índice x: Coordenada espacial original.",
+    "bold:t": "Tiempo reducido del frente.",
+    "_t": "Índice t: Tiempo reducido del frente.",
+    "bold:c": "Velocidad de propagación de esta familia.",
+    "_c": "Índice c: Velocidad de propagación de esta familia.",
+    "bold:min": "Índice min: velocidad mínima KPP bajo sus hipótesis.",
+    "_min": "Índice min: Índice min: velocidad mínima KPP bajo sus hipótesis."
+  },
+  "formulaGlossaries": [
+    {},
+    {},
+    {}
+  ],
+  "applications": "Comparar el resultado con sus hipótesis y explicar qué parámetro domina el cambio. El laboratorio incluye predicción, ajuste de un objetivo, interpretación del modelo y una nueva comprobación numérica."
 }

@@ -6,35 +6,102 @@
   "level": "Universidad inicial",
   "color": "#10b981",
   "formula": [
-    "L(θ)=∏f(xᵢ;θ)",
-    "θ̂=argmaxθ log L(θ)"
+    "\\widehat\\theta=\\underset\\theta{\\operatorname{argmax}}\\,L(\\theta;x),\\qquad L(\\theta;x)=\\prod_{i=1}^np(x_i\\mid\\theta)",
+    "\\widehat p=\\frac kn,\\qquad \\ell(p)=k\\ln p+(n-k)\\ln(1-p)"
   ],
-  "summary": "Selecciona el parámetro que hace más probable la muestra observada.",
+  "summary": "Ensayos Bernoulli independientes: k éxitos en n observaciones. El estimador maximiza la verosimilitud de los datos observados, sin tratar el parámetro como aleatorio.",
   "method": "mle",
   "source": "files",
   "author": "",
   "formulaText": [
-    "Selecciona el parámetro que hace más probable la muestra observada."
+    "Ensayos Bernoulli independientes: k éxitos en n observaciones. El estimador maximiza la verosimilitud de los datos observados, sin tratar el parámetro como aleatorio."
   ],
   "tags": [
-    "estadística",
-    "inferencia",
-    "datos"
+    "máxima verosimilitud",
+    "bernoulli",
+    "estimación",
+    "log-verosimilitud"
   ],
   "prerequisites": [
-    "estadistica descriptiva",
-    "probabilidad"
+    "probabilidad",
+    "logaritmos",
+    "distribuciones"
   ],
   "learningPath": [
-    "formula",
-    "significado",
-    "simulacion"
+    "Identificar magnitudes",
+    "Comprobar hipótesis",
+    "Predicción",
+    "Exploración",
+    "Explicación del resultado"
   ],
-  "units": "Ver unidades.",
-  "dimensions": "Ver unidades.",
+  "units": "k,n son conteos sin unidades; p es probabilidad adimensional. ℓ utiliza logaritmos naturales y se expresa sin el factor combinatorio constante respecto a p. Para densidades continuas, las unidades y referencias de la verosimilitud exigen cuidado al comparar modelos.",
+  "dimensions": "k,n son conteos sin unidades; p es probabilidad adimensional. ℓ utiliza logaritmos naturales y se expresa sin el factor combinatorio constante respecto a p. Para densidades continuas, las unidades y referencias de la verosimilitud exigen cuidado al comparar modelos.",
   "symbols": [],
   "folder": "formulas/maximum-likelihood-estimation",
   "legacySource": "runtime-batch-migration",
   "originalSource": "scripts/latest-formula-batch-7.js",
-  "createdAt": "2026-07-04"
+  "createdAt": "2026-07-04",
+  "simulation": "maximum-likelihood-estimation",
+  "simulatorVersion": 2,
+  "symbolGlossary": {
+    "1": "Uno: unidad numérica en la relación.",
+    "=": "Igualdad: ambos lados tienen el mismo valor matemático.",
+    "+": "Suma de los términos indicados.",
+    "−": "Resta o signo negativo del término siguiente.",
+    ",": "Separación de expresiones o condiciones.",
+    "(": "Abre un grupo de términos que se opera como una sola base.",
+    ")": "Cierra el grupo de términos.",
+    "ln": "Logaritmo natural, base e; su argumento debe ser positivo y adimensional.",
+    "_1": "Índice 1: primera componente, primer paso o primer valor ordenado.",
+    "structure:msqrt": "Raíz cuadrada no negativa: recupera la magnitud cuyo cuadrado es el argumento. Respeta el dominio real de esta ficha.",
+    "structure:mfrac": "Cociente: divide el numerador entre el denominador completo; sus unidades deben ser compatibles con la magnitud resultante.",
+    "structure:msup": "Exponente: una potencia actúa sobre toda la base. Una marca de derivada, adjunto o etiqueta conserva el significado propio definido en esta ficha.",
+    "structure:msub": "Índice inferior: identifica componente, nivel, condición o estado de la base, sin multiplicarla.",
+    "structure:msubsup": "La base lleva índice inferior y marca superior; cada uno se interpreta con la notación de esta ficha.",
+    "structure:mover": "Sombrero: marca un estimador, distinto de un parámetro desconocido fijo.",
+    "structure:munder": "Límite inferior o condición del sumatorio escrito.",
+    "structure:munderover": "Límites del sumatorio: especifican qué valores toma su índice.",
+    ";": "Separa argumentos o grupos de condiciones.",
+    "θ": "Parámetro o vector de parámetros del modelo.",
+    "L": "Verosimilitud de los datos observados como función del parámetro.",
+    "x": "Datos observados; xi es una observación.",
+    "i": "Índice de observación.",
+    "n": "Número de ensayos independientes.",
+    "p": "Probabilidad Bernoulli; en la primera expresión p(xi|θ) es ley del dato.",
+    "k": "Número observado de éxitos.",
+    "ℓ": "Log-verosimilitud sin constante combinatoria.",
+    "argmax": "Conjunto o valor de parámetro que maximiza la función indicada.",
+    "∏": "Producto sobre todas las observaciones independientes.",
+    "∣": "Condicionado al parámetro indicado.",
+    "ˆ": "Sombrero: estimador del parámetro construido con la muestra.",
+    "bold:θ": "Parámetro o vector de parámetros del modelo.",
+    "_θ": "Índice θ: Parámetro o vector de parámetros del modelo.",
+    "bold:L": "Verosimilitud de los datos observados como función del parámetro.",
+    "_L": "Índice L: Verosimilitud de los datos observados como función del parámetro.",
+    "bold:x": "Datos observados; xi es una observación.",
+    "_x": "Índice x: Datos observados; xi es una observación.",
+    "bold:i": "Índice de observación.",
+    "_i": "Índice i: Índice de observación.",
+    "bold:n": "Número de ensayos independientes.",
+    "_n": "Índice n: Número de ensayos independientes.",
+    "bold:p": "Probabilidad Bernoulli; en la primera expresión p(xi|θ) es ley del dato.",
+    "_p": "Índice p: Probabilidad Bernoulli; en la primera expresión p(xi|θ) es ley del dato.",
+    "bold:k": "Número observado de éxitos.",
+    "_k": "Índice k: Número observado de éxitos.",
+    "bold:ℓ": "Log-verosimilitud sin constante combinatoria.",
+    "_ℓ": "Índice ℓ: Log-verosimilitud sin constante combinatoria.",
+    "bold:argmax": "Conjunto o valor de parámetro que maximiza la función indicada.",
+    "_argmax": "Índice argmax: Conjunto o valor de parámetro que maximiza la función indicada.",
+    "bold:∏": "Producto sobre todas las observaciones independientes.",
+    "_∏": "Índice ∏: Producto sobre todas las observaciones independientes.",
+    "bold:∣": "Condicionado al parámetro indicado.",
+    "_∣": "Índice ∣: Condicionado al parámetro indicado.",
+    "bold:ˆ": "Sombrero: estimador del parámetro construido con la muestra.",
+    "_ˆ": "Índice ˆ: Sombrero: estimador del parámetro construido con la muestra."
+  },
+  "formulaGlossaries": [
+    {},
+    {}
+  ],
+  "applications": "Comparar predicciones con sus unidades, su base de logaritmo y el conjunto de datos de referencia. Los cuatro retos separan cálculo, ajuste, interpretación y comprobación; las tres vistas permiten identificar qué cambia y qué permanece."
 }

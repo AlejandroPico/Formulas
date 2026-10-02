@@ -6,36 +6,101 @@
   "level": "Universidad inicial",
   "color": "#10b981",
   "formula": [
-    "IC=x̄±zα/2·(σ/√n)"
+    "IC_{1-\\alpha}=\\left[\\overline x-z_{1-\\alpha/2}\\frac\\sigma{\\sqrt n},\\ \\overline x+z_{1-\\alpha/2}\\frac\\sigma{\\sqrt n}\\right]",
+    "\\Pr_\\mu\\!\\left(\\mu\\in IC_{1-\\alpha}\\right)=1-\\alpha"
   ],
-  "summary": "Rango de valores compatibles con una estimación bajo un nivel de confianza.",
+  "summary": "Intervalo bilateral para media normal con σ poblacional conocida. Muestras ilustrativas reproducibles; la cobertura se refiere al procedimiento, no a una probabilidad posterior de μ.",
   "concept": "ci",
   "source": "files",
   "author": "",
   "formulaText": [
-    "Rango de valores compatibles con una estimación bajo un nivel de confianza."
+    "Intervalo bilateral para media normal con σ poblacional conocida. Muestras ilustrativas reproducibles; la cobertura se refiere al procedimiento, no a una probabilidad posterior de μ."
   ],
   "tags": [
-    "estadística",
-    "inferencia",
-    "modelos",
-    "inferencia bayesiana",
-    "información"
+    "intervalos de confianza",
+    "cobertura",
+    "media",
+    "distribución normal"
   ],
   "prerequisites": [
     "probabilidad",
-    "estadistica descriptiva"
+    "logaritmos",
+    "distribuciones"
   ],
   "learningPath": [
-    "formula",
-    "significado",
-    "simulacion"
+    "Identificar magnitudes",
+    "Comprobar hipótesis",
+    "Predicción",
+    "Exploración",
+    "Explicación del resultado"
   ],
-  "units": "Ver unidades.",
-  "dimensions": "Ver unidades.",
+  "units": "Media, σ y extremos tienen la misma unidad de la variable de datos, fijada como unidad de referencia. α, cobertura y z son adimensionales. n es conteo positivo. La semianchura escala como σ/√n; cuadruplicar n reduce a la mitad el margen con igual cobertura.",
+  "dimensions": "Media, σ y extremos tienen la misma unidad de la variable de datos, fijada como unidad de referencia. α, cobertura y z son adimensionales. n es conteo positivo. La semianchura escala como σ/√n; cuadruplicar n reduce a la mitad el margen con igual cobertura.",
   "symbols": [],
   "folder": "formulas/confidence-interval",
   "legacySource": "runtime-batch-migration",
   "originalSource": "scripts/latest-formula-batch-8.js",
-  "createdAt": "2026-07-05"
+  "createdAt": "2026-07-05",
+  "simulation": "confidence-interval",
+  "simulatorVersion": 2,
+  "symbolGlossary": {
+    "1": "Uno: unidad numérica en la relación.",
+    "2": "Dos: factor numérico; como exponente significa el cuadrado.",
+    "=": "Igualdad: ambos lados tienen el mismo valor matemático.",
+    "+": "Suma de los términos indicados.",
+    "−": "Resta o signo negativo del término siguiente.",
+    ",": "Separación de expresiones o condiciones.",
+    "(": "Abre un grupo de términos que se opera como una sola base.",
+    ")": "Cierra el grupo de términos.",
+    "[": "Abre un grupo; en química indica concentración de la especie.",
+    "]": "Cierra un grupo; en química cierra la especie cuya concentración se usa.",
+    "∈": "Pertenencia: el objeto es elemento del conjunto escrito.",
+    "^2": "Al cuadrado: multiplica toda la base por sí misma.",
+    "_1": "Índice 1: primera componente, primer paso o primer valor ordenado.",
+    "_2": "Índice 2: segunda componente o nivel escrito.",
+    "structure:msqrt": "Raíz cuadrada no negativa: recupera la magnitud cuyo cuadrado es el argumento. Respeta el dominio real de esta ficha.",
+    "structure:mfrac": "Cociente: divide el numerador entre el denominador completo; sus unidades deben ser compatibles con la magnitud resultante.",
+    "structure:msup": "Exponente: una potencia actúa sobre toda la base. Una marca de derivada, adjunto o etiqueta conserva el significado propio definido en esta ficha.",
+    "structure:msub": "Índice inferior: identifica componente, nivel, condición o estado de la base, sin multiplicarla.",
+    "structure:msubsup": "La base lleva índice inferior y marca superior; cada uno se interpreta con la notación de esta ficha.",
+    "structure:mover": "Barra sobre x: media muestral.",
+    "structure:munder": "Límite inferior o condición del sumatorio escrito.",
+    "structure:munderover": "Límites del sumatorio: especifican qué valores toma su índice.",
+    "√": "Raíz cuadrada: devuelve la magnitud no negativa cuyo cuadrado es el argumento.",
+    "I": "Parte de IC: intervalo de confianza.",
+    "C": "Parte de IC: intervalo de confianza.",
+    "x": "Media observada cuando lleva barra; dato individual sin barra.",
+    "z": "Cuantil de la normal estándar que deja probabilidad 1−α/2 a su izquierda.",
+    "σ": "Desviación poblacional conocida, no estimada desde la muestra.",
+    "n": "Tamaño muestral positivo.",
+    "α": "Probabilidad nominal no cubierta por el procedimiento bilateral.",
+    "μ": "Media poblacional fija.",
+    "Pr": "Probabilidad bajo repetición de muestras del modelo.",
+    "–": "Barra: promedio muestral de datos.",
+    "bold:I": "Parte de IC: intervalo de confianza.",
+    "_I": "Índice I: Parte de IC: intervalo de confianza.",
+    "bold:C": "Parte de IC: intervalo de confianza.",
+    "_C": "Índice C: Parte de IC: intervalo de confianza.",
+    "bold:x": "Media observada cuando lleva barra; dato individual sin barra.",
+    "_x": "Índice x: Media observada cuando lleva barra; dato individual sin barra.",
+    "bold:z": "Cuantil de la normal estándar que deja probabilidad 1−α/2 a su izquierda.",
+    "_z": "Índice z: Cuantil de la normal estándar que deja probabilidad 1−α/2 a su izquierda.",
+    "bold:σ": "Desviación poblacional conocida, no estimada desde la muestra.",
+    "_σ": "Índice σ: Desviación poblacional conocida, no estimada desde la muestra.",
+    "bold:n": "Tamaño muestral positivo.",
+    "_n": "Índice n: Tamaño muestral positivo.",
+    "bold:α": "Probabilidad nominal no cubierta por el procedimiento bilateral.",
+    "_α": "Índice α: Probabilidad nominal no cubierta por el procedimiento bilateral.",
+    "bold:μ": "Media poblacional fija.",
+    "_μ": "Índice μ: Media poblacional fija.",
+    "bold:Pr": "Probabilidad bajo repetición de muestras del modelo.",
+    "_Pr": "Índice Pr: Probabilidad bajo repetición de muestras del modelo.",
+    "bold:–": "Barra: promedio muestral de datos.",
+    "_–": "Índice –: Barra: promedio muestral de datos."
+  },
+  "formulaGlossaries": [
+    {},
+    {}
+  ],
+  "applications": "Comparar predicciones con sus unidades, su base de logaritmo y el conjunto de datos de referencia. Los cuatro retos separan cálculo, ajuste, interpretación y comprobación; las tres vistas permiten identificar qué cambia y qué permanece."
 }

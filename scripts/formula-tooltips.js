@@ -106,7 +106,7 @@ function buildSymbolZones(formulaBox, formulaRect, glossary, equation) {
       description = local[`indexed:${symbol}`] || equation?.symbolGlossary?.[`indexed:${symbol}`] || description;
     }
     if (symbol === '2' && parentType === 'msup' && baseNode !== node) description = local['^2'] || equation?.symbolGlossary?.['^2'] || 'Al cuadrado: multiplica la base por sí misma. Para una longitud, el resultado representa un área.';
-    if (parentType === 'msub' && baseNode !== node) description = local[`_${base}:${symbol}`] || local[`_${symbol}`] || equation?.symbolGlossary?.[`_${symbol}`] || `Subíndice ${symbol}: identifica un punto o componente; no multiplica la variable.`;
+    if (parentType === 'msub' && baseNode !== node) description = local[`_${base}:${symbol}`] || local[`_${symbol}`] || equation?.symbolGlossary?.[`_${base}:${symbol}`] || equation?.symbolGlossary?.[`_${symbol}`] || `Subíndice ${symbol}: identifica un punto o componente; no multiplica la variable.`;
     if (!symbol || !description) return [];
     const rect = node.getBoundingClientRect();
     if (!isUsableRect(rect)) return [];
@@ -221,13 +221,16 @@ function isUsableRect(rect) {
 }
 
 function toLocalRect(rect, parentRect, formulaBox, padding = 6) {
-  const left = rect.left - parentRect.left + formulaBox.scrollLeft - padding;
-  const top = rect.top - parentRect.top + formulaBox.scrollTop - padding;
+  const width = Math.max(12, rect.width + padding * 2);
+  const height = Math.max(14, rect.height + padding * 2);
+  // Keep the minimum hit target centred on thin glyphs (fences, indices).
+  const left = rect.left + rect.width / 2 - parentRect.left + formulaBox.scrollLeft - width / 2;
+  const top = rect.top + rect.height / 2 - parentRect.top + formulaBox.scrollTop - height / 2;
   return {
     left: Math.max(0, left),
     top: Math.max(0, top),
-    width: Math.max(12, rect.width + padding * 2),
-    height: Math.max(14, rect.height + padding * 2)
+    width,
+    height
   };
 }
 

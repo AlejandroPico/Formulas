@@ -1,27 +1,26 @@
-# Ficha
+# Retropropagación
 
-## Identificación
+Red escalar con una neurona tanh y salida lineal: z=wx+b, h=tanh(z), ŷ=vh, L=(ŷ−y)²/2. Se calcula el gradiente exacto por regla de la cadena.
 
-- **Nombre:** Retropropagación
-- **Autores asociados:** Rumelhart, Hinton y Williams
-- **Año:** 1986
-- **Área:** aprendizaje automático
-- **Nivel:** universidad
-- **Tipo:** algoritmo de cálculo de gradientes
+## Magnitudes y notación
 
-## Variables
+| Símbolo | Interpretación |
+| :-- | :-- |
+| z | Preactivación de la neurona. |
+| w | Peso de entrada. |
+| x | Entrada de la red. |
+| b | Sesgo de la neurona. |
+| h | Activación tanh, no constante de Planck. |
+| v | Peso de salida. |
+| y | Objetivo; ŷ es salida calculada. |
+| L | Mitad del error cuadrático. |
+| tanh | Tangente hiperbólica. |
+| ˆ | Marca la predicción. |
 
-- `L`: función de pérdida.
-- `w`: peso entrenable.
-- `y_hat`: predicción.
-- `h`: activación oculta.
-- `delta`: término de error propagado.
-- `W`: matriz de pesos.
+## Condiciones
 
-## Lectura del simulador
+Red educativa escalar y diferenciable; no pretende entrenar un gran modelo. Calcular gradientes y actualizar pesos son operaciones distintas. Tanh puede saturar y disminuir gradientes; el gradiente tiene unidad de pérdida por unidad del parámetro.
 
-Los nodos representan entrada, capa oculta y salida. Las líneas muestran conexiones. El pulso rojo se mueve hacia atrás para representar el flujo de gradiente. La lectura calcula gradientes por regla de la cadena.
+## Unidades
 
-## Nota
-
-La animación es conceptual y usa derivadas locales fijas para simplificar. En redes reales los gradientes dependen de datos, pesos, activaciones y función de pérdida.
+Variables numéricas en unidades de referencia; los índices y probabilidades son adimensionales. Una distancia conserva la escala de las características; su cuadrado tiene escala cuadrática.

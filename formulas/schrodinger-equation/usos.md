@@ -1,11 +1,11 @@
 # Usos
 
-- Cálculo de estados ligados y niveles de energía.
-- Átomos, moléculas y química cuántica.
-- Pozos, barreras y efecto túnel.
-- Oscilador armónico cuántico.
-- Modelos de electrones en sólidos y semiconductores.
-- Paquetes de onda y dispersión cuántica.
-- Enseñanza de amplitud, fase y probabilidad.
+Anticipar el resultado, cambiar una hipótesis cada vez y comprobarlo en las tres vistas del laboratorio. Separar las magnitudes que se conservan de las que cambian, y verificar el dominio antes de interpretar una figura.
 
-La ecuación es no relativista. Para partículas relativistas o campos cuánticos se emplean ecuaciones y marcos más generales, como Dirac o la teoría cuántica de campos.
+## Del experimento al contexto
+
+Superposición exacta de dos ondas en un anillo de longitud 2π, con ħ=m=1. Cambian fase e interferencia, mientras norma y energía media se conservan.
+
+## Condiciones antes de aplicar
+
+Partícula libre no relativista en un anillo periódico, con Hamiltoniano independiente del tiempo. Las gráficas de partes real e imaginaria no son densidades. El experimento no resuelve cualquier potencial ni representa colapso de medida.

@@ -1,9 +1,11 @@
 # Significado
 
-La ecuación de Klein-Gordon es una ecuación relativista para campos escalares, es decir, campos sin dirección interna de espín. Fue uno de los primeros intentos de combinar mecánica cuántica con la relación relativista entre energía, momento y masa.
+Dos modos exactos de frecuencia positiva de un campo libre 1D. La forma real del campo no es una densidad de probabilidad; su dispersión respeta relatividad.
 
-A diferencia de la ecuación de Schrödinger, contiene segundas derivadas temporales y espaciales de forma simétrica relativista. Su estructura está conectada con la relación `E² = p²c² + m²c⁴`.
+## Qué conserva y qué cambia
 
-El término de masa introduce una frecuencia propia del campo. Cuando la masa es cero, la onda se comporta como un campo no masivo ideal; cuando la masa aumenta, cambian la dispersión y la velocidad de grupo.
+Sustituye un modo exp[i(kx−ωt)] en la ecuación libre. Las derivadas aportan −ω² y −k², dejando la relación relativista de dispersión. La derivada dω/dk es la velocidad de grupo, menor o igual a c. Una combinación lineal de dos modos con frecuencias positivas sigue siendo solución exacta. Su batido visual ayuda a separar velocidad de cresta y velocidad de modulación.
 
-El simulador muestra una onda relativista escalar. Los controles modifican masa y número de onda. La lectura compara frecuencia, velocidad de fase visual y velocidad de grupo visual.
+## Primera predicción
+
+Dos modos exactos de frecuencia positiva de un campo libre 1D. La forma real del campo no es una densidad de probabilidad; su dispersión respeta relatividad. Calcula frecuencia ω con los datos iniciales. Frecuencia ω=1,4142 . ω²=k²+m² en ħ=c=1; vg=k/ω y vf=ω/k.

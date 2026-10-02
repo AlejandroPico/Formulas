@@ -6,48 +6,87 @@
   "level": "Universidad inicial",
   "color": "#2563eb",
   "formula": [
-    "C+Ke^{-rT}=P+S_0"
+    "C-P=Se^{-qT}-Ke^{-rT}",
+    "S_T+\\max(K-S_T,0)=K+\\max(S_T-K,0)"
   ],
-  "summary": "Vincula call, put, subyacente y bono sin riesgo para impedir arbitraje.",
-  "sim": "scripts/finance-put-call-parity-sim.js?v=20260705a",
-  "k": "parity",
+  "summary": "Opciones europeas call y put de mismo subyacente, strike y vencimiento, con dividendo continuo q. Se comparan carteras replicantes en un mercado ideal sin fricciones.",
   "folder": "formulas/put-call-parity-no-arbitrage",
   "source": "files",
   "formulaText": [
-    "C+Ke^{-rT}=P+S_0",
-    "Vincula call, put, subyacente y bono sin riesgo para impedir arbitraje."
+    "Opciones europeas call y put de mismo subyacente, strike y vencimiento, con dividendo continuo q. Se comparan carteras replicantes en un mercado ideal sin fricciones."
   ],
   "tags": [
-    "finanzas",
-    "valor temporal del dinero",
-    "derivados",
-    "renta fija",
-    "capm",
-    "sharpe",
-    "npv",
-    "irr",
-    "duracion",
-    "convexidad"
+    "paridad put call",
+    "no arbitraje",
+    "opciones europeas",
+    "replicación"
   ],
   "prerequisites": [
-    "algebra",
-    "logaritmos",
-    "probabilidad",
-    "estadistica",
-    "finanzas basicas",
-    "renta fija"
+    "potencias",
+    "tasas y períodos",
+    "derivadas"
   ],
   "learningPath": [
-    "formula",
-    "significado",
-    "historia",
-    "derivacion",
-    "simulacion"
+    "Identificar magnitudes",
+    "Comprobar hipótesis",
+    "Predicción",
+    "Exploración",
+    "Explicación del resultado"
   ],
-  "units": "Unidades financieras normalizadas.",
-  "dimensions": "Ver ficha.",
+  "units": "S,K,C,P en la misma unidad monetaria. r,q como tasas continuas anuales en fracción y T en años. El control porcentaje se divide por 100 antes de exponenciar. ST es valor al vencimiento y S valor actual. Los descuentos no usan tasa efectiva discreta del módulo de bonos.",
+  "dimensions": "S,K,C,P en la misma unidad monetaria. r,q como tasas continuas anuales en fracción y T en años. El control porcentaje se divide por 100 antes de exponenciar. ST es valor al vencimiento y S valor actual. Los descuentos no usan tasa efectiva discreta del módulo de bonos.",
   "symbols": [],
   "legacySource": "runtime-batch-migration",
   "originalSource": "scripts/latest-formula-batch-31.js",
-  "createdAt": "2026-07-07"
+  "createdAt": "2026-07-07",
+  "simulation": "put-call-parity-no-arbitrage",
+  "simulatorVersion": 2,
+  "symbolGlossary": {
+    "0": "Cero: valor nulo o referencia indicada.",
+    "=": "Igualdad: ambos lados tienen el mismo valor matemático.",
+    "+": "Suma de los términos indicados.",
+    "−": "Resta o signo negativo del término siguiente.",
+    ",": "Separación de expresiones o condiciones.",
+    "(": "Abre un grupo de términos que se opera como una sola base.",
+    ")": "Cierra el grupo de términos.",
+    "e": "Número de Euler, base de la exponencial natural.",
+    "_0": "Índice 0: valor de reposo, inicial o de referencia según la magnitud.",
+    "structure:msqrt": "Raíz cuadrada no negativa: recupera la magnitud cuyo cuadrado es el argumento. Respeta el dominio real de esta ficha.",
+    "structure:mfrac": "Cociente: divide el numerador entre el denominador completo; sus unidades deben ser compatibles con la magnitud resultante.",
+    "structure:msup": "Exponente: una potencia actúa sobre toda la base. Una marca de derivada, adjunto o etiqueta conserva el significado propio definido en esta ficha.",
+    "structure:msub": "Índice inferior: identifica componente, nivel, condición o estado de la base, sin multiplicarla.",
+    "structure:msubsup": "La base lleva índice inferior y marca superior; cada uno se interpreta con la notación de esta ficha.",
+    "structure:mover": "Barra sobre x: media de datos; sobre un vector indica su vector de medias. La marca de flecha identifica vector.",
+    "structure:munder": "Límite inferior o condición del sumatorio escrito.",
+    "structure:munderover": "Límites del sumatorio: especifican qué valores toma su índice.",
+    "C": "Prima actual de call europea.",
+    "P": "Prima actual de put europea.",
+    "S": "Precio del subyacente hoy; ST es precio al vencimiento.",
+    "K": "Strike común de call y put.",
+    "q": "Rendimiento continuo de dividendos del activo.",
+    "r": "Tipo continuo de descuento.",
+    "T": "Tiempo restante en años; como índice de S indica vencimiento.",
+    "max": "Pago no negativo, elegido como mayor de los dos argumentos.",
+    "bold:C": "Prima actual de call europea.",
+    "_C": "Índice C: Prima actual de call europea.",
+    "bold:P": "Prima actual de put europea.",
+    "_P": "Índice P: Prima actual de put europea.",
+    "bold:S": "Precio del subyacente hoy; ST es precio al vencimiento.",
+    "_S": "Índice S: Precio del subyacente hoy; ST es precio al vencimiento.",
+    "bold:K": "Strike común de call y put.",
+    "_K": "Índice K: Strike común de call y put.",
+    "bold:q": "Rendimiento continuo de dividendos del activo.",
+    "_q": "Índice q: Rendimiento continuo de dividendos del activo.",
+    "bold:r": "Tipo continuo de descuento.",
+    "_r": "Índice r: Tipo continuo de descuento.",
+    "bold:T": "Tiempo restante en años; como índice de S indica vencimiento.",
+    "_T": "Índice T: Tiempo restante en años; como índice de S indica vencimiento.",
+    "bold:max": "Pago no negativo, elegido como mayor de los dos argumentos.",
+    "_max": "Índice max: Pago no negativo, elegido como mayor de los dos argumentos."
+  },
+  "formulaGlossaries": [
+    {},
+    {}
+  ],
+  "applications": "Comparar escenarios hipotéticos bajo las mismas convenciones y explicar sensibilidad y límites. Las cifras son educativas: el simulador no estima datos de mercado actuales ni decide inversiones, producción o consumo reales."
 }

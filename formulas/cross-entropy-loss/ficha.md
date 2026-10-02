@@ -1,24 +1,24 @@
-# Ficha
+# Entropía cruzada
 
-## Identificación
+Entropía cruzada de distribuciones Bernoulli p y q con logaritmos naturales. Se distingue frecuencia objetivo p de probabilidad predicha q.
 
-- **Nombre:** Entropía cruzada
-- **Área:** teoría de la información y aprendizaje automático
-- **Nivel:** universidad inicial
-- **Tipo:** función de pérdida probabilística
+## Magnitudes y notación
 
-## Variables
+| Símbolo | Interpretación |
+| :-- | :-- |
+| H | Entropía o entropía cruzada, según lleve uno o dos argumentos. |
+| p | Distribución objetivo; pi pesa los costes de cada categoría. |
+| q | Distribución propuesta o probabilidad predicha. |
+| i | Índice de categoría. |
+| D | Divergencia KL, exceso de entropía cruzada. |
+| K | Parte de KL: Kullback. |
+| L | Parte de KL: Leibler. |
+| ‖ | Separa distribuciones en una divergencia dirigida, no norma de vector. |
 
-- `p_i`: probabilidad objetivo.
-- `q_i`: probabilidad predicha.
-- `y_i`: etiqueta real.
-- `y_hat_i`: probabilidad estimada.
-- `L`: pérdida.
+## Condiciones
 
-## Lectura del simulador
+Distribuciones normalizadas en el mismo soporte, con q positiva donde p es positiva. Los controles limitan q a [0,01,0,99]; p puede ser determinista. La expresión es pérdida media de distribución, no una suma sin dividir por el número de ejemplos. Aquí se usan logaritmos naturales.
 
-La curva roja representa `-ln(y_hat)` para la clase correcta. El punto móvil marca la predicción actual. Cuanto más cerca de cero esté la confianza correcta, mayor será la pérdida.
+## Unidades
 
-## Nota
-
-En redes neuronales multiclase suele combinarse con softmax. En la práctica se implementa de forma numéricamente estable usando logits.
+Probabilidades y pérdida son adimensionales. La base natural produce nats por observación; dividir por ln2 produce bits. p representa frecuencia objetivo y q probabilidad predicha, con funciones diferentes. No se confunde con una métrica simétrica de semejanza.

@@ -6,42 +6,73 @@
   "level": "Universidad inicial",
   "color": "#ec4899",
   "formula": [
-    "TF-IDF(t,d)=TF(t,d)·IDF(t)",
-    "IDF(t)=log(N/DF(t))"
+    "w_{t,d}=tf_{t,d}\\,idf_t,\\qquad idf_t=\\ln\\frac N{df_t}"
   ],
-  "summary": "Pondera un término por ser frecuente en un documento pero raro en el corpus.",
-  "sim": "scripts/ml-tfidf-sim.js?v=20260705a",
-  "k": "tfidf",
+  "summary": "TF-IDF clásico con TF como conteo bruto e IDF=ln(N/df). Un mismo término repetido en pocos documentos recibe un peso mayor; no se aplica suavizado ni normalización de longitud.",
   "folder": "formulas/tf-idf-term-frequency-inverse-document-frequency",
   "source": "files",
   "formulaText": [
-    "Pondera un término por ser frecuente en un documento pero raro en el corpus."
+    "TF-IDF clásico con TF como conteo bruto e IDF=ln(N/df). Un mismo término repetido en pocos documentos recibe un peso mayor; no se aplica suavizado ni normalización de longitud."
   ],
   "tags": [
-    "aprendizaje automático",
-    "nlp",
-    "teoria de la informacion",
-    "normalizacion",
-    "funciones de perdida"
+    "tf idf",
+    "recuperación de información",
+    "frecuencia documental",
+    "ponderación"
   ],
   "prerequisites": [
     "probabilidad",
     "logaritmos",
-    "estadistica",
-    "machine learning",
-    "redes neuronales"
+    "distribuciones"
   ],
   "learningPath": [
-    "formula",
-    "significado",
-    "historia",
-    "derivacion",
-    "simulacion"
+    "Identificar magnitudes",
+    "Comprobar hipótesis",
+    "Predicción",
+    "Exploración",
+    "Explicación del resultado"
   ],
-  "units": "Unidades didácticas normalizadas.",
-  "dimensions": "Ver ficha.",
+  "units": "TF,df,N son conteos; IDF y peso son adimensionales. Se fija logaritmo natural, que cambia escala frente a otras bases. df cuenta documentos y TF apariciones, con denominadores y papeles diferentes. No se usa una fórmula de librería cuyo suavizado quede implícito.",
+  "dimensions": "TF,df,N son conteos; IDF y peso son adimensionales. Se fija logaritmo natural, que cambia escala frente a otras bases. df cuenta documentos y TF apariciones, con denominadores y papeles diferentes. No se usa una fórmula de librería cuyo suavizado quede implícito.",
   "symbols": [],
   "legacySource": "runtime-batch-migration",
   "originalSource": "scripts/latest-formula-batch-25.js",
-  "createdAt": "2026-07-06"
+  "createdAt": "2026-07-06",
+  "simulation": "tf-idf-term-frequency-inverse-document-frequency",
+  "simulatorVersion": 2,
+  "symbolGlossary": {
+    "=": "Igualdad: ambos lados tienen el mismo valor matemático.",
+    ",": "Separación de expresiones o condiciones.",
+    "ln": "Logaritmo natural, base e; su argumento debe ser positivo y adimensional.",
+    "structure:msqrt": "Raíz cuadrada no negativa: recupera la magnitud cuyo cuadrado es el argumento. Respeta el dominio real de esta ficha.",
+    "structure:mfrac": "Cociente: divide el numerador entre el denominador completo; sus unidades deben ser compatibles con la magnitud resultante.",
+    "structure:msup": "Exponente: una potencia actúa sobre toda la base. Una marca de derivada, adjunto o etiqueta conserva el significado propio definido en esta ficha.",
+    "structure:msub": "Índice inferior: identifica componente, nivel, condición o estado de la base, sin multiplicarla.",
+    "structure:msubsup": "La base lleva índice inferior y marca superior; cada uno se interpreta con la notación de esta ficha.",
+    "structure:mover": "Barra sobre x: media de datos; sobre un vector indica su vector de medias. La marca de flecha identifica vector.",
+    "structure:munder": "Límite inferior o condición del sumatorio escrito.",
+    "structure:munderover": "Límites del sumatorio: especifican qué valores toma su índice.",
+    "w": "Peso del término t en documento d.",
+    "t": "Índice de término en el corpus.",
+    "d": "Índice de documento.",
+    "f": "Parte de tf o df: frecuencia.",
+    "i": "Parte de idf: inversa de frecuencia documental.",
+    "N": "Cantidad total de documentos del corpus.",
+    "bold:w": "Peso del término t en documento d.",
+    "_w": "Índice w: Peso del término t en documento d.",
+    "bold:t": "Índice de término en el corpus.",
+    "_t": "Índice t: Índice de término en el corpus.",
+    "bold:d": "Índice de documento.",
+    "_d": "Índice d: Índice de documento.",
+    "bold:f": "Parte de tf o df: frecuencia.",
+    "_f": "Índice f: Parte de tf o df: frecuencia.",
+    "bold:i": "Parte de idf: inversa de frecuencia documental.",
+    "_i": "Índice i: Parte de idf: inversa de frecuencia documental.",
+    "bold:N": "Cantidad total de documentos del corpus.",
+    "_N": "Índice N: Cantidad total de documentos del corpus."
+  },
+  "formulaGlossaries": [
+    {}
+  ],
+  "applications": "Comparar predicciones con sus unidades, su base de logaritmo y el conjunto de datos de referencia. Los cuatro retos separan cálculo, ajuste, interpretación y comprobación; las tres vistas permiten identificar qué cambia y qué permanece."
 }

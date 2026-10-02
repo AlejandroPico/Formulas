@@ -1,9 +1,11 @@
 # Significado
 
-El modelo de Black-Scholes estima el precio teórico de una opción europea de compra bajo un conjunto de hipótesis idealizadas.
+Black–Scholes–Merton europeo con volatilidad, tipos y dividendo continuo constantes. Se tratan T=0 y σ=0 mediante límites correctos; no se afirma que el mercado real siga este modelo.
 
-La fórmula combina el precio actual del activo `S`, el precio de ejercicio `K`, el tiempo hasta vencimiento `T`, la tasa libre de riesgo `r` y la volatilidad `sigma`.
+## Qué conserva y qué cambia
 
-La volatilidad es decisiva: a mayor incertidumbre sobre el precio futuro del activo, mayor suele ser el valor temporal de la opción.
+Bajo el modelo de difusión lognormal con volatilidad constante, replicación continua y mercado ideal, la valoración neutral al riesgo descuenta el pago europeo. Integrar bajo la ley lognormal produce términos de normal acumulada con d1 y d2. El dividendo continuo descuenta la parte de subyacente por e⁻ᑫᵀ. La fórmula de put y call respeta paridad. En T=0 se usa pago final; para σ=0 se usa el límite determinista descontado, evitando divisiones por cero.
 
-El simulador traza la curva del precio de una call frente al precio del subyacente. Los controles permiten modificar volatilidad, strike y vencimiento para observar cómo cambia la curvatura y el valor de la opción.
+## Primera predicción
+
+Black–Scholes–Merton europeo con volatilidad, tipos y dividendo continuo constantes. Se tratan T=0 y σ=0 mediante límites correctos; no se afirma que el mercado real siga este modelo. Calcula prima call con los datos iniciales en u.m.. Prima call=10,4506 u.m.. d1=[ln(S/K)+(r−q+σ²/2)T]/(σ√T), d2=d1−σ√T; descuentos continuos.

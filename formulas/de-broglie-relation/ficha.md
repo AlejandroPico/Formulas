@@ -1,26 +1,25 @@
-# Ficha
+# Relación de de Broglie
 
-## Identificación
+Electrón no relativista con energía cinética en eV. Cambia energía y compara p y λ; la onda dibujada representa fase, no una trayectoria.
 
-- **Nombre:** Relación de de Broglie
-- **Autor:** Louis de Broglie
-- **Año:** 1924
-- **Área:** mecánica cuántica
-- **Nivel:** universidad inicial
-- **Tipo:** relación onda-partícula
+## Magnitudes y notación
 
-## Variables
+| Símbolo | Interpretación |
+| :-- | :-- |
+| ħ | Constante de Planck reducida h/(2π). |
+| p | Impulso lineal del observable o partícula indicado. |
+| m | Masa de la partícula. |
+| λ | Longitud de onda de materia. |
+| h | Constante de Planck h, 6,62607015×10⁻³⁴ J·s. |
+| k | Número de onda angular 2π/λ. |
+| K | Energía cinética del electrón, no energía de un fotón. |
+| c | Velocidad de la luz en vacío. |
+| ≪ | Mucho menor: régimen no relativista del experimento. |
 
-- `lambda`: longitud de onda asociada.
-- `h`: constante de Planck.
-- `p`: momento lineal.
-- `m`: masa.
-- `v`: velocidad.
+## Condiciones
 
-## Lectura del simulador
+Partícula libre con impulso definido. La conversión de energía del experimento usa el régimen no relativista, 1–1000 eV para electrones. La onda ilustrativa representa fase; no una trayectoria ni una medición de posición del electrón.
 
-El control modifica el momento. Cuando el momento aumenta, la longitud de onda disminuye y la curva presenta más oscilaciones. La partícula se coloca sobre la onda para reforzar la idea de dualidad.
+## Unidades
 
-## Nota
-
-La escala es didáctica. En partículas reales, la longitud de onda depende de unidades físicas y puede ser extremadamente pequeña para objetos macroscópicos.
+h en J·s, p en kg·m/s, λ en m; el resultado se presenta en nm. K en eV se multiplica por 1,602176634×10⁻¹⁹ J/eV. Masa electrónica en kg.

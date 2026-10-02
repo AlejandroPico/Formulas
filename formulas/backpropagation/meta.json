@@ -4,13 +4,92 @@
   "author": "Rumelhart, Hinton y Williams",
   "year": 1986,
   "field": "Aprendizaje automático",
-  "level": "Universidad",
+  "level": "Universidad inicial",
   "color": "#ef4444",
   "simulation": "backpropagation",
   "formulaText": [
-    "el gradiente de una pérdida respecto a un peso se calcula encadenando derivadas locales",
-    "el error se propaga hacia atrás desde la salida hasta las capas anteriores"
+    "Red escalar con una neurona tanh y salida lineal: z=wx+b, h=tanh(z), ŷ=vh, L=(ŷ−y)²/2. Se calcula el gradiente exacto por regla de la cadena."
   ],
-  "summary": "Algoritmo que calcula gradientes en redes neuronales aplicando la regla de la cadena capa por capa.",
-  "tags": []
+  "summary": "Red escalar con una neurona tanh y salida lineal: z=wx+b, h=tanh(z), ŷ=vh, L=(ŷ−y)²/2. Se calcula el gradiente exacto por regla de la cadena.",
+  "tags": [
+    "retropropagación",
+    "regla de la cadena",
+    "redes neuronales"
+  ],
+  "formula": [
+    "z=wx+b,\\quad h=\\tanh z,\\quad\\widehat y=vh,\\quad L=\\frac12(\\widehat y-y)^2",
+    "\\frac{\\partial L}{\\partial w}=(\\widehat y-y)v(1-h^2)x,\\quad\\frac{\\partial L}{\\partial b}=(\\widehat y-y)v(1-h^2),\\quad\\frac{\\partial L}{\\partial v}=(\\widehat y-y)h"
+  ],
+  "simulatorVersion": 2,
+  "symbolGlossary": {
+    "1": "Uno: unidad numérica en la relación.",
+    "2": "Dos: factor numérico; como exponente significa el cuadrado.",
+    "=": "Igualdad: ambos lados tienen el mismo valor matemático.",
+    "+": "Suma de los términos indicados.",
+    "−": "Resta o signo negativo del término siguiente.",
+    ",": "Separación de expresiones o condiciones.",
+    "(": "Abre un grupo de términos que se opera como una sola base.",
+    ")": "Cierra el grupo de términos.",
+    "∂": "Derivada parcial respecto de la variable indicada.",
+    "^2": "Al cuadrado: multiplica toda la base por sí misma.",
+    "_1": "Índice 1: primera componente, primer paso o primer valor ordenado.",
+    "_2": "Índice 2: segunda componente o nivel escrito.",
+    "structure:msqrt": "Raíz cuadrada no negativa: recupera la magnitud cuyo cuadrado es el argumento. Respeta el dominio real de esta ficha.",
+    "structure:mfrac": "Cociente: divide el numerador entre el denominador completo; sus unidades deben ser compatibles con la magnitud resultante.",
+    "structure:msup": "Exponente: una potencia actúa sobre toda la base. Una marca de derivada, adjunto o etiqueta conserva el significado propio definido en esta ficha.",
+    "structure:msub": "Índice inferior: identifica componente, nivel, condición o estado de la base, sin multiplicarla.",
+    "structure:msubsup": "La base lleva índice inferior y marca superior; cada uno se interpreta con la notación de esta ficha.",
+    "structure:mover": "Barra sobre x: media de datos; sobre un vector indica su vector de medias. La marca de flecha identifica vector.",
+    "structure:munder": "Límite inferior o condición del sumatorio escrito.",
+    "structure:munderover": "Límites del sumatorio: especifican qué valores toma su índice.",
+    "z": "Preactivación de la neurona.",
+    "w": "Peso de entrada.",
+    "x": "Entrada de la red.",
+    "b": "Sesgo de la neurona.",
+    "h": "Activación tanh, no constante de Planck.",
+    "v": "Peso de salida.",
+    "y": "Objetivo; ŷ es salida calculada.",
+    "L": "Mitad del error cuadrático.",
+    "tanh": "Tangente hiperbólica.",
+    "ˆ": "Marca la predicción.",
+    "bold:z": "Preactivación de la neurona.",
+    "_z": "Índice z: Preactivación de la neurona.",
+    "bold:w": "Peso de entrada.",
+    "_w": "Índice w: Peso de entrada.",
+    "bold:x": "Entrada de la red.",
+    "_x": "Índice x: Entrada de la red.",
+    "bold:b": "Sesgo de la neurona.",
+    "_b": "Índice b: Sesgo de la neurona.",
+    "bold:h": "Activación tanh, no constante de Planck.",
+    "_h": "Índice h: Activación tanh, no constante de Planck.",
+    "bold:v": "Peso de salida.",
+    "_v": "Índice v: Peso de salida.",
+    "bold:y": "Objetivo; ŷ es salida calculada.",
+    "_y": "Índice y: Objetivo; ŷ es salida calculada.",
+    "bold:L": "Mitad del error cuadrático.",
+    "_L": "Índice L: Mitad del error cuadrático.",
+    "bold:tanh": "Tangente hiperbólica.",
+    "_tanh": "Índice tanh: Tangente hiperbólica.",
+    "bold:ˆ": "Marca la predicción.",
+    "_ˆ": "Índice ˆ: Marca la predicción."
+  },
+  "formulaGlossaries": [
+    {},
+    {}
+  ],
+  "prerequisites": [
+    "álgebra lineal",
+    "derivadas",
+    "probabilidad"
+  ],
+  "units": "Variables numéricas en unidades de referencia; los índices y probabilidades son adimensionales. Una distancia conserva la escala de las características; su cuadrado tiene escala cuadrática.",
+  "dimensions": "Variables numéricas en unidades de referencia; los índices y probabilidades son adimensionales. Una distancia conserva la escala de las características; su cuadrado tiene escala cuadrática.",
+  "applications": "Propaga hacia delante z, h, ŷ y L. Hacia atrás multiplica ∂L/∂ŷ=ŷ−y, ∂ŷ/∂h=v, ∂h/∂z=1−h² y ∂z/∂w=x. Para b la última derivada es uno; para v es h. Los tres gradientes se contrastan con diferencias centrales. La entrada cero anula dw pero no obliga a anular db. En el laboratorio contrasta una predicción, construye el objetivo y explica qué supuesto permite el resultado.",
+  "learningPath": [
+    "Identificar magnitudes",
+    "Comprobar hipótesis",
+    "Predicción",
+    "Exploración",
+    "Explicación del resultado"
+  ]
 }

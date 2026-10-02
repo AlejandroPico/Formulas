@@ -1,9 +1,11 @@
 # Significado
 
-Softmax convierte una lista de puntuaciones reales, llamadas logits, en probabilidades que suman uno.
+Tres logits y temperatura positiva. Se resta el máximo antes de exponenciar para estabilidad; sumar la misma constante a todos no cambia probabilidades.
 
-Cada logit se exponentia, de modo que diferencias pequeñas entre puntuaciones pueden amplificarse. Después se divide por la suma de todas las exponenciales para normalizar.
+## Qué conserva y qué cambia
 
-El resultado puede interpretarse como una distribución de probabilidad sobre clases: gato, perro, ave u otras categorías.
+Normalizar exponenciales positivas da probabilidades que suman uno. Para estabilidad se resta el máximo logit antes de exponenciar: el factor común se cancela. Si T disminuye, aumentan contrastes; si los logits empatan, mantienen igual probabilidad. El laboratorio grafica las tres curvas frente a temperatura y admite logits negativos.
 
-El simulador permite mover tres logits. Las barras muestran cómo cambia la probabilidad asignada a cada clase y cómo la suma permanece siempre en el 100%.
+## Primera predicción
+
+Tres logits y temperatura positiva. Se resta el máximo antes de exponenciar para estabilidad; sumar la misma constante a todos no cambia probabilidades. Calcula probabilidad de a en porcentaje con los datos iniciales. Probabilidad de A en porcentaje=66,5241 . pi=exp(zi/T)/Σexp(zj/T); T>0.

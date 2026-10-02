@@ -6,42 +6,91 @@
   "level": "Bachillerato y universidad inicial",
   "color": "#ea580c",
   "formula": [
-    "G_{dB}=20log_{10}(V_{out}/V_{in})"
+    "G_{dB}=20\\log_{10}\\left|\\frac{V_{\\rm out}}{V_{\\rm in}}\\right|",
+    "G_{P,dB}=10\\log_{10}\\frac{P_{\\rm out}}{P_{\\rm in}}"
   ],
-  "summary": "Expresa una relación de voltajes en escala logarítmica de decibelios.",
-  "sim": "scripts/electronics-decibel-gain-sim.js?v=20260705a",
-  "k": "db",
+  "summary": "Ganancia de amplitud de voltaje usando valores RMS positivos. La razón de potencia solo coincide con el cuadrado de la de voltaje cuando las impedancias resistivas son iguales.",
   "folder": "formulas/voltage-gain-decibels",
   "source": "files",
   "formulaText": [
-    "Expresa una relación de voltajes en escala logarítmica de decibelios."
+    "Ganancia de amplitud de voltaje usando valores RMS positivos. La razón de potencia solo coincide con el cuadrado de la de voltaje cuando las impedancias resistivas son iguales."
   ],
   "tags": [
-    "electrónica",
-    "electrotecnia",
-    "corriente alterna",
-    "semiconductores",
-    "trifasica",
-    "potencia"
+    "decibelios",
+    "ganancia",
+    "señales",
+    "logaritmos"
   ],
   "prerequisites": [
-    "ley de ohm",
-    "logaritmos",
-    "exponenciales",
-    "fasores",
-    "corriente alterna"
+    "interpretar tasas",
+    "balance de magnitudes",
+    "funciones y unidades"
   ],
   "learningPath": [
-    "formula",
-    "significado",
-    "historia",
-    "derivacion",
-    "simulacion"
+    "Identificar magnitudes",
+    "Comprobar hipótesis",
+    "Predicción",
+    "Exploración",
+    "Explicación del resultado"
   ],
-  "units": "Unidades didácticas normalizadas.",
-  "dimensions": "Ver ficha.",
+  "units": "Vin,Vout en V RMS; el argumento del logaritmo es adimensional. La unidad dB expresa una razón logarítmica. Para las ondas sinusoidales dibujadas, valor pico=√2 veces RMS. La frecuencia no se calibra; el eje horizontal representa ciclos.",
+  "dimensions": "Vin,Vout en V RMS; el argumento del logaritmo es adimensional. La unidad dB expresa una razón logarítmica. Para las ondas sinusoidales dibujadas, valor pico=√2 veces RMS. La frecuencia no se calibra; el eje horizontal representa ciclos.",
   "symbols": [],
   "legacySource": "runtime-batch-migration",
   "originalSource": "scripts/latest-formula-batch-28.js",
-  "createdAt": "2026-07-06"
+  "createdAt": "2026-07-06",
+  "simulation": "voltage-gain-decibels",
+  "simulatorVersion": 2,
+  "symbolGlossary": {
+    "10": "Diez: base del logaritmo decimal o exponencial decimal.",
+    "=": "Igualdad: ambos lados tienen el mismo valor matemático.",
+    ",": "Separación de expresiones o condiciones.",
+    "log": "Logaritmo decimal cuando su base está escrita como 10.",
+    "structure:msqrt": "Raíz cuadrada no negativa: recupera la magnitud cuyo cuadrado es el argumento. Respeta el dominio real de esta ficha.",
+    "structure:mfrac": "Cociente: divide el numerador entre el denominador completo; sus unidades deben ser compatibles con la magnitud resultante.",
+    "structure:msup": "Exponente: una potencia actúa sobre toda la base. Una marca de derivada, adjunto o etiqueta conserva el significado propio definido en esta ficha.",
+    "structure:msub": "Índice inferior: identifica componente, nivel, condición o estado de la base, sin multiplicarla.",
+    "structure:msubsup": "La base lleva índice inferior y marca superior; cada uno se interpreta con la notación de esta ficha.",
+    "structure:mover": "Barra sobre x: media de datos; sobre un vector indica su vector de medias. La marca de flecha identifica vector.",
+    "structure:munder": "Límite inferior o condición del sumatorio escrito.",
+    "structure:munderover": "Límites del sumatorio: especifican qué valores toma su índice.",
+    "G": "Ganancia logarítmica de la magnitud indicada.",
+    "V": "Voltaje RMS de entrada o salida.",
+    "P": "Potencia media de entrada o salida.",
+    "d": "Parte de dB: unidad decibelio.",
+    "B": "Parte de dB: bel en su décima parte.",
+    "o": "Parte de out: salida.",
+    "u": "Parte de out: salida.",
+    "t": "Parte de out: salida.",
+    "i": "Parte de in: entrada.",
+    "n": "Parte de in: entrada.",
+    "∣": "Módulo de la razón de amplitudes de voltaje.",
+    "bold:G": "Ganancia logarítmica de la magnitud indicada.",
+    "_G": "Índice G: Ganancia logarítmica de la magnitud indicada.",
+    "bold:V": "Voltaje RMS de entrada o salida.",
+    "_V": "Índice V: Voltaje RMS de entrada o salida.",
+    "bold:P": "Potencia media de entrada o salida.",
+    "_P": "Índice P: Potencia media de entrada o salida.",
+    "bold:d": "Parte de dB: unidad decibelio.",
+    "_d": "Índice d: Parte de dB: unidad decibelio.",
+    "bold:B": "Parte de dB: bel en su décima parte.",
+    "_B": "Índice B: Parte de dB: bel en su décima parte.",
+    "bold:o": "Parte de out: salida.",
+    "_o": "Índice o: Parte de out: salida.",
+    "bold:u": "Parte de out: salida.",
+    "_u": "Índice u: Parte de out: salida.",
+    "bold:t": "Parte de out: salida.",
+    "_t": "Índice t: Parte de out: salida.",
+    "bold:i": "Parte de in: entrada.",
+    "_i": "Índice i: Parte de in: entrada.",
+    "bold:n": "Parte de in: entrada.",
+    "_n": "Índice n: Parte de in: entrada.",
+    "bold:∣": "Módulo de la razón de amplitudes de voltaje.",
+    "_∣": "Índice ∣: Módulo de la razón de amplitudes de voltaje."
+  },
+  "formulaGlossaries": [
+    {},
+    {}
+  ],
+  "applications": "Comparar el resultado con sus hipótesis y explicar qué parámetro domina el cambio. El laboratorio incluye predicción, ajuste de un objetivo, interpretación del modelo y una nueva comprobación numérica."
 }

@@ -1,5 +1,3 @@
-\frac{\partial L}{\partial w_1}=\frac{\partial L}{\partial \hat y}\frac{\partial \hat y}{\partial h}\frac{\partial h}{\partial w_1}
+z=wx+b,\quad h=\tanh z,\quad\widehat y=vh,\quad L=\frac12(\widehat y-y)^2
 
-\delta^{(l)}=((W^{(l+1)})^T\delta^{(l+1)})\odot \sigma'(z^{(l)})
-
-\frac{\partial L}{\partial W^{(l)}}=\delta^{(l)}(a^{(l-1)})^T
+\frac{\partial L}{\partial w}=(\widehat y-y)v(1-h^2)x,\quad\frac{\partial L}{\partial b}=(\widehat y-y)v(1-h^2),\quad\frac{\partial L}{\partial v}=(\widehat y-y)h

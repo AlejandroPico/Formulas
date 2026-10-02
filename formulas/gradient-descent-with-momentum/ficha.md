@@ -1,21 +1,22 @@
-# Ficha
+# Descenso de gradiente con momento
 
-**Nombre:** Descenso de gradiente con momento
+Optimización de F=(x²+κy²)/2, con gradientes exactos y memoria inicial cero. Los pasos son iteraciones reales del algoritmo seleccionado.
 
-**Área:** Optimización
+## Magnitudes y notación
 
-**Nivel:** Universidad inicial
+| Símbolo | Interpretación |
+| :-- | :-- |
+| v | Velocidad: acumulación de gradientes. |
+| g | Gradiente calculado en los parámetros anteriores. |
+| θ | Vector de parámetros. |
+| t | Número de iteración, comenzando en uno. |
+| β | Coeficiente de memoria; sus índices distinguen primer y segundo momento. |
+| η | Tamaño de paso. |
 
-**Resumen:** Añade inercia al descenso de gradiente para acelerar direcciones persistentes y suavizar zigzags.
+## Condiciones
 
-## Lectura e interpretación
+η>0, β y β2 menores que uno, ε=10⁻⁸; operaciones componente a componente. La escala del paso y memoria afectan estabilidad y no garantizan descenso en cada iteración. Parámetros, gradientes y pérdida usan unidades reducidas; en RMSProp el control β de primera memoria no interviene.
 
-# Interpretación
+## Unidades
 
-Mueve los controles del simulador y observa cómo cambian actualización, gradiente, saturación, zona muerta, probabilidad o escala adaptativa.
-
-## Validez y limitaciones
-
-# Limitaciones
-
-Demasiado γ puede provocar sobrepasos, oscilaciones o divergencia si η es alto.
+Variables numéricas en unidades de referencia; los índices y probabilidades son adimensionales. Una distancia conserva la escala de las características; su cuadrado tiene escala cuadrática.

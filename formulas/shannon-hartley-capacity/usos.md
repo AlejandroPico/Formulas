@@ -1,10 +1,11 @@
 # Usos
 
-- Estimar límites de transmisión en canales ruidosos.
-- Comparar efectos de ancho de banda y relación señal/ruido.
-- Diseñar enlaces de radio, cable y comunicaciones digitales.
-- Introducir teoría de la información aplicada a telecomunicaciones.
-- Evaluar eficiencia espectral.
-- Explicar por qué más potencia no siempre compensa poco ancho de banda.
+Comparar predicciones con sus unidades, su base de logaritmo y el conjunto de datos de referencia. Los cuatro retos separan cálculo, ajuste, interpretación y comprobación; las tres vistas permiten identificar qué cambia y qué permanece.
 
-La fórmula da un límite ideal. Los sistemas reales dependen además de modulación, codificación, interferencias y restricciones de hardware.
+## Del experimento al contexto
+
+Canal ideal de banda limitada con ruido gaussiano blanco aditivo y razón señal/ruido total S/N. El resultado es una capacidad teórica, no una velocidad garantizada de un módem.
+
+## Condiciones antes de aplicar
+
+Canal ideal AWGN, banda y potencias totales definidas de forma compatible. La capacidad es un límite asintótico con codificación adecuada, no rendimiento de un dispositivo concreto. Los controles mantienen la razón S/N al variar banda; no afirman que el ruido total permanezca fijo con una densidad espectral fija.

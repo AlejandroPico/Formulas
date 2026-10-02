@@ -1,19 +1,11 @@
 # Derivación
 
-La transformada Z se define como una serie de potencias generalizada:
+La transformada bilateral acumula una secuencia ponderada por potencias z⁻ⁿ. Para la señal causal aⁿu[n], solo se suma n≥0 y la serie geométrica converge si |a/z|<1. Sumar da 1/(1−a/z). El polo z=a limita la región exterior. Una secuencia anticausal puede producir el mismo cociente con otra ROC; por eso la región acompaña a la expresión racional.
 
-`X(z)=Σ x[n]z^{-n}`.
+## Hipótesis necesarias
 
-Para la señal causal `x[n]=a^n u[n]`, solo hay términos desde `n=0`:
+Ejemplo causal con a real y |a|≤0,9. Los controles de evaluación pueden salir de |z|>|a|: entonces la pantalla identifica continuación racional y no afirma convergencia de la suma. El polo exacto es singular; los ángulos del control evitan evaluarlo directamente. a=0 produce impulso unitario, incluyendo x[0]=1.
 
-`X(z)=Σ_{n=0}^∞ a^n z^{-n}`.
+## Comprueba con números
 
-Esto puede reescribirse como una serie geométrica:
-
-`X(z)=Σ_{n=0}^∞ (az^{-1})^n`.
-
-La suma geométrica converge si `|az^{-1}|<1`, es decir, si `|z|>|a|`. Bajo esa condición:
-
-`X(z)=1/(1-az^{-1})`.
-
-El denominador se anula en `z=a`, por lo que aparece un polo en esa posición. La región de convergencia queda fuera del círculo de radio `|a|`. Si ese exterior contiene el círculo unitario, entonces la respuesta impulsional es absolutamente sumable y el sistema es estable.
+Secuencia causal x[n]=a^n u[n], X(z)=1/(1−a/z), con región |z|>|a|. El cociente racional fuera de la región es continuación algebraica, no la suma convergente. Calcula módulo |x(z)| con los datos iniciales. Módulo |X(z)|=1,1547 . X=z/(z−a); comprueba |z|>|a| antes de usar la suma.

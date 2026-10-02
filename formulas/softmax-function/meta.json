@@ -8,9 +8,71 @@
   "color": "#a855f7",
   "simulation": "softmax-function",
   "formulaText": [
-    "softmax convierte logits en probabilidades normalizadas que suman uno",
-    "cada salida es exponencial del logit dividido entre la suma de exponenciales"
+    "Tres logits y temperatura positiva. Se resta el máximo antes de exponenciar para estabilidad; sumar la misma constante a todos no cambia probabilidades."
   ],
-  "summary": "Transforma puntuaciones reales en una distribución de probabilidad multiclase.",
-  "tags": []
+  "summary": "Tres logits y temperatura positiva. Se resta el máximo antes de exponenciar para estabilidad; sumar la misma constante a todos no cambia probabilidades.",
+  "tags": [
+    "softmax",
+    "probabilidades",
+    "clasificación"
+  ],
+  "formula": [
+    "p_i=\\frac{e^{z_i/T}}{\\sum_{j=1}^{K}e^{z_j/T}},\\qquad T>0"
+  ],
+  "simulatorVersion": 2,
+  "symbolGlossary": {
+    "0": "Cero: valor nulo o referencia indicada.",
+    "1": "Uno: unidad numérica en la relación.",
+    "=": "Igualdad: ambos lados tienen el mismo valor matemático.",
+    ",": "Separación de expresiones o condiciones.",
+    "∑": "Sumatorio: acumula los términos del índice indicado.",
+    ">": "Mayor: desigualdad estricta.",
+    "e": "Número de Euler, base de la exponencial natural.",
+    "_0": "Índice 0: valor de reposo, inicial o de referencia según la magnitud.",
+    "_1": "Índice 1: primera componente, primer paso o primer valor ordenado.",
+    "structure:msqrt": "Raíz cuadrada no negativa: recupera la magnitud cuyo cuadrado es el argumento. Respeta el dominio real de esta ficha.",
+    "structure:mfrac": "Cociente: divide el numerador entre el denominador completo; sus unidades deben ser compatibles con la magnitud resultante.",
+    "structure:msup": "Exponente: una potencia actúa sobre toda la base. Una marca de derivada, adjunto o etiqueta conserva el significado propio definido en esta ficha.",
+    "structure:msub": "Índice inferior: identifica componente, nivel, condición o estado de la base, sin multiplicarla.",
+    "structure:msubsup": "La base lleva índice inferior y marca superior; cada uno se interpreta con la notación de esta ficha.",
+    "structure:mover": "Barra sobre x: media de datos; sobre un vector indica su vector de medias. La marca de flecha identifica vector.",
+    "structure:munder": "Límite inferior o condición del sumatorio escrito.",
+    "structure:munderover": "Límites del sumatorio: especifican qué valores toma su índice.",
+    "p": "Probabilidad normalizada de una clase.",
+    "z": "Logit: puntuación real sin normalizar.",
+    "T": "Temperatura positiva.",
+    "K": "Número de clases.",
+    "i": "Clase consultada.",
+    "j": "Índice de clase sumada.",
+    "bold:p": "Probabilidad normalizada de una clase.",
+    "_p": "Índice p: Probabilidad normalizada de una clase.",
+    "bold:z": "Logit: puntuación real sin normalizar.",
+    "_z": "Índice z: Logit: puntuación real sin normalizar.",
+    "bold:T": "Temperatura positiva.",
+    "_T": "Índice T: Temperatura positiva.",
+    "bold:K": "Número de clases.",
+    "_K": "Índice K: Número de clases.",
+    "bold:i": "Clase consultada.",
+    "_i": "Índice i: Clase consultada.",
+    "bold:j": "Índice de clase sumada.",
+    "_j": "Índice j: Índice de clase sumada."
+  },
+  "formulaGlossaries": [
+    {}
+  ],
+  "prerequisites": [
+    "álgebra lineal",
+    "derivadas",
+    "probabilidad"
+  ],
+  "units": "Variables numéricas en unidades de referencia; los índices y probabilidades son adimensionales. Una distancia conserva la escala de las características; su cuadrado tiene escala cuadrática.",
+  "dimensions": "Variables numéricas en unidades de referencia; los índices y probabilidades son adimensionales. Una distancia conserva la escala de las características; su cuadrado tiene escala cuadrática.",
+  "applications": "Normalizar exponenciales positivas da probabilidades que suman uno. Para estabilidad se resta el máximo logit antes de exponenciar: el factor común se cancela. Si T disminuye, aumentan contrastes; si los logits empatan, mantienen igual probabilidad. El laboratorio grafica las tres curvas frente a temperatura y admite logits negativos. En el laboratorio contrasta una predicción, construye el objetivo y explica qué supuesto permite el resultado.",
+  "learningPath": [
+    "Identificar magnitudes",
+    "Comprobar hipótesis",
+    "Predicción",
+    "Exploración",
+    "Explicación del resultado"
+  ]
 }

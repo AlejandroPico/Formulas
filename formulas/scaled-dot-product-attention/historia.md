@@ -1,9 +1,11 @@
 # Historia
 
-La atención escalada se popularizó con la arquitectura Transformer presentada por Vaswani y colaboradores en 2017.
+Vaswani y colaboradores describieron atención de producto escalar escalado en Transformer en 2017. La atención cruzada une representaciones de secuencias distintas; la autoatención consulta representaciones de la propia secuencia.
 
-El mecanismo permitió reemplazar recurrencias por operaciones de atención paralelizables, facilitando el entrenamiento de modelos grandes.
+## Referencia y alcance
 
-El término de escalado por `sqrt(d_k)` fue introducido para estabilizar la distribución softmax cuando las dimensiones de clave y consulta son elevadas.
+[Material de estudio](https://arxiv.org/abs/1706.03762).
 
-Hoy es una pieza central de modelos de lenguaje, visión, audio y sistemas multimodales.
+Debe quedar al menos una clave permitida por fila. Q y K comparten dk; V puede tener otra dimensión. Una máscara no se añade después de softmax. Atención no es selección dura y sus pesos no equivalen por sí solos a explicación causal de una predicción.
+
+La fecha de creación del catálogo procede del archivo original; el año científico y la fecha de revisión tienen funciones diferentes.

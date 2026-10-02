@@ -1,9 +1,11 @@
 # Significado
 
-La entropía cruzada mide lo mala que es una distribución predicha cuando se compara con una distribución objetivo.
+Entropía cruzada de distribuciones Bernoulli p y q con logaritmos naturales. Se distingue frecuencia objetivo p de probabilidad predicha q.
 
-En clasificación con una única clase correcta, la fórmula se reduce a `-log(y_hat_correcta)`. Si el modelo asigna mucha probabilidad a la clase correcta, la pérdida es pequeña. Si le asigna poca, la pérdida crece muy rápido.
+## Qué conserva y qué cambia
 
-Por eso es una función de pérdida natural para clasificadores probabilísticos. Obliga al modelo no solo a acertar la clase, sino a calibrar la confianza.
+El coste esperado de codificar una fuente p con probabilidades q es la media de −lnqi ponderada por pi. Añadir y restar −Σpi lnpi separa la incertidumbre de la fuente H(p) y el exceso KL. Para Bernoulli la derivada respecto a q se anula en q=p. Un objetivo probabilístico no necesita tener entropía cero, de modo que la pérdida mínima puede ser positiva.
 
-El simulador muestra la curva `-ln(y_hat)` para la clase correcta. Al mover la confianza predicha, se observa cómo la pérdida cae cerca de uno y se dispara cerca de cero.
+## Primera predicción
+
+Entropía cruzada de distribuciones Bernoulli p y q con logaritmos naturales. Se distingue frecuencia objetivo p de probabilidad predicha q. Calcula entropía cruzada con los datos iniciales en nats. Entropía cruzada=0,5919 nats. H(p,q)=−p lnq−(1−p)ln(1−q)=H(p)+DKL(p||q).

@@ -1,9 +1,11 @@
 # Derivación
 
-En la formulación básica, el estado cuántico se representa mediante una amplitud compleja. Para obtener una probabilidad debe producirse una cantidad real, positiva y normalizable.
+Un proyector Πa selecciona el subespacio del resultado a. La norma cuadrada de Πa|ψ⟩ equivale a ⟨ψ|Πa|ψ⟩. Para un qubit, escribe el estado y el proyector mediante Bloch y usa Tr(σiσj)=2δij para obtener P+=(1+r·n)/2. La fase relativa influye cuando el detector no mide en z; por eso no basta conservar solo poblaciones en todas las bases.
 
-El módulo al cuadrado cumple esas condiciones. Si `psi` es una amplitud, entonces `|psi|²` es no negativo y puede integrarse sobre una región para obtener una probabilidad.
+## Hipótesis necesarias
 
-La normalización fija la escala del estado: la integral total de `|psi|²` debe ser uno. Después, la probabilidad de encontrar el sistema en un intervalo se obtiene integrando la densidad dentro de ese intervalo.
+Estado normalizado y medición proyectiva completa. El dibujo muestra probabilidades de conjunto, no un resultado único garantizado. El detector se describe por una dirección de Bloch, no por una posición espacial del electrón.
 
-En un lenguaje más general, para un estado y un observable, las probabilidades se calculan proyectando el estado sobre los posibles resultados del observable.
+## Comprueba con números
+
+Qubit puro y medición proyectiva en una dirección ajustable. El resultado es una probabilidad de conjunto, no el destino obligatorio de una medición individual. Calcula probabilidad del resultado + con los datos iniciales en %. Probabilidad del resultado +=75 %. P+=(1+r·n)/2; para detector z vale p.

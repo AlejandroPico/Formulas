@@ -1,9 +1,11 @@
 # Derivación
 
-Una forma de llegar a la integral de camino consiste en dividir la evolución temporal en muchos intervalos pequeños. Entre cada intervalo se insertan estados intermedios, de modo que la amplitud total se expresa como una suma sobre posiciones intermedias.
+La integral de caminos organiza la amplitud de propagación como suma coherente de historias, con fase acción/ħ. En el límite estacionario, la variación de la acción selecciona trayectorias clásicas, pero la suma cuántica conserva interferencia. El laboratorio usa solo dos contribuciones paraxiales: Sj/ħ=π(x∓d/2)²/(λD). Sumarlas antes de tomar |A|² produce términos cruzados y separación de franjas λD/d. El factor (1+r)² normaliza al máximo posible de esta intensidad relativa.
 
-Al hacer el límite de intervalos cada vez más finos, la suma discreta se transforma en una suma funcional sobre trayectorias completas.
+## Hipótesis necesarias
 
-Cada camino recibe un peso de fase `exp(iS/hbar)`, donde `S` es la acción calculada a lo largo de esa historia.
+Ilustración de dos caminos coherentes en aproximación paraxial, no evaluación de la integral funcional sobre todas las trayectorias. La intensidad relativa no está normalizada como probabilidad integrada sobre toda la pantalla. El control x es una posición de pantalla, no un camino completo.
 
-En el límite clásico, las fases de caminos alejados se cancelan con facilidad y domina la zona próxima a la acción estacionaria.
+## Comprueba con números
+
+Ilustración paraxial de dos caminos de un propagador libre. Suma amplitudes complejas y observa franjas; no evalúa la integral funcional completa. Calcula intensidad relativa con los datos iniciales. Intensidad relativa=1 . A=e^{iS1/ħ}+r e^{iS2/ħ}; I=|A|²/(1+r)².

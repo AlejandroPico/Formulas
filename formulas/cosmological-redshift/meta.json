@@ -3,41 +3,86 @@
   "name": "Corrimiento al rojo cosmológico",
   "year": 1929,
   "field": "Cosmología",
-  "level": "Bachillerato y universidad inicial",
+  "level": "Universidad inicial",
   "color": "#ef4444",
   "formula": [
-    "1+z=λobs/λemit=a0/aemit"
+    "1+z=\\frac{\\lambda_{\\mathrm{obs}}}{\\lambda_{\\mathrm{emit}}}=\\frac{a(t_{\\mathrm{obs}})}{a(t_{\\mathrm{emit}})}",
+    "\\nu_{\\mathrm{obs}}=\\frac{\\nu_{\\mathrm{emit}}}{1+z}"
   ],
-  "summary": "La expansión del espacio estira la longitud de onda de la luz y reduce su energía.",
+  "summary": "Una onda libre entre dos épocas FLRW cumple λobs/λemit=aobs/aemit. El desplazamiento cosmológico no se identifica automáticamente con Doppler local.",
   "topic": "redshift",
   "source": "files",
   "author": "",
   "formulaText": [
-    "La expansión del espacio estira la longitud de onda de la luz y reduce su energía."
+    "Una onda libre entre dos épocas FLRW cumple λobs/λemit=aobs/aemit. El desplazamiento cosmológico no se identifica automáticamente con Doppler local."
   ],
   "tags": [
     "cosmologia",
-    "relatividad general",
-    "einstein",
-    "hubble",
-    "redshift",
-    "geodesica"
+    "corrimiento al rojo",
+    "ondas",
+    "factor de escala"
   ],
   "prerequisites": [
-    "relatividad",
-    "calculo basico",
-    "cosmologia"
+    "proporcionalidad",
+    "potencias",
+    "homogeneidad e isotropía"
   ],
   "learningPath": [
-    "formula",
-    "significado",
-    "simulacion"
+    "Identificar magnitudes",
+    "Comprobar hipótesis",
+    "Predicción",
+    "Exploración",
+    "Explicación del resultado"
   ],
-  "units": "Ver unidades.",
-  "dimensions": "Ver unidades.",
+  "units": "λ se muestra en nm; ambos factores de escala y z son adimensionales. ν en Hz si se desea convertir mediante c/λ con λ en metros. La longitud emitida y observada corresponde a la misma onda en épocas distintas.",
+  "dimensions": "λ se muestra en nm; ambos factores de escala y z son adimensionales. ν en Hz si se desea convertir mediante c/λ con λ en metros. La longitud emitida y observada corresponde a la misma onda en épocas distintas.",
   "symbols": [],
   "folder": "formulas/cosmological-redshift",
   "legacySource": "runtime-batch-migration",
   "originalSource": "scripts/latest-formula-batch-15.js",
-  "createdAt": "2026-07-05"
+  "createdAt": "2026-07-05",
+  "simulation": "cosmological-redshift",
+  "simulatorVersion": 2,
+  "symbolGlossary": {
+    "1": "Uno: unidad numérica en la relación.",
+    "=": "Igualdad: ambos lados tienen el mismo valor matemático.",
+    "+": "Suma de los términos indicados.",
+    "(": "Abre un grupo de términos que se opera como una sola base.",
+    ")": "Cierra el grupo de términos.",
+    "_1": "Índice 1: primera componente, primer paso o primer valor ordenado.",
+    "structure:msqrt": "Raíz cuadrada no negativa: recupera la magnitud cuyo cuadrado es el argumento. Respeta el dominio real de esta ficha.",
+    "structure:mfrac": "Cociente: divide el numerador entre el denominador completo; sus unidades deben ser compatibles con la magnitud resultante.",
+    "structure:msup": "Exponente: una potencia actúa sobre toda la base. Una marca de derivada, adjunto o etiqueta conserva el significado propio definido en esta ficha.",
+    "structure:msub": "Índice inferior: identifica componente, nivel, condición o estado de la base, sin multiplicarla.",
+    "structure:msubsup": "La base lleva índice inferior y marca superior; cada uno se interpreta con la notación de esta ficha.",
+    "structure:mover": "Barra sobre x: media de datos; sobre un vector indica su vector de medias. La marca de flecha identifica vector.",
+    "structure:munder": "Límite inferior o condición del sumatorio escrito.",
+    "structure:munderover": "Límites del sumatorio: especifican qué valores toma su índice.",
+    "a": "Factor de escala FLRW, positivo; se normaliza a uno en la época de referencia.",
+    "t": "Tiempo propio de observadores comóviles.",
+    "λ": "Longitud de onda física de un mismo fotón, medida en la época indicada.",
+    "z": "Corrimiento cosmológico λobs/λemit−1, mayor que −1.",
+    "_obs": "Índice obs: Índice obs: momento de observación.",
+    "_emit": "Índice emit: Índice emit: momento de emisión.",
+    "ν": "Frecuencia de la onda en la época de emisión u observación indicada.",
+    "obs": "Índice obs: momento de observación.",
+    "emit": "Índice emit: momento de emisión.",
+    "bold:a": "Factor de escala FLRW, positivo; se normaliza a uno en la época de referencia.",
+    "_a": "Índice a: Factor de escala FLRW, positivo; se normaliza a uno en la época de referencia.",
+    "bold:t": "Tiempo propio de observadores comóviles.",
+    "_t": "Índice t: Tiempo propio de observadores comóviles.",
+    "bold:λ": "Longitud de onda física de un mismo fotón, medida en la época indicada.",
+    "_λ": "Índice λ: Longitud de onda física de un mismo fotón, medida en la época indicada.",
+    "bold:z": "Corrimiento cosmológico λobs/λemit−1, mayor que −1.",
+    "_z": "Índice z: Corrimiento cosmológico λobs/λemit−1, mayor que −1.",
+    "bold:ν": "Frecuencia de la onda en la época de emisión u observación indicada.",
+    "_ν": "Índice ν: Frecuencia de la onda en la época de emisión u observación indicada.",
+    "bold:obs": "Índice obs: momento de observación.",
+    "bold:emit": "Índice emit: momento de emisión."
+  },
+  "formulaGlossaries": [
+    {},
+    {}
+  ],
+  "applications": "Comparar épocas de un modelo homogéneo y distinguir densidades, curvatura, velocidades locales y recesión cosmológica. Los parámetros son ejemplos educativos y no una estimación de los datos cosmológicos actuales."
 }

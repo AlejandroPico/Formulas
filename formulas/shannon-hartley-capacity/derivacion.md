@@ -1,9 +1,11 @@
 # Derivación
 
-La expresión combina dos factores: el número de grados de libertad por segundo que aporta el ancho de banda y la cantidad de información distinguible frente al ruido.
+La capacidad del canal gaussiano de banda limitada depende del ancho B y de la razón lineal entre potencias de señal y ruido. Su eficiencia espectral es log2(1+S/N). Convertir una razón de potencia en dB exige S/N=10^(GdB/10), no introducir el número de dB como potencia. Con razón S/N fija, duplicar B duplica C; con potencia señal fija y densidad de ruido fija, S/N cambia al cambiar B.
 
-En un canal con ruido gaussiano, la relación señal/ruido determina cuántos niveles efectivos pueden separarse de forma fiable.
+## Hipótesis necesarias
 
-El término `log2(1+S/N)` mide bits por segundo y por hercio. Al multiplicarlo por `B`, se obtiene una tasa máxima en bits por segundo.
+Canal ideal AWGN, banda y potencias totales definidas de forma compatible. La capacidad es un límite asintótico con codificación adecuada, no rendimiento de un dispositivo concreto. Los controles mantienen la razón S/N al variar banda; no afirman que el ruido total permanezca fijo con una densidad espectral fija.
 
-La presencia del `1+S/N` evita que la capacidad sea negativa y recoge el efecto conjunto de señal y ruido en la potencia total observable.
+## Comprueba con números
+
+Canal ideal de banda limitada con ruido gaussiano blanco aditivo y razón señal/ruido total S/N. El resultado es una capacidad teórica, no una velocidad garantizada de un módem. Calcula capacidad con los datos iniciales en Mbit/s. Capacidad=3,4594 Mbit/s. C=B log2(1+S/N), S/N=10^(dB/10).

@@ -4,13 +4,83 @@
   "author": "Satyendra Nath Bose y Albert Einstein",
   "year": 1924,
   "field": "Mecánica estadística cuántica",
-  "level": "Universidad",
+  "level": "Universidad intermedia",
   "color": "#38bdf8",
   "simulation": "bose-einstein-distribution",
   "formulaText": [
-    "ocupación media = uno dividido entre exponencial de energía menos potencial químico sobre k T menos uno",
-    "los bosones pueden ocupar masivamente el mismo estado"
+    "Ocupación media por estado de bosones ideales. Energías y kBT se expresan en la misma escala ε0; μ permanece bajo el estado fundamental."
   ],
-  "summary": "Describe la ocupación estadística de estados cuánticos por bosones indistinguibles.",
-  "tags": []
+  "summary": "Ocupación media por estado de bosones ideales. Energías y kBT se expresan en la misma escala ε0; μ permanece bajo el estado fundamental.",
+  "tags": [
+    "bosones",
+    "ocupación cuántica",
+    "equilibrio gran canónico",
+    "límite clásico"
+  ],
+  "formula": [
+    "\\overline n(\\varepsilon)=\\frac1{e^{(\\varepsilon-\\mu)/(k_BT)}-1}",
+    "\\overline n\\simeq e^{-(\\varepsilon-\\mu)/(k_BT)}\\quad(\\varepsilon-\\mu\\gg k_BT)"
+  ],
+  "simulatorVersion": 2,
+  "symbolGlossary": {
+    "1": "Uno: unidad numérica en la relación.",
+    "=": "Igualdad: ambos lados tienen el mismo valor matemático.",
+    "−": "Resta o signo negativo del término siguiente.",
+    "(": "Abre un grupo de términos que se opera como una sola base.",
+    ")": "Cierra el grupo de términos.",
+    "≃": "Aproximación en el régimen especificado.",
+    "e": "Número de Euler, base de la exponencial natural.",
+    "_1": "Índice 1: primera componente, primer paso o primer valor ordenado.",
+    "structure:msqrt": "Raíz cuadrada no negativa: recupera la magnitud cuyo cuadrado es el argumento. Respeta el dominio real de esta ficha.",
+    "structure:mfrac": "Cociente: divide el numerador entre el denominador completo; sus unidades deben ser compatibles con la magnitud resultante.",
+    "structure:msup": "Exponente: una potencia actúa sobre toda la base. Una marca de derivada, adjunto o etiqueta conserva el significado propio definido en esta ficha.",
+    "structure:msub": "Índice inferior: identifica componente, nivel, condición o estado de la base, sin multiplicarla.",
+    "structure:msubsup": "La base lleva índice inferior y marca superior; cada uno se interpreta con la notación de esta ficha.",
+    "structure:mover": "Barra sobre n: número medio de partículas que ocupan el estado, no número cuántico del nivel.",
+    "structure:munder": "Límite inferior o condición del sumatorio escrito.",
+    "structure:munderover": "Límites del sumatorio: especifican qué valores toma su índice.",
+    "n": "Ocupación del estado; con barra es su promedio estadístico.",
+    "ε": "Energía de un estado individual.",
+    "μ": "Potencial químico del baño; aquí menor o igual a cero.",
+    "k": "Constante de Boltzmann cuando lleva índice B.",
+    "T": "Temperatura absoluta; kBT es energía térmica.",
+    "–": "Barra superior: ocupación media estadística, no número entero de una realización.",
+    "≫": "Mucho mayor: condición asintótica del límite diluido.",
+    "B": "Índice B: identifica la constante de Boltzmann.",
+    "_B": "Índice B: Índice B: identifica la constante de Boltzmann.",
+    "bold:n": "Ocupación del estado; con barra es su promedio estadístico.",
+    "_n": "Índice n: Ocupación del estado; con barra es su promedio estadístico.",
+    "bold:ε": "Energía de un estado individual.",
+    "_ε": "Índice ε: Energía de un estado individual.",
+    "bold:μ": "Potencial químico del baño; aquí menor o igual a cero.",
+    "_μ": "Índice μ: Potencial químico del baño; aquí menor o igual a cero.",
+    "bold:k": "Constante de Boltzmann cuando lleva índice B.",
+    "_k": "Índice k: Constante de Boltzmann cuando lleva índice B.",
+    "bold:T": "Temperatura absoluta; kBT es energía térmica.",
+    "_T": "Índice T: Temperatura absoluta; kBT es energía térmica.",
+    "bold:–": "Barra superior: ocupación media estadística, no número entero de una realización.",
+    "_–": "Índice –: Barra superior: ocupación media estadística, no número entero de una realización.",
+    "bold:≫": "Mucho mayor: condición asintótica del límite diluido.",
+    "_≫": "Índice ≫: Mucho mayor: condición asintótica del límite diluido.",
+    "bold:B": "Índice B: identifica la constante de Boltzmann."
+  },
+  "formulaGlossaries": [
+    {},
+    {}
+  ],
+  "prerequisites": [
+    "álgebra compleja",
+    "probabilidad",
+    "estados y operadores"
+  ],
+  "units": "ε,μ y kBT tienen unidad de energía. El laboratorio usa una escala común ε0 para los tres, y n̄ es un número adimensional por estado. T del control representa kBT/ε0, no kelvin directamente.",
+  "dimensions": "ε,μ y kBT tienen unidad de energía. El laboratorio usa una escala común ε0 para los tres, y n̄ es un número adimensional por estado. T del control representa kBT/ε0, no kelvin directamente.",
+  "applications": "Anticipar el resultado, cambiar una hipótesis cada vez y comprobarlo en las tres vistas del laboratorio. Separar las magnitudes que se conservan de las que cambian, y verificar el dominio antes de interpretar una figura.",
+  "learningPath": [
+    "Identificar magnitudes",
+    "Comprobar hipótesis",
+    "Predicción",
+    "Exploración",
+    "Explicación del resultado"
+  ]
 }

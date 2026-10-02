@@ -6,48 +6,77 @@
   "level": "Universidad inicial",
   "color": "#ea580c",
   "formula": [
-    "Sharpe=(R_p-R_f)/σ_p"
+    "SR=\\frac{\\mathbb E[R_p]-r_f}{\\sigma_p}"
   ],
-  "summary": "Compara el exceso de retorno de una cartera por unidad de volatilidad.",
-  "sim": "scripts/finance-sharpe-ratio-sim.js?v=20260705a",
-  "k": "sharpe",
+  "summary": "Ratio de Sharpe de un período, con exceso medio de retorno sobre referencia constante y desviación del retorno del mismo período. Datos hipotéticos y σ positiva.",
   "folder": "formulas/sharpe-ratio-risk-adjusted-return",
   "source": "files",
   "formulaText": [
-    "Sharpe=(R_p-R_f)/σ_p",
-    "Compara el exceso de retorno de una cartera por unidad de volatilidad."
+    "Ratio de Sharpe de un período, con exceso medio de retorno sobre referencia constante y desviación del retorno del mismo período. Datos hipotéticos y σ positiva."
   ],
   "tags": [
-    "finanzas",
-    "valor temporal del dinero",
-    "derivados",
-    "renta fija",
-    "capm",
-    "sharpe",
-    "npv",
-    "irr",
-    "duracion",
-    "convexidad"
+    "ratio de sharpe",
+    "riesgo y retorno",
+    "dispersión",
+    "carteras"
   ],
   "prerequisites": [
-    "algebra",
-    "logaritmos",
-    "probabilidad",
-    "estadistica",
-    "finanzas basicas",
-    "renta fija"
+    "potencias",
+    "tasas y períodos",
+    "derivadas"
   ],
   "learningPath": [
-    "formula",
-    "significado",
-    "historia",
-    "derivacion",
-    "simulacion"
+    "Identificar magnitudes",
+    "Comprobar hipótesis",
+    "Predicción",
+    "Exploración",
+    "Explicación del resultado"
   ],
-  "units": "Unidades financieras normalizadas.",
-  "dimensions": "Ver ficha.",
+  "units": "Media, referencia y σ usan porcentajes del mismo período, por lo que la división cancela escala y el ratio es adimensional. El exceso se mide en puntos porcentuales. No sumar retornos de escalas temporales distintas ni usar volatilidad anual con media mensual.",
+  "dimensions": "Media, referencia y σ usan porcentajes del mismo período, por lo que la división cancela escala y el ratio es adimensional. El exceso se mide en puntos porcentuales. No sumar retornos de escalas temporales distintas ni usar volatilidad anual con media mensual.",
   "symbols": [],
   "legacySource": "runtime-batch-migration",
   "originalSource": "scripts/latest-formula-batch-31.js",
-  "createdAt": "2026-07-07"
+  "createdAt": "2026-07-07",
+  "simulation": "sharpe-ratio-risk-adjusted-return",
+  "simulatorVersion": 2,
+  "symbolGlossary": {
+    "=": "Igualdad: ambos lados tienen el mismo valor matemático.",
+    "−": "Resta o signo negativo del término siguiente.",
+    "[": "Abre un grupo; en química indica concentración de la especie.",
+    "]": "Cierra un grupo; en química cierra la especie cuya concentración se usa.",
+    "structure:msqrt": "Raíz cuadrada no negativa: recupera la magnitud cuyo cuadrado es el argumento. Respeta el dominio real de esta ficha.",
+    "structure:mfrac": "Cociente: divide el numerador entre el denominador completo; sus unidades deben ser compatibles con la magnitud resultante.",
+    "structure:msup": "Exponente: una potencia actúa sobre toda la base. Una marca de derivada, adjunto o etiqueta conserva el significado propio definido en esta ficha.",
+    "structure:msub": "Índice inferior: identifica componente, nivel, condición o estado de la base, sin multiplicarla.",
+    "structure:msubsup": "La base lleva índice inferior y marca superior; cada uno se interpreta con la notación de esta ficha.",
+    "structure:mover": "Barra sobre x: media de datos; sobre un vector indica su vector de medias. La marca de flecha identifica vector.",
+    "structure:munder": "Límite inferior o condición del sumatorio escrito.",
+    "structure:munderover": "Límites del sumatorio: especifican qué valores toma su índice.",
+    "S": "Parte de SR: Sharpe.",
+    "R": "Retorno cuando lleva índice p; en SR forma parte de ratio de Sharpe.",
+    "E": "Esperanza matemática del retorno, no resultado garantizado.",
+    "p": "Índice p: cartera analizada.",
+    "r": "Retorno de referencia cuando lleva índice f.",
+    "f": "Índice f: referencia libre de riesgo del mismo período.",
+    "σ": "Desviación del retorno del mismo horizonte.",
+    "bold:S": "Parte de SR: Sharpe.",
+    "_S": "Índice S: Parte de SR: Sharpe.",
+    "bold:R": "Retorno cuando lleva índice p; en SR forma parte de ratio de Sharpe.",
+    "_R": "Índice R: Retorno cuando lleva índice p; en SR forma parte de ratio de Sharpe.",
+    "bold:E": "Esperanza matemática del retorno, no resultado garantizado.",
+    "_E": "Índice E: Esperanza matemática del retorno, no resultado garantizado.",
+    "bold:p": "Índice p: cartera analizada.",
+    "_p": "Índice p: Índice p: cartera analizada.",
+    "bold:r": "Retorno de referencia cuando lleva índice f.",
+    "_r": "Índice r: Retorno de referencia cuando lleva índice f.",
+    "bold:f": "Índice f: referencia libre de riesgo del mismo período.",
+    "_f": "Índice f: Índice f: referencia libre de riesgo del mismo período.",
+    "bold:σ": "Desviación del retorno del mismo horizonte.",
+    "_σ": "Índice σ: Desviación del retorno del mismo horizonte."
+  },
+  "formulaGlossaries": [
+    {}
+  ],
+  "applications": "Comparar escenarios hipotéticos bajo las mismas convenciones y explicar sensibilidad y límites. Las cifras son educativas: el simulador no estima datos de mercado actuales ni decide inversiones, producción o consumo reales."
 }

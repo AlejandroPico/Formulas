@@ -1,26 +1,24 @@
-# Ficha
+# Distribución de Bose-Einstein
 
-## Identificación
+Ocupación media por estado de bosones ideales. Energías y kBT se expresan en la misma escala ε0; μ permanece bajo el estado fundamental.
 
-- **Nombre:** Distribución de Bose-Einstein
-- **Autores asociados:** Satyendra Nath Bose y Albert Einstein
-- **Año:** 1924
-- **Área:** mecánica estadística cuántica
-- **Nivel:** universidad
-- **Tipo:** distribución de ocupación cuántica
+## Magnitudes y notación
 
-## Variables
+| Símbolo | Interpretación |
+| :-- | :-- |
+| n | Ocupación del estado; con barra es su promedio estadístico. |
+| ε | Energía de un estado individual. |
+| μ | Potencial químico del baño; aquí menor o igual a cero. |
+| k | Constante de Boltzmann cuando lleva índice B. |
+| T | Temperatura absoluta; kBT es energía térmica. |
+| – | Barra superior: ocupación media estadística, no número entero de una realización. |
+| ≫ | Mucho mayor: condición asintótica del límite diluido. |
+| B | Índice B: identifica la constante de Boltzmann. |
 
-- `n(E)`: ocupación media.
-- `E`: energía del estado.
-- `mu`: potencial químico.
-- `k_B`: constante de Boltzmann.
-- `T`: temperatura.
+## Condiciones
 
-## Lectura del simulador
+Bosones ideales en equilibrio gran canónico, T>0 y μ por debajo de la energía del estado fundamental para esta representación finita. La divergencia al acercarse ε a μ exige tratar el estado fundamental y el número total; esta gráfica no representa por sí sola condensación.
 
-Los niveles horizontales son estados de energía. Los puntos son bosones. A baja temperatura se acumulan en el nivel inferior; a temperatura alta se reparten por estados excitados.
+## Unidades
 
-## Nota
-
-La simulación es cualitativa y usa niveles discretos simplificados. En un gas real intervienen densidad de estados, potencial químico y geometría del sistema.
+ε,μ y kBT tienen unidad de energía. El laboratorio usa una escala común ε0 para los tres, y n̄ es un número adimensional por estado. T del control representa kBT/ε0, no kelvin directamente.

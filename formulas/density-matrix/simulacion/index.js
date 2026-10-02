@@ -1,1 +1,4 @@
-export { default } from "../../../scripts/quantum-information-simulations.js?topic=density&v=20260705a";
+import {mountLab} from '../../shared/learning-lab.js';
+import {QUANTUM_LABS} from '../../shared/quantum-configs.js';
+import {drawQuantum} from '../../shared/quantum-draw.js';
+export default options=>{options.root.classList.add('studio-lab');return mountLab('density-matrix',options,{config:QUANTUM_LABS['density-matrix'],draw:drawQuantum});};

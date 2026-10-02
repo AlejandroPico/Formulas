@@ -1,26 +1,22 @@
-# Ficha
+# Capacidad de Shannon-Hartley
 
-## Identificación
+Canal ideal de banda limitada con ruido gaussiano blanco aditivo y razón señal/ruido total S/N. El resultado es una capacidad teórica, no una velocidad garantizada de un módem.
 
-- **Nombre:** Capacidad de Shannon-Hartley
-- **Autores asociados:** Claude Shannon y Ralph Hartley
-- **Año:** 1948
-- **Área:** teoría de la información y telecomunicaciones
-- **Nivel:** universidad inicial
-- **Tipo:** límite de capacidad de canal
+## Magnitudes y notación
 
-## Variables
+| Símbolo | Interpretación |
+| :-- | :-- |
+| C | Capacidad teórica de transmisión por tiempo. |
+| B | Ancho de banda del canal. |
+| S | Potencia total de la señal. |
+| N | Potencia total de ruido en la misma banda. |
+| G | Razón señal/ruido expresada en dB de potencia. |
+| d | Parte de dB: unidad decibelio. |
 
-- `C`: capacidad máxima del canal.
-- `B`: ancho de banda.
-- `S`: potencia de señal.
-- `N`: potencia de ruido.
-- `SNR`: relación señal/ruido lineal.
+## Condiciones
 
-## Lectura del simulador
+Canal ideal AWGN, banda y potencias totales definidas de forma compatible. La capacidad es un límite asintótico con codificación adecuada, no rendimiento de un dispositivo concreto. Los controles mantienen la razón S/N al variar banda; no afirman que el ruido total permanezca fijo con una densidad espectral fija.
 
-El bloque horizontal representa el ancho de banda. El suelo rojo es ruido y la zona verde es señal útil sobre el ruido. La lectura convierte SNR en dB a escala lineal y calcula la capacidad.
+## Unidades
 
-## Nota de corrección
-
-La fórmula está escrita sin `left` ni `right` dinámicos para evitar errores de MathJax con delimitadores no reconocidos.
+B en MHz da C en Mbit/s porque MHz=10⁶ Hz. S/N adimensional y GdB en dB de potencia. C/B en bit/s/Hz. La base dos define información en bits, no en nats. Los logaritmos requieren un argumento positivo adimensional.

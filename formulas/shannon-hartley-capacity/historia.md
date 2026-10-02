@@ -1,9 +1,11 @@
 # Historia
 
-La ley de Shannon-Hartley combina ideas de Ralph Hartley sobre transmisión de información con el marco matemático de Claude Shannon para canales ruidosos.
+Hartley estudió cuantificación de información y Shannon desarrolló límites de transmisión con ruido. La fórmula de canal gaussiano ocupa un lugar central en comunicaciones. Su aplicación requiere un modelo de canal y potencia; interferencia estructurada o restricciones de señal pueden cambiar la capacidad alcanzable.
 
-Shannon formuló en 1948 la teoría matemática de la comunicación y estableció límites fundamentales para codificar información de forma fiable.
+## Referencia y alcance
 
-La capacidad de canal se convirtió en una referencia central para telecomunicaciones, radio, redes, almacenamiento y teoría de códigos.
+[Material de estudio](https://people.math.harvard.edu/~ctm/home/text/others/shannon/entropy/entropy.pdf).
 
-La fórmula no diseña por sí misma un código concreto, pero fija una frontera: por debajo de la capacidad pueden existir códigos con error arbitrariamente bajo; por encima, el canal no puede sostener transmisión fiable.
+Canal ideal AWGN, banda y potencias totales definidas de forma compatible. La capacidad es un límite asintótico con codificación adecuada, no rendimiento de un dispositivo concreto. Los controles mantienen la razón S/N al variar banda; no afirman que el ruido total permanezca fijo con una densidad espectral fija.
+
+La fecha de creación del catálogo procede del archivo original; el año científico y la fecha de revisión tienen funciones diferentes.

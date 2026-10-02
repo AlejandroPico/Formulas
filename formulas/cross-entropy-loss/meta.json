@@ -8,9 +8,83 @@
   "color": "#ef4444",
   "simulation": "cross-entropy-loss",
   "formulaText": [
-    "pérdida = menos suma de etiquetas reales por logaritmo de probabilidades predichas",
-    "penaliza mucho asignar baja probabilidad a la clase correcta"
+    "Entropía cruzada de distribuciones Bernoulli p y q con logaritmos naturales. Se distingue frecuencia objetivo p de probabilidad predicha q."
   ],
-  "summary": "Función de pérdida usada para clasificación probabilística, especialmente con softmax.",
-  "tags": []
+  "summary": "Entropía cruzada de distribuciones Bernoulli p y q con logaritmos naturales. Se distingue frecuencia objetivo p de probabilidad predicha q.",
+  "tags": [
+    "entropía cruzada",
+    "pérdida probabilística",
+    "calibración",
+    "divergencia kl"
+  ],
+  "formula": [
+    "H(p,q)=-\\sum_i p_i\\ln q_i",
+    "H(p,q)=H(p)+D_{KL}(p\\Vert q)",
+    "H(p,q)=-p\\ln q-(1-p)\\ln(1-q)"
+  ],
+  "simulatorVersion": 2,
+  "symbolGlossary": {
+    "1": "Uno: unidad numérica en la relación.",
+    "=": "Igualdad: ambos lados tienen el mismo valor matemático.",
+    "+": "Suma de los términos indicados.",
+    "−": "Resta o signo negativo del término siguiente.",
+    ",": "Separación de expresiones o condiciones.",
+    "(": "Abre un grupo de términos que se opera como una sola base.",
+    ")": "Cierra el grupo de términos.",
+    "‖": "Separa distribuciones en una divergencia dirigida, no norma de vector.",
+    "∑": "Sumatorio: acumula los términos del índice indicado.",
+    "ln": "Logaritmo natural, base e; su argumento debe ser positivo y adimensional.",
+    "_1": "Índice 1: primera componente, primer paso o primer valor ordenado.",
+    "structure:msqrt": "Raíz cuadrada no negativa: recupera la magnitud cuyo cuadrado es el argumento. Respeta el dominio real de esta ficha.",
+    "structure:mfrac": "Cociente: divide el numerador entre el denominador completo; sus unidades deben ser compatibles con la magnitud resultante.",
+    "structure:msup": "Exponente: una potencia actúa sobre toda la base. Una marca de derivada, adjunto o etiqueta conserva el significado propio definido en esta ficha.",
+    "structure:msub": "Índice inferior: identifica componente, nivel, condición o estado de la base, sin multiplicarla.",
+    "structure:msubsup": "La base lleva índice inferior y marca superior; cada uno se interpreta con la notación de esta ficha.",
+    "structure:mover": "Barra sobre x: media de datos; sobre un vector indica su vector de medias. La marca de flecha identifica vector.",
+    "structure:munder": "Límite inferior o condición del sumatorio escrito.",
+    "structure:munderover": "Límites del sumatorio: especifican qué valores toma su índice.",
+    "H": "Entropía o entropía cruzada, según lleve uno o dos argumentos.",
+    "p": "Distribución objetivo; pi pesa los costes de cada categoría.",
+    "q": "Distribución propuesta o probabilidad predicha.",
+    "i": "Índice de categoría.",
+    "D": "Divergencia KL, exceso de entropía cruzada.",
+    "K": "Parte de KL: Kullback.",
+    "L": "Parte de KL: Leibler.",
+    "bold:H": "Entropía o entropía cruzada, según lleve uno o dos argumentos.",
+    "_H": "Índice H: Entropía o entropía cruzada, según lleve uno o dos argumentos.",
+    "bold:p": "Distribución objetivo; pi pesa los costes de cada categoría.",
+    "_p": "Índice p: Distribución objetivo; pi pesa los costes de cada categoría.",
+    "bold:q": "Distribución propuesta o probabilidad predicha.",
+    "_q": "Índice q: Distribución propuesta o probabilidad predicha.",
+    "bold:i": "Índice de categoría.",
+    "_i": "Índice i: Índice de categoría.",
+    "bold:D": "Divergencia KL, exceso de entropía cruzada.",
+    "_D": "Índice D: Divergencia KL, exceso de entropía cruzada.",
+    "bold:K": "Parte de KL: Kullback.",
+    "_K": "Índice K: Parte de KL: Kullback.",
+    "bold:L": "Parte de KL: Leibler.",
+    "_L": "Índice L: Parte de KL: Leibler.",
+    "bold:‖": "Separa distribuciones en una divergencia dirigida, no norma de vector.",
+    "_‖": "Índice ‖: Separa distribuciones en una divergencia dirigida, no norma de vector."
+  },
+  "formulaGlossaries": [
+    {},
+    {},
+    {}
+  ],
+  "prerequisites": [
+    "probabilidad",
+    "logaritmos",
+    "distribuciones"
+  ],
+  "units": "Probabilidades y pérdida son adimensionales. La base natural produce nats por observación; dividir por ln2 produce bits. p representa frecuencia objetivo y q probabilidad predicha, con funciones diferentes. No se confunde con una métrica simétrica de semejanza.",
+  "dimensions": "Probabilidades y pérdida son adimensionales. La base natural produce nats por observación; dividir por ln2 produce bits. p representa frecuencia objetivo y q probabilidad predicha, con funciones diferentes. No se confunde con una métrica simétrica de semejanza.",
+  "applications": "Comparar predicciones con sus unidades, su base de logaritmo y el conjunto de datos de referencia. Los cuatro retos separan cálculo, ajuste, interpretación y comprobación; las tres vistas permiten identificar qué cambia y qué permanece.",
+  "learningPath": [
+    "Identificar magnitudes",
+    "Comprobar hipótesis",
+    "Predicción",
+    "Exploración",
+    "Explicación del resultado"
+  ]
 }

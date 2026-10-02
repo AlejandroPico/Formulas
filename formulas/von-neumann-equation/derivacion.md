@@ -1,3 +1,11 @@
 # Derivación
 
-La idea común es representar estados mediante operadores positivos de traza uno. Los autovalores codifican mezcla, la traza conserva probabilidad, los conmutadores generan evolución y las cantidades como fidelidad o entropía condensan propiedades operacionales del estado.
+Deriva Uρ0U† y usa dU/dt=−iHU/ħ y la relación adjunta. Aparece dρ/dt=−i(Hρ−ρH)/ħ. La traza del conmutador es cero, y la conjugación unitaria conserva todo el espectro. Para H=ħωσz/2, el vector de Bloch gira en xy con azimut φ0+ωt, conservando su longitud, autovalores y pureza.
+
+## Hipótesis necesarias
+
+Sistema cerrado con Hamiltoniano hermítico fijo. La ecuación no añade decoherencia ni relajación; un sistema abierto requiere términos o ecuaciones adicionales. Se usa una matriz de qubit positiva de traza uno.
+
+## Comprueba con números
+
+Qubit bajo H=ωσz/2, ħ=1, sin disipación. La matriz evoluciona unitariamente y conserva traza, autovalores y pureza. Calcula pureza tr(ρ²) con los datos iniciales. Pureza Tr(ρ²)=0,68 . ρ(t)=Uρ(0)U†; pureza=(1+|r|²)/2.

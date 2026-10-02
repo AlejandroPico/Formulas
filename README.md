@@ -36,7 +36,7 @@ El workflow `formula-catalog.yml` regenera y comprueba los índices al cambiar `
 
 `formula.tex` utiliza un bloque por expresión, separado por una línea en blanco. `meta.json` puede definir `symbolGlossary` y `formulaGlossaries` para explicar cada símbolo y distinguir significados entre expresiones. El motor MathJax 3.2.2 se incluye localmente.
 
-Cada simulador exporta una función de montaje que recibe `{ root, canvas, controls, readout }` y devuelve una función de limpieza. Se carga cuando se visita Simulación y se limpia al salir. Los widgets antiguos migrados mantienen sus implementaciones originales mediante módulos de importación; su revisión pedagógica sigue pendiente.
+Cada simulador exporta una función de montaje que recibe `{ root, canvas, controls, readout }` y devuelve una función de limpieza. Se carga cuando se visita Simulación y se limpia al salir. Las 282 fórmulas tienen revisión completa registrada; cada laboratorio conserva sus propias hipótesis, unidades y límites.
 
 ## Revisiones
 
@@ -45,6 +45,8 @@ Mantén **Alt** y pulsa Filtros para mostrar el botón **Inventario**. Dentro es
 `formulas/revisions.json` guarda el historial permanente. Cada revisión registra fecha, número, alcance, versión del simulador, resumen y comprobaciones. Una fórmula solo se marca revisada después de revisar todas sus pestañas, símbolos y simulador. La creación se obtiene de su primera incorporación al historial de Git, no de su año histórico.
 
 Pitágoras tiene un juego de seis puentes, exploración mediante arrastre y comparación de áreas. Es la primera fórmula revisada en esta etapa.
+
+La última tanda completa las 96 fichas que faltaban: 384 misiones, tres vistas por laboratorio y escenas 3D de estados cuánticos, cosmología y producción. Se revisaron todas las pestañas, símbolos, etiquetas y dominios. Consulta [la novena revisión](docs/novena-revision.md). `node tools/check-atlas.mjs` incluye los siete nuevos grupos matemáticos; sus pruebas de navegador y `check-studio-render.mjs` comprueban interacción, representación y símbolos.
 
 Las diez siguientes revisiones añaden 40 misiones, exploración libre y demostraciones: sectores del disco, rodadura y polígonos, ondas trigonométricas, piezas algebraicas, parejas aritméticas, límites geométricos, alturas y vértices. Norma euclídea y determinantes incluyen escenas 3D que se giran con ratón, tacto o teclado. Sus cálculos y las 40 misiones se comprueban con `node tools/check-learning-labs.mjs`; `node tools/check-learning-browser.mjs` revisa todas las pestañas, los modos, los casos especiales, el móvil y la limpieza.
 

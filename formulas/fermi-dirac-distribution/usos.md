@@ -1,10 +1,11 @@
 # Usos
 
-- Electrones en metales y semiconductores.
-- Gases degenerados de fermiones.
-- Física de enanas blancas y estrellas de neutrones.
-- Capacidad calorífica electrónica.
-- Teoría de bandas y ocupación de estados.
-- Enseñanza de exclusión de Pauli.
+Anticipar el resultado, cambiar una hipótesis cada vez y comprobarlo en las tres vistas del laboratorio. Separar las magnitudes que se conservan de las que cambian, y verificar el dominio antes de interpretar una figura.
 
-La distribución es básica cuando los efectos cuánticos y la indistinguibilidad fermiónica dominan la ocupación de estados.
+## Del experimento al contexto
+
+Ocupación media de un estado fermiónico. La temperatura suaviza el escalón alrededor de μ; un estado individual tiene ocupación entre cero y uno.
+
+## Condiciones antes de aplicar
+
+Fermiones ideales en equilibrio, T>0 y ocupación por estado individual. El límite T=0 se muestra como referencia; no se evalúa división por cero ni se confunde ocupación con densidad de estados o con densidad de partículas.

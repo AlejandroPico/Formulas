@@ -1,9 +1,11 @@
 # Historia
 
-Paul Dirac propuso su ecuación en 1928. Buscaba una ecuación cuántica compatible con la relatividad especial que fuese de primer orden en el tiempo y en el espacio, y que reprodujera la relación relativista entre energía y momento.
+Dirac formuló una dinámica relativista de primer orden con estructura matricial. Sus ramas y espinores muestran que reproducir la relación energía–momento no basta para reproducir toda la teoría. La reducción de este laboratorio mantiene ese rasgo sin atribuirle fenómenos que no calcula.
 
-La solución introdujo matrices gamma y espinores de cuatro componentes. Esta estructura explicó de manera natural el espín del electrón y su momento magnético con una precisión sorprendente para la época.
+## Referencia y alcance
 
-La presencia de soluciones de energía negativa fue inicialmente desconcertante. La interpretación posterior condujo a la predicción de la antimateria. El positrón fue observado experimentalmente pocos años después, confirmando una de las predicciones más espectaculares de la física teórica.
+[Material de estudio](https://ocw.mit.edu/courses/5-73-quantum-mechanics-i-fall-2018/pages/lecture-notes/).
 
-La ecuación de Dirac sigue siendo central en física de partículas, teoría cuántica de campos, estructura fina atómica y materiales relativistas efectivos como el grafeno en ciertos regímenes.
+Campo libre relativista. La figura resuelve una reducción 1+1 de dos componentes, no el espinor completo 3+1. No simula creación de pares, campos externos ni un proceso de antipartículas. Masa del control positiva para evitar el punto E=0 degenerado.
+
+La fecha de creación del catálogo procede del archivo original; el año científico y la fecha de revisión tienen funciones diferentes.

@@ -1,26 +1,25 @@
-# Ficha
+# Atención escalada
 
-## Identificación
+Una consulta 2D y tres claves fijas, valores escalares. Atención escalada por √2; una máscara opcional excluye la tercera clave antes de normalizar.
 
-- **Nombre:** Atención escalada
-- **Autores asociados:** Vaswani et al.
-- **Año:** 2017
-- **Área:** aprendizaje automático y transformers
-- **Nivel:** universidad
-- **Tipo:** mecanismo de atención
+## Magnitudes y notación
 
-## Variables
+| Símbolo | Interpretación |
+| :-- | :-- |
+| Attention | Mezcla de valores con compatibilidades normalizadas. |
+| Q | Matriz de consultas. |
+| K | Matriz de claves. |
+| V | Matriz de valores a mezclar. |
+| d | Dimensión de consulta y clave. |
+| k | Índice que distingue dimensión de claves. |
+| M | Máscara aditiva: cero permitido, −∞ prohibido. |
+| softmax | Normalización exponencial por fila de claves. |
+| ⊤ | Transposición: intercambia filas y columnas de K. |
 
-- `Q`: matriz de consultas.
-- `K`: matriz de claves.
-- `V`: matriz de valores.
-- `d_k`: dimensión de las claves.
-- `A`: matriz de pesos de atención.
+## Condiciones
 
-## Lectura del simulador
+Debe quedar al menos una clave permitida por fila. Q y K comparten dk; V puede tener otra dimensión. Una máscara no se añade después de softmax. Atención no es selección dura y sus pesos no equivalen por sí solos a explicación causal de una predicción.
 
-Las barras representan pesos de atención sobre tres tokens. El control modifica la similitud cruda del token principal. La casilla activa o desactiva el escalado por raíz de `d_k`.
+## Unidades
 
-## Nota
-
-Sin escalado, softmax puede volverse excesivamente concentrado y producir gradientes pobres para tokens no dominantes.
+Las coordenadas y parámetros usan escala numérica de referencia. Probabilidades, razones, fases en radianes y pesos de atención son adimensionales. Las dimensiones de matrices deben permitir todos los productos; el laboratorio declara cada vector reducido.

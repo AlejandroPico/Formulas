@@ -1,11 +1,24 @@
-# Ficha
+# Criterios de información AIC y BIC
 
-## Identificacion
+Criterios calculados sobre log-verosimilitud máxima, cantidad de parámetros y tamaño muestral. Comparar modelos exige los mismos datos, respuesta y convenciones de verosimilitud.
 
-- Nombre: Criterios de información AIC y BIC.
-- Area: Probabilidad y estadística.
-- Tipo: inferencia, decision estadistica o informacion.
+## Magnitudes y notación
 
-## Lectura del simulador
+| Símbolo | Interpretación |
+| :-- | :-- |
+| A | Parte de AIC: criterio de información de Akaike. |
+| I | Parte de AIC o BIC: información. |
+| C | Parte de AIC o BIC: criterio. |
+| B | Parte de BIC: criterio bayesiano de información. |
+| k | Número de parámetros libres estimados. |
+| n | Número de observaciones usado en BIC. |
+| L | Verosimilitud máxima si lleva sombrero. |
+| ˆ | Sombrero sobre L: verosimilitud evaluada en el máximo del modelo. |
 
-Mueve los controles inferiores. El grafico muestra regiones criticas, barras, intervalos, posterioris o densidades, y el readout resume la magnitud calculada.
+## Condiciones
+
+Comparación de modelos sobre mismos datos y variable respuesta, con convenciones completas y compatibles de verosimilitud. Se cumplen los supuestos de sus aproximaciones; AICc y situaciones singulares requieren otro tratamiento. No comparar valores de distintos datos como si fueran una puntuación universal, ni interpretar menor criterio como prueba de verdad.
+
+## Unidades
+
+k,n son conteos adimensionales y ln usa base natural. El control de log-verosimilitud es lnL̂, de forma que no se vuelve a tomar su logaritmo. La contribución de ajuste es −2 veces ese control. AIC y BIC no son probabilidades ni porcentajes de acierto.

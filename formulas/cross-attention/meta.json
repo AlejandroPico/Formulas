@@ -3,47 +3,87 @@
   "name": "Cross-Attention: atención cruzada",
   "year": 2017,
   "field": "Transformers / Aprendizaje profundo",
-  "level": "Universidad intermedia",
+  "level": "Universidad inicial",
   "color": "#0ea5e9",
   "formula": [
-    "Attention(Q_t,K_s,V_s)=softmax(Q_tK_s^T/√d_k)V_s"
+    "\\operatorname{Attention}(Q,K,V)=\\operatorname{softmax}\\!\\left(\\frac{QK^\\top}{\\sqrt{d_k}}+M\\right)V"
   ],
-  "summary": "Permite que una secuencia objetivo consulte claves y valores de otra secuencia fuente.",
-  "sim": "scripts/transformer-cross-attention-sim.js?v=20260705a",
-  "k": "cross",
+  "summary": "Consulta de un decodificador y tres claves y valores de una memoria externa. Mismo mecanismo de atención, con procedencias de Q y K,V distintas.",
   "folder": "formulas/cross-attention",
   "source": "files",
   "formulaText": [
-    "Permite que una secuencia objetivo consulte claves y valores de otra secuencia fuente."
+    "Consulta de un decodificador y tres claves y valores de una memoria externa. Mismo mecanismo de atención, con procedencias de Q y K,V distintas."
   ],
   "tags": [
-    "aprendizaje por refuerzo",
-    "transformers",
-    "attention",
-    "positional encoding",
-    "ppo",
-    "q-learning",
-    "sarsa"
+    "atención",
+    "cross attention",
+    "transformers"
   ],
   "prerequisites": [
-    "probabilidad",
-    "gradiente",
-    "bellman",
-    "algebra lineal",
-    "softmax",
-    "redes neuronales"
+    "álgebra lineal",
+    "derivadas",
+    "probabilidad"
   ],
   "learningPath": [
-    "formula",
-    "significado",
-    "historia",
-    "derivacion",
-    "simulacion"
+    "Identificar magnitudes",
+    "Comprobar hipótesis",
+    "Predicción",
+    "Exploración",
+    "Explicación del resultado"
   ],
-  "units": "Unidades didácticas normalizadas.",
-  "dimensions": "Ver ficha.",
+  "units": "Las coordenadas y parámetros usan escala numérica de referencia. Probabilidades, razones, fases en radianes y pesos de atención son adimensionales. Las dimensiones de matrices deben permitir todos los productos; el laboratorio declara cada vector reducido.",
+  "dimensions": "Las coordenadas y parámetros usan escala numérica de referencia. Probabilidades, razones, fases en radianes y pesos de atención son adimensionales. Las dimensiones de matrices deben permitir todos los productos; el laboratorio declara cada vector reducido.",
   "symbols": [],
   "legacySource": "runtime-batch-migration",
   "originalSource": "scripts/latest-formula-batch-27.js",
-  "createdAt": "2026-07-06"
+  "createdAt": "2026-07-06",
+  "simulation": "cross-attention",
+  "simulatorVersion": 2,
+  "symbolGlossary": {
+    "=": "Igualdad: ambos lados tienen el mismo valor matemático.",
+    "+": "Suma de los términos indicados.",
+    ",": "Separación de expresiones o condiciones.",
+    "(": "Abre un grupo de términos que se opera como una sola base.",
+    ")": "Cierra el grupo de términos.",
+    "structure:msqrt": "Raíz cuadrada no negativa: recupera la magnitud cuyo cuadrado es el argumento. Respeta el dominio real de esta ficha.",
+    "structure:mfrac": "Cociente: divide el numerador entre el denominador completo; sus unidades deben ser compatibles con la magnitud resultante.",
+    "structure:msup": "Exponente: una potencia actúa sobre toda la base. Una marca de derivada, adjunto o etiqueta conserva el significado propio definido en esta ficha.",
+    "structure:msub": "Índice inferior: identifica componente, nivel, condición o estado de la base, sin multiplicarla.",
+    "structure:msubsup": "La base lleva índice inferior y marca superior; cada uno se interpreta con la notación de esta ficha.",
+    "structure:mover": "Barra sobre x: media de datos; sobre un vector indica su vector de medias. La marca de flecha identifica vector.",
+    "structure:munder": "Límite inferior o condición del sumatorio escrito.",
+    "structure:munderover": "Límites del sumatorio: especifican qué valores toma su índice.",
+    "√": "Raíz cuadrada: devuelve la magnitud no negativa cuyo cuadrado es el argumento.",
+    "Attention": "Mezcla de valores con compatibilidades normalizadas.",
+    "Q": "Matriz de consultas.",
+    "K": "Matriz de claves.",
+    "V": "Matriz de valores a mezclar.",
+    "d": "Dimensión de consulta y clave.",
+    "k": "Índice que distingue dimensión de claves.",
+    "M": "Máscara aditiva: cero permitido, −∞ prohibido.",
+    "softmax": "Normalización exponencial por fila de claves.",
+    "⊤": "Transposición: intercambia filas y columnas de K.",
+    "bold:Attention": "Mezcla de valores con compatibilidades normalizadas.",
+    "_Attention": "Índice Attention: Mezcla de valores con compatibilidades normalizadas.",
+    "bold:Q": "Matriz de consultas.",
+    "_Q": "Índice Q: Matriz de consultas.",
+    "bold:K": "Matriz de claves.",
+    "_K": "Índice K: Matriz de claves.",
+    "bold:V": "Matriz de valores a mezclar.",
+    "_V": "Índice V: Matriz de valores a mezclar.",
+    "bold:d": "Dimensión de consulta y clave.",
+    "_d": "Índice d: Dimensión de consulta y clave.",
+    "bold:k": "Índice que distingue dimensión de claves.",
+    "_k": "Índice k: Índice que distingue dimensión de claves.",
+    "bold:M": "Máscara aditiva: cero permitido, −∞ prohibido.",
+    "_M": "Índice M: Máscara aditiva: cero permitido, −∞ prohibido.",
+    "bold:softmax": "Normalización exponencial por fila de claves.",
+    "_softmax": "Índice softmax: Normalización exponencial por fila de claves.",
+    "bold:⊤": "Transposición: intercambia filas y columnas de K.",
+    "_⊤": "Índice ⊤: Transposición: intercambia filas y columnas de K."
+  },
+  "formulaGlossaries": [
+    {}
+  ],
+  "applications": "Cada fila de QKᵀ mide compatibilidades de una consulta con claves. Divide por √dk para moderar la escala; una máscara aditiva M pone −∞ en claves prohibidas. Softmax por fila asigna pesos normalizados; multiplicar por V mezcla valores. El ejemplo utiliza una consulta 2D, tres claves [(1,0),(0,1),(−1,0)] y valores escalares [2,−1,1]. Q procede de un decodificador y K,V de una memoria de codificador; no se cambia la ecuación, cambia la procedencia. En aplicaciones, verifica dimensión, máscara y procedencia de datos antes de trasladar el ejemplo a un modelo real."
 }

@@ -1,21 +1,20 @@
-# Ficha
+# Kernel RBF: función de base radial
 
-**Nombre:** Kernel RBF: función de base radial
+Kernel gaussiano exp(−γ||x−c||²), γ>0, con dos coordenadas y centro fijo ajustable. La escala de cada característica define la distancia.
 
-**Área:** Machine Learning / Kernels
+## Magnitudes y notación
 
-**Nivel:** Universidad intermedia
+| Símbolo | Interpretación |
+| :-- | :-- |
+| K | Similitud gaussiana entre dos vectores. |
+| x | Vector consultado. |
+| c | Vector centro de referencia. |
+| γ | Inverso de escala cuadrática de distancia. |
 
-**Resumen:** Mide similitud local mediante una campana gaussiana centrada en un punto de soporte.
+## Condiciones
 
-## Lectura e interpretación
+γ tiene dimensión inversa al cuadrado de distancia. Características con unidades distintas deben escalarse de forma declarada; no se normalizan aquí automáticamente. K no es una densidad ni una probabilidad de pertenecer a una clase.
 
-# Interpretación
+## Unidades
 
-Mueve los controles y observa qué domina: anchura del kernel, margen, densidad, inercia, varianza proyectada, rango efectivo o teletransporte.
-
-## Validez y limitaciones
-
-# Limitaciones
-
-γ mal elegido produce sobreajuste local o fronteras excesivamente suaves.
+Variables numéricas en unidades de referencia; los índices y probabilidades son adimensionales. Una distancia conserva la escala de las características; su cuadrado tiene escala cuadrática.

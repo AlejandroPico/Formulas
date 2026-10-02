@@ -1,9 +1,11 @@
 # Historia
 
-La normalización exponencial apareció en estadística y física estadística antes de su uso masivo en aprendizaje automático.
+La normalización exponencial se usa en distribuciones de Gibbs, modelos multinomiales y clasificación neuronal. La temperatura vincula la concentración de probabilidades con la escala relativa de los logits.
 
-En redes neuronales modernas, softmax se convirtió en la salida estándar para clasificación multiclase porque transforma logits en probabilidades comparables.
+## Referencia y alcance
 
-Su uso se consolidó junto con la entropía cruzada, ya que ambas encajan bien para entrenar clasificadores probabilísticos.
+[Material de estudio](https://cs229.stanford.edu/main_notes.pdf).
 
-Hoy aparece en clasificadores, modelos de lenguaje, atención, políticas estocásticas y modelos generativos.
+Logits no son probabilidades ni evidencias calibradas. T debe ser positiva. La salida normalizada no garantiza buena calibración, ni elimina incertidumbre o sesgo de datos. El límite de temperatura cero necesita tratar empates.
+
+La fecha de creación del catálogo procede del archivo original; el año científico y la fecha de revisión tienen funciones diferentes.

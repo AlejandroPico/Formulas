@@ -1,9 +1,11 @@
 # Significado
 
-La ecuación de Bellman expresa una idea recursiva: el valor de un estado combina la recompensa inmediata con el valor esperado de los estados futuros.
+Cadena de tres estados y una meta terminal. Quedarse cuesta 0,5; intentar avanzar cuesta 1 y llegar a meta recompensa 5. Avance probabilístico y descuento γ<1.
 
-El factor `gamma` descuenta el futuro. Si `gamma` es bajo, el agente prioriza recompensas cercanas. Si es alto, las recompensas lejanas conservan más importancia.
+## Qué conserva y qué cambia
 
-En aprendizaje por refuerzo, esta relación permite propagar recompensas desde una meta hacia estados anteriores.
+Descompón el retorno en recompensa inmediata y retorno futuro descontado. Para cada acción, suma por estados siguientes con sus probabilidades; elige la acción de mayor valor. El operador es una contracción para γ<1 en un MDP finito acotado. El laboratorio aplica barridos simultáneos y conserva historial, con la meta terminal fijada en cero y recompensa al entrar.
 
-El simulador muestra una cadena de estados. La recompensa final se propaga hacia la izquierda multiplicándose por `gamma`, de modo que los estados más alejados reciben menor valor si el descuento es fuerte.
+## Primera predicción
+
+Cadena de tres estados y una meta terminal. Quedarse cuesta 0,5; intentar avanzar cuesta 1 y llegar a meta recompensa 5. Avance probabilístico y descuento γ<1. Calcula valor del estado inicial con los datos iniciales. Valor del estado inicial=-0,5 . V(s)=maxa E[r+γV(s′)]. La meta tiene V=0.

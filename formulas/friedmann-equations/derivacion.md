@@ -1,9 +1,11 @@
 # Derivación
 
-Las ecuaciones de Friedmann se obtienen al aplicar las ecuaciones de campo de Einstein a una métrica cosmológica homogénea e isótropa. Esa métrica se conoce como FLRW y contiene el factor de escala `a(t)`, que mide la evolución global del tamaño del universo.
+La simetría FLRW reduce Einstein a una ecuación para H² y otra para la aceleración. Para materia sin presión, la conservación da ρm proporcional a a⁻³; el vacío permanece constante y la curvatura aparece como a⁻². Normalizar en a0=1 obliga a cerrar la suma de contribuciones. El laboratorio integra da/dt=H0√(Ωm/a+Ωk+ΩΛa²), convirtiendo H0 a Gyr⁻¹.
 
-El contenido material se modela como un fluido perfecto caracterizado por densidad `rho` y presión `p`. Al sustituir la métrica y el tensor energía-momento en las ecuaciones de Einstein, las ecuaciones tensoriales se reducen a ecuaciones ordinarias para `a(t)`.
+## Hipótesis necesarias
 
-La primera ecuación actúa como una ecuación de energía para la expansión. La segunda indica si la expansión se acelera o se frena. La conservación de energía-momento aporta una ecuación adicional que relaciona la evolución de la densidad con la expansión.
+La primera expresión escribe Λ por separado: ρ y p excluyen esa contribución, para no contarla dos veces. Modelo futuro de materia, curvatura y Λ no negativa, sin radiación. Se sigue la rama expansiva; un retorno detiene el reloj calculado y no se prolonga como expansión ficticia. No es reconstrucción de la historia temprana.
 
-El resultado es un sistema que permite estudiar universos dominados por materia, radiación, curvatura o constante cosmológica.
+## Comprueba con números
+
+Expansión FLRW futura desde a=1, con materia sin presión, curvatura y constante cosmológica positiva. La integración sigue la rama expansiva y se detiene en un retorno. Calcula hubble instantáneo con los datos iniciales en km/s/Mpc. Hubble instantáneo=70 km/s/Mpc. H²=H0²(Ωm/a³+Ωk/a²+ΩΛ), Ωk=1−Ωm−ΩΛ.

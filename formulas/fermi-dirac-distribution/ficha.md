@@ -1,26 +1,23 @@
-# Ficha
+# Distribución de Fermi-Dirac
 
-## Identificación
+Ocupación media de un estado fermiónico. La temperatura suaviza el escalón alrededor de μ; un estado individual tiene ocupación entre cero y uno.
 
-- **Nombre:** Distribución de Fermi-Dirac
-- **Autores asociados:** Enrico Fermi y Paul Dirac
-- **Año:** 1926
-- **Área:** mecánica estadística cuántica
-- **Nivel:** universidad
-- **Tipo:** distribución de ocupación fermiónica
+## Magnitudes y notación
 
-## Variables
+| Símbolo | Interpretación |
+| :-- | :-- |
+| n | Ocupación del estado; con barra es su promedio estadístico. |
+| ε | Energía de un estado individual. |
+| μ | Potencial químico; centro del borde térmico. |
+| k | Constante de Boltzmann con índice B. |
+| T | Temperatura absoluta positiva. |
+| – | Barra: promedio de ocupación sobre el conjunto estadístico. |
+| B | Índice B: identifica la constante de Boltzmann. |
 
-- `f(E)`: ocupación media.
-- `E`: energía.
-- `E_F`: energía de Fermi.
-- `k_B`: constante de Boltzmann.
-- `T`: temperatura.
+## Condiciones
 
-## Lectura del simulador
+Fermiones ideales en equilibrio, T>0 y ocupación por estado individual. El límite T=0 se muestra como referencia; no se evalúa división por cero ni se confunde ocupación con densidad de estados o con densidad de partículas.
 
-La curva roja es la ocupación `f(E)`. La zona bajo la curva representa estados ocupados. A temperatura cero aparece un escalón; al aumentar `T`, la transición se suaviza alrededor de `E_F`.
+## Unidades
 
-## Nota
-
-La simulación es cualitativa. En materiales reales también importa la densidad de estados y la estructura de bandas.
+Energías ε,μ,kBT expresadas en ε0. La ocupación es adimensional y está entre cero y uno; una población total se obtiene al sumar sobre los estados accesibles.

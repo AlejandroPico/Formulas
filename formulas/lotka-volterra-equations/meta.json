@@ -8,9 +8,76 @@
   "color": "#22c55e",
   "simulation": "lotka-volterra-equations",
   "formulaText": [
-    "las presas crecen de forma natural y disminuyen por encuentros con depredadores",
-    "los depredadores crecen al alimentarse de presas y mueren en ausencia de alimento"
+    "Sistema ideal presa-depredador con interacción bilineal y sin capacidad de carga. Integra las ecuaciones y compara ciclos con sus nulclinas."
   ],
-  "summary": "Modelo depredador-presa que genera oscilaciones acopladas entre dos poblaciones.",
-  "tags": []
+  "summary": "Sistema ideal presa-depredador con interacción bilineal y sin capacidad de carga. Integra las ecuaciones y compara ciclos con sus nulclinas.",
+  "tags": [
+    "dinámica de poblaciones",
+    "depredación",
+    "sistemas dinámicos",
+    "plano de fase"
+  ],
+  "formula": [
+    "\\dot x=ax-bxy,\\qquad\\dot y=dxy-cy",
+    "x_*=\\frac cd,\\qquad y_*=\\frac ab",
+    "dx-c\\ln x+by-a\\ln y=\\mathrm{constante}"
+  ],
+  "simulatorVersion": 2,
+  "symbolGlossary": {
+    "=": "Igualdad: ambos lados tienen el mismo valor matemático.",
+    "+": "Suma de los términos indicados.",
+    "−": "Resta o signo negativo del término siguiente.",
+    ",": "Separación de expresiones o condiciones.",
+    "ln": "Logaritmo natural, base e; su argumento debe ser positivo y adimensional.",
+    "structure:msqrt": "Raíz cuadrada no negativa: recupera la magnitud cuyo cuadrado es el argumento. Respeta el dominio real de esta ficha.",
+    "structure:mfrac": "Cociente: divide el numerador entre el denominador completo; sus unidades deben ser compatibles con la magnitud resultante.",
+    "structure:msup": "Exponente: una potencia actúa sobre toda la base. Una marca de derivada, adjunto o etiqueta conserva el significado propio definido en esta ficha.",
+    "structure:msub": "Índice inferior: identifica componente, nivel, condición o estado de la base, sin multiplicarla.",
+    "structure:msubsup": "La base lleva índice inferior y marca superior; cada uno se interpreta con la notación de esta ficha.",
+    "structure:mover": "Barra sobre x: media de datos; sobre un vector indica su vector de medias. La marca de flecha identifica vector.",
+    "structure:munder": "Límite inferior o condición del sumatorio escrito.",
+    "structure:munderover": "Límites del sumatorio: especifican qué valores toma su índice.",
+    "x": "Población escalada de presas, no posición espacial.",
+    "y": "Población escalada de depredadores.",
+    "a": "Crecimiento per cápita de la presa en ausencia de depredador.",
+    "b": "Coeficiente de pérdida de presa por encuentros.",
+    "c": "Mortalidad per cápita del depredador.",
+    "d": "Conversión de encuentros en crecimiento del depredador.",
+    "constante": "Valor conservado del primer integral para una misma trayectoria.",
+    "_∗": "Índice estrella: equilibrio de las poblaciones, no multiplicación.",
+    "bold:x": "Población escalada de presas, no posición espacial.",
+    "_x": "Índice x: Población escalada de presas, no posición espacial.",
+    "bold:y": "Población escalada de depredadores.",
+    "_y": "Índice y: Población escalada de depredadores.",
+    "bold:a": "Crecimiento per cápita de la presa en ausencia de depredador.",
+    "_a": "Índice a: Crecimiento per cápita de la presa en ausencia de depredador.",
+    "bold:b": "Coeficiente de pérdida de presa por encuentros.",
+    "_b": "Índice b: Coeficiente de pérdida de presa por encuentros.",
+    "bold:c": "Mortalidad per cápita del depredador.",
+    "_c": "Índice c: Mortalidad per cápita del depredador.",
+    "bold:d": "Conversión de encuentros en crecimiento del depredador.",
+    "_d": "Índice d: Conversión de encuentros en crecimiento del depredador.",
+    "bold:constante": "Valor conservado del primer integral para una misma trayectoria.",
+    "_constante": "Índice constante: Valor conservado del primer integral para una misma trayectoria."
+  },
+  "formulaGlossaries": [
+    {},
+    {},
+    {}
+  ],
+  "prerequisites": [
+    "interpretar tasas",
+    "balance de magnitudes",
+    "funciones y unidades"
+  ],
+  "units": "a,c tienen tiempo⁻¹ y b,d tienen población⁻¹·tiempo⁻¹, con escalas compatibles para las dos poblaciones. El laboratorio usa unidades reducidas. Los logaritmos se entienden de poblaciones divididas por su escala de referencia; constantes añadidas no cambian el primer integral.",
+  "dimensions": "a,c tienen tiempo⁻¹ y b,d tienen población⁻¹·tiempo⁻¹, con escalas compatibles para las dos poblaciones. El laboratorio usa unidades reducidas. Los logaritmos se entienden de poblaciones divididas por su escala de referencia; constantes añadidas no cambian el primer integral.",
+  "applications": "Comparar el resultado con sus hipótesis y explicar qué parámetro domina el cambio. El laboratorio incluye predicción, ajuste de un objetivo, interpretación del modelo y una nueva comprobación numérica.",
+  "learningPath": [
+    "Identificar magnitudes",
+    "Comprobar hipótesis",
+    "Predicción",
+    "Exploración",
+    "Explicación del resultado"
+  ]
 }

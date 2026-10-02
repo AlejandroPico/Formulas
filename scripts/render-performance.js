@@ -306,7 +306,7 @@ function renderFormulaDisplay(display) {
   if (display.mode === "explained") {
     return `<div class="formula-words-stack">${display.formulas.map(line => `<div class="formula-words-row">${escapeHtml(line)}</div>`).join("")}</div>`;
   }
-  return `<div class="formula-stack">${display.formulas.map(line => `<div class="formula-line">\\(${line}\\)</div>`).join("")}</div>`;
+  return `<div class="formula-stack">${display.formulas.map(line => `<div class="formula-line">\\(${escapeHtml(line)}\\)</div>`).join("")}</div>`;
 }
 
 function bindGridDelegation(grid) {

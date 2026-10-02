@@ -6,45 +6,89 @@
   "level": "Universidad inicial",
   "color": "#8b5cf6",
   "formula": [
-    "N_ε(p)={q∈D ∣ d(p,q)≤ε}",
-    "núcleo si |N_ε(p)|≥MinPts"
+    "N_\\varepsilon(x)=\\{y:\\|y-x\\|\\le\\varepsilon\\}",
+    "|N_\\varepsilon(x)|\\ge\\operatorname{MinPts}\\quad\\Longrightarrow\\quad x\\ \\text{es núcleo}"
   ],
-  "summary": "Agrupa puntos conectados por densidad y detecta ruido sin fijar K.",
-  "sim": "scripts/ml-dbscan-sim.js?v=20260705a",
-  "k": "dbscan",
+  "summary": "DBSCAN sobre diez puntos. MinPts incluye al propio punto; los núcleos expanden grupos, los bordes no los expanden y el ruido puede cambiar al ajustar ε.",
   "folder": "formulas/dbscan-density-based-clustering",
   "source": "files",
   "formulaText": [
-    "Agrupa puntos conectados por densidad y detecta ruido sin fijar K."
+    "DBSCAN sobre diez puntos. MinPts incluye al propio punto; los núcleos expanden grupos, los bordes no los expanden y el ruido puede cambiar al ajustar ε."
   ],
   "tags": [
-    "aprendizaje automático",
-    "clustering",
-    "svm",
-    "kernel",
-    "pca",
-    "svd",
-    "pagerank",
-    "grafos"
+    "dbscan",
+    "agrupamiento",
+    "densidad",
+    "distancias"
   ],
   "prerequisites": [
-    "algebra lineal",
-    "distancias",
-    "optimizacion",
-    "probabilidad",
-    "estadistica"
+    "álgebra lineal",
+    "derivadas",
+    "probabilidad"
   ],
   "learningPath": [
-    "formula",
-    "significado",
-    "historia",
-    "derivacion",
-    "simulacion"
+    "Identificar magnitudes",
+    "Comprobar hipótesis",
+    "Predicción",
+    "Exploración",
+    "Explicación del resultado"
   ],
-  "units": "Unidades didácticas normalizadas.",
-  "dimensions": "Ver ficha.",
+  "units": "Variables numéricas en unidades de referencia; los índices y probabilidades son adimensionales. Una distancia conserva la escala de las características; su cuadrado tiene escala cuadrática.",
+  "dimensions": "Variables numéricas en unidades de referencia; los índices y probabilidades son adimensionales. Una distancia conserva la escala de las características; su cuadrado tiene escala cuadrática.",
   "symbols": [],
   "legacySource": "runtime-batch-migration",
   "originalSource": "scripts/latest-formula-batch-26.js",
-  "createdAt": "2026-07-06"
+  "createdAt": "2026-07-06",
+  "simulation": "dbscan-density-based-clustering",
+  "simulatorVersion": 2,
+  "symbolGlossary": {
+    "=": "Igualdad: ambos lados tienen el mismo valor matemático.",
+    "−": "Resta o signo negativo del término siguiente.",
+    "(": "Abre un grupo de términos que se opera como una sola base.",
+    ")": "Cierra el grupo de términos.",
+    "|": "Cardinalidad: número de puntos del vecindario.",
+    "‖": "Norma del vector, calculada con sus componentes.",
+    "≥": "Mayor o igual: incluye el valor límite.",
+    "≤": "Menor o igual: incluye el límite.",
+    "structure:msqrt": "Raíz cuadrada no negativa: recupera la magnitud cuyo cuadrado es el argumento. Respeta el dominio real de esta ficha.",
+    "structure:mfrac": "Cociente: divide el numerador entre el denominador completo; sus unidades deben ser compatibles con la magnitud resultante.",
+    "structure:msup": "Exponente: una potencia actúa sobre toda la base. Una marca de derivada, adjunto o etiqueta conserva el significado propio definido en esta ficha.",
+    "structure:msub": "Índice inferior: identifica componente, nivel, condición o estado de la base, sin multiplicarla.",
+    "structure:msubsup": "La base lleva índice inferior y marca superior; cada uno se interpreta con la notación de esta ficha.",
+    "structure:mover": "Barra sobre x: media de datos; sobre un vector indica su vector de medias. La marca de flecha identifica vector.",
+    "structure:munder": "Límite inferior o condición del sumatorio escrito.",
+    "structure:munderover": "Límites del sumatorio: especifican qué valores toma su índice.",
+    "N": "Vecindario cerrado de radio ε.",
+    "ε": "Radio máximo de vecindad.",
+    "x": "Punto central.",
+    "y": "Punto candidato a vecino.",
+    "MinPts": "Mínimo de puntos, incluido el propio, para ser núcleo.",
+    "{": "Abre el conjunto de vecinos.",
+    "}": "Cierra el conjunto de vecinos.",
+    ":": "Separa elemento y condición del conjunto.",
+    "⟹": "La condición implica que x es núcleo.",
+    "bold:N": "Vecindario cerrado de radio ε.",
+    "_N": "Índice N: Vecindario cerrado de radio ε.",
+    "bold:ε": "Radio máximo de vecindad.",
+    "_ε": "Índice ε: Radio máximo de vecindad.",
+    "bold:x": "Punto central.",
+    "_x": "Índice x: Punto central.",
+    "bold:y": "Punto candidato a vecino.",
+    "_y": "Índice y: Punto candidato a vecino.",
+    "bold:MinPts": "Mínimo de puntos, incluido el propio, para ser núcleo.",
+    "_MinPts": "Índice MinPts: Mínimo de puntos, incluido el propio, para ser núcleo.",
+    "bold:|": "Cardinalidad: número de puntos del vecindario.",
+    "_|": "Índice |: Cardinalidad: número de puntos del vecindario.",
+    "bold:{": "Abre el conjunto de vecinos.",
+    "_{": "Índice {: Abre el conjunto de vecinos.",
+    "bold:}": "Cierra el conjunto de vecinos.",
+    "_}": "Índice }: Cierra el conjunto de vecinos.",
+    "bold:⟹": "La condición implica que x es núcleo.",
+    "_⟹": "Índice ⟹: La condición implica que x es núcleo."
+  },
+  "formulaGlossaries": [
+    {},
+    {}
+  ],
+  "applications": "Cuenta vecinos dentro de una bola cerrada de radio ε, incluido el punto central. Un núcleo inicia expansión mediante otros núcleos alcanzables. Un borde es vecino de núcleo pero no cumple MinPts; no expande. Los puntos no asignados son ruido. Los círculos de la vista de vecindarios muestran radios reales a escala igual; cambiar ε puede fusionar los dos grupos o absorber ruido. En el laboratorio contrasta una predicción, construye el objetivo y explica qué supuesto permite el resultado."
 }

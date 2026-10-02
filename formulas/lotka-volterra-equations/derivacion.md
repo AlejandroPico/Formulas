@@ -1,9 +1,11 @@
 # Derivación
 
-Se parte de una población de presas que crecería exponencialmente si no hubiera depredadores. Ese crecimiento se representa con `alpha x`.
+La presa aumenta a tasa per cápita a y pierde población por encuentros bxy. El depredador gana dxy y muere a tasa per cápita c. Anular ambas derivadas con x,y positivos da x*=c/d e y*=a/b. Diferenciar dx−clnx+by−alny a lo largo de la solución cancela todos los términos: es un primer integral del sistema ideal. Las trayectorias cercanas al equilibrio son ciclos neutrales, no un atractor amortiguado.
 
-Los encuentros presa-depredador se aproximan mediante el producto `xy`. Cada encuentro reduce presas con intensidad `beta` y puede aumentar depredadores con eficiencia `delta`.
+## Hipótesis necesarias
 
-Los depredadores tienen además mortalidad natural `gamma y` cuando no hay alimento suficiente.
+Poblaciones continuas positivas, medio homogéneo, tasas constantes, sin recursos finitos, inmigración ni fluctuaciones. El primer integral solo se escribe para x,y>0. La integración RK4 usa paso 0,01 de tiempo reducido y no introduce amortiguación física. Los números son poblaciones escaladas, no una especie concreta.
 
-Al combinar esos términos aparecen las dos ecuaciones diferenciales acopladas del modelo.
+## Comprueba con números
+
+Sistema ideal presa-depredador con interacción bilineal y sin capacidad de carga. Integra las ecuaciones y compara ciclos con sus nulclinas. Calcula presa en coexistencia con los datos iniciales. Presa en coexistencia=2 . Equilibrio interior: x*=c/d, y*=a/b.

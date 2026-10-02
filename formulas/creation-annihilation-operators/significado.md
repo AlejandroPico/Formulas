@@ -1,3 +1,11 @@
 # Significado
 
-El simulador muestra niveles |n⟩, flecha de subida o bajada, estado destino y factor √n o √(n+1). Explica que el operador cambia nivel y amplitud.
+Actúa sobre un estado número del oscilador. Separa coeficiente de amplitud del nuevo estado normalizado; destruir el vacío produce el vector cero.
+
+## Qué conserva y qué cambia
+
+El operador número N=a†a tiene autovalor n. La relación [a,a†]=1 permite subir y bajar autovalores en una unidad. La norma al destruir es √n y al crear √(n+1). El vector resultante debe normalizarse antes de interpretarlo como estado preparado. Para n=0, la norma de a|0⟩ es cero: no puede normalizarse y no se crea un nivel n=−1.
+
+## Primera predicción
+
+Actúa sobre un estado número del oscilador. Separa coeficiente de amplitud del nuevo estado normalizado; destruir el vacío produce el vector cero. Calcula coeficiente de amplitud con los datos iniciales. Coeficiente de amplitud=1,7321 . a|n⟩=√n|n−1⟩; a†|n⟩=√(n+1)|n+1⟩.

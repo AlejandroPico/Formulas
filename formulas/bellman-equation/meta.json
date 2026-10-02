@@ -4,13 +4,86 @@
   "author": "Richard Bellman",
   "year": 1957,
   "field": "Aprendizaje por refuerzo y programación dinámica",
-  "level": "Universidad",
+  "level": "Universidad inicial",
   "color": "#22c55e",
   "simulation": "bellman-equation",
   "formulaText": [
-    "el valor de un estado es recompensa inmediata más valor futuro descontado",
-    "el factor gamma controla cuánto importan recompensas lejanas"
+    "Cadena de tres estados y una meta terminal. Quedarse cuesta 0,5; intentar avanzar cuesta 1 y llegar a meta recompensa 5. Avance probabilístico y descuento γ<1."
   ],
-  "summary": "Relación recursiva que define el valor óptimo de estados o acciones en decisión secuencial.",
-  "tags": []
+  "summary": "Cadena de tres estados y una meta terminal. Quedarse cuesta 0,5; intentar avanzar cuesta 1 y llegar a meta recompensa 5. Avance probabilístico y descuento γ<1.",
+  "tags": [
+    "bellman",
+    "programación dinámica",
+    "aprendizaje por refuerzo"
+  ],
+  "formula": [
+    "V_*(s)=\\max_a\\sum_{s'}P(s'\\mid s,a)\\bigl[r(s,a,s')+\\gamma V_*(s')\\bigr]"
+  ],
+  "simulatorVersion": 2,
+  "symbolGlossary": {
+    "=": "Igualdad: ambos lados tienen el mismo valor matemático.",
+    "+": "Suma de los términos indicados.",
+    ",": "Separación de expresiones o condiciones.",
+    "(": "Abre un grupo de términos que se opera como una sola base.",
+    ")": "Cierra el grupo de términos.",
+    "[": "Abre un grupo; en química indica concentración de la especie.",
+    "]": "Cierra un grupo; en química cierra la especie cuya concentración se usa.",
+    "∑": "Sumatorio: acumula los términos del índice indicado.",
+    "′": "Prima: estado siguiente.",
+    "structure:msqrt": "Raíz cuadrada no negativa: recupera la magnitud cuyo cuadrado es el argumento. Respeta el dominio real de esta ficha.",
+    "structure:mfrac": "Cociente: divide el numerador entre el denominador completo; sus unidades deben ser compatibles con la magnitud resultante.",
+    "structure:msup": "Exponente: una potencia actúa sobre toda la base. Una marca de derivada, adjunto o etiqueta conserva el significado propio definido en esta ficha.",
+    "structure:msub": "Índice inferior: identifica componente, nivel, condición o estado de la base, sin multiplicarla.",
+    "structure:msubsup": "La base lleva índice inferior y marca superior; cada uno se interpreta con la notación de esta ficha.",
+    "structure:mover": "Barra sobre x: media de datos; sobre un vector indica su vector de medias. La marca de flecha identifica vector.",
+    "structure:munder": "Límite inferior o condición del sumatorio escrito.",
+    "structure:munderover": "Límites del sumatorio: especifican qué valores toma su índice.",
+    "V": "Valor esperado de retorno descontado desde un estado.",
+    "s": "Estado actual; s′ es el siguiente.",
+    "a": "Acción candidata.",
+    "P": "Probabilidad de transición condicionada.",
+    "r": "Recompensa inmediata de una transición.",
+    "γ": "Factor de descuento entre cero y uno.",
+    "∗": "Indica valor óptimo, no producto.",
+    "max": "Máximo entre acciones disponibles.",
+    "∣": "Condicionado a: la distribución usa el estado y la acción indicados.",
+    "bold:V": "Valor esperado de retorno descontado desde un estado.",
+    "_V": "Índice V: Valor esperado de retorno descontado desde un estado.",
+    "bold:s": "Estado actual; s′ es el siguiente.",
+    "_s": "Índice s: Estado actual; s′ es el siguiente.",
+    "bold:a": "Acción candidata.",
+    "_a": "Índice a: Acción candidata.",
+    "bold:P": "Probabilidad de transición condicionada.",
+    "_P": "Índice P: Probabilidad de transición condicionada.",
+    "bold:r": "Recompensa inmediata de una transición.",
+    "_r": "Índice r: Recompensa inmediata de una transición.",
+    "bold:γ": "Factor de descuento entre cero y uno.",
+    "_γ": "Índice γ: Factor de descuento entre cero y uno.",
+    "bold:∗": "Indica valor óptimo, no producto.",
+    "_∗": "Índice ∗: Indica valor óptimo, no producto.",
+    "bold:′": "Prima: estado siguiente.",
+    "_′": "Índice ′: Prima: estado siguiente.",
+    "bold:max": "Máximo entre acciones disponibles.",
+    "_max": "Índice max: Máximo entre acciones disponibles.",
+    "bold:∣": "Condicionado a: la distribución usa el estado y la acción indicados.",
+    "_∣": "Índice ∣: Condicionado a: la distribución usa el estado y la acción indicados."
+  },
+  "formulaGlossaries": [
+    {}
+  ],
+  "prerequisites": [
+    "álgebra lineal",
+    "derivadas",
+    "probabilidad"
+  ],
+  "units": "Variables numéricas en unidades de referencia; los índices y probabilidades son adimensionales. Una distancia conserva la escala de las características; su cuadrado tiene escala cuadrática.",
+  "dimensions": "Variables numéricas en unidades de referencia; los índices y probabilidades son adimensionales. Una distancia conserva la escala de las características; su cuadrado tiene escala cuadrática.",
+  "applications": "Descompón el retorno en recompensa inmediata y retorno futuro descontado. Para cada acción, suma por estados siguientes con sus probabilidades; elige la acción de mayor valor. El operador es una contracción para γ<1 en un MDP finito acotado. El laboratorio aplica barridos simultáneos y conserva historial, con la meta terminal fijada en cero y recompensa al entrar. En el laboratorio contrasta una predicción, construye el objetivo y explica qué supuesto permite el resultado.",
+  "learningPath": [
+    "Identificar magnitudes",
+    "Comprobar hipótesis",
+    "Predicción",
+    "Exploración",
+    "Explicación del resultado"
+  ]
 }

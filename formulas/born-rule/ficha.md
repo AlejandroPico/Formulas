@@ -1,25 +1,28 @@
-# Ficha
+# Regla de Born
 
-## Identificación
+Qubit puro y medición proyectiva en una dirección ajustable. El resultado es una probabilidad de conjunto, no el destino obligatorio de una medición individual.
 
-- **Nombre:** Regla de Born
-- **Autor asociado:** Max Born
-- **Año:** 1926
-- **Área:** mecánica cuántica
-- **Nivel:** universidad inicial
-- **Tipo:** postulado probabilístico
+## Magnitudes y notación
 
-## Variables
+| Símbolo | Interpretación |
+| :-- | :-- |
+| ψ | Función de onda compleja normalizada; su módulo al cuadrado da densidad de probabilidad. |
+| ρ | Operador densidad hermítico, positivo y de traza uno. |
+| n | Vector unitario de la dirección de medida. |
+| σ | Matriz de Pauli con el índice de eje indicado; σ como anchura se especifica en la ficha. |
+| I | Operador identidad. |
+| r | Vector de Bloch del estado normalizado. |
+| a | Etiqueta de resultado, no operador de destrucción. |
+| P | Probabilidad del resultado de medida indicado. |
+| Π | Proyector hermítico sobre el resultado del detector. |
+| ⟨ | Inicio del bra, dual hermítico del estado. |
+| ⟩ | Cierre del ket del estado. |
+| ∣ | Separación entre estado y operador en bra/ket. |
 
-- `psi`: función de onda.
-- `|psi|²`: densidad de probabilidad.
-- `P`: probabilidad.
-- `x`: posición.
+## Condiciones
 
-## Lectura del simulador
+Estado normalizado y medición proyectiva completa. El dibujo muestra probabilidades de conjunto, no un resultado único garantizado. El detector se describe por una dirección de Bloch, no por una posición espacial del electrón.
 
-La curva violeta representa la densidad `|psi|²`. Cada medición coloca un punto rojo en el detector. Al acumular muchas mediciones, el histograma se aproxima a la forma de la curva.
+## Unidades
 
-## Nota
-
-El simulador usa una distribución gaussiana simple. La regla general vale para cualquier estado normalizado y para observables formulados con operadores.
+Las probabilidades, r,n y proyectores son adimensionales. θ y φ se introducen en grados y se convierten a radianes. El resultado del laboratorio se expresa como porcentaje.

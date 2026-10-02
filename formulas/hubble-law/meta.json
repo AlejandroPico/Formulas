@@ -3,41 +3,93 @@
   "name": "Ley de Hubble",
   "year": 1929,
   "field": "Cosmología",
-  "level": "Bachillerato y universidad inicial",
+  "level": "Universidad inicial",
   "color": "#2563eb",
   "formula": [
-    "v=H0d"
+    "v_{\\mathrm{rec}}=H(t)D(t),\\qquad H(t)=\\frac{\\dot a(t)}{a(t)}",
+    "v\\simeq cz\\quad(z\\ll1)"
   ],
-  "summary": "La velocidad de recesión de una galaxia crece de forma aproximadamente lineal con su distancia.",
+  "summary": "Relación instantánea vrec=H·D entre observadores comóviles y distancia propia a la misma época. A gran distancia una velocidad de recesión puede superar c sin movimiento local superlumínico.",
   "topic": "hubble",
   "source": "files",
   "author": "",
   "formulaText": [
-    "La velocidad de recesión de una galaxia crece de forma aproximadamente lineal con su distancia."
+    "Relación instantánea vrec=H·D entre observadores comóviles y distancia propia a la misma época. A gran distancia una velocidad de recesión puede superar c sin movimiento local superlumínico."
   ],
   "tags": [
     "cosmologia",
-    "relatividad general",
-    "einstein",
-    "hubble",
-    "redshift",
-    "geodesica"
+    "expansión del universo",
+    "proporcionalidad",
+    "galaxias"
   ],
   "prerequisites": [
-    "relatividad",
-    "calculo basico",
-    "cosmologia"
+    "proporcionalidad",
+    "potencias",
+    "homogeneidad e isotropía"
   ],
   "learningPath": [
-    "formula",
-    "significado",
-    "simulacion"
+    "Identificar magnitudes",
+    "Comprobar hipótesis",
+    "Predicción",
+    "Exploración",
+    "Explicación del resultado"
   ],
-  "units": "Ver unidades.",
-  "dimensions": "Ver unidades.",
+  "units": "H en km/s/Mpc, D en Mpc y vrec en km/s. Comparar con c=299792,458 km/s utiliza las mismas unidades. El tiempo 1/H se convierte a Gyr. Las flechas de la red tienen escala ilustrativa y no son velocidades locales.",
+  "dimensions": "H en km/s/Mpc, D en Mpc y vrec en km/s. Comparar con c=299792,458 km/s utiliza las mismas unidades. El tiempo 1/H se convierte a Gyr. Las flechas de la red tienen escala ilustrativa y no son velocidades locales.",
   "symbols": [],
   "folder": "formulas/hubble-law",
   "legacySource": "runtime-batch-migration",
   "originalSource": "scripts/latest-formula-batch-15.js",
-  "createdAt": "2026-07-05"
+  "createdAt": "2026-07-05",
+  "simulation": "hubble-law",
+  "simulatorVersion": 2,
+  "symbolGlossary": {
+    "1": "Uno: unidad numérica en la relación.",
+    "=": "Igualdad: ambos lados tienen el mismo valor matemático.",
+    ",": "Separación de expresiones o condiciones.",
+    "(": "Abre un grupo de términos que se opera como una sola base.",
+    ")": "Cierra el grupo de términos.",
+    "≃": "Aproximación en el régimen especificado.",
+    "_1": "Índice 1: primera componente, primer paso o primer valor ordenado.",
+    "structure:msqrt": "Raíz cuadrada no negativa: recupera la magnitud cuyo cuadrado es el argumento. Respeta el dominio real de esta ficha.",
+    "structure:mfrac": "Cociente: divide el numerador entre el denominador completo; sus unidades deben ser compatibles con la magnitud resultante.",
+    "structure:msup": "Exponente: una potencia actúa sobre toda la base. Una marca de derivada, adjunto o etiqueta conserva el significado propio definido en esta ficha.",
+    "structure:msub": "Índice inferior: identifica componente, nivel, condición o estado de la base, sin multiplicarla.",
+    "structure:msubsup": "La base lleva índice inferior y marca superior; cada uno se interpreta con la notación de esta ficha.",
+    "structure:mover": "Barra sobre x: media de datos; sobre un vector indica su vector de medias. La marca de flecha identifica vector.",
+    "structure:munder": "Límite inferior o condición del sumatorio escrito.",
+    "structure:munderover": "Límites del sumatorio: especifican qué valores toma su índice.",
+    "a": "Factor de escala FLRW, positivo; se normaliza a uno en la época de referencia.",
+    "c": "Velocidad local de la luz en vacío.",
+    "H": "Parámetro de Hubble instantáneo: tasa relativa de cambio del factor de escala.",
+    "t": "Tiempo propio de observadores comóviles.",
+    "z": "Corrimiento cosmológico λobs/λemit−1, mayor que −1.",
+    "D": "Distancia propia simultánea entre observadores comóviles.",
+    "v": "Velocidad de recesión, derivada de la distancia propia a la misma época.",
+    "≪": "Mucho menor: condición para aproximar el corrimiento por una velocidad lineal.",
+    "rec": "Índice rec: recesión cosmológica entre puntos comóviles.",
+    "bold:a": "Factor de escala FLRW, positivo; se normaliza a uno en la época de referencia.",
+    "_a": "Índice a: Factor de escala FLRW, positivo; se normaliza a uno en la época de referencia.",
+    "bold:c": "Velocidad local de la luz en vacío.",
+    "_c": "Índice c: Velocidad local de la luz en vacío.",
+    "bold:H": "Parámetro de Hubble instantáneo: tasa relativa de cambio del factor de escala.",
+    "_H": "Índice H: Parámetro de Hubble instantáneo: tasa relativa de cambio del factor de escala.",
+    "bold:t": "Tiempo propio de observadores comóviles.",
+    "_t": "Índice t: Tiempo propio de observadores comóviles.",
+    "bold:z": "Corrimiento cosmológico λobs/λemit−1, mayor que −1.",
+    "_z": "Índice z: Corrimiento cosmológico λobs/λemit−1, mayor que −1.",
+    "bold:D": "Distancia propia simultánea entre observadores comóviles.",
+    "_D": "Índice D: Distancia propia simultánea entre observadores comóviles.",
+    "bold:v": "Velocidad de recesión, derivada de la distancia propia a la misma época.",
+    "_v": "Índice v: Velocidad de recesión, derivada de la distancia propia a la misma época.",
+    "bold:≪": "Mucho menor: condición para aproximar el corrimiento por una velocidad lineal.",
+    "_≪": "Índice ≪: Mucho menor: condición para aproximar el corrimiento por una velocidad lineal.",
+    "bold:rec": "Índice rec: recesión cosmológica entre puntos comóviles.",
+    "_rec": "Índice rec: Índice rec: recesión cosmológica entre puntos comóviles."
+  },
+  "formulaGlossaries": [
+    {},
+    {}
+  ],
+  "applications": "Comparar épocas de un modelo homogéneo y distinguir densidades, curvatura, velocidades locales y recesión cosmológica. Los parámetros son ejemplos educativos y no una estimación de los datos cosmológicos actuales."
 }

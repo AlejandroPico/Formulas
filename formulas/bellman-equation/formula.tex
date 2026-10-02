@@ -1,5 +1,1 @@
-V(s)=R(s)+\gamma\max_{s'}V(s')
-
-V^*(s)=\max_a\{R(s,a)+\gamma\sum_{s'}P(s'|s,a)V^*(s')\}
-
-Q^*(s,a)=R(s,a)+\gamma\sum_{s'}P(s'|s,a)\max_{a'}Q^*(s',a')
+V_*(s)=\max_a\sum_{s'}P(s'\mid s,a)\bigl[r(s,a,s')+\gamma V_*(s')\bigr]

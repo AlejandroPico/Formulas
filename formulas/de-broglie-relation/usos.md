@@ -1,10 +1,11 @@
 # Usos
 
-- Difracción e interferencia de electrones.
-- Microscopía electrónica y resolución asociada a longitud de onda.
-- Interpretación ondulatoria de partículas materiales.
-- Conexión conceptual con la ecuación de Schrödinger.
-- Física atómica y estructura de niveles.
-- Enseñanza de dualidad onda-partícula.
+Relacionar aceleración de electrones, difracción y resolución microscópica. Comparar el escalado λ∝K⁻¹ᐟ² sin atribuir a la cresta una posición del electrón.
 
-La relación permite estimar cuándo un objeto debe tratarse cuánticamente: si su longitud de onda es comparable con la escala del experimento, los efectos ondulatorios pueden ser relevantes.
+## Del experimento al contexto
+
+Electrón no relativista con energía cinética en eV. Cambia energía y compara p y λ; la onda dibujada representa fase, no una trayectoria.
+
+## Condiciones antes de aplicar
+
+Partícula libre con impulso definido. La conversión de energía del experimento usa el régimen no relativista, 1–1000 eV para electrones. La onda ilustrativa representa fase; no una trayectoria ni una medición de posición del electrón.

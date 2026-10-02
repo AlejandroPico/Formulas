@@ -1,9 +1,11 @@
 # Significado
 
-La distribución de Fermi-Dirac describe la ocupación media de estados de energía por fermiones, como electrones. A diferencia de los bosones, los fermiones no pueden acumularse sin límite en el mismo estado cuántico.
+Ocupación media de un estado fermiónico. La temperatura suaviza el escalón alrededor de μ; un estado individual tiene ocupación entre cero y uno.
 
-A temperatura cero, todos los estados por debajo de la energía de Fermi están ocupados y los de arriba están vacíos. La curva tiene forma de escalón.
+## Qué conserva y qué cambia
 
-Al aumentar la temperatura, el escalón se suaviza. Algunos fermiones cerca de `E_F` pueden excitarse a estados superiores, dejando huecos por debajo.
+Un estado fermiónico permite ocupación cero o uno. Su función de partición es 1+z, donde z=exp[−(ε−μ)/kBT]. La probabilidad de estar ocupado es z/(1+z), y la de estar vacío 1/(1+z). Al disminuir T se aproxima un escalón en μ; para cualquier T positiva, el punto ε=μ mantiene ocupación media 1/2. La degeneración de espín añade estados distintos.
 
-El simulador muestra la curva de ocupación, la energía de Fermi y el área ocupada. Permite variar temperatura y posición de `E_F` para ver cómo cambia la frontera entre estados llenos y vacíos.
+## Primera predicción
+
+Ocupación media de un estado fermiónico. La temperatura suaviza el escalón alrededor de μ; un estado individual tiene ocupación entre cero y uno. Calcula ocupación media con los datos iniciales. Ocupación media=0,2689 . n=1/[exp((ε−μ)/kBT)+1]; en ε=μ vale 1/2.

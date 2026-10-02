@@ -1,25 +1,20 @@
-# Ficha
+# Entropía de Shannon
 
-## Identificación
+Entropía por símbolo de una fuente binaria independiente con probabilidades p y 1−p. Se adopta base dos y 0log0=0.
 
-- **Nombre:** Entropía de Shannon
-- **Autor:** Claude Shannon
-- **Año:** 1948
-- **Área:** teoría de la información
-- **Nivel:** universidad inicial
-- **Tipo:** medida de incertidumbre
+## Magnitudes y notación
 
-## Variables
+| Símbolo | Interpretación |
+| :-- | :-- |
+| H | Entropía media de la variable o fuente. |
+| X | Variable aleatoria discreta de la fuente. |
+| p | Probabilidad de un símbolo; pi es una categoría. |
+| i | Índice de símbolo o categoría. |
 
-- `H`: entropía.
-- `p_i`: probabilidad del símbolo `i`.
-- `log2`: logaritmo base dos.
-- `p`: probabilidad de uno de los dos resultados binarios.
+## Condiciones
 
-## Lectura del simulador
+Fuente binaria con símbolos independientes en el ejemplo. Una fuente con memoria requiere entropía condicional o tasa de entropía para secuencias. Los controles admiten p=0 y 1 como casos deterministas. La entropía mide incertidumbre probabilística y no significado, verdad ni valor de un mensaje.
 
-La curva azul muestra la entropía binaria. El máximo aparece en `p=0.5`. La tira inferior genera una secuencia de ceros y unos para mostrar visualmente la predictibilidad.
+## Unidades
 
-## Nota
-
-Una fuente equilibrada no contiene más significado necesariamente; contiene más incertidumbre estadística por símbolo.
+p y H son adimensionales, con H expresada en bits por símbolo por usar base dos. La sorpresa individual puede superar un bit para un evento raro, aunque la entropía de una variable binaria no supere un bit. H no tiene unidades de voltaje ni energía.

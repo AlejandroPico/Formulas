@@ -1,10 +1,11 @@
 # Usos
 
-- Gases bosónicos ultrafríos.
-- Condensados de Bose-Einstein.
-- Fotones y radiación térmica.
-- Fonones en sólidos.
-- Superfluidez y sistemas cuánticos colectivos.
-- Enseñanza de estadística cuántica.
+Anticipar el resultado, cambiar una hipótesis cada vez y comprobarlo en las tres vistas del laboratorio. Separar las magnitudes que se conservan de las que cambian, y verificar el dominio antes de interpretar una figura.
 
-La distribución es esencial cuando la indistinguibilidad cuántica y la posibilidad de ocupación múltiple del mismo estado no pueden ignorarse.
+## Del experimento al contexto
+
+Ocupación media por estado de bosones ideales. Energías y kBT se expresan en la misma escala ε0; μ permanece bajo el estado fundamental.
+
+## Condiciones antes de aplicar
+
+Bosones ideales en equilibrio gran canónico, T>0 y μ por debajo de la energía del estado fundamental para esta representación finita. La divergencia al acercarse ε a μ exige tratar el estado fundamental y el número total; esta gráfica no representa por sí sola condensación.

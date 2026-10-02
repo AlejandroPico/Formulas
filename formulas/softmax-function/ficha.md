@@ -1,23 +1,22 @@
-# Ficha
+# Softmax
 
-## Identificación
+Tres logits y temperatura positiva. Se resta el máximo antes de exponenciar para estabilidad; sumar la misma constante a todos no cambia probabilidades.
 
-- **Nombre:** Softmax
-- **Área:** aprendizaje automático
-- **Nivel:** universidad inicial
-- **Tipo:** función de activación multiclase
+## Magnitudes y notación
 
-## Variables
+| Símbolo | Interpretación |
+| :-- | :-- |
+| p | Probabilidad normalizada de una clase. |
+| z | Logit: puntuación real sin normalizar. |
+| T | Temperatura positiva. |
+| K | Número de clases. |
+| i | Clase consultada. |
+| j | Índice de clase sumada. |
 
-- `z_i`: logit de la clase `i`.
-- `sigma(z)_i`: probabilidad asignada a la clase `i`.
-- `e`: base exponencial.
-- `c`: constante de estabilización numérica.
+## Condiciones
 
-## Lectura del simulador
+Logits no son probabilidades ni evidencias calibradas. T debe ser positiva. La salida normalizada no garantiza buena calibración, ni elimina incertidumbre o sesgo de datos. El límite de temperatura cero necesita tratar empates.
 
-Cada control modifica un logit. Las barras muestran la probabilidad softmax resultante. Aunque los logits pueden subir o bajar libremente, las probabilidades finales siempre suman uno.
+## Unidades
 
-## Nota
-
-En implementación real se resta el máximo logit antes de exponentiar para evitar overflow numérico.
+Variables numéricas en unidades de referencia; los índices y probabilidades son adimensionales. Una distancia conserva la escala de las características; su cuadrado tiene escala cuadrática.

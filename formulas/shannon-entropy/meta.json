@@ -8,9 +8,73 @@
   "color": "#3b82f6",
   "simulation": "shannon-entropy",
   "formulaText": [
-    "entropía = suma negativa de probabilidades por logaritmo base dos de probabilidades",
-    "en una fuente binaria, la incertidumbre máxima ocurre cuando p = 0.5"
+    "Entropía por símbolo de una fuente binaria independiente con probabilidades p y 1−p. Se adopta base dos y 0log0=0."
   ],
-  "summary": "Mide la incertidumbre media o información esperada de una fuente aleatoria.",
-  "tags": []
+  "summary": "Entropía por símbolo de una fuente binaria independiente con probabilidades p y 1−p. Se adopta base dos y 0log0=0.",
+  "tags": [
+    "entropía de shannon",
+    "fuentes binarias",
+    "sorpresa",
+    "codificación"
+  ],
+  "formula": [
+    "H(X)=-\\sum_i p_i\\log_2p_i",
+    "H(p)=-p\\log_2p-(1-p)\\log_2(1-p),\\qquad 0\\log_20=0"
+  ],
+  "simulatorVersion": 2,
+  "symbolGlossary": {
+    "0": "Cero: valor nulo o referencia indicada.",
+    "1": "Uno: unidad numérica en la relación.",
+    "2": "Dos: factor numérico; como exponente significa el cuadrado.",
+    "=": "Igualdad: ambos lados tienen el mismo valor matemático.",
+    "−": "Resta o signo negativo del término siguiente.",
+    ",": "Separación de expresiones o condiciones.",
+    "(": "Abre un grupo de términos que se opera como una sola base.",
+    ")": "Cierra el grupo de términos.",
+    "∑": "Sumatorio: acumula los términos del índice indicado.",
+    "log": "Logaritmo decimal cuando su base está escrita como 10.",
+    "^2": "Al cuadrado: multiplica toda la base por sí misma.",
+    "_0": "Índice 0: valor de reposo, inicial o de referencia según la magnitud.",
+    "_1": "Índice 1: primera componente, primer paso o primer valor ordenado.",
+    "_2": "Índice 2: segunda componente o nivel escrito.",
+    "structure:msqrt": "Raíz cuadrada no negativa: recupera la magnitud cuyo cuadrado es el argumento. Respeta el dominio real de esta ficha.",
+    "structure:mfrac": "Cociente: divide el numerador entre el denominador completo; sus unidades deben ser compatibles con la magnitud resultante.",
+    "structure:msup": "Exponente: una potencia actúa sobre toda la base. Una marca de derivada, adjunto o etiqueta conserva el significado propio definido en esta ficha.",
+    "structure:msub": "Índice inferior: identifica componente, nivel, condición o estado de la base, sin multiplicarla.",
+    "structure:msubsup": "La base lleva índice inferior y marca superior; cada uno se interpreta con la notación de esta ficha.",
+    "structure:mover": "Barra sobre x: media de datos; sobre un vector indica su vector de medias. La marca de flecha identifica vector.",
+    "structure:munder": "Límite inferior o condición del sumatorio escrito.",
+    "structure:munderover": "Límites del sumatorio: especifican qué valores toma su índice.",
+    "H": "Entropía media de la variable o fuente.",
+    "X": "Variable aleatoria discreta de la fuente.",
+    "p": "Probabilidad de un símbolo; pi es una categoría.",
+    "i": "Índice de símbolo o categoría.",
+    "bold:H": "Entropía media de la variable o fuente.",
+    "_H": "Índice H: Entropía media de la variable o fuente.",
+    "bold:X": "Variable aleatoria discreta de la fuente.",
+    "_X": "Índice X: Variable aleatoria discreta de la fuente.",
+    "bold:p": "Probabilidad de un símbolo; pi es una categoría.",
+    "_p": "Índice p: Probabilidad de un símbolo; pi es una categoría.",
+    "bold:i": "Índice de símbolo o categoría.",
+    "_i": "Índice i: Índice de símbolo o categoría."
+  },
+  "formulaGlossaries": [
+    {},
+    {}
+  ],
+  "prerequisites": [
+    "probabilidad",
+    "logaritmos",
+    "distribuciones"
+  ],
+  "units": "p y H son adimensionales, con H expresada en bits por símbolo por usar base dos. La sorpresa individual puede superar un bit para un evento raro, aunque la entropía de una variable binaria no supere un bit. H no tiene unidades de voltaje ni energía.",
+  "dimensions": "p y H son adimensionales, con H expresada en bits por símbolo por usar base dos. La sorpresa individual puede superar un bit para un evento raro, aunque la entropía de una variable binaria no supere un bit. H no tiene unidades de voltaje ni energía.",
+  "applications": "Comparar predicciones con sus unidades, su base de logaritmo y el conjunto de datos de referencia. Los cuatro retos separan cálculo, ajuste, interpretación y comprobación; las tres vistas permiten identificar qué cambia y qué permanece.",
+  "learningPath": [
+    "Identificar magnitudes",
+    "Comprobar hipótesis",
+    "Predicción",
+    "Exploración",
+    "Explicación del resultado"
+  ]
 }

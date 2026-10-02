@@ -6,48 +6,87 @@
   "level": "Universidad inicial",
   "color": "#8b5cf6",
   "formula": [
-    "L=U(x,y)+λ(M−p_x x−p_y y)",
-    "U=x·y ⇒ x*=M/(2p_x), y*=M/(2p_y)"
+    "\\mathcal L=x^\\alpha y^{1-\\alpha}+\\lambda(M-p_xx-p_yy)",
+    "x_*=\\frac{\\alpha M}{p_x},\\qquad y_*=\\frac{(1-\\alpha)M}{p_y},\\qquad \\lambda_*=\\frac{U_*}{M}"
   ],
-  "summary": "Resuelve la cesta óptima de consumo bajo una restricción presupuestaria.",
-  "sim": "scripts/economics-consumer-lagrangian-sim.js?v=20260706a",
-  "k": "lagrange",
+  "summary": "Consumidor Cobb-Douglas con bienes positivos, precios positivos y presupuesto fijo. La solución interior gasta fracción α en x y 1−α en y.",
   "folder": "formulas/consumer-lagrangian-constrained-optimization",
   "source": "files",
   "formulaText": [
-    "L=U(x,y)+λ(M−p_x x−p_y y)",
-    "U=x·y ⇒ x*=M/(2p_x), y*=M/(2p_y)",
-    "Resuelve la cesta óptima de consumo bajo una restricción presupuestaria."
+    "Consumidor Cobb-Douglas con bienes positivos, precios positivos y presupuesto fijo. La solución interior gasta fracción α en x y 1−α en y."
   ],
   "tags": [
-    "economia",
-    "microeconomia",
-    "macroeconomia",
-    "finanzas",
-    "riesgo",
-    "renta fija",
-    "kelly",
-    "var",
-    "solow"
+    "optimización restringida",
+    "consumidor",
+    "presupuesto",
+    "multiplicadores de lagrange"
   ],
   "prerequisites": [
-    "algebra",
-    "calculo basico",
-    "microeconomia",
-    "macroeconomia",
-    "finanzas basicas"
+    "potencias",
+    "tasas y períodos",
+    "derivadas"
   ],
   "learningPath": [
-    "formula",
-    "significado",
-    "historia",
-    "derivacion",
-    "simulacion"
+    "Identificar magnitudes",
+    "Comprobar hipótesis",
+    "Predicción",
+    "Exploración",
+    "Explicación del resultado"
   ],
-  "units": "Unidades económicas y financieras normalizadas.",
-  "dimensions": "Ver ficha.",
+  "units": "M en unidades monetarias de ejemplo y precios en u.m. por unidad de bien. x,y en bienes. U utiliza una escala de utilidad elegida; λ en esa escala por u.m. El gráfico compara bienes diferentes en ejes propios, sin afirmar equivalencia física de unidades.",
+  "dimensions": "M en unidades monetarias de ejemplo y precios en u.m. por unidad de bien. x,y en bienes. U utiliza una escala de utilidad elegida; λ en esa escala por u.m. El gráfico compara bienes diferentes en ejes propios, sin afirmar equivalencia física de unidades.",
   "symbols": [],
   "legacySource": "runtime-batch-migration",
   "originalSource": "scripts/latest-formula-batch-32.js",
-  "createdAt": "2026-07-07"
+  "createdAt": "2026-07-07",
+  "simulation": "consumer-lagrangian-constrained-optimization",
+  "simulatorVersion": 2,
+  "symbolGlossary": {
+    "1": "Uno: unidad numérica en la relación.",
+    "=": "Igualdad: ambos lados tienen el mismo valor matemático.",
+    "+": "Suma de los términos indicados.",
+    "−": "Resta o signo negativo del término siguiente.",
+    ",": "Separación de expresiones o condiciones.",
+    "(": "Abre un grupo de términos que se opera como una sola base.",
+    ")": "Cierra el grupo de términos.",
+    "_1": "Índice 1: primera componente, primer paso o primer valor ordenado.",
+    "structure:msqrt": "Raíz cuadrada no negativa: recupera la magnitud cuyo cuadrado es el argumento. Respeta el dominio real de esta ficha.",
+    "structure:mfrac": "Cociente: divide el numerador entre el denominador completo; sus unidades deben ser compatibles con la magnitud resultante.",
+    "structure:msup": "Exponente: una potencia actúa sobre toda la base. Una marca de derivada, adjunto o etiqueta conserva el significado propio definido en esta ficha.",
+    "structure:msub": "Índice inferior: identifica componente, nivel, condición o estado de la base, sin multiplicarla.",
+    "structure:msubsup": "La base lleva índice inferior y marca superior; cada uno se interpreta con la notación de esta ficha.",
+    "structure:mover": "Barra sobre x: media de datos; sobre un vector indica su vector de medias. La marca de flecha identifica vector.",
+    "structure:munder": "Límite inferior o condición del sumatorio escrito.",
+    "structure:munderover": "Límites del sumatorio: especifican qué valores toma su índice.",
+    "L": "L caligráfica: función lagrangiana con la restricción presupuestaria.",
+    "x": "Cantidad del primer bien.",
+    "y": "Cantidad del segundo bien.",
+    "α": "Peso de preferencia del primer bien, entre cero y uno.",
+    "λ": "Multiplicador de presupuesto para esta escala de utilidad.",
+    "M": "Presupuesto disponible positivo.",
+    "p": "Precio del bien identificado por índice x o y.",
+    "U": "Utilidad Cobb-Douglas del consumidor.",
+    "_∗": "Índice estrella: solución óptima interior del consumidor.",
+    "bold:L": "L caligráfica: función lagrangiana con la restricción presupuestaria.",
+    "_L": "Índice L: L caligráfica: función lagrangiana con la restricción presupuestaria.",
+    "bold:x": "Cantidad del primer bien.",
+    "_x": "Índice x: Cantidad del primer bien.",
+    "bold:y": "Cantidad del segundo bien.",
+    "_y": "Índice y: Cantidad del segundo bien.",
+    "bold:α": "Peso de preferencia del primer bien, entre cero y uno.",
+    "_α": "Índice α: Peso de preferencia del primer bien, entre cero y uno.",
+    "bold:λ": "Multiplicador de presupuesto para esta escala de utilidad.",
+    "_λ": "Índice λ: Multiplicador de presupuesto para esta escala de utilidad.",
+    "bold:M": "Presupuesto disponible positivo.",
+    "_M": "Índice M: Presupuesto disponible positivo.",
+    "bold:p": "Precio del bien identificado por índice x o y.",
+    "_p": "Índice p: Precio del bien identificado por índice x o y.",
+    "bold:U": "Utilidad Cobb-Douglas del consumidor.",
+    "_U": "Índice U: Utilidad Cobb-Douglas del consumidor."
+  },
+  "formulaGlossaries": [
+    {},
+    {}
+  ],
+  "applications": "Comparar escenarios hipotéticos bajo las mismas convenciones y explicar sensibilidad y límites. Las cifras son educativas: el simulador no estima datos de mercado actuales ni decide inversiones, producción o consumo reales."
 }

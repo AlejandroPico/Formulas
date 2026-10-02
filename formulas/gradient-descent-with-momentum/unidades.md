@@ -1,3 +1,13 @@
 # Unidades
 
-Magnitudes adimensionales salvo tasa de aprendizaje. En optimización aparecen gradiente, momento, energía cuadrática y actualización; en activaciones aparecen entrada, salida y derivada local.
+Variables numéricas en unidades de referencia; los índices y probabilidades son adimensionales. Una distancia conserva la escala de las características; su cuadrado tiene escala cuadrática.
+
+## Qué se convierte en el laboratorio
+
+v←βv+g; θ←θ−ηv.
+
+## Dominio y coherencia
+
+η>0, β y β2 menores que uno, ε=10⁻⁸; operaciones componente a componente. La escala del paso y memoria afectan estabilidad y no garantizan descenso en cada iteración. Parámetros, gradientes y pérdida usan unidades reducidas; en RMSProp el control β de primera memoria no interviene.
+
+Optimización de F=(x²+κy²)/2, con gradientes exactos y memoria inicial cero. Los pasos son iteraciones reales del algoritmo seleccionado.

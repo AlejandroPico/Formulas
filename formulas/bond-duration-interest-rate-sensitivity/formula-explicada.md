@@ -1,14 +1,7 @@
-# Fórmula explicada
+# Interpretación
 
-**Delta P / P ≈ -D_mod · Delta y**
+Bono fijo sin opciones ni impago, cupón anual, nominal 100 y tasa efectiva anual compatible. No mezclar fórmula con pagos semestrales y rendimiento nominal sin modificar períodos. El shock paralelo cambia y en puntos porcentuales y se convierte a fracción. Vencimiento coincide con Macaulay solo para cupón cero en este ejemplo.
 
-- **Delta P / P**: variación porcentual aproximada del precio del bono.
-- **D_mod**: duración modificada, sensibilidad de primer orden.
-- **Delta y**: cambio de la yield o tipo de mercado, expresado en decimal.
-- El signo negativo indica que, cuando suben los tipos, baja el precio.
+Descontar cada flujo anual a rendimiento efectivo y da el precio. La primera derivada es P′=−ΣtCFt/(1+y)^(t+1); dividir −P′ por P produce duración modificada. La duración de Macaulay es una media temporal de valores presentes ponderados y se relaciona por Dmod=DMac/(1+y). La aproximación lineal es una tangente local del precio, no una predicción exacta para cambios finitos.
 
-Con convexidad:
-
-**Delta P / P ≈ -D_mod · Delta y + 0.5 · C · (Delta y)^2**
-
-La convexidad corrige la curvatura de la relación precio-rendimiento.
+Precio y flujos en u.m.; tiempo y duraciones en años bajo frecuencia anual. Un cambio de 1 punto porcentual es Δy=0,01. Dmod multiplicada por Δy produce un cambio relativo adimensional. No confundir puntos básicos, porcentajes relativos y puntos porcentuales.

@@ -1,21 +1,23 @@
-# Ficha
+# Ratio de Sharpe: rendimiento ajustado por riesgo
 
-**Nombre:** Ratio de Sharpe: rendimiento ajustado por riesgo
+Ratio de Sharpe de un período, con exceso medio de retorno sobre referencia constante y desviación del retorno del mismo período. Datos hipotéticos y σ positiva.
 
-**Área:** Finanzas / Gestión de carteras
+## Magnitudes y notación
 
-**Nivel:** Universidad inicial
+| Símbolo | Interpretación |
+| :-- | :-- |
+| S | Parte de SR: Sharpe. |
+| R | Retorno cuando lleva índice p; en SR forma parte de ratio de Sharpe. |
+| E | Esperanza matemática del retorno, no resultado garantizado. |
+| p | Índice p: cartera analizada. |
+| r | Retorno de referencia cuando lleva índice f. |
+| f | Índice f: referencia libre de riesgo del mismo período. |
+| σ | Desviación del retorno del mismo horizonte. |
 
-**Resumen:** Compara el exceso de retorno de una cartera por unidad de volatilidad.
+## Condiciones
 
-## Lectura e interpretación
+σ positiva, períodos y convenciones compatibles. Los controles son un resumen hipotético, no una estimación muestral. Una anualización mediante raíz del número de períodos requiere condiciones de independencia y agregación, y no se aplica automáticamente. No comparar mecánicamente ratios negativos como si más dispersión fuera una mejora económica.
 
-# Interpretación
+## Unidades
 
-Mueve los controles y observa qué domina: capitalización, tasa de descuento, raíz VAN=0, beta, volatilidad, valor temporal, no arbitraje o duración.
-
-## Validez y limitaciones
-
-# Limitaciones
-
-Penaliza volatilidad positiva y negativa por igual; puede ser engañoso con colas gruesas o retornos no normales.
+Media, referencia y σ usan porcentajes del mismo período, por lo que la división cancela escala y el ratio es adimensional. El exceso se mide en puntos porcentuales. No sumar retornos de escalas temporales distintas ni usar volatilidad anual con media mensual.

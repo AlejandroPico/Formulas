@@ -1,9 +1,11 @@
 # Significado
 
-La distribución de Bose-Einstein describe cómo se reparten los bosones entre niveles de energía cuando el sistema está en equilibrio térmico. Los bosones son partículas que pueden compartir el mismo estado cuántico sin límite de ocupación.
+Ocupación media por estado de bosones ideales. Energías y kBT se expresan en la misma escala ε0; μ permanece bajo el estado fundamental.
 
-La ocupación media depende de la energía `E`, del potencial químico `mu`, de la temperatura `T` y de la constante de Boltzmann. A baja temperatura, muchos bosones tienden a acumularse en los estados de menor energía.
+## Qué conserva y qué cambia
 
-Esa acumulación puede producir un condensado de Bose-Einstein: una ocupación macroscópica del estado fundamental. No es una simple concentración clásica, sino un fenómeno cuántico colectivo.
+Para un único estado, los números de ocupación posibles son 0,1,2,… y su peso gran canónico es z^n con z=exp[−(ε−μ)/kBT]<1. Sumar la serie geométrica da Zestado=1/(1−z). Derivar su logaritmo respecto a μ devuelve n̄=z/(1−z). En el límite diluido z≪1, el denominador se aproxima a uno y aparece Maxwell–Boltzmann. La degeneración multiplica el número de estados, no modifica esta ocupación por estado.
 
-El simulador muestra niveles de energía y partículas que se redistribuyen según la temperatura. A baja temperatura aumenta la población del nivel fundamental; a temperatura alta se ocupan más niveles excitados.
+## Primera predicción
+
+Ocupación media por estado de bosones ideales. Energías y kBT se expresan en la misma escala ε0; μ permanece bajo el estado fundamental. Calcula ocupación media con los datos iniciales. Ocupación media=0,582 . n=1/[exp((ε−μ)/kBT)−1]; exige ε>μ.

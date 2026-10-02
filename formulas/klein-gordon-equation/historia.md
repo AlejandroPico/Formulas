@@ -1,9 +1,11 @@
 # Historia
 
-La ecuación de Klein-Gordon apareció en los primeros años de la mecánica cuántica relativista. Varios autores trabajaron en formas de incorporar la relación relativista entre energía y momento dentro de una ecuación de onda.
+Klein y Gordon formularon una ecuación relativista escalar compatible con la relación energía–momento. Su comparación con Schrödinger y Dirac requiere distinguir el orden temporal, la estructura del campo y el significado de las magnitudes observables.
 
-Aunque inicialmente se investigó como posible ecuación para electrones, más tarde se comprendió que describe mejor campos escalares de espín cero. Para fermiones de espín `1/2`, la ecuación de Dirac resultó más adecuada.
+## Referencia y alcance
 
-La ecuación siguió siendo importante porque anticipa ideas propias de la teoría cuántica de campos: campos relativistas, antipartículas y relaciones de dispersión relativistas.
+[Material de estudio](https://ocw.mit.edu/courses/5-73-quantum-mechanics-i-fall-2018/pages/lecture-notes/).
 
-Hoy se usa como modelo básico para campos escalares y como punto de entrada a ecuaciones relativistas de campo.
+Campo escalar libre en 1+1 para el experimento, masa no negativa y modos de frecuencia positiva. La parte real dibujada no es una densidad de probabilidad. Una interpretación de partícula y antipartícula pertenece al tratamiento cuántico del campo; no se obtiene tomando φ² sin más.
+
+La fecha de creación del catálogo procede del archivo original; el año científico y la fecha de revisión tienen funciones diferentes.

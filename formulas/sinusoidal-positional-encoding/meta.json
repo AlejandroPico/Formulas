@@ -6,45 +6,82 @@
   "level": "Universidad inicial",
   "color": "#ec4899",
   "formula": [
-    "PE(pos,2i)=sin(pos/10000^{2i/d})",
-    "PE(pos,2i+1)=cos(pos/10000^{2i/d})"
+    "\\operatorname{PE}(p,2i)=\\sin\\!\\left(\\frac{p}{10000^{2i/d}}\\right),\\quad\\operatorname{PE}(p,2i+1)=\\cos\\!\\left(\\frac{p}{10000^{2i/d}}\\right)"
   ],
-  "summary": "Añade una firma posicional multi-frecuencia a embeddings sin recurrencia ni convolución.",
-  "sim": "scripts/transformer-sinusoidal-pe-sim.js?v=20260705a",
-  "k": "pe",
+  "summary": "Vector posicional de dimensión cuatro, con frecuencias 1 y 0,01 radianes por posición. No son probabilidades ni posiciones aprendidas.",
   "folder": "formulas/sinusoidal-positional-encoding",
   "source": "files",
   "formulaText": [
-    "Añade una firma posicional multi-frecuencia a embeddings sin recurrencia ni convolución."
+    "Vector posicional de dimensión cuatro, con frecuencias 1 y 0,01 radianes por posición. No son probabilidades ni posiciones aprendidas."
   ],
   "tags": [
-    "aprendizaje por refuerzo",
+    "codificación posicional",
     "transformers",
-    "attention",
-    "positional encoding",
-    "ppo",
-    "q-learning",
-    "sarsa"
+    "trigonometría"
   ],
   "prerequisites": [
-    "probabilidad",
-    "gradiente",
-    "bellman",
-    "algebra lineal",
-    "softmax",
-    "redes neuronales"
+    "álgebra lineal",
+    "derivadas",
+    "probabilidad"
   ],
   "learningPath": [
-    "formula",
-    "significado",
-    "historia",
-    "derivacion",
-    "simulacion"
+    "Identificar magnitudes",
+    "Comprobar hipótesis",
+    "Predicción",
+    "Exploración",
+    "Explicación del resultado"
   ],
-  "units": "Unidades didácticas normalizadas.",
-  "dimensions": "Ver ficha.",
+  "units": "Las coordenadas y parámetros usan escala numérica de referencia. Probabilidades, razones, fases en radianes y pesos de atención son adimensionales. Las dimensiones de matrices deben permitir todos los productos; el laboratorio declara cada vector reducido.",
+  "dimensions": "Las coordenadas y parámetros usan escala numérica de referencia. Probabilidades, razones, fases en radianes y pesos de atención son adimensionales. Las dimensiones de matrices deben permitir todos los productos; el laboratorio declara cada vector reducido.",
   "symbols": [],
   "legacySource": "runtime-batch-migration",
   "originalSource": "scripts/latest-formula-batch-27.js",
-  "createdAt": "2026-07-06"
+  "createdAt": "2026-07-06",
+  "simulation": "sinusoidal-positional-encoding",
+  "simulatorVersion": 2,
+  "symbolGlossary": {
+    "1": "Uno: unidad numérica en la relación.",
+    "2": "Dos: factor numérico; como exponente significa el cuadrado.",
+    "10000": "Base que distribuye las escalas de frecuencia.",
+    "=": "Igualdad: ambos lados tienen el mismo valor matemático.",
+    "+": "Suma de los términos indicados.",
+    ",": "Separación de expresiones o condiciones.",
+    "(": "Abre un grupo de términos que se opera como una sola base.",
+    ")": "Cierra el grupo de términos.",
+    "^2": "Al cuadrado: multiplica toda la base por sí misma.",
+    "_1": "Índice 1: primera componente, primer paso o primer valor ordenado.",
+    "_2": "Índice 2: segunda componente o nivel escrito.",
+    "structure:msqrt": "Raíz cuadrada no negativa: recupera la magnitud cuyo cuadrado es el argumento. Respeta el dominio real de esta ficha.",
+    "structure:mfrac": "Cociente: divide el numerador entre el denominador completo; sus unidades deben ser compatibles con la magnitud resultante.",
+    "structure:msup": "Exponente: una potencia actúa sobre toda la base. Una marca de derivada, adjunto o etiqueta conserva el significado propio definido en esta ficha.",
+    "structure:msub": "Índice inferior: identifica componente, nivel, condición o estado de la base, sin multiplicarla.",
+    "structure:msubsup": "La base lleva índice inferior y marca superior; cada uno se interpreta con la notación de esta ficha.",
+    "structure:mover": "Barra sobre x: media de datos; sobre un vector indica su vector de medias. La marca de flecha identifica vector.",
+    "structure:munder": "Límite inferior o condición del sumatorio escrito.",
+    "structure:munderover": "Límites del sumatorio: especifican qué valores toma su índice.",
+    "PE": "Componente de codificación posicional.",
+    "p": "Posición de token.",
+    "i": "Índice de par de frecuencias desde cero.",
+    "d": "Dimensión total del vector, cuatro aquí.",
+    "sin": "Seno con fase en radianes.",
+    "cos": "Coseno con fase en radianes.",
+    "bold:10000": "Base que distribuye las escalas de frecuencia.",
+    "_10000": "Índice 10000: Base que distribuye las escalas de frecuencia.",
+    "bold:PE": "Componente de codificación posicional.",
+    "_PE": "Índice PE: Componente de codificación posicional.",
+    "bold:p": "Posición de token.",
+    "_p": "Índice p: Posición de token.",
+    "bold:i": "Índice de par de frecuencias desde cero.",
+    "_i": "Índice i: Índice de par de frecuencias desde cero.",
+    "bold:d": "Dimensión total del vector, cuatro aquí.",
+    "_d": "Índice d: Dimensión total del vector, cuatro aquí.",
+    "bold:sin": "Seno con fase en radianes.",
+    "_sin": "Índice sin: Seno con fase en radianes.",
+    "bold:cos": "Coseno con fase en radianes.",
+    "_cos": "Índice cos: Coseno con fase en radianes."
+  },
+  "formulaGlossaries": [
+    {}
+  ],
+  "applications": "Asocia un par seno/coseno a cada frecuencia. Para d=4 los pares tienen frecuencia 1 y 0,01, pues 10000^(2/4)=100. Cada par tiene norma uno y desplazar p añade fase. Las cuatro curvas se trazan con las mismas posiciones; la vista circular compara fases sin confundirlas con probabilidades. En aplicaciones, verifica dimensión, máscara y procedencia de datos antes de trasladar el ejemplo a un modelo real."
 }

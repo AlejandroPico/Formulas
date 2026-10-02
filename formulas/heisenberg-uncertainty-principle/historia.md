@@ -1,9 +1,11 @@
 # Historia
 
-Werner Heisenberg formuló el principio de incertidumbre en 1927, en el contexto del nacimiento de la mecánica cuántica. La física microscópica obligaba a abandonar la imagen clásica de partículas con trayectoria perfectamente definida.
+Heisenberg vinculó las dispersiones de observables incompatibles. La formulación mediante varianzas y covarianza precisa qué significa el límite y permite construir estados que lo saturan. Una fase cuadrática ofrece un ejemplo que separa producto grande de pérdida de pureza.
 
-La formulación inicial estuvo ligada a experimentos mentales de medición, como el microscopio de rayos gamma. Más tarde, la desigualdad se entendió con mayor precisión como una relación matemática entre desviaciones estándar de observables no conmutativos.
+## Referencia y alcance
 
-El principio fue clave en los debates fundacionales de la mecánica cuántica, especialmente en la discusión sobre determinismo, medición y realidad física. También ayudó a fijar los límites de la intuición clásica aplicada a electrones, átomos y campos.
+[Material de estudio](https://ocw.mit.edu/courses/5-73-quantum-mechanics-i-fall-2018/pages/lecture-notes/).
 
-Hoy aparece en física atómica, óptica cuántica, teoría de la información cuántica, análisis de Fourier y cualquier contexto donde pares conjugados deban tratarse como distribuciones incompatibles.
+Dispersión estadística de un estado normalizado, no error de un instrumento ni simple perturbación de medida. La figura elíptica es un contorno de Wigner de esta gaussiana, no una trayectoria o valores simultáneos de x y p.
+
+La fecha de creación del catálogo procede del archivo original; el año científico y la fecha de revisión tienen funciones diferentes.

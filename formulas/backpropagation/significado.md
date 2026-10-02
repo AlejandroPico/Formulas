@@ -1,9 +1,11 @@
 # Significado
 
-La retropropagación calcula cómo debe cambiar cada peso de una red neuronal para reducir una pérdida. La idea central es aplicar la regla de la cadena desde la salida hacia las capas anteriores.
+Red escalar con una neurona tanh y salida lineal: z=wx+b, h=tanh(z), ŷ=vh, L=(ŷ−y)²/2. Se calcula el gradiente exacto por regla de la cadena.
 
-Primero se calcula el error en la salida. Después ese error se combina con derivadas locales de cada capa para obtener gradientes respecto a pesos internos.
+## Qué conserva y qué cambia
 
-El resultado no actualiza los pesos por sí solo: entrega los gradientes que luego usa un optimizador, como descenso del gradiente o Adam.
+Propaga hacia delante z, h, ŷ y L. Hacia atrás multiplica ∂L/∂ŷ=ŷ−y, ∂ŷ/∂h=v, ∂h/∂z=1−h² y ∂z/∂w=x. Para b la última derivada es uno; para v es h. Los tres gradientes se contrastan con diferencias centrales. La entrada cero anula dw pero no obliga a anular db.
 
-El simulador muestra una red de tres nodos. El flujo azul representa el pase hacia delante y el flujo rojo representa el gradiente que viaja hacia atrás. Al variar el error de salida cambian los gradientes calculados en cada conexión.
+## Primera predicción
+
+Red escalar con una neurona tanh y salida lineal: z=wx+b, h=tanh(z), ŷ=vh, L=(ŷ−y)²/2. Se calcula el gradiente exacto por regla de la cadena. Calcula derivada de l respecto de w con los datos iniciales. Derivada de L respecto de w=-0,423 . ∂L/∂w=(ŷ−y)v(1−h²)x; no divide por x.
