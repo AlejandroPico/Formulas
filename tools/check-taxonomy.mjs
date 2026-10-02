@@ -3,7 +3,8 @@ import {readFile} from 'node:fs/promises';
 import {execFileSync} from 'node:child_process';
 import {canonicalField,canonicalLevel,canonicalTags,taxonomyKey} from '../formulas/shared/taxonomy.js';
 const catalog=JSON.parse(await readFile('formulas/catalog-index.json','utf8'));
-const previous=JSON.parse(execFileSync('git',['show','HEAD:formulas/catalog-index.json'],{encoding:'utf8'}));
+// The catalog exceeds Node's default 1 MiB child-process output limit.
+const previous=JSON.parse(execFileSync('git',['show','HEAD:formulas/catalog-index.json'],{encoding:'utf8',maxBuffer:64*1024*1024}));
 const spellings={field:new Map(),level:new Map(),tags:new Map()};
 for(const entry of catalog){
  const source=JSON.parse(await readFile(`${entry.folder}/meta.json`,'utf8'));
