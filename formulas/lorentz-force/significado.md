@@ -1,9 +1,11 @@
 # Significado
 
-La fuerza de Lorentz describe como actua un campo electromagnetico sobre una particula cargada. Tiene dos partes: la fuerza electrica `qE`, que actua segun el campo electrico, y la fuerza magnetica `q v x B`, que depende de la velocidad de la particula y del campo magnetico.
+Solución exacta no relativista con E en x y B en z. El campo magnético curva la velocidad sin trabajo; E puede cambiar la energía. q en µC y m en mg.
 
-La parte magnetica es perpendicular tanto a la velocidad como al campo magnetico. Cuando solo hay campo magnetico uniforme, la fuerza cambia la direccion de la particula pero no su rapidez. El resultado habitual es una trayectoria circular o helicoidal.
+## Del símbolo a la idea
 
-El signo de la carga importa. Una carga positiva y una negativa se curvan en sentidos opuestos bajo el mismo campo. La intensidad del campo tambien importa: a mayor campo, mayor curvatura y menor radio de giro.
+Aplica m dv/dt=q(E+v×B). Para B constante en z y E en x resulta vx′=(q/m)(E+Bvy), vy′=−(qB/m)vx. Si Bq≠0, desplaza vy por E/B para obtener una rotación uniforme de velocidad; integra exactamente seno y coseno para la trayectoria. Si qB=0, usa aceleración eléctrica rectilínea y evita dividir por frecuencia nula. El producto v·(v×B)=0 demuestra que el término magnético no hace trabajo. Para E=0 el radio perpendicular es mv⊥/(|q|B).
 
-El simulador muestra una particula que entra horizontalmente en una region con campo magnetico perpendicular al plano. Se puede cambiar el signo de la carga, el campo, la velocidad inicial y un campo electrico vertical.
+## Predice un caso
+
+Curva el movimiento sin añadir energía magnética. Con los valores iniciales, calcula magnitud de fuerza en µN. Magnitud de fuerza = 1 µN. Solución exacta no relativista con E en x y B en z. El campo magnético curva la velocidad sin trabajo; E puede cambiar la energía. q en µC y m en mg.

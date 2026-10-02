@@ -1,11 +1,15 @@
 # Usos
 
-- Diagonalizar matrices simetricas reales.
-- Analizar formas cuadraticas.
-- Estudiar matrices de covarianza.
-- Entender PCA y reduccion de dimension.
-- Modelar modos independientes en fisica e ingenieria.
+Separar una transformación simétrica en proyecciones ortogonales y escalados firmados. Aparece en formas cuadráticas y análisis modal bajo las hipótesis del teorema espectral.
 
-## Uso del simulador
+## Un caso que puedes comprobar
 
-El simulador permite modificar dos autovalores y la orientacion de los autovectores. La curva muestra como una circunferencia se transforma en una elipse segun las escalas espectrales.
+Reconstruye una transformación mediante proyecciones. Con los valores iniciales, calcula autovalor mayor en unidades adimensionales. Autovalor mayor = 3 . Matriz real simétrica 2×2. Sus autovectores ortonormales separan dos escalados firmados; valores repetidos permiten varias bases igualmente válidas.
+
+## Condiciones de aplicación
+
+Matriz real simétrica para diagonalización ortogonal; en complejo la versión hermítica usa adjunta. No extender a cualquier matriz real ni confundir valores propios negativos con valores singulares.
+
+## Explora antes de extrapolar
+
+Matriz real simétrica 2×2. Sus autovectores ortonormales separan dos escalados firmados; valores repetidos permiten varias bases igualmente válidas.

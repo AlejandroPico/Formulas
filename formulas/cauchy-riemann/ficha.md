@@ -1,35 +1,24 @@
-# Ficha
+# Ecuaciones de Cauchy-Riemann
 
-## Identificación
+Compara f(z)=z²+αz̄. Las imágenes de una retícula muestran la diferencia entre función holomorfa y dependencia conjugada.
 
-- **Nombre:** Ecuaciones de Cauchy-Riemann
-- **Autoría histórica:** Augustin-Louis Cauchy y Bernhard Riemann
-- **Área:** análisis complejo
-- **Nivel:** universidad
-- **Tipo:** condiciones diferenciales locales
+## Magnitudes
 
-## Variables
-
-- `z=x+iy`: número complejo escrito en coordenadas reales.
-- `f(z)=u(x,y)+iv(x,y)`: función compleja descompuesta en parte real e imaginaria.
-- `u(x,y)`: parte real.
-- `v(x,y)`: parte imaginaria.
-- `u_x`, `u_y`, `v_x`, `v_y`: derivadas parciales.
+| Símbolo | Significado |
+| :-- | :-- |
+| u | Parte real de f. |
+| v | Parte imaginaria de f. |
+| x | Coordenada real del argumento. |
+| y | Coordenada imaginaria del argumento. |
+| f | Función compleja estudiada. |
+| z | Argumento complejo x+iy. |
+| i | Unidad imaginaria, i²=−1. |
+| α | Peso real de la dependencia conjugada en el laboratorio. |
 
 ## Condiciones
 
-- `u_x=v_y`
-- `u_y=-v_x`
+La necesidad de las ecuaciones en un punto no basta sin regularidad para una conclusión global. En este polinomio en z,z̄ las funciones son C1 y α=0 da holomorfía en todo el plano.
 
-Si las derivadas parciales son continuas y las condiciones se cumplen en un entorno, la función es holomorfa en ese entorno.
+## Unidades
 
-## Lectura del simulador
-
-El simulador compara una función analítica, como `f(z)=z²`, con una función que no cumple la estructura compleja. El usuario mueve el punto por el plano y observa los valores de las derivadas parciales. El resultado muestra de forma inmediata si las dos condiciones se cumplen.
-
-## Ideas clave
-
-- No basta con derivabilidad real de `u` y `v`.
-- La derivada compleja exige independencia de dirección.
-- Las funciones holomorfas preservan ángulos localmente salvo puntos críticos.
-- Las partes real e imaginaria están ligadas: no se eligen de forma independiente.
+Coordenadas y salida adimensionales en el laboratorio. Si f y z tienen unidades, las derivadas tienen unidad de f dividida por unidad de z y los coeficientes deben compatibilizar términos.

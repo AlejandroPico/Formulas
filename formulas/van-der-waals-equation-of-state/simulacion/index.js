@@ -1,1 +1,4 @@
-export { default } from "../../../scripts/thermodynamics-statmech-simulations.js?topic=vanDerWaals&v=20260705a";
+import {mountLab} from '../../shared/learning-lab.js';
+import {SPECTRUM_LABS} from '../../shared/spectrum-configs.js';
+import {drawSpectrum} from '../../shared/spectrum-draw.js';
+export default options=>mountLab('van-der-waals-equation-of-state',options,{config:SPECTRUM_LABS['van-der-waals-equation-of-state'],draw:drawSpectrum});

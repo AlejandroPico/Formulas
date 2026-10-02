@@ -1,9 +1,11 @@
 # Significado
 
-La ecuación de Arrhenius describe cómo cambia la velocidad de una reacción química con la temperatura. La constante de velocidad `k` crece cuando aumenta `T` porque más moléculas tienen energía suficiente para superar la barrera de activación.
+Ejemplo de primer orden con prefactor A en s⁻¹. La temperatura cambia k, no la cantidad inicial; se supone Ea y A constantes en el rango.
 
-`A` es el factor preexponencial y agrupa frecuencia de colisiones y orientación efectiva. `E_a` es la energía de activación: la barrera mínima que debe superarse para que la reacción avance.
+## Del símbolo a la idea
 
-El término exponencial hace que la dependencia con la temperatura sea muy sensible. Un aumento moderado de temperatura puede producir un gran aumento de `k`, especialmente si `E_a` es alta.
+La dependencia activada aproxima una fracción de procesos que supera una barrera mediante exp(−Ea/RT). Multiplica por un prefactor A que incorpora escala de intento y otros factores. Tomar el logaritmo da ln(k/kref)=ln(A/kref)−(Ea/R)(1/T); una gráfica frente a 1/T es recta solo si A y Ea son aproximadamente constantes. Restar dos condiciones cancela el prefactor y produce la expresión de razón. No deduce el orden cinético de la reacción.
 
-El simulador muestra una distribución de energías moleculares y una barrera `E_a`. La parte de la curva situada por encima de la barrera representa la fracción de moléculas capaces de reaccionar.
+## Predice un caso
+
+Acelera la reacción sin cambiar su ecuación de orden. Con los valores iniciales, calcula constante de velocidad en s⁻¹. Constante de velocidad = 32,9427 s⁻¹. Ejemplo de primer orden con prefactor A en s⁻¹. La temperatura cambia k, no la cantidad inicial; se supone Ea y A constantes en el rango.

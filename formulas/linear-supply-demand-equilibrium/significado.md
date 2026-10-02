@@ -1,3 +1,11 @@
 # Significado
 
-El precio de equilibrio es aquel en el que la cantidad que compradores desean coincide con la cantidad que vendedores ofrecen.
+Intersección algebraica de dos rectas. Se valida precio y cantidad no negativos; las curvas son ilustrativas y no una predicción de mercado.
+
+## Del símbolo a la idea
+
+Iguala cantidades de las dos curvas: a−bP=c+dP. Reúne términos para (b+d)P=a−c y despeja P*. Sustituye en cualquiera de las curvas para Q*. Con pendientes b,d positivas hay una única intersección algebraica, pero solo se interpreta económicamente si precio y cantidad son no negativos. A precio observado distinto, Qd−Qs mide exceso de demanda; no se integra una dinámica automática de ajustes de precio.
+
+## Predice un caso
+
+Iguala cantidades demandada y ofrecida. Con los valores iniciales, calcula precio de equilibrio en moneda. Precio de equilibrio = 30 moneda. Intersección algebraica de dos rectas. Se valida precio y cantidad no negativos; las curvas son ilustrativas y no una predicción de mercado.

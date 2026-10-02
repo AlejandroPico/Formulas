@@ -1,17 +1,22 @@
-# Ficha
+# Métrica riemanniana
 
-## Identificacion
+Una matriz simétrica definida positiva mide desplazamientos. Rota sus ejes y compara longitud euclídea con longitud métrica; no son coordenadas del espacio-tiempo.
 
-- Nombre: Metrica riemanniana.
-- Area: geometria diferencial.
-- Idea: medir distancias locales con un tensor metrico.
+## Magnitudes
 
-## Variables
+| Símbolo | Significado |
+| :-- | :-- |
+| s | Longitud intrínseca; ds elemento infinitesimal. |
+| g | Componentes de un tensor métrico simétrico definido positivo. |
+| i | Primer índice coordinado sumado. |
+| j | Segundo índice coordinado sumado. |
+| x | Primera coordenada local, o coordenada indexada xi. |
+| y | Segunda coordenada local. |
 
-- ds: intervalo local.
-- g11: factor metrico horizontal del simulador.
-- dx, dy: incrementos coordenados.
+## Condiciones
 
-## Lectura del simulador
+Simetría, suavidad y positividad definida. No es una métrica lorentziana; ds² no se vuelve negativo para un vector no nulo. La escena usa una métrica constante plana, no curvatura creada por anisotropía constante.
 
-La malla se contrae o expande segun g11. El segmento azul representa un desplazamiento elemental y el readout calcula su intervalo.
+## Unidades
+
+Coordenadas cartesianas del ejemplo m y componentes g adimensionales dan ds m. En coordenadas angulares los componentes incorporan unidades necesarias; el tensor completo conserva la longitud.

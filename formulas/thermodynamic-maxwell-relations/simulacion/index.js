@@ -1,1 +1,4 @@
-export { default } from "../../../scripts/thermodynamics-simulations.js?topic=maxwellRelations&v=20260705a";
+import {mountLab} from '../../shared/learning-lab.js';
+import {SPECTRUM_LABS} from '../../shared/spectrum-configs.js';
+import {drawSpectrum} from '../../shared/spectrum-draw.js';
+export default options=>mountLab('thermodynamic-maxwell-relations',options,{config:SPECTRUM_LABS['thermodynamic-maxwell-relations'],draw:drawSpectrum});

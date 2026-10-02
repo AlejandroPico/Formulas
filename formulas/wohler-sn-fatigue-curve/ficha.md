@@ -1,21 +1,20 @@
-# Ficha
+# Fatiga de materiales: curva de Wöhler S-N
 
-**Nombre:** Fatiga de materiales: curva de Wöhler S-N
+Modelo Basquin S=A N^b con b<0. El valor de tensión es amplitud alternante; los parámetros son ilustrativos y no definen un material certificado.
 
-**Área:** Resistencia de materiales / Fatiga
+## Magnitudes
 
-**Nivel:** Universidad inicial
+| Símbolo | Significado |
+| :-- | :-- |
+| S | Amplitud de tensión alternante usada para calibrar la curva. |
+| A | Coeficiente empírico de tensión de Basquin. |
+| N | Número de ciclos de referencia hasta fallo del modelo. |
+| b | Exponente empírico negativo. |
 
-**Resumen:** Relaciona amplitud de esfuerzo y número de ciclos hasta fallo por fatiga.
+## Condiciones
 
-## Lectura e interpretación
+Ley empírica de rango de ajuste; carga cíclica de amplitud constante. No calcula daño acumulado, efecto de tensión media, corrosión ni dispersión probabilística de fallo.
 
-# Interpretación
+## Unidades
 
-Mueve los controles y observa qué domina: coeficiente convectivo, rugosidad, velocidad cuadrática, vida logarítmica, círculo de tensiones o acoplamiento de Poisson.
-
-## Validez y limitaciones
-
-# Limitaciones
-
-Depende de acabado, tamaño, concentración, corrosión, tensión media, espectro variable y dispersión experimental.
+S,A MPa; S/A adimensional; N conteo de ciclos adimensional y b adimensional. Se muestra log10N para evitar confundir una escala de muchos órdenes con una escala lineal.

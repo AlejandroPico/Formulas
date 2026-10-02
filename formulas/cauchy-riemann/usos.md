@@ -1,11 +1,15 @@
 # Usos
 
-- **Análisis complejo:** comprobar si una función escrita como `u(x,y)+iv(x,y)` puede ser diferenciable en sentido complejo.
-- **Mapas conformes:** construir transformaciones que conservan ángulos locales.
-- **Fluidos potenciales:** representar potencial y corriente en modelos bidimensionales ideales.
-- **Electrostática plana:** resolver campos y potenciales en geometrías de dos dimensiones.
-- **Geometría:** estudiar deformaciones del plano complejo con estructura angular controlada.
-- **Ecuaciones diferenciales:** conectar funciones holomorfas con funciones armónicas y con el laplaciano.
-- **Visualización:** comprobar en un punto si las variaciones de `u` y `v` están coordinadas.
+Comprobar holomorfía bajo hipótesis de regularidad y distinguir transformaciones analíticas de dependencias conjugadas. Las funciones holomorfas permiten usar herramientas de integración compleja y geometría conforme donde su derivada no se anula.
 
-Su valor práctico es que convierte una propiedad compleja abstracta en dos igualdades reales verificables. En el simulador, mover el punto permite ver que una función analítica cumple las dos igualdades en todo el plano, mientras que una función no analítica falla de forma visible.
+## Un caso que puedes comprobar
+
+Elimina la dependencia de la conjugada. Con los valores iniciales, calcula residuo ux−vy en unidades adimensionales. Residuo ux−vy = 2 . Compara f(z)=z²+αz̄. Las imágenes de una retícula muestran la diferencia entre función holomorfa y dependencia conjugada.
+
+## Condiciones de aplicación
+
+La necesidad de las ecuaciones en un punto no basta sin regularidad para una conclusión global. En este polinomio en z,z̄ las funciones son C1 y α=0 da holomorfía en todo el plano.
+
+## Explora antes de extrapolar
+
+Compara f(z)=z²+αz̄. Las imágenes de una retícula muestran la diferencia entre función holomorfa y dependencia conjugada.

@@ -1,9 +1,11 @@
 # Derivación
 
-La energía libre de Gibbs se define como `G = H - TS`, donde `H` es la entalpía y `S` la entropía.
+Define G=H−TS. Entre estados a la misma T, resta ambos valores y obtén ΔG=ΔH−TΔS; si T cambia, no se puede sacar una sola temperatura de esa diferencia. A T,P fijados, la disminución de G describe dirección termodinámicamente favorecida bajo las restricciones pertinentes. Si ΔH y ΔS se aproximan constantes, resolver ΔG=0 da Tc=ΔH/ΔS. Solo un cociente positivo representa una temperatura física, y ΔS=0 no admite ese despeje.
 
-Para un proceso a temperatura constante, la variación toma la forma `Delta G = Delta H - T Delta S`.
+## Comprobación concreta
 
-La condición de espontaneidad se obtiene comparando el cambio de entropía total del universo. A presión y temperatura constantes, esa condición se expresa de forma equivalente mediante el signo de `Delta G` del sistema.
+Decide cuándo cambia el sentido favorecido. Con los valores iniciales, calcula cambio de gibbs en kJ/mol. Cambio de Gibbs = 5 kJ/mol. Estudia ΔG=ΔH−TΔS a presión y temperatura constantes. La dependencia lineal usa ΔH,ΔS aproximadamente constantes; el signo no indica rapidez.
 
-Si `Delta G` disminuye, el proceso avanza espontáneamente hacia el equilibrio. En equilibrio, `Delta G = 0`.
+## Hipótesis
+
+Temperatura y presión constantes para el criterio de espontaneidad; composición y trabajo adicional requieren el balance adecuado. Cambio de signo lineal supone ΔH,ΔS aproximadamente constantes.

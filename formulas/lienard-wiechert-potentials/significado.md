@@ -1,3 +1,11 @@
 # Significado
 
-Los potenciales de Lienard-Wiechert describen el campo retardado producido por una carga en movimiento. El simulador permite modificar la magnitud principal y observar el efecto sobre potenciales, ondas, potencia, impedancia o energia almacenada.
+Carga con velocidad constante βc en x, observación a tiempo cero. Resuelve exactamente el tiempo retardado y compara la posición actual con la que emitió la información.
+
+## Del símbolo a la idea
+
+Las soluciones retardadas de las ecuaciones de potencial con una fuente puntual evalúan la trayectoria en tr. La dependencia implícita de la distancia introduce el factor κ=1−n·β en el denominador. Para velocidad uniforme βc en x, observación t=0 y posición actual origen, resuelve u²=(x+βu)²+y² con u=c(−tr). La raíz causal es [βx+√(x²+(1−β²)y²)]/(1−β²). Entonces κR=√(x²+(1−β²)y²); el laboratorio dibuja el frente esférico emitido en la posición retardada.
+
+## Predice un caso
+
+Localiza la carga que ves, no solo la que está ahora. Con los valores iniciales, calcula potencial reducido en unidades adimensionales. Potencial reducido = 0,7559 . Carga con velocidad constante βc en x, observación a tiempo cero. Resuelve exactamente el tiempo retardado y compara la posición actual con la que emitió la información.

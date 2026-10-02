@@ -1,9 +1,11 @@
 # Historia
 
-Josiah Willard Gibbs desarrolló en el siglo XIX una formulación profunda de la termodinámica basada en potenciales termodinámicos.
+Gibbs desarrolló potenciales que permiten expresar equilibrio químico y termodinámico bajo distintas restricciones. La ficha estudia el potencial y su balance térmico; la ficha de reacción añade composición mediante Q.
 
-La energía libre que lleva su nombre se convirtió en una herramienta central para química física, equilibrio químico y procesos a presión y temperatura constantes.
+## Lectura y alcance
 
-Su utilidad procede de condensar entalpía, entropía y temperatura en una sola magnitud de decisión.
+[Referencia de estudio](https://openstax.org/books/chemistry-2e/pages/17-4-potential-free-energy-and-equilibrium).
 
-Hoy se usa para estudiar reacciones químicas, cambios de fase, equilibrio y bioquímica.
+Temperatura y presión constantes para el criterio de espontaneidad; composición y trabajo adicional requieren el balance adecuado. Cambio de signo lineal supone ΔH,ΔS aproximadamente constantes.
+
+La fecha del catálogo conserva la creación del archivo; el año histórico y la revisión tienen significados diferentes.

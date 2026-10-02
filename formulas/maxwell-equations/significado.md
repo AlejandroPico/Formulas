@@ -1,9 +1,11 @@
 # Significado
 
-Las ecuaciones de Maxwell forman el nucleo del electromagnetismo clasico. Reunen en cuatro expresiones la relacion entre cargas, corrientes, campos electricos y campos magneticos. Su gran logro conceptual es mostrar que electricidad y magnetismo no son fenomenos separados, sino aspectos de una misma estructura de campo.
+Onda plana de vacío: E en y, B en z y propagación en +x. E/B=c; el reloj visual representa fase, con periodo 5 s y tiempo físico equivalente tλ/(5c).
 
-La primera ecuacion dice que las cargas electricas son fuentes o sumideros del campo electrico. La segunda afirma que no hay monopolos magneticos clasicos: las lineas de campo magnetico no empiezan ni terminan en una carga magnetica aislada. La tercera expresa que un campo magnetico variable induce un campo electrico rotacional. La cuarta expresa que corrientes y campos electricos variables inducen campo magnetico.
+## Del símbolo a la idea
 
-De la combinacion de las dos ecuaciones rotacionales surge la onda electromagnetica. Un campo electrico variable genera campo magnetico, y un campo magnetico variable genera campo electrico. Esa realimentacion permite que la perturbacion se propague por el espacio. Maxwell identifico que la velocidad predicha coincidia con la velocidad de la luz, unificando optica y electromagnetismo.
+Gauss eléctrica conecta fuentes de E y carga; Gauss magnética impone ausencia de fuentes monopolares en esta teoría. Faraday conecta campo eléctrico rotacional con variación de B, y Ampère–Maxwell conecta B con conducción y variación de E. En la onda Ey=E0 cos(kx−ωt), Bz=Ey/c sin fuentes, ambas divergencias son cero; sustituir derivadas en los dos rotacionales verifica compatibilidad si ω=ck. Una onda es un ejemplo, no todos los fenómenos descritos por las leyes.
 
-El simulador se centra en esa consecuencia: una onda electromagnetica con campo electrico y campo magnetico perpendiculares entre si y perpendiculares a la direccion de propagacion. Los controles permiten variar frecuencia y amplitud para observar como cambia la estructura de la onda.
+## Predice un caso
+
+Conecta campos, propagación y energía. Con los valores iniciales, calcula campo eléctrico en V/m. Campo eléctrico = 10 V/m. Onda plana de vacío: E en y, B en z y propagación en +x. E/B=c; el reloj visual representa fase, con periodo 5 s y tiempo físico equivalente tλ/(5c).

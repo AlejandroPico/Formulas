@@ -1,11 +1,19 @@
-# Ficha
+# Ley de Gauss magnética
 
-## Identificacion
+Un campo uniforme atraviesa una caja cerrada. Flujos de caras opuestas se cancelan aunque B no sea cero; la ley no afirma que el flujo por una superficie abierta sea nulo.
 
-- Nombre: Ley de Gauss magnética.
-- Area: electromagnetismo clasico.
-- Tipo: ley integral, campo o potencial.
+## Magnitudes
 
-## Lectura del simulador
+| Símbolo | Significado |
+| :-- | :-- |
+| B | Campo magnético. |
+| S | Superficie cerrada orientada con normal exterior. |
+| n | Normal exterior unitaria. |
 
-Mueve los controles inferiores. Observa lineas de campo, superficies gaussianas, espiras, circulacion magnetica, anillos equipotenciales o vectores de campo.
+## Condiciones
+
+Superficie cerrada y campo suficientemente regular; teoría electromagnética sin monopolos magnéticos. No afirma que una superficie abierta tenga flujo cero ni que el campo deba anularse.
+
+## Unidades
+
+B T; dS m²; flujo Wb. div B T/m. En el ejemplo el área de cada cara horizontal está en m² y se suman flujos firmados.

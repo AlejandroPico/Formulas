@@ -1,21 +1,24 @@
-# Ficha
+# Tensión cortante o de cizalladura
 
-**Nombre:** Tensión cortante o de cizalladura
+Una fuerza tangencial uniforme produce τ media=F/A. γ=τ/G es deformación angular de ingeniería; el dibujo se amplifica ×100.
 
-**Área:** Resistencia de materiales
+## Magnitudes
 
-**Nivel:** Bachillerato/Universidad inicial
+| Símbolo | Significado |
+| :-- | :-- |
+| τ | Tensión cortante media firmada en una sección. |
+| F | Fuerza tangencial a la sección. |
+| A | Área que transmite la fuerza. |
+| G | Módulo elástico de cizalladura. |
+| γ | Deformación angular de ingeniería para pequeñas deformaciones. |
+| ε | Tensor de pequeña deformación; εxy componente cortante. |
+| x | Dirección de la componente cartesiana x. |
+| y | Dirección de la componente cartesiana y. |
 
-**Resumen:** Calcula la tensión media paralela a una sección sometida a fuerza cortante.
+## Condiciones
 
-## Lectura e interpretación
+Carga tangencial uniforme para interpretación puntual; elasticidad lineal y pequeña deformación para τ=Gγ. No calcula distribución de una viga ni plastificación.
 
-# Interpretación
+## Unidades
 
-Mueve los controles y observa qué domina: área resistente, signo de carga, longitud cúbica, resistencia térmica, equilibrio de puente o región MOSFET.
-
-## Validez y limitaciones
-
-# Limitaciones
-
-τ=V/A es tensión media; distribuciones reales pueden ser no uniformes y depender de geometría, concentración y doble corte.
+F N y A mm² dan τ MPa. Control kN×1000; G GPa×1000 en MPa. γ y εxy adimensionales. Dibujo de deformación amplificado ×100.

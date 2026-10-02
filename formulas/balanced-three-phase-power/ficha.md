@@ -1,21 +1,23 @@
-# Ficha
+# Potencia en sistemas trifásicos equilibrados
 
-**Nombre:** Potencia en sistemas trifásicos equilibrados
+Tres sinusoides separadas 120° producen potencia total constante en equilibrio. Tensión y corriente dadas son magnitudes de línea RMS.
 
-**Área:** Electrotecnia / Sistemas trifásicos
+## Magnitudes
 
-**Nivel:** Universidad inicial
+| Símbolo | Significado |
+| :-- | :-- |
+| P | Potencia activa total de las tres fases. |
+| Q | Potencia reactiva total firmada. |
+| S | Potencia aparente total. |
+| V | Tensión de línea RMS en VL. |
+| I | Corriente de línea RMS en IL. |
+| L | Índice L: magnitud de línea, no de una sola fase. |
+| φ | Desfase de la carga entre tensión y corriente de fase. |
 
-**Resumen:** Calcula potencia activa, aparente y reactiva en cargas trifásicas balanceadas.
+## Condiciones
 
-## Lectura e interpretación
+Sistema trifásico equilibrado sinusoidal; magnitudes de línea RMS. No usar una única fórmula con valores de fases distintas en una carga desequilibrada.
 
-# Interpretación
+## Unidades
 
-Mueve los controles y observa qué domina: exponencial del diodo, escala logarítmica, relación de espiras, reactiva, equilibrio trifásico o ángulo de impedancia.
-
-## Validez y limitaciones
-
-# Limitaciones
-
-Solo vale directamente en equilibrio sinusoidal; desequilibrios y armónicos requieren análisis por fase.
+P W, Q var, S VA; el resultado usa kW,kvar,kVA dividiendo por 1000. VL V e IL A RMS; ángulo grados convertido a radianes.

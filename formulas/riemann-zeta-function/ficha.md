@@ -1,26 +1,23 @@
-# Ficha
+# Función Zeta de Riemann
 
-## Identificación
+Estudia s real>1 mediante suma finita y cota integral del resto. Cerca de 1 se necesitan muchos términos; no se simulan los ceros de la continuación compleja.
 
-- **Nombre:** Función Zeta de Riemann
-- **Autor:** Bernhard Riemann
-- **Año:** 1859
-- **Área:** teoría de números y análisis complejo
-- **Nivel:** avanzado
-- **Tipo:** función compleja meromorfa
+## Magnitudes
 
-## Elementos
+| Símbolo | Significado |
+| :-- | :-- |
+| ζ | Función zeta; la serie indicada converge para parte real mayor que uno. |
+| s | Exponente complejo general; real mayor que uno en el laboratorio. |
+| n | Índice entero positivo de cada término. |
+| p | Número primo que indexa el producto de Euler. |
+| S | Suma parcial de N términos, distinta del límite ζ. |
+| N | Número finito de términos. |
+| Re | Parte real del argumento complejo. |
 
-- `s`: variable compleja.
-- `zeta(s)`: función zeta.
-- `p`: número primo en el producto de Euler.
-- `t`: componente imaginaria en la línea crítica.
-- `sigma`: parte real de `s`.
+## Condiciones
 
-## Lectura del simulador
+Serie y producto requieren Re(s)>1. Fuera de ese dominio la función se define por continuación analítica, con polo simple en 1; el laboratorio no representa ese dominio ni verifica hipótesis sobre sus ceros.
 
-La visualización calcula una aproximación de `zeta(1/2+it)` y dibuja su valor como punto en el plano complejo. El rastro muestra cómo evoluciona la función al aumentar `t`. Cerca de ciertos valores, el punto se aproxima al origen.
+## Unidades
 
-## Advertencia
-
-El simulador usa una aproximación finita pensada para aprendizaje visual. No debe usarse como herramienta de cálculo profesional.
+s,n,N y valores de ζ adimensionales. Índices enteros; el control s real está por encima de 1 y se muestran cotas del resto, no una supuesta igualdad con la suma truncada.

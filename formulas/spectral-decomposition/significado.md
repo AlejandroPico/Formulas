@@ -1,9 +1,11 @@
 # Significado
 
-La descomposicion espectral expresa una matriz simetrica como combinacion de sus direcciones propias. En vez de estudiar la matriz entrada por entrada, se separa su accion en ejes privilegiados.
+Matriz real simétrica 2×2. Sus autovectores ortonormales separan dos escalados firmados; valores repetidos permiten varias bases igualmente válidas.
 
-Si los autovectores forman una base ortonormal, la matriz puede escribirse como `A=Q Lambda Q^T`, o como suma de proyecciones `lambda_i v_i v_i^T`.
+## Del símbolo a la idea
 
-Cada termino espectral dice: proyecta sobre la direccion `v_i` y escala por `lambda_i`. La matriz completa es la suma de esas acciones independientes.
+El teorema espectral garantiza una base ortonormal de autovectores para una matriz real simétrica. Reúne vectores en Q y valores propios en Λ; AQ=QΛ y QᵀQ=I dan A=QΛQᵀ. Expandir el producto suma proyecciones vi viᵀ multiplicadas por λi. En 2×2 el centro es (a+d)/2 y separación √(((a−d)/2)²+b²). Autovalores repetidos hacen no única la base, sin alterar A.
 
-El simulador reconstruye una matriz `2x2` simetrica a partir de dos autovalores y una rotacion de los autovectores.
+## Predice un caso
+
+Reconstruye una transformación mediante proyecciones. Con los valores iniciales, calcula autovalor mayor en unidades adimensionales. Autovalor mayor = 3 . Matriz real simétrica 2×2. Sus autovectores ortonormales separan dos escalados firmados; valores repetidos permiten varias bases igualmente válidas.

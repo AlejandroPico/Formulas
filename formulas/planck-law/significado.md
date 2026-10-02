@@ -1,9 +1,11 @@
 # Significado
 
-La ley de Planck describe cuánta radiación emite un cuerpo negro a cada longitud de onda cuando está a una temperatura determinada.
+Radiancia Bλ por micrómetro de longitud de onda. Compara la ley de Planck con la aproximación clásica; el máximo y el área del espectro contienen información distinta.
 
-La curva no crece indefinidamente hacia longitudes de onda cortas. La cuantización de la energía evita la catástrofe ultravioleta que aparecía en modelos clásicos.
+## Del símbolo a la idea
 
-Al aumentar la temperatura, el máximo de la curva se desplaza hacia longitudes de onda menores y la emisión total aumenta. Esta tendencia se resume también en la ley de desplazamiento de Wien.
+Un modo de frecuencia ν tiene cuantos de energía hν; su energía media térmica es hν/[exp(hν/kBT)−1]. Combinarla con densidad de modos y convertir ν=c/λ con el jacobiano |dν/dλ|=c/λ² produce Bλ. Para x=hc/(λkBT) pequeño, expx−1≈x y se recupera Rayleigh–Jeans. Esa aproximación diverge en ultravioleta si se extrapola fuera de su dominio; Planck decae. Integrar radiancia requiere además longitud de onda y dirección, no solo leer su pico.
 
-El simulador muestra la curva espectral, la franja visible y el pico dominante. Al subir la temperatura, el pico se mueve hacia el azul; al bajarla, se desplaza hacia el rojo e infrarrojo.
+## Predice un caso
+
+Evita la catástrofe ultravioleta de la aproximación clásica. Con los valores iniciales, calcula radiancia espectral en W/(m²·sr·µm). Radiancia espectral = 992.403,333 W/(m²·sr·µm). Radiancia Bλ por micrómetro de longitud de onda. Compara la ley de Planck con la aproximación clásica; el máximo y el área del espectro contienen información distinta.

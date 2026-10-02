@@ -1,9 +1,11 @@
 # Significado
 
-El teorema de Stokes conecta dos formas de medir la tendencia de un campo a girar. La primera consiste en recorrer una curva cerrada y sumar cuánto acompaña el campo al desplazamiento. Esa cantidad es la circulación. La segunda consiste en medir el giro local del campo sobre una superficie apoyada en esa curva.
+La circulación por el borde coincide con el flujo del rotacional. Inclinar el disco cambia su área proyectada y el signo depende de la orientación.
 
-El rotacional mide giro local. Si el campo se comporta como un remolino, el rotacional es distinto de cero. Stokes afirma que la circulación acumulada en el borde coincide con el flujo del rotacional a través de la superficie.
+## Del símbolo a la idea
 
-La idea central es que el giro interior explica la circulación exterior. El borde solo muestra el resultado global de muchos giros locales acumulados dentro.
+Divide la superficie en pequeñas piezas orientadas. La circulación de cada borde mide el flujo del rotacional a primer orden. Al sumarlas, los bordes internos se cancelan por recorrerse en sentidos opuestos; queda solo el borde exterior. En el campo del laboratorio curl F=(0,0,ω). Un disco de radio R y normal inclinada θ tiene flujo ωπR²cosθ. Parametrizar su borde con la misma orientación da la misma circulación, incluso cuando el disco se invierte.
 
-En el simulador, el campo de fondo gira alrededor del centro. La curva verde representa el borde de integración. Al aumentar la intensidad del giro o el radio del contorno, aumenta la circulación total. Si el giro cae a cero, la circulación también desaparece.
+## Predice un caso
+
+Relaciona una vuelta por el borde con el giro del interior. Con los valores iniciales, calcula circulación en m²/s. Circulación = 3,1416 m²/s. La circulación por el borde coincide con el flujo del rotacional. Inclinar el disco cambia su área proyectada y el signo depende de la orientación.

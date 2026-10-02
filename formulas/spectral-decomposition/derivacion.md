@@ -1,21 +1,11 @@
-# Derivacion
+# Derivación
 
-Si `A` es una matriz simetrica real, sus autovectores pueden elegirse ortonormales. Colocamos esos autovectores como columnas de una matriz `Q` y los autovalores en una matriz diagonal `Lambda`.
+El teorema espectral garantiza una base ortonormal de autovectores para una matriz real simétrica. Reúne vectores en Q y valores propios en Λ; AQ=QΛ y QᵀQ=I dan A=QΛQᵀ. Expandir el producto suma proyecciones vi viᵀ multiplicadas por λi. En 2×2 el centro es (a+d)/2 y separación √(((a−d)/2)²+b²). Autovalores repetidos hacen no única la base, sin alterar A.
 
-Entonces la accion de `A` sobre cada autovector cumple:
+## Comprobación concreta
 
-`A v_i = lambda_i v_i`.
+Reconstruye una transformación mediante proyecciones. Con los valores iniciales, calcula autovalor mayor en unidades adimensionales. Autovalor mayor = 3 . Matriz real simétrica 2×2. Sus autovectores ortonormales separan dos escalados firmados; valores repetidos permiten varias bases igualmente válidas.
 
-Agrupando todas esas relaciones:
+## Hipótesis
 
-`A Q = Q Lambda`.
-
-Multiplicando a la derecha por `Q^T`, y usando que `Q^T Q = I`, obtenemos:
-
-`A = Q Lambda Q^T`.
-
-De forma equivalente:
-
-`A = sum lambda_i v_i v_i^T`.
-
-Cada matriz `v_i v_i^T` representa una proyeccion sobre la direccion propia `v_i`.
+Matriz real simétrica para diagonalización ortogonal; en complejo la versión hermítica usa adjunta. No extender a cualquier matriz real ni confundir valores propios negativos con valores singulares.

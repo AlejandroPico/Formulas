@@ -1,19 +1,15 @@
 # Usos
 
-- Reducir potencias altas de una matriz a combinaciones de potencias menores.
-- Calcular expresiones matriciales sin multiplicar matrices repetidamente.
-- Estudiar el polinomio mínimo y la diagonalización.
-- Analizar sistemas dinámicos lineales, donde aparecen sucesiones de potencias de una matriz.
-- Simplificar cálculos en álgebra lineal computacional.
+Reducir potencias de matrices y simplificar funciones matriciales. En dimensión dos, A² se expresa mediante A e I incluso cuando faltan autovectores independientes.
 
-## Ejemplo de uso
+## Un caso que puedes comprobar
 
-Si una matriz `2x2` cumple `A^2-tr(A)A+det(A)I=0`, entonces `A^2=tr(A)A-det(A)I`. A partir de ahí, cualquier potencia `A^3`, `A^4` o superior puede reducirse usando esa relación.
+Construye el polinomio de una transformación plana. Con los valores iniciales, calcula determinante en unidades adimensionales. Determinante = 3 . Toda matriz cuadrada satisface su polinomio característico. Verifica A²−tr(A)A+det(A)I término a término, incluyendo matrices no diagonalizables.
 
-## Uso didáctico
+## Condiciones de aplicación
 
-La fórmula es excelente para conectar determinantes, traza, polinomio característico y operaciones con matrices. También permite discutir por qué los invariantes de una matriz no son adornos: gobiernan relaciones algebraicas reales.
+Matriz cuadrada sobre reales o complejos; el término constante se multiplica por I. No requiere simetría ni diagonalización. Cero en pA(A)=0 es matriz cero, no solo determinante cero.
 
-## Uso del simulador
+## Explora antes de extrapolar
 
-El simulador permite introducir una matriz `2x2` y observar la cancelación completa. Es recomendable probar matrices diagonales, triangulares, singulares y con entradas negativas para comprobar que el resultado no depende de un caso especial.
+Toda matriz cuadrada satisface su polinomio característico. Verifica A²−tr(A)A+det(A)I término a término, incluyendo matrices no diagonalizables.

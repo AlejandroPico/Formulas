@@ -1,1 +1,4 @@
-export { default } from "../../../scripts/electromagnetism-simulations.js?topic=ampere";
+import {mountLab} from '../../shared/learning-lab.js';
+import {SPECTRUM_LABS} from '../../shared/spectrum-configs.js';
+import {drawSpectrum} from '../../shared/spectrum-draw.js';
+export default options=>mountLab('ampere-maxwell-law',options,{config:SPECTRUM_LABS['ampere-maxwell-law'],draw:drawSpectrum});

@@ -1,9 +1,11 @@
 # Derivación
 
-La derivación combina el conteo de modos electromagnéticos en una cavidad con la hipótesis de energía cuantizada.
+Un modo de frecuencia ν tiene cuantos de energía hν; su energía media térmica es hν/[exp(hν/kBT)−1]. Combinarla con densidad de modos y convertir ν=c/λ con el jacobiano |dν/dλ|=c/λ² produce Bλ. Para x=hc/(λkBT) pequeño, expx−1≈x y se recupera Rayleigh–Jeans. Esa aproximación diverge en ultravioleta si se extrapola fuera de su dominio; Planck decae. Integrar radiancia requiere además longitud de onda y dirección, no solo leer su pico.
 
-Cada modo de frecuencia `nu` solo puede intercambiar energía en paquetes proporcionales a `h nu`. Al calcular la energía media por modo con estadística térmica aparece el factor exponencial del denominador.
+## Comprobación concreta
 
-Multiplicando por la densidad de modos se obtiene la distribución espectral de radiancia.
+Evita la catástrofe ultravioleta de la aproximación clásica. Con los valores iniciales, calcula radiancia espectral en W/(m²·sr·µm). Radiancia espectral = 992.403,333 W/(m²·sr·µm). Radiancia Bλ por micrómetro de longitud de onda. Compara la ley de Planck con la aproximación clásica; el máximo y el área del espectro contienen información distinta.
 
-La forma en longitud de onda incluye el factor `lambda^-5` y el término exponencial que suprime la emisión ultravioleta extrema.
+## Hipótesis
+
+Cuerpo negro en equilibrio térmico; radiancia por longitud de onda, no por frecuencia. Longitud y temperatura positivas; la escena no modela emisividad de una estrella real ni un detector completo.

@@ -1,3 +1,11 @@
 # Significado
 
-La vida baja drásticamente al aumentar el esfuerzo alternante; algunos aceros muestran límite de endurancia.
+Modelo Basquin S=A N^b con b<0. El valor de tensión es amplitud alternante; los parámetros son ilustrativos y no definen un material certificado.
+
+## Del símbolo a la idea
+
+Toma logaritmos en S=AN^b: ln(S/A)=b ln N. Despeja N y su logaritmo decimal. Con b<0, aumentar la amplitud reduce la vida predicha. El ajuste debe proceder de ensayos bajo una convención definida de amplitud, tensión media y condición del material. El laboratorio usa coeficientes ilustrativos, no un criterio certificado; no añade un límite de fatiga que la potencia de Basquin no contiene.
+
+## Predice un caso
+
+Busca cómo una carga menor amplía la vida del modelo. Con los valores iniciales, calcula logaritmo decimal de ciclos en unidades adimensionales. Logaritmo decimal de ciclos = 6,9897 . Modelo Basquin S=A N^b con b<0. El valor de tensión es amplitud alternante; los parámetros son ilustrativos y no definen un material certificado.

@@ -1,9 +1,15 @@
 # Usos
 
-- **Electromagnetismo:** conectar circulación y rotacional en campos eléctricos y magnéticos.
-- **Fluidos:** interpretar vorticidad, remolinos y circulación alrededor de una curva.
-- **Geometría diferencial:** ver un caso concreto del principio frontera-interior.
-- **Simulación numérica:** comprobar balances entre borde y superficie.
-- **Visualización de campos:** detectar zonas donde el campo tiene giro organizado.
+Convertir circulación en flujo del rotacional y comparar mediciones en borde e interior. Es útil en campos de velocidad y en relaciones de inducción, siempre con superficie y orientación compatibles.
 
-Es útil cuando una integral sobre el borde es difícil pero el giro sobre la superficie es fácil de medir, o cuando se quiere interpretar una circulación global como suma de giros locales.
+## Un caso que puedes comprobar
+
+Relaciona una vuelta por el borde con el giro del interior. Con los valores iniciales, calcula circulación en m²/s. Circulación = 3,1416 m²/s. La circulación por el borde coincide con el flujo del rotacional. Inclinar el disco cambia su área proyectada y el signo depende de la orientación.
+
+## Condiciones de aplicación
+
+Campo C1 en un entorno de una superficie orientable suave por piezas; borde compatible por regla de la mano derecha. No aplicar atravesando singularidades del campo.
+
+## Explora antes de extrapolar
+
+La circulación por el borde coincide con el flujo del rotacional. Inclinar el disco cambia su área proyectada y el signo depende de la orientación.

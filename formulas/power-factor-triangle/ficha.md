@@ -1,21 +1,23 @@
-# Ficha
+# Factor de potencia y triángulo de potencias
 
-**Nombre:** Factor de potencia y triángulo de potencias
+Tensión y corriente RMS sinusoidales. P horizontal y Q vertical forman S; la reactiva capacitiva es negativa según convención pasiva.
 
-**Área:** Electrotecnia / AC
+## Magnitudes
 
-**Nivel:** Bachillerato/Universidad inicial
+| Símbolo | Significado |
+| :-- | :-- |
+| P | Potencia activa media consumida. |
+| Q | Potencia reactiva firmada, positiva inductiva y negativa capacitiva. |
+| S | Potencia aparente no negativa. |
+| V | Tensión RMS sinusoidal. |
+| I | Corriente RMS sinusoidal. |
+| φ | Desfase tensión menos corriente. |
+| FP | Factor de potencia real para el caso sinusoidal. |
 
-**Resumen:** Descompone potencia aparente en activa y reactiva para medir eficiencia eléctrica.
+## Condiciones
 
-## Lectura e interpretación
+Régimen estacionario sinusoidal y convención pasiva; no incluye distorsión armónica. Para ondas deformadas el factor total no se obtiene solo del desfase fundamental.
 
-# Interpretación
+## Unidades
 
-Mueve los controles y observa qué domina: exponencial del diodo, escala logarítmica, relación de espiras, reactiva, equilibrio trifásico o ángulo de impedancia.
-
-## Validez y limitaciones
-
-# Limitaciones
-
-En cargas no sinusoidales aparecen armónicos: el factor de potencia total no es solo cosφ.
+P W, Q var, S VA; V voltios RMS, I amperios RMS. Φ del control grados convertido a radianes; FP adimensional.

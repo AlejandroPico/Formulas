@@ -1,9 +1,11 @@
 # Significado
 
-Las ecuaciones de Cauchy-Riemann son el criterio local que conecta una función compleja con dos funciones reales. Si se escribe `f(z)=u(x,y)+iv(x,y)`, la función compleja queda descompuesta en una parte real `u` y una parte imaginaria `v`. Las ecuaciones dicen que esas dos partes no pueden variar de cualquier manera: sus derivadas parciales deben estar sincronizadas.
+Compara f(z)=z²+αz̄. Las imágenes de una retícula muestran la diferencia entre función holomorfa y dependencia conjugada.
 
-La razón profunda es que la derivada compleja debe ser independiente de la dirección desde la que se calcula el incremento. En el plano real ordinario hay muchas direcciones posibles para acercarse a un punto. Si la función fuera solo una función de dos variables reales, cada dirección podría dar una razón de cambio distinta. En cambio, una función holomorfa exige una coherencia mucho más fuerte: acercarse horizontalmente, verticalmente o por cualquier dirección debe producir la misma derivada compleja.
+## Del símbolo a la idea
 
-Las dos igualdades fuerzan esa coherencia. La primera, `u_x=v_y`, conecta la variación horizontal de la parte real con la variación vertical de la parte imaginaria. La segunda, `u_y=-v_x`, conecta la variación vertical de la parte real con la variación horizontal de la parte imaginaria con signo opuesto. Cuando ambas se cumplen, y las derivadas tienen regularidad suficiente, la función es diferenciable en el sentido complejo.
+Calcula el cociente incremental complejo por direcciones real e imaginaria. La primera dirección da ux+i vx; la segunda vy−i uy. Exigir que coincidan produce ux=vy y uy=−vx. Para u,v de clase C1 en un entorno, estas igualdades garantizan diferenciabilidad compleja allí. En f=z²+αz̄, ux=2x+α, vy=2x−α y uy=−2y=−vx, por lo que el primer residuo es 2α.
 
-Geométricamente, estas ecuaciones explican por qué las funciones holomorfas preservan ángulos localmente, salvo en puntos críticos. Ese comportamiento se llama conformidad. Por eso aparecen en mapas conformes, fluidos potenciales, electrostática bidimensional y transformaciones geométricas del plano complejo.
+## Predice un caso
+
+Elimina la dependencia de la conjugada. Con los valores iniciales, calcula residuo ux−vy en unidades adimensionales. Residuo ux−vy = 2 . Compara f(z)=z²+αz̄. Las imágenes de una retícula muestran la diferencia entre función holomorfa y dependencia conjugada.

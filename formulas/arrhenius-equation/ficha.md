@@ -1,26 +1,22 @@
-# Ficha
+# Ecuación de Arrhenius
 
-## Identificación
+Ejemplo de primer orden con prefactor A en s⁻¹. La temperatura cambia k, no la cantidad inicial; se supone Ea y A constantes en el rango.
 
-- **Nombre:** Ecuación de Arrhenius
-- **Autor:** Svante Arrhenius
-- **Año:** 1889
-- **Área:** cinética química
-- **Nivel:** universidad inicial
-- **Tipo:** ley cinética dependiente de temperatura
+## Magnitudes
 
-## Variables
+| Símbolo | Significado |
+| :-- | :-- |
+| k | Constante cinética del proceso. |
+| A | Prefactor cinético, con la misma unidad de k. |
+| E | Energía de activación molar Ea. |
+| a | Índice a: activación. |
+| R | Constante molar de los gases. |
+| T | Temperatura absoluta; índices 1,2 comparan dos condiciones. |
 
-- `k`: constante de velocidad.
-- `A`: factor preexponencial.
-- `E_a`: energía de activación.
-- `R`: constante de los gases.
-- `T`: temperatura absoluta.
+## Condiciones
 
-## Lectura del simulador
+Modelo activado con A,Ea constantes en el intervalo. Cambios de mecanismo, transporte limitante o dependencia fuerte del prefactor pueden desviarse de la recta.
 
-La curva representa una distribución de energías. La línea vertical indica la barrera `E_a`. La zona por encima de la barrera representa la fracción reactiva. Los controles modifican temperatura, barrera y factor preexponencial.
+## Unidades
 
-## Nota
-
-El simulador es conceptual. La forma real depende del mecanismo de reacción y del rango de temperatura considerado.
+Ea control kJ/mol×1000 J/mol; R J/(mol·K) y T K. Ejemplo de primer orden: A,k s⁻¹; k2/k1 adimensional. Logaritmo de k se escribe respecto a referencia 1 s⁻¹.

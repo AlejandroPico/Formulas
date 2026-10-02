@@ -4,6 +4,12 @@
   height:100% !important; min-height:0; overflow:auto !important; gap:12px !important;
   padding:12px 22px 18px; color:var(--text); background:var(--panel-solid);
 }
+/* Colegio uses a cream laboratory sheet within the green board dialog. */
+body[data-theme="chalkboard"] .formula-plugin-host.learning-lab {
+  --text:#173a31;
+  --muted:#586a56;
+  --line:#b8beaa;
+}
 .learning-lab .lab-heading { min-width:0; }
 .learning-lab .lab-mode-caption { font-size:.68rem; letter-spacing:.06em; text-transform:uppercase; color:var(--muted); margin:0 0 6px; }
 .learning-lab nav { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:0; }

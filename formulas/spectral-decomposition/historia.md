@@ -1,7 +1,11 @@
 # Historia
 
-La descomposicion espectral surge del estudio de formas cuadraticas, matrices simetricas y operadores autoadjuntos. Su fuerza consiste en reducir una transformacion a direcciones ortogonales independientes.
+La teoría espectral describe transformaciones mediante direcciones propias y se extiende a operadores bajo hipótesis precisas. Esta ficha presenta la versión matricial simétrica, de alcance distinto de SVD para matrices generales.
 
-En matematicas aparece en algebra lineal, analisis funcional y teoria de operadores. En fisica es esencial para modos normales y mecanica cuantica. En ciencia de datos aparece en PCA, matrices de covarianza y metodos espectrales.
+## Lectura y alcance
 
-La version finita para matrices simetricas reales es una de las formas mas limpias del teorema espectral.
+[Referencia de estudio](https://github.com/mitmath/1806).
+
+Matriz real simétrica para diagonalización ortogonal; en complejo la versión hermítica usa adjunta. No extender a cualquier matriz real ni confundir valores propios negativos con valores singulares.
+
+La fecha del catálogo conserva la creación del archivo; el año histórico y la revisión tienen significados diferentes.

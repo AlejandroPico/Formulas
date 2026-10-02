@@ -1,25 +1,23 @@
-# Ficha
+# Teorema de Stokes
 
-## Identificación
+La circulación por el borde coincide con el flujo del rotacional. Inclinar el disco cambia su área proyectada y el signo depende de la orientación.
 
-- **Nombre:** Teorema de Stokes
-- **Autor:** George Gabriel Stokes
-- **Área:** cálculo vectorial
-- **Nivel:** universidad
-- **Tipo:** teorema integral de frontera y superficie
+## Magnitudes
 
-## Elementos
+| Símbolo | Significado |
+| :-- | :-- |
+| S | Superficie orientada; ∂S es su borde orientado. |
+| F | Campo vectorial regular en un entorno de la superficie. |
+| r | Vector de posición sobre el borde. |
+| n | Normal unitaria de la superficie compatible con el borde. |
+| ω | Rotacional vertical constante del laboratorio. |
+| x | Coordenada cartesiana horizontal. |
+| y | Segunda coordenada cartesiana. |
 
-- `F`: campo vectorial.
-- `S`: superficie orientada.
-- `partial S`: curva cerrada que limita la superficie.
-- `n`: normal elegida para la orientación.
-- `curl F`: rotacional del campo.
+## Condiciones
 
-## Lectura física
+Campo C1 en un entorno de una superficie orientable suave por piezas; borde compatible por regla de la mano derecha. No aplicar atravesando singularidades del campo.
 
-La integral de línea mide circulación alrededor de la frontera. La integral de superficie mide la suma del giro local dentro de esa frontera.
+## Unidades
 
-## Lectura del simulador
-
-El campo se visualiza como un remolino. El usuario modifica el radio del contorno y la intensidad del giro. La circulación calculada aumenta con el área encerrada y con la magnitud del rotacional.
+F m/s y r m dan circulación m²/s. Rotacional s⁻¹ por área m² da la misma unidad. Normal unitaria adimensional; inclinación del control grados se convierte a radianes.

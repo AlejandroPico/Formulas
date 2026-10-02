@@ -1,9 +1,11 @@
 # Derivación
 
-La derivación intuitiva divide la superficie en muchas piezas pequeñas. En cada pieza, el rotacional mide una circulación elemental alrededor de su borde. Cuando se suman todas esas pequeñas circulaciones, los bordes interiores se cancelan porque cada segmento compartido se recorre en sentidos opuestos por piezas vecinas.
+Divide la superficie en pequeñas piezas orientadas. La circulación de cada borde mide el flujo del rotacional a primer orden. Al sumarlas, los bordes internos se cancelan por recorrerse en sentidos opuestos; queda solo el borde exterior. En el campo del laboratorio curl F=(0,0,ω). Un disco de radio R y normal inclinada θ tiene flujo ωπR²cosθ. Parametrizar su borde con la misma orientación da la misma circulación, incluso cuando el disco se invierte.
 
-Después de la cancelación, solo queda la circulación sobre el borde exterior de la superficie completa. Esa suma exterior es la integral de línea de `F` sobre la frontera.
+## Comprobación concreta
 
-Al tomar el límite de piezas cada vez más pequeñas, la suma de circulaciones locales se convierte en la integral de superficie del rotacional. El resultado es la igualdad de Stokes.
+Relaciona una vuelta por el borde con el giro del interior. Con los valores iniciales, calcula circulación en m²/s. Circulación = 3,1416 m²/s. La circulación por el borde coincide con el flujo del rotacional. Inclinar el disco cambia su área proyectada y el signo depende de la orientación.
 
-La clave es la misma estructura de cancelación que aparece en otros teoremas integrales: las contribuciones internas desaparecen y queda una relación entre una magnitud distribuida en el interior y una magnitud medida en el borde.
+## Hipótesis
+
+Campo C1 en un entorno de una superficie orientable suave por piezas; borde compatible por regla de la mano derecha. No aplicar atravesando singularidades del campo.

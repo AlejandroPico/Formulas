@@ -1,9 +1,11 @@
 # Historia
 
-Hendrik Lorentz formulo a finales del siglo XIX una teoria electronica de la materia y del electromagnetismo. En ese contexto, la expresion de la fuerza sobre una carga en movimiento adquirio la forma que hoy se conoce como fuerza de Lorentz.
+La fuerza de Lorentz organiza la interacción de una carga con campos eléctricos y magnéticos. El sentido depende de carga y orientación, mientras la conservación de rapidez con solo B sigue del producto escalar de la ecuación.
 
-La ley unifica dos efectos que antes podian estudiarse por separado: la accion de un campo electrico sobre una carga y la accion de un campo magnetico sobre una carga en movimiento. Esta sintesis fue clave para entender haces de particulas, corrientes, motores, generadores y movimiento de cargas en campos.
+## Lectura y alcance
 
-La fuerza de Lorentz tambien tuvo un papel importante en el camino hacia la relatividad especial. Las transformaciones de Lorentz y el comportamiento de campos electricos y magneticos en distintos sistemas de referencia estan estrechamente relacionados.
+[Referencia de estudio](https://openstax.org/details/books/university-physics-volume-2).
 
-Hoy es una herramienta esencial en fisica de particulas, plasmas, espectrometros de masas, aceleradores, magnetosfera terrestre y electronica de haces.
+Partícula clásica no relativista y campos uniformes; se omiten colisiones, radiación y reacción de la partícula sobre campos. La escena espacial gira aunque la trayectoria concreta esté en xy.
+
+La fecha del catálogo conserva la creación del archivo; el año histórico y la revisión tienen significados diferentes.

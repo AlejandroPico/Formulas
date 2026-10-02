@@ -1,28 +1,25 @@
-# Ficha
+# Descomposición espectral
 
-## Identificacion
+Matriz real simétrica 2×2. Sus autovectores ortonormales separan dos escalados firmados; valores repetidos permiten varias bases igualmente válidas.
 
-- Nombre: Descomposicion espectral.
-- Area: Algebra lineal.
-- Nivel recomendado: Universidad inicial.
-- Tipo de formula: diagonalizacion ortogonal de matrices simetricas.
+## Magnitudes
 
-## Formula principal
+| Símbolo | Significado |
+| :-- | :-- |
+| A | Matriz real simétrica. |
+| Q | Matriz ortogonal cuyas columnas son autovectores. |
+| Λ | Diagonal de autovalores reales firmados. |
+| T | Marca de transposición, no temperatura ni potencia. |
+| ℝ | Conjunto de números reales. |
+| n | Dimensión de la matriz cuadrada. |
+| i | Índice de autovector. |
+| λ | Autovalor real, que puede ser negativo. |
+| v | Autovector unitario de la matriz. |
 
-`A=Q Lambda Q^T`.
+## Condiciones
 
-`A=sum lambda_i v_i v_i^T`.
+Matriz real simétrica para diagonalización ortogonal; en complejo la versión hermítica usa adjunta. No extender a cualquier matriz real ni confundir valores propios negativos con valores singulares.
 
-## Variables
+## Unidades
 
-- `A`: matriz simetrica.
-- `lambda_i`: autovalores.
-- `v_i`: autovectores ortonormales.
-- `Q`: matriz de autovectores.
-- `Lambda`: matriz diagonal de autovalores.
-
-## Errores habituales
-
-- Aplicar esta forma a matrices no simetricas sin comprobar condiciones.
-- Olvidar que los autovectores deben ser ortonormales para usar `Q^T`.
-- Confundir diagonalizacion espectral con cualquier factorizacion matricial.
+Entradas y valores propios adimensionales en la escena. Autovectores unitarios, proyecciones y ángulos sin dimensión; autovalores tienen escala de A si esta representa una magnitud.

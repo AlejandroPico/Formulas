@@ -1,9 +1,11 @@
 # Historia
 
-Las ecuaciones de Cauchy-Riemann se sitúan en el desarrollo del análisis complejo durante el siglo XIX. Cauchy dio una formulación rigurosa de la integración y diferenciación compleja, mientras que Riemann impulsó una interpretación geométrica profunda de las funciones complejas.
+Las ecuaciones llevan los nombres de Cauchy y Riemann por su papel en el desarrollo del análisis complejo. Expresan compatibilidad entre variaciones reales y una sola derivada compleja.
 
-El análisis complejo surgió al estudiar funciones de una variable compleja y rápidamente mostró un comportamiento mucho más rígido que el cálculo real. Una función real puede tener derivadas parciales y aun así comportarse de manera irregular. En cambio, una función compleja diferenciable en una región queda sometida a condiciones muy fuertes: admite expansión en serie de potencias, satisface relaciones integrales y posee propiedades geométricas notables.
+## Lectura y alcance
 
-Las ecuaciones de Cauchy-Riemann se consolidaron como una puerta de entrada a esa rigidez. Permiten traducir el problema complejo a condiciones reales sobre dos funciones de dos variables. Esa traducción fue esencial para conectar el análisis complejo con la geometría, la física matemática y las ecuaciones diferenciales parciales.
+[Referencia de estudio](https://dlmf.nist.gov/1.9).
 
-En aplicaciones, su importancia se hizo evidente en flujos potenciales, problemas electrostáticos bidimensionales y mapas conformes. Allí las partes real e imaginaria pueden interpretarse como potencial y función de corriente, o como magnitudes conjugadas que describen un mismo campo físico desde dos perspectivas complementarias.
+La necesidad de las ecuaciones en un punto no basta sin regularidad para una conclusión global. En este polinomio en z,z̄ las funciones son C1 y α=0 da holomorfía en todo el plano.
+
+La fecha del catálogo conserva la creación del archivo; el año histórico y la revisión tienen significados diferentes.

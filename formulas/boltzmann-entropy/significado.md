@@ -1,9 +1,11 @@
 # Significado
 
-La fórmula de Boltzmann conecta una magnitud macroscópica, la entropía, con el número de configuraciones microscópicas compatibles con el mismo estado observable.
+N partículas distinguibles se reparten entre dos lados. W es un conteo entero y S/kB=ln W; los macroestados centrales suelen tener más microestados.
 
-`W` representa el número de microestados. Si un macroestado puede realizarse de muchas maneras microscópicas, su entropía es alta. Si puede realizarse de pocas maneras, su entropía es baja.
+## Del símbolo a la idea
 
-El logaritmo aparece porque la entropía debe sumar cuando se combinan sistemas independientes, mientras que el número de microestados se multiplica.
+Un macroestado fija NL y NR, pero no cuáles partículas están en cada lado. Elegir NL entre N partículas etiquetadas da el coeficiente binomial W=N!/[NL!(N−NL)!]. La entropía kBlnW hace aditivos los conteos independientes: ln(WaWb)=lnWa+lnWb. Restar dos entropías da kBln(W2/W1). Si todos los microestados de reparto son equiprobables, la probabilidad del macroestado es W/2^N, de modo que los conteos centrales son más frecuentes.
 
-El simulador muestra partículas en una caja con una compuerta central. Un estado concentrado en un lado tiene pocos macroestados equivalentes; al abrir la compuerta, las partículas se reparten y aumenta el número de configuraciones compatibles.
+## Predice un caso
+
+Distingue un reparto macroscópico de sus muchas configuraciones. Con los valores iniciales, calcula entropía reducida en unidades adimensionales. Entropía reducida = 5,5294 . N partículas distinguibles se reparten entre dos lados. W es un conteo entero y S/kB=ln W; los macroestados centrales suelen tener más microestados.

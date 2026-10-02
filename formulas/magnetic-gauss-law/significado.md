@@ -1,3 +1,11 @@
 # Significado
 
-La ley de Gauss magnetica expresa que no hay monopolos magneticos netos: las lineas de B son cerradas. El simulador permite modificar la magnitud principal y observar el campo, flujo, circulacion, potencial o vector resultante.
+Un campo uniforme atraviesa una caja cerrada. Flujos de caras opuestas se cancelan aunque B no sea cero; la ley no afirma que el flujo por una superficie abierta sea nulo.
+
+## Del símbolo a la idea
+
+Aplica divergencia a la integral de flujo: ∯S B·n dS=∭V div B dV. La ecuación local div B=0 hace nulo el flujo cerrado. En una caja con campo uniforme vertical, las caras superior e inferior aportan BA y −BA, y las cuatro laterales cero. Cada cara puede tener flujo no nulo; el resultado usa la suma orientada sobre toda la frontera.
+
+## Predice un caso
+
+Suma el flujo de las seis caras. Con los valores iniciales, calcula flujo cerrado en Wb. Flujo cerrado = 0 Wb. Un campo uniforme atraviesa una caja cerrada. Flujos de caras opuestas se cancelan aunque B no sea cero; la ley no afirma que el flujo por una superficie abierta sea nulo.

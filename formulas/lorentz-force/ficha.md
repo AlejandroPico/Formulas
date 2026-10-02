@@ -1,26 +1,24 @@
-# Ficha
+# Fuerza de Lorentz
 
-## Identificacion
+Solución exacta no relativista con E en x y B en z. El campo magnético curva la velocidad sin trabajo; E puede cambiar la energía. q en µC y m en mg.
 
-- **Nombre:** Fuerza de Lorentz
-- **Autor asociado:** Hendrik Lorentz
-- **Area:** electromagnetismo
-- **Nivel:** universidad inicial
-- **Tipo:** ley de fuerza sobre carga movil
+## Magnitudes
 
-## Variables
+| Símbolo | Significado |
+| :-- | :-- |
+| F | Fuerza electromagnética vectorial. |
+| q | Carga eléctrica firmada de la partícula. |
+| E | Campo eléctrico. |
+| v | Velocidad vectorial; v⊥ componente perpendicular a B. |
+| B | Campo magnético; B escalar denota su magnitud en el radio. |
+| r | Radio de la órbita ciclotrón. |
+| c | Índice c: ciclotrón. |
+| m | Masa positiva de la partícula. |
 
-- `F`: fuerza total.
-- `q`: carga electrica.
-- `E`: campo electrico.
-- `v`: velocidad de la particula.
-- `B`: campo magnetico.
-- `m`: masa de la particula.
+## Condiciones
 
-## Lectura del simulador
+Partícula clásica no relativista y campos uniformes; se omiten colisiones, radiación y reacción de la partícula sobre campos. La escena espacial gira aunque la trayectoria concreta esté en xy.
 
-El campo magnetico se representa sobre el plano. La particula se dispara desde la izquierda. El signo de la carga cambia el sentido de curvatura. El campo electrico vertical inclina la trayectoria y permite comparar fuerza electrica y fuerza magnetica.
+## Unidades
 
-## Nota
-
-La simulacion usa unidades visuales. El objetivo es mostrar direcciones, curvatura y dependencias cualitativas.
+q µC×10⁻⁶ C y m mg×10⁻⁶ kg hacen q/m numéricamente en C/kg; B T, E V/m, v m/s, t s. Fuerza µN, energía µJ y posición m.

@@ -1,10 +1,15 @@
 # Usos
 
-- **Teoría analítica de números:** estudiar la distribución de los números primos mediante herramientas de análisis complejo.
-- **Hipótesis de Riemann:** formular uno de los grandes problemas abiertos de las matemáticas.
-- **Series de Dirichlet:** analizar funciones aritméticas y productos eulerianos.
-- **Física matemática:** conectar espectros, caos cuántico y estructuras de tipo zeta.
-- **Probabilidad y modelos aritméticos:** estudiar fluctuaciones asociadas a primos y funciones multiplicativas.
-- **Computación matemática:** comprobar ceros, visualizar trayectorias y experimentar con prolongación analítica.
+Relacionar sumas convergentes y factorización prima y practicar cotas de truncación. La escena no se usa como exploración numérica de la hipótesis de Riemann.
 
-La zeta es útil porque transforma una pregunta discreta sobre primos en una pregunta analítica sobre ceros, polos y simetrías de una función compleja.
+## Un caso que puedes comprobar
+
+Acumula términos sin confundir truncación con infinito. Con los valores iniciales, calcula suma parcial en unidades adimensionales. Suma parcial = 1,6251 . Estudia s real>1 mediante suma finita y cota integral del resto. Cerca de 1 se necesitan muchos términos; no se simulan los ceros de la continuación compleja.
+
+## Condiciones de aplicación
+
+Serie y producto requieren Re(s)>1. Fuera de ese dominio la función se define por continuación analítica, con polo simple en 1; el laboratorio no representa ese dominio ni verifica hipótesis sobre sus ceros.
+
+## Explora antes de extrapolar
+
+Estudia s real>1 mediante suma finita y cota integral del resto. Cerca de 1 se necesitan muchos términos; no se simulan los ceros de la continuación compleja.

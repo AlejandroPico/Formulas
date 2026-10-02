@@ -1,9 +1,11 @@
 # Historia
 
-Ludwig Boltzmann desarrolló la conexión entre termodinámica y comportamiento microscópico de partículas en el siglo XIX.
+Boltzmann conectó entropía y multiplicidad microscópica en el siglo XIX. El conteo muestra por qué estados macroscópicos diferentes tienen probabilidades distintas aun cuando los microestados son equiprobables.
 
-Su fórmula `S = k_B ln W` resume la idea de que la entropía está asociada al número de microestados compatibles con un macroestado.
+## Lectura y alcance
 
-La propuesta ayudó a explicar por qué ciertos procesos parecen irreversibles aunque las leyes microscópicas puedan ser reversibles.
+[Referencia de estudio](https://openstax.org/details/books/university-physics-volume-2).
 
-La relación se convirtió en una de las bases de la mecánica estadística moderna.
+Conteo simplificado con partículas distinguibles e izquierda/derecha equiprobables. Fórmula microcanónica supone equiprobabilidad de estados compatibles; no convierte entropía en mero desorden visual.
+
+La fecha del catálogo conserva la creación del archivo; el año histórico y la revisión tienen significados diferentes.

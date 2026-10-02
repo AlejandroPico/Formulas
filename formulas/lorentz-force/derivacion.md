@@ -1,9 +1,11 @@
-# Derivacion
+# Derivación
 
-La parte electrica de la fuerza aparece directamente al definir el campo electrico como fuerza por unidad de carga. Si una particula tiene carga `q`, la contribucion electrica es `qE`.
+Aplica m dv/dt=q(E+v×B). Para B constante en z y E en x resulta vx′=(q/m)(E+Bvy), vy′=−(qB/m)vx. Si Bq≠0, desplaza vy por E/B para obtener una rotación uniforme de velocidad; integra exactamente seno y coseno para la trayectoria. Si qB=0, usa aceleración eléctrica rectilínea y evita dividir por frecuencia nula. El producto v·(v×B)=0 demuestra que el término magnético no hace trabajo. Para E=0 el radio perpendicular es mv⊥/(|q|B).
 
-La parte magnetica depende del movimiento. Experimentalmente, una carga que se mueve en un campo magnetico experimenta una fuerza perpendicular a su velocidad y al campo. El producto vectorial `v x B` codifica exactamente esa direccion perpendicular y tambien el hecho de que no hay fuerza magnetica si la velocidad es paralela al campo.
+## Comprobación concreta
 
-Al sumar ambas contribuciones se obtiene `F = q(E + v x B)`. En ausencia de campo electrico, si la velocidad es perpendicular al campo magnetico, la fuerza actua como fuerza centripeta. Igualando `|q|vB` con `mv^2/r` aparece el radio de giro `r = mv/(|q|B)`.
+Curva el movimiento sin añadir energía magnética. Con los valores iniciales, calcula magnitud de fuerza en µN. Magnitud de fuerza = 1 µN. Solución exacta no relativista con E en x y B en z. El campo magnético curva la velocidad sin trabajo; E puede cambiar la energía. q en µC y m en mg.
 
-Esta relacion explica por que campos magneticos intensos curvan mas la trayectoria y por que particulas mas rapidas o mas masivas tienen radios mayores.
+## Hipótesis
+
+Partícula clásica no relativista y campos uniformes; se omiten colisiones, radiación y reacción de la partícula sobre campos. La escena espacial gira aunque la trayectoria concreta esté en xy.

@@ -1,1 +1,4 @@
-export { default } from "../../../scripts/thermodynamics-statmech-simulations.js?topic=wien&v=20260705a";
+import {mountLab} from '../../shared/learning-lab.js';
+import {SPECTRUM_LABS} from '../../shared/spectrum-configs.js';
+import {drawSpectrum} from '../../shared/spectrum-draw.js';
+export default options=>mountLab('wiens-displacement-law',options,{config:SPECTRUM_LABS['wiens-displacement-law'],draw:drawSpectrum});

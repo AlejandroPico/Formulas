@@ -1,9 +1,11 @@
 # Historia
 
-James Clerk Maxwell publico en el siglo XIX una formulacion matematica que reorganizo leyes experimentales previas de electricidad y magnetismo. Partio de resultados de Gauss, Faraday y Ampere, y añadio un elemento decisivo: la corriente de desplazamiento.
+Maxwell reunió y completó leyes de electricidad y magnetismo. La notación vectorial moderna organiza cuatro ecuaciones que conectan fuentes, flujo, inducción y propagación.
 
-Ese termino resolvia una dificultad conceptual en la ley de Ampere y permitia que las ecuaciones fueran coherentes con la conservacion de carga. Mas importante aun, hacia posible la existencia de ondas electromagneticas autosostenidas.
+## Lectura y alcance
 
-Maxwell calculo la velocidad de esas ondas y encontro que coincidia con la velocidad de la luz conocida experimentalmente. La conclusion fue revolucionaria: la luz era una onda electromagnetica.
+[Referencia de estudio](https://openstax.org/books/university-physics-volume-2/pages/16-1-maxwells-equations-and-electromagnetic-waves).
 
-Posteriormente, Hertz produjo y detecto ondas de radio, confirmando experimentalmente la prediccion. Desde entonces, las ecuaciones de Maxwell se convirtieron en una base para optica, radio, telecomunicaciones, electronica, relatividad especial y fisica moderna.
+Forma microscópica SI en vacío con cargas y corrientes. En materiales se pueden reorganizar con D,H y relaciones constitutivas; no sustituir sin más ε0 por una respuesta arbitraria.
+
+La fecha del catálogo conserva la creación del archivo; el año histórico y la revisión tienen significados diferentes.

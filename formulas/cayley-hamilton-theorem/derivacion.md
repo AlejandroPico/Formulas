@@ -1,23 +1,11 @@
 # Derivación
 
-Para una matriz `2x2`
+Para A=[[a,b],[c,d]], det(λI−A)=λ²−(a+d)λ+(ad−bc). Multiplica A por sí misma y resta (a+d)A. Las entradas fuera de la diagonal se cancelan y ambas diagonales quedan bc−ad; añadir (ad−bc)I da la matriz cero. Es una comprobación directa que no presupone autovectores. El teorema general vale para cualquier tamaño cuadrado; la escena solo representa el caso 2×2.
 
-`A=[[a,b],[c,d]]`,
+## Comprobación concreta
 
-la traza es `tr(A)=a+d` y el determinante es `det(A)=ad-bc`. El polinomio característico se obtiene calculando `det(λI-A)`:
+Construye el polinomio de una transformación plana. Con los valores iniciales, calcula determinante en unidades adimensionales. Determinante = 3 . Toda matriz cuadrada satisface su polinomio característico. Verifica A²−tr(A)A+det(A)I término a término, incluyendo matrices no diagonalizables.
 
-`det([[λ-a,-b],[-c,λ-d]])=(λ-a)(λ-d)-bc`.
+## Hipótesis
 
-Al expandir:
-
-`λ^2-(a+d)λ+(ad-bc)`.
-
-Por tanto:
-
-`p_A(λ)=λ^2-tr(A)λ+det(A)`.
-
-El teorema dice que podemos sustituir `λ` por `A` y obtener la matriz nula:
-
-`p_A(A)=A^2-tr(A)A+det(A)I=0`.
-
-La comprobación directa consiste en calcular `A^2`, restar `tr(A)A` y sumar `det(A)I`. En las entradas fuera de la diagonal se cancelan los términos con `b` y `c`; en la diagonal se cancelan los productos restantes. El simulador reproduce precisamente esa suma matricial componente a componente.
+Matriz cuadrada sobre reales o complejos; el término constante se multiplica por I. No requiere simetría ni diagonalización. Cero en pA(A)=0 es matriz cero, no solo determinante cero.

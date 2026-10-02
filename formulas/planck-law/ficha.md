@@ -1,27 +1,24 @@
-# Ficha
+# Ley de Planck
 
-## Identificación
+Radiancia Bλ por micrómetro de longitud de onda. Compara la ley de Planck con la aproximación clásica; el máximo y el área del espectro contienen información distinta.
 
-- **Nombre:** Ley de Planck
-- **Autor:** Max Planck
-- **Año:** 1900
-- **Área:** física térmica y cuántica
-- **Nivel:** universidad inicial
-- **Tipo:** ley espectral de radiación térmica
+## Magnitudes
 
-## Variables
+| Símbolo | Significado |
+| :-- | :-- |
+| B | Radiancia espectral por unidad de longitud de onda; índice B en kB marca Boltzmann. |
+| λ | Longitud de onda positiva en vacío. |
+| T | Temperatura absoluta. |
+| h | Constante de Planck. |
+| c | Rapidez de la luz en vacío. |
+| k | Constante de Boltzmann en kB. |
+| E | Energía de un fotón. |
+| γ | Índice γ: fotón, no factor relativista. |
 
-- `B_lambda`: radiancia espectral.
-- `lambda`: longitud de onda.
-- `T`: temperatura.
-- `h`: constante de Planck.
-- `c`: velocidad de la luz.
-- `k_B`: constante de Boltzmann.
+## Condiciones
 
-## Lectura del simulador
+Cuerpo negro en equilibrio térmico; radiancia por longitud de onda, no por frecuencia. Longitud y temperatura positivas; la escena no modela emisividad de una estrella real ni un detector completo.
 
-La curva amarilla es la radiancia normalizada. La banda de color indica el rango visible aproximado. El marcador vertical señala el pico estimado por Wien.
+## Unidades
 
-## Nota
-
-La visualización normaliza la intensidad para comparar formas. No pretende representar unidades radiométricas absolutas.
+Bλ SI W/(m²·sr·m); lectura W/(m²·sr·µm) multiplica por 10⁻⁶. λ del control µm convertido a m. Eγ J; h J·s, kB J/K y c m/s. expm1 evita pérdida de precisión del denominador pequeño.

@@ -1,25 +1,22 @@
-# Ficha
+# Energía libre de Gibbs
 
-## Identificación
+Estudia ΔG=ΔH−TΔS a presión y temperatura constantes. La dependencia lineal usa ΔH,ΔS aproximadamente constantes; el signo no indica rapidez.
 
-- **Nombre:** Energía libre de Gibbs
-- **Autor:** Josiah Willard Gibbs
-- **Año:** 1876
-- **Área:** termodinámica química
-- **Nivel:** universidad inicial
-- **Tipo:** potencial termodinámico
+## Magnitudes
 
-## Variables
+| Símbolo | Significado |
+| :-- | :-- |
+| G | Energía libre de Gibbs del estado. |
+| H | Entalpía del estado. |
+| T | Temperatura absoluta; Tc cruce formal del cambio de Gibbs. |
+| S | Entropía del estado. |
+| Δ | Diferencia final menos inicial bajo las condiciones indicadas. |
+| c | Índice c: temperatura de cruce del cambio de signo. |
 
-- `Delta G`: variación de energía libre.
-- `Delta H`: variación de entalpía.
-- `Delta S`: variación de entropía.
-- `T`: temperatura absoluta.
+## Condiciones
 
-## Lectura del simulador
+Temperatura y presión constantes para el criterio de espontaneidad; composición y trabajo adicional requieren el balance adecuado. Cambio de signo lineal supone ΔH,ΔS aproximadamente constantes.
 
-La balanza se inclina según el signo de `Delta G`. Los controles modifican entalpía, entropía y temperatura. El umbral `Tcrit` indica dónde cambia el signo si `Delta S` no es cero.
+## Unidades
 
-## Nota
-
-La espontaneidad termodinámica no garantiza velocidad rápida de reacción. La cinética puede exigir una barrera de activación alta.
+G,H kJ/mol en el ejemplo; S J/(mol·K) se divide por 1000 antes de multiplicar T K. La energía Gibbs del estado puede expresarse total o molar manteniendo coherencia.

@@ -1,9 +1,11 @@
 # Historia
 
-El resultado está asociado a Arthur Cayley y William Rowan Hamilton. Hamilton estudió casos ligados a los cuaterniones y a operadores lineales, mientras que Cayley formuló la relación para matrices en el contexto del álgebra matricial del siglo XIX.
+Cayley y Hamilton dan nombre a esta relación entre una matriz y su polinomio característico. Su utilidad incluye reducir potencias y funciones matriciales; no debe confundirse con convertir cualquier polinomio en una identidad nula.
 
-La importancia histórica del teorema es que consolidó una idea moderna: las matrices pueden estudiarse mediante polinomios. Esto abrió una vía entre álgebra, geometría y cálculo lineal, porque una transformación lineal puede analizarse mediante sus valores propios, su polinomio característico y las relaciones algebraicas que satisface.
+## Lectura y alcance
 
-Con el desarrollo posterior del álgebra lineal, Cayley-Hamilton se convirtió en una herramienta básica. Aparece en el estudio de diagonalización, formas canónicas, polinomio mínimo, sistemas dinámicos lineales y cálculo de potencias de matrices.
+[Referencia de estudio](https://github.com/mitmath/1806).
 
-En cursos introductorios se suele presentar primero con matrices `2x2`, donde el cálculo se puede comprobar entrada por entrada. Esa presentación es limitada, pero muy útil: permite ver el núcleo del teorema sin cargar todavía con toda la teoría general de espacios vectoriales.
+Matriz cuadrada sobre reales o complejos; el término constante se multiplica por I. No requiere simetría ni diagonalización. Cero en pA(A)=0 es matriz cero, no solo determinante cero.
+
+La fecha del catálogo conserva la creación del archivo; el año histórico y la revisión tienen significados diferentes.

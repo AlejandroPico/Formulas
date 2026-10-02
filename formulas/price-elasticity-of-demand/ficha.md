@@ -1,21 +1,22 @@
-# Ficha
+# Elasticidad precio de la demanda
 
-**Nombre:** Elasticidad precio de la demanda
+Demanda lineal Q=a−bP. Estudia elasticidad puntual y el ingreso sin extrapolar cantidades negativas; coeficientes ilustrativos, no recomendaciones de precios.
 
-**Área:** Microeconomía / Demanda
+## Magnitudes
 
-**Nivel:** Bachillerato/Universidad inicial
+| Símbolo | Significado |
+| :-- | :-- |
+| ε | Elasticidad puntual firmada de demanda respecto a precio. |
+| p | Índice p: variación de precio. |
+| Q | Cantidad demandada positiva en el dominio económico. |
+| P | Precio. |
+| a | Intercepto de cantidad de demanda lineal. |
+| b | Magnitud positiva de la pendiente de demanda. |
 
-**Resumen:** Mide la sensibilidad porcentual de la cantidad demandada ante cambios porcentuales del precio.
+## Condiciones
 
-## Lectura e interpretación
+Modelo local manteniendo otros factores constantes; a,b positivos y Q>0. Fuera del tramo positivo el resultado algebraico no representa demanda económica. No es una predicción de precios reales.
 
-# Interpretación
+## Unidades
 
-Mueve los controles y observa qué variable domina: precio relativo, factor productivo, shock de mercado, ahorro, volatilidad, probabilidad, payout o curvatura de tipos.
-
-## Validez y limitaciones
-
-# Limitaciones
-
-La elasticidad varía por punto, horizonte temporal, sustitutos, renta, expectativas y forma funcional de demanda.
+P moneda por unidad, Q unidades, b unidades por unidad de precio; ε adimensional. El signo negativo refleja demanda decreciente; el módulo se usa para clasificación elástica o inelástica.

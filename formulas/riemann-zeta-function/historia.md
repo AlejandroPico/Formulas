@@ -1,9 +1,11 @@
 # Historia
 
-La función zeta aparece primero en el estudio de series infinitas, especialmente en el problema de sumar inversos de potencias. Euler ya había descubierto su relación con los números primos mediante el producto euleriano. Ese producto mostraba que una suma analítica podía contener información sobre la factorización prima de los enteros.
+Euler conectó series y primos; Riemann estudió la función como objeto complejo en 1859. La continuación amplía su alcance, pero no convierte una serie divergente en una suma ordinaria convergente.
 
-Bernhard Riemann dio el salto decisivo en 1859 al estudiar la zeta como función de variable compleja. En su memoria sobre la cantidad de primos menores que una magnitud dada, introdujo ideas de prolongación analítica, ecuación funcional y ceros complejos para abordar la distribución de los primos.
+## Lectura y alcance
 
-La hipótesis de Riemann surgió de esa investigación. Afirma que todos los ceros no triviales de la zeta tienen parte real 1/2. Aunque se ha comprobado numéricamente para enormes cantidades de ceros, sigue siendo uno de los problemas abiertos más importantes de las matemáticas.
+[Referencia de estudio](https://dlmf.nist.gov/25.2).
 
-La zeta se convirtió en un objeto central de la teoría analítica de números. Su estudio conecta series, productos infinitos, funciones complejas, distribución de primos, teoría espectral, física matemática y caos cuántico.
+Serie y producto requieren Re(s)>1. Fuera de ese dominio la función se define por continuación analítica, con polo simple en 1; el laboratorio no representa ese dominio ni verifica hipótesis sobre sus ceros.
+
+La fecha del catálogo conserva la creación del archivo; el año histórico y la revisión tienen significados diferentes.

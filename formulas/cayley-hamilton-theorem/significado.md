@@ -1,9 +1,11 @@
 # Significado
 
-El teorema de Cayley-Hamilton afirma que toda matriz cuadrada satisface su propio polinomio característico. Si calculamos `p_A(λ)=det(λI-A)` y después sustituimos formalmente `λ` por la matriz `A`, el resultado es la matriz nula.
+Toda matriz cuadrada satisface su polinomio característico. Verifica A²−tr(A)A+det(A)I término a término, incluyendo matrices no diagonalizables.
 
-En dimensión `2`, esto se escribe de forma especialmente clara: `A^2-tr(A)A+det(A)I=0`. La traza resume la suma de la diagonal principal y el determinante resume el cambio de área y la invertibilidad. La fórmula combina esos dos invariantes para producir una identidad matricial exacta.
+## Del símbolo a la idea
 
-La idea importante es que una matriz no es solo una tabla de números: representa una transformación lineal. Su polinomio característico codifica información estructural sobre esa transformación, y Cayley-Hamilton dice que esa información vuelve a aparecer cuando operamos con la propia matriz.
+Para A=[[a,b],[c,d]], det(λI−A)=λ²−(a+d)λ+(ad−bc). Multiplica A por sí misma y resta (a+d)A. Las entradas fuera de la diagonal se cancelan y ambas diagonales quedan bc−ad; añadir (ad−bc)I da la matriz cero. Es una comprobación directa que no presupone autovectores. El teorema general vale para cualquier tamaño cuadrado; la escena solo representa el caso 2×2.
 
-El simulador usa matrices `2x2` porque permiten verificar el teorema con una expresión manejable. Al modificar las entradas, se recalculan traza, determinante, `A^2`, el término `-tr(A)A` y el término `det(A)I`; la suma final debe dar la matriz nula.
+## Predice un caso
+
+Construye el polinomio de una transformación plana. Con los valores iniciales, calcula determinante en unidades adimensionales. Determinante = 3 . Toda matriz cuadrada satisface su polinomio característico. Verifica A²−tr(A)A+det(A)I término a término, incluyendo matrices no diagonalizables.

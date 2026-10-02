@@ -1,21 +1,24 @@
-# Ficha
+# Ley de Ohm en corriente alterna: impedancia
 
-**Nombre:** Ley de Ohm en corriente alterna: impedancia
+Una impedancia R+jX conecta fasores RMS. La corriente retrasa para X>0 y adelanta para X<0; sumar módulos no reemplaza suma compleja.
 
-**Área:** Electrónica / Corriente alterna
+## Magnitudes
 
-**Nivel:** Bachillerato/Universidad inicial
+| Símbolo | Significado |
+| :-- | :-- |
+| V | Fasor de tensión RMS, subrayado para distinguirlo de señal instantánea. |
+| I | Fasor de corriente RMS. |
+| Z | Impedancia compleja del elemento a una frecuencia. |
+| R | Parte resistiva positiva de Z. |
+| j | Unidad imaginaria en notación electrotécnica. |
+| X | Reactancia firmada: positiva inductiva, negativa capacitiva. |
+| φ | Argumento de Z; desfase de tensión respecto a corriente. |
+| atan2 | Ángulo del par cartesiano (R,X) que conserva el cuadrante. |
 
-**Resumen:** Extiende Ohm a impedancia compleja con resistencia y reactancia.
+## Condiciones
 
-## Lectura e interpretación
+Circuito lineal estacionario sinusoidal; R>0 en el experimento. Los valores son RMS y X corresponde a la frecuencia seleccionada, no una resistencia adicional positiva.
 
-# Interpretación
+## Unidades
 
-Mueve los controles y observa qué domina: exponencial del diodo, escala logarítmica, relación de espiras, reactiva, equilibrio trifásico o ángulo de impedancia.
-
-## Validez y limitaciones
-
-# Limitaciones
-
-Supone régimen sinusoidal estable; en transitorios se requieren ecuaciones diferenciales o Laplace.
+Z,R,X Ω; V V RMS; I A RMS. Ángulo de Z rad en cálculo y grados en lectura. Q=I²X var puede ser negativo; P=I²R W no negativo.

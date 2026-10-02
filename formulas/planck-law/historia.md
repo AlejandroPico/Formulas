@@ -1,9 +1,11 @@
 # Historia
 
-Max Planck propuso su ley de radiación en 1900 para explicar el espectro del cuerpo negro.
+Planck presentó en 1900 una ley de radiación que incorporaba cuantización energética. Su espectro conecta comportamiento clásico de longitudes largas, desplazamiento de Wien y potencia integral de Stefan–Boltzmann.
 
-El problema era que las fórmulas clásicas funcionaban solo en ciertos rangos y fallaban gravemente en el ultravioleta. Planck introdujo la cuantización de la energía como parte de la solución.
+## Lectura y alcance
 
-La constante de Planck se convirtió en una de las constantes fundamentales de la física moderna.
+[Referencia de estudio](https://openstax.org/books/university-physics-volume-3/pages/6-1-blackbody-radiation).
 
-La ley de Planck abrió el camino a la teoría cuántica y al estudio moderno de la radiación térmica.
+Cuerpo negro en equilibrio térmico; radiancia por longitud de onda, no por frecuencia. Longitud y temperatura positivas; la escena no modela emisividad de una estrella real ni un detector completo.
+
+La fecha del catálogo conserva la creación del archivo; el año histórico y la revisión tienen significados diferentes.

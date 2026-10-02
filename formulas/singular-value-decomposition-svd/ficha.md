@@ -1,21 +1,27 @@
-# Ficha
+# SVD: descomposición en valores singulares
 
-**Nombre:** SVD: descomposición en valores singulares
+Matrices reales 2×2, incluida singularidad y reflexión. Transforma un círculo a una elipse y compara reconstrucción exacta con su mejor aproximación de rango 1.
 
-**Área:** Álgebra lineal / Machine Learning
+## Magnitudes
 
-**Nivel:** Universidad intermedia
+| Símbolo | Significado |
+| :-- | :-- |
+| A | Matriz real, rectangular en el teorema y 2×2 en el laboratorio. |
+| U | Matriz ortogonal de direcciones de salida. |
+| Σ | Matriz diagonal rectangular de valores singulares no negativos. |
+| V | Matriz ortogonal de direcciones de entrada. |
+| T | Marca de transposición, no una potencia numérica. |
+| σ | Valor singular, ordenado de mayor a menor. |
+| λ | Autovalor de la matriz simétrica positiva semidefinida AᵀA. |
+| i | Índice de modo singular. |
+| k | Rango retenido de la aproximación. |
+| u | Vector singular izquierdo. |
+| v | Vector singular derecho. |
 
-**Resumen:** Factoriza una matriz en direcciones ortogonales y escalas de importancia.
+## Condiciones
 
-## Lectura e interpretación
+Matrices reales; en complejo se usa adjunta en lugar de transpuesta. Valores repetidos y modos nulos no determinan bases únicas, pero sí la transformación y sus valores singulares.
 
-# Interpretación
+## Unidades
 
-Mueve los controles y observa qué domina: anchura del kernel, margen, densidad, inercia, varianza proyectada, rango efectivo o teletransporte.
-
-## Validez y limitaciones
-
-# Limitaciones
-
-Puede ser costosa en matrices enormes; las componentes son lineales y a veces difíciles de interpretar.
+Entradas adimensionales; σ tiene escala de la transformación A. El error Frobenius tiene la misma escala. Rango e índices son enteros sin dimensión.

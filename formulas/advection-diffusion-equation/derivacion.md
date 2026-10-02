@@ -1,3 +1,11 @@
-# Derivacion
+# Derivación
 
-La forma matematica surge de balances locales: cantidad de movimiento, presion, viscosidad, conservacion de una magnitud escalar o suavizado difusivo. Stokes es un limite laminar de bajo Reynolds; Euler elimina la viscosidad; Navier-Stokes la incorpora; transporte y adveccion-difusion son modelos escalares de propagacion.
+Cambia a coordenada ξ=x−ct para seguir el transporte. La derivada temporal en ese marco cancela el término de advección y queda una ecuación del calor con coeficiente D. Su núcleo gaussiano convolucionado con una gaussiana inicial suma varianzas: s(t)²=s0²+2Dt. Regresa a x y conserva el centro en ct. La normalización garantiza integral uno sobre toda la recta; la difusión reduce el pico, no la masa.
+
+## Comprobación concreta
+
+Mantén la masa mientras el pulso se extiende. Con los valores iniciales, calcula anchura rms en m. Anchura RMS = 1 m. Una gaussiana viaja a velocidad constante y se ensancha por difusión. Solución exacta sobre la recta, sin inestabilidad de un esquema numérico.
+
+## Hipótesis
+
+Coeficientes constantes, D≥0, anchura inicial positiva y recta infinita sin fuentes. D=0 es traslación pura. El dibujo tiene ventana finita y no impone fronteras artificiales a la solución.

@@ -140,12 +140,13 @@ try {
     const warnings = [];
     for (const eq of window.FormulasAtlas.equations) for (const formula of eq.formula) {
       const svg = await window.MathJax.tex2svgPromise(formula);
-      const error = svg.querySelector('[data-mml-node="merror"]');
-      if (error) warnings.push({ id: eq.id, formula, error: error.textContent });
+      const error = svg.querySelector('[data-mml-node="merror"], [data-mjx-error], [fill="red"], [stroke="red"]');
+      const unknown = Array.from(svg.querySelectorAll('[data-mml-node="mtext"]')).find(node => /\\[a-zA-Z]+/.test(node.textContent));
+      if (error || unknown) warnings.push({ id: eq.id, formula, error: (error || unknown).textContent });
     }
     return warnings;
   });
-  assert(!latexAudit.some(item => item.id === 'pythagorean-theorem'));
+  assert.deepEqual(latexAudit, [], 'Visible LaTeX error or unknown command');
   assert.deepEqual(errors, []);
   assert.deepEqual(missing, []);
   const report = { indexMs, initiallyRendered: rendered, catalogCount: 282, errors, missing, mobile: bounds, simulatorImports, latexAudit, checked: ['full-text search', 'symbols', 'all tabs', 'six missions', 'invalid answer', 'areas', 'exploration', 'Escape cleanup', 'reviews search', 'mobile'] };

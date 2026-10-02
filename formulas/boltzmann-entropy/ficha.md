@@ -1,26 +1,24 @@
-# Ficha
+# Entropía de Boltzmann
 
-## Identificación
+N partículas distinguibles se reparten entre dos lados. W es un conteo entero y S/kB=ln W; los macroestados centrales suelen tener más microestados.
 
-- **Nombre:** Entropía de Boltzmann
-- **Autor:** Ludwig Boltzmann
-- **Año:** 1877
-- **Área:** mecánica estadística
-- **Nivel:** universidad inicial
-- **Tipo:** relación entre entropía y microestados
+## Magnitudes
 
-## Variables
+| Símbolo | Significado |
+| :-- | :-- |
+| S | Entropía del macroestado en el conjunto equiprobable considerado. |
+| k | Constante de Boltzmann en kB. |
+| B | Índice B: Boltzmann. |
+| W | Número de microestados compatibles con un macroestado. |
+| N | Número de partículas etiquetadas. |
+| L | Índice L: lado izquierdo. |
+| R | Índice R: lado derecho. |
+| Δ | Cambio entre macroestados. |
 
-- `S`: entropía.
-- `k_B`: constante de Boltzmann.
-- `W`: número de microestados compatibles.
-- `N`: número de partículas.
-- `N_L`, `N_R`: partículas a izquierda y derecha.
+## Condiciones
 
-## Lectura del simulador
+Conteo simplificado con partículas distinguibles e izquierda/derecha equiprobables. Fórmula microcanónica supone equiprobabilidad de estados compatibles; no convierte entropía en mero desorden visual.
 
-El gas comienza ordenado en un lado. Al abrir la compuerta, se exploran configuraciones con más microestados compatibles. La lectura muestra izquierda/derecha, `ln W` y la entropía visual.
+## Unidades
 
-## Nota
-
-El cálculo usa una caja simplificada de dos regiones y toma `k_B = 1` para lectura visual.
+S J/K; kB J/K; W entero adimensional. Laboratorio muestra S/kB=lnW y N≤20 para mantener conteos exactos. Factoriales para enteros no negativos; 0!=1.

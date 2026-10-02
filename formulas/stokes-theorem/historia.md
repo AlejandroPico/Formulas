@@ -1,9 +1,11 @@
 # Historia
 
-El teorema lleva el nombre de George Gabriel Stokes, físico y matemático irlandés del siglo XIX. La relación forma parte del desarrollo del cálculo vectorial y de la física matemática, especialmente en el estudio de fluidos, electromagnetismo y circulación.
+El teorema une circulación de borde y giro distribuido en el interior. Su nombre recuerda a Stokes y su difusión en el siglo XIX; la cancelación orientada es la idea que lo relaciona con Green y la formulación general de Stokes.
 
-Históricamente, Stokes aparece junto a otros grandes resultados integrales que conectan cantidades locales y globales. Mientras Gauss relaciona divergencia con flujo por una frontera cerrada, Stokes relaciona rotacional con circulación sobre una frontera.
+## Lectura y alcance
 
-La formulación moderna se volvió fundamental cuando el lenguaje vectorial se consolidó como herramienta para describir campos. En electromagnetismo, por ejemplo, una de las ecuaciones de Maxwell en forma integral usa directamente esta conexión entre circulación y rotacional.
+[Referencia de estudio](https://ocw.mit.edu/courses/18-02sc-multivariable-calculus-fall-2010/).
 
-Hoy el teorema de Stokes también se entiende como una manifestación de un principio más general de geometría diferencial: la integral de una derivada exterior sobre una región se relaciona con la integral de la forma original sobre su frontera.
+Campo C1 en un entorno de una superficie orientable suave por piezas; borde compatible por regla de la mano derecha. No aplicar atravesando singularidades del campo.
+
+La fecha del catálogo conserva la creación del archivo; el año histórico y la revisión tienen significados diferentes.

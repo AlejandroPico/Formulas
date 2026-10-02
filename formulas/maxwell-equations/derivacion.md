@@ -1,9 +1,11 @@
-# Derivacion
+# Derivación
 
-Las ecuaciones de Maxwell no nacen como una unica deduccion, sino como una sintesis de leyes de campo. La ley de Gauss para el campo electrico relaciona flujo electrico y carga. La ley de Gauss para el magnetismo expresa que el flujo magnetico neto a traves de una superficie cerrada es cero.
+Gauss eléctrica conecta fuentes de E y carga; Gauss magnética impone ausencia de fuentes monopolares en esta teoría. Faraday conecta campo eléctrico rotacional con variación de B, y Ampère–Maxwell conecta B con conducción y variación de E. En la onda Ey=E0 cos(kx−ωt), Bz=Ey/c sin fuentes, ambas divergencias son cero; sustituir derivadas en los dos rotacionales verifica compatibilidad si ω=ck. Una onda es un ejemplo, no todos los fenómenos descritos por las leyes.
 
-La ley de Faraday introduce la induccion: un campo magnetico variable produce un campo electrico rotacional. La ley de Ampere-Maxwell añade que las corrientes y los campos electricos variables producen campo magnetico.
+## Comprobación concreta
 
-En el vacio, sin cargas ni corrientes, las ecuaciones se reducen a relaciones entre variaciones temporales y espaciales de `E` y `B`. Al aplicar el rotacional a las ecuaciones de induccion y usar identidades vectoriales, aparecen ecuaciones de onda para ambos campos.
+Conecta campos, propagación y energía. Con los valores iniciales, calcula campo eléctrico en V/m. Campo eléctrico = 10 V/m. Onda plana de vacío: E en y, B en z y propagación en +x. E/B=c; el reloj visual representa fase, con periodo 5 s y tiempo físico equivalente tλ/(5c).
 
-La velocidad resultante es `c = 1/sqrt(mu0 epsilon0)`. Esa igualdad conecta constantes electricas y magneticas con la velocidad de la luz y muestra que la luz es una perturbacion electromagnetica propagandose.
+## Hipótesis
+
+Forma microscópica SI en vacío con cargas y corrientes. En materiales se pueden reorganizar con D,H y relaciones constitutivas; no sustituir sin más ε0 por una respuesta arbitraria.

@@ -43,7 +43,12 @@
     window.MathJax = {
       options: { enableMenu: false },
       startup: { typeset: false },
-      tex: { inlineMath: [['\\(', '\\)'], ['$', '$']] },
+      tex: {
+        inlineMath: [['\\(', '\\)'], ['$', '$']],
+        // MathJax 3 lacks these closed-surface operators. Keep their meaning
+        // using the Unicode operators, with ordinary integral limit placement.
+        macros: { oiint: '\\mathop{∯}\\nolimits', oiiint: '\\mathop{∰}\\nolimits' }
+      },
       svg: { fontCache: 'global' }
     };
   </script>

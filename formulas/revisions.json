@@ -3486,6 +3486,1850 @@
           "Fecha de creación conservada; fecha histórica diferenciada de la revisión"
         ]
       }
+    ],
+    "clausius-clapeyron-equation": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "aprendizaje",
+          "derivacion",
+          "ficha",
+          "formula",
+          "historia",
+          "significado",
+          "unidades",
+          "usos",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "prerrequisitos"
+        ],
+        "summary": "Revisión completa: Diseña la presión de vapor. Cuatro misiones; Ebullición / Explorar / Curva logarítmica. Contenido, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Cálculos independientes y condiciones de validez contrastados",
+          "Todas las pestañas y notaciones revisadas",
+          "Cuatro misiones, errores, pistas, ajustes y reintentos en navegador",
+          "Controles, teclado y entrada táctil; cámaras 3D cuando corresponden",
+          "Escritorio y móvil sin solapamientos; capturas y contraste en Cuaderno, Colegio y Noche",
+          "Pausa y limpieza al ocultar, cambiar pestaña y cerrar",
+          "Funcionamiento sin conexión, incluidos los nuevos módulos",
+          "Disciplina, nivel, etiquetas y prerrequisitos concretos",
+          "Fecha de creación conservada y fuentes de estudio enlazadas"
+        ]
+      }
+    ],
+    "frenet-serret-formulas": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "aprendizaje",
+          "derivacion",
+          "ficha",
+          "formula",
+          "historia",
+          "significado",
+          "unidades",
+          "usos",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "prerrequisitos"
+        ],
+        "summary": "Revisión completa: Conduce un triedro por una hélice. Cuatro misiones; Tríada / Hélice 3D / Derivadas del marco. Contenido, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Cálculos independientes y condiciones de validez contrastados",
+          "Todas las pestañas y notaciones revisadas",
+          "Cuatro misiones, errores, pistas, ajustes y reintentos en navegador",
+          "Controles, teclado y entrada táctil; cámaras 3D cuando corresponden",
+          "Escritorio y móvil sin solapamientos; capturas y contraste en Cuaderno, Colegio y Noche",
+          "Pausa y limpieza al ocultar, cambiar pestaña y cerrar",
+          "Funcionamiento sin conexión, incluidos los nuevos módulos",
+          "Disciplina, nivel, etiquetas y prerrequisitos concretos",
+          "Fecha de creación conservada y fuentes de estudio enlazadas"
+        ]
+      }
+    ],
+    "first-law-thermodynamics": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "aprendizaje",
+          "derivacion",
+          "ficha",
+          "formula",
+          "historia",
+          "significado",
+          "unidades",
+          "usos",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "prerrequisitos"
+        ],
+        "summary": "Revisión completa: Administra la energía de un gas. Cuatro misiones; Balance / Explorar / Depósito energético. Contenido, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Cálculos independientes y condiciones de validez contrastados",
+          "Todas las pestañas y notaciones revisadas",
+          "Cuatro misiones, errores, pistas, ajustes y reintentos en navegador",
+          "Controles, teclado y entrada táctil; cámaras 3D cuando corresponden",
+          "Escritorio y móvil sin solapamientos; capturas y contraste en Cuaderno, Colegio y Noche",
+          "Pausa y limpieza al ocultar, cambiar pestaña y cerrar",
+          "Funcionamiento sin conexión, incluidos los nuevos módulos",
+          "Disciplina, nivel, etiquetas y prerrequisitos concretos",
+          "Fecha de creación conservada y fuentes de estudio enlazadas"
+        ]
+      }
+    ],
+    "shear-stress-cizalladura": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "aprendizaje",
+          "derivacion",
+          "ficha",
+          "formula",
+          "historia",
+          "interpretacion",
+          "limitaciones",
+          "significado",
+          "unidades",
+          "usos",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "prerrequisitos"
+        ],
+        "summary": "Revisión completa: Desliza una lámina sin confundir deformación. Cuatro misiones; Cizalla / Explorar / Ley elástica. Contenido, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Cálculos independientes y condiciones de validez contrastados",
+          "Todas las pestañas y notaciones revisadas",
+          "Cuatro misiones, errores, pistas, ajustes y reintentos en navegador",
+          "Controles, teclado y entrada táctil; cámaras 3D cuando corresponden",
+          "Escritorio y móvil sin solapamientos; capturas y contraste en Cuaderno, Colegio y Noche",
+          "Pausa y limpieza al ocultar, cambiar pestaña y cerrar",
+          "Funcionamiento sin conexión, incluidos los nuevos módulos",
+          "Disciplina, nivel, etiquetas y prerrequisitos concretos",
+          "Fecha de creación conservada y fuentes de estudio enlazadas"
+        ]
+      }
+    ],
+    "cauchy-riemann": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "aprendizaje",
+          "derivacion",
+          "ficha",
+          "formula",
+          "historia",
+          "significado",
+          "unidades",
+          "usos",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "prerrequisitos"
+        ],
+        "summary": "Revisión completa: ¿Se deforma igual desde todas las direcciones?. Cuatro misiones; Detective complejo / Plano complejo / Derivadas parciales. Contenido, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Cálculos independientes y condiciones de validez contrastados",
+          "Todas las pestañas y notaciones revisadas",
+          "Cuatro misiones, errores, pistas, ajustes y reintentos en navegador",
+          "Controles, teclado y entrada táctil; cámaras 3D cuando corresponden",
+          "Escritorio y móvil sin solapamientos; capturas y contraste en Cuaderno, Colegio y Noche",
+          "Pausa y limpieza al ocultar, cambiar pestaña y cerrar",
+          "Funcionamiento sin conexión, incluidos los nuevos módulos",
+          "Disciplina, nivel, etiquetas y prerrequisitos concretos",
+          "Fecha de creación conservada y fuentes de estudio enlazadas"
+        ]
+      }
+    ],
+    "stokes-drag-law": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "aprendizaje",
+          "derivacion",
+          "ficha",
+          "formula",
+          "historia",
+          "significado",
+          "unidades",
+          "usos",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "prerrequisitos"
+        ],
+        "summary": "Revisión completa: Mueve una microesfera en un líquido. Cuatro misiones; Esfera / Explorar / Arrastre y validez. Contenido, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Cálculos independientes y condiciones de validez contrastados",
+          "Todas las pestañas y notaciones revisadas",
+          "Cuatro misiones, errores, pistas, ajustes y reintentos en navegador",
+          "Controles, teclado y entrada táctil; cámaras 3D cuando corresponden",
+          "Escritorio y móvil sin solapamientos; capturas y contraste en Cuaderno, Colegio y Noche",
+          "Pausa y limpieza al ocultar, cambiar pestaña y cerrar",
+          "Funcionamiento sin conexión, incluidos los nuevos módulos",
+          "Disciplina, nivel, etiquetas y prerrequisitos concretos",
+          "Fecha de creación conservada y fuentes de estudio enlazadas"
+        ]
+      }
+    ],
+    "beer-lambert-law": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "aprendizaje",
+          "derivacion",
+          "ficha",
+          "formula",
+          "historia",
+          "significado",
+          "unidades",
+          "usos",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "prerrequisitos"
+        ],
+        "summary": "Revisión completa: Investiga una muestra con luz. Cuatro misiones; Espectrofotómetro / Explorar / Absorbancia y transmisión. Contenido, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Cálculos independientes y condiciones de validez contrastados",
+          "Todas las pestañas y notaciones revisadas",
+          "Cuatro misiones, errores, pistas, ajustes y reintentos en navegador",
+          "Controles, teclado y entrada táctil; cámaras 3D cuando corresponden",
+          "Escritorio y móvil sin solapamientos; capturas y contraste en Cuaderno, Colegio y Noche",
+          "Pausa y limpieza al ocultar, cambiar pestaña y cerrar",
+          "Funcionamiento sin conexión, incluidos los nuevos módulos",
+          "Disciplina, nivel, etiquetas y prerrequisitos concretos",
+          "Fecha de creación conservada y fuentes de estudio enlazadas"
+        ]
+      }
+    ],
+    "geodesic-equation": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "aprendizaje",
+          "derivacion",
+          "ficha",
+          "formula",
+          "historia",
+          "significado",
+          "unidades",
+          "usos",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "prerrequisitos"
+        ],
+        "summary": "Revisión completa: Traza un camino sobre una esfera. Cuatro misiones; Ruta / Esfera 3D / Arco y cuerda. Contenido, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Cálculos independientes y condiciones de validez contrastados",
+          "Todas las pestañas y notaciones revisadas",
+          "Cuatro misiones, errores, pistas, ajustes y reintentos en navegador",
+          "Controles, teclado y entrada táctil; cámaras 3D cuando corresponden",
+          "Escritorio y móvil sin solapamientos; capturas y contraste en Cuaderno, Colegio y Noche",
+          "Pausa y limpieza al ocultar, cambiar pestaña y cerrar",
+          "Funcionamiento sin conexión, incluidos los nuevos módulos",
+          "Disciplina, nivel, etiquetas y prerrequisitos concretos",
+          "Fecha de creación conservada y fuentes de estudio enlazadas"
+        ]
+      }
+    ],
+    "riemannian-metric": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "aprendizaje",
+          "derivacion",
+          "ficha",
+          "formula",
+          "historia",
+          "significado",
+          "unidades",
+          "usos",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "prerrequisitos"
+        ],
+        "summary": "Revisión completa: Cambia cómo mide el plano. Cuatro misiones; Distancia / Explorar / Elipse métrica. Contenido, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Cálculos independientes y condiciones de validez contrastados",
+          "Todas las pestañas y notaciones revisadas",
+          "Cuatro misiones, errores, pistas, ajustes y reintentos en navegador",
+          "Controles, teclado y entrada táctil; cámaras 3D cuando corresponden",
+          "Escritorio y móvil sin solapamientos; capturas y contraste en Cuaderno, Colegio y Noche",
+          "Pausa y limpieza al ocultar, cambiar pestaña y cerrar",
+          "Funcionamiento sin conexión, incluidos los nuevos módulos",
+          "Disciplina, nivel, etiquetas y prerrequisitos concretos",
+          "Fecha de creación conservada y fuentes de estudio enlazadas"
+        ]
+      }
+    ],
+    "stokes-theorem": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "aprendizaje",
+          "derivacion",
+          "ficha",
+          "formula",
+          "historia",
+          "significado",
+          "unidades",
+          "usos",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "prerrequisitos"
+        ],
+        "summary": "Revisión completa: Inclina un disco en un campo giratorio. Cuatro misiones; Circulación / Disco 3D / Borde y superficie. Contenido, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Cálculos independientes y condiciones de validez contrastados",
+          "Todas las pestañas y notaciones revisadas",
+          "Cuatro misiones, errores, pistas, ajustes y reintentos en navegador",
+          "Controles, teclado y entrada táctil; cámaras 3D cuando corresponden",
+          "Escritorio y móvil sin solapamientos; capturas y contraste en Cuaderno, Colegio y Noche",
+          "Pausa y limpieza al ocultar, cambiar pestaña y cerrar",
+          "Funcionamiento sin conexión, incluidos los nuevos módulos",
+          "Disciplina, nivel, etiquetas y prerrequisitos concretos",
+          "Fecha de creación conservada y fuentes de estudio enlazadas"
+        ]
+      }
+    ],
+    "advection-diffusion-equation": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "aprendizaje",
+          "derivacion",
+          "ficha",
+          "formula",
+          "historia",
+          "significado",
+          "unidades",
+          "usos",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "prerrequisitos"
+        ],
+        "summary": "Revisión completa: Transporta un pulso sin perder su masa. Cuatro misiones; Pulso / Explorar / Centro y dispersión. Contenido, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Cálculos independientes y condiciones de validez contrastados",
+          "Todas las pestañas y notaciones revisadas",
+          "Cuatro misiones, errores, pistas, ajustes y reintentos en navegador",
+          "Controles, teclado y entrada táctil; cámaras 3D cuando corresponden",
+          "Escritorio y móvil sin solapamientos; capturas y contraste en Cuaderno, Colegio y Noche",
+          "Pausa y limpieza al ocultar, cambiar pestaña y cerrar",
+          "Funcionamiento sin conexión, incluidos los nuevos módulos",
+          "Disciplina, nivel, etiquetas y prerrequisitos concretos",
+          "Fecha de creación conservada y fuentes de estudio enlazadas"
+        ]
+      }
+    ],
+    "darcy-weisbach-pipe-head-loss": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "aprendizaje",
+          "derivacion",
+          "ficha",
+          "formula",
+          "historia",
+          "interpretacion",
+          "limitaciones",
+          "significado",
+          "unidades",
+          "usos",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "prerrequisitos"
+        ],
+        "summary": "Revisión completa: Reduce la pérdida en una tubería. Cuatro misiones; Tubería / Explorar / Presión y longitud. Contenido, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Cálculos independientes y condiciones de validez contrastados",
+          "Todas las pestañas y notaciones revisadas",
+          "Cuatro misiones, errores, pistas, ajustes y reintentos en navegador",
+          "Controles, teclado y entrada táctil; cámaras 3D cuando corresponden",
+          "Escritorio y móvil sin solapamientos; capturas y contraste en Cuaderno, Colegio y Noche",
+          "Pausa y limpieza al ocultar, cambiar pestaña y cerrar",
+          "Funcionamiento sin conexión, incluidos los nuevos módulos",
+          "Disciplina, nivel, etiquetas y prerrequisitos concretos",
+          "Fecha de creación conservada y fuentes de estudio enlazadas"
+        ]
+      }
+    ],
+    "cayley-hamilton-theorem": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "aprendizaje",
+          "derivacion",
+          "ficha",
+          "formula",
+          "historia",
+          "significado",
+          "unidades",
+          "usos",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "prerrequisitos"
+        ],
+        "summary": "Revisión completa: Haz que una matriz anule su polinomio. Cuatro misiones; Matriz / Explorar / Balance matricial. Contenido, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Cálculos independientes y condiciones de validez contrastados",
+          "Todas las pestañas y notaciones revisadas",
+          "Cuatro misiones, errores, pistas, ajustes y reintentos en navegador",
+          "Controles, teclado y entrada táctil; cámaras 3D cuando corresponden",
+          "Escritorio y móvil sin solapamientos; capturas y contraste en Cuaderno, Colegio y Noche",
+          "Pausa y limpieza al ocultar, cambiar pestaña y cerrar",
+          "Funcionamiento sin conexión, incluidos los nuevos módulos",
+          "Disciplina, nivel, etiquetas y prerrequisitos concretos",
+          "Fecha de creación conservada y fuentes de estudio enlazadas"
+        ]
+      }
+    ],
+    "riemann-zeta-function": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "aprendizaje",
+          "derivacion",
+          "ficha",
+          "formula",
+          "historia",
+          "significado",
+          "unidades",
+          "usos",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "prerrequisitos"
+        ],
+        "summary": "Revisión completa: Controla el error de una suma infinita. Cuatro misiones; Convergencia / Explorar / Producto de primos. Contenido, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Cálculos independientes y condiciones de validez contrastados",
+          "Todas las pestañas y notaciones revisadas",
+          "Cuatro misiones, errores, pistas, ajustes y reintentos en navegador",
+          "Controles, teclado y entrada táctil; cámaras 3D cuando corresponden",
+          "Escritorio y móvil sin solapamientos; capturas y contraste en Cuaderno, Colegio y Noche",
+          "Pausa y limpieza al ocultar, cambiar pestaña y cerrar",
+          "Funcionamiento sin conexión, incluidos los nuevos módulos",
+          "Disciplina, nivel, etiquetas y prerrequisitos concretos",
+          "Fecha de creación conservada y fuentes de estudio enlazadas"
+        ]
+      }
+    ],
+    "maxwell-boltzmann-speed-distribution": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "aprendizaje",
+          "derivacion",
+          "ficha",
+          "formula",
+          "historia",
+          "significado",
+          "unidades",
+          "usos",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "prerrequisitos"
+        ],
+        "summary": "Revisión completa: Calienta un gas y sigue sus rapideces. Cuatro misiones; Gas / Explorar / Distribución. Contenido, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Cálculos independientes y condiciones de validez contrastados",
+          "Todas las pestañas y notaciones revisadas",
+          "Cuatro misiones, errores, pistas, ajustes y reintentos en navegador",
+          "Controles, teclado y entrada táctil; cámaras 3D cuando corresponden",
+          "Escritorio y móvil sin solapamientos; capturas y contraste en Cuaderno, Colegio y Noche",
+          "Pausa y limpieza al ocultar, cambiar pestaña y cerrar",
+          "Funcionamiento sin conexión, incluidos los nuevos módulos",
+          "Disciplina, nivel, etiquetas y prerrequisitos concretos",
+          "Fecha de creación conservada y fuentes de estudio enlazadas"
+        ]
+      }
+    ],
+    "ampere-maxwell-law": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "aprendizaje",
+          "derivacion",
+          "ficha",
+          "formula",
+          "historia",
+          "significado",
+          "unidades",
+          "usos",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "prerrequisitos"
+        ],
+        "summary": "Revisión completa: Cierra el balance al cargar un condensador. Cuatro misiones; Corriente / Campo 3D / Perfil magnético. Contenido, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Cálculos independientes y condiciones de validez contrastados",
+          "Todas las pestañas y notaciones revisadas",
+          "Cuatro misiones, errores, pistas, ajustes y reintentos en navegador",
+          "Controles, teclado y entrada táctil; cámaras 3D cuando corresponden",
+          "Escritorio y móvil sin solapamientos; capturas y contraste en Cuaderno, Colegio y Noche",
+          "Pausa y limpieza al ocultar, cambiar pestaña y cerrar",
+          "Funcionamiento sin conexión, incluidos los nuevos módulos",
+          "Disciplina, nivel, etiquetas y prerrequisitos concretos",
+          "Fecha de creación conservada y fuentes de estudio enlazadas"
+        ]
+      }
+    ],
+    "chemical-equilibrium-constant-kc": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "aprendizaje",
+          "derivacion",
+          "ficha",
+          "formula",
+          "historia",
+          "significado",
+          "unidades",
+          "usos",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "prerrequisitos"
+        ],
+        "summary": "Revisión completa: Compara el cociente con el equilibrio. Cuatro misiones; Mezcla / Explorar / Cociente y K. Contenido, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Cálculos independientes y condiciones de validez contrastados",
+          "Todas las pestañas y notaciones revisadas",
+          "Cuatro misiones, errores, pistas, ajustes y reintentos en navegador",
+          "Controles, teclado y entrada táctil; cámaras 3D cuando corresponden",
+          "Escritorio y móvil sin solapamientos; capturas y contraste en Cuaderno, Colegio y Noche",
+          "Pausa y limpieza al ocultar, cambiar pestaña y cerrar",
+          "Funcionamiento sin conexión, incluidos los nuevos módulos",
+          "Disciplina, nivel, etiquetas y prerrequisitos concretos",
+          "Fecha de creación conservada y fuentes de estudio enlazadas"
+        ]
+      }
+    ],
+    "dynamic-chemical-equilibrium": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "aprendizaje",
+          "derivacion",
+          "ficha",
+          "formula",
+          "historia",
+          "significado",
+          "unidades",
+          "usos",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "prerrequisitos"
+        ],
+        "summary": "Revisión completa: Equilibrio no significa inmovilidad. Cuatro misiones; Reacción / Explorar / Dos velocidades. Contenido, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Cálculos independientes y condiciones de validez contrastados",
+          "Todas las pestañas y notaciones revisadas",
+          "Cuatro misiones, errores, pistas, ajustes y reintentos en navegador",
+          "Controles, teclado y entrada táctil; cámaras 3D cuando corresponden",
+          "Escritorio y móvil sin solapamientos; capturas y contraste en Cuaderno, Colegio y Noche",
+          "Pausa y limpieza al ocultar, cambiar pestaña y cerrar",
+          "Funcionamiento sin conexión, incluidos los nuevos módulos",
+          "Disciplina, nivel, etiquetas y prerrequisitos concretos",
+          "Fecha de creación conservada y fuentes de estudio enlazadas"
+        ]
+      }
+    ],
+    "electromagnetic-wave-equation": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "aprendizaje",
+          "derivacion",
+          "ficha",
+          "formula",
+          "historia",
+          "significado",
+          "unidades",
+          "usos",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "prerrequisitos"
+        ],
+        "summary": "Revisión completa: Viaja con una onda transversal. Cuatro misiones; Onda / Campos 3D / Perfil espacial. Contenido, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Cálculos independientes y condiciones de validez contrastados",
+          "Todas las pestañas y notaciones revisadas",
+          "Cuatro misiones, errores, pistas, ajustes y reintentos en navegador",
+          "Controles, teclado y entrada táctil; cámaras 3D cuando corresponden",
+          "Escritorio y móvil sin solapamientos; capturas y contraste en Cuaderno, Colegio y Noche",
+          "Pausa y limpieza al ocultar, cambiar pestaña y cerrar",
+          "Funcionamiento sin conexión, incluidos los nuevos módulos",
+          "Disciplina, nivel, etiquetas y prerrequisitos concretos",
+          "Fecha de creación conservada y fuentes de estudio enlazadas"
+        ]
+      }
+    ],
+    "maxwell-equations": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "aprendizaje",
+          "derivacion",
+          "ficha",
+          "formula",
+          "historia",
+          "significado",
+          "unidades",
+          "usos",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "prerrequisitos"
+        ],
+        "summary": "Revisión completa: Cuatro leyes, una onda coherente. Cuatro misiones; Onda de vacío / Campos 3D / Balances de Maxwell. Contenido, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Cálculos independientes y condiciones de validez contrastados",
+          "Todas las pestañas y notaciones revisadas",
+          "Cuatro misiones, errores, pistas, ajustes y reintentos en navegador",
+          "Controles, teclado y entrada táctil; cámaras 3D cuando corresponden",
+          "Escritorio y móvil sin solapamientos; capturas y contraste en Cuaderno, Colegio y Noche",
+          "Pausa y limpieza al ocultar, cambiar pestaña y cerrar",
+          "Funcionamiento sin conexión, incluidos los nuevos módulos",
+          "Disciplina, nivel, etiquetas y prerrequisitos concretos",
+          "Fecha de creación conservada y fuentes de estudio enlazadas"
+        ]
+      }
+    ],
+    "poynting-vector": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "aprendizaje",
+          "derivacion",
+          "ficha",
+          "formula",
+          "historia",
+          "significado",
+          "unidades",
+          "usos",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "prerrequisitos"
+        ],
+        "summary": "Revisión completa: Sigue la energía de la onda. Cuatro misiones; Energía / Campos 3D / Flujo de energía. Contenido, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Cálculos independientes y condiciones de validez contrastados",
+          "Todas las pestañas y notaciones revisadas",
+          "Cuatro misiones, errores, pistas, ajustes y reintentos en navegador",
+          "Controles, teclado y entrada táctil; cámaras 3D cuando corresponden",
+          "Escritorio y móvil sin solapamientos; capturas y contraste en Cuaderno, Colegio y Noche",
+          "Pausa y limpieza al ocultar, cambiar pestaña y cerrar",
+          "Funcionamiento sin conexión, incluidos los nuevos módulos",
+          "Disciplina, nivel, etiquetas y prerrequisitos concretos",
+          "Fecha de creación conservada y fuentes de estudio enlazadas"
+        ]
+      }
+    ],
+    "magnetic-gauss-law": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "aprendizaje",
+          "derivacion",
+          "ficha",
+          "formula",
+          "historia",
+          "significado",
+          "unidades",
+          "usos",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "prerrequisitos"
+        ],
+        "summary": "Revisión completa: Cuenta todo lo que entra y sale. Cuatro misiones; Flujo / Caja 3D / Caras opuestas. Contenido, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Cálculos independientes y condiciones de validez contrastados",
+          "Todas las pestañas y notaciones revisadas",
+          "Cuatro misiones, errores, pistas, ajustes y reintentos en navegador",
+          "Controles, teclado y entrada táctil; cámaras 3D cuando corresponden",
+          "Escritorio y móvil sin solapamientos; capturas y contraste en Cuaderno, Colegio y Noche",
+          "Pausa y limpieza al ocultar, cambiar pestaña y cerrar",
+          "Funcionamiento sin conexión, incluidos los nuevos módulos",
+          "Disciplina, nivel, etiquetas y prerrequisitos concretos",
+          "Fecha de creación conservada y fuentes de estudio enlazadas"
+        ]
+      }
+    ],
+    "wohler-sn-fatigue-curve": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "aprendizaje",
+          "derivacion",
+          "ficha",
+          "formula",
+          "historia",
+          "interpretacion",
+          "limitaciones",
+          "significado",
+          "unidades",
+          "usos",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "prerrequisitos"
+        ],
+        "summary": "Revisión completa: Calcula ciclos, no una promesa de duración. Cuatro misiones; Fatiga / Explorar / Curva S-N. Contenido, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Cálculos independientes y condiciones de validez contrastados",
+          "Todas las pestañas y notaciones revisadas",
+          "Cuatro misiones, errores, pistas, ajustes y reintentos en navegador",
+          "Controles, teclado y entrada táctil; cámaras 3D cuando corresponden",
+          "Escritorio y móvil sin solapamientos; capturas y contraste en Cuaderno, Colegio y Noche",
+          "Pausa y limpieza al ocultar, cambiar pestaña y cerrar",
+          "Funcionamiento sin conexión, incluidos los nuevos módulos",
+          "Disciplina, nivel, etiquetas y prerrequisitos concretos",
+          "Fecha de creación conservada y fuentes de estudio enlazadas"
+        ]
+      }
+    ],
+    "thermodynamic-maxwell-relations": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "aprendizaje",
+          "derivacion",
+          "ficha",
+          "formula",
+          "historia",
+          "significado",
+          "unidades",
+          "usos",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "prerrequisitos"
+        ],
+        "summary": "Revisión completa: Comprueba dos caminos hacia una derivada. Cuatro misiones; Estado / Explorar / Derivadas cruzadas. Contenido, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Cálculos independientes y condiciones de validez contrastados",
+          "Todas las pestañas y notaciones revisadas",
+          "Cuatro misiones, errores, pistas, ajustes y reintentos en navegador",
+          "Controles, teclado y entrada táctil; cámaras 3D cuando corresponden",
+          "Escritorio y móvil sin solapamientos; capturas y contraste en Cuaderno, Colegio y Noche",
+          "Pausa y limpieza al ocultar, cambiar pestaña y cerrar",
+          "Funcionamiento sin conexión, incluidos los nuevos módulos",
+          "Disciplina, nivel, etiquetas y prerrequisitos concretos",
+          "Fecha de creación conservada y fuentes de estudio enlazadas"
+        ]
+      }
+    ],
+    "van-der-waals-equation-of-state": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "aprendizaje",
+          "derivacion",
+          "ficha",
+          "formula",
+          "historia",
+          "significado",
+          "unidades",
+          "usos",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "prerrequisitos"
+        ],
+        "summary": "Revisión completa: Explora una isoterma de gas real. Cuatro misiones; Gas real / Explorar / Isotermas. Contenido, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Cálculos independientes y condiciones de validez contrastados",
+          "Todas las pestañas y notaciones revisadas",
+          "Cuatro misiones, errores, pistas, ajustes y reintentos en navegador",
+          "Controles, teclado y entrada táctil; cámaras 3D cuando corresponden",
+          "Escritorio y móvil sin solapamientos; capturas y contraste en Cuaderno, Colegio y Noche",
+          "Pausa y limpieza al ocultar, cambiar pestaña y cerrar",
+          "Funcionamiento sin conexión, incluidos los nuevos módulos",
+          "Disciplina, nivel, etiquetas y prerrequisitos concretos",
+          "Fecha de creación conservada y fuentes de estudio enlazadas"
+        ]
+      }
+    ],
+    "singular-value-decomposition-svd": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "aprendizaje",
+          "derivacion",
+          "ficha",
+          "formula",
+          "historia",
+          "interpretacion",
+          "limitaciones",
+          "significado",
+          "unidades",
+          "usos",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "prerrequisitos"
+        ],
+        "summary": "Revisión completa: Descompón una transformación en pasos. Cuatro misiones; Transformación / Explorar / Aproximación de rango 1. Contenido, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Cálculos independientes y condiciones de validez contrastados",
+          "Todas las pestañas y notaciones revisadas",
+          "Cuatro misiones, errores, pistas, ajustes y reintentos en navegador",
+          "Controles, teclado y entrada táctil; cámaras 3D cuando corresponden",
+          "Escritorio y móvil sin solapamientos; capturas y contraste en Cuaderno, Colegio y Noche",
+          "Pausa y limpieza al ocultar, cambiar pestaña y cerrar",
+          "Funcionamiento sin conexión, incluidos los nuevos módulos",
+          "Disciplina, nivel, etiquetas y prerrequisitos concretos",
+          "Fecha de creación conservada y fuentes de estudio enlazadas"
+        ]
+      }
+    ],
+    "gibbs-free-energy": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "aprendizaje",
+          "derivacion",
+          "ficha",
+          "formula",
+          "historia",
+          "significado",
+          "unidades",
+          "usos",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "prerrequisitos"
+        ],
+        "summary": "Revisión completa: Encuentra el cruce termodinámico. Cuatro misiones; Balance / Explorar / Temperatura crítica. Contenido, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Cálculos independientes y condiciones de validez contrastados",
+          "Todas las pestañas y notaciones revisadas",
+          "Cuatro misiones, errores, pistas, ajustes y reintentos en navegador",
+          "Controles, teclado y entrada táctil; cámaras 3D cuando corresponden",
+          "Escritorio y móvil sin solapamientos; capturas y contraste en Cuaderno, Colegio y Noche",
+          "Pausa y limpieza al ocultar, cambiar pestaña y cerrar",
+          "Funcionamiento sin conexión, incluidos los nuevos módulos",
+          "Disciplina, nivel, etiquetas y prerrequisitos concretos",
+          "Fecha de creación conservada y fuentes de estudio enlazadas"
+        ]
+      }
+    ],
+    "gibbs-free-energy-spontaneity": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "aprendizaje",
+          "derivacion",
+          "ficha",
+          "formula",
+          "historia",
+          "significado",
+          "unidades",
+          "usos",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "prerrequisitos"
+        ],
+        "summary": "Revisión completa: La composición también decide. Cuatro misiones; Reacción / Explorar / Q y equilibrio. Contenido, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Cálculos independientes y condiciones de validez contrastados",
+          "Todas las pestañas y notaciones revisadas",
+          "Cuatro misiones, errores, pistas, ajustes y reintentos en navegador",
+          "Controles, teclado y entrada táctil; cámaras 3D cuando corresponden",
+          "Escritorio y móvil sin solapamientos; capturas y contraste en Cuaderno, Colegio y Noche",
+          "Pausa y limpieza al ocultar, cambiar pestaña y cerrar",
+          "Funcionamiento sin conexión, incluidos los nuevos módulos",
+          "Disciplina, nivel, etiquetas y prerrequisitos concretos",
+          "Fecha de creación conservada y fuentes de estudio enlazadas"
+        ]
+      }
+    ],
+    "boltzmann-entropy": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "aprendizaje",
+          "derivacion",
+          "ficha",
+          "formula",
+          "historia",
+          "significado",
+          "unidades",
+          "usos",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "prerrequisitos"
+        ],
+        "summary": "Revisión completa: Cuenta maneras de repartir partículas. Cuatro misiones; Microestados / Explorar / Multiplicidad. Contenido, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Cálculos independientes y condiciones de validez contrastados",
+          "Todas las pestañas y notaciones revisadas",
+          "Cuatro misiones, errores, pistas, ajustes y reintentos en navegador",
+          "Controles, teclado y entrada táctil; cámaras 3D cuando corresponden",
+          "Escritorio y móvil sin solapamientos; capturas y contraste en Cuaderno, Colegio y Noche",
+          "Pausa y limpieza al ocultar, cambiar pestaña y cerrar",
+          "Funcionamiento sin conexión, incluidos los nuevos módulos",
+          "Disciplina, nivel, etiquetas y prerrequisitos concretos",
+          "Fecha de creación conservada y fuentes de estudio enlazadas"
+        ]
+      }
+    ],
+    "stefan-boltzmann-law": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "aprendizaje",
+          "derivacion",
+          "ficha",
+          "formula",
+          "historia",
+          "significado",
+          "unidades",
+          "usos",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "prerrequisitos"
+        ],
+        "summary": "Revisión completa: Intercambia radiación con el entorno. Cuatro misiones; Superficie / Explorar / Potencia térmica. Contenido, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Cálculos independientes y condiciones de validez contrastados",
+          "Todas las pestañas y notaciones revisadas",
+          "Cuatro misiones, errores, pistas, ajustes y reintentos en navegador",
+          "Controles, teclado y entrada táctil; cámaras 3D cuando corresponden",
+          "Escritorio y móvil sin solapamientos; capturas y contraste en Cuaderno, Colegio y Noche",
+          "Pausa y limpieza al ocultar, cambiar pestaña y cerrar",
+          "Funcionamiento sin conexión, incluidos los nuevos módulos",
+          "Disciplina, nivel, etiquetas y prerrequisitos concretos",
+          "Fecha de creación conservada y fuentes de estudio enlazadas"
+        ]
+      }
+    ],
+    "power-factor-triangle": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "aprendizaje",
+          "derivacion",
+          "ficha",
+          "formula",
+          "historia",
+          "interpretacion",
+          "limitaciones",
+          "significado",
+          "unidades",
+          "usos",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "prerrequisitos"
+        ],
+        "summary": "Revisión completa: Construye el triángulo de potencias. Cuatro misiones; Potencia / Explorar / Triángulo. Contenido, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Cálculos independientes y condiciones de validez contrastados",
+          "Todas las pestañas y notaciones revisadas",
+          "Cuatro misiones, errores, pistas, ajustes y reintentos en navegador",
+          "Controles, teclado y entrada táctil; cámaras 3D cuando corresponden",
+          "Escritorio y móvil sin solapamientos; capturas y contraste en Cuaderno, Colegio y Noche",
+          "Pausa y limpieza al ocultar, cambiar pestaña y cerrar",
+          "Funcionamiento sin conexión, incluidos los nuevos módulos",
+          "Disciplina, nivel, etiquetas y prerrequisitos concretos",
+          "Fecha de creación conservada y fuentes de estudio enlazadas"
+        ]
+      }
+    ],
+    "ac-ohms-law-impedance": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "aprendizaje",
+          "derivacion",
+          "ficha",
+          "formula",
+          "historia",
+          "interpretacion",
+          "limitaciones",
+          "significado",
+          "unidades",
+          "usos",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "prerrequisitos"
+        ],
+        "summary": "Revisión completa: Calcula una corriente con fase. Cuatro misiones; Circuito AC / Explorar / Fasores. Contenido, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Cálculos independientes y condiciones de validez contrastados",
+          "Todas las pestañas y notaciones revisadas",
+          "Cuatro misiones, errores, pistas, ajustes y reintentos en navegador",
+          "Controles, teclado y entrada táctil; cámaras 3D cuando corresponden",
+          "Escritorio y móvil sin solapamientos; capturas y contraste en Cuaderno, Colegio y Noche",
+          "Pausa y limpieza al ocultar, cambiar pestaña y cerrar",
+          "Funcionamiento sin conexión, incluidos los nuevos módulos",
+          "Disciplina, nivel, etiquetas y prerrequisitos concretos",
+          "Fecha de creación conservada y fuentes de estudio enlazadas"
+        ]
+      }
+    ],
+    "mohr-circle-2d-stress-transformation": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "aprendizaje",
+          "derivacion",
+          "ficha",
+          "formula",
+          "historia",
+          "interpretacion",
+          "limitaciones",
+          "significado",
+          "unidades",
+          "usos",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "prerrequisitos"
+        ],
+        "summary": "Revisión completa: Gira el plano, conserva las tensiones principales. Cuatro misiones; Elemento / Explorar / Círculo de Mohr. Contenido, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Cálculos independientes y condiciones de validez contrastados",
+          "Todas las pestañas y notaciones revisadas",
+          "Cuatro misiones, errores, pistas, ajustes y reintentos en navegador",
+          "Controles, teclado y entrada táctil; cámaras 3D cuando corresponden",
+          "Escritorio y móvil sin solapamientos; capturas y contraste en Cuaderno, Colegio y Noche",
+          "Pausa y limpieza al ocultar, cambiar pestaña y cerrar",
+          "Funcionamiento sin conexión, incluidos los nuevos módulos",
+          "Disciplina, nivel, etiquetas y prerrequisitos concretos",
+          "Fecha de creación conservada y fuentes de estudio enlazadas"
+        ]
+      }
+    ],
+    "helmholtz-free-energy": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "aprendizaje",
+          "derivacion",
+          "ficha",
+          "formula",
+          "historia",
+          "significado",
+          "unidades",
+          "usos",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "prerrequisitos"
+        ],
+        "summary": "Revisión completa: Separa energía interna y término entrópico. Cuatro misiones; Estado / Explorar / Potencial a T,V. Contenido, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Cálculos independientes y condiciones de validez contrastados",
+          "Todas las pestañas y notaciones revisadas",
+          "Cuatro misiones, errores, pistas, ajustes y reintentos en navegador",
+          "Controles, teclado y entrada táctil; cámaras 3D cuando corresponden",
+          "Escritorio y móvil sin solapamientos; capturas y contraste en Cuaderno, Colegio y Noche",
+          "Pausa y limpieza al ocultar, cambiar pestaña y cerrar",
+          "Funcionamiento sin conexión, incluidos los nuevos módulos",
+          "Disciplina, nivel, etiquetas y prerrequisitos concretos",
+          "Fecha de creación conservada y fuentes de estudio enlazadas"
+        ]
+      }
+    ],
+    "reynolds-number": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "aprendizaje",
+          "derivacion",
+          "ficha",
+          "formula",
+          "historia",
+          "significado",
+          "unidades",
+          "usos",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "prerrequisitos"
+        ],
+        "summary": "Revisión completa: Compara inercia y viscosidad. Cuatro misiones; Tubo / Explorar / Mapa de régimen. Contenido, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Cálculos independientes y condiciones de validez contrastados",
+          "Todas las pestañas y notaciones revisadas",
+          "Cuatro misiones, errores, pistas, ajustes y reintentos en navegador",
+          "Controles, teclado y entrada táctil; cámaras 3D cuando corresponden",
+          "Escritorio y móvil sin solapamientos; capturas y contraste en Cuaderno, Colegio y Noche",
+          "Pausa y limpieza al ocultar, cambiar pestaña y cerrar",
+          "Funcionamiento sin conexión, incluidos los nuevos módulos",
+          "Disciplina, nivel, etiquetas y prerrequisitos concretos",
+          "Fecha de creación conservada y fuentes de estudio enlazadas"
+        ]
+      }
+    ],
+    "series-rlc-resonance": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "aprendizaje",
+          "derivacion",
+          "ficha",
+          "formula",
+          "historia",
+          "significado",
+          "unidades",
+          "usos",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "prerrequisitos"
+        ],
+        "summary": "Revisión completa: Sintoniza un circuito sin sumar tensiones a ciegas. Cuatro misiones; Circuito RLC / Explorar / Respuesta en frecuencia. Contenido, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Cálculos independientes y condiciones de validez contrastados",
+          "Todas las pestañas y notaciones revisadas",
+          "Cuatro misiones, errores, pistas, ajustes y reintentos en navegador",
+          "Controles, teclado y entrada táctil; cámaras 3D cuando corresponden",
+          "Escritorio y móvil sin solapamientos; capturas y contraste en Cuaderno, Colegio y Noche",
+          "Pausa y limpieza al ocultar, cambiar pestaña y cerrar",
+          "Funcionamiento sin conexión, incluidos los nuevos módulos",
+          "Disciplina, nivel, etiquetas y prerrequisitos concretos",
+          "Fecha de creación conservada y fuentes de estudio enlazadas"
+        ]
+      }
+    ],
+    "complex-ac-impedance": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "aprendizaje",
+          "derivacion",
+          "ficha",
+          "formula",
+          "historia",
+          "significado",
+          "unidades",
+          "usos",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "prerrequisitos"
+        ],
+        "summary": "Revisión completa: Suma reactancias como números complejos. Cuatro misiones; Circuito RLC / Explorar / Respuesta en frecuencia. Contenido, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Cálculos independientes y condiciones de validez contrastados",
+          "Todas las pestañas y notaciones revisadas",
+          "Cuatro misiones, errores, pistas, ajustes y reintentos en navegador",
+          "Controles, teclado y entrada táctil; cámaras 3D cuando corresponden",
+          "Escritorio y móvil sin solapamientos; capturas y contraste en Cuaderno, Colegio y Noche",
+          "Pausa y limpieza al ocultar, cambiar pestaña y cerrar",
+          "Funcionamiento sin conexión, incluidos los nuevos módulos",
+          "Disciplina, nivel, etiquetas y prerrequisitos concretos",
+          "Fecha de creación conservada y fuentes de estudio enlazadas"
+        ]
+      }
+    ],
+    "balanced-three-phase-power": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "aprendizaje",
+          "derivacion",
+          "ficha",
+          "formula",
+          "historia",
+          "interpretacion",
+          "limitaciones",
+          "significado",
+          "unidades",
+          "usos",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "prerrequisitos"
+        ],
+        "summary": "Revisión completa: Suma tres fases equilibradas. Cuatro misiones; Tres fases / Explorar / Potencia instantánea. Contenido, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Cálculos independientes y condiciones de validez contrastados",
+          "Todas las pestañas y notaciones revisadas",
+          "Cuatro misiones, errores, pistas, ajustes y reintentos en navegador",
+          "Controles, teclado y entrada táctil; cámaras 3D cuando corresponden",
+          "Escritorio y móvil sin solapamientos; capturas y contraste en Cuaderno, Colegio y Noche",
+          "Pausa y limpieza al ocultar, cambiar pestaña y cerrar",
+          "Funcionamiento sin conexión, incluidos los nuevos módulos",
+          "Disciplina, nivel, etiquetas y prerrequisitos concretos",
+          "Fecha de creación conservada y fuentes de estudio enlazadas"
+        ]
+      }
+    ],
+    "neuronal-nernst-reversal-potential": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "aprendizaje",
+          "derivacion",
+          "ficha",
+          "formula",
+          "historia",
+          "significado",
+          "unidades",
+          "usos",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "prerrequisitos"
+        ],
+        "summary": "Revisión completa: Equilibra un solo ion a ambos lados. Cuatro misiones; Membrana / Explorar / Concentración y voltaje. Contenido, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Cálculos independientes y condiciones de validez contrastados",
+          "Todas las pestañas y notaciones revisadas",
+          "Cuatro misiones, errores, pistas, ajustes y reintentos en navegador",
+          "Controles, teclado y entrada táctil; cámaras 3D cuando corresponden",
+          "Escritorio y móvil sin solapamientos; capturas y contraste en Cuaderno, Colegio y Noche",
+          "Pausa y limpieza al ocultar, cambiar pestaña y cerrar",
+          "Funcionamiento sin conexión, incluidos los nuevos módulos",
+          "Disciplina, nivel, etiquetas y prerrequisitos concretos",
+          "Fecha de creación conservada y fuentes de estudio enlazadas"
+        ]
+      }
+    ],
+    "arrhenius-equation": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "aprendizaje",
+          "derivacion",
+          "ficha",
+          "formula",
+          "historia",
+          "significado",
+          "unidades",
+          "usos",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "prerrequisitos"
+        ],
+        "summary": "Revisión completa: Abre una barrera de activación. Cuatro misiones; Reacción / Explorar / Recta de Arrhenius. Contenido, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Cálculos independientes y condiciones de validez contrastados",
+          "Todas las pestañas y notaciones revisadas",
+          "Cuatro misiones, errores, pistas, ajustes y reintentos en navegador",
+          "Controles, teclado y entrada táctil; cámaras 3D cuando corresponden",
+          "Escritorio y móvil sin solapamientos; capturas y contraste en Cuaderno, Colegio y Noche",
+          "Pausa y limpieza al ocultar, cambiar pestaña y cerrar",
+          "Funcionamiento sin conexión, incluidos los nuevos módulos",
+          "Disciplina, nivel, etiquetas y prerrequisitos concretos",
+          "Fecha de creación conservada y fuentes de estudio enlazadas"
+        ]
+      }
+    ],
+    "nernst-equation": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "aprendizaje",
+          "derivacion",
+          "ficha",
+          "formula",
+          "historia",
+          "significado",
+          "unidades",
+          "usos",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "prerrequisitos"
+        ],
+        "summary": "Revisión completa: Mueve una pila lejos del estándar. Cuatro misiones; Pila / Explorar / Potencial y composición. Contenido, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Cálculos independientes y condiciones de validez contrastados",
+          "Todas las pestañas y notaciones revisadas",
+          "Cuatro misiones, errores, pistas, ajustes y reintentos en navegador",
+          "Controles, teclado y entrada táctil; cámaras 3D cuando corresponden",
+          "Escritorio y móvil sin solapamientos; capturas y contraste en Cuaderno, Colegio y Noche",
+          "Pausa y limpieza al ocultar, cambiar pestaña y cerrar",
+          "Funcionamiento sin conexión, incluidos los nuevos módulos",
+          "Disciplina, nivel, etiquetas y prerrequisitos concretos",
+          "Fecha de creación conservada y fuentes de estudio enlazadas"
+        ]
+      }
+    ],
+    "manning-open-channel-flow": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "aprendizaje",
+          "derivacion",
+          "ficha",
+          "formula",
+          "historia",
+          "interpretacion",
+          "limitaciones",
+          "significado",
+          "unidades",
+          "usos",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "prerrequisitos"
+        ],
+        "summary": "Revisión completa: Diseña un canal que transporte el caudal. Cuatro misiones; Canal / Explorar / Sección y profundidad. Contenido, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Cálculos independientes y condiciones de validez contrastados",
+          "Todas las pestañas y notaciones revisadas",
+          "Cuatro misiones, errores, pistas, ajustes y reintentos en navegador",
+          "Controles, teclado y entrada táctil; cámaras 3D cuando corresponden",
+          "Escritorio y móvil sin solapamientos; capturas y contraste en Cuaderno, Colegio y Noche",
+          "Pausa y limpieza al ocultar, cambiar pestaña y cerrar",
+          "Funcionamiento sin conexión, incluidos los nuevos módulos",
+          "Disciplina, nivel, etiquetas y prerrequisitos concretos",
+          "Fecha de creación conservada y fuentes de estudio enlazadas"
+        ]
+      }
+    ],
+    "price-elasticity-of-demand": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "aprendizaje",
+          "derivacion",
+          "ficha",
+          "formula",
+          "historia",
+          "interpretacion",
+          "limitaciones",
+          "nota",
+          "significado",
+          "unidades",
+          "usos",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "prerrequisitos"
+        ],
+        "summary": "Revisión completa: Encuentra el tramo sensible al precio. Cuatro misiones; Mercado / Explorar / Ingreso. Contenido, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Cálculos independientes y condiciones de validez contrastados",
+          "Todas las pestañas y notaciones revisadas",
+          "Cuatro misiones, errores, pistas, ajustes y reintentos en navegador",
+          "Controles, teclado y entrada táctil; cámaras 3D cuando corresponden",
+          "Escritorio y móvil sin solapamientos; capturas y contraste en Cuaderno, Colegio y Noche",
+          "Pausa y limpieza al ocultar, cambiar pestaña y cerrar",
+          "Funcionamiento sin conexión, incluidos los nuevos módulos",
+          "Disciplina, nivel, etiquetas y prerrequisitos concretos",
+          "Fecha de creación conservada y fuentes de estudio enlazadas"
+        ]
+      }
+    ],
+    "linear-supply-demand-equilibrium": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "aprendizaje",
+          "derivacion",
+          "ficha",
+          "formula",
+          "historia",
+          "interpretacion",
+          "limitaciones",
+          "nota",
+          "significado",
+          "unidades",
+          "usos",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "prerrequisitos"
+        ],
+        "summary": "Revisión completa: Equilibra un mercado lineal. Cuatro misiones; Oferta y demanda / Explorar / Exceso de demanda. Contenido, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Cálculos independientes y condiciones de validez contrastados",
+          "Todas las pestañas y notaciones revisadas",
+          "Cuatro misiones, errores, pistas, ajustes y reintentos en navegador",
+          "Controles, teclado y entrada táctil; cámaras 3D cuando corresponden",
+          "Escritorio y móvil sin solapamientos; capturas y contraste en Cuaderno, Colegio y Noche",
+          "Pausa y limpieza al ocultar, cambiar pestaña y cerrar",
+          "Funcionamiento sin conexión, incluidos los nuevos módulos",
+          "Disciplina, nivel, etiquetas y prerrequisitos concretos",
+          "Fecha de creación conservada y fuentes de estudio enlazadas"
+        ]
+      }
+    ],
+    "wiens-displacement-law": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "aprendizaje",
+          "derivacion",
+          "ficha",
+          "formula",
+          "historia",
+          "significado",
+          "unidades",
+          "usos",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "prerrequisitos"
+        ],
+        "summary": "Revisión completa: Busca el pico de un cuerpo negro. Cuatro misiones; Espectro / Explorar / Desplazamiento. Contenido, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Cálculos independientes y condiciones de validez contrastados",
+          "Todas las pestañas y notaciones revisadas",
+          "Cuatro misiones, errores, pistas, ajustes y reintentos en navegador",
+          "Controles, teclado y entrada táctil; cámaras 3D cuando corresponden",
+          "Escritorio y móvil sin solapamientos; capturas y contraste en Cuaderno, Colegio y Noche",
+          "Pausa y limpieza al ocultar, cambiar pestaña y cerrar",
+          "Funcionamiento sin conexión, incluidos los nuevos módulos",
+          "Disciplina, nivel, etiquetas y prerrequisitos concretos",
+          "Fecha de creación conservada y fuentes de estudio enlazadas"
+        ]
+      }
+    ],
+    "pearson-correlation": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "aprendizaje",
+          "derivacion",
+          "ficha",
+          "formula",
+          "historia",
+          "significado",
+          "unidades",
+          "usos",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "prerrequisitos"
+        ],
+        "summary": "Revisión completa: Cambia la nube, conserva lo que mide r. Cuatro misiones; Datos / Explorar / Centra y normaliza. Contenido, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Cálculos independientes y condiciones de validez contrastados",
+          "Todas las pestañas y notaciones revisadas",
+          "Cuatro misiones, errores, pistas, ajustes y reintentos en navegador",
+          "Controles, teclado y entrada táctil; cámaras 3D cuando corresponden",
+          "Escritorio y móvil sin solapamientos; capturas y contraste en Cuaderno, Colegio y Noche",
+          "Pausa y limpieza al ocultar, cambiar pestaña y cerrar",
+          "Funcionamiento sin conexión, incluidos los nuevos módulos",
+          "Disciplina, nivel, etiquetas y prerrequisitos concretos",
+          "Fecha de creación conservada y fuentes de estudio enlazadas"
+        ]
+      }
+    ],
+    "covariance": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "aprendizaje",
+          "derivacion",
+          "ficha",
+          "formula",
+          "historia",
+          "significado",
+          "unidades",
+          "usos",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "prerrequisitos"
+        ],
+        "summary": "Revisión completa: Estudia el signo de una variación conjunta. Cuatro misiones; Datos / Explorar / Productos centrados. Contenido, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Cálculos independientes y condiciones de validez contrastados",
+          "Todas las pestañas y notaciones revisadas",
+          "Cuatro misiones, errores, pistas, ajustes y reintentos en navegador",
+          "Controles, teclado y entrada táctil; cámaras 3D cuando corresponden",
+          "Escritorio y móvil sin solapamientos; capturas y contraste en Cuaderno, Colegio y Noche",
+          "Pausa y limpieza al ocultar, cambiar pestaña y cerrar",
+          "Funcionamiento sin conexión, incluidos los nuevos módulos",
+          "Disciplina, nivel, etiquetas y prerrequisitos concretos",
+          "Fecha de creación conservada y fuentes de estudio enlazadas"
+        ]
+      }
+    ],
+    "lorentz-force": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "aprendizaje",
+          "derivacion",
+          "ficha",
+          "formula",
+          "historia",
+          "significado",
+          "unidades",
+          "usos",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "prerrequisitos"
+        ],
+        "summary": "Revisión completa: Guía una carga con campos uniformes. Cuatro misiones; Carga / Trayectoria 3D / Energía y trabajo. Contenido, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Cálculos independientes y condiciones de validez contrastados",
+          "Todas las pestañas y notaciones revisadas",
+          "Cuatro misiones, errores, pistas, ajustes y reintentos en navegador",
+          "Controles, teclado y entrada táctil; cámaras 3D cuando corresponden",
+          "Escritorio y móvil sin solapamientos; capturas y contraste en Cuaderno, Colegio y Noche",
+          "Pausa y limpieza al ocultar, cambiar pestaña y cerrar",
+          "Funcionamiento sin conexión, incluidos los nuevos módulos",
+          "Disciplina, nivel, etiquetas y prerrequisitos concretos",
+          "Fecha de creación conservada y fuentes de estudio enlazadas"
+        ]
+      }
+    ],
+    "lienard-wiechert-potentials": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "aprendizaje",
+          "derivacion",
+          "ficha",
+          "formula",
+          "historia",
+          "significado",
+          "unidades",
+          "usos",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "prerrequisitos"
+        ],
+        "summary": "Revisión completa: Recibe información del pasado de una carga. Cuatro misiones; Retardo / Explorar / Frente de luz 3D. Contenido, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Cálculos independientes y condiciones de validez contrastados",
+          "Todas las pestañas y notaciones revisadas",
+          "Cuatro misiones, errores, pistas, ajustes y reintentos en navegador",
+          "Controles, teclado y entrada táctil; cámaras 3D cuando corresponden",
+          "Escritorio y móvil sin solapamientos; capturas y contraste en Cuaderno, Colegio y Noche",
+          "Pausa y limpieza al ocultar, cambiar pestaña y cerrar",
+          "Funcionamiento sin conexión, incluidos los nuevos módulos",
+          "Disciplina, nivel, etiquetas y prerrequisitos concretos",
+          "Fecha de creación conservada y fuentes de estudio enlazadas"
+        ]
+      }
+    ],
+    "z-hypothesis-test": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "aprendizaje",
+          "derivacion",
+          "ficha",
+          "formula",
+          "historia",
+          "significado",
+          "unidades",
+          "usos",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "prerrequisitos"
+        ],
+        "summary": "Revisión completa: Contrasta una media sin interpretar mal p. Cuatro misiones; Evidencia / Explorar / Colas del contraste. Contenido, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Cálculos independientes y condiciones de validez contrastados",
+          "Todas las pestañas y notaciones revisadas",
+          "Cuatro misiones, errores, pistas, ajustes y reintentos en navegador",
+          "Controles, teclado y entrada táctil; cámaras 3D cuando corresponden",
+          "Escritorio y móvil sin solapamientos; capturas y contraste en Cuaderno, Colegio y Noche",
+          "Pausa y limpieza al ocultar, cambiar pestaña y cerrar",
+          "Funcionamiento sin conexión, incluidos los nuevos módulos",
+          "Disciplina, nivel, etiquetas y prerrequisitos concretos",
+          "Fecha de creación conservada y fuentes de estudio enlazadas"
+        ]
+      }
+    ],
+    "spectral-decomposition": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "aprendizaje",
+          "derivacion",
+          "ficha",
+          "formula",
+          "historia",
+          "significado",
+          "unidades",
+          "usos",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "prerrequisitos"
+        ],
+        "summary": "Revisión completa: Gira hacia las direcciones propias. Cuatro misiones; Ejes propios / Explorar / Suma de proyecciones. Contenido, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Cálculos independientes y condiciones de validez contrastados",
+          "Todas las pestañas y notaciones revisadas",
+          "Cuatro misiones, errores, pistas, ajustes y reintentos en navegador",
+          "Controles, teclado y entrada táctil; cámaras 3D cuando corresponden",
+          "Escritorio y móvil sin solapamientos; capturas y contraste en Cuaderno, Colegio y Noche",
+          "Pausa y limpieza al ocultar, cambiar pestaña y cerrar",
+          "Funcionamiento sin conexión, incluidos los nuevos módulos",
+          "Disciplina, nivel, etiquetas y prerrequisitos concretos",
+          "Fecha de creación conservada y fuentes de estudio enlazadas"
+        ]
+      }
+    ],
+    "planck-law": [
+      {
+        "revision": 1,
+        "date": "2026-10-02",
+        "simulatorVersion": 2,
+        "scope": [
+          "aprendizaje",
+          "derivacion",
+          "ficha",
+          "formula",
+          "historia",
+          "significado",
+          "unidades",
+          "usos",
+          "simulacion",
+          "simbolos",
+          "metadatos",
+          "etiquetas",
+          "nivel",
+          "prerrequisitos"
+        ],
+        "summary": "Revisión completa: Explora un espectro cuántico continuo. Cuatro misiones; Cuerpo negro / Explorar / Rayleigh–Jeans. Contenido, signos, unidades, símbolos y metadatos específicos.",
+        "checks": [
+          "Cálculos independientes y condiciones de validez contrastados",
+          "Todas las pestañas y notaciones revisadas",
+          "Cuatro misiones, errores, pistas, ajustes y reintentos en navegador",
+          "Controles, teclado y entrada táctil; cámaras 3D cuando corresponden",
+          "Escritorio y móvil sin solapamientos; capturas y contraste en Cuaderno, Colegio y Noche",
+          "Pausa y limpieza al ocultar, cambiar pestaña y cerrar",
+          "Funcionamiento sin conexión, incluidos los nuevos módulos",
+          "Disciplina, nivel, etiquetas y prerrequisitos concretos",
+          "Fecha de creación conservada y fuentes de estudio enlazadas"
+        ]
+      }
     ]
   }
 }
